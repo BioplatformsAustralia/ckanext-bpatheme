@@ -12,6 +12,9 @@ setup(
     namespace_packages=['ckanext'],
     packages=['ckanext.bpatheme'],
     zip_safe=False,
+    include_package_data=True,
+    package_dir={'ckanext.bpatheme': 'ckanext/bpatheme'},
+    package_data={'ckanext.bpatheme': ['*.json']},
     entry_points = """
         [ckan.plugins]
         bpa_theme = ckanext.bpatheme.plugins:CustomTheme
