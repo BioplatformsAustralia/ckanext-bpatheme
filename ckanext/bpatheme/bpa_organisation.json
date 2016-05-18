@@ -1,7 +1,7 @@
 {
   "scheming_version": 1,
   "organization_type": "organization",
-  "about_url": "https://github.com/datawagovau/ckanext-datawagovautheme",
+  "about_url": "https://github.com/muccg/ckanext-bpatheme",
   "fields": [
     {
       	"field_name": "title",
