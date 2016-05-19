@@ -2,7 +2,7 @@
 
 {% block styles %}
   {{ super() }}
-  <link rel="stylesheet" href="/bpatheme.css" />
+  <link rel="stylesheet" href="{{ h.url('/bpatheme.css', locale='default', qualified=true) }} />
 {% endblock %}
 
 {% block scripts %}
