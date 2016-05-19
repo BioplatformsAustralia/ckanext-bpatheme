@@ -5,7 +5,7 @@
     {% if intro %}
       {{ h.render_markdown(intro) }}
     {% else %}
-      <h1 class="page-heading">{{ _("New DataCats Environment") }}</h1>
+      <h1 class="page-heading">{{ _("New Environment") }}</h1>
       <p>
         {% trans %}
         Welcome to your new data catalog!
@@ -15,24 +15,20 @@
         <a href="/organization/new">new organization</a>.
         {% endtrans %}
       </p>
-      <p>
-        {% trans %}
-        Customize this site by editing the site configuration,
-        templates and static files in your environment directory
-        then reload your changes with: <code>datacats reload</code>
-        {% endtrans %}
-      </p>
     {% endif %}
   </header>
 
+<!-- 
   {% block home_image %}
     <section class="featured media-overlay hidden-phone">
       <h2 class="media-heading">{% block home_image_caption %}{{ _("Feature datasets here") }}{% endblock %}</h2>
       {% block home_image_content %}
         <a class="media-image" href="#">
-          <img src="{{ h.url_for_static('/datacats/chart.png') }}" alt="Example chart" width="420" height="220" />
+          <img src="{{ h.url_for_static('/chart.png') }}" alt="Example chart" width="420" height="220" />
         </a>
       {% endblock %}
     </section>
   {% endblock %}
+-->
+
 </div>
