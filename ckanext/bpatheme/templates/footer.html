@@ -1,10 +1,14 @@
 {% ckan_extends %}
 
+{% block footer_nav %}
+    <ul class="unstyled">
+        <li><a href="http://www.bioplatforms.com.au">Bioplatforms Australia</a></li>
+	{% set api_url = 'http://docs.ckan.org/en/{0}/api/'.format(g.ckan_doc_version) %}
+	<li><a href="{{ api_url }}">API Documentation</a></li>
+    </ul>
+{% endblock %}
+
 {% block footer_attribution %}
-  <style>
-    .ckan-footer-logo {margin: 2px 0 0 120px}
-    .ccg-footer-logo {margin: -43px 0 0 0}
-  </style>
-  <p>{% trans %}<strong>Powered by</strong> <a class="hide-text ckan-footer-logo"href="http://ckan.org">CKAN</a>{% endtrans %}
-  <img class="ccg-footer-logo" src="{{ h.url_for_static('/ccg.jpg') }}"/></p>
+<p><strong>Powered by</strong> <a href="http://ckan.org">CKAN</a></p>
+<p><strong>Maintained by</strong> <a href="https://ccg.murdoch.edu.au">Centre for Comparative Genomics, Murdoch University</a></p>
 {% endblock %}
