@@ -237,8 +237,8 @@
             "label": "Geospatial Coverage",
 	    "display_property": "dcat:Dataset/dct:spatial",
             "form_placeholder": "Paste a valid GeoJSON geometry",
-            "form_snippet":"spatial.html",
-            "display_snippet":"spatial.html",
+            "form_snippet":"spatial_form.html",
+            "display_snippet":"dataset_map.html",
             "choices": [
 {"label":"Western Australia",
                 "value":{
