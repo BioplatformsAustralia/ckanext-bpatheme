@@ -231,7 +231,7 @@
             "help_inline": true,
             "preset": "date",
             "display_property": "dcat:Dataset/dct:temporal"
-        },
+        }
     ],
         "resource_fields": [
         {
