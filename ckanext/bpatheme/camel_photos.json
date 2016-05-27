@@ -4,6 +4,13 @@
   "about_url": "http://example.com/the-camel-photos-schema",
   "dataset_fields": [
     {
+	"field_name": "owner_org",
+	"label": "Organization",
+	"display_property": "dct:publisher",
+	"validators": "owner_org_validator unicode",
+	"form_snippet": "organization.html"
+    },
+    {
       "field_name": "title",
       "label": "Title",
       "preset": "title",
