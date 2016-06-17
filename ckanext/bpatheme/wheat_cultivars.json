@@ -117,6 +117,13 @@
   ],
   "resource_fields": [
     {
+      "field_name": "url",
+      "label": "Data File",
+      "preset": "resource_url_upload",
+      "form_placeholder": "http://downloads-mu.bioplatforms.com/my-dataset.fastq.gz",
+      "upload_label": "Data File"
+    },
+    {
       "field_name": "casava_version",
       "label": "Casava Version"
     },
