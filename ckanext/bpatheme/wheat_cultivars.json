@@ -1,0 +1,203 @@
+{
+  "scheming_version": 1,
+  "dataset_type": "wheat-cultivars",
+  "about_url": "https://downloads.bioplatforms.com/wheat_cultivars/",
+  "dataset_fields": [
+    {
+	"field_name": "owner_org",
+	"label": "Organization",
+	"display_property": "dct:publisher",
+	"validators": "owner_org_validator unicode",
+	"form_snippet": "organization.html"
+    },
+    {
+      "field_name": "title",
+      "label": "Title",
+      "preset": "title",
+      "form_placeholder": ""
+    },
+    {
+      "field_name": "name",
+      "label": "URL",
+      "preset": "dataset_slug",
+      "form_placeholder": ""
+    },
+
+
+    {
+      "field_name": "source_name",
+      "label": "Source Name",
+      "preset": "",
+      "form_placeholder": ""
+    },
+    {
+      "field_name": "code",
+      "label": "Code",
+      "preset": "",
+      "form_placeholder": ""
+    },
+    {
+      "field_name": "bpa_id",
+      "label": "BPA ID",
+      "preset": "",
+      "form_placeholder": ""
+    },
+    {
+      "field_name": "characteristics",
+      "label": "Characteristics",
+      "preset": "",
+      "form_placeholder": ""
+    },
+    {
+      "field_name": "organism",
+      "label": "Organism",
+      "preset": "",
+      "form_placeholder": ""
+    },
+    {
+      "field_name": "Variety",
+      "label": "variety",
+      "preset": "",
+      "form_placeholder": ""
+    },
+    {
+      "field_name": "organism_part",
+      "label": "Organism Part",
+      "preset": "",
+      "form_placeholder": ""
+    },
+    {
+      "field_name": "pedigree",
+      "label": "Pedigree",
+      "preset": "",
+      "form_placeholder": ""
+    },
+    {
+      "field_name": "dev_stage",
+      "label": "Development Stage",
+      "preset": "",
+      "form_placeholder": ""
+    },
+    {
+      "field_name": "yield_properties",
+      "label": "Yield Properties",
+      "preset": "",
+      "form_placeholder": ""
+    },
+    {
+      "field_name": "morphology",
+      "label": "Morphology",
+      "preset": "",
+      "form_placeholder": ""
+    },
+    {
+      "field_name": "maturity",
+      "label": "Maturity",
+      "preset": "",
+      "form_placeholder": ""
+    },
+    {
+      "field_name": "maturity",
+      "label": "Maturity",
+      "preset": "",
+      "form_placeholder": ""
+    },
+    {
+      "field_name": "pathogen_tolerance",
+      "label": "Pathogen Tolerance",
+      "preset": "",
+      "form_placeholder": ""
+    },
+    {
+      "field_name": "drought_tolerance",
+      "label": "Drought Tolerance",
+      "preset": "",
+      "form_placeholder": ""
+    },
+    {
+      "field_name": "soil_tolerance",
+      "label": "Soil Tolerance",
+      "preset": "",
+      "form_placeholder": ""
+    },
+    {
+      "field_name": "classification",
+      "label": "Classification",
+      "preset": "",
+      "form_placeholder": ""
+    },
+    {
+      "field_name": "sample_url",
+      "label": "Sample URL",
+      "preset": "",
+      "form_placeholder": ""
+    }
+  ],
+  "resource_fields": [
+    {
+      "field_name": "casava_version",
+      "label": "Casava Version",
+      "preset": ""
+    },
+    {
+      "field_name": "library_construction_protocol",
+      "label": "Library Construction Protocol",
+      "preset": ""
+    },
+    {
+      "field_name": "library_range",
+      "label": "Library Range",
+      "preset": ""
+    },
+    {
+      "field_name": "run_number",
+      "label": "Run Number",
+      "preset": ""
+    },
+    {
+      "field_name": "sequencer",
+      "label": "Sequencer",
+      "preset": ""
+    },
+    {
+      "field_name": "barcode",
+      "label": "Barcode",
+      "preset": ""
+    },
+    {
+      "field_name": "base_pairs",
+      "label": "Base Pairs",
+      "preset": ""
+    },
+    {
+      "field_name": "filename",
+      "label": "Filename",
+      "preset": ""
+    },
+    {
+      "field_name": "flowcell",
+      "label": "Flowcell",
+      "preset": ""
+    },
+    {
+      "field_name": "lane_number",
+      "label": "Lane Number",
+      "preset": ""
+    },
+    {
+      "field_name": "library_type",
+      "label": "Library Type",
+      "preset": ""
+    },
+    {
+      "field_name": "md5",
+      "label": "MD5",
+      "preset": ""
+    },
+    {
+      "field_name": "read_number",
+      "label": "Read Number",
+      "preset": ""
+    }
+  ]
+}
