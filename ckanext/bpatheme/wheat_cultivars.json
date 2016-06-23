@@ -85,11 +85,6 @@
       "form_placeholder": ""
     },
     {
-      "field_name": "maturity",
-      "label": "Maturity",
-      "form_placeholder": ""
-    },
-    {
       "field_name": "pathogen_tolerance",
       "label": "Pathogen Tolerance",
       "form_placeholder": ""
