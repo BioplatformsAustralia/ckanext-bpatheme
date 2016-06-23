@@ -17,13 +17,18 @@
       "form_placeholder": ""
     },
     {
+	"field_name": "notes",
+	"label": "Description",
+	"display_property": "dcat:Dataset/dct:description",
+	"form_snippet": "markdown.html",
+	"form_placeholder": "eg. Some useful notes about the data"
+    },
+    {
       "field_name": "name",
       "label": "URL",
       "preset": "dataset_slug",
       "form_placeholder": ""
     },
-
-
     {
       "field_name": "source_name",
       "label": "Source Name",
