@@ -1,0 +1,178 @@
+{
+  "scheming_version": 1,
+  "dataset_type": "wheat-pathogens",
+  "about_url": "https://downloads.bioplatforms.com/wheat_pathogens/",
+  "dataset_fields": [
+    {
+	"field_name": "owner_org",
+	"label": "Organization",
+	"display_property": "dct:publisher",
+	"validators": "owner_org_validator unicode",
+	"form_snippet": "organization.html"
+    },
+    {
+      "field_name": "title",
+      "label": "Title",
+      "preset": "title",
+      "form_placeholder": ""
+    },
+    {
+	"field_name": "notes",
+	"label": "Description",
+	"display_property": "dcat:Dataset/dct:description",
+	"form_snippet": "markdown.html",
+	"form_placeholder": "eg. Some useful notes about the data"
+    },
+    {
+      "field_name": "name",
+      "label": "URL",
+      "preset": "dataset_slug",
+      "form_placeholder": ""
+    },
+
+    {
+      "field_name": "bpa_id",
+      "label": "BPA ID",
+      "form_placeholder": ""
+    },
+    {
+      "field_name": "kingdom",
+      "label": "Kingdom",
+      "form_placeholder": ""
+    },
+    {
+      "field_name": "phylum",
+      "label": "Phylum",
+      "form_placeholder": ""
+    },
+    {
+      "field_name": "species",
+      "label": "Species",
+      "form_placeholder": ""
+    },
+    {
+      "field_name": "sample_label",
+      "label": "Sample Label",
+      "form_placeholder": ""
+    },
+    {
+      "field_name": "dna_source",
+      "label": "DNA Source",
+      "form_placeholder": ""
+    },
+    {
+      "field_name": "official_variety_name",
+      "label": "Official Variety Name",
+      "form_placeholder": ""
+    },
+    {
+      "field_name": "original_source_host_species",
+      "label": "Original Source Host Species",
+      "form_placeholder": ""
+    },
+    {
+      "field_name": "wheat_pathogenicity",
+      "label": "Wheat Pathogenicity",
+      "form_placeholder": ""
+    },
+    {
+      "field_name": "index_sequence",
+      "label": "Index Sequence",
+      "form_placeholder": ""
+    },
+    {
+      "field_name": "library_id",
+      "label": "Library ID",
+      "form_placeholder": ""
+    },
+    {
+      "field_name": "collection_date",
+      "label": "Collection Date",
+      "form_placeholder": ""
+    },
+    {
+      "field_name": "collection_location",
+      "label": "Collection Location",
+      "form_placeholder": ""
+    },
+    {
+      "field_name": "dna_extraction_protocol",
+      "label": "DNA Extraction Protocol",
+      "form_placeholder": ""
+    },
+    {
+      "field_name": "sequencing_facility",
+      "label": "Sequencing Facility",
+      "form_placeholder": ""
+    }
+  ],
+  "resource_fields": [
+    {
+      "field_name": "url",
+      "label": "Data File",
+      "preset": "resource_url_upload",
+      "form_placeholder": "http://downloads-mu.bioplatforms.com/my-dataset.fastq.gz",
+      "upload_label": "Data File"
+    },
+    {
+      "field_name": "casava_version",
+	"label": "Casava Version",
+    },
+    {
+      "field_name": "flowcell",
+      "label": "Flow Cell",
+    },
+    {
+      "field_name": "run_number",
+      "label": "Run Number",
+    },
+    {
+      "field_name": "sequencer",
+      "label": "Sequencer",
+    },
+    {
+      "field_name": "run_index_number",
+      "label": "Run Index Number",
+    },
+    {
+      "field_name": "run_lane_number",
+      "label": "Run Lane Number",
+    },
+    {
+      "field_name": "run_protocol",
+      "label": "Run Protocol",
+    },
+    {
+      "field_name": "run_protocol_base_pairs",
+      "label": "Run Protocol Base Pairs",
+    },
+    {
+      "field_name": "run_protocol_library_type",
+      "label": "Run Protocol Library Type",
+    },
+    {
+      "field_name": "index_number",
+      "label": "Ingest Number",
+    },
+    {
+      "field_name": "lane_number",
+      "label": "Lane Number",
+    },
+    {
+      "field_name": "Filename",
+      "label": "filename",
+    },
+    {
+      "field_name": "md5",
+      "label": "MD5",
+    },
+    {
+      "field_name": "filesize",
+      "label": "File Size",
+    },
+    {
+      "field_name": "Note",
+      "label": "note",
+    }
+  ]
+}
