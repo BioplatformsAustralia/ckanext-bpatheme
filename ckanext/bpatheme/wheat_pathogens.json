@@ -116,63 +116,63 @@
     },
     {
       "field_name": "casava_version",
-	"label": "Casava Version",
+      "label": "Casava Version"
     },
     {
       "field_name": "flowcell",
-      "label": "Flow Cell",
+      "label": "Flow Cell"
     },
     {
       "field_name": "run_number",
-      "label": "Run Number",
+      "label": "Run Number"
     },
     {
       "field_name": "sequencer",
-      "label": "Sequencer",
+      "label": "Sequencer"
     },
     {
       "field_name": "run_index_number",
-      "label": "Run Index Number",
+      "label": "Run Index Number"
     },
     {
       "field_name": "run_lane_number",
-      "label": "Run Lane Number",
+      "label": "Run Lane Number"
     },
     {
       "field_name": "run_protocol",
-      "label": "Run Protocol",
+      "label": "Run Protocol"
     },
     {
       "field_name": "run_protocol_base_pairs",
-      "label": "Run Protocol Base Pairs",
+      "label": "Run Protocol Base Pairs"
     },
     {
       "field_name": "run_protocol_library_type",
-      "label": "Run Protocol Library Type",
+      "label": "Run Protocol Library Type"
     },
     {
       "field_name": "index_number",
-      "label": "Ingest Number",
+      "label": "Ingest Number"
     },
     {
       "field_name": "lane_number",
-      "label": "Lane Number",
+      "label": "Lane Number"
     },
     {
       "field_name": "Filename",
-      "label": "filename",
+      "label": "filename"
     },
     {
       "field_name": "md5",
-      "label": "MD5",
+      "label": "MD5"
     },
     {
       "field_name": "filesize",
-      "label": "File Size",
+      "label": "File Size"
     },
     {
       "field_name": "Note",
-      "label": "note",
+      "label": "note"
     }
   ]
 }
