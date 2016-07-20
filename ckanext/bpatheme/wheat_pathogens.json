@@ -76,7 +76,7 @@
       "form_placeholder": ""
     },
     {
-      "field_name": "index_sequence",
+      "field_name": "index",
       "label": "Index Sequence",
       "form_placeholder": ""
     },
