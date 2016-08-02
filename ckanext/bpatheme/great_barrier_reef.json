@@ -1,0 +1,180 @@
+{
+    "scheming_version": 1,
+    "dataset_type": "great-barrier-reef",
+    "about_url": "https://downloads.bioplatforms.com/gbr/",
+    "dataset_fields": [
+        {
+            "field_ame": "owner_org",
+            "label": "Organization",
+            "display_property": "dct:publisher",
+            "validators": "owner_org_validator unicode",
+            "form_snippet": "organization.html"
+        },
+        {
+            "field_name": "title",
+            "label": "Title",
+            "preset": "title",
+            "form_placeholder": ""
+        },
+        {
+            "field_name": "notes",
+            "label": "Description",
+            "display_property": "dcat:Dataset/dct:description",
+            "form_snippet": "markdown.html",
+            "form_placeholder": "eg. Some useful notes about the data"
+        },
+        {
+            "field_name": "name",
+            "label": "URL",
+            "preset": "dataset_slug",
+            "form_placeholder": ""
+        },
+        {
+            "field_name": "source_name",
+            "label": "Source Name",
+            "form_placeholder": ""
+        },
+        {
+            "field_name": "code",
+            "label": "Code",
+            "form_placeholder": ""
+        },
+        {
+            "field_name": "bpa_id",
+            "label": "BPA ID",
+            "form_placeholder": ""
+        },
+        {
+            "field_name": "characteristics",
+            "label": "Characteristics",
+            "form_placeholder": ""
+        },
+        {
+            "field_name": "organism",
+            "label": "Organism",
+            "form_placeholder": ""
+        },
+        {
+            "field_name": "variety",
+            "label": "Variety",
+            "form_placeholder": ""
+        },
+        {
+            "field_name": "organism_part",
+            "label": "Organism Part",
+            "form_placeholder": ""
+        },
+        {
+            "field_name": "pedigree",
+            "label": "Pedigree",
+            "form_placeholder": ""
+        },
+        {
+            "field_name": "dev_stage",
+            "label": "Development Stage",
+            "form_placeholder": ""
+        },
+        {
+            "field_name": "yield_properties",
+            "label": "Yield Properties",
+            "form_placeholder": ""
+        },
+        {
+            "field_name": "morphology",
+            "label": "Morphology",
+            "form_placeholder": ""
+        },
+        {
+            "field_name": "maturity",
+            "label": "Maturity",
+            "form_placeholder": ""
+        },
+        {
+            "field_name": "pathogen_tolerance",
+            "label": "Pathogen Tolerance",
+            "form_placeholder": ""
+        },
+        {
+            "field_name": "drought_tolerance",
+            "label": "Drought Tolerance",
+            "form_placeholder": ""
+        },
+        {
+            "field_name": "soil_tolerance",
+            "label": "Soil Tolerance",
+            "form_placeholder": ""
+        },
+        {
+            "field_name": "classification",
+            "label": "Classification",
+            "form_placeholder": ""
+        },
+        {
+            "field_name": "sample_url",
+            "label": "Sample URL",
+            "form_placeholder": ""
+        }
+    ],
+
+    "resource_fields": [
+        {
+            "field_name": "url",
+            "label": "Data File",
+            "preset": "resource_url_upload",
+            "form_placeholder": "http://downloads-mu.bioplatforms.com/my-dataset.fastq.gz",
+            "upload_label": "Data File"
+        },
+        {
+            "field_name": "casava_version",
+            "label": "Casava Version"
+        },
+        {
+            "field_name": "library_construction_protocol",
+            "label": "Library Construction Protocol"
+        },
+        {
+            "field_name": "library_range",
+            "label": "Library Range"
+        },
+        {
+            "field_name": "run_number",
+            "label": "Run Number"
+        },
+        {
+            "field_name": "sequencer",
+            "label": "Sequencer"
+        },
+        {
+            "field_name": "barcode",
+            "label": "Barcode"
+        },
+        {
+            "field_name": "base_pairs",
+            "label": "Base Pairs"
+        },
+        {
+            "field_name": "filename",
+            "label": "Filename"
+        },
+        {
+            "field_name": "flowcell",
+            "label": "Flowcell"
+        },
+        {
+            "field_name": "lane_number",
+            "label": "Lane Number"
+        },
+        {
+            "field_name": "library_type",
+            "label": "Library Type"
+        },
+        {
+            "field_name": "md5",
+            "label": "MD5"
+        },
+        {
+            "field_name": "read_number",
+            "label": "Read Number"
+        }
+    ]
+}
