@@ -81,8 +81,8 @@
                 {
                     "value": "a16s",
                     "label": "A16S"
-                },
-            ],
+                }
+            ]
         },
         {
             "field_name": "index",
@@ -103,8 +103,8 @@
                 {
                     "value": "fail",
                     "label": "Fail"
-                },
-            ],
+                }
+            ]
         },
         {
             "field_name": "pcr_1_to_100",
@@ -120,7 +120,7 @@
                 {
                     "value": "fail",
                     "label": "Fail"
-                },
+                }
             ]
         },
         {
@@ -137,13 +137,13 @@
                 {
                     "value": "fail",
                     "label": "Fail"
-                },
+                }
             ]
         },
         {
             "field_name": "dilution",
             "label": "Dilution",
-            "form_placeholder": ""
+            "form_placeholder": "",
             "help_inline": true,
             "preset": "select",
             "choices": [
@@ -158,7 +158,7 @@
                 {
                     "value": "neat",
                     "label": "Neat"
-                },
+                }
             ]
         },
         {
@@ -184,9 +184,9 @@
         {
             "field_name": "sequencing_notes",
             "label": "Sequencing Notes",
-            "form_placeholder": ""
-            "form_snippet": "markdown.html",
-        },
+            "form_placeholder": "",
+            "form_snippet": "markdown.html"
+        }
     ],
 
     "resource_fields": [
