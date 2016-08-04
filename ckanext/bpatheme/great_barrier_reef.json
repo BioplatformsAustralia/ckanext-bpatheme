@@ -4,7 +4,7 @@
     "about_url": "https://downloads.bioplatforms.com/gbr/",
     "dataset_fields": [
         {
-            "field_ame": "owner_org",
+            "field_name": "owner_org",
             "label": "Organization",
             "display_property": "dct:publisher",
             "validators": "owner_org_validator unicode",
@@ -62,7 +62,7 @@
         {
             "field_name": "amplicon",
             "label": "Amplicon",
-            "form_placeholder": ""
+            "form_placeholder": "",
             "help_inline": true,
             "preset": "select",
             "choices": [
