@@ -30,18 +30,8 @@
             "form_placeholder": ""
         },
         {
-            "field_name": "source_name",
-            "label": "Source Name",
-            "form_placeholder": ""
-        },
-        {
             "field_name": "bpa_id",
             "label": "BPA ID",
-            "form_placeholder": ""
-        },
-        {
-            "field_name": "organism",
-            "label": "Organism",
             "form_placeholder": ""
         },
         {
@@ -85,8 +75,18 @@
             ]
         },
         {
-            "field_name": "index",
-            "label": "Index",
+            "field_name": "i7_index",
+            "label": "I7 Index",
+            "form_placeholder": ""
+        },
+        {
+            "field_name": "index1",
+            "label": "Index 1",
+            "form_placeholder": ""
+        },
+        {
+            "field_name": "index2",
+            "label": "Index 2",
             "form_placeholder": ""
         },
         {
@@ -178,7 +178,7 @@
         },
         {
             "field_name": "analysis_software_version",
-            "label": "analysis_software_version",
+            "label": "Analysis Software Version",
             "form_placeholder": ""
         },
         {
