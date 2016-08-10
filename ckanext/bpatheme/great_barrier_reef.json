@@ -1,0 +1,249 @@
+{
+    "scheming_version": 1,
+    "dataset_type": "great-barrier-reef",
+    "about_url": "https://downloads.bioplatforms.com/gbr/",
+    "dataset_fields": [
+        {
+            "field_name": "owner_org",
+            "label": "Organization",
+            "display_property": "dct:publisher",
+            "validators": "owner_org_validator unicode",
+            "form_snippet": "organization.html"
+        },
+        {
+            "field_name": "title",
+            "label": "Title",
+            "preset": "title",
+            "form_placeholder": ""
+        },
+        {
+            "field_name": "notes",
+            "label": "Description",
+            "display_property": "dcat:Dataset/dct:description",
+            "form_snippet": "markdown.html",
+            "form_placeholder": "eg. Some useful notes about the data"
+        },
+        {
+            "field_name": "name",
+            "label": "URL",
+            "preset": "dataset_slug",
+            "form_placeholder": ""
+        },
+        {
+            "field_name": "bpa_id",
+            "label": "BPA ID",
+            "form_placeholder": ""
+        },
+        {
+            "field_name": "sample_url",
+            "label": "Sample URL",
+            "form_placeholder": ""
+        },
+        {
+            "field_name": "sample_extraction_id",
+            "label": "Sample Extraction ID",
+            "form_placeholder": ""
+        },
+        {
+            "field_name": "sequencing_facility",
+            "label": "Sequencing Facility",
+            "form_placeholder": ""
+        },
+        {
+            "field_name": "amplicon",
+            "label": "Amplicon",
+            "form_placeholder": "",
+            "help_inline": true,
+            "preset": "select",
+            "choices": [
+                {
+                    "value": "16s",
+                    "label": "16S"
+                },
+                {
+                    "value": "its",
+                    "label": "ITS"
+                },
+                {
+                    "value": "18s",
+                    "label": "18S"
+                },
+                {
+                    "value": "a16s",
+                    "label": "A16S"
+                }
+            ]
+        },
+        {
+            "field_name": "i7_index",
+            "label": "I7 Index",
+            "form_placeholder": ""
+        },
+        {
+            "field_name": "index1",
+            "label": "Index 1",
+            "form_placeholder": ""
+        },
+        {
+            "field_name": "index2",
+            "label": "Index 2",
+            "form_placeholder": ""
+        },
+        {
+            "field_name": "pcr_1_to_10",
+            "label": "PCR 1:10",
+            "form_placeholder": "",
+            "help_inline": true,
+            "preset": "select",
+            "choices": [
+                {
+                    "value": "pass",
+                    "label": "Pass"
+                },
+                {
+                    "value": "fail",
+                    "label": "Fail"
+                }
+            ]
+        },
+        {
+            "field_name": "pcr_1_to_100",
+            "label": "PCR 1:100",
+            "form_placeholder": "",
+            "help_inline": true,
+            "preset": "select",
+            "choices": [
+                {
+                    "value": "pass",
+                    "label": "Pass"
+                },
+                {
+                    "value": "fail",
+                    "label": "Fail"
+                }
+            ]
+        },
+        {
+            "field_name": "pcr_neat",
+            "label": "PCR Neat",
+            "form_placeholder": "",
+            "help_inline": true,
+            "preset": "select",
+            "choices": [
+                {
+                    "value": "pass",
+                    "label": "Pass"
+                },
+                {
+                    "value": "fail",
+                    "label": "Fail"
+                }
+            ]
+        },
+        {
+            "field_name": "dilution",
+            "label": "Dilution",
+            "form_placeholder": "",
+            "help_inline": true,
+            "preset": "select",
+            "choices": [
+                {
+                    "value": "1_to_10",
+                    "label": "1:10"
+                },
+                {
+                    "value": "1_to_100",
+                    "label": "1:100"
+                },
+                {
+                    "value": "neat",
+                    "label": "Neat"
+                }
+            ]
+        },
+        {
+            "field_name": "sequencing_run_number",
+            "label": "Sequencing run number",
+            "form_placeholder": ""
+        },
+        {
+            "field_name": "flow_cell_id",
+            "label": "Flow Cell ID",
+            "form_placeholder": ""
+        },
+        {
+            "field_name": "reads",
+            "label": "Reads",
+            "form_placeholder": ""
+        },
+        {
+            "field_name": "analysis_software_version",
+            "label": "Analysis Software Version",
+            "form_placeholder": ""
+        },
+        {
+            "field_name": "sequencing_notes",
+            "label": "Sequencing Notes",
+            "form_placeholder": "",
+            "form_snippet": "markdown.html"
+        }
+    ],
+
+    "resource_fields": [
+        {
+            "field_name": "url",
+            "label": "Data File",
+            "preset": "resource_url_upload",
+            "form_placeholder": "http://downloads-mu.bioplatforms.com/my-dataset.fastq.gz",
+            "upload_label": "Amplicon Sequence File"
+        },
+        {
+            "field_name": "library_construction_protocol",
+            "label": "Library Construction Protocol"
+        },
+        {
+            "field_name": "library_range",
+            "label": "Library Range"
+        },
+        {
+            "field_name": "run_number",
+            "label": "Run Number"
+        },
+        {
+            "field_name": "sequencer",
+            "label": "Sequencer"
+        },
+        {
+            "field_name": "barcode",
+            "label": "Barcode"
+        },
+        {
+            "field_name": "base_pairs",
+            "label": "Base Pairs"
+        },
+        {
+            "field_name": "filename",
+            "label": "Filename"
+        },
+        {
+            "field_name": "flowcell",
+            "label": "Flowcell"
+        },
+        {
+            "field_name": "lane_number",
+            "label": "Lane Number"
+        },
+        {
+            "field_name": "library_type",
+            "label": "Library Type"
+        },
+        {
+            "field_name": "md5",
+            "label": "MD5"
+        },
+        {
+            "field_name": "read_number",
+            "label": "Read Number"
+        }
+    ]
+}
