@@ -1,6 +1,6 @@
 {
     "scheming_version": 1,
-    "dataset_type": "great-barrier-reef",
+    "dataset_type": "great-barrier-reef-amplicon",
     "about_url": "https://downloads.bioplatforms.com/gbr/",
     "dataset_fields": [
         {
@@ -40,6 +40,11 @@
             "form_placeholder": ""
         },
         {
+            "field_name": "sample_name",
+            "label": "Sample Name",
+            "form_placeholder": ""
+        },
+        {
             "field_name": "sample_extraction_id",
             "label": "Sample Extraction ID",
             "form_placeholder": ""
@@ -47,6 +52,11 @@
         {
             "field_name": "sequencing_facility",
             "label": "Sequencing Facility",
+            "form_placeholder": ""
+        },
+        {
+            "field_name": "sequencing_run_number",
+            "label": "Sequencing run number",
             "form_placeholder": ""
         },
         {
@@ -77,6 +87,11 @@
         {
             "field_name": "i7_index",
             "label": "I7 Index",
+            "form_placeholder": ""
+        },
+        {
+            "field_name": "i5_index",
+            "label": "I5 Index",
             "form_placeholder": ""
         },
         {
@@ -160,11 +175,6 @@
                     "label": "Neat"
                 }
             ]
-        },
-        {
-            "field_name": "sequencing_run_number",
-            "label": "Sequencing run number",
-            "form_placeholder": ""
         },
         {
             "field_name": "flow_cell_id",
