@@ -29,7 +29,11 @@
       "preset": "dataset_slug",
       "form_placeholder": ""
     },
-
+    {
+        "field_name": "contact_scientist",
+        "label": "Contact Scientist",
+        "form_placeholder": ""
+    },
     {
       "field_name": "bpa_id",
       "label": "BPA ID",

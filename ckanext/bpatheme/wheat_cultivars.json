@@ -30,6 +30,11 @@
       "form_placeholder": ""
     },
     {
+        "field_name": "contact_scientist",
+        "label": "Contact Scientist",
+        "form_placeholder": ""
+    },
+    {
       "field_name": "source_name",
       "label": "Source Name",
       "form_placeholder": ""
