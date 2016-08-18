@@ -44,6 +44,11 @@
             "label": "Sample URL",
             "form_placeholder": ""
         },
+	{
+	    "field_name": "sample_id",
+	    "label": "Sample ID",
+	    "form_placeholder": ""
+	},
         {
             "field_name": "sample_name",
             "label": "Sample Name",

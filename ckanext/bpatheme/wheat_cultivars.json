@@ -35,6 +35,11 @@
         "form_placeholder": ""
     },
     {
+        "field_name": "sample_id",
+        "label": "Sample ID",
+        "form_placeholder": ""
+    },
+    {
       "field_name": "source_name",
       "label": "Source Name",
       "form_placeholder": ""
