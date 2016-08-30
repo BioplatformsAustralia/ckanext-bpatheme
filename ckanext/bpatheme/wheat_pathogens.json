@@ -172,16 +172,24 @@
       "label": "filename"
     },
     {
-      "field_name": "md5",
-      "label": "MD5"
-    },
-    {
       "field_name": "filesize",
       "label": "File Size"
     },
     {
       "field_name": "Note",
       "label": "note"
+    },
+    {
+      "field_name": "md5",
+      "label": "MD5"
+    },
+    {
+      "field_name": "sha256",
+      "label": "SHA256"
+    },
+    {
+      "field_name": "s3etag_8388608",
+      "label": "S3 E-Tag (8MB multipart)"
     }
   ]
 }
