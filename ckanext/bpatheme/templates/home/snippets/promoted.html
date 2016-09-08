@@ -1,34 +1,20 @@
-{% set intro = g.site_intro_text %}
-
 <div class="module-content box">
   <header>
-    {% if intro %}
-      {{ h.render_markdown(intro) }}
-    {% else %}
-      <h1 class="page-heading">{{ _("New Environment") }}</h1>
-      <p>
-        {% trans %}
-        Welcome to your new data catalog!
-        <a href="/user/login">Log in</a> with the
-        "admin" account password you created, then create a
-        <a href="/dataset/new">new dataset</a> or a
-        <a href="/organization/new">new organization</a>.
-        {% endtrans %}
-      </p>
-    {% endif %}
-  </header>
 
-<!-- 
-  {% block home_image %}
-    <section class="featured media-overlay hidden-phone">
-      <h2 class="media-heading">{% block home_image_caption %}{{ _("Feature datasets here") }}{% endblock %}</h2>
-      {% block home_image_content %}
-        <a class="media-image" href="#">
-          <img src="{{ h.url_for_static('/chart.png') }}" alt="Example chart" width="420" height="220" />
-        </a>
-      {% endblock %}
-    </section>
-  {% endblock %}
--->
+    <p class="lead">
+      Welcome to the Bioplatforms Australia data access portal.
+    </p>
+
+    <p>
+      Bioplatforms Australia enables innovation and collaboration through investments in world class infrastructure and expertise.
+    </p>
+
+    <p>
+      This portal provides access to both metadata and data for Bioplatforms projects. Please see the 
+      <a href="{{ h.url('group_index') }}">project index</a>. All information can also be accessed
+      programmatically, via the <a href="http://docs.ckan.org/en/ckan-2.5.2/api/">CKAN API</a>.
+    </p>
+
+  </header>
 
 </div>

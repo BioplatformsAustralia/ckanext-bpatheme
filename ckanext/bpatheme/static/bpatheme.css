@@ -13,6 +13,11 @@
         background-size: 270px 30px;
 }
 
+body {
+  font-family: "Open Sans", Helvetica, Arial, sans-serif;
+  font-size: 12pt;
+}
+
 
 
 .account-masthead {
@@ -126,10 +131,9 @@
 .masthead .navigation ul.nav li a:hover,
 .masthead .navigation ul.nav li.active a {
   background: none;
-  color: #69737c;
+  color: #2EA3F2;
   text-decoration: none;
-  box-shadow: rgb(105, 115, 124) 0px 2px 0px 0px;
-
+  box-shadow: none;
 }
 
 
