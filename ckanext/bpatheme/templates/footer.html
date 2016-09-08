@@ -2,13 +2,12 @@
 
 {% block footer_nav %}
     <ul class="unstyled">
-        <li><a href="http://www.bioplatforms.com.au">Bioplatforms Australia</a></li>
 	{% set api_url = 'http://docs.ckan.org/en/{0}/api/'.format(g.ckan_doc_version) %}
-	<li><a href="{{ api_url }}">API Documentation</a></li>
+	<li><a href="{{ api_url }}">CKAN API Documentation</a></li>
     </ul>
 {% endblock %}
 
 {% block footer_attribution %}
-<p>Operated by <a href="http://www.bioplatforms.com">Bioplatforms Australia</a></p>
-<p>Powered by <a href="http://ckan.org">CKAN</a></p>
+<p><a href="http://www.bioplatforms.com">Operated by Bioplatforms Australia</a></p>
+<p><a href="http://www.bioplatforms.com/contact/">Contact</a></p>
 {% endblock %}
