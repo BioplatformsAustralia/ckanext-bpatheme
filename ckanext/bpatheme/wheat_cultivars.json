@@ -30,6 +30,18 @@
       "form_placeholder": ""
     },
     {
+	"field_name": "tag_string",
+	"label": "Tags",
+	"display_property": "dcat:Dataset/dct:keyword",
+	"validators": "ignore_missing tag_string_convert",
+	"form_placeholder": "type to auto-complete",
+	"form_attrs": {
+	    "data-module": "autocomplete",
+	    "data-module-tags": "",
+	    "data-module-source": "/api/2/util/tag/autocomplete?incomplete=?"
+	}
+    },
+    {
         "field_name": "contact_scientist",
         "label": "Contact Scientist",
         "form_placeholder": ""
