@@ -85,6 +85,14 @@
 
     "resource_fields": [
         {
+            "field_name": "name",
+            "label": "Name"
+        },
+        {
+            "field_name": "description",
+            "label": "Description"
+        },
+        {
             "field_name": "url",
             "label": "Data File",
             "preset": "resource_url_upload",
