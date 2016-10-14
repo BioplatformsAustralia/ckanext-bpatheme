@@ -109,7 +109,7 @@
             "label": "Run Sample Number"
         },
         {
-            "field_name": "size",
+            "field_name": "seq_size",
             "label": "Size"
         },
 	{
