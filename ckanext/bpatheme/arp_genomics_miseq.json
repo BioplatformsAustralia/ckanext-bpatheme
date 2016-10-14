@@ -42,6 +42,11 @@
             }
         },
         {
+            "field_name": "bpa_id",
+            "label": "BPA ID",
+            "form_placeholder": ""
+        },
+        {
             "field_name": "insert_size_range",
             "label": "Insert Size Range",
             "form_placeholder": ""
