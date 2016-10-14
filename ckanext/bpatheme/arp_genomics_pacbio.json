@@ -1,0 +1,123 @@
+{
+    "scheming_version": 1,
+    "dataset_type": "arp-genomics-pacbio",
+    "about_url": "https://downloads.bioplatforms.com/sepsis/",
+    "dataset_fields": [
+        {
+            "field_name": "owner_org",
+            "label": "Organization",
+            "display_property": "dct:publisher",
+            "validators": "owner_org_validator unicode",
+            "form_snippet": "organization.html"
+        },
+        {
+            "field_name": "title",
+            "label": "Title",
+            "preset": "title",
+            "form_placeholder": ""
+        },
+        {
+            "field_name": "notes",
+            "label": "Description",
+            "display_property": "dcat:Dataset/dct:description",
+            "form_snippet": "markdown.html",
+            "form_placeholder": "eg. Some useful notes about the data"
+        },
+        {
+            "field_name": "name",
+            "label": "URL",
+            "preset": "dataset_slug",
+            "form_placeholder": ""
+        },
+        {
+            "field_name": "tag_string",
+            "label": "Tags",
+	    "display_property": "dcat:Dataset/dct:keyword",
+            "validators": "ignore_missing tag_string_convert",
+            "form_placeholder": "type to auto-complete",
+            "form_attrs": {
+                "data-module": "autocomplete",
+                "data-module-tags": "",
+                "data-module-source": "/api/2/util/tag/autocomplete?incomplete=?"
+            }
+        },
+        {
+            "field_name": "bpa_id",
+            "label": "BPA ID",
+            "form_placeholder": ""
+        },
+        {
+            "field_name": "insert_size_range",
+            "label": "Insert Size Range",
+            "form_placeholder": ""
+        },
+        {
+            "field_name": "library_construction_protocol",
+            "label": "Library Construction Protocol",
+            "form_placeholder": ""
+        },
+        {
+            "field_name": "sequencer",
+            "label": "Sequencer",
+            "form_placeholder": ""
+        },
+        {
+            "field_name": "sequencer_run_id",
+            "label": "Sequencer Run ID",
+            "form_placeholder": ""
+        },
+        {
+            "field_name": "smrt_cell_id",
+            "label": "SMRT Cell ID",
+            "form_placeholder": ""
+        },
+        {
+            "field_name": "cell_position",
+            "label": "Cell Position",
+            "form_placeholder": ""
+        },
+        {
+            "field_name": "rs_version",
+            "label": "RS Version",
+            "form_placeholder": ""
+        }
+    ],
+
+    "resource_fields": [
+        {
+            "field_name": "url",
+            "label": "Data File",
+            "preset": "resource_url_upload",
+            "form_placeholder": "http://downloads-qcif.bioplatforms.com/my-dataset.fastq.gz",
+            "upload_label": "Amplicon Sequence File"
+        },
+        {
+            "field_name": "run_id",
+            "label": "Run ID"
+        },
+        {
+            "field_name": "vendor",
+            "label": "Vendor"
+        },
+        {
+            "field_name": "data_type",
+            "label": "Data Type"
+        },
+        {
+            "field_name": "machine_data",
+            "label": "Machine Data"
+        },
+	{
+	    "field_name": "md5",
+	    "label": "MD5"
+	},
+	{
+	    "field_name": "sha256",
+	    "label": "SHA256"
+	},
+	{
+	    "field_name": "s3etag_8388608",
+	    "label": "S3 E-Tag (8MB multipart)"
+	}
+    ]
+}
