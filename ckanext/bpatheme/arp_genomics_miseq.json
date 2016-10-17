@@ -125,6 +125,11 @@
             "field_name": "archive_ingestion_date",
             "label": "Archive Ingestion Date",
             "form_placeholder": ""
+        },
+        {
+            "field_name": "sample_submission_date",
+            "label": "Sample Submission Date",
+            "form_placeholder": ""
         }
     ],
 
