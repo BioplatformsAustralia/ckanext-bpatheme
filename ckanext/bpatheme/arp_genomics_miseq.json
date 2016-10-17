@@ -65,6 +65,66 @@
             "field_name": "analysis_software_version",
             "label": "Analysis Software Version",
             "form_placeholder": ""
+        },
+        {
+            "field_name": "taxon_or_organism",
+            "label": "Taxon or Organism",
+            "form_placeholder": ""
+        },
+        {
+            "field_name": "strain_or_isolate",
+            "label": "Strain or Isolate",
+            "form_placeholder": ""
+        },
+        {
+            "field_name": "serovar",
+            "label": "Serovar",
+            "form_placeholder": ""
+        },
+        {
+            "field_name": "growth_media",
+            "label": "Growth Media",
+            "form_placeholder": ""
+        },
+        {
+            "field_name": "replicate",
+            "label": "Replicate",
+            "form_placeholder": ""
+        },
+        {
+            "field_name": "omics",
+            "label": "omics",
+            "form_placeholder": ""
+        },
+        {
+            "field_name": "analytical_platform",
+            "label": "Analytical Platform",
+            "form_placeholder": ""
+        },
+        {
+            "field_name": "facility",
+            "label": "Facility",
+            "form_placeholder": ""
+        },
+        {
+            "field_name": "work_order",
+            "label": "Work Order",
+            "form_placeholder": ""
+        },
+        {
+            "field_name": "contextual_data_submission_date",
+            "label": "Contextual Data Submission Date",
+            "form_placeholder": ""
+        },
+        {
+            "field_name": "data_generated",
+            "label": "Data Generated",
+            "form_placeholder": ""
+        },
+        {
+            "field_name": "archive_ingestion_date",
+            "label": "Archive Ingestion Date",
+            "form_placeholder": ""
         }
     ],
 
