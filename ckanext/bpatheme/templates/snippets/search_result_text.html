@@ -35,19 +35,17 @@ Example:
     {{ text_query.format(number=h.localised_number(count), query=query) }}
   {%- else -%}
     {{ text_query_none.format(query=query) }}
-    <p>
-    Some datasets are restricted and will not appear on this page. To request access to restricted
-    datasets, please <a href="http://www.bioplatforms.com/contact/">contact Bioplatforms Australia</a>.
-    </p>
+    <br/>
+    <small>Some datasets are restricted and may not be shown. To request access to restricted
+    datasets, please <a href="http://www.bioplatforms.com/contact/">contact Bioplatforms Australia</a>.</small>
   {%- endif -%}
 {%- else -%}
   {%- if count -%}
     {{ text_no_query.format(number=h.localised_number(count)) }}
   {%- else -%}
     {{ text_no_query_none }}
-    <p>
-    Some datasets are restricted and will not appear on this page. To request access to restricted
-    datasets, please <a href="http://www.bioplatforms.com/contact/">contact Bioplatforms Australia</a>.
-    </p>
+    <br/>
+    <small>Some datasets are restricted and may not be shown. To request access to restricted
+    datasets, please <a href="http://www.bioplatforms.com/contact/">contact Bioplatforms Australia</a>.</small>
   {%- endif -%}
 {%- endif -%}
