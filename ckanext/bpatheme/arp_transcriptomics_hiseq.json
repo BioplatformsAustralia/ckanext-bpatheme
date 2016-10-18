@@ -181,6 +181,10 @@
             "field_name": "runsamplenum",
             "label": "Run Sample Number"
         },
+        {
+            "field_name": "seq_size",
+            "label": "Size"
+        },
 	{
 	    "field_name": "md5",
 	    "label": "MD5"
