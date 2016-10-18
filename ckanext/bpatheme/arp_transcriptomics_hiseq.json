@@ -47,8 +47,8 @@
             "form_placeholder": ""
         },
         {
-            "field_name": "insert_size_range",
-            "label": "Insert Size Range",
+            "field_name": "sample",
+            "label": "Sample",
             "form_placeholder": ""
         },
         {
@@ -57,13 +57,18 @@
             "form_placeholder": ""
         },
         {
+            "field_name": "barcode_tag",
+            "label": "Barcode Tag",
+            "form_placeholder": ""
+        },
+        {
             "field_name": "sequencer",
             "label": "Sequencer",
             "form_placeholder": ""
         },
         {
-            "field_name": "analysis_software_version",
-            "label": "Analysis Software Version",
+            "field_name": "casava_version",
+            "label": "Casava Version",
             "form_placeholder": ""
         },
         {
