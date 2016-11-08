@@ -1,6 +1,6 @@
 {
     "scheming_version": 1,
-    "dataset_type": "arp-genomics-miseq",
+    "dataset_type": "arp-metabolomics-deeplcms",
     "about_url": "https://downloads.bioplatforms.com/sepsis/",
     "dataset_fields": [
         {
@@ -47,23 +47,33 @@
             "form_placeholder": ""
         },
         {
-            "field_name": "insert_size_range",
-            "label": "Insert Size Range",
+            "field_name": "sample_fractionation_extract_solvent",
+            "label": "Sample Fractionation Extract Solvent",
             "form_placeholder": ""
         },
         {
-            "field_name": "library_construction_protocol",
-            "label": "Library Construction Protocol",
+            "field_name": "lc_column_type",
+            "label": "LC Column Type",
             "form_placeholder": ""
         },
         {
-            "field_name": "sequencer",
-            "label": "Sequencer",
+            "field_name": "gradient_time_min_flow",
+            "label": "Gradient Time Min Flow",
             "form_placeholder": ""
         },
         {
-            "field_name": "analysis_software_version",
-            "label": "Analysis Software Version",
+            "field_name": "mass_spectrometer",
+            "label": "Mass Spectromter",
+            "form_placeholder": ""
+        },
+        {
+            "field_name": "acquisition_mode",
+            "label": "Acquisition Mode",
+            "form_placeholder": ""
+        },
+        {
+            "field_name": "raw_file_name",
+            "label": "Raw File Name",
             "form_placeholder": ""
         },
         {
@@ -122,6 +132,11 @@
             "form_placeholder": ""
         },
         {
+            "field_name": "sample_submission_date",
+            "label": "Sample Submission Date",
+            "form_placeholder": ""
+        },
+        {
             "field_name": "data_generated",
             "label": "Data Generated",
             "form_placeholder": ""
@@ -132,8 +147,8 @@
             "form_placeholder": ""
         },
         {
-            "field_name": "sample_submission_date",
-            "label": "Sample Submission Date",
+            "field_name": "archive_id",
+            "label": "Archive ID",
             "form_placeholder": ""
         }
     ],

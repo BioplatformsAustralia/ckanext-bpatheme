@@ -82,6 +82,11 @@
             "form_placeholder": ""
         },
         {
+            "field_name": "data_type",
+            "label": "Data type",
+            "form_placeholder": ""
+        },
+        {
             "field_name": "taxon_or_organism",
             "label": "Taxon or Organism",
             "form_placeholder": ""
