@@ -178,7 +178,7 @@
             "label": "Platform"
         },
         {
-            "field_name": "msatr_ms_id",
+            "field_name": "mastr_ms_id",
             "label": "MastrMS ID"
         },
         {
