@@ -170,40 +170,20 @@
             "upload_label": "Amplicon Sequence File"
         },
         {
-            "field_name": "index",
-            "label": "Index"
-        },
-        {
-            "field_name": "lane",
-            "label": "Lane"
-        },
-        {
             "field_name": "vendor",
             "label": "Vendor"
         },
         {
-            "field_name": "read",
-            "label": "Read"
+            "field_name": "platform",
+            "label": "Platform"
         },
         {
-            "field_name": "flow_cell_id",
-            "label": "Flow Cell ID"
+            "field_name": "msatr_ms_id",
+            "label": "MastrMS ID"
         },
         {
-            "field_name": "library",
-            "label": "Library"
-        },
-        {
-            "field_name": "extraction",
-            "label": "Extraction"
-        },
-        {
-            "field_name": "runsamplenum",
-            "label": "Run Sample Number"
-        },
-        {
-            "field_name": "seq_size",
-            "label": "Size"
+            "field_name": "machine_data",
+            "label": "Machine Data"
         },
 	{
 	    "field_name": "md5",
