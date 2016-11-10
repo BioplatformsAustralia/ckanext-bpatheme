@@ -135,6 +135,151 @@
             "field_name": "sample_submission_date",
             "label": "Sample Submission Date",
             "form_placeholder": ""
+        },
+        {
+            "field_name": "strain_description",
+            "label": "Strain Description",
+            "form_placeholder": ""
+        },
+        {
+            "field_name": "key_virulence_genes",
+            "label": "Key Virulence Genes",
+            "form_placeholder": ""
+        },
+        {
+            "field_name": "gram_stain",
+            "label": "Gram Stain",
+            "form_placeholder": ""
+        },
+        {
+            "field_name": "isolation_source",
+            "label": "Isolation Source",
+            "form_placeholder": ""
+        },
+        {
+            "field_name": "publication_reference",
+            "label": "Publication Reference",
+            "form_placeholder": ""
+        },
+        {
+            "field_name": "contact_researcher",
+            "label": "Contact Researcher",
+            "form_placeholder": ""
+        },
+        {
+            "field_name": "culture_collection_date",
+            "label": "Culture Collection Date",
+            "form_placeholder": ""
+        },
+        {
+            "field_name": "study_title",
+            "label": "Study Title",
+            "form_placeholder": ""
+        },
+        {
+            "field_name": "investigation_type",
+            "label": "Investigation Type",
+            "form_placeholder": ""
+        },
+        {
+            "field_name": "project_name",
+            "label": "Project Name",
+            "form_placeholder": ""
+        },
+        {
+            "field_name": "sample_title",
+            "label": "Sample Title",
+            "form_placeholder": ""
+        },
+        {
+            "field_name": "ploidy",
+            "label": "Ploidy",
+            "form_placeholder": ""
+        },
+        {
+            "field_name": "num_replicons",
+            "label": "Num Replicons",
+            "form_placeholder": ""
+        },
+        {
+            "field_name": "estimated_size",
+            "label": "Estimated Size",
+            "form_placeholder": ""
+        },
+        {
+            "field_name": "propagation",
+            "label": "Propagation",
+            "form_placeholder": ""
+        },
+        {
+            "field_name": "isolate_growth_condition",
+            "label": "Isolate Growth Condition",
+            "form_placeholder": ""
+        },
+        {
+            "field_name": "collected_by",
+            "label": "Collected By",
+            "form_placeholder": ""
+        },
+        {
+            "field_name": "growth_condition_time",
+            "label": "Growth Condition Time",
+            "form_placeholder": ""
+        },
+        {
+            "field_name": "growth_condition_temperature",
+            "label": "Growth Condition Temperature",
+            "form_placeholder": ""
+        },
+        {
+            "field_name": "growth_condition_media",
+            "label": "Growth Condition Media",
+            "form_placeholder": ""
+        },
+        {
+            "field_name": "host_description",
+            "label": "Host Description",
+            "form_placeholder": ""
+        },
+        {
+            "field_name": "host_location",
+            "label": "Host Location",
+            "form_placeholder": ""
+        },
+        {
+            "field_name": "host_sex",
+            "label": "Host Sex",
+            "form_placeholder": ""
+        },
+        {
+            "field_name": "host_age",
+            "label": "Host Age",
+            "form_placeholder": ""
+        },
+        {
+            "field_name": "host_dob",
+            "label": "Host DOB",
+            "form_placeholder": ""
+        },
+        {
+            "field_name": "host_disease_outcome",
+            "label": "Host Disease Outcome",
+            "form_placeholder": ""
+        },
+        {
+            "field_name": "host_disease_status",
+            "label": "Host Disease Status",
+            "form_placeholder": ""
+        },
+        {
+            "field_name": "host_associated",
+            "label": "Host Associated",
+            "form_placeholder": ""
+        },
+        {
+            "field_name": "host_health_state",
+            "label": "Host Health State",
+            "form_placeholder": ""
         }
     ],
 
