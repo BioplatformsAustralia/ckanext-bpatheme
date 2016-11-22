@@ -1,6 +1,6 @@
 {
     "scheming_version": 1,
-    "dataset_type": "arp-metabolomics-deeplcms",
+    "dataset_type": "arp-proteomics-ms1quantification",
     "about_url": "https://downloads.bioplatforms.com/sepsis/",
     "dataset_fields": [
         {
@@ -47,8 +47,8 @@
             "form_placeholder": ""
         },
         {
-            "field_name": "sample_fractionation_extract_solvent",
-            "label": "Sample Fractionation Extract Solvent",
+            "field_name": "sample_fractionation_none_number",
+            "label": "Sample Fractionation (None/Number)",
             "form_placeholder": ""
         },
         {
@@ -57,8 +57,13 @@
             "form_placeholder": ""
         },
         {
-            "field_name": "gradient_time_min_flow",
-            "label": "Gradient Time Min Flow",
+            "field_name": "gradient_time_per_acn",
+            "label": "Gradient Time Per ACN",
+            "form_placeholder": ""
+        },
+        {
+            "field_name": "sample_on_column",
+            "label": "Sample on Column",
             "form_placeholder": ""
         },
         {
@@ -67,8 +72,8 @@
             "form_placeholder": ""
         },
         {
-            "field_name": "acquisition_mode",
-            "label": "Acquisition Mode",
+            "field_name": "acquisition_mode_fragmentation",
+            "label": "Acquisition Mode Fragmentation",
             "form_placeholder": ""
         },
         {
@@ -317,14 +322,6 @@
         {
             "field_name": "vendor",
             "label": "Vendor"
-        },
-        {
-            "field_name": "platform",
-            "label": "Platform"
-        },
-        {
-            "field_name": "mastr_ms_id",
-            "label": "MastrMS ID"
         },
         {
             "field_name": "machine_data",
