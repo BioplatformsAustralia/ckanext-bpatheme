@@ -1,293 +1,261 @@
 {
-    "scheming_version": 1,
-    "dataset_type": "arp-genomics-miseq",
     "about_url": "https://downloads.bioplatforms.com/sepsis/",
     "dataset_fields": [
         {
-            "field_name": "owner_org",
-            "label": "Organization",
             "display_property": "dct:publisher",
-            "validators": "owner_org_validator unicode",
-            "form_snippet": "organization.html"
+            "field_name": "owner_org",
+            "form_snippet": "organization.html",
+            "label": "Organization",
+            "validators": "owner_org_validator unicode"
         },
         {
             "field_name": "title",
+            "form_placeholder": "",
             "label": "Title",
-            "preset": "title",
-            "form_placeholder": ""
+            "preset": "title"
         },
         {
-            "field_name": "notes",
-            "label": "Description",
             "display_property": "dcat:Dataset/dct:description",
+            "field_name": "notes",
+            "form_placeholder": "eg. Some useful notes about the data",
             "form_snippet": "markdown.html",
-            "form_placeholder": "eg. Some useful notes about the data"
+            "label": "Description"
         },
         {
             "field_name": "name",
+            "form_placeholder": "",
             "label": "URL",
-            "preset": "dataset_slug",
-            "form_placeholder": ""
+            "preset": "dataset_slug"
         },
         {
+            "display_property": "dcat:Dataset/dct:keyword",
             "field_name": "tag_string",
-            "label": "Tags",
-	    "display_property": "dcat:Dataset/dct:keyword",
-            "validators": "ignore_missing tag_string_convert",
-            "form_placeholder": "type to auto-complete",
             "form_attrs": {
                 "data-module": "autocomplete",
-                "data-module-tags": "",
-                "data-module-source": "/api/2/util/tag/autocomplete?incomplete=?"
-            }
-        },
-        {
-            "field_name": "bpa_id",
-            "label": "BPA ID",
-            "form_placeholder": ""
-        },
-        {
-            "field_name": "insert_size_range",
-            "label": "Insert Size Range",
-            "form_placeholder": ""
-        },
-        {
-            "field_name": "library_construction_protocol",
-            "label": "Library Construction Protocol",
-            "form_placeholder": ""
-        },
-        {
-            "field_name": "sequencer",
-            "label": "Sequencer",
-            "form_placeholder": ""
+                "data-module-source": "/api/2/util/tag/autocomplete?incomplete=?",
+                "data-module-tags": ""
+            },
+            "form_placeholder": "type to auto-complete",
+            "label": "Tags",
+            "validators": "ignore_missing tag_string_convert"
         },
         {
             "field_name": "analysis_software_version",
-            "label": "Analysis Software Version",
-            "form_placeholder": ""
+            "form_placeholder": "",
+            "label": "analysis_software_version"
         },
         {
-            "field_name": "data_type",
-            "label": "Data type",
-            "form_placeholder": ""
-        },
-        {
-            "field_name": "taxon_or_organism",
-            "label": "Taxon or Organism",
-            "form_placeholder": ""
-        },
-        {
-            "field_name": "strain_or_isolate",
-            "label": "Strain or Isolate",
-            "form_placeholder": ""
-        },
-        {
-            "field_name": "serovar",
-            "label": "Serovar",
-            "form_placeholder": ""
-        },
-        {
-            "field_name": "growth_media",
-            "label": "Growth Media",
-            "form_placeholder": ""
-        },
-        {
-            "field_name": "replicate",
-            "label": "Replicate",
-            "form_placeholder": ""
-        },
-        {
-            "field_name": "omics",
-            "label": "omics",
-            "form_placeholder": ""
+            "field_name": "analytical_facility",
+            "form_placeholder": "",
+            "label": "analytical_facility"
         },
         {
             "field_name": "analytical_platform",
-            "label": "Analytical Platform",
-            "form_placeholder": ""
-        },
-        {
-            "field_name": "facility",
-            "label": "Facility",
-            "form_placeholder": ""
-        },
-        {
-            "field_name": "work_order",
-            "label": "Work Order",
-            "form_placeholder": ""
-        },
-        {
-            "field_name": "contextual_data_submission_date",
-            "label": "Contextual Data Submission Date",
-            "form_placeholder": ""
-        },
-        {
-            "field_name": "data_generated",
-            "label": "Data Generated",
-            "form_placeholder": ""
+            "form_placeholder": "",
+            "label": "analytical_platform"
         },
         {
             "field_name": "archive_ingestion_date",
-            "label": "Archive Ingestion Date",
-            "form_placeholder": ""
+            "form_placeholder": "",
+            "label": "archive_ingestion_date"
         },
         {
-            "field_name": "sample_submission_date",
-            "label": "Sample Submission Date",
-            "form_placeholder": ""
-        },
-        {
-            "field_name": "strain_description",
-            "label": "Strain Description",
-            "form_placeholder": ""
-        },
-        {
-            "field_name": "key_virulence_genes",
-            "label": "Key Virulence Genes",
-            "form_placeholder": ""
-        },
-        {
-            "field_name": "gram_stain",
-            "label": "Gram Stain",
-            "form_placeholder": ""
-        },
-        {
-            "field_name": "isolation_source",
-            "label": "Isolation Source",
-            "form_placeholder": ""
-        },
-        {
-            "field_name": "publication_reference",
-            "label": "Publication Reference",
-            "form_placeholder": ""
+            "field_name": "bpa_id",
+            "form_placeholder": "",
+            "label": "bpa_id"
         },
         {
             "field_name": "contact_researcher",
-            "label": "Contact Researcher",
-            "form_placeholder": ""
+            "form_placeholder": "",
+            "label": "contact_researcher"
         },
         {
-            "field_name": "culture_collection_id",
-            "label": "Culture Collection ID",
-            "form_placeholder": ""
+            "field_name": "contextual_data_submission_date",
+            "form_placeholder": "",
+            "label": "contextual_data_submission_date"
         },
         {
             "field_name": "culture_collection_date",
-            "label": "Culture Collection Date",
-            "form_placeholder": ""
+            "form_placeholder": "",
+            "label": "culture_collection_date"
         },
         {
-            "field_name": "study_title",
-            "label": "Study Title",
-            "form_placeholder": ""
+            "field_name": "culture_collection_id",
+            "form_placeholder": "",
+            "label": "culture_collection_id"
         },
         {
-            "field_name": "investigation_type",
-            "label": "Investigation Type",
-            "form_placeholder": ""
+            "field_name": "data_generated",
+            "form_placeholder": "",
+            "label": "data_generated"
         },
         {
-            "field_name": "project_name",
-            "label": "Project Name",
-            "form_placeholder": ""
+            "field_name": "data_type",
+            "form_placeholder": "",
+            "label": "data_type"
         },
         {
-            "field_name": "sample_title",
-            "label": "Sample Title",
-            "form_placeholder": ""
+            "field_name": "experimental_replicate",
+            "form_placeholder": "",
+            "label": "experimental_replicate"
         },
         {
-            "field_name": "ploidy",
-            "label": "Ploidy",
-            "form_placeholder": ""
+            "field_name": "experimental_sample_preparation_method",
+            "form_placeholder": "",
+            "label": "experimental_sample_preparation_method"
         },
         {
-            "field_name": "num_replicons",
-            "label": "Num Replicons",
-            "form_placeholder": ""
+            "field_name": "facility",
+            "form_placeholder": "",
+            "label": "facility"
         },
         {
-            "field_name": "estimated_size",
-            "label": "Estimated Size",
-            "form_placeholder": ""
-        },
-        {
-            "field_name": "propagation",
-            "label": "Propagation",
-            "form_placeholder": ""
-        },
-        {
-            "field_name": "isolate_growth_condition",
-            "label": "Isolate Growth Condition",
-            "form_placeholder": ""
-        },
-        {
-            "field_name": "collected_by",
-            "label": "Collected By",
-            "form_placeholder": ""
-        },
-        {
-            "field_name": "growth_condition_time",
-            "label": "Growth Condition Time",
-            "form_placeholder": ""
-        },
-        {
-            "field_name": "growth_condition_temperature",
-            "label": "Growth Condition Temperature",
-            "form_placeholder": ""
+            "field_name": "gram_stain",
+            "form_placeholder": "",
+            "label": "gram_stain"
         },
         {
             "field_name": "growth_condition_media",
-            "label": "Growth Condition Media",
-            "form_placeholder": ""
+            "form_placeholder": "",
+            "label": "growth_condition_media"
         },
         {
-            "field_name": "host_description",
-            "label": "Host Description",
-            "form_placeholder": ""
+            "field_name": "growth_condition_notes",
+            "form_placeholder": "",
+            "label": "growth_condition_notes"
         },
         {
-            "field_name": "host_location",
-            "label": "Host Location",
-            "form_placeholder": ""
+            "field_name": "growth_condition_temperature",
+            "form_placeholder": "",
+            "label": "growth_condition_temperature"
         },
         {
-            "field_name": "host_sex",
-            "label": "Host Sex",
-            "form_placeholder": ""
+            "field_name": "growth_condition_time",
+            "form_placeholder": "",
+            "label": "growth_condition_time"
+        },
+        {
+            "field_name": "growth_media",
+            "form_placeholder": "",
+            "label": "growth_media"
         },
         {
             "field_name": "host_age",
-            "label": "Host Age",
-            "form_placeholder": ""
+            "form_placeholder": "",
+            "label": "host_age"
         },
         {
-            "field_name": "host_dob",
-            "label": "Host DOB",
-            "form_placeholder": ""
+            "field_name": "host_description",
+            "form_placeholder": "",
+            "label": "host_description"
         },
         {
             "field_name": "host_disease_outcome",
-            "label": "Host Disease Outcome",
-            "form_placeholder": ""
+            "form_placeholder": "",
+            "label": "host_disease_outcome"
         },
         {
-            "field_name": "host_disease_status",
-            "label": "Host Disease Status",
-            "form_placeholder": ""
+            "field_name": "host_dob",
+            "form_placeholder": "",
+            "label": "host_dob"
         },
         {
-            "field_name": "host_associated",
-            "label": "Host Associated",
-            "form_placeholder": ""
+            "field_name": "host_location",
+            "form_placeholder": "",
+            "label": "host_location"
         },
         {
-            "field_name": "host_health_state",
-            "label": "Host Health State",
-            "form_placeholder": ""
+            "field_name": "host_sex",
+            "form_placeholder": "",
+            "label": "host_sex"
+        },
+        {
+            "field_name": "insert_size_range",
+            "form_placeholder": "",
+            "label": "insert_size_range"
+        },
+        {
+            "field_name": "isolation_source",
+            "form_placeholder": "",
+            "label": "isolation_source"
+        },
+        {
+            "field_name": "key_virulence_genes",
+            "form_placeholder": "",
+            "label": "key_virulence_genes"
+        },
+        {
+            "field_name": "library_construction_protocol",
+            "form_placeholder": "",
+            "label": "library_construction_protocol"
+        },
+        {
+            "field_name": "name",
+            "form_placeholder": "",
+            "label": "name"
+        },
+        {
+            "field_name": "notes",
+            "form_placeholder": "",
+            "label": "notes"
+        },
+        {
+            "field_name": "omics",
+            "form_placeholder": "",
+            "label": "omics"
+        },
+        {
+            "field_name": "publication_reference",
+            "form_placeholder": "",
+            "label": "publication_reference"
+        },
+        {
+            "field_name": "replicate",
+            "form_placeholder": "",
+            "label": "replicate"
+        },
+        {
+            "field_name": "sample_submission_date",
+            "form_placeholder": "",
+            "label": "sample_submission_date"
+        },
+        {
+            "field_name": "sequencer",
+            "form_placeholder": "",
+            "label": "sequencer"
+        },
+        {
+            "field_name": "serovar",
+            "form_placeholder": "",
+            "label": "serovar"
+        },
+        {
+            "field_name": "strain_description",
+            "form_placeholder": "",
+            "label": "strain_description"
+        },
+        {
+            "field_name": "strain_or_isolate",
+            "form_placeholder": "",
+            "label": "strain_or_isolate"
+        },
+        {
+            "field_name": "taxon_or_organism",
+            "form_placeholder": "",
+            "label": "taxon_or_organism"
+        },
+        {
+            "field_name": "title",
+            "form_placeholder": "",
+            "label": "title"
+        },
+        {
+            "field_name": "work_order",
+            "form_placeholder": "",
+            "label": "work_order"
         }
     ],
-
+    "dataset_type": "arp-genomics-miseq",
     "resource_fields": [
         {
             "field_name": "name",
@@ -299,58 +267,67 @@
         },
         {
             "field_name": "url",
+            "form_placeholder": "http://downloads-qcif.bioplatforms.com/my-dataset.fastq.gz",
             "label": "Data File",
             "preset": "resource_url_upload",
-            "form_placeholder": "http://downloads-qcif.bioplatforms.com/my-dataset.fastq.gz",
-            "upload_label": "Amplicon Sequence File"
+            "upload_label": "Sequence File"
         },
         {
-            "field_name": "index",
-            "label": "Index"
+            "field_name": "md5",
+            "label": "MD5"
         },
         {
-            "field_name": "lane",
-            "label": "Lane"
+            "field_name": "sha256",
+            "label": "SHA256"
         },
         {
-            "field_name": "vendor",
-            "label": "Vendor"
-        },
-        {
-            "field_name": "read",
-            "label": "Read"
-        },
-        {
-            "field_name": "flow_cell_id",
-            "label": "Flow Cell ID"
-        },
-        {
-            "field_name": "library",
-            "label": "Library"
+            "field_name": "s3etag_8388608",
+            "label": "S3 E-Tag (8MB multipart)"
         },
         {
             "field_name": "extraction",
-            "label": "Extraction"
+            "label": "extraction"
+        },
+        {
+            "field_name": "flow_cell_id",
+            "label": "flow_cell_id"
+        },
+        {
+            "field_name": "index",
+            "label": "index"
+        },
+        {
+            "field_name": "lane",
+            "label": "lane"
+        },
+        {
+            "field_name": "library",
+            "label": "library"
+        },
+        {
+            "field_name": "md5",
+            "label": "md5"
+        },
+        {
+            "field_name": "name",
+            "label": "name"
+        },
+        {
+            "field_name": "read",
+            "label": "read"
         },
         {
             "field_name": "runsamplenum",
-            "label": "Run Sample Number"
+            "label": "runsamplenum"
         },
         {
             "field_name": "seq_size",
-            "label": "Size"
+            "label": "seq_size"
         },
-	{
-	    "field_name": "md5",
-	    "label": "MD5"
-	},
-	{
-	    "field_name": "sha256",
-	    "label": "SHA256"
-	},
-	{
-	    "field_name": "s3etag_8388608",
-	    "label": "S3 E-Tag (8MB multipart)"
-	}
-    ]
+        {
+            "field_name": "vendor",
+            "label": "vendor"
+        }
+    ],
+    "scheming_version": 1
 }
