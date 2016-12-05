@@ -180,11 +180,6 @@
             "label": "publication_reference"
         },
         {
-            "field_name": "replicate",
-            "form_placeholder": "",
-            "label": "replicate"
-        },
-        {
             "field_name": "sample_submission_date",
             "form_placeholder": "",
             "label": "sample_submission_date"
@@ -220,7 +215,7 @@
             "label": "work_order"
         }
     ],
-    "dataset_type": "arp-proteomics-swathms",
+    "dataset_type": "arp-proteomics-swathms-pool",
     "resource_fields": [
         {
             "field_name": "name",
