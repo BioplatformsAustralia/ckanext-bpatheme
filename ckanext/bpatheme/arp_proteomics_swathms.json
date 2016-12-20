@@ -105,6 +105,31 @@
             "label": "gram_stain"
         },
         {
+            "field_name": "growth_condition_growth_phase",
+            "form_placeholder": "",
+            "label": "growth_condition_growth_phase"
+        },
+        {
+            "field_name": "growth_condition_media",
+            "form_placeholder": "",
+            "label": "growth_condition_media"
+        },
+        {
+            "field_name": "growth_condition_od600_reading",
+            "form_placeholder": "",
+            "label": "growth_condition_od600_reading"
+        },
+        {
+            "field_name": "growth_condition_temperature",
+            "form_placeholder": "",
+            "label": "growth_condition_temperature"
+        },
+        {
+            "field_name": "growth_condition_time",
+            "form_placeholder": "",
+            "label": "growth_condition_time"
+        },
+        {
             "field_name": "growth_media",
             "form_placeholder": "",
             "label": "growth_media"
@@ -175,6 +200,16 @@
             "label": "omics"
         },
         {
+            "field_name": "peptide_resuspension_protocol",
+            "form_placeholder": "",
+            "label": "peptide_resuspension_protocol"
+        },
+        {
+            "field_name": "protein_yield_ug",
+            "form_placeholder": "",
+            "label": "protein_yield_ug"
+        },
+        {
             "field_name": "publication_reference",
             "form_placeholder": "",
             "label": "publication_reference"
@@ -188,6 +223,11 @@
             "field_name": "sample_submission_date",
             "form_placeholder": "",
             "label": "sample_submission_date"
+        },
+        {
+            "field_name": "sample_type",
+            "form_placeholder": "",
+            "label": "sample_type"
         },
         {
             "field_name": "serovar",
@@ -213,6 +253,11 @@
             "field_name": "title",
             "form_placeholder": "",
             "label": "title"
+        },
+        {
+            "field_name": "treatment",
+            "form_placeholder": "",
+            "label": "treatment"
         },
         {
             "field_name": "work_order",
