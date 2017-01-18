@@ -108,6 +108,46 @@
         {
             "field_name": "s3etag_8388608",
             "label": "S3 E-Tag (8MB multipart)"
+        },
+        {
+            "field_name": "flow_id",
+            "label": "flow_id"
+        },
+        {
+            "field_name": "index",
+            "label": "index"
+        },
+        {
+            "field_name": "insert_size",
+            "label": "insert_size"
+        },
+        {
+            "field_name": "lane",
+            "label": "lane"
+        },
+        {
+            "field_name": "library",
+            "label": "library"
+        },
+        {
+            "field_name": "md5",
+            "label": "md5"
+        },
+        {
+            "field_name": "name",
+            "label": "name"
+        },
+        {
+            "field_name": "project",
+            "label": "project"
+        },
+        {
+            "field_name": "read",
+            "label": "read"
+        },
+        {
+            "field_name": "vendor",
+            "label": "vendor"
         }
     ],
     "scheming_version": 1
