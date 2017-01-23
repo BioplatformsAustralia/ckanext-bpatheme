@@ -38,6 +38,46 @@
             "form_placeholder": "type to auto-complete",
             "label": "Tags",
             "validators": "ignore_missing tag_string_convert"
+        },
+        {
+            "field_name": "analysis_software_version",
+            "form_placeholder": "",
+            "label": "analysis_software_version"
+        },
+        {
+            "field_name": "bpa_id",
+            "form_placeholder": "",
+            "label": "bpa_id"
+        },
+        {
+            "field_name": "insert_size_range",
+            "form_placeholder": "",
+            "label": "insert_size_range"
+        },
+        {
+            "field_name": "library_construction_protocol",
+            "form_placeholder": "",
+            "label": "library_construction_protocol"
+        },
+        {
+            "field_name": "name",
+            "form_placeholder": "",
+            "label": "name"
+        },
+        {
+            "field_name": "notes",
+            "form_placeholder": "",
+            "label": "notes"
+        },
+        {
+            "field_name": "sequencer",
+            "form_placeholder": "",
+            "label": "sequencer"
+        },
+        {
+            "field_name": "title",
+            "form_placeholder": "",
+            "label": "title"
         }
     ],
     "dataset_type": "mm-genomics-amplicon",
@@ -68,6 +108,46 @@
         {
             "field_name": "s3etag_8388608",
             "label": "S3 E-Tag (8MB multipart)"
+        },
+        {
+            "field_name": "amplicon",
+            "label": "amplicon"
+        },
+        {
+            "field_name": "extraction",
+            "label": "extraction"
+        },
+        {
+            "field_name": "flowcell",
+            "label": "flowcell"
+        },
+        {
+            "field_name": "index",
+            "label": "index"
+        },
+        {
+            "field_name": "lane",
+            "label": "lane"
+        },
+        {
+            "field_name": "md5",
+            "label": "md5"
+        },
+        {
+            "field_name": "name",
+            "label": "name"
+        },
+        {
+            "field_name": "read",
+            "label": "read"
+        },
+        {
+            "field_name": "runsamplenum",
+            "label": "runsamplenum"
+        },
+        {
+            "field_name": "vendor",
+            "label": "vendor"
         }
     ],
     "scheming_version": 1
