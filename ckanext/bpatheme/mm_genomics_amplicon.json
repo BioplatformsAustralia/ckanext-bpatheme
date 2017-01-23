@@ -40,6 +40,11 @@
             "validators": "ignore_missing tag_string_convert"
         },
         {
+            "field_name": "amplicon",
+            "form_placeholder": "",
+            "label": "amplicon"
+        },
+        {
             "field_name": "analysis_software_version",
             "form_placeholder": "",
             "label": "analysis_software_version"
