@@ -1,0 +1,74 @@
+{
+    "about_url": "https://downloads.bioplatforms.com/sepsis/",
+    "dataset_fields": [
+        {
+            "display_property": "dct:publisher",
+            "field_name": "owner_org",
+            "form_snippet": "organization.html",
+            "label": "Organization",
+            "validators": "owner_org_validator unicode"
+        },
+        {
+            "field_name": "title",
+            "form_placeholder": "",
+            "label": "Title",
+            "preset": "title"
+        },
+        {
+            "display_property": "dcat:Dataset/dct:description",
+            "field_name": "notes",
+            "form_placeholder": "eg. Some useful notes about the data",
+            "form_snippet": "markdown.html",
+            "label": "Description"
+        },
+        {
+            "field_name": "name",
+            "form_placeholder": "",
+            "label": "URL",
+            "preset": "dataset_slug"
+        },
+        {
+            "display_property": "dcat:Dataset/dct:keyword",
+            "field_name": "tag_string",
+            "form_attrs": {
+                "data-module": "autocomplete",
+                "data-module-source": "/api/2/util/tag/autocomplete?incomplete=?",
+                "data-module-tags": ""
+            },
+            "form_placeholder": "type to auto-complete",
+            "label": "Tags",
+            "validators": "ignore_missing tag_string_convert"
+        }
+    ],
+    "dataset_type": "mm-genomics-amplicon",
+    "resource_fields": [
+        {
+            "field_name": "name",
+            "label": "Name"
+        },
+        {
+            "field_name": "description",
+            "label": "Description"
+        },
+        {
+            "field_name": "url",
+            "form_placeholder": "http://downloads-qcif.bioplatforms.com/my-dataset.fastq.gz",
+            "label": "Data File",
+            "preset": "resource_url_upload",
+            "upload_label": "Sequence File"
+        },
+        {
+            "field_name": "md5",
+            "label": "MD5"
+        },
+        {
+            "field_name": "sha256",
+            "label": "SHA256"
+        },
+        {
+            "field_name": "s3etag_8388608",
+            "label": "S3 E-Tag (8MB multipart)"
+        }
+    ],
+    "scheming_version": 1
+}
