@@ -60,6 +60,11 @@
             "label": "dilution_used"
         },
         {
+            "field_name": "flow_id",
+            "form_placeholder": "",
+            "label": "flow_id"
+        },
+        {
             "field_name": "name",
             "form_placeholder": "",
             "label": "name"
