@@ -55,14 +55,9 @@
             "label": "bpa_id"
         },
         {
-            "field_name": "insert_size_range",
+            "field_name": "dilution_used",
             "form_placeholder": "",
-            "label": "insert_size_range"
-        },
-        {
-            "field_name": "library_construction_protocol",
-            "form_placeholder": "",
-            "label": "library_construction_protocol"
+            "label": "dilution_used"
         },
         {
             "field_name": "name",
@@ -75,9 +70,24 @@
             "label": "notes"
         },
         {
-            "field_name": "sequencer",
+            "field_name": "pass_fail",
             "form_placeholder": "",
-            "label": "sequencer"
+            "label": "pass_fail"
+        },
+        {
+            "field_name": "reads",
+            "form_placeholder": "",
+            "label": "reads"
+        },
+        {
+            "field_name": "sample_extraction_id",
+            "form_placeholder": "",
+            "label": "sample_extraction_id"
+        },
+        {
+            "field_name": "target",
+            "form_placeholder": "",
+            "label": "target"
         },
         {
             "field_name": "title",
