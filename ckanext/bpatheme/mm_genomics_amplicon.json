@@ -55,6 +55,11 @@
             "label": "bpa_id"
         },
         {
+            "field_name": "comments",
+            "form_placeholder": "",
+            "label": "comments"
+        },
+        {
             "field_name": "dilution_used",
             "form_placeholder": "",
             "label": "dilution_used"
@@ -138,8 +143,8 @@
             "label": "extraction"
         },
         {
-            "field_name": "flowcell",
-            "label": "flowcell"
+            "field_name": "flow_id",
+            "label": "flow_id"
         },
         {
             "field_name": "index",
