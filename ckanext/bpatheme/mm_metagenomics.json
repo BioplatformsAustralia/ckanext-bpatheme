@@ -70,6 +70,11 @@
             "label": "notes"
         },
         {
+            "field_name": "sample_extraction_id",
+            "form_placeholder": "",
+            "label": "sample_extraction_id"
+        },
+        {
             "field_name": "sequencer",
             "form_placeholder": "",
             "label": "sequencer"
@@ -80,7 +85,7 @@
             "label": "title"
         }
     ],
-    "dataset_type": "mm-genomics-metatranscriptome",
+    "dataset_type": "mm-metagenomics",
     "resource_fields": [
         {
             "field_name": "name",
@@ -114,8 +119,8 @@
             "label": "extraction"
         },
         {
-            "field_name": "flow_id",
-            "label": "flow_id"
+            "field_name": "flowcell",
+            "label": "flowcell"
         },
         {
             "field_name": "index",
@@ -144,10 +149,6 @@
         {
             "field_name": "read",
             "label": "read"
-        },
-        {
-            "field_name": "unknown",
-            "label": "unknown"
         },
         {
             "field_name": "vendor",
