@@ -164,10 +164,6 @@
             "label": "md5"
         },
         {
-            "field_name": "mm_amplicon_linkage",
-            "label": "mm_amplicon_linkage"
-        },
-        {
             "field_name": "name",
             "label": "name"
         },
