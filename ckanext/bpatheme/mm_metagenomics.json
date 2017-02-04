@@ -40,9 +40,44 @@
             "validators": "ignore_missing tag_string_convert"
         },
         {
+            "field_name": "allo_mgm3",
+            "form_placeholder": "",
+            "label": "allo_mgm3"
+        },
+        {
+            "field_name": "alpha_beta_car_mgm3",
+            "form_placeholder": "",
+            "label": "alpha_beta_car_mgm3"
+        },
+        {
+            "field_name": "ammonium_moll",
+            "form_placeholder": "",
+            "label": "ammonium_moll"
+        },
+        {
             "field_name": "analysis_software_version",
             "form_placeholder": "",
             "label": "analysis_software_version"
+        },
+        {
+            "field_name": "asta_mgm3",
+            "form_placeholder": "",
+            "label": "asta_mgm3"
+        },
+        {
+            "field_name": "beta_beta_car_mgm3",
+            "form_placeholder": "",
+            "label": "beta_beta_car_mgm3"
+        },
+        {
+            "field_name": "beta_epi_car_mgm3",
+            "form_placeholder": "",
+            "label": "beta_epi_car_mgm3"
+        },
+        {
+            "field_name": "biomass_mgm3",
+            "form_placeholder": "",
+            "label": "biomass_mgm3"
         },
         {
             "field_name": "bpa_id",
@@ -50,9 +85,164 @@
             "label": "bpa_id"
         },
         {
+            "field_name": "but_fuco_mgm3",
+            "form_placeholder": "",
+            "label": "but_fuco_mgm3"
+        },
+        {
+            "field_name": "cantha_mgm3",
+            "form_placeholder": "",
+            "label": "cantha_mgm3"
+        },
+        {
+            "field_name": "chlorophyll_a_gl",
+            "form_placeholder": "",
+            "label": "chlorophyll_a_gl"
+        },
+        {
+            "field_name": "conductivity_sm",
+            "form_placeholder": "",
+            "label": "conductivity_sm"
+        },
+        {
+            "field_name": "cphl_a_mgm3",
+            "form_placeholder": "",
+            "label": "cphl_a_mgm3"
+        },
+        {
+            "field_name": "cphl_b_mgm3",
+            "form_placeholder": "",
+            "label": "cphl_b_mgm3"
+        },
+        {
+            "field_name": "cphl_c1_mgm3",
+            "form_placeholder": "",
+            "label": "cphl_c1_mgm3"
+        },
+        {
+            "field_name": "cphl_c1c2_mgm3",
+            "form_placeholder": "",
+            "label": "cphl_c1c2_mgm3"
+        },
+        {
+            "field_name": "cphl_c2_mgm3",
+            "form_placeholder": "",
+            "label": "cphl_c2_mgm3"
+        },
+        {
+            "field_name": "cphl_c3_mgm3",
+            "form_placeholder": "",
+            "label": "cphl_c3_mgm3"
+        },
+        {
+            "field_name": "cphlide_a_mgm3",
+            "form_placeholder": "",
+            "label": "cphlide_a_mgm3"
+        },
+        {
+            "field_name": "date_sampled",
+            "form_placeholder": "",
+            "label": "date_sampled"
+        },
+        {
+            "field_name": "density_density_kgm3",
+            "form_placeholder": "",
+            "label": "density_density_kgm3"
+        },
+        {
+            "field_name": "depth",
+            "form_placeholder": "",
+            "label": "depth"
+        },
+        {
+            "field_name": "diadchr_mgm3",
+            "form_placeholder": "",
+            "label": "diadchr_mgm3"
+        },
+        {
+            "field_name": "diadino_mgm3",
+            "form_placeholder": "",
+            "label": "diadino_mgm3"
+        },
+        {
+            "field_name": "diato_mgm3",
+            "form_placeholder": "",
+            "label": "diato_mgm3"
+        },
+        {
+            "field_name": "dino_mgm3",
+            "form_placeholder": "",
+            "label": "dino_mgm3"
+        },
+        {
+            "field_name": "dv_cphl_a_and_cphl_a_mgm3",
+            "form_placeholder": "",
+            "label": "dv_cphl_a_and_cphl_a_mgm3"
+        },
+        {
+            "field_name": "dv_cphl_a_mgm3",
+            "form_placeholder": "",
+            "label": "dv_cphl_a_mgm3"
+        },
+        {
+            "field_name": "dv_cphl_b_and_cphl_b_mgm3",
+            "form_placeholder": "",
+            "label": "dv_cphl_b_and_cphl_b_mgm3"
+        },
+        {
+            "field_name": "dv_cphl_b_mgm3",
+            "form_placeholder": "",
+            "label": "dv_cphl_b_mgm3"
+        },
+        {
+            "field_name": "echin_mgm3",
+            "form_placeholder": "",
+            "label": "echin_mgm3"
+        },
+        {
+            "field_name": "fluorescence_wetlab_eco_aflfl_mgm3",
+            "form_placeholder": "",
+            "label": "fluorescence_wetlab_eco_aflfl_mgm3"
+        },
+        {
+            "field_name": "fuco_mgm3",
+            "form_placeholder": "",
+            "label": "fuco_mgm3"
+        },
+        {
+            "field_name": "gyro_mgm3",
+            "form_placeholder": "",
+            "label": "gyro_mgm3"
+        },
+        {
+            "field_name": "hex_fuco_mgm3",
+            "form_placeholder": "",
+            "label": "hex_fuco_mgm3"
+        },
+        {
+            "field_name": "host_species",
+            "form_placeholder": "",
+            "label": "host_species"
+        },
+        {
+            "field_name": "inorganic_fraction_mgl",
+            "form_placeholder": "",
+            "label": "inorganic_fraction_mgl"
+        },
+        {
             "field_name": "insert_size_range",
             "form_placeholder": "",
             "label": "insert_size_range"
+        },
+        {
+            "field_name": "keto_hex_fuco_mgm3",
+            "form_placeholder": "",
+            "label": "keto_hex_fuco_mgm3"
+        },
+        {
+            "field_name": "latitude",
+            "form_placeholder": "",
+            "label": "latitude"
         },
         {
             "field_name": "library_construction_protocol",
@@ -60,9 +250,49 @@
             "label": "library_construction_protocol"
         },
         {
+            "field_name": "light_intensity_lux",
+            "form_placeholder": "",
+            "label": "light_intensity_lux"
+        },
+        {
+            "field_name": "longitude",
+            "form_placeholder": "",
+            "label": "longitude"
+        },
+        {
+            "field_name": "lut_mgm3",
+            "form_placeholder": "",
+            "label": "lut_mgm3"
+        },
+        {
+            "field_name": "lyco_mgm3",
+            "form_placeholder": "",
+            "label": "lyco_mgm3"
+        },
+        {
+            "field_name": "mg_dvp_mgm3",
+            "form_placeholder": "",
+            "label": "mg_dvp_mgm3"
+        },
+        {
+            "field_name": "microbial_abundance_cells_per_ml",
+            "form_placeholder": "",
+            "label": "microbial_abundance_cells_per_ml"
+        },
+        {
             "field_name": "name",
             "form_placeholder": "",
             "label": "name"
+        },
+        {
+            "field_name": "neo_mgm3",
+            "form_placeholder": "",
+            "label": "neo_mgm3"
+        },
+        {
+            "field_name": "nitratenitrite_moll",
+            "form_placeholder": "",
+            "label": "nitratenitrite_moll"
         },
         {
             "field_name": "notes",
@@ -70,9 +300,99 @@
             "label": "notes"
         },
         {
+            "field_name": "nth_mgm3",
+            "form_placeholder": "",
+            "label": "nth_mgm3"
+        },
+        {
+            "field_name": "organic_fraction_mgl",
+            "form_placeholder": "",
+            "label": "organic_fraction_mgl"
+        },
+        {
+            "field_name": "oxygen_mll_cdt",
+            "form_placeholder": "",
+            "label": "oxygen_mll_cdt"
+        },
+        {
+            "field_name": "oxygen_moll_lab",
+            "form_placeholder": "",
+            "label": "oxygen_moll_lab"
+        },
+        {
+            "field_name": "perid_mgm3",
+            "form_placeholder": "",
+            "label": "perid_mgm3"
+        },
+        {
+            "field_name": "ph_level_h20",
+            "form_placeholder": "",
+            "label": "ph_level_h20"
+        },
+        {
+            "field_name": "phide_a_mgm3",
+            "form_placeholder": "",
+            "label": "phide_a_mgm3"
+        },
+        {
+            "field_name": "phosphate_moll",
+            "form_placeholder": "",
+            "label": "phosphate_moll"
+        },
+        {
+            "field_name": "phytin_a_mgm3",
+            "form_placeholder": "",
+            "label": "phytin_a_mgm3"
+        },
+        {
+            "field_name": "phytin_b_mgm3",
+            "form_placeholder": "",
+            "label": "phytin_b_mgm3"
+        },
+        {
+            "field_name": "pras_mgm3",
+            "form_placeholder": "",
+            "label": "pras_mgm3"
+        },
+        {
+            "field_name": "pyrophide_a_mgm3",
+            "form_placeholder": "",
+            "label": "pyrophide_a_mgm3"
+        },
+        {
+            "field_name": "pyrophytin_a_mgm3",
+            "form_placeholder": "",
+            "label": "pyrophytin_a_mgm3"
+        },
+        {
+            "field_name": "salinity_psu_ctd",
+            "form_placeholder": "",
+            "label": "salinity_psu_ctd"
+        },
+        {
+            "field_name": "salinity_psu_laboratory",
+            "form_placeholder": "",
+            "label": "salinity_psu_laboratory"
+        },
+        {
             "field_name": "sample_extraction_id",
             "form_placeholder": "",
             "label": "sample_extraction_id"
+        },
+        {
+            "field_name": "sample_site",
+            "form_placeholder": "",
+            "label": "sample_site"
+        },
+        {
+            "field_name": "sample_type",
+            "form_placeholder": "",
+            "label": "sample_type"
+        },
+        {
+            "field_name": "secchi_depth_m",
+            "form_placeholder": "",
+            "label": "secchi_depth_m"
         },
         {
             "field_name": "sequencer",
@@ -80,9 +400,64 @@
             "label": "sequencer"
         },
         {
+            "field_name": "silicate_moll",
+            "form_placeholder": "",
+            "label": "silicate_moll"
+        },
+        {
+            "field_name": "temperature_its_90_deg_c",
+            "form_placeholder": "",
+            "label": "temperature_its_90_deg_c"
+        },
+        {
+            "field_name": "time_sampled",
+            "form_placeholder": "",
+            "label": "time_sampled"
+        },
+        {
             "field_name": "title",
             "form_placeholder": "",
             "label": "title"
+        },
+        {
+            "field_name": "total_alkalinity_molkg",
+            "form_placeholder": "",
+            "label": "total_alkalinity_molkg"
+        },
+        {
+            "field_name": "total_carbon",
+            "form_placeholder": "",
+            "label": "total_carbon"
+        },
+        {
+            "field_name": "total_co2_molkg",
+            "form_placeholder": "",
+            "label": "total_co2_molkg"
+        },
+        {
+            "field_name": "total_inorganc_carbon",
+            "form_placeholder": "",
+            "label": "total_inorganc_carbon"
+        },
+        {
+            "field_name": "tss_mgl",
+            "form_placeholder": "",
+            "label": "tss_mgl"
+        },
+        {
+            "field_name": "turbidity_upoly_0_wet_labs_flnturt",
+            "form_placeholder": "",
+            "label": "turbidity_upoly_0_wet_labs_flnturt"
+        },
+        {
+            "field_name": "viola_mgm3",
+            "form_placeholder": "",
+            "label": "viola_mgm3"
+        },
+        {
+            "field_name": "zea_mgm3",
+            "form_placeholder": "",
+            "label": "zea_mgm3"
         }
     ],
     "dataset_type": "mm-metagenomics",

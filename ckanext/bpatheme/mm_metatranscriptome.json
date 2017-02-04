@@ -50,14 +50,59 @@
             "label": "bpa_id"
         },
         {
+            "field_name": "date_sampled",
+            "form_placeholder": "",
+            "label": "date_sampled"
+        },
+        {
+            "field_name": "depth_m",
+            "form_placeholder": "",
+            "label": "depth_m"
+        },
+        {
+            "field_name": "fine_sediment",
+            "form_placeholder": "",
+            "label": "fine_sediment"
+        },
+        {
+            "field_name": "host_abundance",
+            "form_placeholder": "",
+            "label": "host_abundance"
+        },
+        {
+            "field_name": "host_species",
+            "form_placeholder": "",
+            "label": "host_species"
+        },
+        {
+            "field_name": "host_state",
+            "form_placeholder": "",
+            "label": "host_state"
+        },
+        {
             "field_name": "insert_size_range",
             "form_placeholder": "",
             "label": "insert_size_range"
         },
         {
+            "field_name": "latitude",
+            "form_placeholder": "",
+            "label": "latitude"
+        },
+        {
             "field_name": "library_construction_protocol",
             "form_placeholder": "",
             "label": "library_construction_protocol"
+        },
+        {
+            "field_name": "location_description",
+            "form_placeholder": "",
+            "label": "location_description"
+        },
+        {
+            "field_name": "longitude",
+            "form_placeholder": "",
+            "label": "longitude"
         },
         {
             "field_name": "name",
@@ -75,14 +120,44 @@
             "label": "sample_extraction_id"
         },
         {
+            "field_name": "sample_type",
+            "form_placeholder": "",
+            "label": "sample_type"
+        },
+        {
+            "field_name": "sedimentation_rate_g_cm2_x_yr",
+            "form_placeholder": "",
+            "label": "sedimentation_rate_g_cm2_x_yr"
+        },
+        {
             "field_name": "sequencer",
             "form_placeholder": "",
             "label": "sequencer"
         },
         {
+            "field_name": "time_sampled",
+            "form_placeholder": "",
+            "label": "time_sampled"
+        },
+        {
             "field_name": "title",
             "form_placeholder": "",
             "label": "title"
+        },
+        {
+            "field_name": "total_carbon",
+            "form_placeholder": "",
+            "label": "total_carbon"
+        },
+        {
+            "field_name": "total_nitrogen",
+            "form_placeholder": "",
+            "label": "total_nitrogen"
+        },
+        {
+            "field_name": "total_phosphorous",
+            "form_placeholder": "",
+            "label": "total_phosphorous"
         }
     ],
     "dataset_type": "mm-metatranscriptome",
