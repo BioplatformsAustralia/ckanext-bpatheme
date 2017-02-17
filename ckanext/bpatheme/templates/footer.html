@@ -1,10 +1,9 @@
 {% ckan_extends %}
 
 {% block footer_nav %}
-    <ul class="unstyled">
-	{% set api_url = 'http://docs.ckan.org/en/{0}/api/'.format(g.ckan_doc_version) %}
-	<li><a href="{{ api_url }}">CKAN API Documentation</a></li>
-    </ul>
+    <div>
+	<a href="https://www.education.gov.au/national-collaborative-research-infrastructure-strategy-ncris"><img src="{{ h.url_for_static('ncris.png') }}" alt="NCRIS" /></a>
+    </div>
 {% endblock %}
 
 {% block footer_attribution %}
