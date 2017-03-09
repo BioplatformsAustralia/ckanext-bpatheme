@@ -1,12 +1,27 @@
 {% ckan_extends %}
 
-{% block footer_nav %}
-    <div>
-	<a href="https://www.education.gov.au/national-collaborative-research-infrastructure-strategy-ncris"><img src="{{ h.url_for_static('ncris.png') }}" alt="NCRIS" /></a>
-    </div>
-{% endblock %}
+{% block footer_content %}
 
-{% block footer_attribution %}
-<p><a href="http://www.bioplatforms.com">Operated by Bioplatforms Australia</a></p>
-<p><a href="http://www.bioplatforms.com/contact/">Contact</a></p>
+    <div class="row">
+      <div class="span4 footer-links">
+	<div>
+	    <a href="https://www.education.gov.au/national-collaborative-research-infrastructure-strategy-ncris"><img src="{{ h.url_for_static('ncris.png') }}" alt="NCRIS" /></a>
+	</div>
+      </div>
+      <div class="span4 attribution">
+	<p><a href="http://www.bioplatforms.com">Operated by Bioplatforms Australia</a></p>
+	<p><a href="http://www.bioplatforms.com/contact/">Contact</a></p>
+      </div>
+      <div class="span4 attribution">
+	<ul class="nav">
+	    {% block header_site_navigation_tabs %}
+		{{ h.build_nav_main(
+		('organizations_index', _('Organisations')),
+		('search', _('Datasets')),
+		('group_index', _('Groups')),
+		) }}
+	    {% endblock %}
+	</ul>
+      </div>
+    </div>
 {% endblock %}
