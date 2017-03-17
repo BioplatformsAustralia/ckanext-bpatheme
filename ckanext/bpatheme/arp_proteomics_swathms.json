@@ -1,5 +1,5 @@
 {
-    "about_url": "https://downloads.bioplatforms.com/sepsis/",
+    "about_url": "https://data.bioplatforms.com/",
     "dataset_fields": [
         {
             "display_property": "dct:publisher",
@@ -313,6 +313,10 @@
         {
             "field_name": "name",
             "label": "name"
+        },
+        {
+            "field_name": "resource_type",
+            "label": "resource_type"
         },
         {
             "field_name": "sample_fractionation_none_number",

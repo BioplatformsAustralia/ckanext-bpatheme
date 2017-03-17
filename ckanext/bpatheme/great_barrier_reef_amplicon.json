@@ -1,289 +1,201 @@
 {
-    "scheming_version": 1,
-    "dataset_type": "great-barrier-reef-amplicon",
-    "about_url": "https://downloads.bioplatforms.com/gbr/",
+    "about_url": "https://data.bioplatforms.com/",
     "dataset_fields": [
         {
-            "field_name": "owner_org",
-            "label": "Organization",
             "display_property": "dct:publisher",
-            "validators": "owner_org_validator unicode",
-            "form_snippet": "organization.html"
+            "field_name": "owner_org",
+            "form_snippet": "organization.html",
+            "label": "Organization",
+            "validators": "owner_org_validator unicode"
         },
         {
             "field_name": "title",
+            "form_placeholder": "",
             "label": "Title",
-            "preset": "title",
-            "form_placeholder": ""
+            "preset": "title"
         },
         {
-            "field_name": "notes",
-            "label": "Description",
             "display_property": "dcat:Dataset/dct:description",
+            "field_name": "notes",
+            "form_placeholder": "eg. Some useful notes about the data",
             "form_snippet": "markdown.html",
-            "form_placeholder": "eg. Some useful notes about the data"
+            "label": "Description"
         },
         {
             "field_name": "name",
+            "form_placeholder": "",
             "label": "URL",
-            "preset": "dataset_slug",
-            "form_placeholder": ""
+            "preset": "dataset_slug"
         },
         {
+            "display_property": "dcat:Dataset/dct:keyword",
             "field_name": "tag_string",
-            "label": "Tags",
-	    "display_property": "dcat:Dataset/dct:keyword",
-            "validators": "ignore_missing tag_string_convert",
-            "form_placeholder": "type to auto-complete",
             "form_attrs": {
                 "data-module": "autocomplete",
-                "data-module-tags": "",
-                "data-module-source": "/api/2/util/tag/autocomplete?incomplete=?"
-            }
-        },
-        {
-            "field_name": "contact_scientist",
-            "label": "Contact Scientist",
-            "form_placeholder": ""
-        },
-        {
-            "field_name": "bpa_id",
-            "label": "BPA ID",
-            "form_placeholder": ""
-        },
-        {
-            "field_name": "sample_url",
-            "label": "Sample URL",
-            "form_placeholder": ""
-        },
-	{
-	    "field_name": "sample_id",
-	    "label": "Sample ID",
-	    "form_placeholder": ""
-	},
-        {
-            "field_name": "sample_name",
-            "label": "Sample Name",
-            "form_placeholder": ""
-        },
-        {
-            "field_name": "sample_extraction_id",
-            "label": "Sample Extraction ID",
-            "form_placeholder": ""
-        },
-        {
-            "field_name": "sequencing_facility",
-            "label": "Sequencing Facility",
-            "form_placeholder": ""
-        },
-        {
-            "field_name": "sequencing_run_number",
-            "label": "Sequencing run number",
-            "form_placeholder": ""
+                "data-module-source": "/api/2/util/tag/autocomplete?incomplete=?",
+                "data-module-tags": ""
+            },
+            "form_placeholder": "type to auto-complete",
+            "label": "Tags",
+            "validators": "ignore_missing tag_string_convert"
         },
         {
             "field_name": "amplicon",
-            "label": "Amplicon",
             "form_placeholder": "",
-            "help_inline": true,
-            "preset": "select",
-            "choices": [
-                {
-                    "value": "16s",
-                    "label": "16S"
-                },
-                {
-                    "value": "its",
-                    "label": "ITS"
-                },
-                {
-                    "value": "18s",
-                    "label": "18S"
-                },
-                {
-                    "value": "a16s",
-                    "label": "A16S"
-                }
-            ]
-        },
-        {
-            "field_name": "i7_index",
-            "label": "I7 Index",
-            "form_placeholder": ""
-        },
-        {
-            "field_name": "i5_index",
-            "label": "I5 Index",
-            "form_placeholder": ""
-        },
-        {
-            "field_name": "index1",
-            "label": "Index 1",
-            "form_placeholder": ""
-        },
-        {
-            "field_name": "index2",
-            "label": "Index 2",
-            "form_placeholder": ""
-        },
-        {
-            "field_name": "pcr_1_to_10",
-            "label": "PCR 1:10",
-            "form_placeholder": "",
-            "help_inline": true,
-            "preset": "select",
-            "choices": [
-                {
-                    "value": "pass",
-                    "label": "Pass"
-                },
-                {
-                    "value": "fail",
-                    "label": "Fail"
-                }
-            ]
-        },
-        {
-            "field_name": "pcr_1_to_100",
-            "label": "PCR 1:100",
-            "form_placeholder": "",
-            "help_inline": true,
-            "preset": "select",
-            "choices": [
-                {
-                    "value": "pass",
-                    "label": "Pass"
-                },
-                {
-                    "value": "fail",
-                    "label": "Fail"
-                }
-            ]
-        },
-        {
-            "field_name": "pcr_neat",
-            "label": "PCR Neat",
-            "form_placeholder": "",
-            "help_inline": true,
-            "preset": "select",
-            "choices": [
-                {
-                    "value": "pass",
-                    "label": "Pass"
-                },
-                {
-                    "value": "fail",
-                    "label": "Fail"
-                }
-            ]
-        },
-        {
-            "field_name": "dilution",
-            "label": "Dilution",
-            "form_placeholder": "",
-            "help_inline": true,
-            "preset": "select",
-            "choices": [
-                {
-                    "value": "1_to_10",
-                    "label": "1:10"
-                },
-                {
-                    "value": "1_to_100",
-                    "label": "1:100"
-                },
-                {
-                    "value": "neat",
-                    "label": "Neat"
-                }
-            ]
-        },
-        {
-            "field_name": "flow_cell_id",
-            "label": "Flow Cell ID",
-            "form_placeholder": ""
-        },
-        {
-            "field_name": "reads",
-            "label": "Reads",
-            "form_placeholder": ""
+            "label": "amplicon"
         },
         {
             "field_name": "analysis_software_version",
-            "label": "Analysis Software Version",
-            "form_placeholder": ""
+            "form_placeholder": "",
+            "label": "analysis_software_version"
         },
         {
-            "field_name": "sequencing_notes",
-            "label": "Sequencing Notes",
+            "field_name": "bpa_id",
             "form_placeholder": "",
-            "form_snippet": "markdown.html"
+            "label": "bpa_id"
+        },
+        {
+            "field_name": "dilution",
+            "form_placeholder": "",
+            "label": "dilution"
+        },
+        {
+            "field_name": "flow_cell_id",
+            "form_placeholder": "",
+            "label": "flow_cell_id"
+        },
+        {
+            "field_name": "i5_index",
+            "form_placeholder": "",
+            "label": "i5_index"
+        },
+        {
+            "field_name": "i7_index",
+            "form_placeholder": "",
+            "label": "i7_index"
+        },
+        {
+            "field_name": "index1",
+            "form_placeholder": "",
+            "label": "index1"
+        },
+        {
+            "field_name": "index2",
+            "form_placeholder": "",
+            "label": "index2"
+        },
+        {
+            "field_name": "name",
+            "form_placeholder": "",
+            "label": "name"
+        },
+        {
+            "field_name": "notes",
+            "form_placeholder": "",
+            "label": "notes"
+        },
+        {
+            "field_name": "pcr_1_to_10",
+            "form_placeholder": "",
+            "label": "pcr_1_to_10"
+        },
+        {
+            "field_name": "pcr_1_to_100",
+            "form_placeholder": "",
+            "label": "pcr_1_to_100"
+        },
+        {
+            "field_name": "pcr_neat",
+            "form_placeholder": "",
+            "label": "pcr_neat"
+        },
+        {
+            "field_name": "reads",
+            "form_placeholder": "",
+            "label": "reads"
+        },
+        {
+            "field_name": "sample_extraction_id",
+            "form_placeholder": "",
+            "label": "sample_extraction_id"
+        },
+        {
+            "field_name": "sequencing_facility",
+            "form_placeholder": "",
+            "label": "sequencing_facility"
+        },
+        {
+            "field_name": "sequencing_run_number",
+            "form_placeholder": "",
+            "label": "sequencing_run_number"
+        },
+        {
+            "field_name": "title",
+            "form_placeholder": "",
+            "label": "title"
         }
     ],
-
+    "dataset_type": "great-barrier-reef-amplicon",
     "resource_fields": [
         {
+            "field_name": "name",
+            "label": "Name"
+        },
+        {
+            "field_name": "description",
+            "label": "Description"
+        },
+        {
             "field_name": "url",
+            "form_placeholder": "http://downloads-qcif.bioplatforms.com/my-dataset.fastq.gz",
             "label": "Data File",
             "preset": "resource_url_upload",
-            "form_placeholder": "http://downloads-qcif.bioplatforms.com/my-dataset.fastq.gz",
-            "upload_label": "Amplicon Sequence File"
+            "upload_label": "Sequence File"
         },
         {
-            "field_name": "library_construction_protocol",
-            "label": "Library Construction Protocol"
+            "field_name": "md5",
+            "label": "MD5"
         },
         {
-            "field_name": "library_range",
-            "label": "Library Range"
+            "field_name": "sha256",
+            "label": "SHA256"
         },
         {
-            "field_name": "run_number",
-            "label": "Run Number"
+            "field_name": "s3etag_8388608",
+            "label": "S3 E-Tag (8MB multipart)"
         },
         {
-            "field_name": "sequencer",
-            "label": "Sequencer"
-        },
-        {
-            "field_name": "barcode",
-            "label": "Barcode"
-        },
-        {
-            "field_name": "base_pairs",
-            "label": "Base Pairs"
+            "field_name": "amplicon",
+            "label": "amplicon"
         },
         {
             "field_name": "filename",
-            "label": "Filename"
+            "label": "filename"
         },
         {
-            "field_name": "flowcell",
-            "label": "Flowcell"
+            "field_name": "flow_id",
+            "label": "flow_id"
         },
         {
-            "field_name": "lane_number",
-            "label": "Lane Number"
+            "field_name": "index",
+            "label": "index"
         },
         {
-            "field_name": "library_type",
-            "label": "Library Type"
+            "field_name": "md5",
+            "label": "md5"
         },
         {
-            "field_name": "read_number",
-            "label": "Read Number"
+            "field_name": "name",
+            "label": "name"
         },
-	{
-	    "field_name": "md5",
-	    "label": "MD5"
-	},
-	{
-	    "field_name": "sha256",
-	    "label": "SHA256"
-	},
-	{
-	    "field_name": "s3etag_8388608",
-	    "label": "S3 E-Tag (8MB multipart)"
-	}
-    ]
+        {
+            "field_name": "reach",
+            "label": "reach"
+        },
+        {
+            "field_name": "resource_type",
+            "label": "resource_type"
+        }
+    ],
+    "scheming_version": 1
 }

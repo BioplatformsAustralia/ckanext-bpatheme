@@ -1,207 +1,234 @@
 {
-  "scheming_version": 1,
-  "dataset_type": "wheat-pathogens",
-  "about_url": "https://downloads.bioplatforms.com/wheat_pathogens/",
-  "dataset_fields": [
-    {
-	"field_name": "owner_org",
-	"label": "Organization",
-	"display_property": "dct:publisher",
-	"validators": "owner_org_validator unicode",
-	"form_snippet": "organization.html"
-    },
-    {
-      "field_name": "title",
-      "label": "Title",
-      "preset": "title",
-      "form_placeholder": ""
-    },
-    {
-	"field_name": "notes",
-	"label": "Description",
-	"display_property": "dcat:Dataset/dct:description",
-	"form_snippet": "markdown.html",
-	"form_placeholder": "eg. Some useful notes about the data"
-    },
-    {
-      "field_name": "name",
-      "label": "URL",
-      "preset": "dataset_slug",
-      "form_placeholder": ""
-    },
-    {
-	"field_name": "tag_string",
-	"label": "Tags",
-	"display_property": "dcat:Dataset/dct:keyword",
-	"validators": "ignore_missing tag_string_convert",
-	"form_placeholder": "type to auto-complete",
-	"form_attrs": {
-	    "data-module": "autocomplete",
-	    "data-module-tags": "",
-	    "data-module-source": "/api/2/util/tag/autocomplete?incomplete=?"
-	}
-    },
-    {
-        "field_name": "contact_scientist",
-        "label": "Contact Scientist",
-        "form_placeholder": ""
-    },
-    {
-      "field_name": "bpa_id",
-      "label": "BPA ID",
-      "form_placeholder": ""
-    },
-    {
-      "field_name": "kingdom",
-      "label": "Kingdom",
-      "form_placeholder": ""
-    },
-    {
-      "field_name": "phylum",
-      "label": "Phylum",
-      "form_placeholder": ""
-    },
-    {
-      "field_name": "species",
-      "label": "Species",
-      "form_placeholder": ""
-    },
-    {
-        "field_name": "sample_id",
-        "label": "Sample ID",
-        "form_placeholder": ""
-    },
-    {
-      "field_name": "sample_label",
-      "label": "Sample Label",
-      "form_placeholder": ""
-    },
-    {
-      "field_name": "dna_source",
-      "label": "DNA Source",
-      "form_placeholder": ""
-    },
-    {
-      "field_name": "official_variety_name",
-      "label": "Official Variety Name",
-      "form_placeholder": ""
-    },
-    {
-      "field_name": "original_source_host_species",
-      "label": "Original Source Host Species",
-      "form_placeholder": ""
-    },
-    {
-      "field_name": "wheat_pathogenicity",
-      "label": "Wheat Pathogenicity",
-      "form_placeholder": ""
-    },
-    {
-      "field_name": "index",
-      "label": "Index Sequence",
-      "form_placeholder": ""
-    },
-    {
-      "field_name": "library_id",
-      "label": "Library ID",
-      "form_placeholder": ""
-    },
-    {
-      "field_name": "collection_date",
-      "label": "Collection Date",
-      "form_placeholder": ""
-    },
-    {
-      "field_name": "collection_location",
-      "label": "Collection Location",
-      "form_placeholder": ""
-    },
-    {
-      "field_name": "dna_extraction_protocol",
-      "label": "DNA Extraction Protocol",
-      "form_placeholder": ""
-    },
-    {
-      "field_name": "sequencing_facility",
-      "label": "Sequencing Facility",
-      "form_placeholder": ""
-    }
-  ],
-  "resource_fields": [
-    {
-      "field_name": "url",
-      "label": "Data File",
-      "preset": "resource_url_upload",
-      "form_placeholder": "http://downloads-qcif.bioplatforms.com/my-dataset.fastq.gz",
-      "upload_label": "Data File"
-    },
-    {
-      "field_name": "casava_version",
-      "label": "Casava Version"
-    },
-    {
-      "field_name": "flowcell",
-      "label": "Flow Cell"
-    },
-    {
-      "field_name": "run_number",
-      "label": "Run Number"
-    },
-    {
-      "field_name": "sequencer",
-      "label": "Sequencer"
-    },
-    {
-      "field_name": "run_index_number",
-      "label": "Run Index Number"
-    },
-    {
-      "field_name": "run_lane_number",
-      "label": "Run Lane Number"
-    },
-    {
-      "field_name": "run_protocol",
-      "label": "Run Protocol"
-    },
-    {
-      "field_name": "run_protocol_base_pairs",
-      "label": "Run Protocol Base Pairs"
-    },
-    {
-      "field_name": "run_protocol_library_type",
-      "label": "Run Protocol Library Type"
-    },
-    {
-      "field_name": "index_number",
-      "label": "Ingest Number"
-    },
-    {
-      "field_name": "lane_number",
-      "label": "Lane Number"
-    },
-    {
-      "field_name": "Filename",
-      "label": "filename"
-    },
-    {
-      "field_name": "filesize",
-      "label": "File Size"
-    },
-    {
-      "field_name": "Note",
-      "label": "note"
-    },
-    {
-      "field_name": "md5",
-      "label": "MD5"
-    },
-    {
-      "field_name": "sha256",
-      "label": "SHA256"
-    },
-    {
-      "field_name": "s3etag_8388608",
-      "label": "S3 E-Tag (8MB multipart)"
-    }
-  ]
+    "about_url": "https://data.bioplatforms.com/",
+    "dataset_fields": [
+        {
+            "display_property": "dct:publisher",
+            "field_name": "owner_org",
+            "form_snippet": "organization.html",
+            "label": "Organization",
+            "validators": "owner_org_validator unicode"
+        },
+        {
+            "field_name": "title",
+            "form_placeholder": "",
+            "label": "Title",
+            "preset": "title"
+        },
+        {
+            "display_property": "dcat:Dataset/dct:description",
+            "field_name": "notes",
+            "form_placeholder": "eg. Some useful notes about the data",
+            "form_snippet": "markdown.html",
+            "label": "Description"
+        },
+        {
+            "field_name": "name",
+            "form_placeholder": "",
+            "label": "URL",
+            "preset": "dataset_slug"
+        },
+        {
+            "display_property": "dcat:Dataset/dct:keyword",
+            "field_name": "tag_string",
+            "form_attrs": {
+                "data-module": "autocomplete",
+                "data-module-source": "/api/2/util/tag/autocomplete?incomplete=?",
+                "data-module-tags": ""
+            },
+            "form_placeholder": "type to auto-complete",
+            "label": "Tags",
+            "validators": "ignore_missing tag_string_convert"
+        },
+        {
+            "field_name": "bpa_id",
+            "form_placeholder": "",
+            "label": "bpa_id"
+        },
+        {
+            "field_name": "collection_date",
+            "form_placeholder": "",
+            "label": "collection_date"
+        },
+        {
+            "field_name": "collection_location",
+            "form_placeholder": "",
+            "label": "collection_location"
+        },
+        {
+            "field_name": "contact_scientist",
+            "form_placeholder": "",
+            "label": "contact_scientist"
+        },
+        {
+            "field_name": "dna_extraction_protocol",
+            "form_placeholder": "",
+            "label": "dna_extraction_protocol"
+        },
+        {
+            "field_name": "dna_source",
+            "form_placeholder": "",
+            "label": "dna_source"
+        },
+        {
+            "field_name": "index",
+            "form_placeholder": "",
+            "label": "index"
+        },
+        {
+            "field_name": "kingdom",
+            "form_placeholder": "",
+            "label": "kingdom"
+        },
+        {
+            "field_name": "library_id",
+            "form_placeholder": "",
+            "label": "library_id"
+        },
+        {
+            "field_name": "name",
+            "form_placeholder": "",
+            "label": "name"
+        },
+        {
+            "field_name": "notes",
+            "form_placeholder": "",
+            "label": "notes"
+        },
+        {
+            "field_name": "official_variety_name",
+            "form_placeholder": "",
+            "label": "official_variety_name"
+        },
+        {
+            "field_name": "original_source_host_species",
+            "form_placeholder": "",
+            "label": "original_source_host_species"
+        },
+        {
+            "field_name": "phylum",
+            "form_placeholder": "",
+            "label": "phylum"
+        },
+        {
+            "field_name": "sample_id",
+            "form_placeholder": "",
+            "label": "sample_id"
+        },
+        {
+            "field_name": "sample_label",
+            "form_placeholder": "",
+            "label": "sample_label"
+        },
+        {
+            "field_name": "sequencing_facility",
+            "form_placeholder": "",
+            "label": "sequencing_facility"
+        },
+        {
+            "field_name": "species",
+            "form_placeholder": "",
+            "label": "species"
+        },
+        {
+            "field_name": "title",
+            "form_placeholder": "",
+            "label": "title"
+        },
+        {
+            "field_name": "wheat_pathogenicity",
+            "form_placeholder": "",
+            "label": "wheat_pathogenicity"
+        }
+    ],
+    "dataset_type": "wheat-pathogens",
+    "resource_fields": [
+        {
+            "field_name": "name",
+            "label": "Name"
+        },
+        {
+            "field_name": "description",
+            "label": "Description"
+        },
+        {
+            "field_name": "url",
+            "form_placeholder": "http://downloads-qcif.bioplatforms.com/my-dataset.fastq.gz",
+            "label": "Data File",
+            "preset": "resource_url_upload",
+            "upload_label": "Sequence File"
+        },
+        {
+            "field_name": "md5",
+            "label": "MD5"
+        },
+        {
+            "field_name": "sha256",
+            "label": "SHA256"
+        },
+        {
+            "field_name": "s3etag_8388608",
+            "label": "S3 E-Tag (8MB multipart)"
+        },
+        {
+            "field_name": "file_size",
+            "label": "file_size"
+        },
+        {
+            "field_name": "filename",
+            "label": "filename"
+        },
+        {
+            "field_name": "flowcell",
+            "label": "flowcell"
+        },
+        {
+            "field_name": "index_number",
+            "label": "index_number"
+        },
+        {
+            "field_name": "lane_number",
+            "label": "lane_number"
+        },
+        {
+            "field_name": "md5",
+            "label": "md5"
+        },
+        {
+            "field_name": "name",
+            "label": "name"
+        },
+        {
+            "field_name": "resource_type",
+            "label": "resource_type"
+        },
+        {
+            "field_name": "run_index_number",
+            "label": "run_index_number"
+        },
+        {
+            "field_name": "run_lane_number",
+            "label": "run_lane_number"
+        },
+        {
+            "field_name": "run_number",
+            "label": "run_number"
+        },
+        {
+            "field_name": "run_protocol",
+            "label": "run_protocol"
+        },
+        {
+            "field_name": "run_protocol_base_pairs",
+            "label": "run_protocol_base_pairs"
+        },
+        {
+            "field_name": "run_protocol_library_type",
+            "label": "run_protocol_library_type"
+        },
+        {
+            "field_name": "sequencer",
+            "label": "sequencer"
+        }
+    ],
+    "scheming_version": 1
 }

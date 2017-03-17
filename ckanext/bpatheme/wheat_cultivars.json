@@ -1,209 +1,230 @@
 {
-  "scheming_version": 1,
-  "dataset_type": "wheat-cultivars",
-  "about_url": "https://downloads.bioplatforms.com/wheat_cultivars/",
-  "dataset_fields": [
-    {
-	"field_name": "owner_org",
-	"label": "Organization",
-	"display_property": "dct:publisher",
-	"validators": "owner_org_validator unicode",
-	"form_snippet": "organization.html"
-    },
-    {
-      "field_name": "title",
-      "label": "Title",
-      "preset": "title",
-      "form_placeholder": ""
-    },
-    {
-	"field_name": "notes",
-	"label": "Description",
-	"display_property": "dcat:Dataset/dct:description",
-	"form_snippet": "markdown.html",
-	"form_placeholder": "eg. Some useful notes about the data"
-    },
-    {
-      "field_name": "name",
-      "label": "URL",
-      "preset": "dataset_slug",
-      "form_placeholder": ""
-    },
-    {
-	"field_name": "tag_string",
-	"label": "Tags",
-	"display_property": "dcat:Dataset/dct:keyword",
-	"validators": "ignore_missing tag_string_convert",
-	"form_placeholder": "type to auto-complete",
-	"form_attrs": {
-	    "data-module": "autocomplete",
-	    "data-module-tags": "",
-	    "data-module-source": "/api/2/util/tag/autocomplete?incomplete=?"
-	}
-    },
-    {
-        "field_name": "contact_scientist",
-        "label": "Contact Scientist",
-        "form_placeholder": ""
-    },
-    {
-        "field_name": "sample_id",
-        "label": "Sample ID",
-        "form_placeholder": ""
-    },
-    {
-      "field_name": "source_name",
-      "label": "Source Name",
-      "form_placeholder": ""
-    },
-    {
-      "field_name": "code",
-      "label": "Code",
-      "form_placeholder": ""
-    },
-    {
-      "field_name": "bpa_id",
-      "label": "BPA ID",
-      "form_placeholder": ""
-    },
-    {
-      "field_name": "characteristics",
-      "label": "Characteristics",
-      "form_placeholder": ""
-    },
-    {
-      "field_name": "organism",
-      "label": "Organism",
-      "form_placeholder": ""
-    },
-    {
-      "field_name": "variety",
-      "label": "Variety",
-      "form_placeholder": ""
-    },
-    {
-      "field_name": "organism_part",
-      "label": "Organism Part",
-      "form_placeholder": ""
-    },
-    {
-      "field_name": "pedigree",
-      "label": "Pedigree",
-      "form_placeholder": ""
-    },
-    {
-      "field_name": "dev_stage",
-      "label": "Development Stage",
-      "form_placeholder": ""
-    },
-    {
-      "field_name": "yield_properties",
-      "label": "Yield Properties",
-      "form_placeholder": ""
-    },
-    {
-      "field_name": "morphology",
-      "label": "Morphology",
-      "form_placeholder": ""
-    },
-    {
-      "field_name": "maturity",
-      "label": "Maturity",
-      "form_placeholder": ""
-    },
-    {
-      "field_name": "pathogen_tolerance",
-      "label": "Pathogen Tolerance",
-      "form_placeholder": ""
-    },
-    {
-      "field_name": "drought_tolerance",
-      "label": "Drought Tolerance",
-      "form_placeholder": ""
-    },
-    {
-      "field_name": "soil_tolerance",
-      "label": "Soil Tolerance",
-      "form_placeholder": ""
-    },
-    {
-      "field_name": "classification",
-      "label": "Classification",
-      "form_placeholder": ""
-    },
-    {
-      "field_name": "sample_url",
-      "label": "Sample URL",
-      "form_placeholder": ""
-    }
-  ],
-  "resource_fields": [
-    {
-      "field_name": "url",
-      "label": "Data File",
-      "preset": "resource_url_upload",
-      "form_placeholder": "http://downloads-qcif.bioplatforms.com/my-dataset.fastq.gz",
-      "upload_label": "Data File"
-    },
-    {
-      "field_name": "casava_version",
-      "label": "Casava Version"
-    },
-    {
-      "field_name": "library_construction_protocol",
-      "label": "Library Construction Protocol"
-    },
-    {
-      "field_name": "library_range",
-      "label": "Library Range"
-    },
-    {
-      "field_name": "run_number",
-      "label": "Run Number"
-    },
-    {
-      "field_name": "sequencer",
-      "label": "Sequencer"
-    },
-    {
-      "field_name": "barcode",
-      "label": "Barcode"
-    },
-    {
-      "field_name": "base_pairs",
-      "label": "Base Pairs"
-    },
-    {
-      "field_name": "filename",
-      "label": "Filename"
-    },
-    {
-      "field_name": "flowcell",
-      "label": "Flowcell"
-    },
-    {
-      "field_name": "lane_number",
-      "label": "Lane Number"
-    },
-    {
-      "field_name": "library_type",
-      "label": "Library Type"
-    },
-    {
-      "field_name": "read_number",
-      "label": "Read Number"
-    },
-    {
-      "field_name": "md5",
-      "label": "MD5"
-    },
-    {
-      "field_name": "sha256",
-      "label": "SHA256"
-    },
-    {
-      "field_name": "s3etag_8388608",
-      "label": "S3 E-Tag (8MB multipart)"
-    }
-  ]
+    "about_url": "https://data.bioplatforms.com/",
+    "dataset_fields": [
+        {
+            "display_property": "dct:publisher",
+            "field_name": "owner_org",
+            "form_snippet": "organization.html",
+            "label": "Organization",
+            "validators": "owner_org_validator unicode"
+        },
+        {
+            "field_name": "title",
+            "form_placeholder": "",
+            "label": "Title",
+            "preset": "title"
+        },
+        {
+            "display_property": "dcat:Dataset/dct:description",
+            "field_name": "notes",
+            "form_placeholder": "eg. Some useful notes about the data",
+            "form_snippet": "markdown.html",
+            "label": "Description"
+        },
+        {
+            "field_name": "name",
+            "form_placeholder": "",
+            "label": "URL",
+            "preset": "dataset_slug"
+        },
+        {
+            "display_property": "dcat:Dataset/dct:keyword",
+            "field_name": "tag_string",
+            "form_attrs": {
+                "data-module": "autocomplete",
+                "data-module-source": "/api/2/util/tag/autocomplete?incomplete=?",
+                "data-module-tags": ""
+            },
+            "form_placeholder": "type to auto-complete",
+            "label": "Tags",
+            "validators": "ignore_missing tag_string_convert"
+        },
+        {
+            "field_name": "bpa_id",
+            "form_placeholder": "",
+            "label": "bpa_id"
+        },
+        {
+            "field_name": "characteristics",
+            "form_placeholder": "",
+            "label": "characteristics"
+        },
+        {
+            "field_name": "classification",
+            "form_placeholder": "",
+            "label": "classification"
+        },
+        {
+            "field_name": "code",
+            "form_placeholder": "",
+            "label": "code"
+        },
+        {
+            "field_name": "dev_stage",
+            "form_placeholder": "",
+            "label": "dev_stage"
+        },
+        {
+            "field_name": "drought_tolerance",
+            "form_placeholder": "",
+            "label": "drought_tolerance"
+        },
+        {
+            "field_name": "maturity",
+            "form_placeholder": "",
+            "label": "maturity"
+        },
+        {
+            "field_name": "morphology",
+            "form_placeholder": "",
+            "label": "morphology"
+        },
+        {
+            "field_name": "name",
+            "form_placeholder": "",
+            "label": "name"
+        },
+        {
+            "field_name": "notes",
+            "form_placeholder": "",
+            "label": "notes"
+        },
+        {
+            "field_name": "organism",
+            "form_placeholder": "",
+            "label": "organism"
+        },
+        {
+            "field_name": "organism_part",
+            "form_placeholder": "",
+            "label": "organism_part"
+        },
+        {
+            "field_name": "pathogen_tolerance",
+            "form_placeholder": "",
+            "label": "pathogen_tolerance"
+        },
+        {
+            "field_name": "pedigree",
+            "form_placeholder": "",
+            "label": "pedigree"
+        },
+        {
+            "field_name": "soil_tolerance",
+            "form_placeholder": "",
+            "label": "soil_tolerance"
+        },
+        {
+            "field_name": "source_name",
+            "form_placeholder": "",
+            "label": "source_name"
+        },
+        {
+            "field_name": "title",
+            "form_placeholder": "",
+            "label": "title"
+        },
+        {
+            "field_name": "url",
+            "form_placeholder": "",
+            "label": "url"
+        },
+        {
+            "field_name": "variety",
+            "form_placeholder": "",
+            "label": "variety"
+        },
+        {
+            "field_name": "yield_properties",
+            "form_placeholder": "",
+            "label": "yield_properties"
+        }
+    ],
+    "dataset_type": "wheat-cultivars",
+    "resource_fields": [
+        {
+            "field_name": "name",
+            "label": "Name"
+        },
+        {
+            "field_name": "description",
+            "label": "Description"
+        },
+        {
+            "field_name": "url",
+            "form_placeholder": "http://downloads-qcif.bioplatforms.com/my-dataset.fastq.gz",
+            "label": "Data File",
+            "preset": "resource_url_upload",
+            "upload_label": "Sequence File"
+        },
+        {
+            "field_name": "md5",
+            "label": "MD5"
+        },
+        {
+            "field_name": "sha256",
+            "label": "SHA256"
+        },
+        {
+            "field_name": "s3etag_8388608",
+            "label": "S3 E-Tag (8MB multipart)"
+        },
+        {
+            "field_name": "barcode",
+            "label": "barcode"
+        },
+        {
+            "field_name": "base_pairs",
+            "label": "base_pairs"
+        },
+        {
+            "field_name": "casava_version",
+            "label": "casava_version"
+        },
+        {
+            "field_name": "filename",
+            "label": "filename"
+        },
+        {
+            "field_name": "flowcell",
+            "label": "flowcell"
+        },
+        {
+            "field_name": "lane_number",
+            "label": "lane_number"
+        },
+        {
+            "field_name": "library_construction_protocol",
+            "label": "library_construction_protocol"
+        },
+        {
+            "field_name": "library_range",
+            "label": "library_range"
+        },
+        {
+            "field_name": "library_type",
+            "label": "library_type"
+        },
+        {
+            "field_name": "md5",
+            "label": "md5"
+        },
+        {
+            "field_name": "name",
+            "label": "name"
+        },
+        {
+            "field_name": "read_number",
+            "label": "read_number"
+        },
+        {
+            "field_name": "run_number",
+            "label": "run_number"
+        },
+        {
+            "field_name": "sequencer",
+            "label": "sequencer"
+        }
+    ],
+    "scheming_version": 1
 }
