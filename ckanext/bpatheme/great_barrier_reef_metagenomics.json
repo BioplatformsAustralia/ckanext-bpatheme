@@ -1,7 +1,7 @@
 {
     "scheming_version": 1,
     "dataset_type": "great-barrier-reef-metagenomic",
-    "about_url": "https://downloads.bioplatforms.com/gbr/",
+    "about_url": "https://data.bioplatforms.com/",
     "dataset_fields": [
         {
             "field_name": "owner_org",
