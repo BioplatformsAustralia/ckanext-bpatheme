@@ -60,6 +60,11 @@
             "label": "dilution"
         },
         {
+            "field_name": "facility_code",
+            "form_placeholder": "",
+            "label": "facility_code"
+        },
+        {
             "field_name": "flow_cell_id",
             "form_placeholder": "",
             "label": "flow_cell_id"
@@ -128,6 +133,11 @@
             "field_name": "sequencing_run_number",
             "form_placeholder": "",
             "label": "sequencing_run_number"
+        },
+        {
+            "field_name": "ticket",
+            "form_placeholder": "",
+            "label": "ticket"
         },
         {
             "field_name": "title",

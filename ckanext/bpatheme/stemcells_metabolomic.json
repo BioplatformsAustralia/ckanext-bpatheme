@@ -40,14 +40,19 @@
             "validators": "ignore_missing tag_string_convert"
         },
         {
+            "field_name": "acquisition_mode",
+            "form_placeholder": "",
+            "label": "acquisition_mode"
+        },
+        {
             "field_name": "archive_ingestion_date",
             "form_placeholder": "",
             "label": "archive_ingestion_date"
         },
         {
-            "field_name": "bpa_id_range",
+            "field_name": "bpa_id",
             "form_placeholder": "",
-            "label": "bpa_id_range"
+            "label": "bpa_id"
         },
         {
             "field_name": "contextual_data_submission_date",
@@ -80,29 +85,24 @@
             "label": "description"
         },
         {
-            "field_name": "facility",
-            "form_placeholder": "",
-            "label": "facility"
-        },
-        {
-            "field_name": "fastq_generation",
-            "form_placeholder": "",
-            "label": "fastq_generation"
-        },
-        {
             "field_name": "folder_name",
             "form_placeholder": "",
             "label": "folder_name"
         },
         {
-            "field_name": "insert_size_range",
+            "field_name": "instrument_column_type",
             "form_placeholder": "",
-            "label": "insert_size_range"
+            "label": "instrument_column_type"
         },
         {
-            "field_name": "library_construction_protocol",
+            "field_name": "mass_spectrometer",
             "form_placeholder": "",
-            "label": "library_construction_protocol"
+            "label": "mass_spectrometer"
+        },
+        {
+            "field_name": "method",
+            "form_placeholder": "",
+            "label": "method"
         },
         {
             "field_name": "name",
@@ -115,19 +115,19 @@
             "label": "notes"
         },
         {
+            "field_name": "platform",
+            "form_placeholder": "",
+            "label": "platform"
+        },
+        {
+            "field_name": "sample_fractionation_extraction_solvent",
+            "form_placeholder": "",
+            "label": "sample_fractionation_extraction_solvent"
+        },
+        {
             "field_name": "sample_submission_date",
             "form_placeholder": "",
             "label": "sample_submission_date"
-        },
-        {
-            "field_name": "sequencer",
-            "form_placeholder": "",
-            "label": "sequencer"
-        },
-        {
-            "field_name": "ticket",
-            "form_placeholder": "",
-            "label": "ticket"
         },
         {
             "field_name": "title",
@@ -135,7 +135,7 @@
             "label": "title"
         }
     ],
-    "dataset_type": "stemcells-singlecellrnaseq",
+    "dataset_type": "stemcells-metabolomic",
     "resource_fields": [
         {
             "field_name": "name",
@@ -165,40 +165,12 @@
             "label": "S3 E-Tag (8MB multipart)"
         },
         {
-            "field_name": "flow_id",
-            "label": "flow_id"
-        },
-        {
-            "field_name": "index",
-            "label": "index"
-        },
-        {
-            "field_name": "insert_size",
-            "label": "insert_size"
-        },
-        {
-            "field_name": "lane",
-            "label": "lane"
-        },
-        {
-            "field_name": "library",
-            "label": "library"
-        },
-        {
             "field_name": "md5",
             "label": "md5"
         },
         {
             "field_name": "name",
             "label": "name"
-        },
-        {
-            "field_name": "project",
-            "label": "project"
-        },
-        {
-            "field_name": "read",
-            "label": "read"
         },
         {
             "field_name": "vendor",

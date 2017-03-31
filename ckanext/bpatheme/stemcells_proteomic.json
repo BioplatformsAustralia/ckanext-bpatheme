@@ -45,9 +45,9 @@
             "label": "archive_ingestion_date"
         },
         {
-            "field_name": "bpa_id_range",
+            "field_name": "bpa_id",
             "form_placeholder": "",
-            "label": "bpa_id_range"
+            "label": "bpa_id"
         },
         {
             "field_name": "contextual_data_submission_date",
@@ -80,29 +80,9 @@
             "label": "description"
         },
         {
-            "field_name": "facility",
-            "form_placeholder": "",
-            "label": "facility"
-        },
-        {
-            "field_name": "fastq_generation",
-            "form_placeholder": "",
-            "label": "fastq_generation"
-        },
-        {
             "field_name": "folder_name",
             "form_placeholder": "",
             "label": "folder_name"
-        },
-        {
-            "field_name": "insert_size_range",
-            "form_placeholder": "",
-            "label": "insert_size_range"
-        },
-        {
-            "field_name": "library_construction_protocol",
-            "form_placeholder": "",
-            "label": "library_construction_protocol"
         },
         {
             "field_name": "name",
@@ -120,22 +100,12 @@
             "label": "sample_submission_date"
         },
         {
-            "field_name": "sequencer",
-            "form_placeholder": "",
-            "label": "sequencer"
-        },
-        {
-            "field_name": "ticket",
-            "form_placeholder": "",
-            "label": "ticket"
-        },
-        {
             "field_name": "title",
             "form_placeholder": "",
             "label": "title"
         }
     ],
-    "dataset_type": "stemcells-singlecellrnaseq",
+    "dataset_type": "stemcells-proteomic",
     "resource_fields": [
         {
             "field_name": "name",
@@ -165,24 +135,28 @@
             "label": "S3 E-Tag (8MB multipart)"
         },
         {
-            "field_name": "flow_id",
-            "label": "flow_id"
+            "field_name": "acquisition_mode",
+            "label": "acquisition_mode"
         },
         {
-            "field_name": "index",
-            "label": "index"
+            "field_name": "database",
+            "label": "database"
         },
         {
-            "field_name": "insert_size",
-            "label": "insert_size"
+            "field_name": "database_size",
+            "label": "database_size"
         },
         {
-            "field_name": "lane",
-            "label": "lane"
+            "field_name": "gradient_time",
+            "label": "gradient_time"
         },
         {
-            "field_name": "library",
-            "label": "library"
+            "field_name": "lc_column_type",
+            "label": "lc_column_type"
+        },
+        {
+            "field_name": "mass_spectrometer",
+            "label": "mass_spectrometer"
         },
         {
             "field_name": "md5",
@@ -193,12 +167,12 @@
             "label": "name"
         },
         {
-            "field_name": "project",
-            "label": "project"
+            "field_name": "sample_fractionation",
+            "label": "sample_fractionation"
         },
         {
-            "field_name": "read",
-            "label": "read"
+            "field_name": "sample_on_column",
+            "label": "sample_on_column"
         },
         {
             "field_name": "vendor",

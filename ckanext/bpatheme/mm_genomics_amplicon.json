@@ -65,6 +65,11 @@
             "label": "analysis_software_version"
         },
         {
+            "field_name": "anth",
+            "form_placeholder": "",
+            "label": "anth"
+        },
+        {
             "field_name": "asta",
             "form_placeholder": "",
             "label": "asta"
@@ -160,6 +165,11 @@
             "label": "date_sampled"
         },
         {
+            "field_name": "date_sampled_yyyy_mm_dd",
+            "form_placeholder": "",
+            "label": "date_sampled_yyyy_mm_dd"
+        },
+        {
             "field_name": "density_density",
             "form_placeholder": "",
             "label": "density_density"
@@ -168,6 +178,11 @@
             "field_name": "depth",
             "form_placeholder": "",
             "label": "depth"
+        },
+        {
+            "field_name": "depth_salt_water_m_lat_272",
+            "form_placeholder": "",
+            "label": "depth_salt_water_m_lat_272"
         },
         {
             "field_name": "diadchr",
@@ -218,6 +233,11 @@
             "field_name": "echin",
             "form_placeholder": "",
             "label": "echin"
+        },
+        {
+            "field_name": "facility",
+            "form_placeholder": "",
+            "label": "facility"
         },
         {
             "field_name": "fine_sediment",
@@ -285,6 +305,11 @@
             "label": "latitude"
         },
         {
+            "field_name": "latitude_decimal_degrees",
+            "form_placeholder": "",
+            "label": "latitude_decimal_degrees"
+        },
+        {
             "field_name": "light_intensity",
             "form_placeholder": "",
             "label": "light_intensity"
@@ -298,6 +323,11 @@
             "field_name": "longitude",
             "form_placeholder": "",
             "label": "longitude"
+        },
+        {
+            "field_name": "longitude_decimal_degrees",
+            "form_placeholder": "",
+            "label": "longitude_decimal_degrees"
         },
         {
             "field_name": "lut",
@@ -360,6 +390,11 @@
             "label": "oxygen_mll_cdt"
         },
         {
+            "field_name": "oxygen_mll_ctd",
+            "form_placeholder": "",
+            "label": "oxygen_mll_ctd"
+        },
+        {
             "field_name": "oxygen_moll_lab",
             "form_placeholder": "",
             "label": "oxygen_moll_lab"
@@ -383,6 +418,11 @@
             "field_name": "ph_level",
             "form_placeholder": "",
             "label": "ph_level"
+        },
+        {
+            "field_name": "ph_level_h2o_ph",
+            "form_placeholder": "",
+            "label": "ph_level_h2o_ph"
         },
         {
             "field_name": "phide_a",
@@ -480,9 +520,19 @@
             "label": "temperature_its_90"
         },
         {
+            "field_name": "ticket",
+            "form_placeholder": "",
+            "label": "ticket"
+        },
+        {
             "field_name": "time_sampled",
             "form_placeholder": "",
             "label": "time_sampled"
+        },
+        {
+            "field_name": "time_sampled_hhmm",
+            "form_placeholder": "",
+            "label": "time_sampled_hhmm"
         },
         {
             "field_name": "title",

@@ -45,9 +45,54 @@
             "label": "analysis_software_version"
         },
         {
+            "field_name": "archive_ingestion_date",
+            "form_placeholder": "",
+            "label": "archive_ingestion_date"
+        },
+        {
             "field_name": "bpa_id",
             "form_placeholder": "",
             "label": "bpa_id"
+        },
+        {
+            "field_name": "contextual_data_submission_date",
+            "form_placeholder": "",
+            "label": "contextual_data_submission_date"
+        },
+        {
+            "field_name": "data_generated",
+            "form_placeholder": "",
+            "label": "data_generated"
+        },
+        {
+            "field_name": "data_type",
+            "form_placeholder": "",
+            "label": "data_type"
+        },
+        {
+            "field_name": "dataset_url",
+            "form_placeholder": "",
+            "label": "dataset_url"
+        },
+        {
+            "field_name": "date_of_transfer",
+            "form_placeholder": "",
+            "label": "date_of_transfer"
+        },
+        {
+            "field_name": "description",
+            "form_placeholder": "",
+            "label": "description"
+        },
+        {
+            "field_name": "facility",
+            "form_placeholder": "",
+            "label": "facility"
+        },
+        {
+            "field_name": "folder_name",
+            "form_placeholder": "",
+            "label": "folder_name"
         },
         {
             "field_name": "insert_size_range",
@@ -70,9 +115,19 @@
             "label": "notes"
         },
         {
+            "field_name": "sample_submission_date",
+            "form_placeholder": "",
+            "label": "sample_submission_date"
+        },
+        {
             "field_name": "sequencer",
             "form_placeholder": "",
             "label": "sequencer"
+        },
+        {
+            "field_name": "ticket",
+            "form_placeholder": "",
+            "label": "ticket"
         },
         {
             "field_name": "title",
