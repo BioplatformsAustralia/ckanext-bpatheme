@@ -50,6 +50,11 @@
             "label": "archive_ingestion_date"
         },
         {
+            "field_name": "bpa_id",
+            "form_placeholder": "",
+            "label": "bpa_id"
+        },
+        {
             "field_name": "bpa_id_range",
             "form_placeholder": "",
             "label": "bpa_id_range"
