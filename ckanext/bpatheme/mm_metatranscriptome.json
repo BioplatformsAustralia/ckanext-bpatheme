@@ -65,6 +65,11 @@
             "label": "anth"
         },
         {
+            "field_name": "archive_ingestion_date",
+            "form_placeholder": "",
+            "label": "archive_ingestion_date"
+        },
+        {
             "field_name": "asta",
             "form_placeholder": "",
             "label": "asta"
@@ -115,6 +120,11 @@
             "label": "conductivity"
         },
         {
+            "field_name": "contextual_data_submission_date",
+            "form_placeholder": "",
+            "label": "contextual_data_submission_date"
+        },
+        {
             "field_name": "cphl_a",
             "form_placeholder": "",
             "label": "cphl_a"
@@ -150,6 +160,26 @@
             "label": "cphlide_a"
         },
         {
+            "field_name": "data_generated",
+            "form_placeholder": "",
+            "label": "data_generated"
+        },
+        {
+            "field_name": "data_type",
+            "form_placeholder": "",
+            "label": "data_type"
+        },
+        {
+            "field_name": "dataset_url",
+            "form_placeholder": "",
+            "label": "dataset_url"
+        },
+        {
+            "field_name": "date_of_transfer",
+            "form_placeholder": "",
+            "label": "date_of_transfer"
+        },
+        {
             "field_name": "date_sampled",
             "form_placeholder": "",
             "label": "date_sampled"
@@ -173,6 +203,11 @@
             "field_name": "depth_salt_water_m_lat_272",
             "form_placeholder": "",
             "label": "depth_salt_water_m_lat_272"
+        },
+        {
+            "field_name": "description",
+            "form_placeholder": "",
+            "label": "description"
         },
         {
             "field_name": "diadchr",
@@ -238,6 +273,11 @@
             "field_name": "fluorometer_measurement",
             "form_placeholder": "",
             "label": "fluorometer_measurement"
+        },
+        {
+            "field_name": "folder_name",
+            "form_placeholder": "",
+            "label": "folder_name"
         },
         {
             "field_name": "fuco",
@@ -458,6 +498,11 @@
             "field_name": "sample_site",
             "form_placeholder": "",
             "label": "sample_site"
+        },
+        {
+            "field_name": "sample_submission_date",
+            "form_placeholder": "",
+            "label": "sample_submission_date"
         },
         {
             "field_name": "sample_type",
