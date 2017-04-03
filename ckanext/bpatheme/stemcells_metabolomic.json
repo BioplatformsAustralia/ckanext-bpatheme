@@ -45,6 +45,11 @@
             "label": "acquisition_mode"
         },
         {
+            "field_name": "analytical_platform",
+            "form_placeholder": "",
+            "label": "analytical_platform"
+        },
+        {
             "field_name": "archive_ingestion_date",
             "form_placeholder": "",
             "label": "archive_ingestion_date"
@@ -120,9 +125,9 @@
             "label": "notes"
         },
         {
-            "field_name": "platform",
+            "field_name": "omics",
             "form_placeholder": "",
-            "label": "platform"
+            "label": "omics"
         },
         {
             "field_name": "sample_fractionation_extraction_solvent",
@@ -173,6 +178,10 @@
         {
             "field_name": "s3etag_8388608",
             "label": "S3 E-Tag (8MB multipart)"
+        },
+        {
+            "field_name": "analytical_platform",
+            "label": "analytical_platform"
         },
         {
             "field_name": "md5",
