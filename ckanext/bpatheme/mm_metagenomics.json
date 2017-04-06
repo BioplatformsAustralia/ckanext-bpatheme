@@ -535,6 +535,11 @@
             "label": "site"
         },
         {
+            "field_name": "spatial",
+            "form_placeholder": "",
+            "label": "spatial"
+        },
+        {
             "field_name": "temperature_its_90",
             "form_placeholder": "",
             "label": "temperature_its_90"

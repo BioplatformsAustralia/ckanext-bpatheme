@@ -555,6 +555,11 @@
             "label": "site"
         },
         {
+            "field_name": "spatial",
+            "form_placeholder": "",
+            "label": "spatial"
+        },
+        {
             "field_name": "target",
             "form_placeholder": "",
             "label": "target"
