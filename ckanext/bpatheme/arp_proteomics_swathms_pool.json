@@ -44,7 +44,6 @@
             "display_snippet": "spatial.html",
             "field_name": "spatial",
             "form_placeholder": "Paste a valid GeoJSON geometry",
-            "form_snippet": "spatial.html",
             "label": "Geospatial Coverage"
         },
         {
