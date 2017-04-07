@@ -40,6 +40,14 @@
             "validators": "ignore_missing tag_string_convert"
         },
         {
+            "display_property": "dcat:Dataset/dct:spatial",
+            "display_snippet": "spatial.html",
+            "field_name": "spatial",
+            "form_placeholder": "Paste a valid GeoJSON geometry",
+            "form_snippet": "spatial.html",
+            "label": "Geospatial Coverage"
+        },
+        {
             "field_name": "allo",
             "form_placeholder": "",
             "label": "allo"
@@ -533,11 +541,6 @@
             "field_name": "site",
             "form_placeholder": "",
             "label": "site"
-        },
-        {
-            "field_name": "spatial",
-            "form_placeholder": "",
-            "label": "spatial"
         },
         {
             "field_name": "temperature_its_90",

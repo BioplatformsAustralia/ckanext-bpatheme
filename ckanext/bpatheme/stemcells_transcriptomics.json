@@ -40,6 +40,14 @@
             "validators": "ignore_missing tag_string_convert"
         },
         {
+            "display_property": "dcat:Dataset/dct:spatial",
+            "display_snippet": "spatial.html",
+            "field_name": "spatial",
+            "form_placeholder": "Paste a valid GeoJSON geometry",
+            "form_snippet": "spatial.html",
+            "label": "Geospatial Coverage"
+        },
+        {
             "field_name": "analysis_software_version",
             "form_placeholder": "",
             "label": "analysis_software_version"
