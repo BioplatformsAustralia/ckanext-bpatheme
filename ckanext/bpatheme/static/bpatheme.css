@@ -19,7 +19,7 @@ body {
 }
 
 .leaflet-touch .leaflet-draw-toolbar .leaflet-draw-draw-rectangle {
-  background-position: 0px 0px !important;
+  background-position: 50% 50% !important;
 }
 
 .account-masthead {
