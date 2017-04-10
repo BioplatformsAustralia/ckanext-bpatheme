@@ -18,7 +18,9 @@ body {
   font-size: 12pt;
 }
 
-
+.leaflet-touch .leaflet-draw-toolbar .leaflet-draw-draw-rectangle {
+  background-position: 0px 0px !important;
+}
 
 .account-masthead {
   height: 39px;
