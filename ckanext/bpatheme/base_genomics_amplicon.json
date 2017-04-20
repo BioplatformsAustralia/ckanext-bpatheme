@@ -337,14 +337,14 @@
             "label": "index2"
         },
         {
-            "field_name": "lat",
+            "field_name": "latitude",
             "form_placeholder": "",
-            "label": "lat"
+            "label": "latitude"
         },
         {
-            "field_name": "lon",
+            "field_name": "longitude",
             "form_placeholder": "",
-            "label": "lon"
+            "label": "longitude"
         },
         {
             "field_name": "methodological_notes",
