@@ -267,6 +267,11 @@
             "label": "flooding"
         },
         {
+            "field_name": "flow_id",
+            "form_placeholder": "",
+            "label": "flow_id"
+        },
+        {
             "field_name": "folder_name",
             "form_placeholder": "",
             "label": "folder_name"
