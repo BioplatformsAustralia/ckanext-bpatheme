@@ -1,0 +1,544 @@
+{
+    "about_url": "https://data.bioplatforms.com/",
+    "dataset_fields": [
+        {
+            "display_property": "dct:publisher",
+            "field_name": "owner_org",
+            "form_snippet": "organization.html",
+            "label": "Organization",
+            "validators": "owner_org_validator unicode"
+        },
+        {
+            "field_name": "title",
+            "form_placeholder": "",
+            "label": "Title",
+            "preset": "title"
+        },
+        {
+            "display_property": "dcat:Dataset/dct:description",
+            "field_name": "notes",
+            "form_placeholder": "eg. Some useful notes about the data",
+            "form_snippet": "markdown.html",
+            "label": "Description"
+        },
+        {
+            "field_name": "name",
+            "form_placeholder": "",
+            "label": "URL",
+            "preset": "dataset_slug"
+        },
+        {
+            "display_property": "dcat:Dataset/dct:keyword",
+            "field_name": "tag_string",
+            "form_attrs": {
+                "data-module": "autocomplete",
+                "data-module-source": "/api/2/util/tag/autocomplete?incomplete=?",
+                "data-module-tags": ""
+            },
+            "form_placeholder": "type to auto-complete",
+            "label": "Tags",
+            "validators": "ignore_missing tag_string_convert"
+        },
+        {
+            "display_property": "dcat:Dataset/dct:spatial",
+            "display_snippet": "spatial.html",
+            "field_name": "spatial",
+            "form_placeholder": "Paste a valid GeoJSON geometry",
+            "label": "Geospatial Coverage"
+        },
+        {
+            "field_name": "agrochemical_additions",
+            "form_placeholder": "",
+            "label": "agrochemical_additions"
+        },
+        {
+            "field_name": "ammonium_nitrogen",
+            "form_placeholder": "",
+            "label": "ammonium_nitrogen"
+        },
+        {
+            "field_name": "analysis_software_version",
+            "form_placeholder": "",
+            "label": "analysis_software_version"
+        },
+        {
+            "field_name": "archive_ingestion_date",
+            "form_placeholder": "",
+            "label": "archive_ingestion_date"
+        },
+        {
+            "field_name": "australian_soil_classification",
+            "form_placeholder": "",
+            "label": "australian_soil_classification"
+        },
+        {
+            "field_name": "boron_hot_cacl2",
+            "form_placeholder": "",
+            "label": "boron_hot_cacl2"
+        },
+        {
+            "field_name": "bpa_id",
+            "form_placeholder": "",
+            "label": "bpa_id"
+        },
+        {
+            "field_name": "broad_land_use",
+            "form_placeholder": "",
+            "label": "broad_land_use"
+        },
+        {
+            "field_name": "cacl2_ph",
+            "form_placeholder": "",
+            "label": "cacl2_ph"
+        },
+        {
+            "field_name": "clay",
+            "form_placeholder": "",
+            "label": "clay"
+        },
+        {
+            "field_name": "conductivity",
+            "form_placeholder": "",
+            "label": "conductivity"
+        },
+        {
+            "field_name": "contextual_data_submission_date",
+            "form_placeholder": "",
+            "label": "contextual_data_submission_date"
+        },
+        {
+            "field_name": "course_sand",
+            "form_placeholder": "",
+            "label": "course_sand"
+        },
+        {
+            "field_name": "crop_rotation_1",
+            "form_placeholder": "",
+            "label": "crop_rotation_1"
+        },
+        {
+            "field_name": "crop_rotation_2",
+            "form_placeholder": "",
+            "label": "crop_rotation_2"
+        },
+        {
+            "field_name": "crop_rotation_3",
+            "form_placeholder": "",
+            "label": "crop_rotation_3"
+        },
+        {
+            "field_name": "crop_rotation_4",
+            "form_placeholder": "",
+            "label": "crop_rotation_4"
+        },
+        {
+            "field_name": "crop_rotation_5",
+            "form_placeholder": "",
+            "label": "crop_rotation_5"
+        },
+        {
+            "field_name": "current_land_use",
+            "form_placeholder": "",
+            "label": "current_land_use"
+        },
+        {
+            "field_name": "data_generated",
+            "form_placeholder": "",
+            "label": "data_generated"
+        },
+        {
+            "field_name": "data_type",
+            "form_placeholder": "",
+            "label": "data_type"
+        },
+        {
+            "field_name": "dataset_url",
+            "form_placeholder": "",
+            "label": "dataset_url"
+        },
+        {
+            "field_name": "date_of_transfer",
+            "form_placeholder": "",
+            "label": "date_of_transfer"
+        },
+        {
+            "field_name": "date_sampled",
+            "form_placeholder": "",
+            "label": "date_sampled"
+        },
+        {
+            "field_name": "date_since_change_in_land_use",
+            "form_placeholder": "",
+            "label": "date_since_change_in_land_use"
+        },
+        {
+            "field_name": "depth",
+            "form_placeholder": "",
+            "label": "depth"
+        },
+        {
+            "field_name": "description",
+            "form_placeholder": "",
+            "label": "description"
+        },
+        {
+            "field_name": "dtpa_copper",
+            "form_placeholder": "",
+            "label": "dtpa_copper"
+        },
+        {
+            "field_name": "dtpa_iron",
+            "form_placeholder": "",
+            "label": "dtpa_iron"
+        },
+        {
+            "field_name": "dtpa_manganese",
+            "form_placeholder": "",
+            "label": "dtpa_manganese"
+        },
+        {
+            "field_name": "dtpa_zinc",
+            "form_placeholder": "",
+            "label": "dtpa_zinc"
+        },
+        {
+            "field_name": "elevation",
+            "form_placeholder": "",
+            "label": "elevation"
+        },
+        {
+            "field_name": "exc_aluminium",
+            "form_placeholder": "",
+            "label": "exc_aluminium"
+        },
+        {
+            "field_name": "exc_calcium",
+            "form_placeholder": "",
+            "label": "exc_calcium"
+        },
+        {
+            "field_name": "exc_magnesium",
+            "form_placeholder": "",
+            "label": "exc_magnesium"
+        },
+        {
+            "field_name": "exc_potassium",
+            "form_placeholder": "",
+            "label": "exc_potassium"
+        },
+        {
+            "field_name": "exc_sodium",
+            "form_placeholder": "",
+            "label": "exc_sodium"
+        },
+        {
+            "field_name": "extreme_event",
+            "form_placeholder": "",
+            "label": "extreme_event"
+        },
+        {
+            "field_name": "facility",
+            "form_placeholder": "",
+            "label": "facility"
+        },
+        {
+            "field_name": "fao",
+            "form_placeholder": "",
+            "label": "fao"
+        },
+        {
+            "field_name": "fine_sand",
+            "form_placeholder": "",
+            "label": "fine_sand"
+        },
+        {
+            "field_name": "fire_history",
+            "form_placeholder": "",
+            "label": "fire_history"
+        },
+        {
+            "field_name": "fire_intensity",
+            "form_placeholder": "",
+            "label": "fire_intensity"
+        },
+        {
+            "field_name": "flooding",
+            "form_placeholder": "",
+            "label": "flooding"
+        },
+        {
+            "field_name": "folder_name",
+            "form_placeholder": "",
+            "label": "folder_name"
+        },
+        {
+            "field_name": "general_ecological_zone",
+            "form_placeholder": "",
+            "label": "general_ecological_zone"
+        },
+        {
+            "field_name": "gravel",
+            "form_placeholder": "",
+            "label": "gravel"
+        },
+        {
+            "field_name": "h20_ph",
+            "form_placeholder": "",
+            "label": "h20_ph"
+        },
+        {
+            "field_name": "horizon_classification",
+            "form_placeholder": "",
+            "label": "horizon_classification"
+        },
+        {
+            "field_name": "immediate_previous_land_use",
+            "form_placeholder": "",
+            "label": "immediate_previous_land_use"
+        },
+        {
+            "field_name": "insert_size_range",
+            "form_placeholder": "",
+            "label": "insert_size_range"
+        },
+        {
+            "field_name": "latitude",
+            "form_placeholder": "",
+            "label": "latitude"
+        },
+        {
+            "field_name": "library_construction_protocol",
+            "form_placeholder": "",
+            "label": "library_construction_protocol"
+        },
+        {
+            "field_name": "longitude",
+            "form_placeholder": "",
+            "label": "longitude"
+        },
+        {
+            "field_name": "methodological_notes",
+            "form_placeholder": "",
+            "label": "methodological_notes"
+        },
+        {
+            "field_name": "name",
+            "form_placeholder": "",
+            "label": "name"
+        },
+        {
+            "field_name": "nitrate_nitrogen",
+            "form_placeholder": "",
+            "label": "nitrate_nitrogen"
+        },
+        {
+            "field_name": "notes",
+            "form_placeholder": "",
+            "label": "notes"
+        },
+        {
+            "field_name": "organic_carbon",
+            "form_placeholder": "",
+            "label": "organic_carbon"
+        },
+        {
+            "field_name": "other_comments",
+            "form_placeholder": "",
+            "label": "other_comments"
+        },
+        {
+            "field_name": "phosphorus_collwell",
+            "form_placeholder": "",
+            "label": "phosphorus_collwell"
+        },
+        {
+            "field_name": "potassium_collwell",
+            "form_placeholder": "",
+            "label": "potassium_collwell"
+        },
+        {
+            "field_name": "profile_position",
+            "form_placeholder": "",
+            "label": "profile_position"
+        },
+        {
+            "field_name": "sample_extraction_id",
+            "form_placeholder": "",
+            "label": "sample_extraction_id"
+        },
+        {
+            "field_name": "sample_submission_date",
+            "form_placeholder": "",
+            "label": "sample_submission_date"
+        },
+        {
+            "field_name": "sand",
+            "form_placeholder": "",
+            "label": "sand"
+        },
+        {
+            "field_name": "sequencer",
+            "form_placeholder": "",
+            "label": "sequencer"
+        },
+        {
+            "field_name": "silt",
+            "form_placeholder": "",
+            "label": "silt"
+        },
+        {
+            "field_name": "slope",
+            "form_placeholder": "",
+            "label": "slope"
+        },
+        {
+            "field_name": "slope_aspect",
+            "form_placeholder": "",
+            "label": "slope_aspect"
+        },
+        {
+            "field_name": "soil_colour",
+            "form_placeholder": "",
+            "label": "soil_colour"
+        },
+        {
+            "field_name": "soil_moisture",
+            "form_placeholder": "",
+            "label": "soil_moisture"
+        },
+        {
+            "field_name": "storage_method",
+            "form_placeholder": "",
+            "label": "storage_method"
+        },
+        {
+            "field_name": "sulphur",
+            "form_placeholder": "",
+            "label": "sulphur"
+        },
+        {
+            "field_name": "texture",
+            "form_placeholder": "",
+            "label": "texture"
+        },
+        {
+            "field_name": "ticket",
+            "form_placeholder": "",
+            "label": "ticket"
+        },
+        {
+            "field_name": "tillage",
+            "form_placeholder": "",
+            "label": "tillage"
+        },
+        {
+            "field_name": "title",
+            "form_placeholder": "",
+            "label": "title"
+        },
+        {
+            "field_name": "total_carbon",
+            "form_placeholder": "",
+            "label": "total_carbon"
+        },
+        {
+            "field_name": "total_nitrogen",
+            "form_placeholder": "",
+            "label": "total_nitrogen"
+        },
+        {
+            "field_name": "vegetation_dominant_trees",
+            "form_placeholder": "",
+            "label": "vegetation_dominant_trees"
+        },
+        {
+            "field_name": "vegetation_total_cover",
+            "form_placeholder": "",
+            "label": "vegetation_total_cover"
+        },
+        {
+            "field_name": "vegetation_type_controlled_vocab",
+            "form_placeholder": "",
+            "label": "vegetation_type_controlled_vocab"
+        }
+    ],
+    "dataset_type": "base-metagenomics",
+    "resource_fields": [
+        {
+            "field_name": "name",
+            "label": "Name"
+        },
+        {
+            "field_name": "description",
+            "label": "Description"
+        },
+        {
+            "field_name": "url",
+            "form_placeholder": "http://downloads-qcif.bioplatforms.com/my-dataset.fastq.gz",
+            "label": "Data File",
+            "preset": "resource_url_upload",
+            "upload_label": "Sequence File"
+        },
+        {
+            "field_name": "md5",
+            "label": "MD5"
+        },
+        {
+            "field_name": "sha256",
+            "label": "SHA256"
+        },
+        {
+            "field_name": "s3etag_8388608",
+            "label": "S3 E-Tag (8MB multipart)"
+        },
+        {
+            "field_name": "extraction",
+            "label": "extraction"
+        },
+        {
+            "field_name": "flow_id",
+            "label": "flow_id"
+        },
+        {
+            "field_name": "index",
+            "label": "index"
+        },
+        {
+            "field_name": "insert_size",
+            "label": "insert_size"
+        },
+        {
+            "field_name": "lane",
+            "label": "lane"
+        },
+        {
+            "field_name": "library",
+            "label": "library"
+        },
+        {
+            "field_name": "md5",
+            "label": "md5"
+        },
+        {
+            "field_name": "name",
+            "label": "name"
+        },
+        {
+            "field_name": "read",
+            "label": "read"
+        },
+        {
+            "field_name": "resource_type",
+            "label": "resource_type"
+        },
+        {
+            "field_name": "run",
+            "label": "run"
+        },
+        {
+            "field_name": "vendor",
+            "label": "vendor"
+        }
+    ],
+    "scheming_version": 1
+}
