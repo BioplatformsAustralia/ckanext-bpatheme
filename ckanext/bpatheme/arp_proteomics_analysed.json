@@ -72,6 +72,11 @@
             "label": "contextual_data_submission_date"
         },
         {
+            "field_name": "data_analysis_date",
+            "form_placeholder": "",
+            "label": "data_analysis_date"
+        },
+        {
             "field_name": "data_generated",
             "form_placeholder": "",
             "label": "data_generated"
@@ -80,6 +85,11 @@
             "field_name": "data_type",
             "form_placeholder": "",
             "label": "data_type"
+        },
+        {
+            "field_name": "database",
+            "form_placeholder": "",
+            "label": "database"
         },
         {
             "field_name": "dataset_url",
@@ -107,9 +117,24 @@
             "label": "facility_code"
         },
         {
+            "field_name": "facility_project_code_experiment_code",
+            "form_placeholder": "",
+            "label": "facility_project_code_experiment_code"
+        },
+        {
             "field_name": "folder_name",
             "form_placeholder": "",
             "label": "folder_name"
+        },
+        {
+            "field_name": "genome_used",
+            "form_placeholder": "",
+            "label": "genome_used"
+        },
+        {
+            "field_name": "growth_condition_growth",
+            "form_placeholder": "",
+            "label": "growth_condition_growth"
         },
         {
             "field_name": "growth_condition_media",
@@ -117,9 +142,9 @@
             "label": "growth_condition_media"
         },
         {
-            "field_name": "growth_condition_od600_reading",
+            "field_name": "growth_condition_od600",
             "form_placeholder": "",
-            "label": "growth_condition_od600_reading"
+            "label": "growth_condition_od600"
         },
         {
             "field_name": "growth_condition_temperature",
@@ -152,9 +177,24 @@
             "label": "omics"
         },
         {
+            "field_name": "proteome_size",
+            "form_placeholder": "",
+            "label": "proteome_size"
+        },
+        {
             "field_name": "sample_submission_date",
             "form_placeholder": "",
             "label": "sample_submission_date"
+        },
+        {
+            "field_name": "serovar",
+            "form_placeholder": "",
+            "label": "serovar"
+        },
+        {
+            "field_name": "taxon_or_organism",
+            "form_placeholder": "",
+            "label": "taxon_or_organism"
         },
         {
             "field_name": "ticket",
@@ -165,9 +205,24 @@
             "field_name": "title",
             "form_placeholder": "",
             "label": "title"
+        },
+        {
+            "field_name": "translation",
+            "form_placeholder": "",
+            "label": "translation"
+        },
+        {
+            "field_name": "version",
+            "form_placeholder": "",
+            "label": "version"
+        },
+        {
+            "field_name": "zip_file_name",
+            "form_placeholder": "",
+            "label": "zip_file_name"
         }
     ],
-    "dataset_type": "arp-transcriptomics-analysed",
+    "dataset_type": "arp-proteomics-analysed",
     "resource_fields": [
         {
             "field_name": "name",
