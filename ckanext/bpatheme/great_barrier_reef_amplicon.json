@@ -87,6 +87,11 @@
             "label": "i7_index"
         },
         {
+            "field_name": "index",
+            "form_placeholder": "",
+            "label": "index"
+        },
+        {
             "field_name": "index1",
             "form_placeholder": "",
             "label": "index1"
@@ -186,8 +191,8 @@
             "label": "amplicon"
         },
         {
-            "field_name": "filename",
-            "label": "filename"
+            "field_name": "bpa_id",
+            "label": "bpa_id"
         },
         {
             "field_name": "flow_id",
@@ -206,12 +211,16 @@
             "label": "name"
         },
         {
+            "field_name": "post",
+            "label": "post"
+        },
+        {
             "field_name": "reach",
             "label": "reach"
         },
         {
-            "field_name": "resource_type",
-            "label": "resource_type"
+            "field_name": "vendor",
+            "label": "vendor"
         }
     ],
     "scheming_version": 1
