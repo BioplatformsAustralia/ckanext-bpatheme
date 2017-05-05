@@ -185,12 +185,12 @@
             "label": "base_pairs"
         },
         {
-            "field_name": "casava_version",
-            "label": "casava_version"
+            "field_name": "bpa_id",
+            "label": "bpa_id"
         },
         {
-            "field_name": "filename",
-            "label": "filename"
+            "field_name": "casava_version",
+            "label": "casava_version"
         },
         {
             "field_name": "flowcell",
@@ -221,12 +221,16 @@
             "label": "name"
         },
         {
+            "field_name": "number",
+            "label": "number"
+        },
+        {
             "field_name": "read_number",
             "label": "read_number"
         },
         {
-            "field_name": "run_number",
-            "label": "run_number"
+            "field_name": "run",
+            "label": "run"
         },
         {
             "field_name": "sequencer",

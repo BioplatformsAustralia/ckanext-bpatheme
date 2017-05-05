@@ -181,10 +181,6 @@
             "label": "file_size"
         },
         {
-            "field_name": "filename",
-            "label": "filename"
-        },
-        {
             "field_name": "flowcell",
             "label": "flowcell"
         },
