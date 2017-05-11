@@ -67,6 +67,11 @@
             "label": "bpa_id"
         },
         {
+            "field_name": "bpaops",
+            "form_placeholder": "",
+            "label": "bpaops"
+        },
+        {
             "field_name": "cell_type",
             "form_placeholder": "",
             "label": "cell_type"
@@ -87,6 +92,11 @@
             "label": "data_set"
         },
         {
+            "field_name": "data_set_id",
+            "form_placeholder": "",
+            "label": "data_set_id"
+        },
+        {
             "field_name": "data_type",
             "form_placeholder": "",
             "label": "data_type"
@@ -95,6 +105,11 @@
             "field_name": "dataset_url",
             "form_placeholder": "",
             "label": "dataset_url"
+        },
+        {
+            "field_name": "date",
+            "form_placeholder": "",
+            "label": "date"
         },
         {
             "field_name": "date_of_transfer",
@@ -142,11 +157,6 @@
             "label": "insert_size_range"
         },
         {
-            "field_name": "library_construction_process",
-            "form_placeholder": "",
-            "label": "library_construction_process"
-        },
-        {
             "field_name": "library_construction_protocol",
             "form_placeholder": "",
             "label": "library_construction_protocol"
@@ -177,14 +187,19 @@
             "label": "omics"
         },
         {
+            "field_name": "platform",
+            "form_placeholder": "",
+            "label": "platform"
+        },
+        {
             "field_name": "replicate_group_id",
             "form_placeholder": "",
             "label": "replicate_group_id"
         },
         {
-            "field_name": "research",
+            "field_name": "sample_description",
             "form_placeholder": "",
-            "label": "research"
+            "label": "sample_description"
         },
         {
             "field_name": "sample_name",
@@ -197,11 +212,6 @@
             "label": "sample_submission_date"
         },
         {
-            "field_name": "sc_samples",
-            "form_placeholder": "",
-            "label": "sc_samples"
-        },
-        {
             "field_name": "sequencer",
             "form_placeholder": "",
             "label": "sequencer"
@@ -212,9 +222,14 @@
             "label": "species"
         },
         {
-            "field_name": "stem_cell_research",
+            "field_name": "stem_cell_state",
             "form_placeholder": "",
-            "label": "stem_cell_research"
+            "label": "stem_cell_state"
+        },
+        {
+            "field_name": "stem_cell_type",
+            "form_placeholder": "",
+            "label": "stem_cell_type"
         },
         {
             "field_name": "submitter",
@@ -240,6 +255,11 @@
             "field_name": "treatment_protocol",
             "form_placeholder": "",
             "label": "treatment_protocol"
+        },
+        {
+            "field_name": "work_order",
+            "form_placeholder": "",
+            "label": "work_order"
         }
     ],
     "dataset_type": "stemcells-transcriptomics",

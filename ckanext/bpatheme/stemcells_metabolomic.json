@@ -67,6 +67,11 @@
             "label": "bpa_id"
         },
         {
+            "field_name": "bpaops",
+            "form_placeholder": "",
+            "label": "bpaops"
+        },
+        {
             "field_name": "cell_type",
             "form_placeholder": "",
             "label": "cell_type"
@@ -87,6 +92,11 @@
             "label": "data_set"
         },
         {
+            "field_name": "data_set_id",
+            "form_placeholder": "",
+            "label": "data_set_id"
+        },
+        {
             "field_name": "data_type",
             "form_placeholder": "",
             "label": "data_type"
@@ -97,9 +107,19 @@
             "label": "dataset_url"
         },
         {
+            "field_name": "date_data_transferred",
+            "form_placeholder": "",
+            "label": "date_data_transferred"
+        },
+        {
             "field_name": "date_of_transfer",
             "form_placeholder": "",
             "label": "date_of_transfer"
+        },
+        {
+            "field_name": "date_submission",
+            "form_placeholder": "",
+            "label": "date_submission"
         },
         {
             "field_name": "description",
@@ -137,24 +157,9 @@
             "label": "growth_protocol"
         },
         {
-            "field_name": "insert_size_range",
-            "form_placeholder": "",
-            "label": "insert_size_range"
-        },
-        {
             "field_name": "instrument_column_type",
             "form_placeholder": "",
             "label": "instrument_column_type"
-        },
-        {
-            "field_name": "library_construction_process",
-            "form_placeholder": "",
-            "label": "library_construction_process"
-        },
-        {
-            "field_name": "library_strategy",
-            "form_placeholder": "",
-            "label": "library_strategy"
         },
         {
             "field_name": "mass_spectrometer",
@@ -177,14 +182,24 @@
             "label": "notes"
         },
         {
-            "field_name": "number_samples",
-            "form_placeholder": "",
-            "label": "number_samples"
-        },
-        {
             "field_name": "omics",
             "form_placeholder": "",
             "label": "omics"
+        },
+        {
+            "field_name": "organism_part",
+            "form_placeholder": "",
+            "label": "organism_part"
+        },
+        {
+            "field_name": "platform",
+            "form_placeholder": "",
+            "label": "platform"
+        },
+        {
+            "field_name": "raw_file_name",
+            "form_placeholder": "",
+            "label": "raw_file_name"
         },
         {
             "field_name": "replicate_group_id",
@@ -192,9 +207,9 @@
             "label": "replicate_group_id"
         },
         {
-            "field_name": "research",
+            "field_name": "sample_description",
             "form_placeholder": "",
-            "label": "research"
+            "label": "sample_description"
         },
         {
             "field_name": "sample_fractionation_extraction_solvent",
@@ -212,19 +227,19 @@
             "label": "sample_submission_date"
         },
         {
-            "field_name": "sc_samples",
-            "form_placeholder": "",
-            "label": "sc_samples"
-        },
-        {
             "field_name": "species",
             "form_placeholder": "",
             "label": "species"
         },
         {
-            "field_name": "stem_cell_research",
+            "field_name": "stem_cell_state",
             "form_placeholder": "",
-            "label": "stem_cell_research"
+            "label": "stem_cell_state"
+        },
+        {
+            "field_name": "stem_cell_type",
+            "form_placeholder": "",
+            "label": "stem_cell_type"
         },
         {
             "field_name": "submitter",
@@ -247,9 +262,9 @@
             "label": "title"
         },
         {
-            "field_name": "treatment_protocol",
+            "field_name": "work_order",
             "form_placeholder": "",
-            "label": "treatment_protocol"
+            "label": "work_order"
         }
     ],
     "dataset_type": "stemcells-metabolomic",
