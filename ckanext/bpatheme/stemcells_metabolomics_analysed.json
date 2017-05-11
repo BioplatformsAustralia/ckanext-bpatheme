@@ -167,6 +167,12 @@
             "label": "S3 E-Tag (8MB multipart)"
         },
         {
+            "display_property": "dcat:Dataset/dcat:distribution/dcat:Distribution/dcat:format",
+            "field_name": "format",
+            "label": "Format",
+            "preset": "resource_format_autocomplete"
+        },
+        {
             "field_name": "md5",
             "label": "md5"
         },
