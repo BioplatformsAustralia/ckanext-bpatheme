@@ -167,6 +167,11 @@
             "label": "sample_description"
         },
         {
+            "field_name": "sample_name",
+            "form_placeholder": "",
+            "label": "sample_name"
+        },
+        {
             "field_name": "sample_submission_date",
             "form_placeholder": "",
             "label": "sample_submission_date"
