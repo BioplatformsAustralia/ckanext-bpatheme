@@ -427,6 +427,11 @@
             "label": "nth"
         },
         {
+            "field_name": "omics",
+            "form_placeholder": "",
+            "label": "omics"
+        },
+        {
             "field_name": "organic_fraction",
             "form_placeholder": "",
             "label": "organic_fraction"

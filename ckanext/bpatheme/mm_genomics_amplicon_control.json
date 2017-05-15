@@ -112,6 +112,11 @@
             "label": "notes"
         },
         {
+            "field_name": "omics",
+            "form_placeholder": "",
+            "label": "omics"
+        },
+        {
             "field_name": "sample_submission_date",
             "form_placeholder": "",
             "label": "sample_submission_date"
