@@ -67,6 +67,11 @@
             "label": "analysis_software_version"
         },
         {
+            "field_name": "analytical_platform",
+            "form_placeholder": "",
+            "label": "analytical_platform"
+        },
+        {
             "field_name": "anth",
             "form_placeholder": "",
             "label": "anth"

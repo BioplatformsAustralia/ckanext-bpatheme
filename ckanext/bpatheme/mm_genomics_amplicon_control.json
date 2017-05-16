@@ -52,6 +52,11 @@
             "label": "amplicon"
         },
         {
+            "field_name": "analytical_platform",
+            "form_placeholder": "",
+            "label": "analytical_platform"
+        },
+        {
             "field_name": "archive_ingestion_date",
             "form_placeholder": "",
             "label": "archive_ingestion_date"
