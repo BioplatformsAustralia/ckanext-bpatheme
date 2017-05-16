@@ -187,6 +187,11 @@
             "label": "description"
         },
         {
+            "field_name": "dna_conc_ng_ul",
+            "form_placeholder": "",
+            "label": "dna_conc_ng_ul"
+        },
+        {
             "field_name": "dna_extracted_by",
             "form_placeholder": "",
             "label": "dna_extracted_by"
@@ -205,16 +210,6 @@
             "field_name": "dsdna_conc_ng_ul",
             "form_placeholder": "",
             "label": "dsdna_conc_ng_ul"
-        },
-        {
-            "field_name": "ec_library_progress",
-            "form_placeholder": "",
-            "label": "ec_library_progress"
-        },
-        {
-            "field_name": "exon_capture_library_id",
-            "form_placeholder": "",
-            "label": "exon_capture_library_id"
         },
         {
             "field_name": "exon_capture_pool",

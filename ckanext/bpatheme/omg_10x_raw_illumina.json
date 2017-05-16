@@ -172,6 +172,26 @@
             "label": "description"
         },
         {
+            "field_name": "dna_conc_ng_ul",
+            "form_placeholder": "",
+            "label": "dna_conc_ng_ul"
+        },
+        {
+            "field_name": "dna_extracted_by",
+            "form_placeholder": "",
+            "label": "dna_extracted_by"
+        },
+        {
+            "field_name": "dna_extraction_date",
+            "form_placeholder": "",
+            "label": "dna_extraction_date"
+        },
+        {
+            "field_name": "dna_extraction_method",
+            "form_placeholder": "",
+            "label": "dna_extraction_method"
+        },
+        {
             "field_name": "family",
             "form_placeholder": "",
             "label": "family"
