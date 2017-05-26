@@ -52,6 +52,11 @@
             "label": "acquisition_mode"
         },
         {
+            "field_name": "additional_notes",
+            "form_placeholder": "",
+            "label": "additional_notes"
+        },
+        {
             "field_name": "analytical_platform",
             "form_placeholder": "",
             "label": "analytical_platform"
@@ -117,9 +122,19 @@
             "label": "gram_stain"
         },
         {
+            "field_name": "growth_condition_growth_phase",
+            "form_placeholder": "",
+            "label": "growth_condition_growth_phase"
+        },
+        {
             "field_name": "growth_condition_media",
             "form_placeholder": "",
             "label": "growth_condition_media"
+        },
+        {
+            "field_name": "growth_condition_od600_reading",
+            "form_placeholder": "",
+            "label": "growth_condition_od600_reading"
         },
         {
             "field_name": "growth_condition_temperature",
@@ -129,7 +144,7 @@
         {
             "field_name": "growth_condition_time",
             "form_placeholder": "",
-            "label": "growth_condition_time"
+            "label": "growth_condition_time_(h)"
         },
         {
             "field_name": "growth_media",

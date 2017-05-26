@@ -144,7 +144,7 @@
         {
             "field_name": "growth_condition_time",
             "form_placeholder": "",
-            "label": "growth_condition_time"
+            "label": "growth_condition_time_(h)"
         },
         {
             "field_name": "growth_media",
