@@ -77,6 +77,11 @@
             "label": "australian_soil_classification"
         },
         {
+            "field_name": "base_amplicon_linkage",
+            "form_placeholder": "",
+            "label": "base_amplicon_linkage"
+        },
+        {
             "field_name": "boron_hot_cacl2",
             "form_placeholder": "",
             "label": "boron_hot_cacl2"
