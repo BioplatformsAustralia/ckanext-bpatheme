@@ -14,13 +14,10 @@
       </div>
       <div class="span4 attribution">
 	<ul class="nav">
-	    {% block header_site_navigation_tabs %}
-		{{ h.build_nav_main(
-		('organizations_index', _('Organisations')),
-		('search', _('Datasets')),
-		('group_index', _('Groups')),
-		) }}
-	    {% endblock %}
+	    <li><a href="/organization">Organisations</a></li>
+	    <li><a href="/dataset">Datasets</a></li>
+	    <li><a href="/group">Groups</a></li>
+	    <li><a href="/organization/pages/bioplatforms-australia/api-access">API Access</a></li>
 	</ul>
       </div>
     </div>
