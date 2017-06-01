@@ -377,6 +377,11 @@
             "label": "sample_submission_date"
         },
         {
+            "field_name": "sample_type",
+            "form_placeholder": "",
+            "label": "sample_type"
+        },
+        {
             "field_name": "sand",
             "form_placeholder": "",
             "label": "sand"
