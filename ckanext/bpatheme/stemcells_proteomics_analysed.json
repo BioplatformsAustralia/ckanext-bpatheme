@@ -82,6 +82,11 @@
             "label": "contextual_data_submission_date"
         },
         {
+            "field_name": "data_analysis_date",
+            "form_placeholder": "",
+            "label": "data_analysis_date"
+        },
+        {
             "field_name": "data_generated",
             "form_placeholder": "",
             "label": "data_generated"
@@ -100,11 +105,6 @@
             "field_name": "dataset_url",
             "form_placeholder": "",
             "label": "dataset_url"
-        },
-        {
-            "field_name": "date_analysis_date",
-            "form_placeholder": "",
-            "label": "date_analysis_date"
         },
         {
             "field_name": "date_of_transfer",
