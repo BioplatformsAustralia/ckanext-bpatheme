@@ -67,6 +67,11 @@
             "label": "bpa_id_range"
         },
         {
+            "field_name": "bpaops",
+            "form_placeholder": "",
+            "label": "bpaops"
+        },
+        {
             "field_name": "cell_type",
             "form_placeholder": "",
             "label": "cell_type"
@@ -82,24 +87,29 @@
             "label": "data_generated"
         },
         {
-            "field_name": "data_set",
-            "form_placeholder": "",
-            "label": "data_set"
-        },
-        {
-            "field_name": "data_set_id",
-            "form_placeholder": "",
-            "label": "data_set_id"
-        },
-        {
             "field_name": "data_type",
             "form_placeholder": "",
             "label": "data_type"
         },
         {
+            "field_name": "dataset",
+            "form_placeholder": "",
+            "label": "dataset"
+        },
+        {
+            "field_name": "dataset_id",
+            "form_placeholder": "",
+            "label": "dataset_id"
+        },
+        {
             "field_name": "dataset_url",
             "form_placeholder": "",
             "label": "dataset_url"
+        },
+        {
+            "field_name": "date",
+            "form_placeholder": "",
+            "label": "date"
         },
         {
             "field_name": "date_of_transfer",
@@ -137,11 +147,6 @@
             "label": "folder_name"
         },
         {
-            "field_name": "group",
-            "form_placeholder": "",
-            "label": "group"
-        },
-        {
             "field_name": "growth_protocol",
             "form_placeholder": "",
             "label": "growth_protocol"
@@ -172,14 +177,14 @@
             "label": "notes"
         },
         {
-            "field_name": "number_samples",
-            "form_placeholder": "",
-            "label": "number_samples"
-        },
-        {
             "field_name": "omics",
             "form_placeholder": "",
             "label": "omics"
+        },
+        {
+            "field_name": "omics_type",
+            "form_placeholder": "",
+            "label": "omics_type"
         },
         {
             "field_name": "platform",
@@ -190,6 +195,11 @@
             "field_name": "replicate_group_id",
             "form_placeholder": "",
             "label": "replicate_group_id"
+        },
+        {
+            "field_name": "research_group",
+            "form_placeholder": "",
+            "label": "research_group"
         },
         {
             "field_name": "sample_description",
@@ -217,14 +227,14 @@
             "label": "species"
         },
         {
+            "field_name": "stem_cell_line",
+            "form_placeholder": "",
+            "label": "stem_cell_line"
+        },
+        {
             "field_name": "stem_cell_state",
             "form_placeholder": "",
             "label": "stem_cell_state"
-        },
-        {
-            "field_name": "stem_cell_type",
-            "form_placeholder": "",
-            "label": "stem_cell_type"
         },
         {
             "field_name": "submitter",
@@ -245,6 +255,11 @@
             "field_name": "title",
             "form_placeholder": "",
             "label": "title"
+        },
+        {
+            "field_name": "total_samples",
+            "form_placeholder": "",
+            "label": "total_samples"
         },
         {
             "field_name": "treatment_protocol",
