@@ -203,6 +203,10 @@
             "label": "flowcell"
         },
         {
+            "field_name": "format",
+            "label": "format"
+        },
+        {
             "field_name": "lane_number",
             "label": "lane_number"
         },

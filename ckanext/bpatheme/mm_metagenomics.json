@@ -671,6 +671,10 @@
             "label": "flowcell"
         },
         {
+            "field_name": "format",
+            "label": "format"
+        },
+        {
             "field_name": "index",
             "label": "index"
         },

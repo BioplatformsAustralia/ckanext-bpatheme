@@ -313,6 +313,10 @@
             "preset": "resource_format_autocomplete"
         },
         {
+            "field_name": "format",
+            "label": "format"
+        },
+        {
             "field_name": "machine_data",
             "label": "machine_data"
         },

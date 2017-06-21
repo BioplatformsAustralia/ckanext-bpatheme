@@ -321,6 +321,10 @@
             "label": "data_type"
         },
         {
+            "field_name": "format",
+            "label": "format"
+        },
+        {
             "field_name": "machine_data",
             "label": "machine_data"
         },

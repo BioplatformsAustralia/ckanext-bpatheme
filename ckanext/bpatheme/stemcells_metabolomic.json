@@ -312,6 +312,10 @@
             "label": "analytical_platform"
         },
         {
+            "field_name": "format",
+            "label": "format"
+        },
+        {
             "field_name": "md5",
             "label": "md5"
         },

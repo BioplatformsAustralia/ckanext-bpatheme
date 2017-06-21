@@ -295,6 +295,10 @@
             "label": "database_size"
         },
         {
+            "field_name": "format",
+            "label": "format"
+        },
+        {
             "field_name": "gradient_time",
             "label": "gradient_time"
         },
