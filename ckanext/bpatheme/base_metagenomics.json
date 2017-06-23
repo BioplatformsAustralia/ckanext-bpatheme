@@ -327,6 +327,16 @@
             "label": "name"
         },
         {
+            "field_name": "ncbi_bioproject_accession",
+            "form_placeholder": "",
+            "label": "ncbi_bioproject_accession"
+        },
+        {
+            "field_name": "ncbi_biosample_accession",
+            "form_placeholder": "",
+            "label": "ncbi_biosample_accession"
+        },
+        {
             "field_name": "nitrate_nitrogen",
             "form_placeholder": "",
             "label": "nitrate_nitrogen"
