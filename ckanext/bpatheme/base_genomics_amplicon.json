@@ -307,6 +307,11 @@
             "label": "general_ecological_zone"
         },
         {
+            "field_name": "geo_loc_name",
+            "form_placeholder": "",
+            "label": "geo_loc_name"
+        },
+        {
             "field_name": "gravel",
             "form_placeholder": "",
             "label": "gravel"
