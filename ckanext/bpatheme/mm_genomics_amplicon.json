@@ -517,6 +517,11 @@
             "label": "pyrophytin_a"
         },
         {
+            "field_name": "read_length",
+            "form_placeholder": "",
+            "label": "read_length"
+        },
+        {
             "field_name": "reads",
             "form_placeholder": "",
             "label": "reads"

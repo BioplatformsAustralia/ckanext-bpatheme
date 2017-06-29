@@ -122,6 +122,11 @@
             "label": "omics"
         },
         {
+            "field_name": "read_length",
+            "form_placeholder": "",
+            "label": "read_length"
+        },
+        {
             "field_name": "sample_submission_date",
             "form_placeholder": "",
             "label": "sample_submission_date"

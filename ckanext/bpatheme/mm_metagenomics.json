@@ -497,6 +497,11 @@
             "label": "pyrophytin_a"
         },
         {
+            "field_name": "read_length",
+            "form_placeholder": "",
+            "label": "read_length"
+        },
+        {
             "field_name": "salinity_psu_ctd",
             "form_placeholder": "",
             "label": "salinity_psu_ctd"
