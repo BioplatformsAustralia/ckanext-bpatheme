@@ -427,6 +427,11 @@
             "label": "profile_position"
         },
         {
+            "field_name": "read_length",
+            "form_placeholder": "",
+            "label": "read_length"
+        },
+        {
             "field_name": "reads",
             "form_placeholder": "",
             "label": "reads"
@@ -616,6 +621,10 @@
         {
             "field_name": "name",
             "label": "name"
+        },
+        {
+            "field_name": "ncbi_file_uploaded",
+            "label": "ncbi_file_uploaded"
         },
         {
             "field_name": "read",

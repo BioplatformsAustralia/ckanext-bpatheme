@@ -122,6 +122,11 @@
             "label": "omics"
         },
         {
+            "field_name": "read_length",
+            "form_placeholder": "",
+            "label": "read_length"
+        },
+        {
             "field_name": "sample_submission_date",
             "form_placeholder": "",
             "label": "sample_submission_date"
@@ -199,6 +204,10 @@
         {
             "field_name": "name",
             "label": "name"
+        },
+        {
+            "field_name": "ncbi_file_uploaded",
+            "label": "ncbi_file_uploaded"
         },
         {
             "field_name": "resource_type",

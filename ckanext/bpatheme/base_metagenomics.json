@@ -382,6 +382,11 @@
             "label": "profile_position"
         },
         {
+            "field_name": "read_length",
+            "form_placeholder": "",
+            "label": "read_length"
+        },
+        {
             "field_name": "sample_extraction_id",
             "form_placeholder": "",
             "label": "sample_extraction_id"
@@ -552,6 +557,10 @@
         {
             "field_name": "name",
             "label": "name"
+        },
+        {
+            "field_name": "ncbi_file_uploaded",
+            "label": "ncbi_file_uploaded"
         },
         {
             "field_name": "read",
