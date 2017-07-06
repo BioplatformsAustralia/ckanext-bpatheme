@@ -436,6 +436,42 @@
             "field_name": "format",
             "label": "Format",
             "preset": "resource_format_autocomplete"
+        },
+        {
+            "field_name": "flow_cell_id",
+            "label": "flow_cell_id"
+        },
+        {
+            "field_name": "format",
+            "label": "format"
+        },
+        {
+            "field_name": "index",
+            "label": "index"
+        },
+        {
+            "field_name": "lane",
+            "label": "lane"
+        },
+        {
+            "field_name": "md5",
+            "label": "md5"
+        },
+        {
+            "field_name": "name",
+            "label": "name"
+        },
+        {
+            "field_name": "read",
+            "label": "read"
+        },
+        {
+            "field_name": "resource_type",
+            "label": "resource_type"
+        },
+        {
+            "field_name": "sample_number",
+            "label": "sample_number"
         }
     ],
     "scheming_version": 1
