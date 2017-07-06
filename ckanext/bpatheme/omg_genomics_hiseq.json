@@ -217,11 +217,6 @@
             "label": "family"
         },
         {
-            "field_name": "file",
-            "form_placeholder": "",
-            "label": "file"
-        },
-        {
             "field_name": "flow_id",
             "form_placeholder": "",
             "label": "flow_id"
@@ -436,6 +431,10 @@
             "field_name": "format",
             "label": "Format",
             "preset": "resource_format_autocomplete"
+        },
+        {
+            "field_name": "bpa_id",
+            "label": "bpa_id"
         },
         {
             "field_name": "flow_cell_id",
