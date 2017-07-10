@@ -67,11 +67,6 @@
             "label": "bpa_id_range"
         },
         {
-            "field_name": "bpaops",
-            "form_placeholder": "",
-            "label": "bpaops"
-        },
-        {
             "field_name": "cell_type",
             "form_placeholder": "",
             "label": "cell_type"
@@ -87,29 +82,19 @@
             "label": "data_generated"
         },
         {
+            "field_name": "data_set_id",
+            "form_placeholder": "",
+            "label": "data_set_id"
+        },
+        {
             "field_name": "data_type",
             "form_placeholder": "",
             "label": "data_type"
         },
         {
-            "field_name": "dataset",
-            "form_placeholder": "",
-            "label": "dataset"
-        },
-        {
-            "field_name": "dataset_id",
-            "form_placeholder": "",
-            "label": "dataset_id"
-        },
-        {
             "field_name": "dataset_url",
             "form_placeholder": "",
             "label": "dataset_url"
-        },
-        {
-            "field_name": "date",
-            "form_placeholder": "",
-            "label": "date"
         },
         {
             "field_name": "date_of_transfer",
@@ -157,6 +142,11 @@
             "label": "insert_size_range"
         },
         {
+            "field_name": "labelling",
+            "form_placeholder": "",
+            "label": "labelling"
+        },
+        {
             "field_name": "library_construction_protocol",
             "form_placeholder": "",
             "label": "library_construction_protocol"
@@ -182,14 +172,14 @@
             "label": "omics"
         },
         {
-            "field_name": "omics_type",
+            "field_name": "organism_part",
             "form_placeholder": "",
-            "label": "omics_type"
+            "label": "organism_part"
         },
         {
-            "field_name": "platform",
+            "field_name": "plate_number",
             "form_placeholder": "",
-            "label": "platform"
+            "label": "plate_number"
         },
         {
             "field_name": "replicate_group_id",
@@ -267,9 +257,9 @@
             "label": "treatment_protocol"
         },
         {
-            "field_name": "work_order",
+            "field_name": "well_number",
             "form_placeholder": "",
-            "label": "work_order"
+            "label": "well_number"
         }
     ],
     "dataset_type": "stemcells-singlecellrnaseq",

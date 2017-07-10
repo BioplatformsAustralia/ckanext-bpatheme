@@ -47,24 +47,9 @@
             "label": "Geospatial Coverage"
         },
         {
-            "field_name": "analytical_platform",
-            "form_placeholder": "",
-            "label": "analytical_platform"
-        },
-        {
             "field_name": "archive_ingestion_date",
             "form_placeholder": "",
             "label": "archive_ingestion_date"
-        },
-        {
-            "field_name": "bpaops",
-            "form_placeholder": "",
-            "label": "bpaops"
-        },
-        {
-            "field_name": "cell_type",
-            "form_placeholder": "",
-            "label": "cell_type"
         },
         {
             "field_name": "contextual_data_submission_date",
@@ -82,19 +67,9 @@
             "label": "data_type"
         },
         {
-            "field_name": "dataset_id",
-            "form_placeholder": "",
-            "label": "dataset_id"
-        },
-        {
             "field_name": "dataset_url",
             "form_placeholder": "",
             "label": "dataset_url"
-        },
-        {
-            "field_name": "date_data_transferred",
-            "form_placeholder": "",
-            "label": "date_data_transferred"
         },
         {
             "field_name": "date_of_transfer",
@@ -107,16 +82,6 @@
             "label": "description"
         },
         {
-            "field_name": "disease_state",
-            "form_placeholder": "",
-            "label": "disease_state"
-        },
-        {
-            "field_name": "extract_protocol",
-            "form_placeholder": "",
-            "label": "extract_protocol"
-        },
-        {
             "field_name": "facility",
             "form_placeholder": "",
             "label": "facility"
@@ -125,16 +90,6 @@
             "field_name": "folder_name",
             "form_placeholder": "",
             "label": "folder_name"
-        },
-        {
-            "field_name": "growth_protocol",
-            "form_placeholder": "",
-            "label": "growth_protocol"
-        },
-        {
-            "field_name": "labelling",
-            "form_placeholder": "",
-            "label": "labelling"
         },
         {
             "field_name": "name",
@@ -152,39 +107,9 @@
             "label": "omics"
         },
         {
-            "field_name": "omics_type",
-            "form_placeholder": "",
-            "label": "omics_type"
-        },
-        {
-            "field_name": "other_protein_sequences",
-            "form_placeholder": "",
-            "label": "other_protein_sequences"
-        },
-        {
-            "field_name": "passage_number",
-            "form_placeholder": "",
-            "label": "passage_number"
-        },
-        {
             "field_name": "pool_id",
             "form_placeholder": "",
             "label": "pool_id"
-        },
-        {
-            "field_name": "research_group",
-            "form_placeholder": "",
-            "label": "research_group"
-        },
-        {
-            "field_name": "sample_description",
-            "form_placeholder": "",
-            "label": "sample_description"
-        },
-        {
-            "field_name": "sample_name",
-            "form_placeholder": "",
-            "label": "sample_name"
         },
         {
             "field_name": "sample_submission_date",
@@ -192,59 +117,14 @@
             "label": "sample_submission_date"
         },
         {
-            "field_name": "sample_type",
-            "form_placeholder": "",
-            "label": "sample_type"
-        },
-        {
-            "field_name": "species",
-            "form_placeholder": "",
-            "label": "species"
-        },
-        {
-            "field_name": "stem_cell_line",
-            "form_placeholder": "",
-            "label": "stem_cell_line"
-        },
-        {
-            "field_name": "stem_cell_state",
-            "form_placeholder": "",
-            "label": "stem_cell_state"
-        },
-        {
-            "field_name": "submitter",
-            "form_placeholder": "",
-            "label": "submitter"
-        },
-        {
             "field_name": "ticket",
             "form_placeholder": "",
             "label": "ticket"
         },
         {
-            "field_name": "tissue",
-            "form_placeholder": "",
-            "label": "tissue"
-        },
-        {
             "field_name": "title",
             "form_placeholder": "",
             "label": "title"
-        },
-        {
-            "field_name": "total_samples",
-            "form_placeholder": "",
-            "label": "total_samples"
-        },
-        {
-            "field_name": "treatment_protocol",
-            "form_placeholder": "",
-            "label": "treatment_protocol"
-        },
-        {
-            "field_name": "work_order",
-            "form_placeholder": "",
-            "label": "work_order"
         }
     ],
     "dataset_type": "stemcells-proteomic-pool",

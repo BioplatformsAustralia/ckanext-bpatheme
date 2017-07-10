@@ -62,11 +62,6 @@
             "label": "bpa_id"
         },
         {
-            "field_name": "bpaops",
-            "form_placeholder": "",
-            "label": "bpaops"
-        },
-        {
             "field_name": "cell_type",
             "form_placeholder": "",
             "label": "cell_type"
@@ -95,11 +90,6 @@
             "field_name": "dataset_url",
             "form_placeholder": "",
             "label": "dataset_url"
-        },
-        {
-            "field_name": "date_data_transferred",
-            "form_placeholder": "",
-            "label": "date_data_transferred"
         },
         {
             "field_name": "date_of_transfer",
@@ -157,11 +147,6 @@
             "label": "omics"
         },
         {
-            "field_name": "omics_type",
-            "form_placeholder": "",
-            "label": "omics_type"
-        },
-        {
             "field_name": "other_protein_sequences",
             "form_placeholder": "",
             "label": "other_protein_sequences"
@@ -170,6 +155,16 @@
             "field_name": "passage_number",
             "form_placeholder": "",
             "label": "passage_number"
+        },
+        {
+            "field_name": "plate_number",
+            "form_placeholder": "",
+            "label": "plate_number"
+        },
+        {
+            "field_name": "replicate_group_id",
+            "form_placeholder": "",
+            "label": "replicate_group_id"
         },
         {
             "field_name": "research_group",
@@ -242,9 +237,9 @@
             "label": "treatment_protocol"
         },
         {
-            "field_name": "work_order",
+            "field_name": "well_number",
             "form_placeholder": "",
-            "label": "work_order"
+            "label": "well_number"
         }
     ],
     "dataset_type": "stemcells-proteomic",
