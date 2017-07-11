@@ -57,6 +57,11 @@
             "label": "archive_ingestion_date"
         },
         {
+            "field_name": "bpa_dataset_id",
+            "form_placeholder": "",
+            "label": "bpa_dataset_id"
+        },
+        {
             "field_name": "bpa_id",
             "form_placeholder": "",
             "label": "bpa_id"
@@ -80,11 +85,6 @@
             "field_name": "data_generated",
             "form_placeholder": "",
             "label": "data_generated"
-        },
-        {
-            "field_name": "data_set_id",
-            "form_placeholder": "",
-            "label": "data_set_id"
         },
         {
             "field_name": "data_type",
