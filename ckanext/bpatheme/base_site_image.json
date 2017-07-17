@@ -267,6 +267,11 @@
             "label": "nitrate_nitrogen"
         },
         {
+            "field_name": "notes",
+            "form_placeholder": "",
+            "label": "notes"
+        },
+        {
             "field_name": "omics",
             "form_placeholder": "",
             "label": "omics"
@@ -350,6 +355,11 @@
             "field_name": "tillage",
             "form_placeholder": "",
             "label": "tillage"
+        },
+        {
+            "field_name": "title",
+            "form_placeholder": "",
+            "label": "title"
         },
         {
             "field_name": "vegetation_dom_grasses",

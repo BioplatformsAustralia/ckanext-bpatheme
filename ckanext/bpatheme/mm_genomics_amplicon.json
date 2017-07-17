@@ -47,6 +47,11 @@
             "label": "Geospatial Coverage"
         },
         {
+            "field_name": "a16s_comment",
+            "form_placeholder": "",
+            "label": "a16s_comment"
+        },
+        {
             "field_name": "allo",
             "form_placeholder": "",
             "label": "allo"
@@ -92,6 +97,11 @@
             "label": "asta"
         },
         {
+            "field_name": "b16s_comment",
+            "form_placeholder": "",
+            "label": "b16s_comment"
+        },
+        {
             "field_name": "beta_beta_car",
             "form_placeholder": "",
             "label": "beta_beta_car"
@@ -107,6 +117,11 @@
             "label": "biomass"
         },
         {
+            "field_name": "bottom_depth",
+            "form_placeholder": "",
+            "label": "bottom_depth"
+        },
+        {
             "field_name": "bpa_id",
             "form_placeholder": "",
             "label": "bpa_id"
@@ -120,6 +135,16 @@
             "field_name": "cantha",
             "form_placeholder": "",
             "label": "cantha"
+        },
+        {
+            "field_name": "chl_a_allomer",
+            "form_placeholder": "",
+            "label": "chl_a_allomer"
+        },
+        {
+            "field_name": "chl_a_epi",
+            "form_placeholder": "",
+            "label": "chl_a_epi"
         },
         {
             "field_name": "chlorophyll_a",
@@ -182,6 +207,11 @@
             "label": "cphlide_a"
         },
         {
+            "field_name": "ctd_salinity",
+            "form_placeholder": "",
+            "label": "ctd_salinity"
+        },
+        {
             "field_name": "data_generated",
             "form_placeholder": "",
             "label": "data_generated"
@@ -207,14 +237,19 @@
             "label": "date_sampled"
         },
         {
-            "field_name": "date_sampled_yyyy_mm_dd",
+            "field_name": "day",
             "form_placeholder": "",
-            "label": "date_sampled_yyyy_mm_dd"
+            "label": "day"
         },
         {
-            "field_name": "density_density",
+            "field_name": "density",
             "form_placeholder": "",
-            "label": "density_density"
+            "label": "density"
+        },
+        {
+            "field_name": "deployment",
+            "form_placeholder": "",
+            "label": "deployment"
         },
         {
             "field_name": "depth",
@@ -222,9 +257,9 @@
             "label": "depth"
         },
         {
-            "field_name": "depth_salt_water_m_lat_272",
+            "field_name": "depth_salt_water",
             "form_placeholder": "",
-            "label": "depth_salt_water_m_lat_272"
+            "label": "depth_salt_water"
         },
         {
             "field_name": "description",
@@ -257,6 +292,11 @@
             "label": "dino"
         },
         {
+            "field_name": "dna_extraction_date",
+            "form_placeholder": "",
+            "label": "dna_extraction_date"
+        },
+        {
             "field_name": "dv_cphl_a",
             "form_placeholder": "",
             "label": "dv_cphl_a"
@@ -277,19 +317,24 @@
             "label": "dv_cphl_b_and_cphl_b"
         },
         {
+            "field_name": "e18s_comment",
+            "form_placeholder": "",
+            "label": "e18s_comment"
+        },
+        {
             "field_name": "echin",
             "form_placeholder": "",
             "label": "echin"
         },
         {
+            "field_name": "extraction_number",
+            "form_placeholder": "",
+            "label": "extraction_number"
+        },
+        {
             "field_name": "facility",
             "form_placeholder": "",
             "label": "facility"
-        },
-        {
-            "field_name": "fine_sediment",
-            "form_placeholder": "",
-            "label": "fine_sediment"
         },
         {
             "field_name": "flow_id",
@@ -302,9 +347,9 @@
             "label": "fluorescence"
         },
         {
-            "field_name": "fluorometer_measurement",
+            "field_name": "fluorescence_wetlab",
             "form_placeholder": "",
-            "label": "fluorometer_measurement"
+            "label": "fluorescence_wetlab"
         },
         {
             "field_name": "folder_name",
@@ -317,6 +362,11 @@
             "label": "fuco"
         },
         {
+            "field_name": "geo_loc",
+            "form_placeholder": "",
+            "label": "geo_loc"
+        },
+        {
             "field_name": "gyro",
             "form_placeholder": "",
             "label": "gyro"
@@ -325,21 +375,6 @@
             "field_name": "hex_fuco",
             "form_placeholder": "",
             "label": "hex_fuco"
-        },
-        {
-            "field_name": "host_abundance",
-            "form_placeholder": "",
-            "label": "host_abundance"
-        },
-        {
-            "field_name": "host_species",
-            "form_placeholder": "",
-            "label": "host_species"
-        },
-        {
-            "field_name": "host_state",
-            "form_placeholder": "",
-            "label": "host_state"
         },
         {
             "field_name": "inorganic_fraction",
@@ -357,29 +392,19 @@
             "label": "latitude"
         },
         {
-            "field_name": "latitude_decimal_degrees",
-            "form_placeholder": "",
-            "label": "latitude_decimal_degrees"
-        },
-        {
             "field_name": "light_intensity",
             "form_placeholder": "",
             "label": "light_intensity"
         },
         {
-            "field_name": "location_description",
+            "field_name": "location_code",
             "form_placeholder": "",
-            "label": "location_description"
+            "label": "location_code"
         },
         {
             "field_name": "longitude",
             "form_placeholder": "",
             "label": "longitude"
-        },
-        {
-            "field_name": "longitude_decimal_degrees",
-            "form_placeholder": "",
-            "label": "longitude_decimal_degrees"
         },
         {
             "field_name": "lut",
@@ -392,19 +417,29 @@
             "label": "lyco"
         },
         {
+            "field_name": "metagenome_comment",
+            "form_placeholder": "",
+            "label": "metagenome_comment"
+        },
+        {
             "field_name": "mg_dvp",
             "form_placeholder": "",
             "label": "mg_dvp"
         },
         {
-            "field_name": "microbial_abundance_cells",
+            "field_name": "microbial_abundance",
             "form_placeholder": "",
-            "label": "microbial_abundance_cells"
+            "label": "microbial_abundance"
         },
         {
             "field_name": "mm_amplicon_linkage",
             "form_placeholder": "",
             "label": "mm_amplicon_linkage"
+        },
+        {
+            "field_name": "month",
+            "form_placeholder": "",
+            "label": "month"
         },
         {
             "field_name": "name",
@@ -417,19 +452,19 @@
             "label": "neo"
         },
         {
-            "field_name": "nitratenitrite",
+            "field_name": "nitrate_nitrite",
             "form_placeholder": "",
-            "label": "nitratenitrite"
+            "label": "nitrate_nitrite"
+        },
+        {
+            "field_name": "nitrite",
+            "form_placeholder": "",
+            "label": "nitrite"
         },
         {
             "field_name": "notes",
             "form_placeholder": "",
             "label": "notes"
-        },
-        {
-            "field_name": "nth",
-            "form_placeholder": "",
-            "label": "nth"
         },
         {
             "field_name": "omics",
@@ -442,29 +477,64 @@
             "label": "organic_fraction"
         },
         {
-            "field_name": "oxygen_mll_cdt",
+            "field_name": "oxygen",
             "form_placeholder": "",
-            "label": "oxygen_mll_cdt"
+            "label": "oxygen"
         },
         {
-            "field_name": "oxygen_mll_ctd",
+            "field_name": "oxygen_ctd",
             "form_placeholder": "",
-            "label": "oxygen_mll_ctd"
+            "label": "oxygen_ctd"
         },
         {
-            "field_name": "oxygen_moll_lab",
+            "field_name": "oxygen_lab",
             "form_placeholder": "",
-            "label": "oxygen_moll_lab"
+            "label": "oxygen_lab"
         },
         {
-            "field_name": "pam",
+            "field_name": "oxygen_ml_l_ctd",
             "form_placeholder": "",
-            "label": "pam"
+            "label": "oxygen_ml_l_ctd"
+        },
+        {
+            "field_name": "oxygen_umol_kg_ctd",
+            "form_placeholder": "",
+            "label": "oxygen_umol_kg_ctd"
+        },
+        {
+            "field_name": "oxygen_umol_l_lab",
+            "form_placeholder": "",
+            "label": "oxygen_umol_l_lab"
         },
         {
             "field_name": "pass_fail",
             "form_placeholder": "",
             "label": "pass_fail"
+        },
+        {
+            "field_name": "per_fine_sediment",
+            "form_placeholder": "",
+            "label": "per_fine_sediment"
+        },
+        {
+            "field_name": "per_total_carbon",
+            "form_placeholder": "",
+            "label": "per_total_carbon"
+        },
+        {
+            "field_name": "per_total_inorganc_carbon",
+            "form_placeholder": "",
+            "label": "per_total_inorganc_carbon"
+        },
+        {
+            "field_name": "per_total_nitrogen",
+            "form_placeholder": "",
+            "label": "per_total_nitrogen"
+        },
+        {
+            "field_name": "per_total_phosphorous",
+            "form_placeholder": "",
+            "label": "per_total_phosphorous"
         },
         {
             "field_name": "perid",
@@ -475,11 +545,6 @@
             "field_name": "ph_level",
             "form_placeholder": "",
             "label": "ph_level"
-        },
-        {
-            "field_name": "ph_level_h2o_ph",
-            "form_placeholder": "",
-            "label": "ph_level_h2o_ph"
         },
         {
             "field_name": "phide_a",
@@ -507,6 +572,11 @@
             "label": "pras"
         },
         {
+            "field_name": "pressure",
+            "form_placeholder": "",
+            "label": "pressure"
+        },
+        {
             "field_name": "pyrophide_a",
             "form_placeholder": "",
             "label": "pyrophide_a"
@@ -527,14 +597,29 @@
             "label": "reads"
         },
         {
-            "field_name": "salinity_psu_ctd",
+            "field_name": "rp",
             "form_placeholder": "",
-            "label": "salinity_psu_ctd"
+            "label": "rp"
         },
         {
-            "field_name": "salinity_psu_laboratory",
+            "field_name": "salinity",
             "form_placeholder": "",
-            "label": "salinity_psu_laboratory"
+            "label": "salinity"
+        },
+        {
+            "field_name": "salinity_ctd",
+            "form_placeholder": "",
+            "label": "salinity_ctd"
+        },
+        {
+            "field_name": "salinity_lab",
+            "form_placeholder": "",
+            "label": "salinity_lab"
+        },
+        {
+            "field_name": "sample_code",
+            "form_placeholder": "",
+            "label": "sample_code"
         },
         {
             "field_name": "sample_extraction_id",
@@ -572,9 +657,9 @@
             "label": "silicate"
         },
         {
-            "field_name": "site",
+            "field_name": "stratification",
             "form_placeholder": "",
-            "label": "site"
+            "label": "stratification"
         },
         {
             "field_name": "target",
@@ -582,9 +667,14 @@
             "label": "target"
         },
         {
-            "field_name": "temperature_its_90",
+            "field_name": "temp_from_ctd_file",
             "form_placeholder": "",
-            "label": "temperature_its_90"
+            "label": "temp_from_ctd_file"
+        },
+        {
+            "field_name": "temperature",
+            "form_placeholder": "",
+            "label": "temperature"
         },
         {
             "field_name": "ticket",
@@ -592,14 +682,14 @@
             "label": "ticket"
         },
         {
+            "field_name": "time",
+            "form_placeholder": "",
+            "label": "time"
+        },
+        {
             "field_name": "time_sampled",
             "form_placeholder": "",
             "label": "time_sampled"
-        },
-        {
-            "field_name": "time_sampled_hhmm",
-            "form_placeholder": "",
-            "label": "time_sampled_hhmm"
         },
         {
             "field_name": "title",
@@ -612,29 +702,14 @@
             "label": "total_alkalinity"
         },
         {
-            "field_name": "total_carbon",
-            "form_placeholder": "",
-            "label": "total_carbon"
-        },
-        {
             "field_name": "total_co2",
             "form_placeholder": "",
             "label": "total_co2"
         },
         {
-            "field_name": "total_inorganc_carbon",
+            "field_name": "transmittance",
             "form_placeholder": "",
-            "label": "total_inorganc_carbon"
-        },
-        {
-            "field_name": "total_nitrogen",
-            "form_placeholder": "",
-            "label": "total_nitrogen"
-        },
-        {
-            "field_name": "total_phosphorous",
-            "form_placeholder": "",
-            "label": "total_phosphorous"
+            "label": "transmittance"
         },
         {
             "field_name": "tss",
@@ -652,9 +727,24 @@
             "label": "viola"
         },
         {
+            "field_name": "year",
+            "form_placeholder": "",
+            "label": "year"
+        },
+        {
             "field_name": "zea",
             "form_placeholder": "",
             "label": "zea"
+        },
+        {
+            "field_name": "zm__sigmat",
+            "form_placeholder": "",
+            "label": "zm__sigmat"
+        },
+        {
+            "field_name": "zm_delta_sigmat",
+            "form_placeholder": "",
+            "label": "zm_delta_sigmat"
         }
     ],
     "dataset_type": "mm-genomics-amplicon",
