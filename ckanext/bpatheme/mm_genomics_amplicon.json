@@ -377,6 +377,21 @@
             "label": "hex_fuco"
         },
         {
+            "field_name": "host_abundance",
+            "form_placeholder": "",
+            "label": "host_abundance"
+        },
+        {
+            "field_name": "host_species",
+            "form_placeholder": "",
+            "label": "host_species"
+        },
+        {
+            "field_name": "host_state",
+            "form_placeholder": "",
+            "label": "host_state"
+        },
+        {
             "field_name": "inorganic_fraction",
             "form_placeholder": "",
             "label": "inorganic_fraction"
@@ -575,6 +590,16 @@
             "field_name": "pressure",
             "form_placeholder": "",
             "label": "pressure"
+        },
+        {
+            "field_name": "pulse_amplitude_modulated_fluorometer_measurement",
+            "form_placeholder": "",
+            "label": "pulse_amplitude_modulated_fluorometer_measurement"
+        },
+        {
+            "field_name": "pulse_amplitude_modulated_pam_fluorometer_measurement",
+            "form_placeholder": "",
+            "label": "pulse_amplitude_modulated_pam_fluorometer_measurement"
         },
         {
             "field_name": "pyrophide_a",
