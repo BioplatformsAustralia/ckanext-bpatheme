@@ -122,6 +122,16 @@
             "label": "common_name"
         },
         {
+            "field_name": "conservation_sample",
+            "form_placeholder": "",
+            "label": "conservation_sample"
+        },
+        {
+            "field_name": "conservation_status",
+            "form_placeholder": "",
+            "label": "conservation_status"
+        },
+        {
             "field_name": "contextual_data_submission_date",
             "form_placeholder": "",
             "label": "contextual_data_submission_date"
@@ -207,6 +217,16 @@
             "label": "folder_name"
         },
         {
+            "field_name": "genome_sample",
+            "form_placeholder": "",
+            "label": "genome_sample"
+        },
+        {
+            "field_name": "genome_status",
+            "form_placeholder": "",
+            "label": "genome_status"
+        },
+        {
             "field_name": "genus",
             "form_placeholder": "",
             "label": "genus"
@@ -267,6 +287,16 @@
             "label": "order"
         },
         {
+            "field_name": "phylogenomic_sample",
+            "form_placeholder": "",
+            "label": "phylogenomic_sample"
+        },
+        {
+            "field_name": "phylogenomic_status",
+            "form_placeholder": "",
+            "label": "phylogenomic_status"
+        },
+        {
             "field_name": "phylum",
             "form_placeholder": "",
             "label": "phylum"
@@ -317,6 +347,11 @@
             "label": "taxon_id"
         },
         {
+            "field_name": "taxonomic_group",
+            "form_placeholder": "",
+            "label": "taxonomic_group"
+        },
+        {
             "field_name": "ticket",
             "form_placeholder": "",
             "label": "ticket"
@@ -345,6 +380,11 @@
             "field_name": "title",
             "form_placeholder": "",
             "label": "title"
+        },
+        {
+            "field_name": "trace_lab",
+            "form_placeholder": "",
+            "label": "trace_lab"
         },
         {
             "field_name": "voucher_id",
