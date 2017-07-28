@@ -62,11 +62,6 @@
             "label": "base_url"
         },
         {
-            "field_name": "contextual_data_submission_date",
-            "form_placeholder": "",
-            "label": "contextual_data_submission_date"
-        },
-        {
             "field_name": "data_generated",
             "form_placeholder": "",
             "label": "data_generated"

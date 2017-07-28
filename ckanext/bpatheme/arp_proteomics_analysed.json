@@ -52,6 +52,11 @@
             "label": "analytical_platform"
         },
         {
+            "field_name": "archive_id",
+            "form_placeholder": "",
+            "label": "archive_id"
+        },
+        {
             "field_name": "archive_ingestion_date",
             "form_placeholder": "",
             "label": "archive_ingestion_date"
@@ -67,9 +72,24 @@
             "label": "bpa_ids"
         },
         {
+            "field_name": "contact_researcher",
+            "form_placeholder": "",
+            "label": "contact_researcher"
+        },
+        {
             "field_name": "contextual_data_submission_date",
             "form_placeholder": "",
             "label": "contextual_data_submission_date"
+        },
+        {
+            "field_name": "culture_collection_date",
+            "form_placeholder": "",
+            "label": "culture_collection_date"
+        },
+        {
+            "field_name": "culture_collection_id",
+            "form_placeholder": "",
+            "label": "culture_collection_id"
         },
         {
             "field_name": "data_analysis_date",
@@ -102,6 +122,11 @@
             "label": "date_of_transfer"
         },
         {
+            "field_name": "date_of_transfer_to_archive",
+            "form_placeholder": "",
+            "label": "date_of_transfer_to_archive"
+        },
+        {
             "field_name": "description",
             "form_placeholder": "",
             "label": "description"
@@ -122,6 +147,11 @@
             "label": "facility_project_code_experiment_code"
         },
         {
+            "field_name": "file_count",
+            "form_placeholder": "",
+            "label": "file_count"
+        },
+        {
             "field_name": "folder_name",
             "form_placeholder": "",
             "label": "folder_name"
@@ -132,9 +162,19 @@
             "label": "genome_used"
         },
         {
+            "field_name": "gram_stain",
+            "form_placeholder": "",
+            "label": "gram_stain"
+        },
+        {
             "field_name": "growth_condition_growth",
             "form_placeholder": "",
             "label": "growth_condition_growth"
+        },
+        {
+            "field_name": "growth_condition_growth_phase",
+            "form_placeholder": "",
+            "label": "growth_condition_growth_phase"
         },
         {
             "field_name": "growth_condition_media",
@@ -145,6 +185,11 @@
             "field_name": "growth_condition_od600",
             "form_placeholder": "",
             "label": "growth_condition_od600"
+        },
+        {
+            "field_name": "growth_condition_od600_reading",
+            "form_placeholder": "",
+            "label": "growth_condition_od600_reading"
         },
         {
             "field_name": "growth_condition_temperature",
@@ -162,6 +207,46 @@
             "label": "growth_media"
         },
         {
+            "field_name": "host_age",
+            "form_placeholder": "",
+            "label": "host_age"
+        },
+        {
+            "field_name": "host_description",
+            "form_placeholder": "",
+            "label": "host_description"
+        },
+        {
+            "field_name": "host_disease_outcome",
+            "form_placeholder": "",
+            "label": "host_disease_outcome"
+        },
+        {
+            "field_name": "host_dob",
+            "form_placeholder": "",
+            "label": "host_dob"
+        },
+        {
+            "field_name": "host_location",
+            "form_placeholder": "",
+            "label": "host_location"
+        },
+        {
+            "field_name": "host_sex",
+            "form_placeholder": "",
+            "label": "host_sex"
+        },
+        {
+            "field_name": "isolation_source",
+            "form_placeholder": "",
+            "label": "isolation_source"
+        },
+        {
+            "field_name": "key_virulence_genes",
+            "form_placeholder": "",
+            "label": "key_virulence_genes"
+        },
+        {
             "field_name": "name",
             "form_placeholder": "",
             "label": "name"
@@ -177,9 +262,29 @@
             "label": "omics"
         },
         {
+            "field_name": "peptide_resuspension_protocol",
+            "form_placeholder": "",
+            "label": "peptide_resuspension_protocol"
+        },
+        {
+            "field_name": "protein_yield_facility_ug",
+            "form_placeholder": "",
+            "label": "protein_yield_facility_ug"
+        },
+        {
             "field_name": "proteome_size",
             "form_placeholder": "",
             "label": "proteome_size"
+        },
+        {
+            "field_name": "publication_reference",
+            "form_placeholder": "",
+            "label": "publication_reference"
+        },
+        {
+            "field_name": "replicate",
+            "form_placeholder": "",
+            "label": "replicate"
         },
         {
             "field_name": "sample_submission_date",
@@ -187,9 +292,24 @@
             "label": "sample_submission_date"
         },
         {
+            "field_name": "sample_type",
+            "form_placeholder": "",
+            "label": "sample_type"
+        },
+        {
             "field_name": "serovar",
             "form_placeholder": "",
             "label": "serovar"
+        },
+        {
+            "field_name": "strain_description",
+            "form_placeholder": "",
+            "label": "strain_description"
+        },
+        {
+            "field_name": "strain_or_isolate",
+            "form_placeholder": "",
+            "label": "strain_or_isolate"
         },
         {
             "field_name": "taxon_or_organism",
@@ -212,9 +332,19 @@
             "label": "translation"
         },
         {
+            "field_name": "treatment",
+            "form_placeholder": "",
+            "label": "treatment"
+        },
+        {
             "field_name": "version",
             "form_placeholder": "",
             "label": "version"
+        },
+        {
+            "field_name": "work_order",
+            "form_placeholder": "",
+            "label": "work_order"
         },
         {
             "field_name": "zip_file_name",
