@@ -22,3 +22,14 @@ From {{h.get_pkg_dict_extra(pkg,'harvest_source_title') }}
 {{ super() }}
 {% endblock %}
 
+{% block package_resources %}
+
+  <p>
+  {% snippet 'ckanext_wget/snippets/package_button.html', id=c.current_package_id %}
+  </p>
+
+  {{ super() }}
+
+{% endblock %}
+
+
