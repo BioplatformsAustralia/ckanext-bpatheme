@@ -4,7 +4,7 @@
   {% if h.check_access('package_create', {'owner_org': c.group_dict.id}) %}
     {% link_for _('Add Dataset'), controller='package', action='new', group=c.group_dict.id, class_='btn btn-primary', icon='plus-sign-alt' %}
   {% endif %}
-  {% snippet 'ckanext_wget/snippets/organization_button.html', id=c.group_dict.id %}
+  {% snippet 'ckanext_bulk/snippets/organization_button.html', id=c.group_dict.id %}
 {% endblock %}
 
 {% block primary_content_inner %}
