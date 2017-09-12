@@ -187,8 +187,36 @@
             "preset": "resource_format_autocomplete"
         },
         {
+            "field_name": "bacterial_database_used",
+            "label": "bacterial_database_used"
+        },
+        {
+            "field_name": "base_url",
+            "label": "base_url"
+        },
+        {
+            "field_name": "bpa_id",
+            "label": "bpa_id"
+        },
+        {
+            "field_name": "database_generation_date",
+            "label": "database_generation_date"
+        },
+        {
+            "field_name": "decription_of_how_the_database_is_generated",
+            "label": "decription_of_how_the_database_is_generated"
+        },
+        {
+            "field_name": "facility_code",
+            "label": "facility_code"
+        },
+        {
             "field_name": "format",
             "label": "format"
+        },
+        {
+            "field_name": "human_database_used",
+            "label": "human_database_used"
         },
         {
             "field_name": "md5",
@@ -197,6 +225,34 @@
         {
             "field_name": "name",
             "label": "name"
+        },
+        {
+            "field_name": "proteome_size",
+            "label": "proteome_size"
+        },
+        {
+            "field_name": "serovar",
+            "label": "serovar"
+        },
+        {
+            "field_name": "strain_or_isolate",
+            "label": "strain_or_isolate"
+        },
+        {
+            "field_name": "taxon_or_organism",
+            "label": "taxon_or_organism"
+        },
+        {
+            "field_name": "ticket",
+            "label": "ticket"
+        },
+        {
+            "field_name": "translation",
+            "label": "translation"
+        },
+        {
+            "field_name": "version",
+            "label": "version"
         }
     ],
     "scheming_version": 1
