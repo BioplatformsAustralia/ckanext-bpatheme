@@ -167,6 +167,11 @@
             "label": "name"
         },
         {
+            "field_name": "ncbi_bioproject_accession",
+            "form_placeholder": "",
+            "label": "ncbi_bioproject_accession"
+        },
+        {
             "field_name": "notes",
             "form_placeholder": "",
             "label": "notes"
@@ -321,6 +326,10 @@
         {
             "field_name": "name",
             "label": "name"
+        },
+        {
+            "field_name": "ncbi_file_uploaded",
+            "label": "ncbi_file_uploaded"
         },
         {
             "field_name": "read",
