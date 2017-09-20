@@ -467,6 +467,11 @@
             "label": "ncbi_bioproject_accession"
         },
         {
+            "field_name": "ncbi_biosample_accession",
+            "form_placeholder": "",
+            "label": "ncbi_biosample_accession"
+        },
+        {
             "field_name": "neo",
             "form_placeholder": "",
             "label": "neo"
@@ -847,6 +852,10 @@
         {
             "field_name": "name",
             "label": "name"
+        },
+        {
+            "field_name": "ncbi_file_uploaded",
+            "label": "ncbi_file_uploaded"
         },
         {
             "field_name": "read",
