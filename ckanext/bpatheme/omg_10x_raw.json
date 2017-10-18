@@ -212,6 +212,11 @@
             "label": "family"
         },
         {
+            "field_name": "file",
+            "form_placeholder": "",
+            "label": "file"
+        },
+        {
             "field_name": "flow_id",
             "form_placeholder": "",
             "label": "flow_id"
@@ -330,6 +335,11 @@
             "field_name": "sex",
             "form_placeholder": "",
             "label": "sex"
+        },
+        {
+            "field_name": "software_version",
+            "form_placeholder": "",
+            "label": "software_version"
         },
         {
             "field_name": "source_population",
