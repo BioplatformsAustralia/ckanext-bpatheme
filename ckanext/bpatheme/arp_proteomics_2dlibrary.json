@@ -167,8 +167,12 @@
             "preset": "resource_format_autocomplete"
         },
         {
-            "field_name": "format",
-            "label": "format"
+            "field_name": "fraction",
+            "label": "fraction"
+        },
+        {
+            "field_name": "machine_data",
+            "label": "machine_data"
         },
         {
             "field_name": "md5",
@@ -177,6 +181,18 @@
         {
             "field_name": "name",
             "label": "name"
+        },
+        {
+            "field_name": "pool_id",
+            "label": "pool_id"
+        },
+        {
+            "field_name": "pool_name",
+            "label": "pool_name"
+        },
+        {
+            "field_name": "vendor",
+            "label": "vendor"
         }
     ],
     "scheming_version": 1
