@@ -16,5 +16,13 @@
         (_('Popular'), 'views_recent desc') if g.tracking_enabled else (false, false) ]
       %}
       {% snippet 'organization/snippets/inline_search_form.html', form_id='organization-datasets-search-form', type='dataset', query=c.q, sorting=sorting, sorting_selected=c.sort_by_selected, count=c.page.item_count, facets=facets, placeholder=_('Search datasets...'), show_empty=request.params, fields=c.fields %}
-  {{ super() }}
+      {% snippet 'snippets/bpa_register.html', c=c %}
+
+{{ super() }}
+
+      <ul class="nav nav-tabs pull-right" style='padding-top: 2em;'>
+        {{ h.build_nav_icon('organization_pages_index', _('Project Pages'), id=c.group_dict.name) }}
+        {{ h.build_nav_icon('organization_activity', _('Activity Stream'), id=c.group_dict.name, offset=0) }}
+      </ul>
+
 {% endblock %}
