@@ -147,6 +147,11 @@
             "label": "file_count"
         },
         {
+            "field_name": "file_name_of_analysed_data",
+            "form_placeholder": "",
+            "label": "file_name_of_analysed_data"
+        },
+        {
             "field_name": "folder_name",
             "form_placeholder": "",
             "label": "folder_name"
