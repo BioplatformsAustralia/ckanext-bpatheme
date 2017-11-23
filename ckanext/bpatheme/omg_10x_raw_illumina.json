@@ -67,6 +67,11 @@
             "label": "archive_ingestion_date"
         },
         {
+            "field_name": "archive_name",
+            "form_placeholder": "",
+            "label": "archive_name"
+        },
+        {
             "field_name": "associated_media",
             "form_placeholder": "",
             "label": "associated_media"
@@ -92,14 +97,29 @@
             "label": "bpa_dataset_id"
         },
         {
+            "field_name": "bpa_dataset_ids",
+            "form_placeholder": "",
+            "label": "bpa_dataset_ids"
+        },
+        {
             "field_name": "bpa_library_id",
             "form_placeholder": "",
             "label": "bpa_library_id"
         },
         {
+            "field_name": "bpa_library_ids",
+            "form_placeholder": "",
+            "label": "bpa_library_ids"
+        },
+        {
             "field_name": "bpa_sample_id",
             "form_placeholder": "",
             "label": "bpa_sample_id"
+        },
+        {
+            "field_name": "bpa_sample_ids",
+            "form_placeholder": "",
+            "label": "bpa_sample_ids"
         },
         {
             "field_name": "bpa_work_order",
