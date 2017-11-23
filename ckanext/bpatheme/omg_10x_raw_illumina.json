@@ -157,16 +157,6 @@
             "label": "common_name"
         },
         {
-            "field_name": "conservation_sample",
-            "form_placeholder": "",
-            "label": "conservation_sample"
-        },
-        {
-            "field_name": "conservation_status",
-            "form_placeholder": "",
-            "label": "conservation_status"
-        },
-        {
             "field_name": "contextual_data_submission_date",
             "form_placeholder": "",
             "label": "contextual_data_submission_date"
@@ -280,16 +270,6 @@
             "field_name": "folder_name",
             "form_placeholder": "",
             "label": "folder_name"
-        },
-        {
-            "field_name": "genome_sample",
-            "form_placeholder": "",
-            "label": "genome_sample"
-        },
-        {
-            "field_name": "genome_status",
-            "form_placeholder": "",
-            "label": "genome_status"
         },
         {
             "field_name": "genus",
@@ -420,16 +400,6 @@
             "field_name": "order",
             "form_placeholder": "",
             "label": "order"
-        },
-        {
-            "field_name": "phylogenomic_sample",
-            "form_placeholder": "",
-            "label": "phylogenomic_sample"
-        },
-        {
-            "field_name": "phylogenomic_status",
-            "form_placeholder": "",
-            "label": "phylogenomic_status"
         },
         {
             "field_name": "phylum",
