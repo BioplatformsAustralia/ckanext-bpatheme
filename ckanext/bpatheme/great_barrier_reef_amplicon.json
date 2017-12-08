@@ -199,6 +199,12 @@
             "label": "S3 E-Tag (32MB multipart)"
         },
         {
+            "field_name": "s3_etag_verified_at",
+            "form_placeholder": "",
+            "label": "S3 E-Tag Verified At",
+            "preset": "date"
+        },
+        {
             "display_property": "dcat:Dataset/dcat:distribution/dcat:Distribution/dcat:format",
             "field_name": "format",
             "label": "Format",
