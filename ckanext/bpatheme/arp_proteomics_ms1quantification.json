@@ -347,7 +347,7 @@
             "field_name": "s3_etag_verified_at",
             "form_placeholder": "",
             "label": "S3 E-Tag Verified At",
-            "preset": "date"
+            "preset": "datetime"
         },
         {
             "display_property": "dcat:Dataset/dcat:distribution/dcat:Distribution/dcat:format",
