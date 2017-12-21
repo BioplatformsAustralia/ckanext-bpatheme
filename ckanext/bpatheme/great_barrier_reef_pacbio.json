@@ -97,6 +97,11 @@
             "label": "notes"
         },
         {
+            "field_name": "pacbio_linkage",
+            "form_placeholder": "",
+            "label": "pacbio_linkage"
+        },
+        {
             "field_name": "run_number",
             "form_placeholder": "",
             "label": "run_number"
