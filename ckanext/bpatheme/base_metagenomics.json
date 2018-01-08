@@ -312,6 +312,11 @@
             "label": "latitude"
         },
         {
+            "field_name": "license",
+            "form_placeholder": "",
+            "label": "license"
+        },
+        {
             "field_name": "library_construction_protocol",
             "form_placeholder": "",
             "label": "library_construction_protocol"
