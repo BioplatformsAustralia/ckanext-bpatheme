@@ -65,7 +65,7 @@
             "field_name": "license",
             "form_placeholder": "",
             "label": "license"
-        }
+        },
         {
             "field_name": "contextual_data_submission_date",
             "form_placeholder": "",
