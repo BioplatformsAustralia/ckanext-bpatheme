@@ -47,44 +47,119 @@
             "label": "Geospatial Coverage"
         },
         {
-            "field_name": "bpa_id",
+            "field_name": "analytical_plaform",
             "form_placeholder": "",
-            "label": "bpa_id"
+            "label": "analytical_plaform"
         },
         {
-            "field_name": "casava_version",
+            "field_name": "archive_ingestion_date",
             "form_placeholder": "",
-            "label": "casava_version"
+            "label": "archive_ingestion_date"
         },
         {
-            "field_name": "flow_cell_id",
+            "field_name": "base_url",
             "form_placeholder": "",
-            "label": "flow_cell_id"
+            "label": "base_url"
         },
         {
-            "field_name": "insert_size_range",
+            "field_name": "bpa_ids",
             "form_placeholder": "",
-            "label": "insert_size_range"
+            "label": "bpa_ids"
         },
         {
-            "field_name": "lane_number",
+            "field_name": "cell_type",
             "form_placeholder": "",
-            "label": "lane_number"
+            "label": "cell_type"
         },
         {
-            "field_name": "library_code",
+            "field_name": "contextual_data_submission_date",
             "form_placeholder": "",
-            "label": "library_code"
+            "label": "contextual_data_submission_date"
         },
         {
-            "field_name": "library_construction_avg_insert_size",
+            "field_name": "data_generated",
             "form_placeholder": "",
-            "label": "library_construction_avg_insert_size"
+            "label": "data_generated"
+        },
+        {
+            "field_name": "data_set",
+            "form_placeholder": "",
+            "label": "data_set"
+        },
+        {
+            "field_name": "data_type",
+            "form_placeholder": "",
+            "label": "data_type"
+        },
+        {
+            "field_name": "dataset_url",
+            "form_placeholder": "",
+            "label": "dataset_url"
+        },
+        {
+            "field_name": "date",
+            "form_placeholder": "",
+            "label": "date"
+        },
+        {
+            "field_name": "date_of_transfer",
+            "form_placeholder": "",
+            "label": "date_of_transfer"
+        },
+        {
+            "field_name": "description",
+            "form_placeholder": "",
+            "label": "description"
+        },
+        {
+            "field_name": "disease_state",
+            "form_placeholder": "",
+            "label": "disease_state"
+        },
+        {
+            "field_name": "extract_protocol",
+            "form_placeholder": "",
+            "label": "extract_protocol"
+        },
+        {
+            "field_name": "facility",
+            "form_placeholder": "",
+            "label": "facility"
+        },
+        {
+            "field_name": "facility_code",
+            "form_placeholder": "",
+            "label": "facility_code"
+        },
+        {
+            "field_name": "folder_name",
+            "form_placeholder": "",
+            "label": "folder_name"
+        },
+        {
+            "field_name": "growth_protocol",
+            "form_placeholder": "",
+            "label": "growth_protocol"
+        },
+        {
+            "field_name": "labelling",
+            "form_placeholder": "",
+            "label": "labelling"
         },
         {
             "field_name": "library_construction_protocol",
             "form_placeholder": "",
             "label": "library_construction_protocol"
+        },
+        {
+            "field_name": "library_strategy",
+            "form_placeholder": "",
+            "label": "library_strategy"
+        },
+        {
+            "field_name": "molecule",
+            "form_placeholder": "",
+            "label": "molecule"
         },
         {
             "field_name": "name",
@@ -97,24 +172,29 @@
             "label": "notes"
         },
         {
-            "field_name": "pacbio_linkage",
+            "field_name": "omics",
             "form_placeholder": "",
-            "label": "pacbio_linkage"
+            "label": "omics"
         },
         {
-            "field_name": "run_number",
+            "field_name": "organism_part",
             "form_placeholder": "",
-            "label": "run_number"
+            "label": "organism_part"
         },
         {
-            "field_name": "sequencer",
+            "field_name": "sample_description",
             "form_placeholder": "",
-            "label": "sequencer"
+            "label": "sample_description"
         },
         {
-            "field_name": "sequencing_facility",
+            "field_name": "sample_submission_date",
             "form_placeholder": "",
-            "label": "sequencing_facility"
+            "label": "sample_submission_date"
+        },
+        {
+            "field_name": "species",
+            "form_placeholder": "",
+            "label": "species"
         },
         {
             "field_name": "ticket",
@@ -122,12 +202,22 @@
             "label": "ticket"
         },
         {
+            "field_name": "tissue",
+            "form_placeholder": "",
+            "label": "tissue"
+        },
+        {
             "field_name": "title",
             "form_placeholder": "",
             "label": "title"
+        },
+        {
+            "field_name": "treatment_protocol",
+            "form_placeholder": "",
+            "label": "treatment_protocol"
         }
     ],
-    "dataset_type": "great-barrier-reef-pacbio",
+    "dataset_type": "stemcells-transcriptome-analysed",
     "resource_fields": [
         {
             "field_name": "name",
@@ -181,14 +271,6 @@
             "preset": "resource_format_autocomplete"
         },
         {
-            "field_name": "bpa_id",
-            "label": "bpa_id"
-        },
-        {
-            "field_name": "flow_cell_id",
-            "label": "flow_cell_id"
-        },
-        {
             "field_name": "format",
             "label": "format"
         },
@@ -199,14 +281,6 @@
         {
             "field_name": "name",
             "label": "name"
-        },
-        {
-            "field_name": "run_number",
-            "label": "run_number"
-        },
-        {
-            "field_name": "vendor",
-            "label": "vendor"
         }
     ],
     "scheming_version": 1

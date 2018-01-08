@@ -67,6 +67,11 @@
             "label": "archive_ingestion_date"
         },
         {
+            "field_name": "archive_ingestion_dates",
+            "form_placeholder": "",
+            "label": "archive_ingestion_dates"
+        },
+        {
             "field_name": "barcode_tag",
             "form_placeholder": "",
             "label": "barcode_tag"
@@ -125,6 +130,11 @@
             "field_name": "facility",
             "form_placeholder": "",
             "label": "facility"
+        },
+        {
+            "field_name": "flow_cell_ids",
+            "form_placeholder": "",
+            "label": "flow_cell_ids"
         },
         {
             "field_name": "gram_stain",
@@ -277,9 +287,9 @@
             "label": "taxon_or_organism"
         },
         {
-            "field_name": "ticket",
+            "field_name": "tickets",
             "form_placeholder": "",
-            "label": "ticket"
+            "label": "tickets"
         },
         {
             "field_name": "title",
