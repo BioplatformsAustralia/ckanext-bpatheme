@@ -92,11 +92,6 @@
             "label": "archive_ingestion_date"
         },
         {
-            "field_name": "license",
-            "form_placeholder": "",
-            "label": "license"
-        },
-        {
             "field_name": "asta",
             "form_placeholder": "",
             "label": "asta"
@@ -702,6 +697,11 @@
             "label": "stratification"
         },
         {
+            "field_name": "submitter",
+            "form_placeholder": "",
+            "label": "submitter"
+        },
+        {
             "field_name": "target",
             "form_placeholder": "",
             "label": "target"
@@ -765,6 +765,11 @@
             "field_name": "viola",
             "form_placeholder": "",
             "label": "viola"
+        },
+        {
+            "field_name": "work_order",
+            "form_placeholder": "",
+            "label": "work_order"
         },
         {
             "field_name": "year",

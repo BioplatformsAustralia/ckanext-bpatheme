@@ -62,11 +62,6 @@
             "label": "archive_ingestion_date"
         },
         {
-            "field_name": "license",
-            "form_placeholder": "",
-            "label": "license"
-        },
-        {
             "field_name": "bpa_id",
             "form_placeholder": "",
             "label": "bpa_id"
@@ -177,6 +172,11 @@
             "label": "ncbi_bioproject_accession"
         },
         {
+            "field_name": "ncbi_biosample_accession",
+            "form_placeholder": "",
+            "label": "ncbi_biosample_accession"
+        },
+        {
             "field_name": "notes",
             "form_placeholder": "",
             "label": "notes"
@@ -242,6 +242,11 @@
             "label": "sequencer"
         },
         {
+            "field_name": "submitter",
+            "form_placeholder": "",
+            "label": "submitter"
+        },
+        {
             "field_name": "ticket",
             "form_placeholder": "",
             "label": "ticket"
@@ -255,6 +260,11 @@
             "field_name": "title",
             "form_placeholder": "",
             "label": "title"
+        },
+        {
+            "field_name": "work_order",
+            "form_placeholder": "",
+            "label": "work_order"
         }
     ],
     "dataset_type": "mm-metatranscriptome",
