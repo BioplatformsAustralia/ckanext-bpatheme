@@ -64,7 +64,7 @@
         {
             "field_name": "license",
             "form_placeholder": "",
-            "label": "license"            
+            "label": "license"
         },
         {
             "field_name": "bpa_id",
