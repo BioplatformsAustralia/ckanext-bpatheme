@@ -74,7 +74,7 @@
         {
             "field_name": "license",
             "form_placeholder": "",
-            "label": "license"            
+            "label": "license"
         },
         {
             "field_name": "australian_soil_classification",
