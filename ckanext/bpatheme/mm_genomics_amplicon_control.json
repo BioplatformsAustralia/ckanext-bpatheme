@@ -62,6 +62,11 @@
             "label": "archive_ingestion_date"
         },
         {
+            "field_name": "license",
+            "form_placeholder": "",
+            "label": "license"
+        },
+        {
             "field_name": "data_generated",
             "form_placeholder": "",
             "label": "data_generated"

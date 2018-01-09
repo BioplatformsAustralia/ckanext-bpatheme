@@ -72,6 +72,11 @@
             "label": "archive_ingestion_date"
         },
         {
+            "field_name": "license",
+            "form_placeholder": "",
+            "label": "license"
+        },
+        {
             "field_name": "australian_soil_classification",
             "form_placeholder": "",
             "label": "australian_soil_classification"
