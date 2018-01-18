@@ -77,7 +77,7 @@ body {
 /* Padding around logo and search */
 .dwga-header-row {
   padding: 10px;
-  margin-left: 0px; 
+  margin-left: 0px;
 }
 
 
@@ -154,12 +154,12 @@ body {
 
 .masthead a,
 .masthead hgroup h2,
-.masthead .nav > li > a, 
-.masthead .nav > li > a:focus, 
-.masthead .nav > li > a:hover, 
-.masthead .nav > .active > a, 
-.masthead .nav > .active > a:hover, 
-.masthead .nav > .active > a:focus, 
+.masthead .nav > li > a,
+.masthead .nav > li > a:focus,
+.masthead .nav > li > a:hover,
+.masthead .nav > .active > a,
+.masthead .nav > .active > a:hover,
+.masthead .nav > .active > a:focus,
 .account-masthead .account .notifications a span {
   color: rgb(105,115,124);
   text-shadow: none;
@@ -277,4 +277,31 @@ body {
     background-color: #fff;
     border: 1px solid #ddd;
     color: #555;
+}
+
+.site-footer {
+    padding: 0px;
+    min-height: 0px;
+}
+
+.site-footer-links {
+    text-align: center;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+.site-footer-links a {
+    padding-right: 15px;
+}
+
+.site-footer-logo {
+    background-color: #171717;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    text-align: center;
+}
+
+/* Need this to break out of the automatically generated .container class*/
+.site-footer .container {
+    width: 100%;
 }
