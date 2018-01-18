@@ -280,13 +280,40 @@ body {
 }
 
 
+.site-footer {
+    padding: 0px;
+    min-height: 0px;
+}
+
+.site-footer-links {
+    text-align: center;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+.site-footer-links a {
+    padding-right: 15px;
+}
+
+.site-footer-logo {
+    background-color: #171717;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    text-align: center;
+}
+
+/* Need this to break out of the automatically generated .container class*/
+.site-footer .container {
+    width: 100%;
+}
+
 /* ====================================
    For changing the heading to include the words Data Portal
    ==================================== */
 
 .pull-left > img {
     padding-left: 20px;
-    height: 80px;
+    height: 100px;
 }
 
 .data_portal_text {
