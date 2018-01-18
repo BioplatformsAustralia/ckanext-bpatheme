@@ -2,23 +2,22 @@
 
 {% block footer_content %}
 
-    <div class="row">
-      <div class="span4 footer-links">
-	<div>
-	    <a href="https://www.education.gov.au/national-collaborative-research-infrastructure-strategy-ncris"><img src="{{ h.url_for_static('ncris.png') }}" alt="NCRIS" /></a>
-	</div>
-      </div>
-      <div class="span4 attribution">
-	<p><a href="http://www.bioplatforms.com">Operated by Bioplatforms Australia</a></p>
-	<p><a href="http://www.bioplatforms.com/contact/">Contact</a></p>
-      </div>
-      <div class="span4 attribution">
-	<ul class="nav">
-	    <li><a href="/organization">Organisations</a></li>
-	    <li><a href="/dataset">Datasets</a></li>
-	    <li><a href="/group">Groups</a></li>
-	    <li><a href="/organization/pages/bioplatforms-australia/api-access">API Access</a></li>
-	</ul>
-      </div>
+<div class='container-footer'>
+
+    <div class="site-footer-links">
+	    <a href="/organization">Organisations</a>
+	    <a href="/dataset">Datasets</a>
+	    <a href="/group">Groups</a>
+	    <a href="/organization/pages/bioplatforms-australia/api-access">API Access</a>
+        <a href="http://www.bioplatforms.com/contact/">Contact</a>
+        <a href="http://www.bioplatforms.com">Operated by Bioplatforms Australia</a>
     </div>
+
+
+    <div class="site-footer-logo">
+        <a href="https://www.education.gov.au/national-collaborative-research-infrastructure-strategy-ncris"><img src="{{ h.url_for_static('bpa_footer.png') }}" alt="NCRIS" /></a>
+    </div>
+
+</div>
+
 {% endblock %}
