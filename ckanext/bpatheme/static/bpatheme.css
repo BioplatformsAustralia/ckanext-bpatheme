@@ -279,6 +279,7 @@ body {
     color: #555;
 }
 
+
 .site-footer {
     padding: 0px;
     min-height: 0px;
@@ -304,4 +305,24 @@ body {
 /* Need this to break out of the automatically generated .container class*/
 .site-footer .container {
     width: 100%;
+}
+
+/* ====================================
+   For changing the heading to include the words Data Portal
+   ==================================== */
+
+.pull-left > img {
+    padding-left: 20px;
+    height: 100px;
+}
+
+.data_portal_text {
+    color: black;
+    line-height: 3;
+    padding-left: 560px;
+    font-size: 28px;
+}
+
+.dwga-inlineblock {
+    display: block;
 }
