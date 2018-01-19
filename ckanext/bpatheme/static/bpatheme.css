@@ -313,16 +313,16 @@ body {
 
 .pull-left > img {
     padding-left: 20px;
-    height: 100px;
+    /*height: 80px;*/
 }
 
 .data_portal_text {
     color: black;
     line-height: 3;
-    padding-left: 560px;
+    padding-left: 140px;
     font-size: 28px;
 }
 
 .dwga-inlineblock {
-    display: block;
+    /*display: block;*/
 }
