@@ -47,6 +47,12 @@
             "label": "Geospatial Coverage"
         },
         {
+            "display_property": "dcat:Dataset/dcat:distribution/dcat:Distribution/dct:license",
+            "field_name": "license_id",
+            "form_snippet": "license.html",
+            "label": "License"
+        },
+        {
             "field_name": "amplicon",
             "form_placeholder": "",
             "label": "amplicon"
@@ -60,11 +66,6 @@
             "field_name": "archive_ingestion_date",
             "form_placeholder": "",
             "label": "archive_ingestion_date"
-        },
-        {
-            "field_name": "license_id",
-            "form_placeholder": "",
-            "label": "license_id"
         },
         {
             "field_name": "data_generated",
@@ -105,6 +106,11 @@
             "field_name": "folder_name",
             "form_placeholder": "",
             "label": "folder_name"
+        },
+        {
+            "field_name": "license_id",
+            "form_placeholder": "",
+            "label": "license_id"
         },
         {
             "field_name": "name",

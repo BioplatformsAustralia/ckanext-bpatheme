@@ -47,9 +47,10 @@
             "label": "Geospatial Coverage"
         },
         {
-            "field_name": "a16s_comment",
-            "form_placeholder": "",
-            "label": "a16s_comment"
+            "display_property": "dcat:Dataset/dcat:distribution/dcat:Distribution/dct:license",
+            "field_name": "license_id",
+            "form_snippet": "license.html",
+            "label": "License"
         },
         {
             "field_name": "allo",
@@ -92,19 +93,9 @@
             "label": "archive_ingestion_date"
         },
         {
-            "field_name": "license_id",
-            "form_placeholder": "",
-            "label": "license_id"
-        },
-        {
             "field_name": "asta",
             "form_placeholder": "",
             "label": "asta"
-        },
-        {
-            "field_name": "b16s_comment",
-            "form_placeholder": "",
-            "label": "b16s_comment"
         },
         {
             "field_name": "beta_beta_car",
@@ -115,11 +106,6 @@
             "field_name": "beta_epi_car",
             "form_placeholder": "",
             "label": "beta_epi_car"
-        },
-        {
-            "field_name": "biomass",
-            "form_placeholder": "",
-            "label": "biomass"
         },
         {
             "field_name": "bottom_depth",
@@ -142,14 +128,9 @@
             "label": "cantha"
         },
         {
-            "field_name": "chl_a_allomer",
+            "field_name": "chlf_ctd",
             "form_placeholder": "",
-            "label": "chl_a_allomer"
-        },
-        {
-            "field_name": "chl_a_epi",
-            "form_placeholder": "",
-            "label": "chl_a_epi"
+            "label": "chlf_ctd"
         },
         {
             "field_name": "chlorophyll_a",
@@ -212,11 +193,6 @@
             "label": "cphlide_a"
         },
         {
-            "field_name": "ctd_salinity",
-            "form_placeholder": "",
-            "label": "ctd_salinity"
-        },
-        {
             "field_name": "data_generated",
             "form_placeholder": "",
             "label": "data_generated"
@@ -242,29 +218,14 @@
             "label": "date_sampled"
         },
         {
-            "field_name": "day",
-            "form_placeholder": "",
-            "label": "day"
-        },
-        {
             "field_name": "density",
             "form_placeholder": "",
             "label": "density"
         },
         {
-            "field_name": "deployment",
-            "form_placeholder": "",
-            "label": "deployment"
-        },
-        {
             "field_name": "depth",
             "form_placeholder": "",
             "label": "depth"
-        },
-        {
-            "field_name": "depth_salt_water",
-            "form_placeholder": "",
-            "label": "depth_salt_water"
         },
         {
             "field_name": "description",
@@ -297,11 +258,6 @@
             "label": "dino"
         },
         {
-            "field_name": "dna_extraction_date",
-            "form_placeholder": "",
-            "label": "dna_extraction_date"
-        },
-        {
             "field_name": "dv_cphl_a",
             "form_placeholder": "",
             "label": "dv_cphl_a"
@@ -322,19 +278,9 @@
             "label": "dv_cphl_b_and_cphl_b"
         },
         {
-            "field_name": "e18s_comment",
-            "form_placeholder": "",
-            "label": "e18s_comment"
-        },
-        {
             "field_name": "echin",
             "form_placeholder": "",
             "label": "echin"
-        },
-        {
-            "field_name": "extraction_number",
-            "form_placeholder": "",
-            "label": "extraction_number"
         },
         {
             "field_name": "facility",
@@ -350,11 +296,6 @@
             "field_name": "fluorescence",
             "form_placeholder": "",
             "label": "fluorescence"
-        },
-        {
-            "field_name": "fluorescence_wetlab",
-            "form_placeholder": "",
-            "label": "fluorescence_wetlab"
         },
         {
             "field_name": "folder_name",
@@ -412,14 +353,14 @@
             "label": "latitude"
         },
         {
+            "field_name": "license_id",
+            "form_placeholder": "",
+            "label": "license_id"
+        },
+        {
             "field_name": "light_intensity",
             "form_placeholder": "",
             "label": "light_intensity"
-        },
-        {
-            "field_name": "location_code",
-            "form_placeholder": "",
-            "label": "location_code"
         },
         {
             "field_name": "longitude",
@@ -437,11 +378,6 @@
             "label": "lyco"
         },
         {
-            "field_name": "metagenome_comment",
-            "form_placeholder": "",
-            "label": "metagenome_comment"
-        },
-        {
             "field_name": "mg_dvp",
             "form_placeholder": "",
             "label": "mg_dvp"
@@ -457,14 +393,14 @@
             "label": "mm_amplicon_linkage"
         },
         {
-            "field_name": "month",
-            "form_placeholder": "",
-            "label": "month"
-        },
-        {
             "field_name": "name",
             "form_placeholder": "",
             "label": "name"
+        },
+        {
+            "field_name": "ncbi_bioproject",
+            "form_placeholder": "",
+            "label": "ncbi_bioproject"
         },
         {
             "field_name": "ncbi_bioproject_accession",
@@ -497,6 +433,21 @@
             "label": "notes"
         },
         {
+            "field_name": "nrs_location_code_voyage_code",
+            "form_placeholder": "",
+            "label": "nrs_location_code_voyage_code"
+        },
+        {
+            "field_name": "nrs_sample_code",
+            "form_placeholder": "",
+            "label": "nrs_sample_code"
+        },
+        {
+            "field_name": "nrs_trip_code",
+            "form_placeholder": "",
+            "label": "nrs_trip_code"
+        },
+        {
             "field_name": "omics",
             "form_placeholder": "",
             "label": "omics"
@@ -507,9 +458,9 @@
             "label": "organic_fraction"
         },
         {
-            "field_name": "oxygen",
+            "field_name": "organism",
             "form_placeholder": "",
-            "label": "oxygen"
+            "label": "organism"
         },
         {
             "field_name": "oxygen_ctd",
@@ -520,21 +471,6 @@
             "field_name": "oxygen_lab",
             "form_placeholder": "",
             "label": "oxygen_lab"
-        },
-        {
-            "field_name": "oxygen_ml_l_ctd",
-            "form_placeholder": "",
-            "label": "oxygen_ml_l_ctd"
-        },
-        {
-            "field_name": "oxygen_umol_kg_ctd",
-            "form_placeholder": "",
-            "label": "oxygen_umol_kg_ctd"
-        },
-        {
-            "field_name": "oxygen_umol_l_lab",
-            "form_placeholder": "",
-            "label": "oxygen_umol_l_lab"
         },
         {
             "field_name": "pass_fail",
@@ -602,9 +538,9 @@
             "label": "pras"
         },
         {
-            "field_name": "pressure",
+            "field_name": "pressure_bottle",
             "form_placeholder": "",
-            "label": "pressure"
+            "label": "pressure_bottle"
         },
         {
             "field_name": "pulse_amplitude_modulated_fluorometer_measurement",
@@ -637,11 +573,6 @@
             "label": "reads"
         },
         {
-            "field_name": "rp",
-            "form_placeholder": "",
-            "label": "rp"
-        },
-        {
             "field_name": "salinity",
             "form_placeholder": "",
             "label": "salinity"
@@ -655,11 +586,6 @@
             "field_name": "salinity_lab",
             "form_placeholder": "",
             "label": "salinity_lab"
-        },
-        {
-            "field_name": "sample_code",
-            "form_placeholder": "",
-            "label": "sample_code"
         },
         {
             "field_name": "sample_extraction_id",
@@ -682,6 +608,11 @@
             "label": "sample_type"
         },
         {
+            "field_name": "samplename_depth",
+            "form_placeholder": "",
+            "label": "samplename_depth"
+        },
+        {
             "field_name": "secchi_depth",
             "form_placeholder": "",
             "label": "secchi_depth"
@@ -697,11 +628,6 @@
             "label": "silicate"
         },
         {
-            "field_name": "stratification",
-            "form_placeholder": "",
-            "label": "stratification"
-        },
-        {
             "field_name": "submitter",
             "form_placeholder": "",
             "label": "submitter"
@@ -712,9 +638,9 @@
             "label": "target"
         },
         {
-            "field_name": "temp_from_ctd_file",
+            "field_name": "tax_id",
             "form_placeholder": "",
-            "label": "temp_from_ctd_file"
+            "label": "tax_id"
         },
         {
             "field_name": "temperature",
@@ -725,11 +651,6 @@
             "field_name": "ticket",
             "form_placeholder": "",
             "label": "ticket"
-        },
-        {
-            "field_name": "time",
-            "form_placeholder": "",
-            "label": "time"
         },
         {
             "field_name": "time_sampled",
@@ -777,24 +698,9 @@
             "label": "work_order"
         },
         {
-            "field_name": "year",
-            "form_placeholder": "",
-            "label": "year"
-        },
-        {
             "field_name": "zea",
             "form_placeholder": "",
             "label": "zea"
-        },
-        {
-            "field_name": "zm__sigmat",
-            "form_placeholder": "",
-            "label": "zm__sigmat"
-        },
-        {
-            "field_name": "zm_delta_sigmat",
-            "form_placeholder": "",
-            "label": "zm_delta_sigmat"
         }
     ],
     "dataset_type": "mm-genomics-amplicon",

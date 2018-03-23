@@ -47,6 +47,12 @@
             "label": "Geospatial Coverage"
         },
         {
+            "display_property": "dcat:Dataset/dcat:distribution/dcat:Distribution/dct:license",
+            "field_name": "license_id",
+            "form_snippet": "license.html",
+            "label": "License"
+        },
+        {
             "field_name": "additional_comments",
             "form_placeholder": "",
             "label": "additional_comments"

@@ -47,6 +47,12 @@
             "label": "Geospatial Coverage"
         },
         {
+            "display_property": "dcat:Dataset/dcat:distribution/dcat:Distribution/dct:license",
+            "field_name": "license_id",
+            "form_snippet": "license.html",
+            "label": "License"
+        },
+        {
             "field_name": "agrochemical_additions",
             "form_placeholder": "",
             "label": "agrochemical_additions"
@@ -65,11 +71,6 @@
             "field_name": "archive_ingestion_date",
             "form_placeholder": "",
             "label": "archive_ingestion_date"
-        },
-        {
-            "field_name": "license_id",
-            "form_placeholder": "",
-            "label": "license_id"
         },
         {
             "field_name": "australian_soil_classification",
@@ -320,6 +321,11 @@
             "field_name": "library_construction_protocol",
             "form_placeholder": "",
             "label": "library_construction_protocol"
+        },
+        {
+            "field_name": "license_id",
+            "form_placeholder": "",
+            "label": "license_id"
         },
         {
             "field_name": "location_description",
