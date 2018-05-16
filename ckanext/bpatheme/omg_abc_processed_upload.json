@@ -495,6 +495,11 @@
             "field_name": "wild_captive",
             "form_placeholder": "",
             "label": "wild_captive"
+        },
+	{
+            "field_name": "location_generalisation",
+            "form_placeholder": "",
+            "label": "location_generalisation"
         }
     ],
     "dataset_type": "omg-exon-capture",
