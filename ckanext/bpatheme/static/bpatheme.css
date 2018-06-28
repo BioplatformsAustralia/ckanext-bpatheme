@@ -18,6 +18,13 @@ body {
   font-size: 12pt;
 }
 
+img#beta {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 500;
+}
+
 .leaflet-touch .leaflet-draw-toolbar .leaflet-draw-draw-rectangle {
   background-position: 50% 50% !important;
 }
