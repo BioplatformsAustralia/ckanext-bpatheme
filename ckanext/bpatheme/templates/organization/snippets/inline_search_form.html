@@ -19,7 +19,7 @@
       {% endblock %}
       {% if c.group_dict.name == 'bpa-sepsis' %}
       <p>
-          <a href="/sepsis_tag_instructions.pdf">
+          <a href="{{ h.url_for_static('sepsis_tag_instructions.pdf') }}">
               Click here for instructions to perform search queries (and how to use Tags)
           </a>
       </p>
