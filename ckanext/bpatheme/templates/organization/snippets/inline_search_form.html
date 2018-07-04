@@ -17,6 +17,13 @@
         <span>{{ _('Submit') }}</span>
       </button>
       {% endblock %}
+      {% if c.group_dict.name == 'bpa-sepsis' %}
+      <p>
+          <a href="https://github.com/BioplatformsAustralia/bpa-metadata/files/2157404/2018-07-03.Instructions.for.performing.a.search.query.using.Tags.pdf">
+              Click here for instructions to perform search queries (and how to use Tags)
+          </a>
+      </p>
+      {% endif %}
     </div>
   {% endblock %}
 
