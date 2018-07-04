@@ -6,6 +6,7 @@
 {% set no_bottom_border = no_bottom_border if no_bottom_border else false %}
 {% set form_id = form_id if form_id else false %}
 
+
 <form {% if form_id %}id="{{ form_id }}" {% endif %}class="search-form{% if no_bottom_border %} no-bottom-border{% endif %}" method="get" data-module="select-switch">
 
   {% block search_input %}
@@ -18,7 +19,16 @@
       </button>
       {% endblock %}
     </div>
-    To search for a specific BPA ID, please add the prefix "bpa_id:".
+
+    {% if c.group_dict.name == 'australian-microbiome' %}
+    <p>
+        <a href="https://github.com/BioplatformsAustralia/bpa-metadata/files/2157404/2018-07-03.Instructions.for.performing.a.search.query.using.Tags.pdf">
+            Click here for instructions to perform search queries (and how to use Tags)
+        </a>
+    </p>
+    {% endif %}
+    <p>To search for a specific BPA ID, please add the prefix "bpa_id:"</p>
+
   {% endblock %}
 
   {% block search_search_fields %}
