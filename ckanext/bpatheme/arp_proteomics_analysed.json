@@ -278,6 +278,11 @@
             "label": "protein_yield_facility_ug"
         },
         {
+            "field_name": "protein_yield_total_ug",
+            "form_placeholder": "",
+            "label": "protein_yield_total_ug"
+        },
+        {
             "field_name": "proteome_size",
             "form_placeholder": "",
             "label": "proteome_size"

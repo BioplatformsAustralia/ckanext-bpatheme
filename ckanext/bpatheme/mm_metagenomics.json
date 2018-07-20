@@ -128,9 +128,19 @@
             "label": "chlf_ctd"
         },
         {
+            "field_name": "chlorophyll_a",
+            "form_placeholder": "",
+            "label": "chlorophyll_a"
+        },
+        {
             "field_name": "coastal_id",
             "form_placeholder": "",
             "label": "coastal_id"
+        },
+        {
+            "field_name": "conductivity",
+            "form_placeholder": "",
+            "label": "conductivity"
         },
         {
             "field_name": "contextual_data_submission_date",
@@ -338,6 +348,11 @@
             "label": "license_id"
         },
         {
+            "field_name": "light_intensity",
+            "form_placeholder": "",
+            "label": "light_intensity"
+        },
+        {
             "field_name": "longitude",
             "form_placeholder": "",
             "label": "longitude"
@@ -356,6 +371,11 @@
             "field_name": "mg_dvp",
             "form_placeholder": "",
             "label": "mg_dvp"
+        },
+        {
+            "field_name": "microbial_abundance",
+            "form_placeholder": "",
+            "label": "microbial_abundance"
         },
         {
             "field_name": "name",
@@ -438,6 +458,31 @@
             "label": "oxygen_lab"
         },
         {
+            "field_name": "per_fine_sediment",
+            "form_placeholder": "",
+            "label": "per_fine_sediment"
+        },
+        {
+            "field_name": "per_total_carbon",
+            "form_placeholder": "",
+            "label": "per_total_carbon"
+        },
+        {
+            "field_name": "per_total_inorganc_carbon",
+            "form_placeholder": "",
+            "label": "per_total_inorganc_carbon"
+        },
+        {
+            "field_name": "per_total_nitrogen",
+            "form_placeholder": "",
+            "label": "per_total_nitrogen"
+        },
+        {
+            "field_name": "per_total_phosphorous",
+            "form_placeholder": "",
+            "label": "per_total_phosphorous"
+        },
+        {
             "field_name": "perid",
             "form_placeholder": "",
             "label": "perid"
@@ -478,6 +523,11 @@
             "label": "pressure_bottle"
         },
         {
+            "field_name": "pulse_amplitude_modulated_fluorometer_measurement",
+            "form_placeholder": "",
+            "label": "pulse_amplitude_modulated_fluorometer_measurement"
+        },
+        {
             "field_name": "pulse_amplitude_modulated_pam_fluorometer_measurement",
             "form_placeholder": "",
             "label": "pulse_amplitude_modulated_pam_fluorometer_measurement"
@@ -496,6 +546,11 @@
             "field_name": "read_length",
             "form_placeholder": "",
             "label": "read_length"
+        },
+        {
+            "field_name": "salinity",
+            "form_placeholder": "",
+            "label": "salinity"
         },
         {
             "field_name": "salinity_ctd",
@@ -536,6 +591,11 @@
             "field_name": "secchi_depth",
             "form_placeholder": "",
             "label": "secchi_depth"
+        },
+        {
+            "field_name": "sedimentation_rate",
+            "form_placeholder": "",
+            "label": "sedimentation_rate"
         },
         {
             "field_name": "sequencer",

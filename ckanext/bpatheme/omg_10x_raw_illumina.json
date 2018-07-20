@@ -373,6 +373,11 @@
             "label": "life_stage"
         },
         {
+            "field_name": "location_generalisation",
+            "form_placeholder": "",
+            "label": "location_generalisation"
+        },
+        {
             "field_name": "location_text",
             "form_placeholder": "",
             "label": "location_text"
@@ -526,11 +531,6 @@
             "field_name": "wild_captive",
             "form_placeholder": "",
             "label": "wild_captive"
-        },
-	{
-            "field_name": "location_generalisation",
-            "form_placeholder": "",
-            "label": "location_generalisation"
         }
     ],
     "dataset_type": "omg-10x-raw-illumina",
