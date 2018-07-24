@@ -13,11 +13,15 @@
   {% endif %}
 {% endblock %}
 
+
+{% if c.group_dict.name != 'australian-microbiome' %}
 {% block content_primary_nav %}
   {{ h.build_nav_icon('organization_about', _('Project Home'), id=c.group_dict.name) }}
   {{ h.build_nav_icon('organization_read', _('Datasets'), id=c.group_dict.name) }}
   {{ h.build_nav_icon('organization_pages', _('Tools'), id=c.group_dict.name, page='/tools') }}
 {% endblock %}
+
+{% endif %}
 
 {% block secondary_content %}
   {% snippet 'snippets/organization.html', organization=c.group_dict, show_nums=true %}
