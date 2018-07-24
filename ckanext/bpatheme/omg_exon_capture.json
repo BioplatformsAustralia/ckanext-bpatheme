@@ -228,6 +228,11 @@
             "label": "experimental_design"
         },
         {
+            "field_name": "facility",
+            "form_placeholder": "",
+            "label": "facility"
+        },
+        {
             "field_name": "facility_sample_id",
             "form_placeholder": "",
             "label": "facility_sample_id"
@@ -346,6 +351,11 @@
             "field_name": "life_stage",
             "form_placeholder": "",
             "label": "life_stage"
+        },
+        {
+            "field_name": "location_generalisation",
+            "form_placeholder": "",
+            "label": "location_generalisation"
         },
         {
             "field_name": "location_text",
@@ -501,11 +511,6 @@
             "field_name": "wild_captive",
             "form_placeholder": "",
             "label": "wild_captive"
-        },
-	{
-            "field_name": "location_generalisation",
-            "form_placeholder": "",
-            "label": "location_generalisation"
         }
     ],
     "dataset_type": "omg-exon-capture",

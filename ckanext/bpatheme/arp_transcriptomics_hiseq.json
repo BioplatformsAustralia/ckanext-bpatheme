@@ -293,6 +293,11 @@
             "label": "taxon_or_organism"
         },
         {
+            "field_name": "ticket",
+            "form_placeholder": "",
+            "label": "ticket"
+        },
+        {
             "field_name": "tickets",
             "form_placeholder": "",
             "label": "tickets"
