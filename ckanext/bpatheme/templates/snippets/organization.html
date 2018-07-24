@@ -32,11 +32,18 @@ Example:
         </div>
       {% endblock %}
       {% block heading %}
+
+
+      {% if c.group_dict.name != 'australian-microbiome' %}
+
       <h1 class="heading" style="word-break: keep-all; hyphens: none;">{{ organization.title or organization.name }}
         {% if organization.state == 'deleted' %}
           [{{ _('Deleted') }}]
         {% endif %}
       </h1>
+
+      {% endif %}
+
       {% endblock %}
       {% block description %}
 
