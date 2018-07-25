@@ -14,9 +14,19 @@
 {% endblock %}
 
 {% block content_primary_nav %}
-  {{ h.build_nav_icon('organization_about', _('Project Home'), id=c.group_dict.name) }}
-  {{ h.build_nav_icon('organization_read', _('Datasets'), id=c.group_dict.name) }}
-  {{ h.build_nav_icon('organization_pages', _('Tools'), id=c.group_dict.name, page='/tools') }}
+    {% if c.group_dict.name == 'australian-microbiome' %}
+        {{ h.build_nav_icon('organization_about', _('Project Home'), id=c.group_dict.name) }}
+        {{ h.build_nav_icon('organization_read', _('Datasets'), id=c.group_dict.name) }}
+        {{ h.build_nav_icon('organization_map', _('Map'), id=c.group_dict.name, page='/map') }}
+        {{ h.build_nav_icon('organization_contextualdata', _('Contextual Data'), id=c.group_dict.name, page='/contextualdata') }}
+        {{ h.build_nav_icon('organization_processeddata', _('Processed Data'), id=c.group_dict.name, page='/processeddata') }}
+        {{ h.build_nav_icon('organization_gallery', _('Gallery'), id=c.group_dict.name, page='/gallery') }}
+        {{ h.build_nav_icon('organization_information', _('Information'), id=c.group_dict.name, page='/information') }}
+    {% else %}
+        {{ h.build_nav_icon('organization_about', _('Project Home'), id=c.group_dict.name) }}
+        {{ h.build_nav_icon('organization_read', _('Datasets'), id=c.group_dict.name) }}
+        {{ h.build_nav_icon('organization_pages', _('Tools'), id=c.group_dict.name, page='/tools') }}
+    {% endif %}
 {% endblock %}
 
 {% block secondary_content %}
