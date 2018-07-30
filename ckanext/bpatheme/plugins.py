@@ -1,6 +1,7 @@
 
 from ckan.plugins import toolkit, IConfigurer, SingletonPlugin, implements
 
+
 class CustomTheme(SingletonPlugin):
     implements(IConfigurer)
 
