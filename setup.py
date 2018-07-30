@@ -3,7 +3,7 @@ from setuptools import setup
 
 setup(
     name='ckanext-bpatheme',
-    version='0.81.1',
+    version='0.82.0',
     description='',
     license='AGPL3',
     author='CCG, Murdoch University',
