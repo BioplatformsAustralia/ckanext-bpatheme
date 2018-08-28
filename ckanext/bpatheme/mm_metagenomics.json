@@ -103,6 +103,11 @@
             "label": "beta_epi_car"
         },
         {
+            "field_name": "bleaching",
+            "form_placeholder": "",
+            "label": "bleaching"
+        },
+        {
             "field_name": "bottom_depth",
             "form_placeholder": "",
             "label": "bottom_depth"
@@ -283,6 +288,16 @@
             "label": "folder_name"
         },
         {
+            "field_name": "fouling",
+            "form_placeholder": "",
+            "label": "fouling"
+        },
+        {
+            "field_name": "fouling_organisms",
+            "form_placeholder": "",
+            "label": "fouling_organisms"
+        },
+        {
             "field_name": "fuco",
             "form_placeholder": "",
             "label": "fuco"
@@ -318,6 +333,11 @@
             "label": "host_state"
         },
         {
+            "field_name": "information",
+            "form_placeholder": "",
+            "label": "information"
+        },
+        {
             "field_name": "inorganic_fraction",
             "form_placeholder": "",
             "label": "inorganic_fraction"
@@ -336,6 +356,11 @@
             "field_name": "latitude",
             "form_placeholder": "",
             "label": "latitude"
+        },
+        {
+            "field_name": "length",
+            "form_placeholder": "",
+            "label": "length"
         },
         {
             "field_name": "library_construction_protocol",
@@ -646,6 +671,11 @@
             "field_name": "total_co2",
             "form_placeholder": "",
             "label": "total_co2"
+        },
+        {
+            "field_name": "touching_organisms",
+            "form_placeholder": "",
+            "label": "touching_organisms"
         },
         {
             "field_name": "transmittance",
