@@ -18,6 +18,10 @@ body {
   font-size: 12pt;
 }
 
+.nav-tabs {
+  font-size: 10pt;
+}
+
 img#beta {
   position: absolute;
   top: 0;

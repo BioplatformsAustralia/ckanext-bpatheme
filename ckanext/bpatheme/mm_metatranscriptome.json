@@ -168,6 +168,16 @@
             "label": "license_id"
         },
         {
+            "field_name": "light_intensity_meadow",
+            "form_placeholder": "",
+            "label": "light_intensity_meadow"
+        },
+        {
+            "field_name": "light_intensity_surface",
+            "form_placeholder": "",
+            "label": "light_intensity_surface"
+        },
+        {
             "field_name": "longitude",
             "form_placeholder": "",
             "label": "longitude"
@@ -216,6 +226,11 @@
             "field_name": "per_total_phosphorous",
             "form_placeholder": "",
             "label": "per_total_phosphorous"
+        },
+        {
+            "field_name": "pulse_amplitude_modulated_pam_fluorometer_measurement",
+            "form_placeholder": "",
+            "label": "pulse_amplitude_modulated_pam_fluorometer_measurement"
         },
         {
             "field_name": "read_length",
