@@ -337,3 +337,7 @@ body {
 .dwga-inlineblock {
     /*display: block;*/
 }
+
+h2, h3 {
+    padding-top: 18px;
+}
