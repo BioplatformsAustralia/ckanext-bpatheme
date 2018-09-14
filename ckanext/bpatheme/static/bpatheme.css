@@ -214,6 +214,10 @@ img#beta {
 .module-content:last-child {
   padding-bottom: 0px;
 }
+.module-content p {
+  margin-top: 1em;
+  margin-bottom: 1em;
+}
 .homepage .module-search {
   padding: 0px;
 }
