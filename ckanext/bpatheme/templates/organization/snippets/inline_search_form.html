@@ -12,8 +12,6 @@
     <div class="search-input control-group {{ search_class }}">
 
 
-    {% if c.group_dict.name != 'australian-microbiome' %}
-
       <input type="text" class="search" name="q" value="{{ query }}" autocomplete="off" placeholder="{{ placeholder }}">
 
       {% block search_input_button %}
@@ -22,9 +20,6 @@
         <span>{{ _('Submit') }}</span>
       </button>
       {% endblock %}
-
-      {% endif %}
-
 
       {% if c.group_dict.name == 'bpa-sepsis' %}
       <p>
