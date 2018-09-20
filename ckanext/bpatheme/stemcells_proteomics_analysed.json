@@ -168,6 +168,11 @@
             "label": "proteome_size"
         },
         {
+            "field_name": "replicate_group_id",
+            "form_placeholder": "",
+            "label": "replicate_group_id"
+        },
+        {
             "field_name": "sample_description",
             "form_placeholder": "",
             "label": "sample_description"
