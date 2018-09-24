@@ -68,21 +68,6 @@
             "label": "bpa_ids"
         },
         {
-            "field_name": "contact_researcher",
-            "form_placeholder": "",
-            "label": "contact_researcher"
-        },
-        {
-            "field_name": "culture_collection_date",
-            "form_placeholder": "",
-            "label": "culture_collection_date"
-        },
-        {
-            "field_name": "culture_collection_id",
-            "form_placeholder": "",
-            "label": "culture_collection_id"
-        },
-        {
             "field_name": "data_generated",
             "form_placeholder": "",
             "label": "data_generated"
@@ -133,54 +118,9 @@
             "label": "folder_name"
         },
         {
-            "field_name": "gram_stain",
-            "form_placeholder": "",
-            "label": "gram_stain"
-        },
-        {
             "field_name": "growth_media",
             "form_placeholder": "",
             "label": "growth_media"
-        },
-        {
-            "field_name": "host_age",
-            "form_placeholder": "",
-            "label": "host_age"
-        },
-        {
-            "field_name": "host_description",
-            "form_placeholder": "",
-            "label": "host_description"
-        },
-        {
-            "field_name": "host_disease_outcome",
-            "form_placeholder": "",
-            "label": "host_disease_outcome"
-        },
-        {
-            "field_name": "host_dob",
-            "form_placeholder": "",
-            "label": "host_dob"
-        },
-        {
-            "field_name": "host_location",
-            "form_placeholder": "",
-            "label": "host_location"
-        },
-        {
-            "field_name": "host_sex",
-            "form_placeholder": "",
-            "label": "host_sex"
-        },
-        {
-            "field_name": "isolation_source",
-            "form_placeholder": "",
-            "label": "isolation_source"
-        },
-        {
-            "field_name": "key_virulence_genes",
-            "form_placeholder": "",
-            "label": "key_virulence_genes"
         },
         {
             "field_name": "name",
@@ -198,34 +138,9 @@
             "label": "omics"
         },
         {
-            "field_name": "publication_reference",
-            "form_placeholder": "",
-            "label": "publication_reference"
-        },
-        {
             "field_name": "sample_submission_date",
             "form_placeholder": "",
             "label": "sample_submission_date"
-        },
-        {
-            "field_name": "serovar",
-            "form_placeholder": "",
-            "label": "serovar"
-        },
-        {
-            "field_name": "strain_description",
-            "form_placeholder": "",
-            "label": "strain_description"
-        },
-        {
-            "field_name": "strain_or_isolate",
-            "form_placeholder": "",
-            "label": "strain_or_isolate"
-        },
-        {
-            "field_name": "taxon_or_organism",
-            "form_placeholder": "",
-            "label": "taxon_or_organism"
         },
         {
             "field_name": "ticket",

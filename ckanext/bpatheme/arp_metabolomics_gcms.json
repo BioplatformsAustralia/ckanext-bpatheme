@@ -58,11 +58,6 @@
             "label": "acquisition_mode"
         },
         {
-            "field_name": "analytical_platform",
-            "form_placeholder": "",
-            "label": "analytical_platform"
-        },
-        {
             "field_name": "archive_id",
             "form_placeholder": "",
             "label": "archive_id"
