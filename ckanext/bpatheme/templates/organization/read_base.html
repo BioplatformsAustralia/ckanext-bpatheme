@@ -20,6 +20,12 @@
   {{ h.build_nav_icon('organization_about', _('Home'), id=c.group_dict.name) }}
   {{ h.build_nav_icon('organization_read', _('Datasets'), id=c.group_dict.name) }}
 
+  {% if c.page.name == 'methods' %}
+    <li class="active"><a href="/organization/pages/australian-microbiome/methods">Methods</a></li>
+  {% else %}
+    <li><a href="/organization/pages/australian-microbiome/methods">Methods</a></li>
+  {% endif %}
+
   {% if c.page.name == 'gallery' %}
     <li class="active"><a href="/organization/pages/australian-microbiome/gallery">Gallery</a></li>
   {% else %}
