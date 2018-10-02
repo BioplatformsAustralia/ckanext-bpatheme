@@ -248,10 +248,10 @@ a, a:active, a:hover, a:focus {
   .wrapper {
       background-position: 10% 0px;
   }
-  .span3 {
+  .secondary {
     width: 31%;
   }
-  .span9 {
+  .primary {
     width: 67%;
   }
 }
