@@ -236,7 +236,25 @@ a, a:active, a:hover, a:focus {
   border:none;
 }
 
+/* fix tablet view */
+@media (max-width: 768px){
+  .wrapper {
+      margin: 0 0;
+  }
+}
 
+/* Make sidebar wider to display large tags*/
+@media (min-width: 980px){
+  .wrapper {
+      background-position: 10% 0px;
+  }
+  .secondary {
+    width: 31%;
+  }
+  .primary {
+    width: 67%;
+  }
+}
 /* ====================================
    The footer at the bottom of the site
    ==================================== */
