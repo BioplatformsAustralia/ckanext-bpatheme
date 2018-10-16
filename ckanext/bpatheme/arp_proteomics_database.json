@@ -118,6 +118,11 @@
             "label": "folder_name"
         },
         {
+            "field_name": "growth_media",
+            "form_placeholder": "",
+            "label": "growth_media"
+        },
+        {
             "field_name": "name",
             "form_placeholder": "",
             "label": "name"

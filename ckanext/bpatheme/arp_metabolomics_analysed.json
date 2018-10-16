@@ -203,6 +203,11 @@
             "label": "serovar"
         },
         {
+            "field_name": "strain_or_isolate",
+            "form_placeholder": "",
+            "label": "strain_or_isolate"
+        },
+        {
             "field_name": "taxon_or_organism",
             "form_placeholder": "",
             "label": "taxon_or_organism"
