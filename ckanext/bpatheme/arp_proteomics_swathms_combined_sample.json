@@ -113,6 +113,11 @@
             "label": "gradient_time_min"
         },
         {
+            "field_name": "growth_media",
+            "form_placeholder": "",
+            "label": "growth_media"
+        },
+        {
             "field_name": "lc_column_type",
             "form_placeholder": "",
             "label": "lc_column_type"
@@ -151,6 +156,16 @@
             "field_name": "sample_submission_date",
             "form_placeholder": "",
             "label": "sample_submission_date"
+        },
+        {
+            "field_name": "strain_or_isolate",
+            "form_placeholder": "",
+            "label": "strain_or_isolate"
+        },
+        {
+            "field_name": "taxon_or_organism",
+            "form_placeholder": "",
+            "label": "taxon_or_organism"
         },
         {
             "field_name": "ticket",
