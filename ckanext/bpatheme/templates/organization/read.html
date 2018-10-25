@@ -1,6 +1,12 @@
 {% extends "organization/read_base.html" %}
 
 {% block page_primary_action %}
+
+  {% if c.group_dict.name == 'australian-microbiome' %}
+    {% snippet 'snippets/amdb_buttons.html', c=c %}
+    <div class="row" style="padding-bottom: 1em;"></div>
+  {% endif %}
+
   {% if h.check_access('package_create', {'owner_org': c.group_dict.id}) %}
     {% link_for _('Add Dataset'), controller='package', action='new', group=c.group_dict.id, class_='btn btn-primary', icon='plus-sign-alt' %}
   {% endif %}
