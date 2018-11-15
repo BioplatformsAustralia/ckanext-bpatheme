@@ -298,11 +298,6 @@
             "label": "ticket"
         },
         {
-            "field_name": "tickets",
-            "form_placeholder": "",
-            "label": "tickets"
-        },
-        {
             "field_name": "title",
             "form_placeholder": "",
             "label": "title"
