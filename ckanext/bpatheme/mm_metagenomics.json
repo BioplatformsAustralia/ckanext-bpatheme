@@ -113,11 +113,6 @@
             "label": "bottom_depth"
         },
         {
-            "field_name": "bpa_id",
-            "form_placeholder": "",
-            "label": "bpa_id"
-        },
-        {
             "field_name": "but_fuco",
             "form_placeholder": "",
             "label": "but_fuco"
@@ -273,6 +268,11 @@
             "label": "echin"
         },
         {
+            "field_name": "environment",
+            "form_placeholder": "",
+            "label": "environment"
+        },
+        {
             "field_name": "facility",
             "form_placeholder": "",
             "label": "facility"
@@ -358,11 +358,6 @@
             "label": "latitude"
         },
         {
-            "field_name": "length",
-            "form_placeholder": "",
-            "label": "length"
-        },
-        {
             "field_name": "library_construction_protocol",
             "form_placeholder": "",
             "label": "library_construction_protocol"
@@ -406,11 +401,6 @@
             "field_name": "name",
             "form_placeholder": "",
             "label": "name"
-        },
-        {
-            "field_name": "ncbi_bioproject",
-            "form_placeholder": "",
-            "label": "ncbi_bioproject"
         },
         {
             "field_name": "ncbi_bioproject_accession",
@@ -593,6 +583,11 @@
             "label": "sample_extraction_id"
         },
         {
+            "field_name": "sample_id",
+            "form_placeholder": "",
+            "label": "sample_id"
+        },
+        {
             "field_name": "sample_site",
             "form_placeholder": "",
             "label": "sample_site"
@@ -606,11 +601,6 @@
             "field_name": "sample_type",
             "form_placeholder": "",
             "label": "sample_type"
-        },
-        {
-            "field_name": "samplename_depth",
-            "form_placeholder": "",
-            "label": "samplename_depth"
         },
         {
             "field_name": "secchi_depth",

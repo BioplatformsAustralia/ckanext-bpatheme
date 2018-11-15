@@ -83,11 +83,6 @@
             "label": "barcode_tag"
         },
         {
-            "field_name": "bpa_id",
-            "form_placeholder": "",
-            "label": "bpa_id"
-        },
-        {
             "field_name": "casava_version",
             "form_placeholder": "",
             "label": "casava_version"
@@ -256,6 +251,11 @@
             "field_name": "sample",
             "form_placeholder": "",
             "label": "sample"
+        },
+        {
+            "field_name": "sample_id",
+            "form_placeholder": "",
+            "label": "sample_id"
         },
         {
             "field_name": "sample_submission_date",

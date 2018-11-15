@@ -63,11 +63,6 @@
             "label": "analysis_software_version"
         },
         {
-            "field_name": "bpa_id",
-            "form_placeholder": "",
-            "label": "bpa_id"
-        },
-        {
             "field_name": "dilution",
             "form_placeholder": "",
             "label": "dilution"
@@ -141,6 +136,11 @@
             "field_name": "sample_extraction_id",
             "form_placeholder": "",
             "label": "sample_extraction_id"
+        },
+        {
+            "field_name": "sample_id",
+            "form_placeholder": "",
+            "label": "sample_id"
         },
         {
             "field_name": "sequencing_facility",
@@ -221,10 +221,6 @@
             "label": "amplicon"
         },
         {
-            "field_name": "bpa_id",
-            "label": "bpa_id"
-        },
-        {
             "field_name": "flow_id",
             "label": "flow_id"
         },
@@ -251,6 +247,10 @@
         {
             "field_name": "reach",
             "label": "reach"
+        },
+        {
+            "field_name": "sample_id",
+            "label": "sample_id"
         },
         {
             "field_name": "vendor",

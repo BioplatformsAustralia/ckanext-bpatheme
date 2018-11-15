@@ -78,11 +78,6 @@
             "label": "base_url"
         },
         {
-            "field_name": "bpa_ids",
-            "form_placeholder": "",
-            "label": "bpa_ids"
-        },
-        {
             "field_name": "contextual_data_submission_date",
             "form_placeholder": "",
             "label": "contextual_data_submission_date"
@@ -148,29 +143,9 @@
             "label": "folder_name"
         },
         {
-            "field_name": "growth_condition_growth_phase",
-            "form_placeholder": "",
-            "label": "growth_condition_growth_phase"
-        },
-        {
-            "field_name": "growth_condition_media",
-            "form_placeholder": "",
-            "label": "growth_condition_media"
-        },
-        {
-            "field_name": "growth_condition_od600_reading",
-            "form_placeholder": "",
-            "label": "growth_condition_od600_reading"
-        },
-        {
             "field_name": "growth_condition_temperature",
             "form_placeholder": "",
             "label": "growth_condition_temperature"
-        },
-        {
-            "field_name": "growth_condition_time",
-            "form_placeholder": "",
-            "label": "growth_condition_time_(h)"
         },
         {
             "field_name": "growth_media",
@@ -191,6 +166,16 @@
             "field_name": "omics",
             "form_placeholder": "",
             "label": "omics"
+        },
+        {
+            "field_name": "sample_id",
+            "form_placeholder": "",
+            "label": "sample_id"
+        },
+        {
+            "field_name": "sample_ids",
+            "form_placeholder": "",
+            "label": "sample_ids"
         },
         {
             "field_name": "sample_submission_date",

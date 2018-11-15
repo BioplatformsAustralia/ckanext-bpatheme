@@ -63,11 +63,6 @@
             "label": "base_url"
         },
         {
-            "field_name": "bpa_ids",
-            "form_placeholder": "",
-            "label": "bpa_ids"
-        },
-        {
             "field_name": "data_generated",
             "form_placeholder": "",
             "label": "data_generated"
@@ -136,6 +131,11 @@
             "field_name": "omics",
             "form_placeholder": "",
             "label": "omics"
+        },
+        {
+            "field_name": "sample_ids",
+            "form_placeholder": "",
+            "label": "sample_ids"
         },
         {
             "field_name": "sample_submission_date",
@@ -230,10 +230,6 @@
             "label": "base_url"
         },
         {
-            "field_name": "bpa_id",
-            "label": "bpa_id"
-        },
-        {
             "field_name": "database_generation_date",
             "label": "database_generation_date"
         },
@@ -264,6 +260,10 @@
         {
             "field_name": "proteome_size",
             "label": "proteome_size"
+        },
+        {
+            "field_name": "sample_id",
+            "label": "sample_id"
         },
         {
             "field_name": "serovar",
