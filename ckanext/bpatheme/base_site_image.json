@@ -168,6 +168,11 @@
             "label": "elevation"
         },
         {
+            "field_name": "environment",
+            "form_placeholder": "",
+            "label": "environment"
+        },
+        {
             "field_name": "exc_aluminium",
             "form_placeholder": "",
             "label": "exc_aluminium"
@@ -228,9 +233,9 @@
             "label": "general_ecological_zone"
         },
         {
-            "field_name": "geo_loc_name",
+            "field_name": "geo_loc",
             "form_placeholder": "",
-            "label": "geo_loc_name"
+            "label": "geo_loc"
         },
         {
             "field_name": "gravel",
@@ -311,6 +316,11 @@
             "field_name": "profile_position",
             "form_placeholder": "",
             "label": "profile_position"
+        },
+        {
+            "field_name": "sample_type",
+            "form_placeholder": "",
+            "label": "sample_type"
         },
         {
             "field_name": "sand",

@@ -53,11 +53,6 @@
             "label": "License"
         },
         {
-            "field_name": "bpa_id",
-            "form_placeholder": "",
-            "label": "bpa_id"
-        },
-        {
             "field_name": "casava_version",
             "form_placeholder": "",
             "label": "casava_version"
@@ -111,6 +106,11 @@
             "field_name": "run_number",
             "form_placeholder": "",
             "label": "run_number"
+        },
+        {
+            "field_name": "sample_id",
+            "form_placeholder": "",
+            "label": "sample_id"
         },
         {
             "field_name": "sequencer",
@@ -187,10 +187,6 @@
             "preset": "resource_format_autocomplete"
         },
         {
-            "field_name": "bpa_id",
-            "label": "bpa_id"
-        },
-        {
             "field_name": "flow_cell_id",
             "label": "flow_cell_id"
         },
@@ -209,6 +205,10 @@
         {
             "field_name": "run_number",
             "label": "run_number"
+        },
+        {
+            "field_name": "sample_id",
+            "label": "sample_id"
         },
         {
             "field_name": "vendor",

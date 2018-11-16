@@ -68,11 +68,6 @@
             "label": "archive_ingestion_date"
         },
         {
-            "field_name": "bpa_id",
-            "form_placeholder": "",
-            "label": "bpa_id"
-        },
-        {
             "field_name": "coastal_id",
             "form_placeholder": "",
             "label": "coastal_id"
@@ -116,6 +111,11 @@
             "field_name": "description",
             "form_placeholder": "",
             "label": "description"
+        },
+        {
+            "field_name": "environment",
+            "form_placeholder": "",
+            "label": "environment"
         },
         {
             "field_name": "facility",
@@ -241,6 +241,11 @@
             "field_name": "sample_extraction_id",
             "form_placeholder": "",
             "label": "sample_extraction_id"
+        },
+        {
+            "field_name": "sample_id",
+            "form_placeholder": "",
+            "label": "sample_id"
         },
         {
             "field_name": "sample_site",

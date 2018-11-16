@@ -68,16 +68,6 @@
             "label": "bpa_dataset_id"
         },
         {
-            "field_name": "bpa_id",
-            "form_placeholder": "",
-            "label": "bpa_id"
-        },
-        {
-            "field_name": "bpa_id_range",
-            "form_placeholder": "",
-            "label": "bpa_id_range"
-        },
-        {
             "field_name": "cell_type",
             "form_placeholder": "",
             "label": "cell_type"
@@ -201,6 +191,16 @@
             "field_name": "sample_description",
             "form_placeholder": "",
             "label": "sample_description"
+        },
+        {
+            "field_name": "sample_id",
+            "form_placeholder": "",
+            "label": "sample_id"
+        },
+        {
+            "field_name": "sample_id_range",
+            "form_placeholder": "",
+            "label": "sample_id_range"
         },
         {
             "field_name": "sample_name",
