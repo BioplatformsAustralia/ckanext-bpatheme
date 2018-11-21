@@ -55,17 +55,17 @@
         {
             "field_name": "allo",
             "form_placeholder": "",
-            "label": "allo"
+            "label": "allo (mg/m3)"
         },
         {
             "field_name": "alpha_beta_car",
             "form_placeholder": "",
-            "label": "alpha_beta_car"
+            "label": "alpha_beta_car (mg/m3)"
         },
         {
             "field_name": "ammonium",
             "form_placeholder": "",
-            "label": "ammonium"
+            "label": "ammonium (\u03bcmol/l)"
         },
         {
             "field_name": "amplicon",
@@ -85,7 +85,7 @@
         {
             "field_name": "anth",
             "form_placeholder": "",
-            "label": "anth"
+            "label": "anth (mg/m3)"
         },
         {
             "field_name": "archive_ingestion_date",
@@ -95,22 +95,27 @@
         {
             "field_name": "asta",
             "form_placeholder": "",
-            "label": "asta"
+            "label": "asta (mg/m3)"
+        },
+        {
+            "field_name": "average_host_abundance",
+            "form_placeholder": "",
+            "label": "average_host_abundance (%)"
         },
         {
             "field_name": "beta_beta_car",
             "form_placeholder": "",
-            "label": "beta_beta_car"
+            "label": "beta_beta_car (mg/m3)"
         },
         {
             "field_name": "beta_epi_car",
             "form_placeholder": "",
-            "label": "beta_epi_car"
+            "label": "beta_epi_car (mg/m3)"
         },
         {
             "field_name": "bleaching",
             "form_placeholder": "",
-            "label": "bleaching"
+            "label": "bleaching (%)"
         },
         {
             "field_name": "bottom_depth",
@@ -120,12 +125,12 @@
         {
             "field_name": "but_fuco",
             "form_placeholder": "",
-            "label": "but_fuco"
+            "label": "but_fuco (mg/m3)"
         },
         {
             "field_name": "cantha",
             "form_placeholder": "",
-            "label": "cantha"
+            "label": "cantha (mg/m3)"
         },
         {
             "field_name": "chlf_ctd",
@@ -135,7 +140,7 @@
         {
             "field_name": "chlorophyll_a",
             "form_placeholder": "",
-            "label": "chlorophyll_a"
+            "label": "chlorophyll_a (\u03bcg/l)"
         },
         {
             "field_name": "coastal_id",
@@ -148,9 +153,9 @@
             "label": "comments"
         },
         {
-            "field_name": "conductivity",
+            "field_name": "conductivity_sm",
             "form_placeholder": "",
-            "label": "conductivity"
+            "label": "conductivity_sm (s/m)"
         },
         {
             "field_name": "contextual_data_submission_date",
@@ -160,37 +165,37 @@
         {
             "field_name": "cphl_a",
             "form_placeholder": "",
-            "label": "cphl_a"
+            "label": "cphl_a (mg/m3)"
         },
         {
             "field_name": "cphl_b",
             "form_placeholder": "",
-            "label": "cphl_b"
+            "label": "cphl_b (mg/m3)"
         },
         {
             "field_name": "cphl_c1",
             "form_placeholder": "",
-            "label": "cphl_c1"
+            "label": "cphl_c1 (mg/m3)"
         },
         {
             "field_name": "cphl_c1c2",
             "form_placeholder": "",
-            "label": "cphl_c1c2"
+            "label": "cphl_c1c2 (mg/m3)"
         },
         {
             "field_name": "cphl_c2",
             "form_placeholder": "",
-            "label": "cphl_c2"
+            "label": "cphl_c2 (mg/m3)"
         },
         {
             "field_name": "cphl_c3",
             "form_placeholder": "",
-            "label": "cphl_c3"
+            "label": "cphl_c3 (mg/m3)"
         },
         {
             "field_name": "cphlide_a",
             "form_placeholder": "",
-            "label": "cphlide_a"
+            "label": "cphlide_a (mg/m3)"
         },
         {
             "field_name": "data_generated",
@@ -218,14 +223,14 @@
             "label": "date_sampled"
         },
         {
-            "field_name": "density",
+            "field_name": "density_ctd",
             "form_placeholder": "",
-            "label": "density"
+            "label": "density_ctd (density, kg/m^3)"
         },
         {
             "field_name": "depth",
             "form_placeholder": "",
-            "label": "depth"
+            "label": "depth (m)"
         },
         {
             "field_name": "description",
@@ -235,17 +240,17 @@
         {
             "field_name": "diadchr",
             "form_placeholder": "",
-            "label": "diadchr"
+            "label": "diadchr (mg/m3)"
         },
         {
             "field_name": "diadino",
             "form_placeholder": "",
-            "label": "diadino"
+            "label": "diadino (mg/m3)"
         },
         {
             "field_name": "diato",
             "form_placeholder": "",
-            "label": "diato"
+            "label": "diato (mg/m3)"
         },
         {
             "field_name": "dilution_used",
@@ -255,32 +260,32 @@
         {
             "field_name": "dino",
             "form_placeholder": "",
-            "label": "dino"
+            "label": "dino (mg/m3)"
         },
         {
             "field_name": "dv_cphl_a",
             "form_placeholder": "",
-            "label": "dv_cphl_a"
+            "label": "dv_cphl_a (mg/m3)"
         },
         {
             "field_name": "dv_cphl_a_and_cphl_a",
             "form_placeholder": "",
-            "label": "dv_cphl_a_and_cphl_a"
+            "label": "dv_cphl_a_and_cphl_a (mg/m3)"
         },
         {
             "field_name": "dv_cphl_b",
             "form_placeholder": "",
-            "label": "dv_cphl_b"
+            "label": "dv_cphl_b (mg/m3)"
         },
         {
             "field_name": "dv_cphl_b_and_cphl_b",
             "form_placeholder": "",
-            "label": "dv_cphl_b_and_cphl_b"
+            "label": "dv_cphl_b_and_cphl_b (mg/m3)"
         },
         {
             "field_name": "echin",
             "form_placeholder": "",
-            "label": "echin"
+            "label": "echin (mg/m3)"
         },
         {
             "field_name": "environment",
@@ -293,6 +298,11 @@
             "label": "facility"
         },
         {
+            "field_name": "fine_sediment",
+            "form_placeholder": "",
+            "label": "fine_sediment (%)"
+        },
+        {
             "field_name": "flow_id",
             "form_placeholder": "",
             "label": "flow_id"
@@ -300,7 +310,7 @@
         {
             "field_name": "fluorescence",
             "form_placeholder": "",
-            "label": "fluorescence"
+            "label": "fluorescence (au)"
         },
         {
             "field_name": "folder_name",
@@ -310,7 +320,7 @@
         {
             "field_name": "fouling",
             "form_placeholder": "",
-            "label": "fouling"
+            "label": "fouling (%)"
         },
         {
             "field_name": "fouling_organisms",
@@ -320,27 +330,42 @@
         {
             "field_name": "fuco",
             "form_placeholder": "",
-            "label": "fuco"
+            "label": "fuco (mg/m3)"
         },
         {
             "field_name": "geo_loc",
             "form_placeholder": "",
-            "label": "geo_loc"
+            "label": "geo_loc (country:subregion)"
+        },
+        {
+            "field_name": "grazing",
+            "form_placeholder": "",
+            "label": "grazing (%)"
+        },
+        {
+            "field_name": "grazing_number",
+            "form_placeholder": "",
+            "label": "grazing_number"
         },
         {
             "field_name": "gyro",
             "form_placeholder": "",
-            "label": "gyro"
+            "label": "gyro (mg/m3)"
         },
         {
             "field_name": "hex_fuco",
             "form_placeholder": "",
-            "label": "hex_fuco"
+            "label": "hex_fuco (mg/m3)"
         },
         {
             "field_name": "host_abundance",
             "form_placeholder": "",
-            "label": "host_abundance"
+            "label": "host_abundance (individuals per m2)"
+        },
+        {
+            "field_name": "host_abundance_seaweed",
+            "form_placeholder": "",
+            "label": "host_abundance_seaweed (mean number ind per m2 +/- se)"
         },
         {
             "field_name": "host_species",
@@ -360,17 +385,22 @@
         {
             "field_name": "inorganic_fraction",
             "form_placeholder": "",
-            "label": "inorganic_fraction"
+            "label": "inorganic_fraction (mg/l)"
         },
         {
             "field_name": "keto_hex_fuco",
             "form_placeholder": "",
-            "label": "keto_hex_fuco"
+            "label": "keto_hex_fuco (mg/m3)"
         },
         {
             "field_name": "latitude",
             "form_placeholder": "",
-            "label": "latitude"
+            "label": "latitude (decimal degrees)"
+        },
+        {
+            "field_name": "length",
+            "form_placeholder": "",
+            "label": "length (cm)"
         },
         {
             "field_name": "license_id",
@@ -380,42 +410,42 @@
         {
             "field_name": "light_intensity",
             "form_placeholder": "",
-            "label": "light_intensity"
+            "label": "light_intensity (lux)"
         },
         {
             "field_name": "light_intensity_meadow",
             "form_placeholder": "",
-            "label": "light_intensity_meadow"
+            "label": "light_intensity_meadow (\u00b5mol/m\u00b2/s\u00af\u00b9)"
         },
         {
             "field_name": "light_intensity_surface",
             "form_placeholder": "",
-            "label": "light_intensity_surface"
+            "label": "light_intensity_surface (\u00b5mol/m\u00b2/s\u00af\u00b9)"
         },
         {
             "field_name": "longitude",
             "form_placeholder": "",
-            "label": "longitude"
+            "label": "longitude (decimal degrees)"
         },
         {
             "field_name": "lut",
             "form_placeholder": "",
-            "label": "lut"
+            "label": "lut (mg/m3)"
         },
         {
             "field_name": "lyco",
             "form_placeholder": "",
-            "label": "lyco"
+            "label": "lyco (mg/m3)"
         },
         {
             "field_name": "mg_dvp",
             "form_placeholder": "",
-            "label": "mg_dvp"
+            "label": "mg_dvp (mg/m3)"
         },
         {
             "field_name": "microbial_abundance",
             "form_placeholder": "",
-            "label": "microbial_abundance"
+            "label": "microbial_abundance (cells per ml)"
         },
         {
             "field_name": "mm_amplicon_linkage",
@@ -440,22 +470,37 @@
         {
             "field_name": "neo",
             "form_placeholder": "",
-            "label": "neo"
+            "label": "neo (mg/m3)"
         },
         {
             "field_name": "nitrate_nitrite",
             "form_placeholder": "",
-            "label": "nitrate_nitrite"
+            "label": "nitrate_nitrite (\u03bcmol/l)"
         },
         {
             "field_name": "nitrite",
             "form_placeholder": "",
-            "label": "nitrite"
+            "label": "nitrite (\u03bcmol/l)"
+        },
+        {
+            "field_name": "no2",
+            "form_placeholder": "",
+            "label": "no2 (\u00b5mol/l)"
         },
         {
             "field_name": "notes",
             "form_placeholder": "",
             "label": "notes"
+        },
+        {
+            "field_name": "npic",
+            "form_placeholder": "",
+            "label": "npic (mg/l)"
+        },
+        {
+            "field_name": "npoc",
+            "form_placeholder": "",
+            "label": "npoc (mg/l)"
         },
         {
             "field_name": "nrs_location_code_voyage_code",
@@ -480,7 +525,7 @@
         {
             "field_name": "organic_fraction",
             "form_placeholder": "",
-            "label": "organic_fraction"
+            "label": "organic_fraction (mg/l)"
         },
         {
             "field_name": "organism",
@@ -488,14 +533,24 @@
             "label": "organism"
         },
         {
-            "field_name": "oxygen_ctd",
+            "field_name": "oxygen_ctd_coastal_water",
             "form_placeholder": "",
-            "label": "oxygen_ctd"
+            "label": "oxygen_ctd_coastal_water (ml/l)"
+        },
+        {
+            "field_name": "oxygen_ctd_pelagic",
+            "form_placeholder": "",
+            "label": "oxygen_ctd_pelagic (\u03bcmol/kg)"
         },
         {
             "field_name": "oxygen_lab",
             "form_placeholder": "",
-            "label": "oxygen_lab"
+            "label": "oxygen_lab (\u03bcmol/l)"
+        },
+        {
+            "field_name": "pam_fluorometer",
+            "form_placeholder": "",
+            "label": "pam_fluorometer (pam)"
         },
         {
             "field_name": "pass_fail",
@@ -503,64 +558,49 @@
             "label": "pass_fail"
         },
         {
-            "field_name": "per_fine_sediment",
-            "form_placeholder": "",
-            "label": "per_fine_sediment"
-        },
-        {
-            "field_name": "per_total_carbon",
-            "form_placeholder": "",
-            "label": "per_total_carbon"
-        },
-        {
-            "field_name": "per_total_inorganc_carbon",
-            "form_placeholder": "",
-            "label": "per_total_inorganc_carbon"
-        },
-        {
-            "field_name": "per_total_nitrogen",
-            "form_placeholder": "",
-            "label": "per_total_nitrogen"
-        },
-        {
-            "field_name": "per_total_phosphorous",
-            "form_placeholder": "",
-            "label": "per_total_phosphorous"
-        },
-        {
             "field_name": "perid",
             "form_placeholder": "",
-            "label": "perid"
+            "label": "perid (mg/m3)"
         },
         {
             "field_name": "ph_level",
             "form_placeholder": "",
-            "label": "ph_level"
+            "label": "ph_level (h2o)"
         },
         {
             "field_name": "phide_a",
             "form_placeholder": "",
-            "label": "phide_a"
+            "label": "phide_a (mg/m3)"
         },
         {
             "field_name": "phosphate",
             "form_placeholder": "",
-            "label": "phosphate"
+            "label": "phosphate (\u03bcmol/l)"
         },
         {
             "field_name": "phytin_a",
             "form_placeholder": "",
-            "label": "phytin_a"
+            "label": "phytin_a (mg/m3)"
         },
         {
             "field_name": "phytin_b",
             "form_placeholder": "",
-            "label": "phytin_b"
+            "label": "phytin_b (mg/m3)"
+        },
+        {
+            "field_name": "pn",
+            "form_placeholder": "",
+            "label": "pn (\u00b5mol/l)"
+        },
+        {
+            "field_name": "poc",
+            "form_placeholder": "",
+            "label": "poc (\u00b5mol/l)"
         },
         {
             "field_name": "pras",
             "form_placeholder": "",
-            "label": "pras"
+            "label": "pras (mg/m3)"
         },
         {
             "field_name": "pressure_bottle",
@@ -568,24 +608,14 @@
             "label": "pressure_bottle"
         },
         {
-            "field_name": "pulse_amplitude_modulated_fluorometer_measurement",
-            "form_placeholder": "",
-            "label": "pulse_amplitude_modulated_fluorometer_measurement"
-        },
-        {
-            "field_name": "pulse_amplitude_modulated_pam_fluorometer_measurement",
-            "form_placeholder": "",
-            "label": "pulse_amplitude_modulated_pam_fluorometer_measurement"
-        },
-        {
             "field_name": "pyrophide_a",
             "form_placeholder": "",
-            "label": "pyrophide_a"
+            "label": "pyrophide_a (mg/m3)"
         },
         {
             "field_name": "pyrophytin_a",
             "form_placeholder": "",
-            "label": "pyrophytin_a"
+            "label": "pyrophytin_a (mg/m3)"
         },
         {
             "field_name": "read_length",
@@ -598,19 +628,14 @@
             "label": "reads"
         },
         {
-            "field_name": "salinity",
-            "form_placeholder": "",
-            "label": "salinity"
-        },
-        {
             "field_name": "salinity_ctd",
             "form_placeholder": "",
-            "label": "salinity_ctd"
+            "label": "salinity_ctd (psu)"
         },
         {
             "field_name": "salinity_lab",
             "form_placeholder": "",
-            "label": "salinity_lab"
+            "label": "salinity_lab (psu)"
         },
         {
             "field_name": "sample_extraction_id",
@@ -638,19 +663,29 @@
             "label": "sample_type"
         },
         {
+            "field_name": "samplename_depth",
+            "form_placeholder": "",
+            "label": "samplename_depth"
+        },
+        {
             "field_name": "secchi_depth",
             "form_placeholder": "",
-            "label": "secchi_depth"
+            "label": "secchi_depth (m)"
         },
         {
             "field_name": "sedimentation_rate",
             "form_placeholder": "",
-            "label": "sedimentation_rate"
+            "label": "sedimentation_rate (g /(cm2 x y)"
         },
         {
             "field_name": "silicate",
             "form_placeholder": "",
-            "label": "silicate"
+            "label": "silicate (\u03bcmol/l)"
+        },
+        {
+            "field_name": "sio2",
+            "form_placeholder": "",
+            "label": "sio2 (\u00b5mol/l)"
         },
         {
             "field_name": "submitter",
@@ -663,14 +698,14 @@
             "label": "target"
         },
         {
-            "field_name": "tax_id",
-            "form_placeholder": "",
-            "label": "tax_id"
-        },
-        {
             "field_name": "temperature",
             "form_placeholder": "",
-            "label": "temperature"
+            "label": "temperature (its-90, deg c)"
+        },
+        {
+            "field_name": "temperature_ctd",
+            "form_placeholder": "",
+            "label": "temperature_ctd (its-90, deg c)"
         },
         {
             "field_name": "ticket",
@@ -690,12 +725,32 @@
         {
             "field_name": "total_alkalinity",
             "form_placeholder": "",
-            "label": "total_alkalinity"
+            "label": "total_alkalinity (\u03bcmol/kg)"
+        },
+        {
+            "field_name": "total_carbon",
+            "form_placeholder": "",
+            "label": "total_carbon (%)"
         },
         {
             "field_name": "total_co2",
             "form_placeholder": "",
-            "label": "total_co2"
+            "label": "total_co2 (\u03bcmol/kg)"
+        },
+        {
+            "field_name": "total_inorganc_carbon",
+            "form_placeholder": "",
+            "label": "total_inorganc_carbon (%)"
+        },
+        {
+            "field_name": "total_nitrogen",
+            "form_placeholder": "",
+            "label": "total_nitrogen (%)"
+        },
+        {
+            "field_name": "total_phosphorous",
+            "form_placeholder": "",
+            "label": "total_phosphorous (%)"
         },
         {
             "field_name": "touching_organisms",
@@ -705,22 +760,27 @@
         {
             "field_name": "transmittance",
             "form_placeholder": "",
-            "label": "transmittance"
+            "label": "transmittance (%)"
         },
         {
             "field_name": "tss",
             "form_placeholder": "",
-            "label": "tss"
+            "label": "tss (mg/l)"
         },
         {
             "field_name": "turbidity",
             "form_placeholder": "",
-            "label": "turbidity"
+            "label": "turbidity (upoly 0, wet labs flnturt)"
+        },
+        {
+            "field_name": "turbidity_ctd",
+            "form_placeholder": "",
+            "label": "turbidity_ctd (nephelometric turbidity units)"
         },
         {
             "field_name": "viola",
             "form_placeholder": "",
-            "label": "viola"
+            "label": "viola (mg/m3)"
         },
         {
             "field_name": "work_order",
@@ -730,7 +790,7 @@
         {
             "field_name": "zea",
             "form_placeholder": "",
-            "label": "zea"
+            "label": "zea (mg/m3)"
         }
     ],
     "dataset_type": "mm-genomics-amplicon",

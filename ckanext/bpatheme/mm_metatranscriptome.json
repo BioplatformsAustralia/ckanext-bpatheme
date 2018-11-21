@@ -105,7 +105,7 @@
         {
             "field_name": "depth",
             "form_placeholder": "",
-            "label": "depth"
+            "label": "depth (m)"
         },
         {
             "field_name": "description",
@@ -123,6 +123,11 @@
             "label": "facility"
         },
         {
+            "field_name": "fine_sediment",
+            "form_placeholder": "",
+            "label": "fine_sediment (%)"
+        },
+        {
             "field_name": "folder_name",
             "form_placeholder": "",
             "label": "folder_name"
@@ -130,12 +135,12 @@
         {
             "field_name": "geo_loc",
             "form_placeholder": "",
-            "label": "geo_loc"
+            "label": "geo_loc (country:subregion)"
         },
         {
             "field_name": "host_abundance",
             "form_placeholder": "",
-            "label": "host_abundance"
+            "label": "host_abundance (individuals per m2)"
         },
         {
             "field_name": "host_species",
@@ -155,7 +160,7 @@
         {
             "field_name": "latitude",
             "form_placeholder": "",
-            "label": "latitude"
+            "label": "latitude (decimal degrees)"
         },
         {
             "field_name": "library_construction_protocol",
@@ -170,17 +175,17 @@
         {
             "field_name": "light_intensity_meadow",
             "form_placeholder": "",
-            "label": "light_intensity_meadow"
+            "label": "light_intensity_meadow (\u00b5mol/m\u00b2/s\u00af\u00b9)"
         },
         {
             "field_name": "light_intensity_surface",
             "form_placeholder": "",
-            "label": "light_intensity_surface"
+            "label": "light_intensity_surface (\u00b5mol/m\u00b2/s\u00af\u00b9)"
         },
         {
             "field_name": "longitude",
             "form_placeholder": "",
-            "label": "longitude"
+            "label": "longitude (decimal degrees)"
         },
         {
             "field_name": "name",
@@ -208,29 +213,14 @@
             "label": "omics"
         },
         {
-            "field_name": "per_fine_sediment",
+            "field_name": "organism",
             "form_placeholder": "",
-            "label": "per_fine_sediment"
+            "label": "organism"
         },
         {
-            "field_name": "per_total_carbon",
+            "field_name": "pam_fluorometer",
             "form_placeholder": "",
-            "label": "per_total_carbon"
-        },
-        {
-            "field_name": "per_total_nitrogen",
-            "form_placeholder": "",
-            "label": "per_total_nitrogen"
-        },
-        {
-            "field_name": "per_total_phosphorous",
-            "form_placeholder": "",
-            "label": "per_total_phosphorous"
-        },
-        {
-            "field_name": "pulse_amplitude_modulated_pam_fluorometer_measurement",
-            "form_placeholder": "",
-            "label": "pulse_amplitude_modulated_pam_fluorometer_measurement"
+            "label": "pam_fluorometer (pam)"
         },
         {
             "field_name": "read_length",
@@ -263,9 +253,14 @@
             "label": "sample_type"
         },
         {
+            "field_name": "samplename_depth",
+            "form_placeholder": "",
+            "label": "samplename_depth"
+        },
+        {
             "field_name": "sedimentation_rate",
             "form_placeholder": "",
-            "label": "sedimentation_rate"
+            "label": "sedimentation_rate (g /(cm2 x y)"
         },
         {
             "field_name": "sequencer",
@@ -291,6 +286,21 @@
             "field_name": "title",
             "form_placeholder": "",
             "label": "title"
+        },
+        {
+            "field_name": "total_carbon",
+            "form_placeholder": "",
+            "label": "total_carbon (%)"
+        },
+        {
+            "field_name": "total_nitrogen",
+            "form_placeholder": "",
+            "label": "total_nitrogen (%)"
+        },
+        {
+            "field_name": "total_phosphorous",
+            "form_placeholder": "",
+            "label": "total_phosphorous (%)"
         },
         {
             "field_name": "work_order",
