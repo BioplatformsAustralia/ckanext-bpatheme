@@ -133,6 +133,11 @@
             "label": "genus"
         },
         {
+            "field_name": "library_comments",
+            "form_placeholder": "",
+            "label": "library_comments"
+        },
+        {
             "field_name": "library_location",
             "form_placeholder": "",
             "label": "library_location"
@@ -191,6 +196,11 @@
             "field_name": "omg_project",
             "form_placeholder": "",
             "label": "omg_project"
+        },
+        {
+            "field_name": "plate_name",
+            "form_placeholder": "",
+            "label": "plate_name"
         },
         {
             "field_name": "sample_submission_date",

@@ -235,10 +235,6 @@
             "label": "name"
         },
         {
-            "field_name": "ncbi_file_uploaded",
-            "label": "ncbi_file_uploaded"
-        },
-        {
             "field_name": "resource_type",
             "label": "resource_type"
         },

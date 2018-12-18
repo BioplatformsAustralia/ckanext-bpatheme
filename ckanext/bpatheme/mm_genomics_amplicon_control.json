@@ -202,6 +202,10 @@
             "preset": "resource_format_autocomplete"
         },
         {
+            "field_name": "amplicon",
+            "label": "amplicon"
+        },
+        {
             "field_name": "control_type",
             "label": "control_type"
         },
