@@ -95,9 +95,20 @@
       {% block header_logo %}
 				<div class="dwga-logo dwga-inlineblock">
   				<a class="logo pull-left" href="{{ h.url('home') }}"><img src="{{ h.url_for_static_or_external('bpalogo_withdataportal.png') }}" alt="{{ g.site_title }}" title="{{ g.site_title }}" /></a>
+        </div>
       {% endblock header_logo %}
 
+      <div class="nav dwga-inlineblock pull-right">
+      <nav class="section navigation account not-authed">
+        <ul class="nav nav-pills unstyled" >
+          <li><a href="{{ h.url('home') }}">Home</a></li>
+          <li><a href="{{ h.url('about') }}">About</a></li>
+        </ul>
+      </nav>
+    </div>
+
     </hgroup><!-- /.dwga-row -->
+    
 
   </div>
 </header>
