@@ -1,0 +1,43 @@
+{% extends "page.html" %}
+
+{% block subtitle %}{{ _('Citation and attribution') }}{% endblock %}
+
+{% block breadcrumb_content %}
+  <li class="active">{% link_for _('Citation and attribution'), controller='home', action='credits' %}</li>
+{% endblock %}
+
+{% block primary %}
+<div class="primary">
+  <article class="module">
+    <div class="module-content">
+      {% block about %}
+        {% if g.site_about %}
+          {{ h.render_markdown(g.site_about) }}
+        {% else %}
+          <h1 class="page-heading">{{ _('Citation and attribution') }}</h1>
+          <p>Coming Soon...</p>
+        {% endif %}
+      {% endblock %}
+    </div>
+  </article>
+</div>
+{% endblock %}
+
+
+{% block secondary %}
+    <aside class="secondary">
+        <section class="module module-narrow">
+            <div class="module context-info">
+                <nav class="section navigation">
+                    <ul class="nav nav-aside" id="about-menu">
+                        <li>{% link_for _('About'), controller='home', action='about' %}</li>
+                        <li class="active">{% link_for _('Citation and attribution'), controller='home', action='citation' %}</li>
+                        <li>{% link_for _('API Access'), controller='home', action='apiaccess' %}</a></li>
+                        <li>{% link_for _('Credits'), controller='home', action='credits' %}</li>
+                        <li>{% link_for _('Site statistics'), controller='home', action='stats' %}</li>
+                    </ul>
+                </nav>
+            </div>
+        </section>
+    </aside>
+{% endblock %}
