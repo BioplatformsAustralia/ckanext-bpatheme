@@ -308,16 +308,6 @@
             "label": "library_comments"
         },
         {
-            "field_name": "library_index_id",
-            "form_placeholder": "",
-            "label": "library_index_id"
-        },
-        {
-            "field_name": "library_index_sequence",
-            "form_placeholder": "",
-            "label": "library_index_sequence"
-        },
-        {
             "field_name": "library_location",
             "form_placeholder": "",
             "label": "library_location"
@@ -326,11 +316,6 @@
             "field_name": "library_ng_ul",
             "form_placeholder": "",
             "label": "library_ng_ul"
-        },
-        {
-            "field_name": "library_oligo_sequence",
-            "form_placeholder": "",
-            "label": "library_oligo_sequence"
         },
         {
             "field_name": "library_pcr_cycles",
