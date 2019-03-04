@@ -1,12 +1,57 @@
-{% ckan_extends %}
+{#
+Embeds a organization within the sidebar of a page.
 
-{% block description %}
-      {% if organization.description %}
-        <p>
-          {{ h.markdown_extract(organization.description, 180) }}
-          {% link_for _('Read more'), controller='organization', action='about', id=organization.name %}
-        </p>
-      {% else %}
-        <p class="empty">{{ _('There is no description for this organization') }}</p>
+organization    - The organization dict.
+truncate - A max length for the organization description. If not provided the description
+           will be full length.
+has_context_title - Boolean for whether to display a module-heading for when
+                    this snippet appears within a non-organization template
+                    (e.g. dataset page sidebar)
+
+Example:
+
+    {% snippet 'snippets/organization, organization=c.group_dict %}
+
+#}
+
+{% set truncate = truncate or 0 %}
+{% set url = h.url_for(organization.type + '_read', id=organization.name, ) %}
+
+  {% block info %}
+  <div class="module module-narrow module-shallow context-info">
+    {% if has_context_title %}
+      <h2 class="module-heading"><i class="fa fa-building-o"></i> {{ _('Organization') }}</h2>
+    {% endif %}
+    <section class="module-content">
+      {% block inner %}
+      {% block image %}
+        <div class="image">
+          <a href="{{ url }}">
+            <img src="{{ organization.image_display_url or h.url_for_static('/base/images/placeholder-organization.png') }}" width="200" alt="{{ organization.name }}" />
+          </a>
+        </div>
+      {% endblock %}
+      {% block heading %}
+      <h1 class="heading">{{ organization.title or organization.name }}
+        {% if organization.state == 'deleted' %}
+          [{{ _('Deleted') }}]
+        {% endif %}
+      </h1>
+      {% endblock %}
+      {% block description %}
+      {% if c.about_page %}
+        {% for facet in c.facet_titles %}
+            {{ h.snippet('snippets/facet_links.html', title=c.facet_titles[facet], name=facet, extras={'id':c.group_dict.id}) }}
+        {% endfor %}
       {% endif %}
-{% endblock %}
+      {% endblock %}
+      {% if show_nums %}
+        {% block nums %}
+        {% endblock %}
+        {% block follow %}
+        {% endblock %}
+      {% endif %}
+      {% endblock %}
+    </section>
+  </div>
+  {% endblock %}

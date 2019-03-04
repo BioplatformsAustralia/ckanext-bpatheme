@@ -1,0 +1,361 @@
+{
+    "about_url": "https://data.bioplatforms.com/",
+    "dataset_fields": [
+        {
+            "display_property": "dct:publisher",
+            "field_name": "owner_org",
+            "form_snippet": "organization.html",
+            "label": "Organization",
+            "validators": "owner_org_validator unicode"
+        },
+        {
+            "field_name": "title",
+            "form_placeholder": "",
+            "label": "Title",
+            "preset": "title"
+        },
+        {
+            "display_property": "dcat:Dataset/dct:description",
+            "field_name": "notes",
+            "form_placeholder": "eg. Some useful notes about the data",
+            "form_snippet": "markdown.html",
+            "label": "Description"
+        },
+        {
+            "field_name": "name",
+            "form_placeholder": "",
+            "label": "URL",
+            "preset": "dataset_slug"
+        },
+        {
+            "display_property": "dcat:Dataset/dct:keyword",
+            "field_name": "tag_string",
+            "form_attrs": {
+                "data-module": "autocomplete",
+                "data-module-source": "/api/2/util/tag/autocomplete?incomplete=?",
+                "data-module-tags": ""
+            },
+            "form_placeholder": "type to auto-complete",
+            "label": "Tags",
+            "validators": "ignore_missing tag_string_convert"
+        },
+        {
+            "display_property": "dcat:Dataset/dct:spatial",
+            "display_snippet": "spatial.html",
+            "field_name": "spatial",
+            "form_placeholder": "Paste a valid GeoJSON geometry",
+            "label": "Geospatial Coverage"
+        },
+        {
+            "display_property": "dcat:Dataset/dcat:distribution/dcat:Distribution/dct:license",
+            "field_name": "license_id",
+            "form_snippet": "license.html",
+            "label": "License"
+        },
+        {
+            "field_name": "analysis_software_version",
+            "form_placeholder": "",
+            "label": "analysis_software_version"
+        },
+        {
+            "field_name": "analytical_platform",
+            "form_placeholder": "",
+            "label": "analytical_platform"
+        },
+        {
+            "field_name": "archive_ingestion_date",
+            "form_placeholder": "",
+            "label": "archive_ingestion_date"
+        },
+        {
+            "field_name": "bpa_dataset_id",
+            "form_placeholder": "",
+            "label": "bpa_dataset_id"
+        },
+        {
+            "field_name": "cell_type",
+            "form_placeholder": "",
+            "label": "cell_type"
+        },
+        {
+            "field_name": "contextual_data_submission_date",
+            "form_placeholder": "",
+            "label": "contextual_data_submission_date"
+        },
+        {
+            "field_name": "data_generated",
+            "form_placeholder": "",
+            "label": "data_generated"
+        },
+        {
+            "field_name": "data_type",
+            "form_placeholder": "",
+            "label": "data_type"
+        },
+        {
+            "field_name": "dataset_url",
+            "form_placeholder": "",
+            "label": "dataset_url"
+        },
+        {
+            "field_name": "date_of_transfer",
+            "form_placeholder": "",
+            "label": "date_of_transfer"
+        },
+        {
+            "field_name": "description",
+            "form_placeholder": "",
+            "label": "description"
+        },
+        {
+            "field_name": "disease_state",
+            "form_placeholder": "",
+            "label": "disease_state"
+        },
+        {
+            "field_name": "extract_protocol",
+            "form_placeholder": "",
+            "label": "extract_protocol"
+        },
+        {
+            "field_name": "facility",
+            "form_placeholder": "",
+            "label": "facility"
+        },
+        {
+            "field_name": "folder_name",
+            "form_placeholder": "",
+            "label": "folder_name"
+        },
+        {
+            "field_name": "growth_protocol",
+            "form_placeholder": "",
+            "label": "growth_protocol"
+        },
+        {
+            "field_name": "insert_size_range",
+            "form_placeholder": "",
+            "label": "insert_size_range"
+        },
+        {
+            "field_name": "labelling",
+            "form_placeholder": "",
+            "label": "labelling"
+        },
+        {
+            "field_name": "library_construction_protocol",
+            "form_placeholder": "",
+            "label": "library_construction_protocol"
+        },
+        {
+            "field_name": "library_strategy",
+            "form_placeholder": "",
+            "label": "library_strategy"
+        },
+        {
+            "field_name": "name",
+            "form_placeholder": "",
+            "label": "name"
+        },
+        {
+            "field_name": "notes",
+            "form_placeholder": "",
+            "label": "notes"
+        },
+        {
+            "field_name": "omics",
+            "form_placeholder": "",
+            "label": "omics"
+        },
+        {
+            "field_name": "organism_part",
+            "form_placeholder": "",
+            "label": "organism_part"
+        },
+        {
+            "field_name": "plate_number",
+            "form_placeholder": "",
+            "label": "plate_number"
+        },
+        {
+            "field_name": "replicate_group_id",
+            "form_placeholder": "",
+            "label": "replicate_group_id"
+        },
+        {
+            "field_name": "research_group",
+            "form_placeholder": "",
+            "label": "research_group"
+        },
+        {
+            "field_name": "sample_description",
+            "form_placeholder": "",
+            "label": "sample_description"
+        },
+        {
+            "field_name": "sample_id",
+            "form_placeholder": "",
+            "label": "sample_id"
+        },
+        {
+            "field_name": "sample_name",
+            "form_placeholder": "",
+            "label": "sample_name"
+        },
+        {
+            "field_name": "sample_submission_date",
+            "form_placeholder": "",
+            "label": "sample_submission_date"
+        },
+        {
+            "field_name": "sequencer",
+            "form_placeholder": "",
+            "label": "sequencer"
+        },
+        {
+            "field_name": "species",
+            "form_placeholder": "",
+            "label": "species"
+        },
+        {
+            "field_name": "stem_cell_line",
+            "form_placeholder": "",
+            "label": "stem_cell_line"
+        },
+        {
+            "field_name": "stem_cell_state",
+            "form_placeholder": "",
+            "label": "stem_cell_state"
+        },
+        {
+            "field_name": "submitter",
+            "form_placeholder": "",
+            "label": "submitter"
+        },
+        {
+            "field_name": "ticket",
+            "form_placeholder": "",
+            "label": "ticket"
+        },
+        {
+            "field_name": "tissue",
+            "form_placeholder": "",
+            "label": "tissue"
+        },
+        {
+            "field_name": "title",
+            "form_placeholder": "",
+            "label": "title"
+        },
+        {
+            "field_name": "total_samples",
+            "form_placeholder": "",
+            "label": "total_samples"
+        },
+        {
+            "field_name": "treatment_protocol",
+            "form_placeholder": "",
+            "label": "treatment_protocol"
+        },
+        {
+            "field_name": "well_number",
+            "form_placeholder": "",
+            "label": "well_number"
+        }
+    ],
+    "dataset_type": "stemcells-smallrna",
+    "resource_fields": [
+        {
+            "field_name": "name",
+            "label": "Name"
+        },
+        {
+            "field_name": "description",
+            "label": "Description"
+        },
+        {
+            "field_name": "url",
+            "form_placeholder": "http://downloads-qcif.bioplatforms.com/my-dataset.fastq.gz",
+            "label": "Data File",
+            "preset": "resource_url_upload",
+            "upload_label": "Sequence File"
+        },
+        {
+            "field_name": "md5",
+            "label": "MD5"
+        },
+        {
+            "field_name": "sha256",
+            "label": "SHA256"
+        },
+        {
+            "field_name": "size",
+            "label": "File size (bytes)"
+        },
+        {
+            "field_name": "s3etag_8388608",
+            "label": "S3 E-Tag (8MB multipart)"
+        },
+        {
+            "field_name": "s3etag_16777216",
+            "label": "S3 E-Tag (16MB multipart)"
+        },
+        {
+            "field_name": "s3etag_33554432",
+            "label": "S3 E-Tag (32MB multipart)"
+        },
+        {
+            "field_name": "s3_etag_verified_at",
+            "form_placeholder": "",
+            "label": "S3 E-Tag Verified At",
+            "preset": "datetime"
+        },
+        {
+            "display_property": "dcat:Dataset/dcat:distribution/dcat:Distribution/dcat:format",
+            "field_name": "format",
+            "label": "Format",
+            "preset": "resource_format_autocomplete"
+        },
+        {
+            "field_name": "flow_id",
+            "label": "flow_id"
+        },
+        {
+            "field_name": "format",
+            "label": "format"
+        },
+        {
+            "field_name": "index",
+            "label": "index"
+        },
+        {
+            "field_name": "insert_size",
+            "label": "insert_size"
+        },
+        {
+            "field_name": "lane",
+            "label": "lane"
+        },
+        {
+            "field_name": "md5",
+            "label": "md5"
+        },
+        {
+            "field_name": "name",
+            "label": "name"
+        },
+        {
+            "field_name": "project",
+            "label": "project"
+        },
+        {
+            "field_name": "read",
+            "label": "read"
+        },
+        {
+            "field_name": "vendor",
+            "label": "vendor"
+        }
+    ],
+    "scheming_version": 1
+}

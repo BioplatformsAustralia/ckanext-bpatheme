@@ -2,16 +2,14 @@
 
 {% block styles %}
     {{ super() }}
-    {% resource 'datawagovautheme/styles/datawagovautheme.css' %}
+    {% resource 'datawagovautheme/styles/bpatheme.css' %}
     {% resource 'datawagovautheme/drop_down_menu.js' %}
-    {% resource "datawagovautheme/styles" %}
 {% endblock %}
 
 {% block scripts %}
     {{ super() }}
     {% resource "datawagovautheme/datawa-organization-opener.js" %}
     {% resource "datawagovautheme/datawa.js" %}
-    {% resource "datawagovautheme/scripts" %}
 {% endblock %}
 
 {% block meta %}

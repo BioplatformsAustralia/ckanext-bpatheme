@@ -1,0 +1,512 @@
+{
+    "about_url": "https://data.bioplatforms.com/",
+    "dataset_fields": [
+        {
+            "display_property": "dct:publisher",
+            "field_name": "owner_org",
+            "form_snippet": "organization.html",
+            "label": "Organization",
+            "validators": "owner_org_validator unicode"
+        },
+        {
+            "field_name": "title",
+            "form_placeholder": "",
+            "label": "Title",
+            "preset": "title"
+        },
+        {
+            "display_property": "dcat:Dataset/dct:description",
+            "field_name": "notes",
+            "form_placeholder": "eg. Some useful notes about the data",
+            "form_snippet": "markdown.html",
+            "label": "Description"
+        },
+        {
+            "field_name": "name",
+            "form_placeholder": "",
+            "label": "URL",
+            "preset": "dataset_slug"
+        },
+        {
+            "display_property": "dcat:Dataset/dct:keyword",
+            "field_name": "tag_string",
+            "form_attrs": {
+                "data-module": "autocomplete",
+                "data-module-source": "/api/2/util/tag/autocomplete?incomplete=?",
+                "data-module-tags": ""
+            },
+            "form_placeholder": "type to auto-complete",
+            "label": "Tags",
+            "validators": "ignore_missing tag_string_convert"
+        },
+        {
+            "display_property": "dcat:Dataset/dct:spatial",
+            "display_snippet": "spatial.html",
+            "field_name": "spatial",
+            "form_placeholder": "Paste a valid GeoJSON geometry",
+            "label": "Geospatial Coverage"
+        },
+        {
+            "display_property": "dcat:Dataset/dcat:distribution/dcat:Distribution/dct:license",
+            "field_name": "license_id",
+            "form_snippet": "license.html",
+            "label": "License"
+        },
+        {
+            "field_name": "ammonium_nitrogen",
+            "form_placeholder": "",
+            "label": "ammonium_nitrogen (mg/kg)"
+        },
+        {
+            "field_name": "analysis_software_version",
+            "form_placeholder": "",
+            "label": "analysis_software_version"
+        },
+        {
+            "field_name": "archive_ingestion_date",
+            "form_placeholder": "",
+            "label": "archive_ingestion_date"
+        },
+        {
+            "field_name": "australian_soil_classification",
+            "form_placeholder": "",
+            "label": "australian_soil_classification"
+        },
+        {
+            "field_name": "boron_hot_cacl2",
+            "form_placeholder": "",
+            "label": "boron_hot_cacl2 (mg/kg)"
+        },
+        {
+            "field_name": "broad_land_use",
+            "form_placeholder": "",
+            "label": "broad_land_use"
+        },
+        {
+            "field_name": "clay",
+            "form_placeholder": "",
+            "label": "clay (%)"
+        },
+        {
+            "field_name": "color",
+            "form_placeholder": "",
+            "label": "color"
+        },
+        {
+            "field_name": "conductivity_dsm",
+            "form_placeholder": "",
+            "label": "conductivity_dsm (ds/m)"
+        },
+        {
+            "field_name": "contextual_data_submission_date",
+            "form_placeholder": "",
+            "label": "contextual_data_submission_date"
+        },
+        {
+            "field_name": "course_sand",
+            "form_placeholder": "",
+            "label": "course_sand (%)"
+        },
+        {
+            "field_name": "data_generated",
+            "form_placeholder": "",
+            "label": "data_generated"
+        },
+        {
+            "field_name": "data_type",
+            "form_placeholder": "",
+            "label": "data_type"
+        },
+        {
+            "field_name": "dataset_url",
+            "form_placeholder": "",
+            "label": "dataset_url"
+        },
+        {
+            "field_name": "date_of_transfer",
+            "form_placeholder": "",
+            "label": "date_of_transfer"
+        },
+        {
+            "field_name": "date_sampled",
+            "form_placeholder": "",
+            "label": "date_sampled"
+        },
+        {
+            "field_name": "depth",
+            "form_placeholder": "",
+            "label": "depth (m)"
+        },
+        {
+            "field_name": "description",
+            "form_placeholder": "",
+            "label": "description"
+        },
+        {
+            "field_name": "detailed_land_use",
+            "form_placeholder": "",
+            "label": "detailed_land_use"
+        },
+        {
+            "field_name": "dtpa_copper",
+            "form_placeholder": "",
+            "label": "dtpa_copper (mg/kg)"
+        },
+        {
+            "field_name": "dtpa_iron",
+            "form_placeholder": "",
+            "label": "dtpa_iron (mg/kg)"
+        },
+        {
+            "field_name": "dtpa_manganese",
+            "form_placeholder": "",
+            "label": "dtpa_manganese (mg/kg)"
+        },
+        {
+            "field_name": "dtpa_zinc",
+            "form_placeholder": "",
+            "label": "dtpa_zinc (mg/kg)"
+        },
+        {
+            "field_name": "elevation",
+            "form_placeholder": "",
+            "label": "elevation"
+        },
+        {
+            "field_name": "environment",
+            "form_placeholder": "",
+            "label": "environment"
+        },
+        {
+            "field_name": "exc_aluminium",
+            "form_placeholder": "",
+            "label": "exc_aluminium (meq/100g)"
+        },
+        {
+            "field_name": "exc_calcium",
+            "form_placeholder": "",
+            "label": "exc_calcium (meq/100g)"
+        },
+        {
+            "field_name": "exc_magnesium",
+            "form_placeholder": "",
+            "label": "exc_magnesium (meq/100g)"
+        },
+        {
+            "field_name": "exc_potassium",
+            "form_placeholder": "",
+            "label": "exc_potassium (meq/100g)"
+        },
+        {
+            "field_name": "exc_sodium",
+            "form_placeholder": "",
+            "label": "exc_sodium (meq/100g)"
+        },
+        {
+            "field_name": "facility",
+            "form_placeholder": "",
+            "label": "facility"
+        },
+        {
+            "field_name": "fine_sand",
+            "form_placeholder": "",
+            "label": "fine_sand (%)"
+        },
+        {
+            "field_name": "flow_id",
+            "form_placeholder": "",
+            "label": "flow_id"
+        },
+        {
+            "field_name": "folder_name",
+            "form_placeholder": "",
+            "label": "folder_name"
+        },
+        {
+            "field_name": "general_ecological_zone",
+            "form_placeholder": "",
+            "label": "general_ecological_zone"
+        },
+        {
+            "field_name": "geo_loc",
+            "form_placeholder": "",
+            "label": "geo_loc (country:subregion)"
+        },
+        {
+            "field_name": "gravel",
+            "form_placeholder": "",
+            "label": "gravel (%)"
+        },
+        {
+            "field_name": "insert_size_range",
+            "form_placeholder": "",
+            "label": "insert_size_range"
+        },
+        {
+            "field_name": "latitude",
+            "form_placeholder": "",
+            "label": "latitude (decimal degrees)"
+        },
+        {
+            "field_name": "library_construction_protocol",
+            "form_placeholder": "",
+            "label": "library_construction_protocol"
+        },
+        {
+            "field_name": "license_id",
+            "form_placeholder": "",
+            "label": "license_id"
+        },
+        {
+            "field_name": "location_description",
+            "form_placeholder": "",
+            "label": "location_description"
+        },
+        {
+            "field_name": "longitude",
+            "form_placeholder": "",
+            "label": "longitude (decimal degrees)"
+        },
+        {
+            "field_name": "name",
+            "form_placeholder": "",
+            "label": "name"
+        },
+        {
+            "field_name": "ncbi_bioproject_accession",
+            "form_placeholder": "",
+            "label": "ncbi_bioproject_accession"
+        },
+        {
+            "field_name": "ncbi_biosample_accession",
+            "form_placeholder": "",
+            "label": "ncbi_biosample_accession"
+        },
+        {
+            "field_name": "nitrate_nitrogen",
+            "form_placeholder": "",
+            "label": "nitrate_nitrogen (mg/kg)"
+        },
+        {
+            "field_name": "notes",
+            "form_placeholder": "",
+            "label": "notes"
+        },
+        {
+            "field_name": "organic_carbon",
+            "form_placeholder": "",
+            "label": "organic_carbon (%)"
+        },
+        {
+            "field_name": "ph_level_cacl2",
+            "form_placeholder": "",
+            "label": "ph_level_cacl2 (cacl2)"
+        },
+        {
+            "field_name": "ph_level_h2o",
+            "form_placeholder": "",
+            "label": "ph_level_h2o (h2o)"
+        },
+        {
+            "field_name": "phosphorus_colwell",
+            "form_placeholder": "",
+            "label": "phosphorus_colwell (mg/kg)"
+        },
+        {
+            "field_name": "potassium_colwell",
+            "form_placeholder": "",
+            "label": "potassium_colwell (mg/kg)"
+        },
+        {
+            "field_name": "read_length",
+            "form_placeholder": "",
+            "label": "read_length"
+        },
+        {
+            "field_name": "sample_extraction_id",
+            "form_placeholder": "",
+            "label": "sample_extraction_id"
+        },
+        {
+            "field_name": "sample_id",
+            "form_placeholder": "",
+            "label": "sample_id"
+        },
+        {
+            "field_name": "sample_submission_date",
+            "form_placeholder": "",
+            "label": "sample_submission_date"
+        },
+        {
+            "field_name": "sample_type",
+            "form_placeholder": "",
+            "label": "sample_type"
+        },
+        {
+            "field_name": "sand",
+            "form_placeholder": "",
+            "label": "sand (%)"
+        },
+        {
+            "field_name": "sequencer",
+            "form_placeholder": "",
+            "label": "sequencer"
+        },
+        {
+            "field_name": "silt",
+            "form_placeholder": "",
+            "label": "silt (%)"
+        },
+        {
+            "field_name": "slope",
+            "form_placeholder": "",
+            "label": "slope (%)"
+        },
+        {
+            "field_name": "slope_aspect",
+            "form_placeholder": "",
+            "label": "slope_aspect (direction or degrees; e.g., nw or 315\u00b0)"
+        },
+        {
+            "field_name": "soil_moisture",
+            "form_placeholder": "",
+            "label": "soil_moisture (%)"
+        },
+        {
+            "field_name": "sulphur",
+            "form_placeholder": "",
+            "label": "sulphur (mg/kg)"
+        },
+        {
+            "field_name": "texture",
+            "form_placeholder": "",
+            "label": "texture"
+        },
+        {
+            "field_name": "ticket",
+            "form_placeholder": "",
+            "label": "ticket"
+        },
+        {
+            "field_name": "title",
+            "form_placeholder": "",
+            "label": "title"
+        },
+        {
+            "field_name": "vegetation_type",
+            "form_placeholder": "",
+            "label": "vegetation_type"
+        }
+    ],
+    "dataset_type": "base-metagenomics",
+    "resource_fields": [
+        {
+            "field_name": "name",
+            "label": "Name"
+        },
+        {
+            "field_name": "description",
+            "label": "Description"
+        },
+        {
+            "field_name": "url",
+            "form_placeholder": "http://downloads-qcif.bioplatforms.com/my-dataset.fastq.gz",
+            "label": "Data File",
+            "preset": "resource_url_upload",
+            "upload_label": "Sequence File"
+        },
+        {
+            "field_name": "md5",
+            "label": "MD5"
+        },
+        {
+            "field_name": "sha256",
+            "label": "SHA256"
+        },
+        {
+            "field_name": "size",
+            "label": "File size (bytes)"
+        },
+        {
+            "field_name": "s3etag_8388608",
+            "label": "S3 E-Tag (8MB multipart)"
+        },
+        {
+            "field_name": "s3etag_16777216",
+            "label": "S3 E-Tag (16MB multipart)"
+        },
+        {
+            "field_name": "s3etag_33554432",
+            "label": "S3 E-Tag (32MB multipart)"
+        },
+        {
+            "field_name": "s3_etag_verified_at",
+            "form_placeholder": "",
+            "label": "S3 E-Tag Verified At",
+            "preset": "datetime"
+        },
+        {
+            "display_property": "dcat:Dataset/dcat:distribution/dcat:Distribution/dcat:format",
+            "field_name": "format",
+            "label": "Format",
+            "preset": "resource_format_autocomplete"
+        },
+        {
+            "field_name": "extraction",
+            "label": "extraction"
+        },
+        {
+            "field_name": "flow_id",
+            "label": "flow_id"
+        },
+        {
+            "field_name": "format",
+            "label": "format"
+        },
+        {
+            "field_name": "index",
+            "label": "index"
+        },
+        {
+            "field_name": "insert_size",
+            "label": "insert_size"
+        },
+        {
+            "field_name": "lane",
+            "label": "lane"
+        },
+        {
+            "field_name": "library",
+            "label": "library"
+        },
+        {
+            "field_name": "md5",
+            "label": "md5"
+        },
+        {
+            "field_name": "name",
+            "label": "name"
+        },
+        {
+            "field_name": "ncbi_file_uploaded",
+            "label": "ncbi_file_uploaded"
+        },
+        {
+            "field_name": "read",
+            "label": "read"
+        },
+        {
+            "field_name": "resource_type",
+            "label": "resource_type"
+        },
+        {
+            "field_name": "run",
+            "label": "run"
+        },
+        {
+            "field_name": "vendor",
+            "label": "vendor"
+        }
+    ],
+    "scheming_version": 1
+}

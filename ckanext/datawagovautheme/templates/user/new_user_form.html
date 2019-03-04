@@ -1,0 +1,26 @@
+{% import "macros/form.html" as form %}
+
+<form id="user-register-form" class="form-horizontal" action="" method="post">
+  {{ form.errors(error_summary) }}
+  {{ form.input("name", id="field-username", label=_("Username"), placeholder=_("username"), value=data.name, error=errors.name, classes=["control-medium"], is_required=True) }}
+  {{ form.input("fullname", id="field-fullname", label=_("Full Name"), placeholder=_("Joe Bloggs"), value=data.fullname, error=errors.fullname, classes=["control-medium"]) }}
+  {{ form.input("email", id="field-email", label=_("Email"), type="email", placeholder=_("joe@example.com"), value=data.email, error=errors.email, classes=["control-medium"], is_required=True) }}
+  
+  {{ form.textarea("request_reason", id="field-request_reason", label=_("Reason for Request"), placeholder="Please provide a brief outline of your interest in the project data.", value=data.request_reason, error=errors.request_reason, classes=["control-medium"]) }}
+  {{ form.select('project_of_interest', label=_('Project of Interest'), options=[{'value': ""}, {'value': "Australian Microbiome", 'name': "ausmicro"}, {'value': "Antibiotic Resistant Sepsis Pathogens", 'name': "sepsis"}, {'value': "Oz Mammals Genomics Initiative", 'name': "omg"}, {'value': "Genomics for Australian Plants", 'name': "bpa-plants"}, {'value': "Great Barrier Reef", 'name': "gbr"}, {'value': "Wheat Pathogens Transcript", 'name': "wheat_pathogens_transcript"}, {'value': "Wheat Pathogens Genomes", 'name': "wheat_pathogens_genomes"}, {'value': "Wheat Cultivars", 'name': "wheat_cultivars"}, {'value': "Stem Cells", 'name': "stem_cells"}], classes=["control-medium"]) }}
+  
+  {{ form.input("password1", id="field-password", label=_("Password"), type="password", placeholder="••••••••", value=data.password1, error=errors.password1, classes=["control-medium"], is_required=True) }}
+  {{ form.input("password2", id="field-confirm-password", label=_("Confirm"), type="password", placeholder="••••••••", value=data.password2, error=errors.password1, classes=["control-medium"], is_required=True) }}
+
+  {% if g.recaptcha_publickey %}
+    {% snippet "user/snippets/recaptcha.html", public_key=g.recaptcha_publickey %}
+  {% endif %}
+
+  {{ form.required_message() }}
+
+  <div class="form-actions">
+    {% block form_actions %}
+    <button class="btn btn-primary" type="submit" name="save">{{ _("Create Account") }}</button>
+    {% endblock %}
+  </div>
+</form>

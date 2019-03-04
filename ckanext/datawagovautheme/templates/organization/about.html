@@ -1,36 +1,37 @@
 {% ckan_extends %}
+{% block organization_description %}
+      {% set facets = {
+        'fields': c.fields_grouped,
+        'search': c.search_facets,
+        'titles': c.facet_titles,
+        'translated_fields': c.translated_fields,
+        'remove_field': c.remove_field }
+      %}
+      {% set sorting = [
+        (_('Relevance'), 'score desc, metadata_modified desc'),
+        (_('Name Ascending'), 'title_string asc'),
+        (_('Name Descending'), 'title_string desc'),
+        (_('Last Modified'), 'metadata_modified desc'),
+        (_('Popular'), 'views_recent desc') if g.tracking_enabled else (false, false) ]
+      %}
+      {% if c.group_dict.name != 'australian-microbiome' %}
+      {% snippet 'organization/snippets/inline_search_form.html', form_id='organization-datasets-search-form', type='dataset', query=c.q, sorting=sorting, sorting_selected=c.sort_by_selected, count=c.page.item_count, facets=facets, placeholder=_('Search datasets...'), show_empty=request.params, fields=c.fields %}
 
-{% block primary_content %}
-  <article class="module">
-    {% block page_header %}
-    <header class="module-content page-header">
-        {% if self.content_action() | trim %}
-          <div class="content_action">
-            {% block content_action %}{{ super() }}{% endblock %}
-          </div>
-        {% endif %}
-        <ul class="nav nav-tabs">
-            {% block content_primary_nav %}{{ super() }}{% endblock %}
-        </ul>
-    </header>
-    {% endblock %}
-    <div class="module-content">
-      {% if self.page_primary_action() | trim %}
-        <div class="page_primary_action">
-          {% block page_primary_action %}{% endblock %}
-        </div>
+      {% else %}
+
+      {% snippet 'snippets/amdb_buttons.html', c=c %}
+
       {% endif %}
-    {% block organization_info %}
-        <h1>{% block page_heading %}{{ c.group_dict.display_name }}{% endblock %}</h1>
-        {% if c.group_dict.description %}
-          {{ h.render_markdown(c.group_dict.description) }}
-        {% endif %}
-        {% block organization_fileds %}
-            <section class="additional-info">
-                {% snippet 'snippets/additional_info.html', extras = h.sorted_extras(c.group_dict.extras) %}
-            </section>
-        {% endblock %}
-    {% endblock %}
-    </div>
-  </article>
+
+      {% snippet 'snippets/bpa_register.html', c=c %}
+
+      {% if c.group_dict.description %}
+      {{ h.render_markdown(c.group_dict.description) }}
+      {% endif %}
+
+      <ul class="nav nav-tabs pull-right" style='padding-top: 2em;'>
+        {{ h.build_nav_icon('organization_pages_index', _('Project Pages'), id=c.group_dict.name) }}
+        {{ h.build_nav_icon('organization_activity', _('Activity Stream'), id=c.group_dict.name, offset=0) }}
+      </ul>
+
 {% endblock %}

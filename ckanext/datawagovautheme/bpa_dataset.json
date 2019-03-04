@@ -1,0 +1,260 @@
+{
+    "scheming_version": 1,
+        "dataset_type": "dataset",
+        "about":"Metadata schema for data.wa.gov.au",
+        "about_url": "http://github.com/florianm/ckanext-scheming",
+        "dataset_fields": [
+        {
+            "field_name": "title",
+            "label": "Title",
+	    "display_property": "dcat:Dataset/dct:title",
+            "validators": "if_empty_same_as(name) unicode",
+            "form_snippet": "large_text.html",
+            "form_attrs": {"data-module": "slug-preview-target"},
+            "form_placeholder": "eg. A descriptive title"
+        },
+        {
+            "field_name": "name",
+            "label": "URL",
+            "validators": "not_empty unicode name_validator package_name_validator",
+            "form_snippet": "slug.html",
+            "form_placeholder": "eg. my-dataset"
+        },
+        {
+            "field_name": "notes",
+            "label": "Description",
+	    "display_property": "dcat:Dataset/dct:description",
+            "form_snippet": "markdown.html",
+            "form_placeholder": "eg. Some useful notes about the data"
+        },
+        {
+            "field_name": "tag_string",
+            "label": "Tags",
+	    "display_property": "dcat:Dataset/dct:keyword",
+            "validators": "ignore_missing tag_string_convert",
+            "form_placeholder": "type to auto-complete",
+            "form_attrs": {
+                "data-module": "autocomplete",
+                "data-module-tags": "",
+                "data-module-source": "/api/2/util/tag/autocomplete?incomplete=?"
+            }
+        },
+        {
+            "field_name": "license_id",
+            "label": "License",
+	    "display_property": "dcat:Dataset/dcat:distribution/dcat:Distribution/dct:license",
+            "form_snippet": "license.html"
+        },
+        {
+            "field_name": "owner_org",
+            "label": "Organization",
+	    "display_property": "dct:publisher",
+            "validators": "owner_org_validator unicode",
+            "form_snippet": "organization.html"
+        },
+        {
+            "field_name": "data_portal",
+            "label": "Data Portal",
+            "help_text": "Dataset URL on original data catalogue (set automatically if harvested)",
+            "help_inline": true,
+            "display_property": "dcat:Dataset/dcat:landingPage",
+	    "display_snippet": "link.html"
+        },
+        {
+            "field_name": "data_homepage",
+            "label": "Data Homepage",
+            "help_text": "URL of access point and detailed metadata of attached data resources",
+            "help_inline": true,
+            "display_property": "dcat:Dataset/dcat:landingPage",
+	    "display_snippet": "link.html"
+        },
+        {
+            "field_name": "doi",
+            "label": "DOI",
+            "help_text": "Digital Object Identifier",
+            "help_inline": true,
+            "form_placeholder": "http://dx.doi.org/xxxx/yyyy",
+            "display_property": "dc:identifier",
+	    "display_snippet": "link.html"
+        },
+        {
+            "field_name": "citation",
+            "label": "Citation",
+            "help_text": "Comprehensive attribution of authors and their affiliation",
+            "help_inline": true,
+            "form_placeholder": "Author AB (year): Publication",
+            "display_property": "citation",
+            "display_snippet": "text.html"
+        },
+        {
+            "field_name": "author",
+            "label": "Author",
+            "help_text": "The author (dataset custodian) is responsible for the content of attached data resources",
+            "help_inline": true,
+            "form_placeholder": "Joe Bloggs",
+            "display_property": "dc:creator",
+            "hide_field": "true"
+        },
+        {
+            "field_name": "author_email",
+            "label": "Author Email",
+            "form_placeholder": "joe@example.com",
+            "display_property": "dc:creator",
+            "display_snippet": "email.html",
+            "display_email_name_field": "author"
+        },
+        {
+            "field_name": "maintainer",
+            "label": "Maintainer",
+            "help_text": "The metadata maintainer updates this page on behalf of the author",
+            "help_inline": true,
+            "form_placeholder": "Joe Bloggs",
+            "display_property": "dc:contributor",
+            "hide_field": "true"
+        },
+        {
+            "field_name": "maintainer_email",
+            "label": "Maintainer Email",
+            "form_placeholder": "joe@example.com",
+            "display_property": "dc:contributor",
+            "display_snippet": "email.html",
+            "display_email_name_field": "maintainer"
+        },
+        {
+            "field_name":"theme",
+            "label": "Theme",
+            "help_text": "The government jurisdiction defined business function to which the resource relates",
+            "help_inline": true,
+	    "display_property": "agls:function",
+            "preset": "select",
+            "choices": [
+		{"value":"Aboriginal Settlements", "label":"Aboriginal Settlements"},
+		{"value":"Administrative and Political Boundaries", "label":"Administrative and Political Boundaries"},
+		{"value":"Biology and Ecology", "label":"Biology and Ecology"},
+		{"value":"Business and Economy", "label":"Business and Economy"},
+		{"value":"Business Support and Regulation", "label":"Business Support and Regulation"},
+		{"value":"Cadastral and Planning", "label":"Cadastral and Planning"},
+		{"value":"Civic Infrastructure", "label":"Civic Infrastructure"},
+		{"value":"Communications", "label":"Communications"},
+		{"value":"Community Services", "label":"Community Services"},
+		{"value":"Cultural Affairs", "label":"Cultural Affairs"},
+		{"value":"Cultural Heritage", "label":"Cultural Heritage"},
+		{"value":"Cultural, Society and Demography", "label":"Cultural, Society and Demography"},
+		{"value":"Defence", "label":"Defence"},
+		{"value":"Education and Training", "label":"Education and Training"},
+		{"value":"Elevation", "label":"Elevation"},
+		{"value":"Employment", "label":"Employment"},
+		{"value":"Environment", "label":"Environment"},
+		{"value":"Environment and Conservation", "label":"Environment and Conservation"},
+		{"value":"Facilities and Structures", "label":"Facilities and Structures"},
+		{"value":"Finance Management", "label":"Finance Management"},
+		{"value":"Geological and Geophysical", "label":"Geological and Geophysical"},
+		{"value":"Governance", "label":"Governance"},
+		{"value":"Health Care", "label":"Health Care"},
+		{"value":"Imagery and Base Maps", "label":"Imagery and Base Maps"},
+		{"value":"Immigration", "label":"Immigration"},
+		{"value":"Indigenous Affairs", "label":"Indigenous Affairs"},
+		{"value":"Inland Water Resources", "label":"Inland Water Resources"},
+		{"value":"International Relations", "label":"International Relations"},
+		{"value":"Justice Administration", "label":"Justice Administration"},
+		{"value":"Location", "label":"Location"},
+		{"value":"Metropolitan Region Scheme", "label":"Metropolitan Region Scheme"},
+		{"value":"Maritime Services", "label":"Maritime Services"},
+		{"value":"Natural Resources", "label":"Natural Resources"},
+		{"value":"Primary Industries", "label":"Primary Industries"},
+		{"value":"Science", "label":"Science"},
+		{"value":"Security", "label":"Security"},
+		{"value":"Sport and Recreation", "label":"Sport and Recreation"},
+		{"value":"Structure Plans", "label":"Structure Plans"},
+		{"value":"Tourism", "label":"Tourism"},
+		{"value":"Trade", "label":"Trade"},
+		{"value":"Transport", "label":"Transport"},
+		{"value":"Transportation", "label":"Transportation"},
+		{"value":"Utilities and Communication", "label":"Utilities and Communication"}
+            ]
+        },
+        {
+            "field_name": "language",
+            "label": "Language",
+            "help_text": "The primary language of this dataset",
+            "help_inline": true,
+            "form_placeholder": "English",
+            "display_property": "language",
+            "display_snippet": "text.html"
+        },
+        {
+            "field_name": "published_on",
+            "label": "Published on",
+            "help_text": "The date on which this dataset was or shall be published",
+            "help_inline": true,
+	    "display_property": "dcat:Dataset/dct:issued",
+            "preset": "date"
+        },
+        {
+            "field_name": "last_updated_on",
+            "label": "Data last updated on",
+            "help_text": "Last modification of the content of data resources",
+            "help_inline": true,
+	    "display_property": "dcat:Dataset/dct:modified",
+            "preset": "date"
+        },
+        {
+            "field_name":"update_frequency",
+            "label": "Update Frequency",
+            "help_text": "How often will the data resources be updated?",
+            "help_inline": true,
+	    "display_property": "dcat:Dataset/dct:accrualPeriodocity",
+            "preset": "select",
+            "choices": [
+            {"value":"static", "label":"one-off snapshot"},
+            {"value":"infrequent", "label":"infrequently"},
+            {"value":"frequent", "label":"frequently"},
+            {"value":"yearly", "label":"yearly"},
+            {"value":"monthly", "label":"monthly"},
+            {"value":"weekly", "label":"weekly"},
+            {"value":"daily", "label":"daily"},
+            {"value":"unknown", "label":"unknown"}
+            ]
+        },
+        {
+            "field_name": "data_temporal_extent_begin",
+            "label": "Temporal coverage from",
+            "help_text": "Earliest record in data resources",
+            "help_inline": true,
+            "preset": "date",
+            "display_property": "dcat:Dataset/dct:temporal"
+        },
+        {
+            "field_name": "data_temporal_extent_end",
+            "label": "Temporal coverage to",
+            "help_text": "Latest record in data resources",
+            "help_inline": true,
+            "preset": "date",
+            "display_property": "dcat:Dataset/dct:temporal"
+        }
+    ],
+        "resource_fields": [
+        {
+            "field_name": "url",
+            "label": "URL",
+	    "preset": "resource_url_upload"
+        },
+        {
+            "field_name": "name",
+            "label": "Name",
+            "form_placeholder": "eg. Observations of X at Y"
+        },
+        {
+            "field_name": "description",
+            "label": "Description",
+            "form_snippet": "markdown.html",
+            "form_placeholder": "Some useful notes about the resource"
+        },
+        {
+            "field_name": "format",
+            "label": "Format",
+	    "preset": "resource_format_autocomplete",
+	    "display_property": "dcat:Dataset/dcat:distribution/dcat:Distribution/dcat:format"
+        }
+    ]
+}

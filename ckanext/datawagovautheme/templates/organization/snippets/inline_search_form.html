@@ -1,0 +1,28 @@
+{% import 'macros/form.html' as form %}
+
+{% set placeholder = placeholder if placeholder else _('Search datasets...') %}
+{% set sorting = sorting if sorting else [(_('Name Ascending'), 'name asc'), (_('Name Descending'), 'name desc')] %}
+{% set search_class = search_class if search_class else 'search-giant' %}
+{% set no_bottom_border = no_bottom_border if no_bottom_border else false %}
+{% set form_id = form_id if form_id else false %}
+
+<form action="{{ h.url_for(controller='organization', action='read', id=c.group_dict.id) }}" {% if form_id %}id="{{ form_id }}" {% endif %}class="search-form{% if no_bottom_border %} no-bottom-border{% endif %}" method="get" data-module="select-switch">
+
+  {% block search_input %}
+    <div class="search-input control-group search-giant">
+      <input type="text" class="search" name="q" value="" autocomplete="off" placeholder="{% block search_placeholder %}{{ placeholder }}{% endblock %}" />
+      <button type="submit">
+        <i class="fa fa-search"></i>
+        <span>{{ _('Search') }}</span>
+      </button>
+    </div>
+      {% if c.group_dict.name == 'bpa-sepsis' %}
+      <p>
+          <a href="https://data.bioplatforms.com/dataset/0916faab-cd9a-4468-8ea2-ae0182114fad/resource/958f8caa-9d8d-423d-9f08-f977c6858b87/download/sepsis_tag_instructions.pdf">
+              Click here for instructions on how to perform search queries (and how to use tags)
+          </a>
+      </p>
+      {% endif %}
+  {% endblock %}
+
+</form>
