@@ -253,11 +253,6 @@
             "label": "file"
         },
         {
-            "field_name": "flowcell_id",
-            "form_placeholder": "",
-            "label": "flowcell_id"
-        },
-        {
             "field_name": "folder_name",
             "form_placeholder": "",
             "label": "folder_name"
