@@ -58,6 +58,11 @@
             "label": "access_rights"
         },
         {
+            "field_name": "ala_species_name",
+            "form_placeholder": "",
+            "label": "ala_species_name"
+        },
+        {
             "field_name": "ala_specimen_url",
             "form_placeholder": "",
             "label": "ala_specimen_url"
@@ -476,6 +481,11 @@
             "field_name": "species",
             "form_placeholder": "",
             "label": "species"
+        },
+        {
+            "field_name": "species_name",
+            "form_placeholder": "",
+            "label": "species_name"
         },
         {
             "field_name": "state_or_region",

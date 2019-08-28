@@ -393,11 +393,6 @@
             "label": "life_stage"
         },
         {
-            "field_name": "location_generalisation",
-            "form_placeholder": "",
-            "label": "location_generalisation"
-        },
-        {
             "field_name": "location_text",
             "form_placeholder": "",
             "label": "location_text"
