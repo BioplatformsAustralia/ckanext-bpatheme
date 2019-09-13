@@ -337,6 +337,10 @@
             "preset": "resource_format_autocomplete"
         },
         {
+            "field_name": "archive_type",
+            "label": "archive_type"
+        },
+        {
             "field_name": "facility_id",
             "label": "facility_id"
         },
