@@ -58,6 +58,11 @@
             "label": "analytical_platform"
         },
         {
+            "field_name": "approach_used",
+            "form_placeholder": "",
+            "label": "approach_used"
+        },
+        {
             "field_name": "archive_id",
             "form_placeholder": "",
             "label": "archive_id"
@@ -71,11 +76,6 @@
             "field_name": "base_url",
             "form_placeholder": "",
             "label": "base_url"
-        },
-        {
-            "field_name": "bpa_ids",
-            "form_placeholder": "",
-            "label": "bpa_ids"
         },
         {
             "field_name": "contextual_data_submission_date",
@@ -133,24 +133,9 @@
             "label": "folder_name"
         },
         {
-            "field_name": "growth_condition_media",
-            "form_placeholder": "",
-            "label": "growth_condition_media"
-        },
-        {
-            "field_name": "growth_condition_od600_reading",
-            "form_placeholder": "",
-            "label": "growth_condition_od600_reading"
-        },
-        {
             "field_name": "growth_condition_temperature",
             "form_placeholder": "",
             "label": "growth_condition_temperature"
-        },
-        {
-            "field_name": "growth_condition_time",
-            "form_placeholder": "",
-            "label": "growth_condition_time_(h)"
         },
         {
             "field_name": "growth_media",
@@ -173,9 +158,19 @@
             "label": "omics"
         },
         {
+            "field_name": "sample_ids",
+            "form_placeholder": "",
+            "label": "sample_ids"
+        },
+        {
             "field_name": "sample_submission_date",
             "form_placeholder": "",
             "label": "sample_submission_date"
+        },
+        {
+            "field_name": "serovar",
+            "form_placeholder": "",
+            "label": "serovar"
         },
         {
             "field_name": "strain_or_isolate",
@@ -243,6 +238,14 @@
         {
             "field_name": "s3etag_33554432",
             "label": "S3 E-Tag (32MB multipart)"
+        },
+        {
+            "field_name": "s3etag_67108864",
+            "label": "S3 E-Tag (64MB multipart)"
+        },
+        {
+            "field_name": "s3etag_134217728",
+            "label": "S3 E-Tag (128MB multipart)"
         },
         {
             "field_name": "s3_etag_verified_at",

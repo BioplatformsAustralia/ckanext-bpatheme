@@ -153,6 +153,21 @@
             "label": "library_pcr_reps"
         },
         {
+            "field_name": "library_pool_index_id",
+            "form_placeholder": "",
+            "label": "library_pool_index_id"
+        },
+        {
+            "field_name": "library_pool_index_sequence",
+            "form_placeholder": "",
+            "label": "library_pool_index_sequence"
+        },
+        {
+            "field_name": "library_pool_oligo_sequence",
+            "form_placeholder": "",
+            "label": "library_pool_oligo_sequence"
+        },
+        {
             "field_name": "library_prep_date",
             "form_placeholder": "",
             "label": "library_prep_date"
@@ -278,6 +293,14 @@
         {
             "field_name": "s3etag_33554432",
             "label": "S3 E-Tag (32MB multipart)"
+        },
+        {
+            "field_name": "s3etag_67108864",
+            "label": "S3 E-Tag (64MB multipart)"
+        },
+        {
+            "field_name": "s3etag_134217728",
+            "label": "S3 E-Tag (128MB multipart)"
         },
         {
             "field_name": "s3_etag_verified_at",
