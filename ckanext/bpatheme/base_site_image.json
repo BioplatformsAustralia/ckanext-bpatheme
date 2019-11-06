@@ -243,6 +243,11 @@
             "label": "potassium_colwell (mg/kg)"
         },
         {
+            "field_name": "sample_storage_method",
+            "form_placeholder": "",
+            "label": "sample_storage_method"
+        },
+        {
             "field_name": "sample_type",
             "form_placeholder": "",
             "label": "sample_type"

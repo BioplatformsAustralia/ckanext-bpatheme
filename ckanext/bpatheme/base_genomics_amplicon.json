@@ -388,6 +388,11 @@
             "label": "sample_name"
         },
         {
+            "field_name": "sample_storage_method",
+            "form_placeholder": "",
+            "label": "sample_storage_method"
+        },
+        {
             "field_name": "sample_submission_date",
             "form_placeholder": "",
             "label": "sample_submission_date"
