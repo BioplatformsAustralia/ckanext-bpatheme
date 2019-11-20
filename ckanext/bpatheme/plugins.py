@@ -127,7 +127,7 @@ class CustomTheme(plugins.SingletonPlugin):
     def update_config(self, config):
         toolkit.add_template_directory(config, "templates")
         toolkit.add_public_directory(config, "static")
-        toolkit.add_resource('fanstatic', 'bpathemetheme')
+        toolkit.add_resource('fanstatic', 'bpatheme')
 
     def update_config_schema(self, schema):
         ignore_missing = toolkit.get_validator('ignore_missing')
