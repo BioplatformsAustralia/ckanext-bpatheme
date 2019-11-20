@@ -1,6 +1,6 @@
 
 *.pyc
-ckanext_datawagovautheme.egg-info/*
+ckanext_bpathemetheme.egg-info/*
 build/*
 dist/*
 *.css.map
