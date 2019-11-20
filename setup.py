@@ -19,6 +19,6 @@ setup(
 
     entry_points="""
         [ckan.plugins]
-        bpatheme_theme = ckanext.bpatheme.plugins:CustomTheme
+        bpa_theme = ckanext.bpatheme.plugins:CustomTheme
     """
 )
