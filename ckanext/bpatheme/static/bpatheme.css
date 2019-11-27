@@ -4,13 +4,13 @@
 
 
 .leaflet-draw-toolbar a {
-        background-image: url('img/spritesheet.png');
-        background-repeat: no-repeat;
+  background-image: url('img/spritesheet.png');
+  background-repeat: no-repeat;
 }
 
 .leaflet-retina .leaflet-draw-toolbar a {
-        background-image: url('img/spritesheet-2x.png');
-        background-size: 270px 30px;
+  background-image: url('img/spritesheet-2x.png');
+  background-size: 270px 30px;
 }
 
 body {
@@ -46,7 +46,7 @@ img#beta {
 
 /* The text and icons in the user account info. */
 .account-masthead .account ul li a {
-  color: rgb(105,115,124);
+  color: rgb(105, 115, 124);
 }
 
 /* Transparent separator between links */
@@ -62,7 +62,7 @@ img#beta {
 
 /* The "dashboard" and number of notifiations background */
 .account-masthead .account .notifications a:hover span {
-  color: rgb(105,115,124);
+  color: rgb(105, 115, 124);
   background-color: inherit;
 }
 
@@ -89,6 +89,13 @@ img#beta {
 .dwga-header-row {
   padding: 10px;
   margin-left: 0px;
+}
+
+.dwga-header-row .logo {
+  display: flex;
+  flex-direction: row;
+  height: 200px;
+  width: 200px;pwd
 }
 
 
@@ -131,7 +138,7 @@ img#beta {
 
 /* Alignment of navigation */
 .masthead .navigation, ul.nav {
- margin: 0px 0px 2px 0px;
+  margin: 0px 0px 2px 0px;
 }
 
 /* Float the navbar left */
@@ -152,7 +159,7 @@ img#beta {
 
 /* Space the nav links (Dataset, Orgs, Groups) so the hover/active underline is separated */
 .navbar .nav > li > a {
- margin-left: 2px;
+  margin-left: 2px;
 }
 
 /* The "box shadow" effect that appears around the search box when it
@@ -172,7 +179,7 @@ img#beta {
 .masthead .nav > .active > a:hover,
 .masthead .nav > .active > a:focus,
 .account-masthead .account .notifications a span {
-  color: rgb(105,115,124);
+  color: rgb(105, 115, 124);
   text-shadow: none;
   margin-left: 2px;
 }
@@ -183,44 +190,54 @@ img#beta {
    =========================================== */
 
 /* Hide featured section */
-.featured {visibility:hidden; height:0px;}
+.featured {
+  visibility: hidden;
+  height: 0px;
+}
 
 /* The background outside of the hero pane */
 .hero, [role=main] {
-  background:#FEFEFE;
+  background: #FEFEFE;
 }
 
 /* Remove the "box shadow" effect around various boxes on the page. */
 .box {
   box-shadow: none;
 }
+
 /* Remove the borders around the "Welcome to CKAN" and "Search Your Data"
    boxes. */
 .hero .box {
- border: none;
+  border: none;
 }
+
 /* Change the colors of the "Search Your Data" box. */
 .homepage .module-search .module-content {
-  color: rgb(105,115,124);
+  color: rgb(105, 115, 124);
   background-color: white;
 }
+
 /* Change the background color of the "Popular Tags" box. */
 .homepage .module-search .tags {
-  color: rgb(105,115,124);
+  color: rgb(105, 115, 124);
   background-color: #FCFCFC;
 }
+
 /* Remove some padding. This makes the bottom edges of the "Welcome to CKAN"
    and "Search Your Data" boxes line up. */
 .module-content:last-child {
   padding-bottom: 0px;
 }
+
 .module-content p {
   margin-top: 1em;
   margin-bottom: 1em;
 }
+
 .homepage .module-search {
   padding: 0px;
 }
+
 /* Bottom half of front page for featured orgs/groups */
 .homepage [role="main"] {
   min-height: 100px;
@@ -233,52 +250,57 @@ a, a:active, a:hover, a:focus {
 
 /* The box around featured orgs/groups */
 .box {
-  border:none;
+  border: none;
 }
 
 /* fix tablet view */
-@media (max-width: 768px){
+@media (max-width: 768px) {
   .wrapper {
-      margin: 0 0;
+    margin: 0 0;
   }
 }
 
 /* Make sidebar wider to display large tags*/
-@media (min-width: 980px){
+@media (min-width: 980px) {
   .wrapper {
-      background-position: 10% 0px;
+    background-position: 10% 0px;
   }
+
   .secondary {
     width: 31%;
   }
+
   .primary {
     width: 67%;
   }
 }
+
 /* ====================================
    The footer at the bottom of the site
    ==================================== */
 
 .site-footer,
 body {
-  color: rgb(86,86,86);
+  color: rgb(86, 86, 86);
   background-color: rgb(200, 200, 200);
 }
+
 /* The text in the footer. */
 .site-footer,
 .site-footer label,
 .site-footer small {
-  color: rgb(230,230,230);
+  color: rgb(230, 230, 230);
   background-color: #1e73be;
 }
+
 /* The link texts in the footer. */
 .site-footer a {
-  color: rgb(255,255,255);
+  color: rgb(255, 255, 255);
 }
 
 .site-footer ul.nav li a:hover {
-  color: rgb(255,255,255);
-  background-color: rgb(22,47,137);
+  color: rgb(255, 255, 255);
+  background-color: rgb(22, 47, 137);
   text-decoration: none;
   box-shadow: none;
   text-shadow: none;
@@ -286,7 +308,7 @@ body {
 
 /* The debug toggle */
 #debug-toggle {
- color: rgb(200, 200, 200);
+  color: rgb(200, 200, 200);
 }
 
 /* Fix wrapping of label in list on resource page */
@@ -303,41 +325,41 @@ body {
 }
 
 .list-group-item {
-    position: relative;
-    display: block;
-    padding: 10px 15px;
-    margin-bottom: -1px;
-    background-color: #fff;
-    border: 1px solid #ddd;
-    color: #555;
+  position: relative;
+  display: block;
+  padding: 10px 15px;
+  margin-bottom: -1px;
+  background-color: #fff;
+  border: 1px solid #ddd;
+  color: #555;
 }
 
 
 .site-footer {
-    padding: 0px;
-    min-height: 0px;
+  padding: 0px;
+  min-height: 0px;
 }
 
 .site-footer-links {
-    text-align: center;
-    padding-top: 20px;
-    padding-bottom: 20px;
+  text-align: center;
+  padding-top: 20px;
+  padding-bottom: 20px;
 }
 
 .site-footer-links a {
-    padding-right: 15px;
+  padding-right: 15px;
 }
 
 .site-footer-logo {
-    background-color: #171717;
-    padding-top: 30px;
-    padding-bottom: 30px;
-    text-align: center;
+  background-color: #171717;
+  padding-top: 30px;
+  padding-bottom: 30px;
+  text-align: center;
 }
 
 /* Need this to break out of the automatically generated .container class*/
 .site-footer .container {
-    width: 100%;
+  width: 100%;
 }
 
 /* ====================================
@@ -345,17 +367,17 @@ body {
    ==================================== */
 
 .pull-left > img {
-    padding-left: 20px;
-    /*height: 80px;*/
+  padding-left: 20px;
+  /*height: 80px;*/
 }
 
 .data_portal_text {
-    color: black;
-    line-height: 3;
-    padding-left: 140px;
-    font-size: 28px;
+  color: black;
+  line-height: 3;
+  padding-left: 140px;
+  font-size: 28px;
 }
 
 .dwga-inlineblock {
-    /*display: block;*/
+  /*display: block;*/
 }

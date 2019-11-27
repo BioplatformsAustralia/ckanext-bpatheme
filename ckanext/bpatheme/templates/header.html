@@ -94,7 +94,11 @@
 
       {% block header_logo %}
 				<div class="dwga-logo dwga-inlineblock">
-  				<a class="logo pull-left" href="{{ h.url('home') }}"><img src="{{ h.url_for_static_or_external('bpalogo_withdataportal.png') }}" alt="{{ g.site_title }}" title="{{ g.site_title }}" /></a>
+  				<a class="logo pull-left" href="{{ h.url('home') }}">
+                  <img src="{{ h.url_for_static_or_external('BIO-RGB_Symbol-POS.png') }}" alt="{{ g.site_title }}" title="{{ g.site_title }}" />
+                  <img src="{{ h.url_for_static_or_external('BIO-RGB_Type Only-POS.png') }}" alt="{{ g.site_title }}" title="{{ g.site_title }}" />
+                  Data Portal
+                </a>
       {% endblock header_logo %}
 
     </hgroup><!-- /.dwga-row -->
