@@ -92,18 +92,8 @@ img#beta {
 }
 
 .dwga-header-row .logo {
-  display: flex;
-  flex-direction: column;
   height: auto;
-  width: 400px;
-  align-items: center;
-}
-
-.dwga-header-row .logo .logo-text {
-  text-transform: uppercase;
-  font-size: 20px;
-  font-weight: 500;
-  transform: translate(20%, -100%)
+  width: 500px;
 }
 
 .dwga-inlineblock {
