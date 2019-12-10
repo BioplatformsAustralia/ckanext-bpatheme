@@ -68,9 +68,9 @@
             "label": "ala_specimen_url"
         },
         {
-            "field_name": "ancilliary_notes",
+            "field_name": "ancillary_notes",
             "form_placeholder": "",
-            "label": "ancilliary_notes"
+            "label": "ancillary_notes"
         },
         {
             "field_name": "archive_ingestion_date",
@@ -556,6 +556,11 @@
             "field_name": "trace_lab",
             "form_placeholder": "",
             "label": "trace_lab"
+        },
+        {
+            "field_name": "type_status",
+            "form_placeholder": "",
+            "label": "type_status"
         },
         {
             "field_name": "voucher_id",
