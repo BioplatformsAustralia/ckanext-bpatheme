@@ -79,8 +79,11 @@
         {% block header_logo %}
           {% if g.site_logo %}
           <div class="dwga-logo dwga-inlineblock">
-            <a class="logo pull-left" href="{{ h.url('home.index') }}"><img src="{{ h.url_for_static_or_external('bpalogo_withdataportal.png') }}" alt="{{ g.site_title }}" title="{{ g.site_title }}" /></a>
+            <a class="logo" href="{{ h.url('home') }}">
+              <img src="{{ h.url_for_static_or_external('BIO-RGB_Full-POS_Portal.png') }}" alt="{{ g.site_title }}" title="{{ g.site_title }}" />
+            </a>
           </div>
+
           {% else %}
           <div class="dwga-title dwga-inlineblock">
             <a href="{{ h.url_for('home.index') }}">{{ g.site_title }}</a>

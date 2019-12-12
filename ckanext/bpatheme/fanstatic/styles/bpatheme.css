@@ -78,6 +78,12 @@ img#beta {
 .dwga-header-row {
   padding: 10px;
   margin-left: 0px;
+  text-align: center;
+}
+
+.dwga-header-row .logo {
+    height: auto;
+    width: 500px;
 }
 
 .dwga-inlineblock {
@@ -419,3 +425,8 @@ body {
 .dwga-inlineblock {
   /*display: block;*/
 }
+
+.site-footer-logo img {
+    max-width: 150px;
+}
+    
