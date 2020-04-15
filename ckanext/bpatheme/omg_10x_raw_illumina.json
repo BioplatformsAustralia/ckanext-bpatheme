@@ -553,9 +553,14 @@
             "label": "type_status"
         },
         {
-            "field_name": "voucher_id",
+            "field_name": "voucher_number",
             "form_placeholder": "",
-            "label": "voucher_id"
+            "label": "voucher_number"
+        },
+        {
+            "field_name": "voucher_or_tissue_number",
+            "form_placeholder": "",
+            "label": "voucher_or_tissue_number"
         },
         {
             "field_name": "wild_captive",
