@@ -123,6 +123,11 @@
             "label": "fastq_generation"
         },
         {
+            "field_name": "flow_id",
+            "form_placeholder": "",
+            "label": "flow_id"
+        },
+        {
             "field_name": "folder_name",
             "form_placeholder": "",
             "label": "folder_name"
@@ -308,6 +313,14 @@
         {
             "field_name": "s3etag_33554432",
             "label": "S3 E-Tag (32MB multipart)"
+        },
+        {
+            "field_name": "s3etag_67108864",
+            "label": "S3 E-Tag (64MB multipart)"
+        },
+        {
+            "field_name": "s3etag_134217728",
+            "label": "S3 E-Tag (128MB multipart)"
         },
         {
             "field_name": "s3_etag_verified_at",
