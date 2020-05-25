@@ -53,6 +53,12 @@
             "label": "License"
         },
         {
+            "field_name": "resource_permissions",
+            "form_placeholder": "used by ckanext-initiatives",
+            "label": "Resource Permissions",
+            "preset": "resource_permissions"
+        },
+        {
             "field_name": "acquisition_mode",
             "form_placeholder": "",
             "label": "acquisition_mode"
@@ -66,11 +72,6 @@
             "field_name": "analytical_platform",
             "form_placeholder": "",
             "label": "analytical_platform"
-        },
-        {
-            "field_name": "archive_id",
-            "form_placeholder": "",
-            "label": "archive_id"
         },
         {
             "field_name": "archive_ingestion_date",

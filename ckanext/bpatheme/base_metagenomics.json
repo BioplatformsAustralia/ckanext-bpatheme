@@ -53,6 +53,12 @@
             "label": "License"
         },
         {
+            "field_name": "resource_permissions",
+            "form_placeholder": "used by ckanext-initiatives",
+            "label": "Resource Permissions",
+            "preset": "resource_permissions"
+        },
+        {
             "field_name": "ammonium_nitrogen",
             "form_placeholder": "",
             "label": "ammonium_nitrogen (mg/kg)"

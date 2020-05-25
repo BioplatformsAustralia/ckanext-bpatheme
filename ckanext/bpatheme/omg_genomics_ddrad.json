@@ -53,6 +53,12 @@
             "label": "License"
         },
         {
+            "field_name": "resource_permissions",
+            "form_placeholder": "used by ckanext-initiatives",
+            "label": "Resource Permissions",
+            "preset": "resource_permissions"
+        },
+        {
             "field_name": "archive_ingestion_date",
             "form_placeholder": "",
             "label": "archive_ingestion_date"
@@ -133,6 +139,11 @@
             "label": "genus"
         },
         {
+            "field_name": "latitude",
+            "form_placeholder": "",
+            "label": "latitude"
+        },
+        {
             "field_name": "library_comments",
             "form_placeholder": "",
             "label": "library_comments"
@@ -191,6 +202,11 @@
             "field_name": "library_type",
             "form_placeholder": "",
             "label": "library_type"
+        },
+        {
+            "field_name": "longitude",
+            "form_placeholder": "",
+            "label": "longitude"
         },
         {
             "field_name": "n_libraries_pooled",
