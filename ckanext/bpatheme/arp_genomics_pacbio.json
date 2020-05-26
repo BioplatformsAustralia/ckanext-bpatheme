@@ -55,8 +55,7 @@
         {
             "field_name": "resource_permissions",
             "form_placeholder": "used by ckanext-initiatives",
-            "label": "Resource Permissions",
-            "preset": "resource_permissions"
+            "label": "Resource Permissions"
         },
         {
             "field_name": "analytical_facility",
