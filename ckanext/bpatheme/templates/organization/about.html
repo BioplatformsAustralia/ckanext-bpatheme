@@ -23,8 +23,6 @@
 
       {% endif %}
 
-      {% snippet 'snippets/bpa_register.html', c=c %}
-
       {% if c.group_dict.description %}
       {{ h.render_markdown(c.group_dict.description) }}
       {% endif %}
