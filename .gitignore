@@ -1,7 +1,9 @@
-
 *.pyc
 ckanext_bpatheme.egg-info/*
 build/*
 dist/*
 *.css.map
 .sass-cache
+.DS_Store
+.idea/
+ckanext/.DS_Store
