@@ -1,4 +1,6 @@
-
+.DS_Store
+.idea/
+ckanext/.DS_Store
 *.pyc
 ckanext_bpatheme.egg-info/*
 build/*
