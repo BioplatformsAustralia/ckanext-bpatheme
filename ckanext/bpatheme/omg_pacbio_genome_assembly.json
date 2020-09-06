@@ -63,11 +63,6 @@
             "label": "analysis_aim"
         },
         {
-            "field_name": "analysis_output_name",
-            "form_placeholder": "",
-            "label": "analysis_output_name"
-        },
-        {
             "field_name": "archive_ingestion_date",
             "form_placeholder": "",
             "label": "archive_ingestion_date"
@@ -88,6 +83,11 @@
             "label": "assembly_method_version_or_date"
         },
         {
+            "field_name": "assembly_name",
+            "form_placeholder": "",
+            "label": "assembly_name"
+        },
+        {
             "field_name": "bacteria_available_from",
             "form_placeholder": "",
             "label": "bacteria_available_from"
@@ -98,9 +98,19 @@
             "label": "base_url"
         },
         {
+            "field_name": "bpa_dataset_id",
+            "form_placeholder": "",
+            "label": "bpa_dataset_id"
+        },
+        {
             "field_name": "bpa_library_id",
             "form_placeholder": "",
             "label": "bpa_library_id"
+        },
+        {
+            "field_name": "bpa_sample_id",
+            "form_placeholder": "",
+            "label": "bpa_sample_id"
         },
         {
             "field_name": "computational_infrastructure",
@@ -118,21 +128,6 @@
             "label": "contextual_data_submission_date"
         },
         {
-            "field_name": "data_generated",
-            "form_placeholder": "",
-            "label": "data_generated"
-        },
-        {
-            "field_name": "data_type",
-            "form_placeholder": "",
-            "label": "data_type"
-        },
-        {
-            "field_name": "dataset_url",
-            "form_placeholder": "",
-            "label": "dataset_url"
-        },
-        {
             "field_name": "date_of_transfer",
             "form_placeholder": "",
             "label": "date_of_transfer"
@@ -141,6 +136,11 @@
             "field_name": "description",
             "form_placeholder": "",
             "label": "description"
+        },
+        {
+            "field_name": "filename",
+            "form_placeholder": "",
+            "label": "filename"
         },
         {
             "field_name": "folder_name",
@@ -161,6 +161,11 @@
             "field_name": "genus",
             "form_placeholder": "",
             "label": "genus"
+        },
+        {
+            "field_name": "hybrid",
+            "form_placeholder": "",
+            "label": "hybrid"
         },
         {
             "field_name": "main_analysis_output",
@@ -188,39 +193,24 @@
             "label": "notes"
         },
         {
-            "field_name": "output_version",
+            "field_name": "polishing_scaffolding_data",
             "form_placeholder": "",
-            "label": "output_version"
+            "label": "polishing_scaffolding_data"
         },
         {
-            "field_name": "raw_facility",
+            "field_name": "polishing_scaffolding_method",
             "form_placeholder": "",
-            "label": "raw_facility"
+            "label": "polishing_scaffolding_method"
         },
         {
-            "field_name": "raw_library_id",
+            "field_name": "raw_resources",
             "form_placeholder": "",
-            "label": "raw_library_id"
-        },
-        {
-            "field_name": "raw_run_date",
-            "form_placeholder": "",
-            "label": "raw_run_date"
+            "label": "raw_resources"
         },
         {
             "field_name": "reference_genome",
             "form_placeholder": "",
             "label": "reference_genome"
-        },
-        {
-            "field_name": "resource_permissions",
-            "form_placeholder": "",
-            "label": "resource_permissions"
-        },
-        {
-            "field_name": "run_date",
-            "form_placeholder": "",
-            "label": "run_date"
         },
         {
             "field_name": "sample_submission_date",
@@ -263,7 +253,7 @@
             "label": "version_release_link"
         }
     ],
-    "dataset_type": "omg-pacbio-genome-assemblies",
+    "dataset_type": "omg-pacbio-genome-assembly",
     "resource_fields": [
         {
             "field_name": "name",
@@ -323,6 +313,14 @@
             "field_name": "format",
             "label": "Format",
             "preset": "resource_format_autocomplete"
+        },
+        {
+            "field_name": "bpa_library_id",
+            "label": "bpa_library_id"
+        },
+        {
+            "field_name": "folder_name",
+            "label": "folder_name"
         },
         {
             "field_name": "format",
