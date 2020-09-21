@@ -1,3 +1,5 @@
+@import 'bpa_variables';
+
 .account-masthead {
   height: 39px;
   background: #fcfcfc;
@@ -708,7 +710,7 @@
   }
 
   hgroup {
-    background-color: #FEFEFE;
+    background-color: $background-color;
     padding-right: 0px;
     margin-right: 0px;
   }
