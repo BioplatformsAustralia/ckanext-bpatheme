@@ -98,10 +98,10 @@ img#beta {
   margin-left: 15px;
 }
 .masthead {
-  border-top: 1px solid #efefef;
-  border-bottom: 1px solid #efefef;
+  border-top: 1px solid var(--main-bg-color);
+  border-bottom: 1px solid var(--main-bg-color);
   background: none;
-  background-color: #fcfcfc;
+  background-color: var(--main-bg-color);
 }
 
 .dwga-header {
