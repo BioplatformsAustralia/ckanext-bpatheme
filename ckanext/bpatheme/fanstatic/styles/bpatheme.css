@@ -1,3 +1,7 @@
+:root {
+  --main-bg-color: #041e48;
+}
+
 /* =====================================================
    The "account masthead" bar across the top of the site
    ===================================================== */
@@ -26,7 +30,7 @@ img#beta {
 .account-masthead {
   height: 39px;
   background: none;
-  background-color: #fefefe;
+  background-color: var(--main-bg-color);
 }
 
 /* The "bubble" containing the number of new notifications. */
