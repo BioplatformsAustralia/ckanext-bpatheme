@@ -98,6 +98,11 @@
             "label": "ammonium"
         },
         {
+            "field_name": "ammonium_method",
+            "form_placeholder": "",
+            "label": "ammonium_method"
+        },
+        {
             "field_name": "ammonium_nitrogen",
             "form_placeholder": "",
             "label": "ammonium_nitrogen"
@@ -126,11 +131,6 @@
             "field_name": "ammonium_nitrogen_mg_per_l_method",
             "form_placeholder": "",
             "label": "ammonium_nitrogen_mg_per_l_method"
-        },
-        {
-            "field_name": "ammonium_\u03bcmol_per_l_method",
-            "form_placeholder": "",
-            "label": "ammonium_\u03bcmol_per_l_method"
         },
         {
             "field_name": "anth",
@@ -1298,6 +1298,11 @@
             "label": "license_id"
         },
         {
+            "field_name": "light_intensity_bottom",
+            "form_placeholder": "",
+            "label": "light_intensity_bottom"
+        },
+        {
             "field_name": "light_intensity_bottom_method",
             "form_placeholder": "",
             "label": "light_intensity_bottom_method"
@@ -1313,29 +1318,24 @@
             "label": "light_intensity_lux_method"
         },
         {
+            "field_name": "light_intensity_meadow",
+            "form_placeholder": "",
+            "label": "light_intensity_meadow"
+        },
+        {
             "field_name": "light_intensity_meadow_method",
             "form_placeholder": "",
             "label": "light_intensity_meadow_method"
         },
         {
-            "field_name": "light_intensity_meadow_\u00b5mol_per",
+            "field_name": "light_intensity_surface",
             "form_placeholder": "",
-            "label": "light_intensity_meadow_\u00b5mol_per"
+            "label": "light_intensity_surface"
         },
         {
             "field_name": "light_intensity_surface_method",
             "form_placeholder": "",
             "label": "light_intensity_surface_method"
-        },
-        {
-            "field_name": "light_intensity_\u00b5mol_m2_s1_bottom",
-            "form_placeholder": "",
-            "label": "light_intensity_\u00b5mol_m2_s1_bottom"
-        },
-        {
-            "field_name": "light_intensity_\u00b5mol_m2_s1_surface",
-            "form_placeholder": "",
-            "label": "light_intensity_\u00b5mol_m2_s1_surface"
         },
         {
             "field_name": "lon_raw",
@@ -1633,6 +1633,16 @@
             "label": "oxygen_ctd"
         },
         {
+            "field_name": "oxygen_ctd_method",
+            "form_placeholder": "",
+            "label": "oxygen_ctd_method"
+        },
+        {
+            "field_name": "oxygen_method",
+            "form_placeholder": "",
+            "label": "oxygen_method"
+        },
+        {
             "field_name": "oxygen_ml_per_l_ctd",
             "form_placeholder": "",
             "label": "oxygen_ml_per_l_ctd"
@@ -1641,16 +1651,6 @@
             "field_name": "oxygen_ml_per_l_method",
             "form_placeholder": "",
             "label": "oxygen_ml_per_l_method"
-        },
-        {
-            "field_name": "oxygen_\u03bcmol_per_kg_ctd_method",
-            "form_placeholder": "",
-            "label": "oxygen_\u03bcmol_per_kg_ctd_method"
-        },
-        {
-            "field_name": "oxygen_\u03bcmol_per_l_method",
-            "form_placeholder": "",
-            "label": "oxygen_\u03bcmol_per_l_method"
         },
         {
             "field_name": "palladium",
