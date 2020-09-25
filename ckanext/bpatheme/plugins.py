@@ -176,3 +176,12 @@ class CustomTheme(plugins.SingletonPlugin):
         facets_dict = updated_facet_dict
 
         return facets_dict
+
+    def organization_facets(self, facets_dict, organization_type, package_type):
+        facets_dict = self.dataset_facets(facets_dict, package_type)
+
+        fct_keys = [key for key in facets_dict.keys()]
+        if 'organization' in fct_keys:
+            del facets_dict['organization']
+
+        return facets_dict
