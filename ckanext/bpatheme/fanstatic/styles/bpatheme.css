@@ -59,6 +59,12 @@ img#beta {
   color: rgb(40, 40, 40);
   background-color: #ffffff;;
 }
+
+.account-masthead .account.not-authed li.login{
+  color: var(--mast-bg-color);
+  background-color: var(--mast-color);
+}
+
 .account-masthead .account.not-authed span.login{
   margin: 0 10px 0 10px;
   position: relative;
