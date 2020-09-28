@@ -57,6 +57,7 @@ img#beta {
 .account-masthead .account ul li.login{
   color: var(--mast-bg-color);
   background-color: var(--mast-color);
+  border-radius: 25px;
 }
 
 .account-masthead .account ul li.login a{
