@@ -44,25 +44,30 @@ img#beta {
   background-color: #fcfcfc;
 }
 
-/* The text and icons in the user account info. */
-.account-masthead .account ul li a {
-  color: rgb(105, 115, 124);
-}
-
 /* Transparent separator between links */
 .account-masthead .account ul li {
   border-left: 2px transparent;
+}
+
+/* The text and icons in the user account info. */
+.account-masthead .account ul li a {
+   --mast-color: #ffffff;
+}
+
+.account-masthead .account ul li.login{
+  color: var(--mast-bg-color);
+  background-color: var(--mast-color);
+}
+
+.account-masthead .account ul li.login a{
+  color: inherit;
+  background-color: inherit;
 }
 
 /* Links on a:hover. */
 .account-masthead .account ul li a:hover {
   color: rgb(40, 40, 40);
   background-color: #ffffff;;
-}
-
-.account-masthead .account.not-authed li.login{
-  color: var(--mast-bg-color);
-  background-color: var(--mast-color);
 }
 
 .account-masthead .account.not-authed span.login{
