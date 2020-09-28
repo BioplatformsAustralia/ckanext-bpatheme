@@ -1,5 +1,6 @@
 :root {
   --main-bg-color: #041e48;
+  --mast-color: #ffffff
 }
 
 /* =====================================================
@@ -40,7 +41,7 @@ img#beta {
 
 /* The text and icons in the user account info. */
 .account-masthead .account ul li a {
-  color: rgb(105, 115, 124);
+  color: var(--mast-color);
 }
 
 /* Transparent separator between links */
