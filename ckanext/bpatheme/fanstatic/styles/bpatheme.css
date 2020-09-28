@@ -41,7 +41,7 @@ img#beta {
 
 /* The text and icons in the user account info. */
 .account-masthead .account ul li a {
-  color: var(--mast-color);
+  color: rgb(105, 115, 124);
 }
 
 /* Transparent separator between links */
@@ -52,14 +52,8 @@ img#beta {
 /* Links on a:hover. */
 .account-masthead .account ul li a:hover {
   color: rgb(40, 40, 40);
-  background-color: var(--mast-color);
+  background-color: #ffffff;;
 }
-
-.account-masthead .account.not-authed li.login{
-  color: var(--mast-bg-color);
-  background-color: var(--mast-color);
-}
-
 .account-masthead .account.not-authed span.login{
   margin: 0 10px 0 10px;
   position: relative;
