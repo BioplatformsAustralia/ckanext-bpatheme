@@ -54,9 +54,9 @@
             <ul class="unstyled">
               {% block header_account_notlogged %}
                 <li>
-                  <a href="{{ h.url_for(controller='user', action='login') }}" title="{{ _('foo in') }}">
+                  <a href="{{ h.url_for(controller='user', action='login') }}" title="{{ _('Log in') }}">
                       <i class="fa fa-sign-in" aria-hidden="true">Log in</i>
-                      <span class="text">{{ _('Shoe in') }}</span>
+                      <span class="text">{{ _('Log in') }}</span>
                   </a>
               </li>
               {% if h.check_access('user_create') %}
