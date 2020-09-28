@@ -28,6 +28,11 @@ img#beta {
   background-position: 50% 50% !important;
 }
 
+.container-header.masthead {
+  background: none;
+  background-color: var(--mast-bg-color);
+}
+
 .account-masthead {
   height: 39px;
   background: none;
