@@ -80,7 +80,7 @@ img#beta {
 
 .account-masthead .account ul li.register a:hover {
   color: rgb(105, 115, 124);
-  background-color: inherit;
+  background-color: var(--mast-bg-color);
 }
 
 .account-masthead .account.not-authed span.login{
