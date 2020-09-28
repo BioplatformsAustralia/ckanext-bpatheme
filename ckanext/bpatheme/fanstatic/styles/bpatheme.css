@@ -65,15 +65,13 @@ img#beta {
   background-color: var(--mast-color);
 }
 
-.account-masthead .account.not-authed li.login span{
-  background-color: inherit;
-}
-
 .account-masthead .account.not-authed span.login{
   margin: 0 10px 0 10px;
   position: relative;
   top: 0;
   left: 0;
+  color: inherit;
+  background-color: inherit;
 }
 
 /* The "dashboard" and number of notifiations background */
