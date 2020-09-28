@@ -1,6 +1,6 @@
 :root {
-  --main-bg-color: #041e48;
-  --mast-color: #ffffff
+  --mast-bg-color: #041e48;
+  --mast-color: #ffffff;
 }
 
 /* =====================================================
@@ -31,7 +31,7 @@ img#beta {
 .account-masthead {
   height: 39px;
   background: none;
-  background-color: var(--main-bg-color);
+  background-color: var(--mast-bg-color);
 }
 
 /* The "bubble" containing the number of new notifications. */
@@ -52,7 +52,12 @@ img#beta {
 /* Links on a:hover. */
 .account-masthead .account ul li a:hover {
   color: rgb(40, 40, 40);
-  background-color: #ffffff;
+  background-color: var(--mast-color);
+}
+
+.account-masthead .account.not-authed li.login{
+  color: var(--mast-bg-color);
+  background-color: var(--mast-color);
 }
 
 .account-masthead .account.not-authed span.login{
