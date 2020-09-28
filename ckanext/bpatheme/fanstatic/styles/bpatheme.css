@@ -78,7 +78,9 @@ img#beta {
   color: rgb(105, 115, 124);
 }
 
-
+.account-masthead .account ul li.register a:hover {
+  color: rgb(105, 115, 124);
+}
 
 .account-masthead .account.not-authed span.login{
   margin: 0 10px 0 10px;
