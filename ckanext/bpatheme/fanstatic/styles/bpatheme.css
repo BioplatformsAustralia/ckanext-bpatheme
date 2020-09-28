@@ -65,6 +65,10 @@ img#beta {
   background-color: var(--mast-color);
 }
 
+.account-masthead .account.not-authed li.login span{
+  background-color: inherit;
+}
+
 .account-masthead .account.not-authed span.login{
   margin: 0 10px 0 10px;
   position: relative;
