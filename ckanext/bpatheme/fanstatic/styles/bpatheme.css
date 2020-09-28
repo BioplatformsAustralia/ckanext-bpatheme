@@ -85,6 +85,10 @@ img#beta {
   text-align: left;
 }
 
+.dwga-header-row > div{
+  padding-left: 0;
+}
+
 .dwga-header-row .logo {
     height: auto;
     width: 500px;
