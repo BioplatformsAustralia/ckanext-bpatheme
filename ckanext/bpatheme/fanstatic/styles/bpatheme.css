@@ -71,7 +71,7 @@ img#beta {
 /* Links on a:hover. */
 .account-masthead .account ul li a:hover {
   color: rgb(40, 40, 40);
-  background-color: #ffffff;;
+  background-color: #ffffff;
 }
 
 .account-masthead .account ul li.login a:hover {
@@ -80,6 +80,7 @@ img#beta {
 
 .account-masthead .account ul li.register a:hover {
   color: rgb(105, 115, 124);
+  background-color: inherit;
 }
 
 .account-masthead .account.not-authed span.login{
