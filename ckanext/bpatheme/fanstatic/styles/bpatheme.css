@@ -54,6 +54,13 @@ img#beta {
   background-color: #ffffff;
 }
 
+.account-masthead .account.not-authed span.login{
+  margin: 0 10px 0 10px;
+  position: relative;
+  top: 0;
+  left: 0;
+}
+
 /* The "dashboard" and number of notifiations background */
 .account-masthead .account .notifications a:hover span {
   color: rgb(105, 115, 124);
