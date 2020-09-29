@@ -62,15 +62,6 @@
                       <span class="text login">{{ _('LOG IN') }}</span>
                     </a>
                   </li>
-                  <li>
-                  1{{ c.page }}
-                  </li>
-                  <li>
-                  2{{  c.userobj }}
-                  </li>
-                    <li>
-                  4{{  h.current_url() }}
-                  </li>
                   {% if h.check_access('user_create') %}
                     <li class="register">{% link_for _('Register'), controller='user', action='register', class_='sub' %}</li>
                   {% endif %}
