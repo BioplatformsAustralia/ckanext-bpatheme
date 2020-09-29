@@ -82,34 +82,37 @@
       {% endblock %}
       <div class="container" id="dwga-header-container">
         <hgroup class="row dwga-header-row"><!-- Force  navbar into new row -->
-          <div class="col-md-8">
-            {% block header_logo %}
-              {% if g.site_logo %}
+          {% block header_logo %}
+            {% if g.site_logo %}
+              <div class="col-md-8">
                 <div class="dwga-logo dwga-inlineblock">
                   <a class="logo" href="{{ h.url('home') }}">
                     <img src="{{ h.url_for_static_or_external('BIO-RGB_Full-NEG_Portal_TRANS2.png') }}"
                          alt="{{ g.site_title }}" title="{{ g.site_title }}"/>
                   </a>
                 </div>
-              {% else %}
-                <div class="dwga-title dwga-inlineblock">
+              </div>
+              <div class="col-md-4">
+                <div class="dwga-title dwga-inlineblock site-title">
                   <a href="{{ h.url_for('home.index') }}">{{ g.site_title }}</a>
                   {% if g.site_description %}
                     <h2>{{ g.site_description }}</h2>
                   {% endif %}
                   <!--h1><small>{{ g.site_description }}</small></h1-->
                 </div>
-              {% endif %}
-            {% endblock header_logo %}
-          </div>
-          <div class="col-md-4">
-            <div class="dwga-title dwga-inlineblock">
-              <a href="{{ h.url_for('home.index') }}">{{ g.site_title }}</a>
-              {% if g.site_description %}
-                <h2>{{ g.site_description }}</h2>
-              {% endif %}
-              <!--h1><small>{{ g.site_description }}</small></h1-->
-            </div>
+              </div>
+            {% else %}
+              <div class="col-md-12">
+                <div class="dwga-title dwga-inlineblock site-title">
+                  <a href="{{ h.url_for('home.index') }}">{{ g.site_title }}</a>
+                  {% if g.site_description %}
+                    <h2>{{ g.site_description }}</h2>
+                  {% endif %}
+                  <!--h1><small>{{ g.site_description }}</small></h1-->
+                </div>
+              </div>
+            {% endif %}
+          {% endblock header_logo %}
         </hgroup><!-- /.dwga-row -->
       </div>
     </header>
