@@ -1,7 +1,8 @@
 :root {
   --mast-bg-color: #041e48;
   --mast-color: #ffffff;
-  --mast-hover-color: rgb(105, 115, 124);
+  --mast-hover-color: #00c08b;
+  --mast-no-link: rgb(105, 115, 124)
 }
 
 /* =====================================================
@@ -56,7 +57,9 @@ img#beta {
 .masthead .nav > li > a,
 .masthead .nav > .active > a,
 .account-masthead .account .notifications a span,
-.account-masthead .account ul li a {
+.account-masthead .account ul li a,
+.masthead .site-title a,
+.masthead .site-title a:active {
   color: var(--mast-color);
   background-color: var(--mast-bg-color);
   text-shadow: none;
@@ -68,7 +71,9 @@ img#beta {
 .masthead .nav > li > a:focus,
 .masthead .nav > li > a:hover,
 .account-masthead .account .notifications a:hover span,
-.account-masthead .account ul li a:hover {
+.account-masthead .account ul li a:hover,
+.masthead .site-title a:hover,
+.masthead .site-title a:focus {
   color: var(--mast-hover-color);
   background-color: inherit;
   text-shadow: none;
