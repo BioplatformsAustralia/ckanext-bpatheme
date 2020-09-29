@@ -1,6 +1,7 @@
 :root {
   --mast-bg-color: #041e48;
   --mast-color: #ffffff;
+  --mast-hover-color: rgb(105, 115, 124);
 }
 
 /* =====================================================
@@ -41,7 +42,7 @@ img#beta {
 
 /* The "bubble" containing the number of new notifications. */
 .account-masthead .account .notifications a span {
-  background-color: #fcfcfc;
+  background-color: var(--mast-color);
 }
 
 /* Transparent separator between links */
@@ -51,7 +52,13 @@ img#beta {
 
 /* The text and icons in the user account info. */
 .account-masthead .account ul li a {
-   --mast-color: #ffffff;
+  color: var(--mast-color);
+  background-color: var(--mast-bg-color);
+}
+
+.account-masthead .account ul li a:hover {
+  color: var(--mast-hover-color);
+  background-color: inherit;
 }
 
 .account-masthead .account ul li.login{
@@ -68,19 +75,8 @@ img#beta {
   border-radius: 25px;
 }
 
-/* Links on a:hover. */
-.account-masthead .account ul li a:hover {
-  color: rgb(40, 40, 40);
-  background-color: #ffffff;
-}
-
 .account-masthead .account ul li.login a:hover {
-  color: rgb(105, 115, 124);
-}
-
-.account-masthead .account ul li.register a:hover {
-  color: rgb(105, 115, 124);
-  background-color: var(--mast-bg-color);
+  color: var(--mast-hover-color);
 }
 
 .account-masthead .account.not-authed span.login{
