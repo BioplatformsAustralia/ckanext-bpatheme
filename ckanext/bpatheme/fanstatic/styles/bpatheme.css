@@ -114,7 +114,6 @@ img#beta {
 .dwga-header-container {
   padding: 5px;
   background: none;
-  height: 100%;
 }
 
 /* Invisible debug output for controller/action */
@@ -131,6 +130,7 @@ img#beta {
   padding: 10px 10px 10px 0px;
   margin-left: 0px;
   text-align: left;
+  height: 100%;
 }
 
 .dwga-header-row > div{
