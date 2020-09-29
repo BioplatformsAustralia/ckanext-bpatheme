@@ -138,6 +138,8 @@ img#beta {
 
 .dwga-title {
   margin-left: 15px;
+  display: flex;
+  flex-direction: row;
 }
 .masthead {
   border-top: 1px solid var(--main-bg-color);
