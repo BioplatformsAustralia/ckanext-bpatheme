@@ -69,7 +69,7 @@
                   2{{  c.userobj }}
                   </li>
                     <li>
-                  3{{  request }}
+                  3{{  request.params }}
                   </li>
                   {% if h.check_access('user_create') %}
                     <li class="register">{% link_for _('Register'), controller='user', action='register', class_='sub' %}</li>
