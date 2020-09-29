@@ -144,6 +144,7 @@ img#beta {
   margin-left: 15px;
   display: flex;
   flex-direction: row;
+  justify-content: space-between;
 }
 
 .masthead {
