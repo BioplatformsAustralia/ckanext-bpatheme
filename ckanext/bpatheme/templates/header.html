@@ -4,8 +4,6 @@
       <div class="container">
         {% block header_account_container_content %}
           {% if c.userobj %}
-            {% c %}
-            {{c}}
             <div class="account avatar authed" data-module="me" data-me="{{ c.userobj.id }}">
               <ul class="unstyled">
                 {% block header_account_logged %}
