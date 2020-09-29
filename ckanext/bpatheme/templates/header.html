@@ -4,7 +4,6 @@
       <div class="container">
         {% block header_account_container_content %}
           {% if c.userobj %}
-            <div>hello {{ c.userobj }}</div>
             <div class="account avatar authed" data-module="me" data-me="{{ c.userobj.id }}">
               <ul class="unstyled">
                 {% block header_account_logged %}
@@ -62,6 +61,12 @@
                       <i class="fa fa-sign-in" aria-hidden="true"></i>
                       <span class="text login">{{ _('LOG IN') }}</span>
                     </a>
+                  </li>
+                  <li>
+                  {{ c }}
+                  </li>
+                  <li>
+                  c.userobj
                   </li>
                   {% if h.check_access('user_create') %}
                     <li class="register">{% link_for _('Register'), controller='user', action='register', class_='sub' %}</li>
