@@ -159,6 +159,7 @@ img#beta {
   justify-content: space-between;
   align-items: flex-end;
   height: 100%;
+  padding-bottom: 30px;
 }
 
 .masthead {
