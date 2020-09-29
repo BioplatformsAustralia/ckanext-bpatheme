@@ -114,6 +114,7 @@ img#beta {
 .dwga-header-container {
   padding: 5px;
   background: none;
+  height: 100%;
 }
 
 /* Invisible debug output for controller/action */
@@ -149,14 +150,17 @@ img#beta {
   margin-left: 15px;
 }
 
+.site-title-container {
+  min-height: 100%;
+  height: auto;
+}
+
 .site-title {
   margin-left: 15px;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   align-items: flex-end;
-  min-height: 100%;
-  height: 100%;
 }
 
 .masthead {
