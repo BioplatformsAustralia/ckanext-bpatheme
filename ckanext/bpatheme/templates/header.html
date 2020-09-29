@@ -69,7 +69,10 @@
                   2{{  c.userobj }}
                   </li>
                     <li>
-                  4{{  current_url() }}
+                  3{{  h.HelperAttributeDict(request) }}
+                  </li>
+                    <li>
+                  4{{  h.current_url() }}
                   </li>
                   {% if h.check_access('user_create') %}
                     <li class="register">{% link_for _('Register'), controller='user', action='register', class_='sub' %}</li>
