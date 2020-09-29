@@ -63,10 +63,13 @@
                     </a>
                   </li>
                   <li>
-                  {{ c.page }}
+                  1{{ c.page }}
                   </li>
                   <li>
-                  {{  c.userobj }}
+                  2{{  c.userobj }}
+                  </li>
+                    <li>
+                  3{{  request }}
                   </li>
                   {% if h.check_access('user_create') %}
                     <li class="register">{% link_for _('Register'), controller='user', action='register', class_='sub' %}</li>
