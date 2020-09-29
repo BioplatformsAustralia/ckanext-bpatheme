@@ -131,6 +131,8 @@ img#beta {
   margin-left: 0px;
   text-align: left;
   height: 100%;
+  display: flex;
+  flex-direction: row;
 }
 
 .dwga-header-row > div{
@@ -150,17 +152,13 @@ img#beta {
   margin-left: 15px;
 }
 
-.site-title-container {
-  min-height: 100%;
-  height: auto;
-}
-
 .site-title {
   margin-left: 15px;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   align-items: flex-end;
+  height: 100%;
 }
 
 .masthead {
