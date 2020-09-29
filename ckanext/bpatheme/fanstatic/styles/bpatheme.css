@@ -51,14 +51,28 @@ img#beta {
 }
 
 /* The text and icons in the user account info. */
+.masthead a,
+.masthead hgroup h2,
+.masthead .nav > li > a,
+.masthead .nav > .active > a,
+.account-masthead .account .notifications a span,
 .account-masthead .account ul li a {
   color: var(--mast-color);
   background-color: var(--mast-bg-color);
+  text-shadow: none;
+  box-shadow: none;
 }
 
+.masthead .nav > .active > a:hover,
+.masthead .nav > .active > a:focus,
+.masthead .nav > li > a:focus,
+.masthead .nav > li > a:hover,
+.account-masthead .account .notifications a:hover span,
 .account-masthead .account ul li a:hover {
   color: var(--mast-hover-color);
   background-color: inherit;
+  text-shadow: none;
+  box-shadow: none;
 }
 
 .account-masthead .account ul li.login{
@@ -85,12 +99,6 @@ img#beta {
   top: 0;
   left: 0;
   color: inherit;
-  background-color: inherit;
-}
-
-/* The "dashboard" and number of notifiations background */
-.account-masthead .account .notifications a:hover span {
-  color: rgb(105, 115, 124);
   background-color: inherit;
 }
 
@@ -144,10 +152,10 @@ img#beta {
 }
 
 .masthead {
-  border-top: 1px solid var(--main-bg-color);
-  border-bottom: 1px solid var(--main-bg-color);
+  border-top: 1px solid var(--mast-bg-color);
+  border-bottom: 1px solid var(--mast-bg-color);
   background: none;
-  background-color: var(--main-bg-color);
+  background-color: var(--mast-bg-color);
 }
 
 .dwga-header {
@@ -182,15 +190,6 @@ ul.nav {
   float: left;
 }
 
-/* Navigation links on hover */
-.masthead .navigation ul.nav li a:hover,
-.masthead .navigation ul.nav li.active a {
-  background: none;
-  color: #2ea3f2;
-  text-decoration: none;
-  box-shadow: none;
-}
-
 /* Space the nav links (Dataset, Orgs, Groups) so the hover/active underline is separated */
 .navbar .nav > li > a {
   margin-left: 2px;
@@ -201,20 +200,6 @@ ul.nav {
 .masthead input[type="text"]:focus {
   -webkit-box-shadow: inset 0px 0px 2px 0px rgba(0, 0, 0, 0.7);
   box-shadow: inset 0px 0px 2px 0px rgba(0, 0, 0, 0.7);
-}
-
-.masthead a,
-.masthead hgroup h2,
-.masthead .nav > li > a,
-.masthead .nav > li > a:focus,
-.masthead .nav > li > a:hover,
-.masthead .nav > .active > a,
-.masthead .nav > .active > a:hover,
-.masthead .nav > .active > a:focus,
-.account-masthead .account .notifications a span {
-  color: rgb(105, 115, 124);
-  text-shadow: none;
-  margin-left: 2px;
 }
 
 /* changes for bpa logo */
