@@ -93,7 +93,7 @@
                 </div>
               </div>
               <div class="col-md-4">
-                <div class="dwga-title dwga-inlineblock site-title">
+                <div class="site-title">
                   <div>
                   <a href="{{ h.url_for('home.index') }}">{{ g.site_title }}</a>
                   </div>
@@ -106,7 +106,7 @@
               </div>
             {% else %}
               <div class="col-md-12">
-                <div class="dwga-title dwga-inlineblock site-title">
+                <div class="site-title">
                   <a href="{{ h.url_for('home.index') }}">{{ g.site_title }}</a>
                   {% if g.site_description %}
                     <h2>{{ g.site_description }}</h2>
