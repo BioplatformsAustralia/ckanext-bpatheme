@@ -205,6 +205,10 @@
             "preset": "resource_format_autocomplete"
         },
         {
+            "field_name": "control_type",
+            "label": "control_type"
+        },
+        {
             "field_name": "flowcell",
             "label": "flowcell"
         },

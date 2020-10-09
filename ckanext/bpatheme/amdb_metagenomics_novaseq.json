@@ -58,6 +58,16 @@
             "label": "Resource Permissions"
         },
         {
+            "field_name": "absorbance_260_230_ratio",
+            "form_placeholder": "",
+            "label": "absorbance_260_230_ratio"
+        },
+        {
+            "field_name": "absorbance_260_280_ratio",
+            "form_placeholder": "",
+            "label": "absorbance_260_280_ratio"
+        },
+        {
             "field_name": "acid_volatile_sulphides",
             "form_placeholder": "",
             "label": "acid_volatile_sulphides"
@@ -651,6 +661,16 @@
             "field_name": "dino_method",
             "form_placeholder": "",
             "label": "dino_method"
+        },
+        {
+            "field_name": "dna_concentration",
+            "form_placeholder": "",
+            "label": "dna_concentration"
+        },
+        {
+            "field_name": "dna_concentration_method",
+            "form_placeholder": "",
+            "label": "dna_concentration_method"
         },
         {
             "field_name": "dtpa_copper",
@@ -1568,9 +1588,14 @@
             "label": "nrs_trip_code"
         },
         {
-            "field_name": "of_raw_reads",
+            "field_name": "number_of_raw_reads",
             "form_placeholder": "",
-            "label": "of_raw_reads"
+            "label": "number_of_raw_reads"
+        },
+        {
+            "field_name": "number_pcr_cycle",
+            "form_placeholder": "",
+            "label": "number_pcr_cycle"
         },
         {
             "field_name": "omics",
