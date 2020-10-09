@@ -121,6 +121,23 @@ class CustomTheme(plugins.SingletonPlugin):
             c.fields
         except AttributeError:
             c.fields = []
+
+        # Search by fields for BPA Data Portal
+
+        extras = search_params.get("extras")
+        if not extras:
+            # There are no extras in the search params, so do nothing.
+            return search_params
+        search_by = extras.get("ext_search_by")
+        if not search_by:
+            # The user didn't specify a specific field, so do nothing
+            return search_params
+
+        # Prepend the field name to the query
+        q = search_params["q"]
+        q = "{search_by}:/.*{q}.*/".format(q=q, search_by=search_by)
+        search_params["q"] = q
+
         return search_params
 
     # IConfigurer
