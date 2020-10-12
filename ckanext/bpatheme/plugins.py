@@ -116,6 +116,22 @@ class CustomTheme(plugins.SingletonPlugin):
     # IPackageController
 
     def before_search(self, search_params):
+        def make_insensitive(query):
+            twiddled = []
+
+            for c in query:
+                if c.isalpha():
+                    twiddled.append("[")
+                    twiddled.append(c.upper())
+                    twiddled.append(c.lower())
+                    twiddled.append("]")
+                else:
+                    twiddled.append(c)
+
+            output = u""
+
+            return output.join(twiddled)
+
         # fix for ckanext-hierarchy required by migration to 2.8
         try:
             c.fields
@@ -135,6 +151,7 @@ class CustomTheme(plugins.SingletonPlugin):
 
         # Prepend the field name to the query
         q = search_params["q"]
+        q = make_insensitive(q)
         search_terms = []
         for term in q.split():
             search_terms.append(
