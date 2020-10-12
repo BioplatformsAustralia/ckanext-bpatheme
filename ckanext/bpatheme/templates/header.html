@@ -84,7 +84,7 @@
         <hgroup class="row dwga-header-row"><!-- Force  navbar into new row -->
           {% block header_logo %}
             {% if g.site_logo %}
-              <div class="col-md-6">
+              <div class="col-md-6 header-left">
                 <div class="dwga-logo dwga-inlineblock">
                   <a class="logo" href="{{ h.url('home') }}">
                     <picture>
@@ -95,9 +95,9 @@
                   </a>
                 </div>
               </div>
-              <div class="col-md-6 site-parent">
+              <div class="col-md-6 site-parent header-right">
             {% else %}
-              <div class="col-md-12 site-parent">
+              <div class="col-md-12 site-parent header-right">
             {% endif %}
                 <div class="site-title">
                   <div class="topnav" id="myTopnav">
