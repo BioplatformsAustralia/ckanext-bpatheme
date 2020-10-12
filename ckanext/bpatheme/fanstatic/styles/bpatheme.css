@@ -273,6 +273,11 @@ img {
 [role="main"] {
   background: #fefefe;
 }
+
+.hero.landing,
+[role="main"] {
+  background-image: url("@{imagePath}/header-background_2.jpg");
+}
 /* Remove the "box shadow" effect around various boxes on the page. */
 .box {
   box-shadow: none;
