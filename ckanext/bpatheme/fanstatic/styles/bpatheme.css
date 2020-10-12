@@ -500,22 +500,28 @@ body {
   display: none;
 }
 
-/*@media screen and (min-width: 600px) {*/
+
   .site-title .topnav {
     margin-left: 15px;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: flex-end;
     height: 100%;
     padding-bottom: 30px;
     position: relative;
   }
+
+/*@media screen and (min-width: 600px) {*/
+  .site-title .topnav {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-end;
+  }
 /*}*/
 
 
-@media screen and (min-width: 601px) and (max-width: 900px) {
-  flex-direction: column;
+@media screen and (max-width: 990px) {
+  .site-title .topnav {
+    flex-direction: column;
+  }
 }
 
 /* When the screen is less than 600 pixels wide, hide all links, except for the first one ("Home"). Show the link that contains should open and close the topnav (.icon) */
