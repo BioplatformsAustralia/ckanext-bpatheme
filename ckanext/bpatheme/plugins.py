@@ -135,7 +135,12 @@ class CustomTheme(plugins.SingletonPlugin):
 
         # Prepend the field name to the query
         q = search_params["q"]
-        q = "{search_by}:/.*{q}.*/".format(q=q, search_by=search_by)
+        search_terms = []
+        for term in q.split():
+            search_terms.append(
+                "{search_by}:/.*{q}.*/".format(q=term, search_by=search_by)
+            )
+        q = " AND ".join(search_terms)
         search_params["q"] = q
 
         return search_params
