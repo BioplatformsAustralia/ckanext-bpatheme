@@ -508,12 +508,13 @@ body {
   .site-title {
     margin-left: 15px;
     height: 100%;
-    padding-bottom: 30px;
     position: relative;
   }
 
 /*@media screen and (min-width: 600px) {*/
   .site-title .topnav {
+    height: 100%;
+    padding-bottom: 30px;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
