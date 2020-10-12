@@ -500,6 +500,10 @@ body {
   display: none;
 }
 
+.site-parent {
+  width: 100%;
+}
+
 
   .site-title {
     margin-left: 15px;
