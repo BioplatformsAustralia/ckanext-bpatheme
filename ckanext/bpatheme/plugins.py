@@ -116,11 +116,50 @@ class CustomTheme(plugins.SingletonPlugin):
     # IPackageController
 
     def before_search(self, search_params):
+        def make_insensitive(query):
+            twiddled = []
+
+            for c in query:
+                if c.isalpha():
+                    twiddled.append("[")
+                    twiddled.append(c.upper())
+                    twiddled.append(c.lower())
+                    twiddled.append("]")
+                else:
+                    twiddled.append(c)
+
+            output = u""
+
+            return output.join(twiddled)
+
         # fix for ckanext-hierarchy required by migration to 2.8
         try:
             c.fields
         except AttributeError:
             c.fields = []
+
+        # Search by fields for BPA Data Portal
+
+        extras = search_params.get("extras")
+        if not extras:
+            # There are no extras in the search params, so do nothing.
+            return search_params
+        search_by = extras.get("ext_search_by")
+        if not search_by:
+            # The user didn't specify a specific field, so do nothing
+            return search_params
+
+        # Prepend the field name to the query
+        q = search_params["q"]
+        q = make_insensitive(q)
+        search_terms = []
+        for term in q.split():
+            search_terms.append(
+                "{search_by}:/.*{q}.*/".format(q=term, search_by=search_by)
+            )
+        q = " AND ".join(search_terms)
+        search_params["q"] = q
+
         return search_params
 
     # IConfigurer
