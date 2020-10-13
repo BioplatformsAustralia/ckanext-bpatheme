@@ -554,10 +554,10 @@ body {
 
   .topnav a {
     display: none;
-    right: 0;
-    float: none;
-    /*display: block;*/
-    text-align: left;
+    /*right: 0;*/
+    /*float: none;*/
+    /*!*display: block;*!*/
+    /*text-align: left;*/
     transition: all 0.4s ease-in;
     /*position: fixed;*/
     /*top: 60px;*/
