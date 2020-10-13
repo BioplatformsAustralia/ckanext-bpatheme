@@ -594,7 +594,7 @@ body {
     display: block;
     text-align: left;
     transition: all 0.4s ease-in;
-    position: fixed;
+    /*position: fixed;*/
     /*top: 60px;*/
     right: 30px;
   }
