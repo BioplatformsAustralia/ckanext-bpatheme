@@ -559,6 +559,9 @@ body {
   .topnav a.icon {
     /*float: right;*/
     display: block;
+    position: fixed;
+    top: 20px;
+    right: 0;
   }
 
   .topnav {
