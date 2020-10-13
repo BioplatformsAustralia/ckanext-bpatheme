@@ -561,6 +561,15 @@ body {
     display: block;
   }
 
+  .topnav {
+    width: 0;
+    transition: 0.5s;
+  }
+
+  .site-title {
+    transition: 0.5s;
+  }
+
   .topnav.responsive {
     position: fixed;
     z-index: 1; /* Stay on top */
