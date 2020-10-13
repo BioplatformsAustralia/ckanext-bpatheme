@@ -563,6 +563,9 @@ body {
 
   .topnav.responsive {
     position: relative;
+    -webkit-transition: height .15s ease-in-out;
+    -o-transition: height .15s ease-in-out;
+    transition: height .15s ease-in-out;
   }
 
   .topnav.responsive a.icon {
