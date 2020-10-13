@@ -523,11 +523,11 @@ body {
 /*@media screen and (min-width: 600px) {*/
   .site-title .topnav {
     height: 100%;
-    padding-bottom: 30px;
+    /*padding-bottom: 30px;*/
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    align-items: flex-end;
+    align-items: center;
     position: relative;
   }
 /*}*/
@@ -536,7 +536,7 @@ body {
 @media screen and (max-width: 990px) {
   .site-title .topnav {
     flex-direction: column;
-    padding-bottom: 0px;
+    /*padding-bottom: 0px;*/
   }
 }
 
@@ -548,7 +548,7 @@ body {
   /*}*/
 
   .site-title .topnav {
-    padding-bottom: 50px;
+    /*padding-bottom: 50px;*/
   }
 
   .topnav a {
