@@ -566,9 +566,6 @@ body {
 
   .topnav {
     width: 0;
-    position: fixed;
-    top: 20px;
-    right: 0;
     transition: all 0.4s ease-in;
   }
 
@@ -586,10 +583,10 @@ body {
   }
 
   .topnav.responsive a.icon {
-    position: absolute;
-    right: -20px;
-    top: 0;
-    transition: all 0.4s ease-in;
+    /*position: absolute;*/
+    /*right: -20px;*/
+    /*top: 0;*/
+    /*transition: all 0.4s ease-in;*/
   }
 
   .topnav.responsive a {
