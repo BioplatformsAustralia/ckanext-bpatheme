@@ -471,7 +471,7 @@ body {
 /* Add a black background color to the top navigation */
 .topnav {
   /*background-color: #333;*/
-  overflow: hidden;
+  overflow: visible;
 }
 
 /* Style the links inside the navigation bar */
@@ -566,7 +566,7 @@ body {
 
   .topnav.responsive a.icon {
     position: absolute;
-    right: -10px;
+    right: -20px;
     top: 0;
   }
 
