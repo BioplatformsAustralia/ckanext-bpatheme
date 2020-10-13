@@ -510,6 +510,7 @@ body {
   width: 100%;
   height: 100%;
   margin-right: 15px;
+  position: relative;
 }
 
 
@@ -535,6 +536,7 @@ body {
 @media screen and (max-width: 990px) {
   .site-title .topnav {
     flex-direction: column;
+    padding-bottom: 0px;
   }
 }
 
