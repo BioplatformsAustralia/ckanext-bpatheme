@@ -547,6 +547,10 @@ body {
   /*  display: none;*/
   /*}*/
 
+  .site-title .topnav {
+    padding-bottom: 50px;
+  }
+
   .topnav a {
     display: none;
   }
