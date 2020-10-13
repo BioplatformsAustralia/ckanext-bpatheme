@@ -563,18 +563,18 @@ body {
 
   .topnav {
     width: 0;
-    transition: 0.5s;
+    position: fixed;
+    top: 20px;
+    right: 0;
+    transition: all 0.4s ease-in;
   }
 
   .site-title {
-    transition: 0.5s;
+    transition: all 0.4s ease-in;
   }
 
   .topnav.responsive {
-    position: fixed;
     z-index: 1; /* Stay on top */
-    top: 0;
-    right: 0;
     /*background-color: white;*/
     /*-webkit-transition: height .15s ease-in-out;*/
     /*-o-transition: height .15s ease-in-out;*/
@@ -586,14 +586,14 @@ body {
     position: absolute;
     right: -20px;
     top: 0;
-    transition: 0.5s;
+    transition: all 0.4s ease-in;
   }
 
   .topnav.responsive a {
     float: none;
     display: block;
     text-align: left;
-    transition: 0.5s;
+    transition: all 0.4s ease-in;
   }
 
   .masthead .logo img {
