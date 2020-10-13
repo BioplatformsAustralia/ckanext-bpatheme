@@ -431,8 +431,6 @@ body {
 
 .site-footer-logo {
   background-color: #171717;
-  /* padding-top: 30px;
-  padding-bottom: 30px; */
   padding: 30px;
   text-align: center;
 }
@@ -523,7 +521,6 @@ body {
 /*@media screen and (min-width: 600px) {*/
   .site-title .topnav {
     height: 100%;
-    /*padding-bottom: 30px;*/
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -536,7 +533,6 @@ body {
 @media screen and (max-width: 990px) {
   .site-title .topnav {
     flex-direction: column;
-    /*padding-bottom: 0px;*/
   }
 }
 
@@ -546,6 +542,10 @@ body {
   /*.topnav a:not(:first-child) {*/
   /*  display: none;*/
   /*}*/
+
+  .dwga-header-row {
+    align-items: flex-start;
+  }
 
   .site-title .topnav {
     /*padding-bottom: 50px;*/
