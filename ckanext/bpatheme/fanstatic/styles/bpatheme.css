@@ -533,6 +533,7 @@ body {
 @media screen and (max-width: 990px) {
   .site-title .topnav {
     flex-direction: column;
+    align-items: flex-end;
   }
 }
 
