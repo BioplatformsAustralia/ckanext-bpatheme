@@ -143,8 +143,8 @@ img#beta {
 
 .dwga-header-row .logo {
     height: auto;
-    width: auto;
-    max-width: 350px;
+    /*width: auto;*/
+    width: 350px;
 }
 
 .dwga-inlineblock {
