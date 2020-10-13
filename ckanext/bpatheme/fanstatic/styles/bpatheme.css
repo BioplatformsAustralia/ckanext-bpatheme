@@ -555,6 +555,11 @@ body {
   .topnav a {
     display: none;
     right: 30px;
+    transition: all 0.4s ease-in;
+  }
+
+  .topnav.responsive a {
+    transition: all 0.4s ease-in;
   }
 
   .topnav a.icon {
