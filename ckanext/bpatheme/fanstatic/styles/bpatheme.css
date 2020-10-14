@@ -571,8 +571,7 @@ body {
     display: block;
     position: fixed;
     top: 40px;
-    right: 10px;
-    padding-right: 15px;
+    right: 20px;
   }
 
   .topnav {
@@ -592,7 +591,7 @@ body {
   .topnav.responsive {
     position: fixed;
     top: 40px;
-    right: 40px;
+    right: 20px;
     transition: 0.4s;
     /*transition: all 0.4s ease-out;*/
   }
