@@ -579,7 +579,7 @@ body {
     width: 0;
     position: fixed;
     top: 40px;
-    right: 0px;
+    right: 20px;
     transition: 0.4s;
     /*transition: all 0.4s ease-in;*/
   }
@@ -592,7 +592,7 @@ body {
   .topnav.responsive {
     position: fixed;
     top: 40px;
-    right: 20px;
+    right: 40px;
     transition: 0.4s;
     /*transition: all 0.4s ease-out;*/
   }
