@@ -571,7 +571,7 @@ body {
     display: block;
     position: fixed;
     top: 40px;
-    right: 0;
+    right: 10px;
   }
 
   .topnav {
@@ -601,7 +601,7 @@ body {
     /*position: absolute;*/
     /*right: -20px;*/
     /*top: 0;*/
-    transition: 0.4s;
+    /*transition: 0.4s;*/
     /*transition: all 0.4s ease-out;*/
   }
 
