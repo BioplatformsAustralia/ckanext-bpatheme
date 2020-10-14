@@ -555,11 +555,13 @@ body {
   .topnav a {
     display: none;
     right: 30px;
-    transition: all 0.4s ease-in;
+    transition: 0.4s;
+    /*transition: all 0.4s ease-in;*/
   }
 
   .topnav.responsive a {
-    transition: all 0.4s ease-in;
+    /*transition: all 0.4s ease-out;*/
+    transition: 0.4s;
   }
 
   .topnav a.icon {
@@ -575,11 +577,13 @@ body {
     position: fixed;
     top: 40px;
     right: -40px;
-    transition: all 0.4s ease-in;
+    transition: 0.4s;
+    /*transition: all 0.4s ease-in;*/
   }
 
   .site-title {
-    transition: all 0.4s ease-in;
+    transition: 0.4s;
+    /*transition: all 0.4s ease-in;*/
   }
 
   .topnav.responsive {
@@ -587,21 +591,24 @@ body {
     position: fixed;
     top: 40px;
     right: 40px;
-    transition: all 0.4s ease-in;
+    transition: 0.4s;
+    /*transition: all 0.4s ease-out;*/
   }
 
   .topnav.responsive a.icon {
     /*position: absolute;*/
     /*right: -20px;*/
     /*top: 0;*/
-    transition: all 0.4s ease-in;
+    transition: 0.4s;
+    /*transition: all 0.4s ease-out;*/
   }
 
   .topnav.responsive a:not(.icon){
     float: none;
     display: block;
     text-align: left;
-    transition: all 0.4s ease-in;
+    transition: 0.4s;
+    /*transition: all 0.4s ease-out;*/
     /*position: fixed;*/
     /*top: 60px;*/
     right: 30px;
