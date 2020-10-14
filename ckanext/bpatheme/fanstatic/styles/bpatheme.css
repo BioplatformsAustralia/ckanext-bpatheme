@@ -558,6 +558,7 @@ body {
     right: 30px;
     transition: 0.4s;
     /*transition: all 0.4s ease-in;*/
+    margin-bottom: 10px;
   }
 
   .topnav.responsive a {
