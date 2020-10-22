@@ -218,11 +218,6 @@
             "label": "library_prep_date"
         },
         {
-            "field_name": "library_prep_method",
-            "form_placeholder": "",
-            "label": "library_prep_method"
-        },
-        {
             "field_name": "library_prepared_by",
             "form_placeholder": "",
             "label": "library_prepared_by"
@@ -253,6 +248,11 @@
             "label": "library_type"
         },
         {
+            "field_name": "license_id",
+            "form_placeholder": "",
+            "label": "license_id"
+        },
+        {
             "field_name": "longitude",
             "form_placeholder": "",
             "label": "longitude"
@@ -276,11 +276,6 @@
             "field_name": "notes",
             "form_placeholder": "",
             "label": "notes"
-        },
-        {
-            "field_name": "resource_permissions",
-            "form_placeholder": "",
-            "label": "resource_permissions"
         },
         {
             "field_name": "sample_submission_date",
@@ -316,11 +311,6 @@
             "field_name": "title",
             "form_placeholder": "",
             "label": "title"
-        },
-        {
-            "field_name": "tsi_project",
-            "form_placeholder": "",
-            "label": "tsi_project"
         },
         {
             "field_name": "work_order",
