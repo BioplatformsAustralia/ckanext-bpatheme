@@ -172,13 +172,9 @@
 	    {% if projects.append(stemcells) %} {% endif %}
 
 	    {% macro render_initiative(i) %}
-		    <tr>
-			<td class="right">
 			    <a href="/organization/about/{{ i.slug }}">
 				<img class="resized  img-rounded" src="{{ i.logo }}" alt="{{ i.title }}">
 			    </a>
-			</td>
-			<td>
 			    <a href="/organization/about/{{ i.slug }}">
 				<h3>{{ i.title }}</h3>
 			    </a>
@@ -189,14 +185,21 @@
 				    <li><a href="{{ i.url }}"> <span
 					    class="fa fa-info"></span> </a></li>
 			    </ul>
-			</td>
-		    </tr>
 	    {% endmacro %}
 
-        <table class="table">
-	    {% for p in projects %}
-	       {{ render_initiative(p) }}
-	    {% endfor %}
-        </table>
+        <div class="container">
+            <div class="row row-eq-height">
+		    {% for p in projects %}
+                       <div class="col-sm-3">
+		       {{ render_initiative(p) }}
+                       </div>
+		       {% if loop.index is divisibleby 4 %}
+		       {# restart row #}
+	               </div>
+                       <div class="row row-eq-height">
+		       {% endif %}
+		    {% endfor %}
+	    </div>
+        </div>
     </div>
 </div>
