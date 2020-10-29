@@ -46,6 +46,11 @@
             "form_snippet": "license.html"
         },
         {
+            "field_name": "resource_permissions",
+            "form_placeholder": "used by ckanext-initiatives",
+            "label": "Resource Permissions"
+        },
+        {
             "field_name": "owner_org",
             "label": "Organization",
 	    "display_property": "dct:publisher",
