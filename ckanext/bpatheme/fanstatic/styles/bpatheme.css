@@ -295,10 +295,12 @@ img {
 }
 .homepage .module-search {
   padding: 0px;
+  margin: 5%;
 }
 /* Bottom half of front page for featured orgs/groups */
 .homepage [role="main"] {
   min-height: 100px;
+  padding-top: unset;
 }
 
 /* private datasets */
@@ -440,6 +442,19 @@ body {
   width: 100%;
   padding-left: 0px;
   padding-right: 0px;
+}
+
+/* Background for search area */
+.search-background {
+  background-image: url("/header-background_2.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 100%;
+  padding: 5px;
+}
+
+.featured-orgs {
+  padding-top: 15px;
 }
 
 /* ====================================
@@ -622,3 +637,4 @@ body {
   }
 
 }
+

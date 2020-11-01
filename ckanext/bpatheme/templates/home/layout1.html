@@ -13,12 +13,12 @@
     }
 </style>
 <div role="main" class="hero landing">
-  <div class="container">
+  <div class="search-background">
           {% block search %}
             {% snippet 'home/snippets/search.html' %}
           {% endblock %}
   </div>
-    <div class="container">
+    <div class="featured-orgs">
 	    {% set projects = [] %}
 	    {% set amdb = { 
 	    	'logo' : "new_ausmicro_logo.png", 
