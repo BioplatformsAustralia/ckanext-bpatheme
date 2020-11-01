@@ -172,19 +172,23 @@
 	    {% if projects.append(stemcells) %} {% endif %}
 
 	    {% macro render_initiative(i) %}
-			    <a href="/organization/about/{{ i.slug }}">
-				<img class="resized  img-rounded" src="{{ i.logo }}" alt="{{ i.title }}">
-			    </a>
-			    <a href="/organization/about/{{ i.slug }}">
-				<h3>{{ i.title }}</h3>
-			    </a>
-			    <p>
-				{{ i.description }}
-			    </p>
-			    <ul class="nav nav-pills">
-				    <li><a href="{{ i.url }}"> <span
-					    class="fa fa-info"></span> </a></li>
-			    </ul>
+		            <div class="text-center">
+				    <a href="/organization/about/{{ i.slug }}">
+					<img class="resized img-rounded" src="{{ i.logo }}" alt="{{ i.title }}">
+				    </a>
+		            </div>
+		            <div>
+				    <a href="/organization/about/{{ i.slug }}">
+					<h3>{{ i.title }}</h3>
+				    </a>
+				    <p>
+					{{ i.description }}
+				    </p>
+				    <ul class="nav nav-pills">
+					    <li><a href="{{ i.url }}"> <span
+						    class="fa fa-info"></span> </a></li>
+				    </ul>
+		            </div>
 	    {% endmacro %}
 
         <div class="container">
