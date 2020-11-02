@@ -181,10 +181,14 @@
 	    {% if projects.append(stemcells) %} {% endif %}
 
 	    {% macro render_initiative(i) %}
-		            <div>
+		            <div class="img-stack">
 				    <a href="/organization/about/{{ i.slug }}">
 {#          add   {{ i.special_class }}" to class for logos that don't fit circles atm#}
-          <img class="icon_logo_default" src="{{ i.icon }}" alt="{{ i.title }}">
+                                        <img class="icon_logo_default img-stack-bottom" src="{{ i.icon }}" alt="{{ i.title }}">
+				    </a>
+				    <a href="/organization/about/{{ i.slug }}">
+{#          add   {{ i.special_class }}" to class for logos that don't fit circles atm#}
+                                        <img class="icon_logo_child img-stack-top" src="{{ i.logo }}" alt="{{ i.title }}">
 				    </a>
 		            </div>
 		            <div>
