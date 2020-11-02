@@ -662,8 +662,7 @@ body {
 .icon_logo_default {
     max-width: 120px;
     max-height: 120px;
-    /*border-radius: 50%;*/
-    shape-outside: inset(1% round 45%);
+    object-fit: cover;
 }
 
 .no-circular-icon {
