@@ -1,54 +1,57 @@
 :root {
-  --mast-bg-color: #041e48;
-  --mast-color: #ffffff;
-  --mast-hover-color: #00c08b;
-  --mast-no-link: rgb(105, 115, 124)
+    --mast-bg-color: #041e48;
+    --mast-color: #ffffff;
+    --mast-hover-color: #00c08b;
+    --mast-no-link: rgb(105, 115, 124)
 }
 
 /* =====================================================
    The "account masthead" bar across the top of the site
    ===================================================== */
 .leaflet-draw-toolbar a {
-  background-image: url("img/spritesheet.png");
-  background-repeat: no-repeat;
+    background-image: url("img/spritesheet.png");
+    background-repeat: no-repeat;
 }
 
 .leaflet-retina .leaflet-draw-toolbar a {
-  background-image: url("img/spritesheet-2x.png");
-  background-size: 270px 30px;
+    background-image: url("img/spritesheet-2x.png");
+    background-size: 270px 30px;
 }
+
 .nav-tabs {
-  font-size: 10pt;
+    font-size: 10pt;
 }
+
 img#beta {
-  position: absolute;
-  top: 0;
-  left: 0;
-  z-index: 500;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 500;
 }
+
 .leaflet-touch .leaflet-draw-toolbar .leaflet-draw-draw-rectangle {
-  background-position: 50% 50% !important;
+    background-position: 50% 50% !important;
 }
 
 .container-header.masthead {
-  background: none;
-  background-color: var(--mast-bg-color);
+    background: none;
+    background-color: var(--mast-bg-color);
 }
 
 .account-masthead {
-  height: 39px;
-  background: none;
-  background-color: var(--mast-bg-color);
+    height: 39px;
+    background: none;
+    background-color: var(--mast-bg-color);
 }
 
 /* The "bubble" containing the number of new notifications. */
 .account-masthead .account .notifications a span {
-  background-color: var(--mast-color);
+    background-color: var(--mast-color);
 }
 
 /* Transparent separator between links */
 .account-masthead .account ul li {
-  border-left: 2px transparent;
+    border-left: 2px transparent;
 }
 
 /* The text and icons in the user account info. */
@@ -60,10 +63,10 @@ img#beta {
 .account-masthead .account ul li a,
 .masthead .site-title a,
 .masthead .site-title a:active {
-  color: var(--mast-color);
-  background-color: var(--mast-bg-color);
-  text-shadow: none;
-  box-shadow: none;
+    color: var(--mast-color);
+    background-color: var(--mast-bg-color);
+    text-shadow: none;
+    box-shadow: none;
 }
 
 .masthead .nav > .active > a:hover,
@@ -74,37 +77,37 @@ img#beta {
 .account-masthead .account ul li a:hover,
 .masthead .site-title a:hover,
 .masthead .site-title a:focus {
-  color: var(--mast-hover-color);
-  background-color: inherit;
-  text-shadow: none;
-  box-shadow: none;
+    color: var(--mast-hover-color);
+    background-color: inherit;
+    text-shadow: none;
+    box-shadow: none;
 }
 
-.account-masthead .account ul li.login{
-  color: var(--mast-bg-color);
-  background-color: var(--mast-color);
-  border: 1px solid var(--mast-color);
-  border-radius: 25px;
+.account-masthead .account ul li.login {
+    color: var(--mast-bg-color);
+    background-color: var(--mast-color);
+    border: 1px solid var(--mast-color);
+    border-radius: 25px;
 }
 
-.account-masthead .account ul li.login a{
-  color: inherit;
-  background-color: inherit;
-  border: 1px solid var(--mast-color);
-  border-radius: 25px;
+.account-masthead .account ul li.login a {
+    color: inherit;
+    background-color: inherit;
+    border: 1px solid var(--mast-color);
+    border-radius: 25px;
 }
 
 .account-masthead .account ul li.login a:hover {
-  color: var(--mast-hover-color);
+    color: var(--mast-hover-color);
 }
 
-.account-masthead .account.not-authed span.login{
-  margin: 0 10px 0 10px;
-  position: relative;
-  top: 0;
-  left: 0;
-  color: inherit;
-  background-color: inherit;
+.account-masthead .account.not-authed span.login {
+    margin: 0 10px 0 10px;
+    position: relative;
+    top: 0;
+    left: 0;
+    color: inherit;
+    background-color: inherit;
 }
 
 /* ========================================================================
@@ -112,33 +115,33 @@ img#beta {
    ======================================================================== */
 
 .dwga-header-container {
-  padding: 5px;
-  background: none;
+    padding: 5px;
+    background: none;
 }
 
 /* Invisible debug output for controller/action */
 .debug {
-  color: #fefefe;
+    color: #fefefe;
 }
 
 .dwga-search {
-  float: right;
+    float: right;
 }
 
 /* Padding around logo and search */
 .dwga-header-row {
-  padding: 10px 10px 10px 0px;
-  margin-left: 0px;
-  text-align: left;
-  height: 100%;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
+    padding: 10px 10px 10px 0px;
+    margin-left: 0px;
+    text-align: left;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
 }
 
-.dwga-header-row > div{
-  padding-left: 0;
+.dwga-header-row > div {
+    padding-left: 0;
 }
 
 .dwga-header-row .logo {
@@ -147,83 +150,89 @@ img#beta {
 }
 
 .dwga-inlineblock {
-  display: inline-block;
+    display: inline-block;
 }
 
 .dwga-title {
-  margin-left: 15px;
+    margin-left: 15px;
 }
 
 .masthead {
-  border-top: 1px solid var(--mast-bg-color);
-  border-bottom: 1px solid var(--mast-bg-color);
-  background: none;
-  background-color: var(--mast-bg-color);
+    border-top: 1px solid var(--mast-bg-color);
+    border-bottom: 1px solid var(--mast-bg-color);
+    background: none;
+    background-color: var(--mast-bg-color);
 }
 
 .dwga-header {
-  color: #69737c;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  box-sizing: border-box;
-  display: block;
-  font-family: "Open Sans", Helvetica, Arial, sans-serif;
-  font-size: 17px;
-  font-weight: normal;
-  height: 134px;
-  line-height: 27.09375px;
-  margin-bottom: 0px;
-  margin-left: 101px;
-  margin-right: 101px;
-  margin-top: 0px;
-  padding-bottom: 10px;
-  padding-left: 20px;
-  padding-right: 20px;
-  padding-top: 10px;
+    color: #69737c;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    box-sizing: border-box;
+    display: block;
+    font-family: "Open Sans", Helvetica, Arial, sans-serif;
+    font-size: 17px;
+    font-weight: normal;
+    height: 134px;
+    line-height: 27.09375px;
+    margin-bottom: 0px;
+    margin-left: 101px;
+    margin-right: 101px;
+    margin-top: 0px;
+    padding-bottom: 10px;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 10px;
 }
 
 /* Alignment of navigation */
 .masthead .navigation,
 ul.nav {
-  margin: 0px 0px 2px 0px;
+    margin: 0px 0px 2px 0px;
 }
+
 /* Float the navbar left */
 /* data.wa.gov.au floats left, here it looks better floating right */
 .masthead .nav-collapse {
-  float: left;
+    float: left;
 }
 
 /* Space the nav links (Dataset, Orgs, Groups) so the hover/active underline is separated */
 .navbar .nav > li > a {
-  margin-left: 2px;
+    margin-left: 2px;
 }
 
 /* The "box shadow" effect that appears around the search box when it
    has the keyboard cursor's focus. */
 .masthead input[type="text"]:focus {
-  -webkit-box-shadow: inset 0px 0px 2px 0px rgba(0, 0, 0, 0.7);
-  box-shadow: inset 0px 0px 2px 0px rgba(0, 0, 0, 0.7);
+    -webkit-box-shadow: inset 0px 0px 2px 0px rgba(0, 0, 0, 0.7);
+    box-shadow: inset 0px 0px 2px 0px rgba(0, 0, 0, 0.7);
 }
 
 /* changes for bpa logo */
 .masthead #dwga-header-container .dwga-logo {
-  background: none;
+    background: none;
 }
+
 .masthead #dwga-header-container .dwga-logo:hover {
-  background: none;
+    background: none;
 }
+
 .masthead #dwga-header-container .dwga-logo .logo {
-  display: inline-block;
+    display: inline-block;
 }
+
 .masthead #dwga-header-container .dwga-logo {
-  height: 100%;
-  width: 100%;
+    height: 100%;
+    width: 100%;
 }
+
 .masthead .logo img {
-  max-height: 100%;
+    max-height: 100%;
 }
+
 img {
-  max-width: 100%;
+    max-width: 100%;
 }
 
 /* end of changes for bpa logo */
@@ -240,7 +249,7 @@ img {
 .toolbar,
 .toolbar::before,
 .toolbar::after {
-  border-bottom: none;
+    border-bottom: none;
 }
 
 /* hide breadcrums */
@@ -256,83 +265,93 @@ img {
 
 /* Hide featured section */
 .featured {
-  visibility: hidden;
-  height: 0px;
+    visibility: hidden;
+    height: 0px;
 }
 
 /* The background outside of the hero pane */
 .hero,
 [role="main"] {
-  background: #fefefe;
+    background: #fefefe;
 }
+
 /* Remove the "box shadow" effect around various boxes on the page. */
 .box {
-  box-shadow: none;
+    box-shadow: none;
 }
+
 /* Remove the borders around the "Welcome to CKAN" and "Search Your Data"
    boxes. */
 .hero .box {
-  border: none;
+    border: none;
 }
+
 /* Change the colors of the "Search Your Data" box. */
 .homepage .module-search .module-content {
-  color: rgb(105, 115, 124);
-  background-color: white;
+    color: rgb(105, 115, 124);
+    background-color: white;
 }
+
 /* Change the background color of the "Popular Tags" box. */
 .homepage .module-search .tags {
-  color: rgb(105, 115, 124);
-  background-color: #fcfcfc;
+    color: rgb(105, 115, 124);
+    background-color: #fcfcfc;
 }
+
 /* Remove some padding. This makes the bottom edges of the "Welcome to CKAN"
    and "Search Your Data" boxes line up. */
 .module-content:last-child {
-  padding-bottom: 0px;
+    padding-bottom: 0px;
 }
+
 .module-content p {
-  margin-top: 1em;
-  margin-bottom: 1em;
+    margin-top: 1em;
+    margin-bottom: 1em;
 }
+
 .homepage .module-search {
-  padding: 0px;
-  margin: 5%;
+    padding: 0px;
+    margin: 5%;
 }
+
 /* Bottom half of front page for featured orgs/groups */
 .homepage [role="main"] {
-  min-height: 100px;
-  padding-top: unset;
+    min-height: 100px;
+    padding-top: unset;
 }
 
 /* private datasets */
 .module-content .dataset-private {
-  margin-top: 14px;
-  margin-right: 10px;
+    margin-top: 14px;
+    margin-right: 10px;
 }
+
 .module-content .label-private {
-  background-color: #333333;
-  font-family: Arial, sans-serif;
+    background-color: #333333;
+    font-family: Arial, sans-serif;
 }
 
 .module-content .label.label-inverse a {
-  text-decoration: none;
-  /* color: #ffffff !important; */
-  color: lightgrey;
+    text-decoration: none;
+    /* color: #ffffff !important; */
+    color: lightgrey;
 }
+
 a,
 a:active,
 a:hover,
 a:focus {
-  color: rgb(32, 57, 157);
-  text-decoration: none;
+    color: rgb(32, 57, 157);
+    text-decoration: none;
 }
 
 /* The box around featured orgs/groups */
 .box {
-  border: none;
+    border: none;
 }
 
 .btn {
-  border: 1px solid #cccccc;
+    border: 1px solid #cccccc;
 }
 
 h1,
@@ -340,22 +359,22 @@ h2,
 h3,
 h4,
 h5 {
-  font-weight: bold;
+    font-weight: bold;
 }
 
 /* page header for bar with menu home|dataset|methods|gallery|information etc */
 .wrapper .page-header {
-  background: none;
+    background: none;
 }
 
 .module-content p {
-  margin-top: 1em;
-  margin-bottom: 1em;
+    margin-top: 1em;
+    margin-bottom: 1em;
 }
 
 body {
-  font-family: "Open Sans", Helvetica, Arial, sans-serif;
-  font-size: 12pt;
+    font-family: "Open Sans", Helvetica, Arial, sans-serif;
+    font-size: 12pt;
 }
 
 /* ====================================
@@ -364,32 +383,34 @@ body {
 
 .site-footer,
 body {
-  color: rgb(86, 86, 86);
-  background-color: rgb(200, 200, 200);
+    color: rgb(86, 86, 86);
+    background-color: rgb(200, 200, 200);
 }
+
 /* The text in the footer. */
 .site-footer,
 .site-footer label,
 .site-footer small {
-  color: rgb(230, 230, 230);
-  background-color: #1e73be;
+    color: rgb(230, 230, 230);
+    background-color: #1e73be;
 }
+
 /* The link texts in the footer. */
 .site-footer a {
-  color: rgb(255, 255, 255);
+    color: rgb(255, 255, 255);
 }
 
 .site-footer ul.nav li a:hover {
-  color: rgb(255, 255, 255);
-  background-color: rgb(22, 47, 137);
-  text-decoration: none;
-  box-shadow: none;
-  text-shadow: none;
+    color: rgb(255, 255, 255);
+    background-color: rgb(22, 47, 137);
+    text-decoration: none;
+    box-shadow: none;
+    text-shadow: none;
 }
 
 /* The debug toggle */
 #debug-toggle {
-  color: rgb(200, 200, 200);
+    color: rgb(200, 200, 200);
 }
 
 /* Fix wrapping of label in list on resource page */
@@ -400,61 +421,61 @@ body {
 } */
 
 .org-sidebar {
-  list-style: none;
-  padding: 0 0 0 0;
-  margin: 0 0 0 0;
+    list-style: none;
+    padding: 0 0 0 0;
+    margin: 0 0 0 0;
 }
 
 .list-group-item {
-  position: relative;
-  display: block;
-  padding: 10px 15px;
-  margin-bottom: -1px;
-  background-color: #fff;
-  border: 1px solid #ddd;
-  color: #555;
+    position: relative;
+    display: block;
+    padding: 10px 15px;
+    margin-bottom: -1px;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    color: #555;
 }
 
 .site-footer {
-  padding: 0px;
-  min-height: 0px;
+    padding: 0px;
+    min-height: 0px;
 }
 
 .site-footer-links {
-  text-align: center;
-  /* padding-top: 20px;
-  padding-bottom: 20px; */
-  padding: 20px;
+    text-align: center;
+    /* padding-top: 20px;
+    padding-bottom: 20px; */
+    padding: 20px;
 }
 
 .site-footer-links a {
-  padding-right: 15px;
+    padding-right: 15px;
 }
 
 .site-footer-logo {
-  background-color: #171717;
-  padding: 30px;
-  text-align: center;
+    background-color: #171717;
+    padding: 30px;
+    text-align: center;
 }
 
 /* Need this to break out of the automatically generated .container class*/
 .site-footer .container {
-  width: 100%;
-  padding-left: 0px;
-  padding-right: 0px;
+    width: 100%;
+    padding-left: 0px;
+    padding-right: 0px;
 }
 
 /* Background for search area */
 .search-background {
-  background-image: url("/header-background_2.jpg");
-  background-size: cover;
-  background-repeat: no-repeat;
-  width: 100%;
-  padding: 5px;
+    background-image: url("/header-background_2.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 100%;
+    padding: 5px;
 }
 
 .featured-orgs {
-  padding-top: 15px;
+    padding-top: 15px;
 }
 
 /* ====================================
@@ -462,19 +483,19 @@ body {
    ==================================== */
 
 .pull-left > img {
-  padding-left: 20px;
-  /*height: 80px;*/
+    padding-left: 20px;
+    /*height: 80px;*/
 }
 
 .data_portal_text {
-  color: black;
-  line-height: 3;
-  padding-left: 140px;
-  font-size: 28px;
+    color: black;
+    line-height: 3;
+    padding-left: 140px;
+    font-size: 28px;
 }
 
 .dwga-inlineblock {
-  /*display: block;*/
+    /*display: block;*/
 }
 
 .site-footer-logo img {
@@ -483,8 +504,8 @@ body {
 
 /* Add a black background color to the top navigation */
 .topnav {
-  /*background-color: #333;*/
-  overflow: visible;
+    /*background-color: #333;*/
+    overflow: visible;
 }
 
 /* Style the links inside the navigation bar */
@@ -500,141 +521,146 @@ body {
 
 /* Change the color of links on hover */
 .topnav a:hover {
-  /*background-color: #ddd;*/
-  /*color: black;*/
+    /*background-color: #ddd;*/
+    /*color: black;*/
 }
 
 /* Add an active class to highlight the current page */
 .topnav a.active {
-  /*background-color: #4CAF50;*/
-  /*color: white;*/
+    /*background-color: #4CAF50;*/
+    /*color: white;*/
 }
 
 /* Hide the link that should open and close the topnav on small screens */
 .topnav .icon {
-  display: none;
+    display: none;
 }
 
 .header-left {
-  flex: 0 1 auto;
+    flex: 0 1 auto;
 }
 
 .site-parent {
-  width: 100%;
-  height: 100%;
-  margin-right: 15px;
-  position: relative;
+    width: 100%;
+    height: 100%;
+    margin-right: 15px;
+    position: relative;
 }
 
 
-  .site-title {
+.site-title {
     margin-left: 15px;
     height: 100%;
     position: relative;
-  }
+}
 
 /*@media screen and (min-width: 600px) {*/
-  .site-title .topnav {
+.site-title .topnav {
     height: 100%;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
     position: relative;
-  }
+}
+
 /*}*/
 
 
 @media screen and (max-width: 990px) {
-  .site-title .topnav {
-    flex-direction: column;
-    align-items: flex-end;
-    justify-content: flex-start;
-  }
+    .site-title .topnav {
+        flex-direction: column;
+        align-items: flex-end;
+        justify-content: flex-start;
+    }
 }
 
 /* When the screen is less than 600 pixels wide, hide all links, except for the first one ("Home"). Show the link that contains should open and close the topnav (.icon) */
 /* The "responsive" class is added to the topnav with JavaScript when the user clicks on the icon. This class makes the topnav look good on small screens (display the links vertically instead of horizontally) */
 @media screen and (max-width: 600px) {
-  /*.topnav a:not(:first-child) {*/
-  /*  display: none;*/
-  /*}*/
+    /*.topnav a:not(:first-child) {*/
+    /*  display: none;*/
+    /*}*/
+    .dwga-header-row {
+        align-items: flex-start;
+    }
 
-  .dwga-header-row {
-    align-items: flex-start;
-  }
+    .site-title .topnav {
+        /*padding-bottom: 50px;*/
+    }
 
-  .site-title .topnav {
-    /*padding-bottom: 50px;*/
-  }
+    .topnav a {
+        display: none;
+        right: 30px;
+        transition: 0.4s;
+        /*transition: all 0.4s ease-in;*/
+        margin-bottom: 10px;
+    }
 
-  .topnav a {
-    display: none;
-    right: 30px;
-    transition: 0.4s;
-    /*transition: all 0.4s ease-in;*/
-    margin-bottom: 10px;
-  }
+    .topnav.responsive a {
+        /*transition: all 0.4s ease-out;*/
+        transition: 0.4s;
+    }
 
-  .topnav.responsive a {
-    /*transition: all 0.4s ease-out;*/
-    transition: 0.4s;
-  }
+    .topnav a.icon {
+        /*float: right;*/
+        display: block;
+        position: fixed;
+        top: 40px;
+        right: 10px;
+        padding-right: 10px;
+    }
 
-  .topnav a.icon {
-    /*float: right;*/
-    display: block;
-    position: fixed;
-    top: 40px;
-    right: 10px;
-    padding-right: 10px;
-  }
+    .topnav {
+        width: 0;
+        position: fixed;
+        top: 40px;
+        right: 20px;
+        transition: 0.4s;
+        /*transition: all 0.4s ease-in;*/
+    }
 
-  .topnav {
-    width: 0;
-    position: fixed;
-    top: 40px;
-    right: 20px;
-    transition: 0.4s;
-    /*transition: all 0.4s ease-in;*/
-  }
+    .site-title {
+        transition: 0.4s;
+        /*transition: all 0.4s ease-in;*/
+    }
 
-  .site-title {
-    transition: 0.4s;
-    /*transition: all 0.4s ease-in;*/
-  }
+    .topnav.responsive {
+        position: fixed;
+        top: 40px;
+        right: 40px;
+        transition: 0.4s;
+        /*transition: all 0.4s ease-out;*/
+    }
 
-  .topnav.responsive {
-    position: fixed;
-    top: 40px;
-    right: 40px;
-    transition: 0.4s;
-    /*transition: all 0.4s ease-out;*/
-  }
+    .topnav.responsive a.icon {
+        /*position: absolute;*/
+        /*right: -20px;*/
+        /*top: 0;*/
+        /*transition: 0.4s;*/
+        /*transition: all 0.4s ease-out;*/
+    }
 
-  .topnav.responsive a.icon {
-    /*position: absolute;*/
-    /*right: -20px;*/
-    /*top: 0;*/
-    /*transition: 0.4s;*/
-    /*transition: all 0.4s ease-out;*/
-  }
+    .topnav.responsive a:not(.icon) {
+        float: none;
+        display: block;
+        text-align: left;
+        transition: 0.4s;
+        /*transition: all 0.4s ease-out;*/
+        /*position: fixed;*/
+        /*top: 60px;*/
+        right: 30px;
+    }
 
-  .topnav.responsive a:not(.icon){
-    float: none;
-    display: block;
-    text-align: left;
-    transition: 0.4s;
-    /*transition: all 0.4s ease-out;*/
-    /*position: fixed;*/
-    /*top: 60px;*/
-    right: 30px;
-  }
-
-  .masthead .logo img {
-    max-height: 100%;
-    width: 100px;
-  }
+    .masthead .logo img {
+        max-height: 100%;
+        width: 100px;
+    }
 
 }
 
+.resized {
+    max-width: 120px;
+    max-height: 120px;
+    border-radius: 50% !important;
+}
