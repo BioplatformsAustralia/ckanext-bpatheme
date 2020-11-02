@@ -312,6 +312,7 @@ img {
 .homepage .module-search {
     padding: 0px;
     margin: 5%;
+    opacity: 0.9;
 }
 
 /* Bottom half of front page for featured orgs/groups */
