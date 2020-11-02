@@ -183,11 +183,7 @@
     {% macro render_initiative(i) %}
       <div class="text-center">
         <a href="/organization/about/{{ i.slug }}">
-          {% if i.special_class %}
-            <img class="icon_logo_default {{ i.special_class }}" src="{{ i.logo }}" alt="{{ i.title }}">
-          {% else %}
-            <img class="icon_logo_default" src="{{ i.logo }}" alt="{{ i.title }}">
-          {% endif %}
+          <img class="icon_logo_default {{ i.special_class }}" src="{{ i.logo }}" alt="{{ i.title }}">
         </a>
       </div>
       <div>
