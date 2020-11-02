@@ -1,9 +1,4 @@
 <style>
-    .resized {
-        width: 150px;
-        height: 150px;
-    }
-
     td .fa {
         font-size: 1.5em;
     }
@@ -22,6 +17,7 @@
 	    {% set projects = [] %}
 	    {% set amdb = { 
 	    	'logo' : "new_ausmicro_logo.png", 
+	    	'icon' : "icon_amd.png",
 		'slug' : "australian-microbiome",
 	        'url' : "/organization/about/australian-microbiome",
 	        'title' : "Australian Microbiome",
@@ -33,6 +29,7 @@
 
 	    {% set sepsis = { 
 	    	'logo' : "sepsis.png", 
+	    	'icon' : "icon_sepsis.jpg",
 		'slug' : "bpa-sepsis",
 	        'url' : "http://www.bioplatforms.com/antibiotic-resistant-pathogens",
 	        'title' : "Antibiotic Resistant Sepsis Pathogens",
@@ -46,6 +43,8 @@
 
 	    {% set omg = { 
 	    	'logo' : "omg-logo.png", 
+	    	'special_class' : "no-circular-icon",
+	    	'icon' : "icon_omg.jpg",
 		'slug' : "bpa-omg",
 	        'url' : "http://www.bioplatforms.com/oz-mammals/",
 	        'title' : "Oz Mammals Genomics Initiative",
@@ -59,6 +58,8 @@
 
 	    {% set gap = { 
 	    	'logo' : "Logo_plants_updown.png", 
+	    	'special_class' : "no-circular-icon",
+	    	'icon' : "icon_gap.jpg",
 		'slug' : "bpa-plants",
 	        'url' : "/organization/bpa-plants",
 	        'title' : "Genomics for Australian Plants",
@@ -71,6 +72,7 @@
 
 	    {% set ausarg = { 
 	    	'logo' : "AusARG-Logo-RGB-150dpi-Transparent.png", 
+	    	'icon' : "icon_arg.jpg",
 		'slug' : "ausarg",
 	        'url' : "/organization/ausarg",
 	        'title' : "Australian Amphibian and Reptile Genomics Initiative",
@@ -85,6 +87,7 @@
 
 	    {% set tsi = { 
 	    	'logo' : "Threatened-Species-Initiative-Logo-150dpi-RGB.png", 
+	    	'icon' : "icon_tsi.jpg",
 		'slug' : "threatened-species",
 	        'url' : "/organization/threatened-species",
 	        'title' : "Threatened Species Initiative",
@@ -98,6 +101,7 @@
 
 	    {% set gbr = { 
 	    	'logo' : "coral.png", 
+	    	'icon' : "icon_gbr.png",
 		'slug' : "bpa-great-barrier-reef",
 	        'url' : "http://www.bioplatforms.com/bpa-great-barrier-reef",
 	        'title' : "Great Barrier Reef",
@@ -111,6 +115,7 @@
 
 	    {% set melanoma = { 
 	    	'logo' : "melanoma.png", 
+	    	'icon' : "icon_melanoma.jpg",
 		'slug' : "bpa-melanoma",
 	        'url' : "http://www.bioplatforms.com/melanoma",
 	        'title' : "Melanoma",
@@ -122,6 +127,7 @@
 
 	    {% set wpt = { 
 	    	'logo' : "fusarium_head_blight_infected_ear.png", 
+	    	'icon' : "icon_wheat_pathogens_transcript.png",
 		'slug' : "bpa-wheat-pathogens-transcript",
 	        'url' : "http://www.bioplatforms.com/wheat-datasets",
 	        'title' : "Wheat Pathogens Transcript",
@@ -134,6 +140,7 @@
 
 	    {% set wpg = { 
 	    	'logo' : "stagonospora_nodorum.png", 
+	    	'icon' :"icon_wheat_pathogens_genomes.png",
 		'slug' : "bpa-wheat-pathogens-genomes",
 	        'url' : "http://www.bioplatforms.com/wheat-datasets",
 	        'title' : "Wheat Pathogens Genomes",
@@ -147,6 +154,7 @@
 
 	    {% set wc = { 
 	    	'logo' : "wheat.png", 
+	    	'icon' : "icon_wheat.png",
 		'slug' : "bpa-wheat-cultivars",
 	        'url' : "http://www.bioplatforms.com/wheat-datasets",
 	        'title' : "Wheat Cultivars",
@@ -161,6 +169,7 @@
 
 	    {% set stemcells = { 
 	    	'logo' : "stemcell.png", 
+	    	'icon' : "icon_stemcells.png",
 		'slug' : "bpa-stemcells",
 	        'url' : "http://www.bioplatforms.com/stem-cells",
 	        'title' : "Stem Cells",
@@ -174,7 +183,8 @@
 	    {% macro render_initiative(i) %}
 		            <div class="text-center">
 				    <a href="/organization/about/{{ i.slug }}">
-					<img class="resized img-circle" src="{{ i.logo }}" alt="{{ i.title }}">
+{#          add   {{ i.special_class }}" to class for logos that don't fit circles atm#}
+          <img class="icon_logo_default" src="{{ i.icon }}" alt="{{ i.title }}">
 				    </a>
 		            </div>
 		            <div>
