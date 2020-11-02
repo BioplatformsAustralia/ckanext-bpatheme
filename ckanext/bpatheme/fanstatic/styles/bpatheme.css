@@ -667,3 +667,7 @@ body {
 .circular-icon {
     border-radius: 50%;
 }
+
+.no-circular-icon {
+    border-radius: 6px;
+}

@@ -43,7 +43,7 @@
 
     {% set omg = {
 	    	'logo' : "omg-logo.png",
-	    	'extra_class' : true,
+	    	'extra_class' : "no-circular-icon",
 	    	'icon' : "icon_omg.jpg",
 		    'slug' : "bpa-omg",
         'url' : "http://www.bioplatforms.com/oz-mammals/",
@@ -58,7 +58,7 @@
 
     {% set gap = {
 	    	'logo' : "Logo_plants_updown.png",
-	    	'extra_class' : true,
+	    	'extra_class' : "no-circular-icon",
 	    	'icon' : "icon_gap.jpg",
 		    'slug' : "bpa-plants",
         'url' : "/organization/bpa-plants",
@@ -184,7 +184,7 @@
       <div class="text-center">
         <a href="/organization/about/{{ i.slug }}">
           {% if i.extra_class %}
-            <img class="resized img-rounded" src="{{ i.logo }}" alt="{{ i.title }}">
+            <img class="resized img-rounded {{ i.extra_class }}" src="{{ i.logo }}" alt="{{ i.title }}">
           {% else %}
             <img class="resized img-rounded circular-icon" src="{{ i.logo }}" alt="{{ i.title }}">
           {% endif %}
