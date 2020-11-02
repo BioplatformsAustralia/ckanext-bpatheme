@@ -1,7 +1,7 @@
 <style>
     .resized {
-        width: 120px;
-        height: 120px;
+        width: 150px;
+        height: 150px;
     }
 
     td .fa {
@@ -174,7 +174,7 @@
 	    {% macro render_initiative(i) %}
 		            <div class="text-center">
 				    <a href="/organization/about/{{ i.slug }}">
-					<img class="resized img-rounded" src="{{ i.logo }}" alt="{{ i.title }}">
+					<img class="resized img-circle" src="{{ i.logo }}" alt="{{ i.title }}">
 				    </a>
 		            </div>
 		            <div>
