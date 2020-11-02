@@ -662,5 +662,8 @@ body {
 .resized {
     max-width: 120px;
     max-height: 120px;
+}
+
+.circular-icon {
     border-radius: 50%;
 }
