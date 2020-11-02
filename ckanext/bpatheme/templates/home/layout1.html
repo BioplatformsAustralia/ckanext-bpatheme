@@ -43,6 +43,7 @@
 
     {% set omg = {
 	    	'logo' : "omg-logo.png",
+	    	'extra-class' : true,
 	    	'icon' : "icon_omg.jpg",
 		    'slug' : "bpa-omg",
         'url' : "http://www.bioplatforms.com/oz-mammals/",
@@ -57,6 +58,7 @@
 
     {% set gap = {
 	    	'logo' : "Logo_plants_updown.png",
+	    	'extra-class' : true,
 	    	'icon' : "icon_gap.jpg",
 		    'slug' : "bpa-plants",
         'url' : "/organization/bpa-plants",
@@ -181,7 +183,11 @@
     {% macro render_initiative(i) %}
       <div class="text-center">
         <a href="/organization/about/{{ i.slug }}">
-          <img class="resized img-rounded" src="{{ i.logo }}" alt="{{ i.title }}">
+          {% if i.extra-class %}
+            <img class="resized img-rounded " src="{{ i.logo }}" alt="{{ i.title }}">
+          {% else %}
+            <img class="resized img-rounded " src="{{ i.logo }}" alt="{{ i.title }}">
+          {% endif %}
         </a>
       </div>
       <div>
