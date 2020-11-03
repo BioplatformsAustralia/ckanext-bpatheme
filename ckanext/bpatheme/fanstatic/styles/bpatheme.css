@@ -664,6 +664,7 @@ body {
     z-index: 0;
     position: relative;
     top: 0;
+    min-height: 200px;
 }
 
 
@@ -697,6 +698,6 @@ body {
     border-radius: 50%;
 }
 
-.no-circular-icon {
+.no-circular-logo {
     border-radius: 6px !important;
 }
