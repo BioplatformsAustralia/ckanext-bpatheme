@@ -187,11 +187,12 @@
 
             {% macro render_initiative(i) %}
                             <div class="img-stack">
-                                    <a href="/organization/about/{{ i.slug }}">
+				    {% set org_link = h.url_for('dataset', organization=i.slug) %}
+                                    <a href="{{ org_link }}">
                                         <img class="icon_logo_default img-stack-bottom" src="{{ i.icon }}" alt="{{ i.title }}">
                                     </a>
                                     {% if i.has_logo is defined %}
-                                    <a href="/organization/about/{{ i.slug }}">
+                                    <a href="{{ org_link }}">
                                         {#          add   {{ i.special_class }}" to class for logos that don't fit circles atm #}
                                         {% if i.special_class is defined %}
                                         <img class="icon_logo_child img-stack-top {{ i.special_class }}" src="{{ i.logo }}" alt="{{ i.title }}">
@@ -202,7 +203,7 @@
                                     {% endif %}
                             </div>
                             <div>
-                                    <a href="/organization/about/{{ i.slug }}">
+                                    <a href="{{ org_link }}">
                                         <h3>{{ i.title }}</h3>
                                     </a>
                                     <p>
