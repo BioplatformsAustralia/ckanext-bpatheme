@@ -660,14 +660,44 @@ body {
 
 }
 
+.img-stack {
+    z-index: 0;
+    position: relative;
+    top: 0;
+    min-height: 200px;
+}
+
+
+.img-stack-top {
+    z-index: 2;
+    position: sticky;
+    margin-top: 100px;
+    margin-left: 100px;
+    background: white;
+}
+
+.img-stack-bottom {
+    z-index: 1;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
 /*ensure rectangular images are 'squared' before becoming 'circles'*/
 .icon_logo_default {
-    width: 120px;
-    height: 120px;
+    width: 150px;
+    height: 150px;
     object-fit: cover;
     border-radius: 50%;
 }
 
-.no-circular-icon {
+.icon_logo_child {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+.no-circular-logo {
     border-radius: 6px !important;
 }
