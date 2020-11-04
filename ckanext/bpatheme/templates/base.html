@@ -1,32 +1,32 @@
 {% ckan_extends %}
 
 {% block styles %}
-    {{ super() }}
-    {% resource 'bpatheme/styles/bpatheme.css' %}
-    {% resource 'bpatheme/drop_down_menu.js' %}
+  {{ super() }}
+  {% resource 'bpatheme/styles/bpatheme.css' %}
+  {% resource 'bpatheme/drop_down_menu.js' %}
 {% endblock %}
 
 {% block scripts %}
-    {{ super() }}
-    {% resource "bpatheme/datawa-organization-opener.js" %}
-    {% resource "bpatheme/datawa.js" %}
-    <script>/* Toggle between adding and removing the "responsive" class to topnav when the user clicks on the icon */
-      function myFunction() {
-        var x = document.getElementById("myTopnav");
-        if (x.className === "topnav") {
+  {{ super() }}
+  {% resource "bpatheme/datawa-organization-opener.js" %}
+  {% resource "bpatheme/datawa.js" %}
+  <script>/* Toggle between adding and removing the "responsive" class to topnav when the user clicks on the icon */
+  function myFunction() {
+      var x = document.getElementById("myTopnav");
+      if (x.className === "topnav") {
           x.className += " responsive";
           {#document.getElementById("myTopnav").style.width = "100px";#}
-        } else {
+      } else {
           x.className = "topnav";
           {#document.getElementById("myTopnav").style.width = "0";#}
-        }
       }
-    </script>
+  }
+  </script>
 
 {% endblock %}
 
 {% block meta %}
-   {{ super() }}
-   <meta name="google-site-verification" content="SALCs2HUU_-WFKh7s27fxGa7XLBp32nGuuA5zgtr3Zk" />
-   <meta name="msvalidate.01" content="DF3D66336DE6B56D6818F9FD7BE04800" />
+  {{ super() }}
+  <meta name="google-site-verification" content="SALCs2HUU_-WFKh7s27fxGa7XLBp32nGuuA5zgtr3Zk"/>
+  <meta name="msvalidate.01" content="DF3D66336DE6B56D6818F9FD7BE04800"/>
 {% endblock %}
