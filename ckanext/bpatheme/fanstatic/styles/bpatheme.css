@@ -479,6 +479,10 @@ body {
     padding-top: 15px;
 }
 
+.featured-orgs .heading{
+    margin-top: 0;
+}
+
 /* ====================================
    For changing the heading to include the words Data Portal
    ==================================== */
