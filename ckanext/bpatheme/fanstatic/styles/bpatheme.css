@@ -481,6 +481,9 @@ body {
 
 .featured-orgs .heading{
     margin-top: 0;
+    margin-bottom: 7px;
+    font-size: 24px;
+    line-height: 40px;
 }
 
 /* ====================================
