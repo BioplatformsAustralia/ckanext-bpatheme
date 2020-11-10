@@ -720,7 +720,7 @@ body {
 }
 .truncate-overflow::before {
   position: absolute;
-  content: "...";
+  content: "<a href='test'>Read more...</a>";
   bottom: 0; /* "bottom" */
   right: 0; /* "right" */
 }
