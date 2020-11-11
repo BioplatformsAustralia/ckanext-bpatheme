@@ -735,7 +735,7 @@ body {
 
 .truncate-toggle {
     display: inline-block;
-    margin: -5px;
+    margin-top: -10px;
 }
 
 .truncate-toggle::after {
