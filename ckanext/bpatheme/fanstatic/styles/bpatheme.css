@@ -712,8 +712,8 @@ body {
     margin: 0 0 15px 0
 }
 
-.project-details .nav-pills, .project-details .nav-pills li {
-    padding: 2px 0 5px 0
+.project-details .nav-pills, .project-details .nav-pills li a {
+    padding: 0 0 0 0
 }
 
 .project-description, .truncate-overflow {
