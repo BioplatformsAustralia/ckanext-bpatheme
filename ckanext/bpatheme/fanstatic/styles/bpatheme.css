@@ -437,8 +437,11 @@ body {
     padding-right: 20px;
 }
 
-.site-footer-logo, .site-footer-logo span {
+.site-footer-logo, .site-footer-logo span, .site-footer-logo a {
     background-color: var(--site-footer-logo-bg-color);
+}
+
+.site-footer-logo {
     padding: 30px;
     text-align: center;
 }
