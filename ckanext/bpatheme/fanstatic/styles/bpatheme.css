@@ -708,8 +708,12 @@ body {
     border-radius: 6px !important;
 }
 
-.project-details .nav-pills {
-    padding: 10px 15px 10px 0
+.project-details {
+    margin: 0 0 15px 0
+}
+
+.project-details .nav-pills, .project-details .nav-pills li {
+    padding: 2px 0 5px 0
 }
 
 .project-description, .truncate-overflow {
