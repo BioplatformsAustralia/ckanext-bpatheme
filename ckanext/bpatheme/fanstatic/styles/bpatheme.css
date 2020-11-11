@@ -64,6 +64,7 @@ img#beta {
 .masthead .site-title a,
 .masthead .site-title a:active,
 .site-footer {
+    font-family: "Akkurat Pro", Arial, Helvetica, sans-serif;
     color: var(--mast-color);
     background-color: var(--mast-bg-color);
     text-shadow: none;
@@ -189,7 +190,7 @@ img#beta {
     -webkit-font-smoothing: antialiased;
     box-sizing: border-box;
     display: block;
-    font-family: "Akkurat Pro", Arial, Helvetica, sans-serif;
+    font-family: "Open Sans", Helvetica, Arial, sans-serif;
     font-size: 17px;
     font-weight: normal;
     height: 134px;
