@@ -64,11 +64,28 @@ img#beta {
 .masthead .site-title a,
 .masthead .site-title a:active,
 .site-footer {
-    font-size: 2rem;
     color: var(--mast-color);
     background-color: var(--mast-bg-color);
     text-shadow: none;
     box-shadow: none;
+}
+
+/* The text and icons in the user account info. */
+.masthead a,
+.masthead hgroup h2,
+.masthead .nav > li > a,
+.masthead .nav > .active > a,
+.masthead .site-title a,
+.masthead .site-title a:active,
+.site-footer {
+    font-size: 2rem;
+}
+
+/* The text and icons in the user account info. */
+.account-masthead .account .notifications a span,
+.account-masthead .account ul li a,
+.site-footer {
+    font-size: 1rem;
 }
 
 .masthead .nav > .active > a:hover,
@@ -90,7 +107,6 @@ img#beta {
     background-color: var(--mast-color);
     border: 1px solid var(--mast-color);
     border-radius: 25px;
-    font-size: 1rem;
 }
 
 .account-masthead .account ul li.login a {
