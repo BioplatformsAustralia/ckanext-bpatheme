@@ -708,6 +708,16 @@ body {
     border-radius: 6px !important;
 }
 
+.project-description, .truncate-overflow {
+  --lh: 1.3em;
+  line-height: var(--lh);
+  position: relative;
+  text-align: left;
+  padding-right: 1em; /* space for ellipsis */
+  margin: 0 0 0 0;
+
+}
+
 .truncate-overflow {
   --lh: 1.3em;
   line-height: var(--lh);
@@ -715,10 +725,8 @@ body {
   position: relative;
   max-height: calc(var(--lh) * var(--max-lines));
   overflow: hidden;
-  text-align: justify;
-  padding-right: 1em; /* space for ellipsis */
-  margin: 0 0 0 0;
 }
+
 .truncate-overflow::before {
   position: absolute;
   content: "...";
