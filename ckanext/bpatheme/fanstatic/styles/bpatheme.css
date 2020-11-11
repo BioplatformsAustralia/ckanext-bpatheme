@@ -3,6 +3,7 @@
     --mast-color: #ffffff;
     --mast-hover-color: #00c08b;
     --mast-no-link: rgb(105, 115, 124);
+    --site-footer-logo-bg-color: #171717;
 }
 
 /* =====================================================
@@ -436,10 +437,14 @@ body {
     padding-right: 20px;
 }
 
-.site-footer-logo {
-    background-color: #171717;
+.site-footer-logo, .site-footer-logo span {
+    background-color: var(--site-footer-logo-bg-color);
     padding: 30px;
     text-align: center;
+}
+
+.site-footer-logo img {
+    max-width: 150px;
 }
 
 /* Need this to break out of the automatically generated .container class*/
@@ -498,10 +503,6 @@ body {
 
 .dwga-inlineblock {
     /*display: block;*/
-}
-
-.site-footer-logo img {
-    max-width: 150px;
 }
 
 /* Add a black background color to the top navigation */
