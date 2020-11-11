@@ -730,13 +730,14 @@ body {
 .truncate-overflow::before {
   position: absolute;
   content: "...";
-  bottom: 0; /* "bottom" */
-  right: 0; /* "right" */
+  bottom: 0;
+  right: 0;
 }
+
 .truncate-overflow::after {
   content: "";
   position: absolute;
-  right: 0; /* "right" */
+  right: 0;
   width: 1em;
   height: 1em;
   background: white;
@@ -750,7 +751,3 @@ body {
 .truncate-toggle::after {
     content: "";
 }
-
-/*.truncate-toggle.off {*/
-/*    display: none !important;*/
-/*}*/
