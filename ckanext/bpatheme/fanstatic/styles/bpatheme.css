@@ -3,7 +3,6 @@
     --mast-color: #ffffff;
     --mast-hover-color: #00c08b;
     --mast-no-link: rgb(105, 115, 124);
-    --inputs-bg-color: #ffffff;
 }
 
 /* =====================================================
@@ -440,32 +439,17 @@ body {
     padding: 5px;
 }
 
+/** show background image 'transparently', but ensure inputs are white (no transparency) **/
 .homepage .module-search {
-    /*position: relative;*/
     padding: 0;
     margin: 5%;
     background-color: transparent;
 }
 
-/* Change the colors of the "Search Your Data" box. */
 .homepage .module-search .module-content {
     color: rgb(105, 115, 124);
     background-color: rgba(255, 255, 255, 0.9)
 }
-
-/*.homepage .module-search::before {*/
-/*      content: "";*/
-/*      position: absolute;*/
-/*      top: 0;*/
-/*      right: 0;*/
-/*      bottom: 0;*/
-/*      left: 0;*/
-/*      opacity: 0.9;*/
-/*}*/
-
-/*.module-search .form-control {*/
-/*    background-color: rgba(255, 255, 255, 1);*/
-/*}*/
 
 .featured-orgs {
     padding-top: 15px;
