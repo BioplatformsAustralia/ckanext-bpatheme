@@ -79,6 +79,7 @@ img#beta {
 .masthead .site-title a:active,
 .site-footer {
     font-family: "Akkurat Pro", Arial, Helvetica, sans-serif;
+    font-weight: 700;
     font-size: 2rem;
 }
 
