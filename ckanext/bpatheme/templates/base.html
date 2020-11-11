@@ -19,8 +19,8 @@
           x.className = "topnav";
       }
   }
-  function toggleExpandedButton() {
-      var x = document.getElementById("truncate-toggle");
+  function toggleExpandedButton(e) {
+      console.dir(e);
       if (x.visibility === "visible") {
           x.visibility = "collapse";
       } else {
