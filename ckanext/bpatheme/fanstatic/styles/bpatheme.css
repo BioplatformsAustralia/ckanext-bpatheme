@@ -712,6 +712,10 @@ body {
     margin: 0 15px 15px 0
 }
 
+.project-details h3{
+    margin-top: 0
+}
+
 .project-details .nav-pills {
     padding: 0 0 0 0
 }
