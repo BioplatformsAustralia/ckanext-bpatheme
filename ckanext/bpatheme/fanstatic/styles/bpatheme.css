@@ -90,6 +90,7 @@ img#beta {
     background-color: var(--mast-color);
     border: 1px solid var(--mast-color);
     border-radius: 25px;
+    font-size: 1rem;
 }
 
 .account-masthead .account ul li.login a {
