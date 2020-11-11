@@ -21,7 +21,7 @@
   }
   function toggleExpandedButton(e) {
       console.dir(e);
-      const previous = e.previousSibling;
+      const previous = e.previousElementSibling;
       console.log("getting sibling...");
       console.dir(previous);
       if (e.className === "truncate-toggle") {
