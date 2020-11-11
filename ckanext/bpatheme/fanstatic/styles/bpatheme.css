@@ -2,7 +2,7 @@
     --mast-bg-color: #041e48;
     --mast-color: #ffffff;
     --mast-hover-color: #00c08b;
-    --mast-no-link: rgb(105, 115, 124)
+    --mast-no-link: rgb(105, 115, 124);
     --inputs-bg-color: #ffffff;
 }
 
@@ -288,11 +288,6 @@ img {
     border: none;
 }
 
-/* Change the colors of the "Search Your Data" box. */
-.homepage .module-search .module-content {
-    color: rgb(105, 115, 124);
-    background-color: white;
-}
 
 /* Change the background color of the "Popular Tags" box. */
 .homepage .module-search .tags {
@@ -446,9 +441,15 @@ body {
 }
 
 .homepage .module-search {
-    position: relative;
+    /*position: relative;*/
     padding: 0;
     margin: 5%;
+    background-color: transparent;
+}
+
+/* Change the colors of the "Search Your Data" box. */
+.homepage .module-search .module-content {
+    color: rgb(105, 115, 124);
     background-color: rgba(255, 255, 255, 0.9)
 }
 
@@ -462,9 +463,9 @@ body {
 /*      opacity: 0.9;*/
 /*}*/
 
-.module-search .form-control {
-    background-color: rgba(255, 255, 255, 1);
-}
+/*.module-search .form-control {*/
+/*    background-color: rgba(255, 255, 255, 1);*/
+/*}*/
 
 .featured-orgs {
     padding-top: 15px;
