@@ -737,6 +737,10 @@ body {
     display: inline-block;
 }
 
+.truncate-toggle::after {
+    content: "";
+}
+
 /*.truncate-toggle.off {*/
 /*    display: none !important;*/
 /*}*/
