@@ -76,7 +76,7 @@ img#beta {
 .account-masthead .account .notifications a:hover span,
 .account-masthead .account ul li a:hover,
 .masthead .site-title a:hover,
-.masthead .site-title a:focus {
+.masthead .site-title a:focus, .site-footer-links a:focus {
     color: var(--mast-hover-color);
     background-color: inherit;
     text-shadow: none;
@@ -97,7 +97,7 @@ img#beta {
     border-radius: 25px;
 }
 
-.account-masthead .account ul li.login a:hover {
+.account-masthead .account ul li.login a:hover, .site-footer-links a:hover {
     color: var(--mast-hover-color);
 }
 
