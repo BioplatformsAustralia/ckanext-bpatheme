@@ -209,7 +209,7 @@
                                     <p class="project-description truncate-overflow">
                                         {{ i.description }}
                                     </p>
-                                    <label for="expanded" role="button">read more</label>
+                                    <label id="truncate-toggle" for="truncate-overflow" role="button" onclick="toggleExpandedButton()">read more</label>
                                     <ul class="nav nav-pills">
                                             <li><a href="{{ i.url }}"> <span
                                                     class="fa fa-info"></span> </a></li>
