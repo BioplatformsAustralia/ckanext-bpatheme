@@ -451,9 +451,10 @@ body {
     padding: 5px;
 }
 
-.search-background select, .search-background input {
+.module-search .form-control {
     background-image: none;
     background-color: var(--inputs-bg-color);
+    opacity: 1;
 }
 
 .featured-orgs {
