@@ -709,11 +709,11 @@ body {
 }
 
 .project-details {
-    margin: 0 15px 15px 0
+    margin: 0 20px 15px 0
 }
 
 .project-details h3{
-    margin-top: 0
+    margin-top: 5px
 }
 
 .project-details .nav-pills {
