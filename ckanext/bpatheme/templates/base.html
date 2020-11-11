@@ -25,10 +25,12 @@
       console.log("getting sibling...");
       console.dir(previous);
       if (e.className === "truncate-toggle") {
-          e.className += " off";
+          e.innerText = " off";
+          e.innerText = "read less";
           previous.className = "project-description"
       } else {
           e.className = "truncate-toggle";
+          e.innerText = "read more";
           previous.className += " truncate-overflow"
       }
   }

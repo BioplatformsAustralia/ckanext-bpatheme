@@ -737,6 +737,6 @@ body {
     display: inline-block;
 }
 
-.truncate-toggle.off {
-    display: none !important;
-}
+/*.truncate-toggle.off {*/
+/*    display: none !important;*/
+/*}*/
