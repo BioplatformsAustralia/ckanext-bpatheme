@@ -708,6 +708,10 @@ body {
     border-radius: 6px !important;
 }
 
+.project-details .nav-pills{
+    padding: 10px 15px 10px 0
+}
+
 .project-description, .truncate-overflow {
   --lh: 1.3em;
   line-height: var(--lh);
