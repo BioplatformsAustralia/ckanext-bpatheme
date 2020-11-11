@@ -21,10 +21,13 @@
   }
   function toggleExpandedButton(e) {
       console.dir(e);
+      const previous = e.previousSibling;
       if (e.className === "truncate-toggle") {
           e.className += " off";
+          previous.className = "project-description"
       } else {
           e.className = "truncate-toggle";
+          previous.className += " truncate-overflow"
       }
   }
   </script>
