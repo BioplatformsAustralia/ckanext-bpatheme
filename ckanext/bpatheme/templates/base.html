@@ -21,10 +21,10 @@
   }
   function toggleExpandedButton(e) {
       console.dir(e);
-      if (x.visibility === "visible") {
-          x.visibility = "collapse";
+      if (e.className === "truncate-toggle") {
+          e.className += " off";
       } else {
-          x.visibility = "visible";
+          e.className = "truncate-toggle";
       }
   }
   </script>

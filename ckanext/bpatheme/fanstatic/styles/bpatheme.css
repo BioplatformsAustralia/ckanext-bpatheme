@@ -732,3 +732,11 @@ body {
   height: 1em;
   background: white;
 }
+
+.truncate-toggle {
+    display: inline-block;
+}
+
+.truncate-toggle.off {
+    display: none !important;
+}
