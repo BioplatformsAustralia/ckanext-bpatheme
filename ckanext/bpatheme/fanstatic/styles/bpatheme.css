@@ -449,30 +449,28 @@ body {
     position: relative;
     padding: 0;
     margin: 5%;
-    /*opacity: 0.9;*/
+    background-color: rgba(255, 255, 255, 0.9)
 }
 
-.homepage .module-search::before {
-      content: "";
-      position: absolute;
-      top: 0;
-      right: 0;
-      bottom: 0;
-      left: 0;
-      opacity: 0.9;
-}
+/*.homepage .module-search::before {*/
+/*      content: "";*/
+/*      position: absolute;*/
+/*      top: 0;*/
+/*      right: 0;*/
+/*      bottom: 0;*/
+/*      left: 0;*/
+/*      opacity: 0.9;*/
+/*}*/
 
 .module-search .form-control {
-    background-image: none;
-    background-color: var(--inputs-bg-color);
-    opacity: 1;
+    background-color: rgba(255, 255, 255, 1);
 }
 
 .featured-orgs {
     padding-top: 15px;
 }
 
-.featured-orgs .heading{
+.featured-orgs .heading {
     margin: 0 0 20px -5px;
     font-size: 24px;
     line-height: 40px;
@@ -705,7 +703,7 @@ body {
     margin: 0 15px 25px 0
 }
 
-.project-details h3{
+.project-details h3 {
     margin-top: 5px
 }
 
@@ -718,38 +716,38 @@ body {
 }
 
 .project-description, .truncate-overflow {
-  --lh: 1.3em;
-  line-height: var(--lh);
-  position: relative;
-  text-align: left;
-  padding-right: 1em; /* space for ellipsis */
-  margin: 0 0 0 0;
+    --lh: 1.3em;
+    line-height: var(--lh);
+    position: relative;
+    text-align: left;
+    padding-right: 1em; /* space for ellipsis */
+    margin: 0 0 0 0;
 
 }
 
 .truncate-overflow {
-  --lh: 1.3em;
-  line-height: var(--lh);
-  --max-lines: 3;
-  position: relative;
-  max-height: calc(var(--lh) * var(--max-lines));
-  overflow: hidden;
+    --lh: 1.3em;
+    line-height: var(--lh);
+    --max-lines: 3;
+    position: relative;
+    max-height: calc(var(--lh) * var(--max-lines));
+    overflow: hidden;
 }
 
 .truncate-overflow::before {
-  position: absolute;
-  content: "...";
-  bottom: 0;
-  right: 0;
+    position: absolute;
+    content: "...";
+    bottom: 0;
+    right: 0;
 }
 
 .truncate-overflow::after {
-  content: "";
-  position: absolute;
-  right: 0;
-  width: 1em;
-  height: 1em;
-  background: white;
+    content: "";
+    position: absolute;
+    right: 0;
+    width: 1em;
+    height: 1em;
+    background: white;
 }
 
 .truncate-toggle {
