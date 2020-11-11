@@ -63,7 +63,8 @@ img#beta {
 .account-masthead .account ul li a,
 .masthead .site-title a,
 .masthead .site-title a:active,
-.site-footer {
+.site-footer,
+.site-footer a {
     color: var(--mast-color);
     background-color: var(--mast-bg-color);
     text-shadow: none;
@@ -79,7 +80,6 @@ img#beta {
 .masthead .site-title a:active,
 .site-footer {
     font-family: "Akkurat Pro", Arial, Helvetica, sans-serif;
-    font-weight: 700;
     font-size: 2rem;
 }
 
