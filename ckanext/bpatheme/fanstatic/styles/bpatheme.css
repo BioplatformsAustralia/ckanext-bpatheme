@@ -78,13 +78,13 @@ img#beta {
 .masthead .site-title a,
 .masthead .site-title a:active,
 .site-footer {
+    font-family: "Akkurat Pro", Arial, Helvetica, sans-serif;
     font-size: 2rem;
 }
 
 /* The text and icons in the user account info. */
 .account-masthead .account .notifications a span,
-.account-masthead .account ul li a,
-.site-footer {
+.account-masthead .account ul li a {
     font-size: 1.5rem;
 }
 
