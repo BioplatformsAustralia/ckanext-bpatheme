@@ -104,9 +104,16 @@ img#beta {
     box-shadow: none;
 }
 
-.account-masthead .account ul li.login, .account-masthead .account ul li.register {
+.account-masthead .account ul li.login {
     color: var(--mast-bg-color);
     background-color: var(--mast-color);
+    border: 1px solid var(--mast-color);
+    border-radius: 25px;
+}
+
+.account-masthead .account ul li.register {
+    color: var(--mast-color);
+    background-color: var(--mast-bg-color);
     border: 1px solid var(--mast-color);
     border-radius: 25px;
 }
