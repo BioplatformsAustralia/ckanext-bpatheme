@@ -104,25 +104,25 @@ img#beta {
     box-shadow: none;
 }
 
-.account-masthead .account ul li.login {
+.account-masthead .account ul li.login, .account-masthead .account ul li.register {
     color: var(--mast-bg-color);
     background-color: var(--mast-color);
     border: 1px solid var(--mast-color);
     border-radius: 25px;
 }
 
-.account-masthead .account ul li.login a {
+.account-masthead .account ul li.login a, .account-masthead .account ul li.register a {
     color: inherit;
     background-color: inherit;
     border: 1px solid var(--mast-color);
     border-radius: 25px;
 }
 
-.account-masthead .account ul li.login a:hover, .site-footer-links a:hover {
+.account-masthead .account ul li.login a:hover, .account-masthead .account ul li.register a:hover, .site-footer-links a:hover {
     color: var(--mast-hover-color);
 }
 
-.account-masthead .account.not-authed span.login {
+.account-masthead .account.not-authed span.login, .account-masthead .account.not-authed span.register {
     margin: 0 10px 0 10px;
     position: relative;
     top: 0;

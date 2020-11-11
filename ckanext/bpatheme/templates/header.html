@@ -63,7 +63,12 @@
                     </a>
                   </li>
                   {% if h.check_access('user_create') %}
-                    <li class="register">{% link_for _('Register'), controller='user', action='register', class_='sub' %}</li>
+                    <li class="register">
+                        <a href="{{ h.url_for(controller='user', action='register', class_='sub') }}" title="{{ _('Register') }}">
+                          <i class="fa fa-edit" aria-hidden="true"></i>
+                          <span class="text login">{{ _('Register') }}</span>
+                         </a>
+                    </li>
                   {% endif %}
                 {% endblock %}
               </ul>
