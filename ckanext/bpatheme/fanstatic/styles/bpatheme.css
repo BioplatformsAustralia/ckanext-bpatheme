@@ -311,12 +311,6 @@ img {
     margin-bottom: 1em;
 }
 
-.homepage .module-search {
-    padding: 0px;
-    margin: 5%;
-    opacity: 0.9;
-}
-
 /* Bottom half of front page for featured orgs/groups */
 .homepage [role="main"] {
     min-height: 100px;
@@ -449,6 +443,23 @@ body {
     background-repeat: no-repeat;
     width: 100%;
     padding: 5px;
+}
+
+.homepage .module-search {
+    position: relative;
+    padding: 0;
+    margin: 5%;
+    /*opacity: 0.9;*/
+}
+
+.homepage .module-search::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      opacity: 0.9;
 }
 
 .module-search .form-control {
