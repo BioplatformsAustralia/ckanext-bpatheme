@@ -147,10 +147,6 @@ img#beta {
     background: none;
 }
 
-select.form-control::after {
-    content: none;
-}
-
 /* Invisible debug output for controller/action */
 .debug {
     color: #fefefe;
@@ -776,4 +772,9 @@ body {
 
 .truncate-toggle::after {
     content: "";
+}
+
+.module h1 {
+    /* ensure text kept within container */
+    overflow-wrap: anywhere;
 }
