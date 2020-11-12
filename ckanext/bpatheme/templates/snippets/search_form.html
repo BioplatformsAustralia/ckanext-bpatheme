@@ -1,5 +1,11 @@
 {% ckan_extends %}
 
-  {% block search_input %}
-	{% snippet 'snippets/search_form_common.html', form_id=form_id, type=type, query=query, sorting=sorting, sorting_selected=sorting_selected, count=count, facets=facets, placeholder=placeholder, show_empty=show_empty, fields=fields %}
-  {% endblock %}
+{% block search_input %}
+  {% snippet 'snippets/search_form_common.html', form_id=form_id, type=type, query=query, sorting=sorting, sorting_selected=sorting_selected, count=count, facets=facets, placeholder=placeholder, show_empty=show_empty, fields=fields %}
+  {% snippet 'ckanext_bulk/snippets/package_button.html', id=c.id %}
+{% endblock %}
+
+
+{% block extra %}
+    {% snippet 'ckanext_bulk/snippets/package_button.html', id=c.id %}
+{% endblock %}
