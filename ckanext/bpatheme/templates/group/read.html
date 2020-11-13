@@ -17,6 +17,7 @@
       (_('Popular'), 'views_recent desc') if g.tracking_enabled else (false, false) ]
     %}
     {% snippet 'snippets/search_form.html', form_id='group-datasets-search-form', type='dataset', query=c.q, sorting=sorting, sorting_selected=c.sort_by_selected, count=c.page.item_count, facets=facets, placeholder=_('Search datasets...'), show_empty=request.params, fields=c.fields %}
+     {% snippet 'ckanext_bulk/snippets/search_button.html', id=c.group_dict.id %}
   {% endblock %}
   {% block packages_list %}
     {% if c.page.items %}
