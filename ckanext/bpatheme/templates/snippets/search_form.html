@@ -1,5 +1,10 @@
 {% ckan_extends %}
 
 {% block search_input %}
+  {% if bulk_download_type %}
+    {% if bulk_download_type == 'organization' %}
+       {% snippet 'ckanext_bulk/snippets/organization_button.html', id=c.group_dict.id %}
+    {% endif %}
+  {% endif %}
   {% snippet 'snippets/search_form_common.html', form_id=form_id, type=type, query=query, sorting=sorting, sorting_selected=sorting_selected, count=count, facets=facets, placeholder=placeholder, show_empty=show_empty, fields=fields %}
 {% endblock %}
