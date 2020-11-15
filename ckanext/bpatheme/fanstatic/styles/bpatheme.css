@@ -778,3 +778,16 @@ body {
     /* ensure text kept within container */
     overflow-wrap: anywhere;
 }
+
+.form-select.control-order-by {
+    float: none;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    margin: 25px 0 0 15px;
+}
+
+.bulk-btn {
+    float: right;
+    margin: 0 0 0 0;
+}
