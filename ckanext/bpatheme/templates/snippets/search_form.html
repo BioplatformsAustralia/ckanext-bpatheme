@@ -2,6 +2,7 @@
 
 {% block search_input %}
   {% if bulk_download_type %}
+    <div>{{ bulkdownload_type }}</div>
     {% if bulk_download_type == 'organization' %}
        {% snippet 'ckanext_bulk/snippets/organization_button.html', id=c.group_dict.id %}
     {% endif %}
