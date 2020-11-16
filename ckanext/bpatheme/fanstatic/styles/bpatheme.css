@@ -4,6 +4,9 @@
     --mast-hover-color: #00c08b;
     --mast-no-link: rgb(105, 115, 124);
     --site-footer-logo-bg-color: #171717;
+    --extra-button-color: #ffffff;
+    --extra-button-bg-color: #00c08b;
+    --pd-lh: 1.3em;
 }
 
 /* =====================================================
@@ -672,29 +675,6 @@ body {
 
 }
 
-.img-stack {
-    z-index: 0;
-    position: relative;
-    top: 0;
-    min-height: 200px;
-}
-
-
-.img-stack-top {
-    z-index: 2;
-    position: sticky;
-    margin-top: 100px;
-    margin-left: 100px;
-    background: white;
-}
-
-.img-stack-bottom {
-    z-index: 1;
-    position: absolute;
-    top: 0;
-    left: 0;
-}
-
 /*ensure rectangular images are 'squared' before becoming 'circles'*/
 .icon_logo_default {
     width: 150px;
@@ -731,8 +711,7 @@ body {
 }
 
 .project-description, .truncate-overflow {
-    --lh: 1.3em;
-    line-height: var(--lh);
+    line-height: var(--pd-lh);
     position: relative;
     text-align: left;
     padding-right: 1em; /* space for ellipsis */
@@ -741,28 +720,28 @@ body {
 }
 
 .truncate-overflow {
-    --lh: 1.3em;
-    line-height: var(--lh);
     --max-lines: 3;
-    position: relative;
-    max-height: calc(var(--lh) * var(--max-lines));
+    max-height: calc(var(--pd-lh) * var(--max-lines));
     overflow: hidden;
 }
 
-.truncate-overflow::before {
+.truncate-overflow::before, .truncate-overflow::after {
     position: absolute;
-    content: "...";
     bottom: 0;
+}
+
+.truncate-overflow::before {
+    height: var(--pd-lh);
+    content: "...";
     right: 0;
 }
 
 .truncate-overflow::after {
+    height: var(--pd-lh);
     content: "";
-    position: absolute;
-    right: 0;
-    width: 1em;
-    height: 1em;
-    background: white;
+    left: 0;
+    width: 100%;
+    background-image: linear-gradient(rgba(255, 255, 255, 0) 0%, rgb(255, 255, 255) 100%);
 }
 
 .truncate-toggle {
@@ -790,4 +769,9 @@ body {
 .bulk-btn {
     float: right;
     margin: 0 0 0 0;
+}
+
+.bulk-btn a {
+    color: var(--extra-button-color);
+    background-color: var(--extra-button-bg-color);
 }
