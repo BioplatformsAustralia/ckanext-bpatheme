@@ -608,14 +608,14 @@ body {
     .topnav a {
         display: none;
         right: 30px;
-        transition: 0.4s;
+        /*transition: 0.4s;*/
         /*transition: all 0.4s ease-in;*/
         margin-bottom: 10px;
     }
 
     .topnav.responsive a {
         /*transition: all 0.4s ease-out;*/
-        transition: 0.4s;
+        /*transition: 0.4s;*/
     }
 
     .topnav a.icon {
@@ -632,12 +632,12 @@ body {
         position: fixed;
         top: 40px;
         right: 20px;
-        transition: 0.4s;
+        /*transition: 0.4s;*/
         /*transition: all 0.4s ease-in;*/
     }
 
     .site-title {
-        transition: 0.4s;
+        /*transition: 0.4s;*/
         /*transition: all 0.4s ease-in;*/
     }
 
@@ -645,7 +645,7 @@ body {
         position: fixed;
         top: 40px;
         right: 40px;
-        transition: 0.4s;
+        /*transition: 0.4s;*/
         /*transition: all 0.4s ease-out;*/
     }
 
