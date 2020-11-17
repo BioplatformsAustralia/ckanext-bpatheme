@@ -469,7 +469,7 @@ body {
 
 /* Background for search area */
 .search-background {
-    background-image: url("/header-background_2.jpg");
+    background-image: url("/header-background_2.png");
     background-size: cover;
     background-repeat: no-repeat;
     width: 100%;
