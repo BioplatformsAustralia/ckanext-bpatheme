@@ -463,11 +463,6 @@
             "label": "project_aim"
         },
         {
-            "field_name": "resource_permissions",
-            "form_placeholder": "",
-            "label": "resource_permissions"
-        },
-        {
             "field_name": "sample_custodian",
             "form_placeholder": "",
             "label": "sample_custodian"
