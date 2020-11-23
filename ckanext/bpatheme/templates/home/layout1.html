@@ -1,9 +1,4 @@
 <style>
-    .resized {
-        width: 120px;
-        height: 120px;
-    }
-
     td .fa {
         font-size: 1.5em;
     }
@@ -12,283 +7,222 @@
         width: 150px !important;
     }
 </style>
+<div role="main" class="hero landing">
+  <div class="search-background">
+          {% block search %}
+            {% snippet 'home/snippets/search.html' %}
+          {% endblock %}
+  </div>
+    <div class="featured-orgs">
+            {% set projects = [] %}
+            {% set amdb = {
+                'logo' : "new_ausmicro_logo.png",
+                'has_logo' : "true",
+                'icon' : "icon_amd.png",
+                'slug' : "australian-microbiome",
+                'url' : "/organization/about/australian-microbiome",
+                'title' : "Australian Microbiome",
+                'description' : "The Australian Microbiome Database is a collaborative project to create a public resource
+                    containing microbial genome and associated site specific metadata information from a range of
+                    Australian environments including soils, marine and freshwater.",
+            } %}
+            {% if projects.append(amdb) %} {% endif %}
 
-<div role="main" class="hero">
-    <div class="container">
-        <table class="table">
-
-
-            <tr>
-                <td class="right">
-                    <a href="/organization/about/australian-microbiome">
-                        <img class="resized img-rounded" src="new_ausmicro_logo.png" alt="MM">
-                    </a>
-                </td>
-                <td>
-                    <a href="/organization/about/australian-microbiome">
-                        <h3>Australian Microbiome</h3>
-                    </a>
-                    <p>The Australian Microbiome Database is a collaborative project to create a public resource
-                        containing microbial genome and associated site specific metadata information from a range of
-                        Australian environments including soils, marine and freshwater.</p>
-                </td>
-            </tr>
-
-            <tr>
-                <td class="right">
-                    <a href="/organization/about/bpa-sepsis">
-                        <img class="resized  img-rounded" src="sepsis.png" alt="Sepsis">
-                    </a>
-                </td>
-                <td>
-                    <a href="/organization/about/bpa-sepsis">
-                        <h3>Antibiotic Resistant Sepsis Pathogens</h3>
-                    </a>
-                    <p>
+            {% set sepsis = {
+                'logo' : "sepsis.png",
+                'icon' : "icon_sepsis.jpg",
+                'slug' : "bpa-sepsis",
+                'url' : "http://www.bioplatforms.com/antibiotic-resistant-pathogens",
+                'title' : "Antibiotic Resistant Sepsis Pathogens",
+                'description' : "
                         The Antibiotic Resistant Sepsis Pathogens Framework Initiative aims to develop a
                         framework dataset that will enable identification of core targets common to
                         antibiotic-resistant sepsis pathogens.
-                    </p>
-                    <ul class="nav nav-pills">
-                        <li><a href="http://www.bioplatforms.com/antibiotic-resistant-pathogens"> <span
-                                    class="fa fa-info"></span> </a></li>
-                        <li><a href="https://downloads-qcif.bioplatforms.com/bpa/sepsis/"> <span
-                                    class="fa fa-download"></span> </a></li>
-                    </ul>
-                </td>
-            </tr>
+                ",
+            } %}
+            {% if projects.append(sepsis) %} {% endif %}
 
-            <tr>
-                <td class="right">
-                    <a href="organization/about/bpa-omg">
-                        <img class="resized img-rounded" src="/omg-logo.png" alt="Oz Mammals Genomics">
-                    </a>
-                </td>
-                <td>
-                    <a href="organization/about/bpa-omg">
-                        <h3>Oz Mammals Genomics Initiative</h3>
-                    </a>
-                    <p>
+            {% set omg = {
+                'logo' : "omg-logo.png",
+                'has_logo' : "true",
+                'special_class' : "no-circular-logo",
+                'icon' : "icon_omg.jpg",
+                'slug' : "bpa-omg",
+                'url' : "http://www.bioplatforms.com/oz-mammals/",
+                'title' : "Oz Mammals Genomics Initiative",
+                'description' : "
                         The Oz Mammals Genomics Initiative is an Australia-wide collaboration involving researchers
                         from more than 30 institutions, which aims to develop genomic resources for Australia's
                         mammals.
-                    </p>
-                    <ul class="nav nav-pills">
-                        <li> <a href="http://www.bioplatforms.com/oz-mammals/"> <span class="fa fa-info"></span> </a>
-                        </li>
-                        <li> <a href="organization/bpa-omg"> <span class="fa fa-download"></span> </a> </li>
-                    </ul>
-                </td>
-            </tr>
+                ",
+            } %}
+            {% if projects.append(omg) %} {% endif %}
 
-            <tr>
-                <td class="right">
-                    <a href="organization/about/bpa-plants">
-                        <img class="resized img-rounded" src="/Logo_plants_updown.png"
-                            alt="Genomics for Australian Plants" />
-                    </a>
-                </td>
-                <td>
-                    <a href="organization/about/bpa-plants">
-                        <h3>Genomics for Australian Plants</h3>
-                    </a>
-                    <p>
+            {% set gap = {
+                'logo' : "Logo_plants_updown.png",
+                'has_logo' : "true",
+                'special_class' : "no-circular-logo",
+                'icon' : "icon_gap.jpg",
+                'slug' : "bpa-plants",
+                'url' : "/organization/bpa-plants",
+                'title' : "Genomics for Australian Plants",
+                'description' : "
                         The Genomics for Australian Plants Initiative is a national collaborative project, which aims to
                         develop genomic resources for the Australian plants community.
-                    </p>
-                    <ul class="nav nav-pills">
-                        <li> <a href="organization/bpa-plants"> <span class="fa fa-download"></span> </a> </li>
-                    </ul>
-                </td>
-            </tr>
+                ",
+            } %}
+            {% if projects.append(gap) %} {% endif %}
 
-            <tr>
-                <td class="right">
-                    <a href="organization/about/ausarg">
-                        <img class="resized img-rounded" src="/AusARG-Logo-RGB-150dpi-Transparent.png"
-                            alt="Australian Amphibian and Reptile Genomics Initiative" />
-                    </a>
-                </td>
-                <td>
-                    <a href="organization/about/ausarg">
-                        <h3>Australian Amphibian and Reptile Genomics Initiative</h3>
-                    </a>
-                    <p>
+            {% set ausarg = {
+                'logo' : "AusARG-Logo-RGB-150dpi-Transparent.png",
+                'has_logo' : "true",
+                'icon' : "icon_arg.jpg",
+                'slug' : "ausarg",
+                'url' : "/organization/ausarg",
+                'title' : "Australian Amphibian and Reptile Genomics Initiative",
+                'description' : "
                         The Australian Amphibian and Reptile Genomics Initiative is a national collaborative project
                         that that will facilitate research using genomics approaches towards a more thorough
                         understanding of evolution and conservation of Australia’s unique native Amphibians and
                         Reptiles.
-                    </p>
-                    <ul class="nav nav-pills">
-                        <li> <a href="organization/ausarg"> <span class="fa fa-download"></span> </a> </li>
-                    </ul>
-                </td>
-            </tr>
+                ",
+            } %}
+            {% if projects.append(ausarg) %} {% endif %}
 
-            <tr>
-                <td class="right">
-                    <a href="organization/about/threatened-species">
-                        <img class="resized img-rounded" src="/Threatened-Species-Initiative-Logo-150dpi-RGB.png" alt="Threatened Species Initiative">
-                    </a>
-                </td>
-                <td>
-                    <a href="organization/about/threatened-species">
-                        <h3>Threatened Species Initiative</h3>
-                    </a>
-                    <p>
+            {% set tsi = {
+                'logo' : "Threatened-Species-Initiative-Logo-150dpi-RGB.png",
+                'has_logo' : "true",
+                'icon' : "icon_tsi.jpg",
+                'slug' : "threatened-species",
+                'url' : "/organization/threatened-species",
+                'title' : "Threatened Species Initiative",
+                'description' : "
                         The Threatened Species Initiative (TSI) will create 
-			a national library of genomic data to support 
-			decision-making for biodiversity conservation.
-                    </p>
-                    <ul class="nav nav-pills">
-                        <li> <a href="http://www.bioplatforms.com/projects/threatened-species/"> <span class="fa fa-info"></span> </a>
-                        </li>
-                        <li> <a href="organization/threatened-species"> <span class="fa fa-download"></span> </a> </li>
-                    </ul>
-                </td>
-            </tr>
+                        a national library of genomic data to support
+                        decision-making for biodiversity conservation.
+                ",
+            } %}
+            {% if projects.append(tsi) %} {% endif %}
 
-            <tr>
-                <td class="right">
-                    <a href="/organization/about/bpa-great-barrier-reef">
-                        <img class="resized  img-rounded" src="coral.png" alt="GBR">
-                    </a>
-                </td>
-                <td>
-                    <a href="/organization/about/bpa-great-barrier-reef">
-                        <h3>Great Barrier Reef</h3>
-                    </a>
-                    <p>
+            {% set gbr = {
+                'logo' : "coral.png",
+                'icon' : "icon_gbr.png",
+                'slug' : "bpa-great-barrier-reef",
+                'url' : "http://www.bioplatforms.com/bpa-great-barrier-reef",
+                'title' : "Great Barrier Reef",
+                'description' : "
                         The Sea-quence Project is generating core genetic data for corals from the
                         Great Barrier Reef and Red Sea to ultimately help guide reef management
                         practices.
-                    </p>
-                    <ul class="nav nav-pills">
-                        <li><a href="http://www.bioplatforms.com/great-barrier-reef"> <span class="fa fa-info"></span>
-                            </a></li>
-                        <li><a href="https://downloads-qcif.bioplatforms.com/bpa/gbr/"> <span
-                                    class="fa fa-download"></span> </a></li>
-                    </ul>
-                </td>
-            </tr>
+                ",
+            } %}
+            {% if projects.append(gbr) %} {% endif %}
 
-            <tr>
-                <td class="right">
-                    <a href="/organization/about/bpa-melanoma">
-                        <img class="resized  img-rounded" src="melanoma.png" alt="Melanoma">
-                    </a>
-                </td>
-                <td>
-                    <a href="/organization/about/bpa-melanoma">
-                        <h3>Melanoma</h3>
-                    </a>
-                    <p>
+            {% set melanoma = {
+                'logo' : "melanoma.png",
+                'icon' : "icon_melanoma.jpg",
+                'slug' : "bpa-melanoma",
+                'url' : "http://www.bioplatforms.com/melanoma",
+                'title' : "Melanoma",
+                'description' : "
                         The Melanoma Genomics Project aims to whole genome sequence approximately 500 melanoma patients.
-                    </p>
-                    <ul class="nav nav-pills">
-                        <li><a href="http://www.bioplatforms.com/melanoma"> <span class="fa fa-info"></span> </a></li>
-                        <li><a href="https://downloads-qcif.bioplatforms.com/bpa/melanoma/"> <span
-                                    class="fa fa-download"></span> </a></li>
-                    </ul>
-                </td>
-            </tr>
+                ",
+            } %}
+            {% if projects.append(melanoma) %} {% endif %}
 
-            <tr>
-                <td class="right">
-                    <a href="/organization/about/bpa-wheat-pathogens-transcript">
-                        <img class="resized  img-rounded" src="fusarium_head_blight_infected_ear.png"
-                            alt="Wheat Pathogens Transcript">
-                    </a>
-                </td>
-                <td>
-                    <a href="/organization/about/bpa-wheat-pathogens-transcript">
-                        <h3>Wheat Pathogens Transcript</h3>
-                    </a>
-                    <p>
+            {% set wpt = {
+                'logo' : "fusarium_head_blight_infected_ear.png",
+                'icon' : "icon_wheat_pathogens_transcript.png",
+                'slug' : "bpa-wheat-pathogens-transcript",
+                'url' : "http://www.bioplatforms.com/wheat-datasets",
+                'title' : "Wheat Pathogens Transcript",
+                'description' : "
                         This dataset contains transcript sequence data from 8 different fungal pathogen species of
                         wheat.
-                    </p>
-                    <ul class="nav nav-pills">
-                        <li><a href="http://www.bioplatforms.com/wheat-datasets"> <span class="fa fa-info"></span> </a>
-                        </li>
-                        <li><a href="https://downloads-qcif.bioplatforms.com/bpa/wheat_pathogens_transcript/"> <span
-                                    class="fa fa-download"></span> </a></li>
-                    </ul>
-                </td>
-            </tr>
+                ",
+            } %}
+            {% if projects.append(wpt) %} {% endif %}
 
-            <tr>
-                <td class="right">
-                    <a href="/organization/about/bpa-wheat-pathogens-genomes">
-                        <img class="resized  img-rounded" src="stagonospora_nodorum.png" alt="Wheat Pathogens">
-                    </a>
-                </td>
-                <td>
-                    <a href="/organization/about/bpa-wheat-pathogens-genomes">
-                        <h3>Wheat Pathogens Genomes</h3>
-                    </a>
-                    <p>
+            {% set wpg = {
+                'logo' : "stagonospora_nodorum.png",
+                'icon' :"icon_wheat_pathogens_genomes.png",
+                'slug' : "bpa-wheat-pathogens-genomes",
+                'url' : "http://www.bioplatforms.com/wheat-datasets",
+                'title' : "Wheat Pathogens Genomes",
+                'description' : "
                         This dataset contains the genomic sequence from 10 fungal and 2 bacterial pathogen species.
-                        Among the
-                        pathogens sequenced are the causal agents of stripe rust, stem rust, tan spot, glume blotch,
-                        septoria leaf
-                        blotch, bare patch and crown rot/head blight.
-                    </p>
-                    <ul class="nav nav-pills">
-                        <li><a href="http://www.bioplatforms.com/wheat-datasets"> <span class="fa fa-info"></span> </a>
-                        </li>
-                        <li><a href="https://downloads-qcif.bioplatforms.com/bpa/wheat_pathogens/"> <span
-                                    class="fa fa-download"></span> </a></li>
-                    </ul>
-                </td>
-            </tr>
+                        Among the pathogens sequenced are the causal agents of stripe rust, stem rust, tan spot, 
+                        glume blotch, septoria leaf blotch, bare patch and crown rot/head blight.
+                ",
+            } %}
+            {% if projects.append(wpg) %} {% endif %}
 
-            <tr>
-                <td class="right">
-                    <a href="/organization/about/bpa-wheat-cultivars">
-                        <img class="resized  img-rounded" src="wheat.png" alt="Wheat Cultivars">
-                    </a>
-                </td>
-                <td>
-                    <a href="/organization/about/bpa-wheat-cultivars">
-                        <h3>Wheat Cultivars</h3>
-                    </a>
-                    <p>
+            {% set wc = {
+                'logo' : "wheat.png",
+                'icon' : "icon_wheat.png",
+                'slug' : "bpa-wheat-cultivars",
+                'url' : "http://www.bioplatforms.com/wheat-datasets",
+                'title' : "Wheat Cultivars",
+                'description' : "
                         This dataset contains genomic sequence information from 16 wheat varieties of
                         importance to Australia selected and prioritised by the major stakeholders of
                         the Australian grains research community based on availability of mapping
                         populations and genetic diversity.
-                    </p>
-                    <ul class="nav nav-pills">
-                        <li><a href="http://www.bioplatforms.com/wheat-datasets"> <span class="fa fa-info"></span> </a>
-                        </li>
-                        <li><a href="https://downloads-qcif.bioplatforms.com/bpa/wheat_cultivars/"> <span
-                                    class="fa fa-download"></span> </a></li>
-                    </ul>
-                </td>
-            </tr>
+                ",
+            } %}
+            {% if projects.append(wc) %} {% endif %}
 
-            <tr>
-                <td class="right">
-                    <a href="/organization/about/bpa-stemcells">
-                        <img class="resized  img-rounded" src="stemcell.png" alt="Stemcell">
-                    </a>
-                </td>
-                <td>
-                    <a href="/organization/about/bpa-stemcells">
-                        <h3>Stem Cells</h3>
-                    </a>
-                    <p>
+            {% set stemcells = {
+                'logo' : "stemcell.png",
+                'icon' : "icon_stemcells.png",
+                'slug' : "bpa-stemcells",
+                'url' : "http://www.bioplatforms.com/stem-cells",
+                'title' : "Stem Cells",
+                'description' : "
                         Stem cells allow us to study fundamental processes in tissue growth,
                         development, aging and disease.
-                    </p>
-                    <ul class="nav nav-pills">
-                        <li><a href="http://www.bioplatforms.com/stem-cells"> <span class="fa fa-info"></span> </a></li>
-                        <li><a href="https://downloads-qcif.bioplatforms.com/bpa/stemcell/"> <span
-                                    class="fa fa-download"></span> </a></li>
-                    </ul>
-                </td>
-            </tr>
-        </table>
+                ",
+            } %}
+            {% if projects.append(stemcells) %} {% endif %}
+
+            {% macro render_initiative(i) %}
+                            <div>
+				    {% set org_link = h.url_for('dataset', organization=i.slug) %}
+                                    <a href="{{ org_link }}">
+                                        <img class="icon_logo_default" src="{{ i.icon }}" alt="{{ i.title }}">
+                                    </a>
+                            </div>
+                            <div class="project-details">
+                                    <a href="{{ org_link }}">
+                                        <h3>{{ i.title }}</h3>
+                                    </a>
+                                    <p class="project-description truncate-overflow">
+                                        {{ i.description }}
+                                    </p>
+                                    <label class="truncate-toggle" for="project-description" role="button" onclick="toggleExpandedButton(this)">read more</label>
+                                    <ul class="nav nav-pills">
+                                            <li><a href="{{ org_link }}"><span
+                                                    class="fa fa-database"></span> Datasets</a></li>
+                                            <li><a href="{{ i.url }}"> <span
+                                                    class="fa fa-globe"></span> Project</a></li>
+                                    </ul>
+                            </div>
+            {% endmacro %}
+
+        <div class="container">
+            <h3 class="heading">{{ _("Search within a project") }}</h3>
+            <div class="row row-eq-height">
+                    {% for p in projects %}
+                       <div class="col-sm-3">
+                       {{ render_initiative(p) }}
+                       </div>
+                       {% if loop.index is divisibleby 4 %}
+                       {# restart row #}
+                       </div>
+                       <div class="row row-eq-height">
+                       {% endif %}
+                    {% endfor %}
+            </div>
+        </div>
     </div>
 </div>

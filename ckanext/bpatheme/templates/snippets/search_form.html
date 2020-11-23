@@ -1,0 +1,42 @@
+{% ckan_extends %}
+
+{% block search_input %}
+  {% snippet 'snippets/search_form_common.html', form_id=form_id, type=type, query=query, sorting=sorting, sorting_selected=sorting_selected, count=count, facets=facets, placeholder=placeholder, show_empty=show_empty, fields=fields %}
+  <div class="bulk-btn">
+    {% if bulk_download_type == 'organization' %}
+      {% snippet 'ckanext_bulk/snippets/organization_button.html', id=c.group_dict.id %}
+    {% else %}
+      {% snippet 'ckanext_bulk/snippets/search_button.html', id=c.group_dict.id %}
+    {% endif %}
+  </div>
+{% endblock %}
+
+{% block search_sortby %}
+  {% if not error %}
+    <h2>{% snippet 'snippets/search_result_text.html', query=query, count=count, type=type %}</h2>
+  {% else %}
+    <h2>Error</h2>
+  {% endif %}
+    
+  {% if sorting %}
+    <div class="form-select form-group control-order-by">
+      <label for="field-order-by">{{ _('Order by') }}</label>
+      <select id="field-order-by" name="sort" class="form-control">
+        {% for label, value in sorting %}
+          {% if label and value %}
+            <option value="{{ value }}"{% if sorting_selected == value %}
+                    selected="selected"{% endif %}>{{ label }}</option>
+          {% endif %}
+        {% endfor %}
+      </select>
+      {% block search_sortby_button %}
+        <button class="btn btn-default js-hide" type="submit">{{ _('Go') }}</button>
+      {% endblock %}
+    </div>
+  {% endif %}
+{% endblock %}
+
+{% block search_title %}
+
+{% endblock %}
+

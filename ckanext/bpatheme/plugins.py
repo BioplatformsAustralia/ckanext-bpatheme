@@ -116,11 +116,50 @@ class CustomTheme(plugins.SingletonPlugin):
     # IPackageController
 
     def before_search(self, search_params):
+        def make_insensitive(query):
+            twiddled = []
+
+            for c in query:
+                if c.isalpha():
+                    twiddled.append("[")
+                    twiddled.append(c.upper())
+                    twiddled.append(c.lower())
+                    twiddled.append("]")
+                else:
+                    twiddled.append(c)
+
+            output = u""
+
+            return output.join(twiddled)
+
         # fix for ckanext-hierarchy required by migration to 2.8
         try:
             c.fields
         except AttributeError:
             c.fields = []
+
+        # Search by fields for BPA Data Portal
+
+        extras = search_params.get("extras")
+        if not extras:
+            # There are no extras in the search params, so do nothing.
+            return search_params
+        search_by = extras.get("ext_search_by")
+        if not search_by:
+            # The user didn't specify a specific field, so do nothing
+            return search_params
+
+        # Prepend the field name to the query
+        q = search_params["q"]
+        q = make_insensitive(q)
+        search_terms = []
+        for term in q.split():
+            search_terms.append(
+                "{search_by}:/.*{q}.*/".format(q=term, search_by=search_by)
+            )
+        q = " AND ".join(search_terms)
+        search_params["q"] = q
+
         return search_params
 
     # IConfigurer
@@ -150,14 +189,38 @@ class CustomTheme(plugins.SingletonPlugin):
 
     # Ifacets
     def dataset_facets(self, facets_dict, package_type):
-        ## Updating Formats position
-        fct_keys = [key for key in facets_dict.keys()]
-        res_fmt = fct_keys.pop(fct_keys.index('res_format')) if 'res_format' in fct_keys else None
-        org_fct_index = fct_keys.index('organization') if 'organization' in fct_keys else None
-        if res_fmt and org_fct_index is not None:
-            fct_keys.insert(org_fct_index + 1, res_fmt)
-            updated_facet_dict = OrderedDict([(key,facets_dict[key]) for key in fct_keys])
-            facets_dict = updated_facet_dict
-
+        ## In addtion to the defaults, we want these facets
+        facets_dict['organization'] = _('Initiative')
+        facets_dict['type'] = _('Data Type')
         facets_dict['access_level'] = _('Access Level')
+
+        ## We want the facets to appear in this order, with any others at the end
+        facet_order = [
+                'organization',
+                'type',
+                'res_format',
+                'tags',
+                'access_level',
+                ]
+
+        ## Updating facet positions
+        fct_keys = [key for key in facets_dict.keys()]
+        # remove any items from facet_order not in fct_keys
+        facet_order = [item for item in facet_order if item in fct_keys]
+        # generate new order of facet_keys following facet_order
+        for item in facet_order:
+            fct_keys.insert(facet_order.index(item), fct_keys.pop(fct_keys.index(item)))
+        # create OrderedDict of facets
+        updated_facet_dict = OrderedDict([(key,facets_dict[key]) for key in fct_keys])
+        facets_dict = updated_facet_dict
+
+        return facets_dict
+
+    def organization_facets(self, facets_dict, organization_type, package_type):
+        facets_dict = self.dataset_facets(facets_dict, package_type)
+
+        fct_keys = [key for key in facets_dict.keys()]
+        if 'organization' in fct_keys:
+            del facets_dict['organization']
+
         return facets_dict
