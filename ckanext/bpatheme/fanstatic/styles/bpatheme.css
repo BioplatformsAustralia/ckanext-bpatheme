@@ -706,3 +706,7 @@ body {
     color: var(--extra-button-color);
     background-color: var(--extra-button-bg-color);
 }
+
+.fa-sync::before {
+    content: "\f021";
+}
