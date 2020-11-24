@@ -14,8 +14,10 @@
           {% endblock %}
   </div>
 <div>
-  {% snippet 'ckanext_bulk/snippets/package_button.html', id=c.id %}
-   {% snippet 'ckanext_datatablesview/datatables/datatables_view.html', id=c.id %}
+    <table id="dtprv"
+      class="table table-striped table-bordered"
+      data-module="datatables_view"
+           ></table>
 
 </div>
     <div class="featured-orgs">
