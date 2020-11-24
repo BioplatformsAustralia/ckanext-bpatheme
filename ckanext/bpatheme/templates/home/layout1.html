@@ -1,28 +1,31 @@
 <style>
-    td .fa {
-        font-size: 1.5em;
-    }
+  td .fa {
+    font-size: 1.5em;
+  }
 
-    .right {
-        width: 150px !important;
-    }
+  .right {
+    width: 150px !important;
+  }
 </style>
+<link rel="stylesheet" type="text/css" href="{{ h.url_for_static('DataTables/datatables.min.css') }}"/>
+
+<script type="text/javascript" src="{{ h.url_for_static('DataTables/datatables.min.js') }}"></script>
 <div role="main" class="hero landing">
   <div class="search-background">
-          {% block search %}
-            {% snippet 'home/snippets/search.html' %}
-          {% endblock %}
+    {% block search %}
+      {% snippet 'home/snippets/search.html' %}
+    {% endblock %}
   </div>
-<div>
+  <div>
     <table id="dtprv"
-      class="table table-striped table-bordered"
-      data-module="datatables_view"
-           ></table>
+           class="table table-striped table-bordered"
+           data-module="datatables_view"
+    ></table>
 
-</div>
-    <div class="featured-orgs">
-            {% set projects = [] %}
-            {% set amdb = {
+  </div>
+  <div class="featured-orgs">
+    {% set projects = [] %}
+    {% set amdb = {
                 'logo' : "new_ausmicro_logo.png",
                 'has_logo' : "true",
                 'icon' : "icon_amd.png",
@@ -33,9 +36,9 @@
                     containing microbial genome and associated site specific metadata information from a range of
                     Australian environments including soils, marine and freshwater.",
             } %}
-            {% if projects.append(amdb) %} {% endif %}
+    {% if projects.append(amdb) %} {% endif %}
 
-            {% set sepsis = {
+    {% set sepsis = {
                 'logo' : "sepsis.png",
                 'icon' : "icon_sepsis.jpg",
                 'slug' : "bpa-sepsis",
@@ -47,9 +50,9 @@
                         antibiotic-resistant sepsis pathogens.
                 ",
             } %}
-            {% if projects.append(sepsis) %} {% endif %}
+    {% if projects.append(sepsis) %} {% endif %}
 
-            {% set omg = {
+    {% set omg = {
                 'logo' : "omg-logo.png",
                 'has_logo' : "true",
                 'special_class' : "no-circular-logo",
@@ -63,9 +66,9 @@
                         mammals.
                 ",
             } %}
-            {% if projects.append(omg) %} {% endif %}
+    {% if projects.append(omg) %} {% endif %}
 
-            {% set gap = {
+    {% set gap = {
                 'logo' : "Logo_plants_updown.png",
                 'has_logo' : "true",
                 'special_class' : "no-circular-logo",
@@ -78,9 +81,9 @@
                         develop genomic resources for the Australian plants community.
                 ",
             } %}
-            {% if projects.append(gap) %} {% endif %}
+    {% if projects.append(gap) %} {% endif %}
 
-            {% set ausarg = {
+    {% set ausarg = {
                 'logo' : "AusARG-Logo-RGB-150dpi-Transparent.png",
                 'has_logo' : "true",
                 'icon' : "icon_arg.jpg",
@@ -94,9 +97,9 @@
                         Reptiles.
                 ",
             } %}
-            {% if projects.append(ausarg) %} {% endif %}
+    {% if projects.append(ausarg) %} {% endif %}
 
-            {% set tsi = {
+    {% set tsi = {
                 'logo' : "Threatened-Species-Initiative-Logo-150dpi-RGB.png",
                 'has_logo' : "true",
                 'icon' : "icon_tsi.jpg",
@@ -109,9 +112,9 @@
                         decision-making for biodiversity conservation.
                 ",
             } %}
-            {% if projects.append(tsi) %} {% endif %}
+    {% if projects.append(tsi) %} {% endif %}
 
-            {% set gbr = {
+    {% set gbr = {
                 'logo' : "coral.png",
                 'icon' : "icon_gbr.png",
                 'slug' : "bpa-great-barrier-reef",
@@ -123,9 +126,9 @@
                         practices.
                 ",
             } %}
-            {% if projects.append(gbr) %} {% endif %}
+    {% if projects.append(gbr) %} {% endif %}
 
-            {% set melanoma = {
+    {% set melanoma = {
                 'logo' : "melanoma.png",
                 'icon' : "icon_melanoma.jpg",
                 'slug' : "bpa-melanoma",
@@ -135,9 +138,9 @@
                         The Melanoma Genomics Project aims to whole genome sequence approximately 500 melanoma patients.
                 ",
             } %}
-            {% if projects.append(melanoma) %} {% endif %}
+    {% if projects.append(melanoma) %} {% endif %}
 
-            {% set wpt = {
+    {% set wpt = {
                 'logo' : "fusarium_head_blight_infected_ear.png",
                 'icon' : "icon_wheat_pathogens_transcript.png",
                 'slug' : "bpa-wheat-pathogens-transcript",
@@ -148,9 +151,9 @@
                         wheat.
                 ",
             } %}
-            {% if projects.append(wpt) %} {% endif %}
+    {% if projects.append(wpt) %} {% endif %}
 
-            {% set wpg = {
+    {% set wpg = {
                 'logo' : "stagonospora_nodorum.png",
                 'icon' :"icon_wheat_pathogens_genomes.png",
                 'slug' : "bpa-wheat-pathogens-genomes",
@@ -162,9 +165,9 @@
                         glume blotch, septoria leaf blotch, bare patch and crown rot/head blight.
                 ",
             } %}
-            {% if projects.append(wpg) %} {% endif %}
+    {% if projects.append(wpg) %} {% endif %}
 
-            {% set wc = {
+    {% set wc = {
                 'logo' : "wheat.png",
                 'icon' : "icon_wheat.png",
                 'slug' : "bpa-wheat-cultivars",
@@ -177,9 +180,9 @@
                         populations and genetic diversity.
                 ",
             } %}
-            {% if projects.append(wc) %} {% endif %}
+    {% if projects.append(wc) %} {% endif %}
 
-            {% set stemcells = {
+    {% set stemcells = {
                 'logo' : "stemcell.png",
                 'icon' : "icon_stemcells.png",
                 'slug' : "bpa-stemcells",
@@ -190,46 +193,47 @@
                         development, aging and disease.
                 ",
             } %}
-            {% if projects.append(stemcells) %} {% endif %}
+    {% if projects.append(stemcells) %} {% endif %}
 
-            {% macro render_initiative(i) %}
-                            <div>
-				    {% set org_link = h.url_for('dataset', organization=i.slug) %}
-                                    <a href="{{ org_link }}">
-                                        <img class="icon_logo_default" src="{{ i.icon }}" alt="{{ i.title }}">
-                                    </a>
-                            </div>
-                            <div class="project-details">
-                                    <a href="{{ org_link }}">
-                                        <h3>{{ i.title }}</h3>
-                                    </a>
-                                    <p class="project-description truncate-overflow">
-                                        {{ i.description }}
-                                    </p>
-                                    <label class="truncate-toggle" for="project-description" role="button" onclick="toggleExpandedButton(this)">read more</label>
-                                    <ul class="nav nav-pills">
-                                            <li><a href="{{ org_link }}"><span
-                                                    class="fa fa-database"></span> Datasets</a></li>
-                                            <li><a href="{{ i.url }}"> <span
-                                                    class="fa fa-globe"></span> Project</a></li>
-                                    </ul>
-                            </div>
-            {% endmacro %}
+    {% macro render_initiative(i) %}
+      <div>
+        {% set org_link = h.url_for('dataset', organization=i.slug) %}
+        <a href="{{ org_link }}">
+          <img class="icon_logo_default" src="{{ i.icon }}" alt="{{ i.title }}">
+        </a>
+      </div>
+      <div class="project-details">
+        <a href="{{ org_link }}">
+          <h3>{{ i.title }}</h3>
+        </a>
+        <p class="project-description truncate-overflow">
+          {{ i.description }}
+        </p>
+        <label class="truncate-toggle" for="project-description" role="button" onclick="toggleExpandedButton(this)">read
+          more</label>
+        <ul class="nav nav-pills">
+          <li><a href="{{ org_link }}"><span
+              class="fa fa-database"></span> Datasets</a></li>
+          <li><a href="{{ i.url }}"> <span
+              class="fa fa-globe"></span> Project</a></li>
+        </ul>
+      </div>
+    {% endmacro %}
 
-        <div class="container">
-            <h3 class="heading">{{ _("Search within a project") }}</h3>
-            <div class="row row-eq-height">
-                    {% for p in projects %}
-                       <div class="col-sm-3">
-                       {{ render_initiative(p) }}
-                       </div>
-                       {% if loop.index is divisibleby 4 %}
-                       {# restart row #}
-                       </div>
-                       <div class="row row-eq-height">
-                       {% endif %}
-                    {% endfor %}
+    <div class="container">
+      <h3 class="heading">{{ _("Search within a project") }}</h3>
+      <div class="row row-eq-height">
+        {% for p in projects %}
+          <div class="col-sm-3">
+            {{ render_initiative(p) }}
+          </div>
+          {% if loop.index is divisibleby 4 %}
+            {# restart row #}
             </div>
+            <div class="row row-eq-height">
+          {% endif %}
+        {% endfor %}
         </div>
     </div>
+  </div>
 </div>
