@@ -7,10 +7,8 @@
     width: 150px !important;
   }
 </style>
-<script type="text/javascript" src="{{ h.url_for_static('fanstatic/vendor/jquery.min.js') }}">
-</script>
 <script>
-    $('#table_id').DataTable({
+    jQuery('#table_id').DataTable({
         "order": [[3, "desc"]]
     });
 
