@@ -33,7 +33,8 @@
       }
   }
 
-  function toggleSummaryLayout() {
+  function toggleSummaryLayout(e) {
+      console.dir(e);
       var x = document.getElementById("layout-summary");
       var y = document.getElementById("layout-default");
       if (x.className === "hero landing layout-on") {

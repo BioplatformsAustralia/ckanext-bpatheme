@@ -105,10 +105,10 @@
               <div class="col-md-12 site-parent header-right">
             {% endif %}
                 <div class="site-title">
-                  <div class="topnav" id="headernav-topnav">
+                  <div class="topnav" id="headernav-topnav" onclick="toggleSummaryLayout(e)">
                     <a href="{{ h.url_for('home.index') }}">Home</a>
                     <a href="{{ h.url_for(controller='package', action='search') }}">Datasets</a>
-                     <a href="javascript:void(0);" class="toggle-summary" onclick="toggleSummaryLayout()">Summary</a>
+                     <a href="javascript:void(0);" class="toggle-summary">Summary</a>
                     <a target="_blank" rel="noopener noreferrer" href="mailto:help@bioplatforms.com">Contact</a>
                     <a target="_blank" rel="noopener noreferrer" href="https://github.com/BioplatformsAustralia/dataportal-usersupport/">Support</a>
                     <a href="javascript:void(0);" class="icon" onclick="toggleMenuCollapse()">
