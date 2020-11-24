@@ -9,9 +9,11 @@
 </style>
 <script type="text/javascript" src="{{ h.url_for_static('fanstatic/vendor/jquery.min.js') }}">
 
-  $(document).ready( function() {
-    console.log('testing...')
-  })
+    $(document).ready(function () {
+        console.log('testing...');
+        $('#table_id').DataTable();
+    });
+
 </script>
 <link rel="stylesheet" type="text/css" href="{{ h.url_for_static('DataTables/datatables.min.css') }}"/>
 
@@ -23,9 +25,7 @@
     {% endblock %}
   </div>
   <div>
-    <table id="dtprv"
-           class="table table-striped table-bordered"
-           data-module="datatables_view"
+    <table id="table_id"
     ></table>
 
   </div>
