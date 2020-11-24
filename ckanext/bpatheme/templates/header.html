@@ -105,7 +105,7 @@
               <div class="col-md-12 site-parent header-right">
             {% endif %}
                 <div class="site-title">
-                  <div class="topnav" id="headernav-topnav" onclick="toggleSummaryLayout(e)">
+                  <div class="topnav" id="headernav-topnav" onclick="toggleSummaryLayout(this)">
                     <a href="{{ h.url_for('home.index') }}">Home</a>
                     <a href="{{ h.url_for(controller='package', action='search') }}">Datasets</a>
                      <a href="javascript:void(0);" class="toggle-summary">Summary</a>
