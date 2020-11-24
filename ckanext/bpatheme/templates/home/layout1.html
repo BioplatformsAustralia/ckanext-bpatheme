@@ -13,6 +13,41 @@
             {% snippet 'home/snippets/search.html' %}
           {% endblock %}
   </div>
+<div>
+  <table id="dtprv"
+      class="table table-striped table-bordered"
+      data-module="datatables_view"
+      data-paging="true"
+      data-server-side="true"
+      data-processing="true"
+      data-ajax=''
+      {% if resource_view.get('responsive') %}
+        data-responsive="true"
+        data-scroll-x="false"
+      {% else %}
+        data-responsive="false"
+        data-scroll-x="true"
+      {% endif %}
+      data-fixed-header="true"
+      data-fixed-columns="true"
+      data-dom='"Blifrtip"'
+      data-buttons='[
+        {
+          "extend": "colvis",
+          "text": "{{ _('Hide/Unhide Columns') }}"
+        }{{ ', "copy", "excel", "print"' | safe
+          if resource_view.get('export_buttons') else ''}}
+        ]'
+      data-keys='true'>
+    <thead>
+      <tr>
+            <th scope="col">test</th>
+      </tr>
+    </thead>
+    <tbody>
+    </tbody>
+  </table>
+</div>
     <div class="featured-orgs">
             {% set projects = [] %}
             {% set amdb = {
