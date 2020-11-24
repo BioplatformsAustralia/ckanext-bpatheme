@@ -710,3 +710,11 @@ body {
 .fa-sync::before {
     content: "\f021";
 }
+
+.fa-caret-square-down::before {
+    content: "\f150";
+}
+
+.fa-caret-square-up::before {
+    content: "\f151";
+}
