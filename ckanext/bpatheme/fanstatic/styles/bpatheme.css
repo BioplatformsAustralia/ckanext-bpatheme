@@ -718,3 +718,9 @@ body {
 .fa-caret-square-up::before {
     content: "\f151";
 }
+
+.bootstrap-table .fixed-table-toolbar {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+}
