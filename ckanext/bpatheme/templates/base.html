@@ -19,6 +19,7 @@
           x.className = "topnav";
       }
   }
+
   function toggleExpandedButton(e) {
       const previous = e.previousElementSibling;
       if (e.className === "truncate-toggle") {
@@ -29,6 +30,18 @@
           e.className = "truncate-toggle";
           e.innerText = "read more";
           previous.className += " truncate-overflow"
+      }
+  }
+
+  function toggleSummaryLayout() {
+      var x = document.getElementById("layout-summary");
+      var y = document.getElementById("layout-default");
+      if (x.className === "hero landing layout-on") {
+          x.className = "hero landing layout-off";
+          y.className = "hero landing layout-on"
+      } else {
+          x.className = "hero landing layout-on";
+          y.className = "hero landing layout-off"
       }
   }
   </script>
