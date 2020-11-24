@@ -7,15 +7,15 @@
     width: 150px !important;
   }
 </style>
+<link rel="stylesheet" type="text/css" href="{{ h.url_for_static('DataTables/datatables.min.css') }}"/>
+
+<script type="text/javascript" src="{{ h.url_for_static('DataTables/datatables.min.js') }}"></script>
 <script>
     $('#table_id').DataTable({
         "order": [[3, "desc"]]
     });
 
 </script>
-<link rel="stylesheet" type="text/css" href="{{ h.url_for_static('DataTables/datatables.min.css') }}"/>
-
-<script type="text/javascript" src="{{ h.url_for_static('DataTables/datatables.min.js') }}"></script>
 <div role="main" class="hero landing">
   <div class="search-background">
     {% block search %}
