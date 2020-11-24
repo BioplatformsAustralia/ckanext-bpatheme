@@ -11,9 +11,11 @@
 
 <script type="text/javascript" src="{{ h.url_for_static('DataTables/datatables.min.js') }}"></script>
 <script>
-    $('#table_id').DataTable({
-        "order": [[3, "desc"]]
-    });
+  $(document).ready(function() {
+      $('#table_id').DataTable({
+          "order": [[3, "desc"]]
+      });
+  });
 
 </script>
 <div role="main" class="hero landing">
