@@ -20,4 +20,4 @@ class SummaryController(base.BaseController):
             base.abort(403, _('Not authorized to see this page'))
 
     def index(self):
-        return base.render('summary/about.html')
+        return base.render('summary/index.html')
