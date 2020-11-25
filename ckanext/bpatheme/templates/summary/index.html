@@ -3,7 +3,7 @@
 {% block subtitle %}{{ _('Summary') }}{% endblock %}
 
 {% block breadcrumb_content %}
-  <li class="active">{% link_for _('Summary'), controller='summary', action='index' %}</li>
+  <li class="active">{% link_for _('Summary'), controller='ckanext.bpatheme.controller:SummaryController', action='index' %}</li>
 {% endblock %}
 
 {% block primary %}
