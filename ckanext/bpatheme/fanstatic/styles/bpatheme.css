@@ -725,11 +725,3 @@ body {
     justify-content: flex-end;
     margin-right: 10px;
 }
-
-.layout-on {
-    display: block
-}
-
-.layout-off {
-    display: none
-}
