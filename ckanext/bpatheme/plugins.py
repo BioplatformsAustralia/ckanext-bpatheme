@@ -112,8 +112,16 @@ class CustomTheme(plugins.SingletonPlugin):
     plugins.implements(plugins.ITemplateHelpers)
     plugins.implements(plugins.IPackageController, inherit=True)
     plugins.implements(plugins.IFacets, inherit=True)
+    plugins.implements(plugins.IRoutes, inherit=True)
 
     # IPackageController
+    def after_map(self, map):
+        map.connect('summary', '/summary',
+                    controller='ckanext.bpatheme.controllers.summary:SummaryController',
+                    action='index')
+        map.connect('summary_action', '/summary/{action}',
+                    controller='ckanext.bpatheme.controllers.summary:SummaryController')
+        return map
 
     def before_search(self, search_params):
         def make_insensitive(query):
