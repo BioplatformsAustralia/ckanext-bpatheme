@@ -5,3 +5,8 @@
 {% block breadcrumb_content %}
   <li class="active">{% link_for _('Summary'), 'home.about' %}</li>
 {% endblock %}
+
+{% block about %}
+  <h1 class="page-heading">{{ _('Summary') }}</h1>
+  {% snippet 'home/snippets/about_text.html' %}
+{% endblock %}
