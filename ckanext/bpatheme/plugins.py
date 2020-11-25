@@ -119,8 +119,6 @@ class CustomTheme(plugins.SingletonPlugin):
         map.connect('bpatheme_summary', '/summary',
                     controller='ckanext.bpatheme.controller:SummaryController',
                     action='index')
-        map.connect('summary_action', '/summary/{action}',
-                    controller='ckanext.bpatheme.controller:SummaryController')
         return map
 
     # IPackageController
