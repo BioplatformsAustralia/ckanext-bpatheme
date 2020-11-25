@@ -15,6 +15,7 @@ CACHE_PARAMETERS = ['__cache', '__no_cache__']
 
 
 class SummaryController(base.BaseController):
+    controller = "ckanext.bpatheme.controller:SummaryController"
     def __before__(self, action, **env):
         try:
             base.BaseController.__before__(self, action, **env)
