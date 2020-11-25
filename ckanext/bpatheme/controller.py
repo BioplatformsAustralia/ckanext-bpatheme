@@ -28,4 +28,4 @@ class SummaryController(base.BaseController):
 
     def about(self):
         log.info("Inside summary controller about...")
-        return base.render('home/about.html')
+        return base.render('home/about_text.html')
