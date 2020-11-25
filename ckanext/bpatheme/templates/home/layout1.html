@@ -7,10 +7,7 @@
     width: 150px !important;
   }
 </style>
-<script type="text/javascript" src="{{ h.url_for_static('fanstatic/vendor/jquery.min.js') }}"></script>
-<link rel="stylesheet" href="{{ h.url_for_static('bootstraptable/bootstrap-table.min.css') }}">
-<script src="{{ h.url_for_static('bootstraptable/bootstrap-table.min.js') }}"></script>
-<div role="main" id="layout-default" class="hero landing display-on">
+<div role="main" id="layout-default" class="hero landing">
   <div class="search-background">
     {% block search %}
       {% snippet 'home/snippets/search.html' %}
@@ -230,34 +227,4 @@
     </div>
   </div>
 </div>
-<div role="main" id="layout-summary" class="hero landing display-off">
-    <div>
-    <table data-toggle="table"
-           data-pagination="true"
-           data-search="true"
-           data-show-columns="true"
-           data-show-refresh="true"
-           data-show-pagination-switch="true"
-           data-show-toggle="true">
-      <thead>
-      <tr>
-        <th data-sortable="true" data-field="id">Item ID</th>
-        <th data-sortable="true" data-field="name">Item Name</th>
-        <th data-sortable="true" data-field="price">Item Price</th>
-      </tr>
-      </thead>
-      <tbody>
-      <tr>
-        <td>1</td>
-        <td>Item 1</td>
-        <td>$1</td>
-      </tr>
-      <tr>
-        <td>2</td>
-        <td>Item 2</td>
-        <td>$2</td>
-      </tr>
-      </tbody>
-    </table>
-  </div>
-</div>
+

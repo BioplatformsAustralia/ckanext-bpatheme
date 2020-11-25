@@ -33,19 +33,6 @@
       }
   }
 
-  function toggleSummaryLayout(e) {
-      console.dir(e);
-      console.dir(e.className);
-      var x = document.getElementById("layout-summary");
-      var y = document.getElementById("layout-default");
-      if (x.className === "hero landing layout-on") {
-          x.className = "hero landing layout-off";
-          y.className = "hero landing layout-on"
-      } else {
-          x.className = "hero landing layout-on";
-          y.className = "hero landing layout-off"
-      }
-  }
   </script>
 
 {% endblock %}
