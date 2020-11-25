@@ -10,8 +10,8 @@
   <article class="module">
     <div class="module-content">
       {% block summary %}
-          <h1 class="page-heading">{{ _('Summary') }}</h1>
-          {% snippet 'summary/snippets/summary_table.html' %}
+        <h1 class="page-heading">{{ _('Summary') }}</h1>
+        {% snippet 'summary/snippets/summary_table.html', spreadsheet_data=spreadsheet_data,  spreadsheet_columns=spreadsheet_columns%}
       {% endblock %}
     </div>
   </article>

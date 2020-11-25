@@ -2,33 +2,31 @@
 <link rel="stylesheet" href="{{ h.url_for_static('bootstraptable/bootstrap-table.min.css') }}">
 <script src="{{ h.url_for_static('bootstraptable/bootstrap-table.min.js') }}"></script>
 <div role="main" id="layout-summary" class="hero landing">
-    <div>
-    <table data-toggle="table"
+  <div>
+    <table id="summary-table"
            data-pagination="true"
            data-search="true"
            data-show-columns="true"
-           data-show-refresh="true"
            data-show-pagination-switch="true"
-           data-show-toggle="true">
+           data-show-fullscreen="true">
       <thead>
       <tr>
-        <th data-sortable="true" data-field="id">Item ID</th>
-        <th data-sortable="true" data-field="name">Item Name</th>
-        <th data-sortable="true" data-field="price">Item Price</th>
+        {% for next_header in spreadsheet_columns %}
+          <th data-sortable="true" data-field="{{ next_header }}">{{ next_header }}</th>
+        {% endfor %}
       </tr>
       </thead>
-      <tbody>
-      <tr>
-        <td>1</td>
-        <td>Item 1</td>
-        <td>$1</td>
-      </tr>
-      <tr>
-        <td>2</td>
-        <td>Item 2</td>
-        <td>$2</td>
-      </tr>
-      </tbody>
     </table>
   </div>
 </div>
+<script>
+    function cleanData(data) {
+        return data.replace(/&#34;/g, '"');
+    }
+    var spreadsheet_data = JSON.parse(cleanData('{{ spreadsheet_data }}'));
+    $(function () {
+        $('#summary-table').bootstrapTable({
+            data: spreadsheet_data,
+        });
+    })
+</script>
