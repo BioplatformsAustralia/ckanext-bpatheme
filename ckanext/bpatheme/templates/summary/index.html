@@ -1,13 +1,20 @@
+{% extends "page.html" %}
 
 {% block subtitle %}{{ _('Summary') }}{% endblock %}
 
-
-{% block breadcrumb_content_selected %} class="active"{% endblock %}
-{#{% block breadcrumb_content %}#}
-{#  <li class="active">{% link_for _('Summary'), 'summary' %}</li>#}
-{#{% endblock %}#}
-
-{% block about %}
-  <h1 class="page-heading">{{ _('Summary') }}</h1>
-  {% snippet 'summary/snippets/about_text.html' %}
+{% block breadcrumb_content %}
+  <li class="active">{% link_for _('Summary'), 'summary' %}</li>
 {% endblock %}
+
+{% block primary %}
+  <article class="module">
+    <div class="module-content">
+      {% block summary %}
+          <h1 class="page-heading">{{ _('Summary') }}</h1>
+          {% snippet 'summary/snippets/summary_table.html' %}
+      {% endblock %}
+    </div>
+  </article>
+{% endblock %}
+
+{% block secondary %}{% endblock %}
