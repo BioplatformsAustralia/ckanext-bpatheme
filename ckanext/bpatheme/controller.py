@@ -17,5 +17,5 @@ class SummaryController(base.BaseController):
     def index(self):
         r = requests.get("https://sheets.googleapis.com/v4/spreadsheets/spreadsheetId/values/Sheet1")
         log.info("got request...")
-        raise Exception("got nothing here except {0}".format(r))
+        raise Exception("got nothing here except {0}".format(vars(r)))
         return base.render('summary/index.html')
