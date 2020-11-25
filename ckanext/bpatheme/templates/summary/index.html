@@ -1,8 +1,10 @@
 
 {% block subtitle %}{{ _('Summary') }}{% endblock %}
 
+
+{% block breadcrumb_content_selected %} class="active"{% endblock %}
 {#{% block breadcrumb_content %}#}
-{#  <li class="active">{% link_for _('Summary'), 'home.about' %}</li>#}
+{#  <li class="active">{% link_for _('Summary'), 'summary' %}</li>#}
 {#{% endblock %}#}
 
 {% block about %}
