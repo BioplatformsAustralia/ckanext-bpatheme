@@ -1,17 +1,10 @@
 # encoding: utf-8
 import json
-from os import path
-
-import ckan.lib.base as base
-import ckan.lib.helpers as h
-# import requests
-import pandas as pd
-import numpy as np
 from logging import getLogger
+import ckan.lib.base as base
+import pandas as pd
 
 log = getLogger(__name__)
-
-CACHE_PARAMETERS = ['__cache', '__no_cache__']
 
 
 def replace_df_header_with_row(df, row):
