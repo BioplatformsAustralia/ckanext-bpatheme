@@ -24,8 +24,9 @@
         return data.replace(/&#34;/g, '"');
     }
     var spreadsheet_data = JSON.parse(cleanData('{{ spreadsheet_data }}'));
+    var $table = $('#summary-table');
     $(function () {
-        $('#summary-table').bootstrapTable({
+        $table.bootstrapTable({
             data: spreadsheet_data,
         });
     })
