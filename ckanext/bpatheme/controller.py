@@ -1,5 +1,6 @@
 # encoding: utf-8
 import json
+import os
 from logging import getLogger
 import ckan.lib.base as base
 import pandas as pd
@@ -11,12 +12,14 @@ def replace_df_header_with_row(df, row):
     df.drop(0, inplace=True)
     df.columns = row
 
+summary_table_data_path = os.environ.get('SUMMARY_TABLE_DATA_PATH')
 
 class SummaryController(base.BaseController):
 
     def index(self):
-        spreadsheet_data_path = '/tmp/googlesheet.json'
-        df = pd.read_json(spreadsheet_data_path)
+        if not os.path.exists(summary_table_data_path):
+            log.error("Could not find path to summary table data: {0}".format(summary_table_data_path))
+        df = pd.read_json(summary_table_data_path)
         first_row = df.iloc[0]
         replace_df_header_with_row(df, first_row)
         bt_data = df.to_json(orient="records")
