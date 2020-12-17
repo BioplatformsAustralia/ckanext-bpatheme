@@ -21,8 +21,9 @@ class SummaryController(base.BaseController):
             log.error("Could not find path to summary table data: {0}".format(summary_table_data_path))
         df = pd.read_json(summary_table_data_path)
         first_row = df.iloc[0]
-        raise Exception("first row is: {}".format(first_row))
+        # raise Exception("first row is: {}".format(first_row))
         replace_df_header_with_row(df, first_row)
+        raise Exception("df is now: {}".format(df))
         bt_data = df.to_json(orient="records")
         bt_header = json.loads(first_row.to_json(orient="records"))
 
