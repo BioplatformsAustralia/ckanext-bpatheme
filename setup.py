@@ -3,7 +3,7 @@ from setuptools import setup
 
 setup(
     name='ckanext-bpatheme',
-    version='2.0.37',
+    version='2.0.38',
     description='',
     license='AGPL3',
     author='data.wa.gov.au team',
