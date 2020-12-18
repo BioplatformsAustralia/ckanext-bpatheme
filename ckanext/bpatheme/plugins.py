@@ -112,9 +112,16 @@ class CustomTheme(plugins.SingletonPlugin):
     plugins.implements(plugins.ITemplateHelpers)
     plugins.implements(plugins.IPackageController, inherit=True)
     plugins.implements(plugins.IFacets, inherit=True)
+    plugins.implements(plugins.IRoutes, inherit=True)
+
+    # IRoutes
+    def after_map(self, map):
+        map.connect('bpatheme_summary', '/summary',
+                    controller='ckanext.bpatheme.controller:SummaryController',
+                    action='index')
+        return map
 
     # IPackageController
-
     def before_search(self, search_params):
         def make_insensitive(query):
             twiddled = []

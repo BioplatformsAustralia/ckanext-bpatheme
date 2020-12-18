@@ -64,10 +64,11 @@
                   </li>
                   {% if h.check_access('user_create') %}
                     <li class="register">
-                        <a href="{{ h.url_for(controller='user', action='register', class_='sub') }}" title="{{ _('Register') }}">
-                          <i class="fa fa-edit" aria-hidden="true"></i>
-                          <span class="text register">{{ _('Register') }}</span>
-                         </a>
+                      <a href="{{ h.url_for(controller='user', action='register', class_='sub') }}"
+                         title="{{ _('Register') }}">
+                        <i class="fa fa-edit" aria-hidden="true"></i>
+                        <span class="text register">{{ _('Register') }}</span>
+                      </a>
                     </li>
                   {% endif %}
                 {% endblock %}
@@ -93,7 +94,8 @@
                 <div class="dwga-logo dwga-inlineblock">
                   <a class="logo" href="{{ h.url('home') }}">
                     <picture>
-                      <source media="(max-width:600px)" srcset="{{ h.url_for_static_or_external('BIO-RGB_Symbol-NEG.png') }}">
+                      <source media="(max-width:600px)"
+                              srcset="{{ h.url_for_static_or_external('BIO-RGB_Symbol-NEG.png') }}">
                       <img src="{{ h.url_for_static_or_external('BIO-RGB_Full-NEG_Portal_TRANS2.png') }}"
                            alt="{{ g.site_title }}" title="{{ g.site_title }}"/>
                     </picture>
@@ -104,18 +106,20 @@
             {% else %}
               <div class="col-md-12 site-parent header-right">
             {% endif %}
-                <div class="site-title">
-                  <div class="topnav" id="headernav-topnav">
+          <div class="site-title">
+            <div class="topnav" id="headernav-topnav">
                     <a href="{{ h.url_for('home.index') }}">Home</a>
-                    <a href="{{ h.url_for(controller='package', action='search') }}">Datasets</a>
-                    <a target="_blank" rel="noopener noreferrer" href="mailto:help@bioplatforms.com">Contact</a>
-                    <a target="_blank" rel="noopener noreferrer" href="https://github.com/BioplatformsAustralia/dataportal-usersupport/">Support</a>
-                    <a href="javascript:void(0);" class="icon" onclick="toggleMenuCollapse()">
-                      <i class="fa fa-bars"></i>
-                    </a>
-                  </div>
-                </div>
+              <a href="{{ h.url_for(controller='package', action='search') }}">Datasets</a>
+              <a href="{{ h.url_for(controller='ckanext.bpatheme.controller:SummaryController', action='index') }}">Summary</a>
+              <a target="_blank" rel="noopener noreferrer" href="mailto:help@bioplatforms.com">Contact</a>
+              <a target="_blank" rel="noopener noreferrer"
+                 href="https://github.com/BioplatformsAustralia/dataportal-usersupport/">Support</a>
+              <a href="javascript:void(0);" class="icon" onclick="toggleMenuCollapse()">
+                <i class="fa fa-bars"></i>
+              </a>
             </div>
+          </div>
+          </div>
           {% endblock header_logo %}
         </hgroup><!-- /.dwga-row -->
       </div>

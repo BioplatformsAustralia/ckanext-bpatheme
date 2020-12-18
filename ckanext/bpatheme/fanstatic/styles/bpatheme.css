@@ -706,3 +706,22 @@ body {
     color: var(--extra-button-color);
     background-color: var(--extra-button-bg-color);
 }
+
+.fa-sync::before {
+    content: "\f021";
+}
+
+.fa-caret-square-down::before {
+    content: "\f150";
+}
+
+.fa-caret-square-up::before {
+    content: "\f151";
+}
+
+.bootstrap-table .fixed-table-toolbar {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    margin-right: 10px;
+}

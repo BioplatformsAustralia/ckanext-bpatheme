@@ -1,9 +1,13 @@
 #!/usr/bin/env/python
 from setuptools import setup
 
+install_requires=[
+    'pandas==0.24.2',
+]
+
 setup(
     name='ckanext-bpatheme',
-    version='3.0.2',
+    version='3.0.3',
     description='',
     license='AGPL3',
     author='data.wa.gov.au team',
@@ -11,6 +15,7 @@ setup(
     url='http://govhack2015.readthedocs.org/',
     namespace_packages=['ckanext'],
     packages=['ckanext.bpatheme'],
+    install_requires=install_requires,
     zip_safe=False,
     include_package_data=True,
     package_dir={'ckanext.bpatheme': 'ckanext/bpatheme'},

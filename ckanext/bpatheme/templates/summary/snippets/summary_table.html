@@ -1,0 +1,33 @@
+<script type="text/javascript" src="{{ h.url_for_static('fanstatic/vendor/jquery.min.js') }}"></script>
+<link rel="stylesheet" href="{{ h.url_for_static('bootstraptable/bootstrap-table.min.css') }}">
+<script src="{{ h.url_for_static('bootstraptable/bootstrap-table.min.js') }}"></script>
+<div role="main" id="layout-summary" class="hero landing">
+  <div>
+    <table id="summary-table"
+           data-pagination="true"
+           data-search="true"
+           data-show-columns="true"
+           data-show-pagination-switch="true"
+           data-show-fullscreen="true">
+      <thead>
+      <tr>
+        {% for next_header in spreadsheet_columns %}
+          <th data-sortable="true" data-field="{{ next_header }}">{{ next_header }}</th>
+        {% endfor %}
+      </tr>
+      </thead>
+    </table>
+  </div>
+</div>
+<script>
+    function cleanData(data) {
+        return data.replace(/&#34;/g, '"');
+    }
+    var spreadsheet_data = JSON.parse(cleanData('{{ spreadsheet_data }}'));
+    var $table = $('#summary-table');
+    $(function () {
+        $table.bootstrapTable({
+            data: spreadsheet_data,
+        });
+    })
+</script>
