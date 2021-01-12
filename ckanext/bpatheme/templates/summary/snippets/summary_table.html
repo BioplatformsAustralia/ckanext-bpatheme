@@ -23,6 +23,12 @@
     function cleanData(data) {
         return data.replace(/&#34;/g, '"');
     }
+
+    function updateValues(data) {
+      for (const nextData of data) {
+          console.log(nextData);
+      }
+    }
     var spreadsheet_data = JSON.parse(cleanData('{{ spreadsheet_data }}'));
     var $table = $('#summary-table');
     $(function () {
