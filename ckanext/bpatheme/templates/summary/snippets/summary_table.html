@@ -1,6 +1,7 @@
 <script type="text/javascript" src="{{ h.url_for_static('fanstatic/vendor/jquery.min.js') }}"></script>
-<link rel="stylesheet" href="{{ h.url_for_static('bootstraptable/bootstrap-table.min.css') }}">
-<script src="{{ h.url_for_static('bootstraptable/bootstrap-table.min.js') }}"></script>
+<script type="text/javascript" src="{{ h.url_for_static('bootstraptable/bootstrap-table.min.js') }}"></script>
+<link rel="stylesheet" href="{{ h.url_for_static('bootstraptable/bootstrap-table.min.css') }}"/>
+
 <div role="main" id="layout-summary" class="hero landing">
   <div>
     <table id="summary-table"
@@ -21,19 +22,14 @@
 </div>
 <script>
     function cleanData(data) {
-        return data.replace(/&#34;/g, '"');
+        return data.replace(/&#34;/g, '"').replace(/&lt;/g, "<").replace(/&gt;/g, ">");
     }
 
-    function updateValues(data) {
-      for (const nextData of data) {
-          console.log(nextData);
-      }
-    }
-    var spreadsheet_data = JSON.parse(cleanData('{{ spreadsheet_data }}'));
-    var $table = $('#summary-table');
+    const spreadsheet_data = JSON.parse(cleanData('{{ spreadsheet_data }}'));
+    const $table = $('#summary-table');
     $(function () {
         $table.bootstrapTable({
-            data: spreadsheet_data,
+            data: spreadsheet_data
         });
     })
 </script>
