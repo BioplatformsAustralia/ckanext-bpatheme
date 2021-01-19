@@ -743,15 +743,7 @@ body {
 #summary-table th:nth-child(8),
 #summary-table th:nth-child(9),
 #summary-table th:nth-child(10),
-#summary-table th:nth-child(11),
-#summary-table td:nth-child(4),
-#summary-table td:nth-child(5),
-#summary-table td:nth-child(6),
-#summary-table td:nth-child(7),
-#summary-table td:nth-child(8),
-#summary-table td:nth-child(9),
-#summary-table td:nth-child(10),
-#summary-table td:nth-child(11) {
+#summary-table th:nth-child(11) {
     width: 6em;
     text-align: center;
 }
