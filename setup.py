@@ -7,7 +7,7 @@ install_requires=[
 
 setup(
     name='ckanext-bpatheme',
-    version='3.0.4',
+    version='3.0.5',
     description='',
     license='AGPL3',
     author='data.wa.gov.au team',
