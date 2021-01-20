@@ -731,19 +731,13 @@ body {
 }
 
 #summary-table th, #summary-table td {
-     width: auto;
+    width: auto;
     font-size: 10px;
 
 }
 
-#summary-table th:nth-child(4),
-#summary-table th:nth-child(5),
-#summary-table th:nth-child(6),
-#summary-table th:nth-child(7),
-#summary-table th:nth-child(8),
-#summary-table th:nth-child(9),
-#summary-table th:nth-child(10),
-#summary-table th:nth-child(11) {
+#summary-table th:nth-child(n+4):nth-child(-n+10),
+#summary-table td:nth-child(n+4):nth-child(-n+10) {
     width: 6em;
     text-align: center;
 }

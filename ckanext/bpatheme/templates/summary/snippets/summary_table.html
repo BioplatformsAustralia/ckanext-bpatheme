@@ -9,11 +9,13 @@
            data-search="true"
            data-show-columns="true"
            data-show-pagination-switch="true"
-           data-show-fullscreen="true">
+           data-show-fullscreen="true"
+           data-page-size="100">
       <thead>
       <tr>
         {% for next_header in spreadsheet_columns %}
-          <th data-sortable="true" data-title-tooltip="{{ next_header }}" data-field="{{ next_header }}">{{ next_header }}</th>
+          <th data-sortable="true" data-title-tooltip="{{ next_header }}"
+              data-field="{{ next_header }}">{{ next_header }}</th>
         {% endfor %}
       </tr>
       </thead>
