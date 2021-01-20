@@ -641,13 +641,17 @@ body {
     padding: 0 25px 15px 0
 }
 
+.project-name a {
+    min-height: 70px;
+}
+
 .project-description, .truncate-overflow {
     line-height: var(--pd-lh);
     position: relative;
     text-align: left;
     padding-right: 1em; /* space for ellipsis */
     margin: 0 0 0 0;
-
+    min-height: 90px;
 }
 
 .truncate-overflow {
