@@ -741,3 +741,9 @@ body {
     width: 6em;
     text-align: center;
 }
+
+#summary-table th:nth-child(11),
+#summary-table td:nth-child(11) {
+    width: 12em;
+    text-align: center;
+}
