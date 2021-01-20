@@ -744,6 +744,6 @@ body {
 
 #summary-table th:nth-child(11),
 #summary-table td:nth-child(11) {
-    width: 12em;
+    width: 10em;
     text-align: center;
 }
