@@ -112,6 +112,7 @@ img#beta {
     background-color: var(--mast-color);
     border: 1px solid var(--mast-color);
     border-radius: 25px;
+    margin-right: 10px;
 }
 
 .account-masthead .account ul li.register {
