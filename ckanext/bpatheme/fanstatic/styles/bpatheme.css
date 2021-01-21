@@ -107,6 +107,10 @@ img#beta {
     box-shadow: none;
 }
 
+.site-footer-links a {
+    font-size: smaller;
+}
+
 .account-masthead .account ul li.login {
     color: var(--mast-bg-color);
     background-color: var(--mast-color);
