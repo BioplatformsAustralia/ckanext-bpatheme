@@ -646,8 +646,8 @@ body {
     padding: 0 25px 15px 0
 }
 
-.project-name a {
-    min-height: 70px;
+.project-name {
+    min-height: 60px;
 }
 
 .project-description, .truncate-overflow {

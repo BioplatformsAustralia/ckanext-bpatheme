@@ -193,9 +193,11 @@
         </a>
       </div>
       <div class="project-details">
-        <a class="project-name" href="{{ org_link }}">
-          <h3>{{ i.title }}</h3>
-        </a>
+        <div class="project-name">
+          <a href="{{ org_link }}">
+            <h3>{{ i.title }}</h3>
+          </a>
+	</div>
         <p class="project-description truncate-overflow">
           {{ i.description }}
         </p>
