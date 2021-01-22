@@ -481,6 +481,11 @@ body {
     padding: 5px;
 }
 
+.search-instructions {
+    font-size: xx-small;
+    clear: both;
+}
+
 /** show background image 'transparently', but ensure inputs are white (no transparency) **/
 .homepage .module-search {
     padding: 0;

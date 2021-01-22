@@ -1,7 +1,11 @@
 {% ckan_extends %}
 
+
 {% block search_input %}
   {% snippet 'snippets/search_form_common.html', form_id=form_id, type=type, query=query, sorting=sorting, sorting_selected=sorting_selected, count=count, facets=facets, placeholder=placeholder, show_empty=show_empty, fields=fields %}
+
+  {% snippet 'snippets/search_form_instructions.html' %}
+
   <div class="bulk-btn">
     {% if bulk_download_type == 'organization' %}
       {% snippet 'ckanext_bulk/snippets/organization_button.html', id=c.group_dict.id %}
@@ -37,6 +41,5 @@
 {% endblock %}
 
 {% block search_title %}
-
 {% endblock %}
 
