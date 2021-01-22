@@ -212,8 +212,17 @@
 
     <div class="container">
       <h3 class="heading">{{ _("Search within a project") }}</h3>
+      {# enable project sorting by rank order, then by order in config #}
+      {% set ranking = h.organization_slugs_by_creation_and_rank() %}
+      {% for p in projects %}
+          {% set _ = p.update({'order':0}) %}
+	  {% if p.slug in ranking %}
+	      {% set order = ranking|length() - ranking.index(p.slug) %}
+              {% set _ = p.update({'order': order}) %}
+          {% endif %}
+      {% endfor %}
       <div class="row row-eq-height">
-        {% for p in projects %}
+        {% for p in projects|sort(attribute='order', reverse=true) %}
           <div class="col-sm-3">
             {{ render_initiative(p) }}
           </div>

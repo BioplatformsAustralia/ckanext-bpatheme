@@ -1,6 +1,7 @@
 import datetime
 from collections import OrderedDict
 import json
+import operator
 
 from ckan.common import c, _
 import ckan.lib.helpers as h
@@ -106,6 +107,58 @@ def license_data(pkg):
 
     return license_data
 
+def organization_slugs_by_creation():
+    ''' Retuns a list of organization slugs ordered from newest to oldest '''
+
+    # Get a list of all the site's organizations from CKAN
+    organizations = toolkit.get_action('organization_list')(
+            data_dict={'sort': 'package_count desc', 'all_fields': True, 'include_dataset_count': True, 'include_groups': True})
+
+    # FIXME Not sure why this only returns organisations that have packages in them
+
+    # return slugs
+    return [s['name'] for s in sorted(organizations, reverse=True, key=lambda k: k['created'])]
+
+def organization_slugs_by_creation_and_rank():
+    ''' Retuns a list of organization slugs ordered from 
+        highest rank to lowest,
+        newest to oldest '''
+
+    def multisort(xs, specs):
+        for key, reverse in reversed(specs):
+            xs.sort(key=operator.itemgetter(key), reverse=reverse)
+        return xs
+
+    # Get a list of all the site's organizations from CKAN
+    organizations = toolkit.get_action('organization_list')(
+            data_dict={'sort': 'package_count desc', 'all_fields': True, 'include_extras': True, 'include_dataset_count': True, 'include_groups': True})
+
+    # FIXME Not sure why this only returns organisations that have packages in them
+
+    # generate a list of dicts - slug, creation, rank
+    # 
+    # Add a 'rank' key under the Custom Fields for the organization
+    # with either a positive or negative value to manually 
+    # promote (postive values greater than 1) or demote (values less than 1)
+    orgs = []
+    for o in organizations:
+        rank = 1
+        if 'extras' in o:
+            for e in o['extras']:
+                if e['key'] == 'rank':
+                    try:
+                        rank = int(e['value'])
+                    except ValueError:
+                        rank = 1
+        orgs.append({
+            'slug': o['name'],
+            'created': o['created'],
+            'rank': rank
+            })
+
+    #return slugs sorted by rank, then by created date
+    return [s['slug'] for s in multisort(list(orgs), (('rank', True), ('created', True)))]
+
 
 class CustomTheme(plugins.SingletonPlugin):
     plugins.implements(plugins.IConfigurer)
@@ -191,7 +244,9 @@ class CustomTheme(plugins.SingletonPlugin):
             'access_level_text': access_level_text,
             'license_data': license_data,
             'datawa_scheming_select_options': datawa_scheming_select_options,
-            'datawa_get_option_label': datawa_get_option_label
+            'datawa_get_option_label': datawa_get_option_label,
+            'organization_slugs_by_creation': organization_slugs_by_creation,
+            'organization_slugs_by_creation_and_rank': organization_slugs_by_creation_and_rank
         }
 
     # Ifacets
