@@ -736,8 +736,8 @@ body {
 
 }
 
-#summary-table th:nth-child(2), th:nth-child(3),
-#summary-table td:nth-child(2), td:nth-child(3) {
+#summary-table th:nth-child(2):nth-child(3),
+#summary-table td:nth-child(2):nth-child(3) {
     width: 10em;
     text-align: left;
 }
