@@ -737,8 +737,6 @@ body {
 }
 
 .bulk-btn a {
-    color: var(--extra-button-color);
-    background-color: var(--extra-button-bg-color);
 }
 
 .fa-sync::before {
