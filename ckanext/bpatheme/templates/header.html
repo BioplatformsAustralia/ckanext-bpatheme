@@ -108,15 +108,29 @@
             {% endif %}
           <div class="site-title">
             <div class="topnav" id="headernav-topnav">
-                    <a href="{{ h.url_for('home.index') }}">Home</a>
-              <a href="{{ h.url_for(controller='package', action='search') }}">Datasets</a>
-              <a href="{{ h.url_for(controller='ckanext.bpatheme.controller:SummaryController', action='index') }}">Summary</a>
-              <a target="_blank" rel="noopener noreferrer" href="mailto:help@bioplatforms.com">Contact</a>
-              <a target="_blank" rel="noopener noreferrer"
-                 href="https://github.com/BioplatformsAustralia/dataportal-usersupport/">Support</a>
-              <a href="javascript:void(0);" class="icon" onclick="toggleMenuCollapse()">
-                <i class="fa fa-bars"></i>
-              </a>
+              <ul class="headermenu">
+		<li class="menu-item">
+                  <a href="{{ h.url_for('home.index') }}">Home</a>
+		</li>
+		<li class="menu-item">
+                  <a href="{{ h.url_for(controller='package', action='search') }}">Datasets</a>
+		</li>
+		<li class="menu-item">
+                  <a href="{{ h.url_for(controller='ckanext.bpatheme.controller:SummaryController', action='index') }}">Summary</a>
+		</li>
+		<li class="menu-item">
+                  <a target="_blank" rel="noopener noreferrer" href="mailto:help@bioplatforms.com">Contact</a>
+		</li>
+		<li class="menu-item menu-item-last">
+                  <a target="_blank" rel="noopener noreferrer"
+                     href="https://github.com/BioplatformsAustralia/dataportal-usersupport/">Support</a>
+		</li>
+		<li class="menu-item">
+                  <a href="javascript:void(0);" class="icon" onclick="toggleMenuCollapse()">
+                    <i class="fa fa-bars"></i>
+                  </a>
+		</li>
+	      </ul>
             </div>
           </div>
           </div>

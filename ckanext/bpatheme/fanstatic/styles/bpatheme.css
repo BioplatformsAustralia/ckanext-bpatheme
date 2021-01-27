@@ -185,6 +185,22 @@ img#beta {
     width: 350px;
 }
 
+/* Make menu like main BPA site */
+.headermenu {
+    float: right;
+}
+
+.headermenu>.menu-item {
+    display: inline-block;
+    list-style-type: none;
+    margin: 0 1rem 0 0;
+    position: relative;
+}
+
+.headermenu>.menu-item-last {
+    margin-right: 0;
+}
+
 .dwga-inlineblock {
     display: inline-block;
 }
@@ -538,10 +554,13 @@ body {
     flex: 0 1 auto;
 }
 
+.header-right {
+    padding-right: 0;
+}
+
 .site-parent {
     width: 100%;
     height: 100%;
-    margin-right: 15px;
     position: relative;
 }
 
@@ -559,6 +578,7 @@ body {
     justify-content: space-between;
     align-items: center;
     position: relative;
+    float: right;
 }
 
 @media screen and (max-width: 990px) {
