@@ -780,11 +780,15 @@ body {
 #summary-table th:nth-child(1),
 #summary-table td:nth-child(1) {
     width: 16em;
-    text-align: left;
+}
+
+
+#summary-table th:nth-child(n+2):nth-child(-n+3),
+#summary-table td:nth-child(n+2):nth-child(-n+3) {
+    width: 12em;
 }
 
 #summary-table th:nth-child(n+4),
 #summary-table td:nth-child(n+4) {
-    width: 7em;
     text-align: center;
 }
