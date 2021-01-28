@@ -742,7 +742,7 @@ body {
 
 #summary-table th:nth-child(n+2):nth-child(-n+3),
 #summary-table td:nth-child(n+2):nth-child(-n+3) {
-    width: 10em;
+    width: 12em;
     text-align: left;
 }
 
