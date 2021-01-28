@@ -742,7 +742,7 @@ body {
 
 #summary-table th:nth-child(n+1):nth-child(-n+3) .th-inner,
 #summary-table th:nth-child(n+11):nth-child(-n+12) .th-inner{
-    padding-right: 10px !important;
+    padding-right: 20px !important;
 }
 
 #summary-table th:nth-child(n+2):nth-child(-n+3),
@@ -753,7 +753,7 @@ body {
 
 #summary-table th:nth-child(n+4):nth-child(-n+10),
 #summary-table td:nth-child(n+4):nth-child(-n+10) {
-    width: 6em;
+    width: 8em;
     text-align: center;
 }
 
