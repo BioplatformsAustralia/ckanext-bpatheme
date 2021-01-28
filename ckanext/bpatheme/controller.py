@@ -68,10 +68,12 @@ class SummaryController(base.BaseController):
         first_row = df.iloc[0]
         replace_df_header_with_row(df, first_row)
         bt_header = json.loads(first_row.to_json(orient="records"))
-        bt_json = json.loads(df.to_json(orient="records"))
-        for next_row in bt_json:
+        indexed_json = json.loads(df.to_json(orient="index"))
+        bt_json = []
+        for (index, next_row) in indexed_json.items():
+            bt_json.append(next_row)
             for (k, v) in next_row.items():
-                if k in ["Illumina", "CLR", "HiFi", "ONT", "10X", "HiC", "Transcript", "Draft Asm", "Exon Capture", "ddRAD"]:
+                if index not in ["0", "1", "2"]:
                     replaced = search_and_replace_once(v)
                     if replaced:
                         # // ensure any quotes are escaped before passing 'python' JSON into front-end
