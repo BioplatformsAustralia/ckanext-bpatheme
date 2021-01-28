@@ -769,7 +769,7 @@ body {
 }
 
 /*break whitespace on new-line*/
-#summary-table th:nth-child(-n+3) .th-inner {
+#summary-table th .th-inner {
     white-space: pre;
 }
 
@@ -783,15 +783,8 @@ body {
     text-align: left;
 }
 
-
-/*#summary-table th:nth-child(n+2):nth-child(-n+3),*/
-/*#summary-table td:nth-child(n+2):nth-child(-n+3) {*/
-/*    width: 12em;*/
-/*    text-align: left;*/
-/*}*/
-
-#summary-table th:nth-child(n+4):nth-child(-n+12),
-#summary-table td:nth-child(n+4):nth-child(-n+12) {
+#summary-table th:nth-child(n+4),
+#summary-table td:nth-child(n+4) {
     width: 7em;
     text-align: center;
 }
