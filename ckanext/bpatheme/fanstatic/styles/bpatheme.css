@@ -736,9 +736,13 @@ body {
 
 }
 
+#summary-table th:nth-child(n+2):nth-child(-n+3) .th-inner {
+    white-space: normal;
+}
+
 #summary-table th:nth-child(n+2):nth-child(-n+3),
 #summary-table td:nth-child(n+2):nth-child(-n+3) {
-    width: 10em;
+    width: 8em;
     text-align: left;
 }
 
