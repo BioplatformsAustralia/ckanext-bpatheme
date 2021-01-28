@@ -740,8 +740,7 @@ body {
     white-space: pre;
 }
 
-#summary-table th:nth-child(n+1):nth-child(-n+3) .th-inner,
-#summary-table th:nth-child(n+11):nth-child(-n+12) .th-inner{
+#summary-table th .th-inner {
     padding-right: 20px !important;
 }
 
