@@ -738,7 +738,11 @@ body {
 
 #summary-table th:nth-child(n+2):nth-child(-n+3) .th-inner {
     white-space: pre;
-    padding-right: 15px;
+}
+
+#summary-table th:nth-child(n+1):nth-child(-n+3) .th-inner,
+#summary-table th:nth-child(n+11):nth-child(-n+12) .th-inner{
+    padding-right: 10px !important;
 }
 
 #summary-table th:nth-child(n+2):nth-child(-n+3),
