@@ -71,7 +71,7 @@ class SummaryController(base.BaseController):
         bt_json = json.loads(df.to_json(orient="records"))
         for next_row in bt_json:
             for (k, v) in next_row.items():
-                if k in ["Illumina", "CLR", "HiFi", "ONT", "10X", "HiC", "Transcript", "Draft Asm"]:
+                if k in ["Illumina", "CLR", "HiFi", "ONT", "10X", "HiC", "Transcript", "Draft Asm", "Exon Capture", "ddRAD"]:
                     replaced = search_and_replace_once(v)
                     if replaced:
                         # // ensure any quotes are escaped before passing 'python' JSON into front-end
