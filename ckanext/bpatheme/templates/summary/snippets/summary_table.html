@@ -15,7 +15,7 @@
       <tr>
         {% for next_header in spreadsheet_columns %}
           <th data-sortable="true" data-title-tooltip="{{ next_header }}"
-              data-field="{{ next_header }}">{{ next_header|replace(" ", "\n") }}</th>
+              data-field="{{ next_header }}">{{ next_header|replace(" ", "<br>") }}</th>
         {% endfor %}
       </tr>
       </thead>
