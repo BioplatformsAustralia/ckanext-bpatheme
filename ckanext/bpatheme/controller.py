@@ -7,6 +7,8 @@ from logging import getLogger
 from urlparse import urlsplit
 
 import ckan.lib.helpers as h
+import pydevd_pycharm
+pydevd_pycharm.settrace('host.docker.internal', port=57892, stdoutToServer=True, stderrToServer=True, suspend=False)
 
 import ckan.lib.base as base
 import pandas as pd
@@ -18,7 +20,8 @@ link_marker = '<i class="fa fa-circle" aria-hidden="true"></i>'
 link_format = '<a target="_blank" rel="noopener noreferrer" href="{0}">{1}</a>'
 search_patterns = {
     "yes": r"^[\s]*yes.*",
-    "http": r"^[\s]*http[s]?:\/\/data.bioplatforms.com.*$",
+    "bioplatforms_http": r"^[\s]*http[s]?:\/\/data.bioplatforms.com.*$",
+    "other_http": r"^[\s]*http[s]?:\/\/(?!data.bioplatforms.com).*$",
 }
 
 
@@ -28,7 +31,7 @@ def replace_df_header_with_row(df, row):
 
 
 def search_and_replace_once(text):
-    for search_keyword, replace_fn in {"yes": replace_yes, "http": replace_http}.items():
+    for search_keyword, replace_fn in {"yes": replace_yes, "bioplatforms_http": replace_bioplatforms_http, "other_http": replace_url}.items():
         if re.search(search_patterns[search_keyword], text):
             return replace_fn(text)
     return None
@@ -38,19 +41,25 @@ def replace_yes(text):
     return re.sub(search_patterns["yes"], link_marker, text)
 
 
-def replace_http(text):
+def replace_bioplatforms_http(text):
     text = text.strip()
     separated = [not_empty for not_empty in re.split(r',|\s', text) if not_empty]
-    return replace_multi_urls(separated)
+    return replace_multi_bioplatform_urls(separated)
 
 
-def replace_multi_urls(urls):
+def replace_multi_bioplatform_urls(urls):
     ids_text = create_query_parameter("id", urls.pop(0))
     for next_id in urls:
         ids_text += create_query_parameter(" OR id", next_id)
     return (
         '<a target="_blank" rel="noopener noreferrer" href="https://data.bioplatforms.com/dataset?q={0}">{1}</a>'.format(
             ids_text, link_marker))
+
+def replace_url(text):
+    url = text.strip()
+    return (
+        '<a target="_blank" rel="noopener noreferrer" href="{0}">{1}</a>'.format(
+            url, link_marker))
 
 
 def create_query_parameter(query_format, url):
@@ -68,15 +77,13 @@ class SummaryController(base.BaseController):
         first_row = df.iloc[0]
         replace_df_header_with_row(df, first_row)
         bt_header = json.loads(first_row.to_json(orient="records"))
-        indexed_json = json.loads(df.to_json(orient="index"))
-        bt_json = []
-        for (index, next_row) in indexed_json.items():
-            bt_json.append(next_row)
-            for (k, v) in next_row.items():
-                if index not in ["0", "1", "2"]:
-                    replaced = search_and_replace_once(v)
-                    if replaced:
-                        # // ensure any quotes are escaped before passing 'python' JSON into front-end
-                        next_row[k] = h.escape_js(replaced)
+        # indexed_json = json.loads(df.to_json(orient="index"))
+        for row in df.itertuples():
+            for index in range(4, len(row)):
+                replaced = search_and_replace_once(row[index])
+                if replaced:
+                    # // ensure any quotes are escaped before passing 'python' JSON into front-end
+                    df.at[row.Index, first_row[index-1]] = h.escape_js(replaced)
+        bt_json = df.to_json(orient="records")
         return base.render('summary/index.html',
-                           extra_vars={'spreadsheet_data': json.dumps(bt_json), 'spreadsheet_columns': bt_header})
+                           extra_vars={'spreadsheet_data': bt_json, 'spreadsheet_columns': bt_header})
