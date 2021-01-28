@@ -3,6 +3,7 @@ from setuptools import setup
 
 install_requires=[
     'pandas==0.24.2',
+    'pydevd-pycharm~=193.6911.25'
 ]
 
 setup(
