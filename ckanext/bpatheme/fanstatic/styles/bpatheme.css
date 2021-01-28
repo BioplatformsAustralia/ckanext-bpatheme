@@ -736,11 +736,13 @@ body {
 
 }
 
-#summary-table th:nth-child(n+2):nth-child(-n+3) .th-inner {
+/*break whitespace on new-line*/
+#summary-table th:nth-child(n+2):nth-child(-n+3) .th-inner,
+#summary-table th:nth-child(11) .th-inner{
     white-space: pre;
 }
 
-#summary-table th .th-inner {
+#summary-table th .th-inner.sortable {
     padding-right: 20px !important;
 }
 
@@ -750,14 +752,8 @@ body {
     text-align: left;
 }
 
-#summary-table th:nth-child(n+4):nth-child(-n+10),
-#summary-table td:nth-child(n+4):nth-child(-n+10) {
+#summary-table th:nth-child(n+4):nth-child(-n+11),
+#summary-table td:nth-child(n+4):nth-child(-n+11) {
     width: 8em;
-    text-align: center;
-}
-
-#summary-table th:nth-child(11),
-#summary-table td:nth-child(11) {
-    width: 10em;
     text-align: center;
 }
