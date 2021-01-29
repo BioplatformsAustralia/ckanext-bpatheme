@@ -404,6 +404,10 @@ h5 {
     font-weight: bold;
 }
 
+h1.pull-left {
+    margin-bottom: 0px;
+}
+
 /* page header for bar with menu home|dataset|methods|gallery|information etc */
 .wrapper .page-header {
     background: none;
@@ -724,11 +728,26 @@ body {
 }
 
 .form-select.control-order-by {
-    float: none;
-    display: flex;
+    float: left;
     flex-direction: row;
     justify-content: flex-end;
-    margin: 25px 0 0 15px;
+    margin-left: 0px;
+}
+
+.form-select {
+    margin-bottom: 0px;
+}
+
+.form-group {
+    padding-bottom: 0px;
+}
+
+.search-form {
+    padding-bottom: 0px;
+}
+
+.search-form.control-order-by {
+    margin-left: 0px;
 }
 
 .bulk-btn {
@@ -737,6 +756,42 @@ body {
 }
 
 .bulk-btn a {
+}
+
+.bulkdl {
+    display: flex;
+    flex-direction: column;
+    flex: initial;
+}
+
+.bulkdl-lr {
+    float: right;
+    text-align: right;
+    margin-bottom: 1em;
+    line-height: 1.5;
+}
+
+.bulkdl-btn {
+    float: right;
+    margin-bottom: 1em;
+}
+
+.results {
+    display: flex;
+}
+
+.result-count {
+    flex: 1;
+}
+
+.result-found {
+    margin-top: 0px;
+}
+
+.resources {
+    border-top: 1px dotted #dddddd;
+    display: block;
+    clear: both;
 }
 
 .fa-sync::before {

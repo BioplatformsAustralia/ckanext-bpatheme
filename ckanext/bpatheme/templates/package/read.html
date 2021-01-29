@@ -36,12 +36,12 @@
     </h1>
 
   </div>
-  <div class="bulk-btn">
-    {% snippet 'ckanext_bulk/snippets/package_button.html', id=c.id %}
-  </div>
   <div class="clearfix"></div>
   {% block package_notes %}
     {{ super() }}
   {% endblock %}
+  <div class="bulk-btn">
+    {% snippet 'ckanext_bulk/snippets/package_button.html', id=c.id %}
+  </div>
 {% endblock %}
 
