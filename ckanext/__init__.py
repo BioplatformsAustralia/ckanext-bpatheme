@@ -5,7 +5,7 @@ try:
     import pydevd_pycharm
     import os
 
-    pydevd_pycharm.settrace('0.0.0.0', port=int(os.environ.get("DOCKER_DEBUG_PORT")), stdoutToServer=True, stderrToServer=True, suspend=False)
+    pydevd_pycharm.settrace(os.environ.get("DOCKER_GUEST_IP"), port=int(os.environ.get("DOCKER_DEBUG_PORT")), stdoutToServer=True, stderrToServer=True, suspend=False)
 except ImportError:
     import pkgutil
     __path__ = pkgutil.extend_path(__path__, __name__)
