@@ -4,7 +4,7 @@ try:
     pkg_resources.declare_namespace(__name__)
     import pydevd_pycharm
 
-    pydevd_pycharm.settrace('192.168.32.6', port=57892, stdoutToServer=True, stderrToServer=True, suspend=False)
+    pydevd_pycharm.settrace('192.168.48.6', port=57892, stdoutToServer=True, stderrToServer=True, suspend=False)
 except ImportError:
     import pkgutil
     __path__ = pkgutil.extend_path(__path__, __name__)
