@@ -7,8 +7,6 @@ from logging import getLogger
 from urlparse import urlsplit
 
 import ckan.lib.helpers as h
-import pydevd_pycharm
-pydevd_pycharm.settrace('host.docker.internal', port=57892, stdoutToServer=True, stderrToServer=True, suspend=False)
 
 import ckan.lib.base as base
 import pandas as pd
