@@ -73,7 +73,7 @@ class SummaryController(base.BaseController):
         bt_header = json.loads(first_row.to_json(orient="records"))
         # indexed_json = json.loads(df.to_json(orient="index"))
         for row in df.itertuples():
-            for index in range(3, len(row)):
+            for index in range(4, len(row)):
                 replaced = search_and_replace_once(row[index])
                 if replaced:
                     # // ensure any quotes are escaped before passing 'python' JSON into front-end
