@@ -77,6 +77,7 @@ class SummaryController(base.BaseController):
             bt_json.append(next_row)
             for (k, v) in next_row.items():
                 if index not in ["0", "1", "2"]:
+                    print("have index....")
                     replaced = search_and_replace_once(v)
                     if replaced:
                         # // ensure any quotes are escaped before passing 'python' JSON into front-end
