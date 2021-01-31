@@ -7,6 +7,8 @@ from logging import getLogger
 from urlparse import urlsplit
 
 import ckan.lib.helpers as h
+import pydevd_pycharm
+pydevd_pycharm.settrace('host.docker.internal', port=57892, stdoutToServer=True, stderrToServer=True, suspend=False)
 
 import ckan.lib.base as base
 import pandas as pd
@@ -29,6 +31,7 @@ def replace_df_header_with_row(df, row):
 
 def search_and_replace_once(text):
     for search_keyword, replace_fn in {"yes": replace_yes, "http": replace_http}.items():
+
         if re.search(search_patterns[search_keyword], text):
             return replace_fn(text)
     return None
