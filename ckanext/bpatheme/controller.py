@@ -71,16 +71,14 @@ class SummaryController(base.BaseController):
         first_row = df.iloc[0]
         replace_df_header_with_row(df, first_row)
         bt_header = json.loads(first_row.to_json(orient="records"))
-        indexed_json = json.loads(df.to_json(orient="index"))
-        bt_json = []
-        for (index, next_row) in indexed_json.items():
-            bt_json.append(next_row)
-            for (k, v) in next_row.items():
-                if index not in ["0", "1", "2"]:
-                    print("have index....")
-                    replaced = search_and_replace_once(v)
-                    if replaced:
-                        # // ensure any quotes are escaped before passing 'python' JSON into front-end
-                        next_row[k] = h.escape_js(replaced)
+        # indexed_json = json.loads(df.to_json(orient="index"))
+        for row in df.itertuples():
+            if row.Index not in ["0", "1", "2"]:
+                print("have index....")
+                replaced = search_and_replace_once(df.at[row.Index, 'test'])
+                if replaced:
+                    # // ensure any quotes are escaped before passing 'python' JSON into front-end
+                    df.at[row.Index,'test'] = h.escape_js(replaced)
+        bt_json = df.to_json(orient="records")
         return base.render('summary/index.html',
                            extra_vars={'spreadsheet_data': json.dumps(bt_json), 'spreadsheet_columns': bt_header})
