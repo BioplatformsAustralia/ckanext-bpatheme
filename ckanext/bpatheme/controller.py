@@ -73,12 +73,11 @@ class SummaryController(base.BaseController):
         bt_header = json.loads(first_row.to_json(orient="records"))
         # indexed_json = json.loads(df.to_json(orient="index"))
         for row in df.itertuples():
-            if row.Index not in ["0", "1", "2"]:
-                print("have index....")
-                replaced = search_and_replace_once(df.at[row.Index, 'test'])
+            for index in range(3, len(row)):
+                replaced = search_and_replace_once(row[index])
                 if replaced:
                     # // ensure any quotes are escaped before passing 'python' JSON into front-end
-                    df.at[row.Index,'test'] = h.escape_js(replaced)
+                    df.at[index, row[index]] = h.escape_js(replaced)
         bt_json = df.to_json(orient="records")
         return base.render('summary/index.html',
                            extra_vars={'spreadsheet_data': json.dumps(bt_json), 'spreadsheet_columns': bt_header})
