@@ -190,14 +190,14 @@ img#beta {
     float: right;
 }
 
-.headermenu>.menu-item {
+.headermenu > .menu-item {
     display: inline-block;
     list-style-type: none;
     margin: 0 1rem 0 0;
     position: relative;
 }
 
-.headermenu>.menu-item-last {
+.headermenu > .menu-item-last {
     margin-right: 0;
 }
 
@@ -834,7 +834,7 @@ body {
 
 #summary-table th:nth-child(1),
 #summary-table td:nth-child(1) {
-    width: 16em;
+    min-width: 16em;
 }
 
 
