@@ -835,6 +835,13 @@ body {
 #summary-table th:nth-child(1),
 #summary-table td:nth-child(1) {
     min-width: 16em;
+    width: 16em;
+}
+
+.fullscreen #summary-table th:nth-child(1),
+.fullscreen #summary-table td:nth-child(1) {
+    min-width: 16em;
+    width: auto;
 }
 
 
