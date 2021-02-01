@@ -77,7 +77,7 @@ class SummaryController(base.BaseController):
                 replaced = search_and_replace_once(row[index])
                 if replaced:
                     # // ensure any quotes are escaped before passing 'python' JSON into front-end
-                    df.at[row.Index, row[index]] = h.escape_js(replaced)
+                    df.at[row.Index, first_row[index-1]] = h.escape_js(replaced)
         bt_json = df.to_json(orient="records")
         return base.render('summary/index.html',
                            extra_vars={'spreadsheet_data': json.dumps(bt_json), 'spreadsheet_columns': bt_header})
