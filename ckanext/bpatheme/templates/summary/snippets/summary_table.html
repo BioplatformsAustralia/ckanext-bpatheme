@@ -26,7 +26,7 @@
     function cleanData(data) {
         return data.replace(/&#34;/g, '"').replace(/&lt;/g, "<").replace(/&gt;/g, ">");
     }
-
+    console.dir('{{ spreadsheet_data }}');
     const spreadsheet_data = JSON.parse(cleanData('{{ spreadsheet_data }}'));
     const $table = $('#summary-table');
     $(function () {
