@@ -80,4 +80,4 @@ class SummaryController(base.BaseController):
                     df.at[row.Index, first_row[index-1]] = h.escape_js(replaced)
         bt_json = df.to_json(orient="records")
         return base.render('summary/index.html',
-                           extra_vars={'spreadsheet_data': json.dumps(bt_json), 'spreadsheet_columns': bt_header})
+                           extra_vars={'spreadsheet_data': bt_json, 'spreadsheet_columns': bt_header})
