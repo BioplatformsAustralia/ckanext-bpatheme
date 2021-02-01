@@ -107,11 +107,16 @@ img#beta {
     box-shadow: none;
 }
 
+.site-footer-links a {
+    font-size: smaller;
+}
+
 .account-masthead .account ul li.login {
     color: var(--mast-bg-color);
     background-color: var(--mast-color);
     border: 1px solid var(--mast-color);
     border-radius: 25px;
+    margin-right: 10px;
 }
 
 .account-masthead .account ul li.register {
@@ -178,6 +183,22 @@ img#beta {
 .dwga-header-row .logo {
     height: auto;
     width: 350px;
+}
+
+/* Make menu like main BPA site */
+.headermenu {
+    float: right;
+}
+
+.headermenu>.menu-item {
+    display: inline-block;
+    list-style-type: none;
+    margin: 0 1rem 0 0;
+    position: relative;
+}
+
+.headermenu>.menu-item-last {
+    margin-right: 0;
 }
 
 .dwga-inlineblock {
@@ -476,6 +497,11 @@ body {
     padding: 5px;
 }
 
+.search-instructions {
+    font-size: xx-small;
+    clear: both;
+}
+
 /** show background image 'transparently', but ensure inputs are white (no transparency) **/
 .homepage .module-search {
     padding: 0;
@@ -528,10 +554,13 @@ body {
     flex: 0 1 auto;
 }
 
+.header-right {
+    padding-right: 0;
+}
+
 .site-parent {
     width: 100%;
     height: 100%;
-    margin-right: 15px;
     position: relative;
 }
 
@@ -549,6 +578,7 @@ body {
     justify-content: space-between;
     align-items: center;
     position: relative;
+    float: right;
 }
 
 @media screen and (max-width: 990px) {
@@ -641,13 +671,17 @@ body {
     padding: 0 25px 15px 0
 }
 
+.project-name {
+    min-height: 60px;
+}
+
 .project-description, .truncate-overflow {
     line-height: var(--pd-lh);
     position: relative;
     text-align: left;
     padding-right: 1em; /* space for ellipsis */
     margin: 0 0 0 0;
-
+    min-height: 90px;
 }
 
 .truncate-overflow {
@@ -703,8 +737,6 @@ body {
 }
 
 .bulk-btn a {
-    color: var(--extra-button-color);
-    background-color: var(--extra-button-bg-color);
 }
 
 .fa-sync::before {
@@ -736,14 +768,24 @@ body {
 
 }
 
-#summary-table th:nth-child(n+4):nth-child(-n+10),
-#summary-table td:nth-child(n+4):nth-child(-n+10) {
-    width: 6em;
-    text-align: center;
+/*break whitespace on new-line*/
+#summary-table th:nth-child(n+2):nth-child(-n+3) .th-inner,
+#summary-table th:nth-child(11) .th-inner{
+    white-space: pre;
 }
 
-#summary-table th:nth-child(11),
-#summary-table td:nth-child(11) {
-    width: 10em;
+#summary-table th .th-inner.sortable {
+    padding-right: 20px !important;
+}
+
+#summary-table th:nth-child(n+2):nth-child(-n+3),
+#summary-table td:nth-child(n+2):nth-child(-n+3) {
+    width: 12em;
+    text-align: left;
+}
+
+#summary-table th:nth-child(n+4):nth-child(-n+11),
+#summary-table td:nth-child(n+4):nth-child(-n+11) {
+    width: 8em;
     text-align: center;
 }
