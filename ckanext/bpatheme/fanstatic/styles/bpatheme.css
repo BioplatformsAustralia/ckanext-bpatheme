@@ -832,7 +832,7 @@ body {
     padding-right: 15px !important;
 }
 
-@media screen and (min-width: 1025px) {
+@media screen and (min-width: 1201px) {
 
     #summary-table th:nth-child(1),
     #summary-table td:nth-child(1) {
@@ -851,5 +851,15 @@ body {
     #summary-table td:nth-child(n+4) {
         width: 8em;
         text-align: center;
+    }
+}
+@media screen and (max-width: 1200px) {
+
+
+    #summary-table th:nth-child(n+4),
+    #summary-table td:nth-child(n+4) {
+        min-width: 4em;
+        text-align: center;
+        with: auto;
     }
 }
