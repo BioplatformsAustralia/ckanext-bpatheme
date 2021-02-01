@@ -832,7 +832,7 @@ body {
     padding-right: 15px !important;
 }
 
-@media screen and (min-width: 769px) {
+@media screen and (min-width: 1269px) {
 
     #summary-table th:nth-child(1),
     #summary-table td:nth-child(1) {
