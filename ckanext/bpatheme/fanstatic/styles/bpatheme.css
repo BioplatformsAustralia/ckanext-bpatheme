@@ -834,14 +834,7 @@ body {
 
 #summary-table th:nth-child(1),
 #summary-table td:nth-child(1) {
-    width: 16em;
-}
-
-@media screen and (min-width: 1200px) {
-    #summary-table th:nth-child(1),
-    #summary-table td:nth-child(1) {
-        width: 20em;
-    }
+    min-width: 16em;
 }
 
 
