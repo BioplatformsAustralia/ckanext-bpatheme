@@ -832,21 +832,21 @@ body {
     padding-right: 15px !important;
 }
 
-#summary-table th:nth-child(1),
-#summary-table td:nth-child(1) {
-    min-width: 16em;
-    width: 16em;
-}
+/*#summary-table th:nth-child(1),*/
+/*#summary-table td:nth-child(1) {*/
+/*    min-width: 16em;*/
+/*    width: 16em;*/
+/*}*/
 
-.fullscreen #summary-table th:nth-child(1),
-.fullscreen #summary-table td:nth-child(1) {
-    min-width: 16em;
-    width: auto;
-}
+/*.fullscreen #summary-table th:nth-child(1),*/
+/*.fullscreen #summary-table td:nth-child(1) {*/
+/*    min-width: 16em;*/
+/*    width: auto;*/
+/*}*/
 
 
-#summary-table th:nth-child(n+4),
-#summary-table td:nth-child(n+4) {
-    width: 8em;
-    text-align: center;
-}
+/*#summary-table th:nth-child(n+4),*/
+/*#summary-table td:nth-child(n+4) {*/
+/*    width: 8em;*/
+/*    text-align: center;*/
+/*}*/
