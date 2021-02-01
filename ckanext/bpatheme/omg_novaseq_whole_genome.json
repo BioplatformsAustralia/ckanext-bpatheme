@@ -513,9 +513,9 @@
             "label": "state_or_region"
         },
         {
-            "field_name": "subspecies",
+            "field_name": "subspecies_or_variant",
             "form_placeholder": "",
-            "label": "subspecies"
+            "label": "subspecies_or_variant"
         },
         {
             "field_name": "taxon_id",
