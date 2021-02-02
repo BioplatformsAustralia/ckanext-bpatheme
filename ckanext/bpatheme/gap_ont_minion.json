@@ -193,6 +193,11 @@
             "label": "id_vetting_by"
         },
         {
+            "field_name": "id_vetting_date",
+            "form_placeholder": "",
+            "label": "id_vetting_date"
+        },
+        {
             "field_name": "insert_size_range",
             "form_placeholder": "",
             "label": "insert_size_range"
@@ -216,6 +221,11 @@
             "field_name": "living_collections_event_date",
             "form_placeholder": "",
             "label": "living_collections_event_date"
+        },
+        {
+            "field_name": "living_collections_material_sample_rna",
+            "form_placeholder": "",
+            "label": "living_collections_material_sample_rna"
         },
         {
             "field_name": "living_collections_record_number",
@@ -308,6 +318,11 @@
             "label": "scientific_name_authorship"
         },
         {
+            "field_name": "scientific_name_notes",
+            "form_placeholder": "",
+            "label": "scientific_name_notes"
+        },
+        {
             "field_name": "sequencer",
             "form_placeholder": "",
             "label": "sequencer"
@@ -316,6 +331,11 @@
             "field_name": "silica_gel",
             "form_placeholder": "",
             "label": "silica_gel"
+        },
+        {
+            "field_name": "silica_gel_id",
+            "form_placeholder": "",
+            "label": "silica_gel_id"
         },
         {
             "field_name": "silica_gel_pressed_sheet",
