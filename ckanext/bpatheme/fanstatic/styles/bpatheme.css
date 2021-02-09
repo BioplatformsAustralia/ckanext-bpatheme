@@ -887,7 +887,8 @@ body {
 #user-comms .comms-link {
     color: inherit;
     background-color: inherit;
-    border: 1px solid var(--mast-hover-color);
+    border-top: 2px solid var(--mast-hover-color);
+    border-bottom: 2px solid var(--mast-hover-color);
     border-radius: 3px;
     padding: 5px;
 }
