@@ -853,6 +853,7 @@ body {
         text-align: center;
     }
 }
+
 @media screen and (max-width: 1200px) {
 
 
@@ -862,4 +863,33 @@ body {
         text-align: center;
         with: auto;
     }
+}
+
+
+#user-comms {
+    text-align: center;
+    padding: 150px;
+    font: 20px Helvetica, sans-serif;
+    color: #333;
+}
+
+#user-comms h1 {
+    font-size: 50px;
+}
+
+#user-comms article {
+    display: block;
+    text-align: left;
+    width: 650px;
+    margin: 0 auto;
+}
+
+#user-comms article a {
+    color: #dc8100;
+    text-decoration: none;
+}
+
+#user-comms article a:hover {
+    color: #333;
+    text-decoration: none;
 }
