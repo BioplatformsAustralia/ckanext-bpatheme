@@ -873,6 +873,9 @@ body {
     border: 1px solid var(--mast-color);
     border-radius: 10px;
     width: 95%;
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: row;
 }
 
 #user-comms article {
