@@ -876,7 +876,7 @@ body {
     border-radius: 0;
     width: 100%;
     display: flex;
-    justify-content: flex-start;
+    justify-content: center;
     flex-direction: row;
     align-items: baseline;
     padding: 10px 10px 2px 10px;
