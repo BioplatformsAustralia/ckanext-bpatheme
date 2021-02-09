@@ -877,8 +877,8 @@ body {
 }
 
 #user-comms article a {
-    color: var(--mast-color);
-    background-color: var(--mast-bg-color);
+    color: var(--mast-bg-color);
+    background-color: var(--mast-color);
     text-shadow: none;
     box-shadow: none;
 }
