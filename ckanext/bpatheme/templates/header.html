@@ -140,15 +140,21 @@
       <div class="container" id="user-comms">
         <div class="header-left"><i class="fa fa-exclamation-triangle" aria-hidden="true"></i></div>
         <div class="header-right">
+        {% if h.get_os_env_value('COMMS_OWNER') %}
           <h3 class="comms-title">{{ h.get_os_env_value('COMMS_TITLE') }}</h3>
+        {% endif %}
           <p>
             <span class="comms-message">{{ h.get_os_env_value('COMMS_MESSAGE') }}</span>
-            <span class="comms-link">{{ h.get_os_env_value('COMMS_LINK_PRE') }}
-                <a target="_blank" rel="noopener noreferrer"
-                   href="{{ h.get_os_env_value('COMMS_LINK_HREF') }}">{{ h.get_os_env_value('COMMS_LINK_TEXT') }}</a>{{ h.get_os_env_value('COMMS_LINK_POST') }}
-            </span>
+            {% if h.get_os_env_value('COMMS_LINK_HREF') %}
+              <span class="comms-link">{{ h.get_os_env_value('COMMS_LINK_PRE') }}
+                  <a target="_blank" rel="noopener noreferrer"
+                     href="{{ h.get_os_env_value('COMMS_LINK_HREF') }}">{{ h.get_os_env_value('COMMS_LINK_TEXT') }}</a>{{ h.get_os_env_value('COMMS_LINK_POST') }}
+              </span>
+            {% endif %}
           </p>
+        {% if h.get_os_env_value('COMMS_OWNER') %}
           <p class="comms-owner">{{ h.get_os_env_value('COMMS_OWNER') }}</p>
+        {% endif %}
         </div>
       </div>
     </header>
