@@ -887,11 +887,16 @@ body {
 }
 
 #user-comms .header-left{
-    margin: 10px;
+    margin: 20px;
     color: var(--mast-hover-color);
 }
 
+#user-comms .header-right{
+    margin: 20px;
+}
+
 #user-comms .comms-link {
+    margin: 0 0 0 20px;
     color: inherit;
     background-color: inherit;
     border: 2px solid var(--mast-hover-color);
