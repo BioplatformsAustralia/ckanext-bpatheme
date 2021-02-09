@@ -883,7 +883,7 @@ body {
 }
 
 #user-comms p {
-    margin: 0 !important;
+    margin: 0 0 5px 0 !important;
 }
 
 #user-comms .comms-title {
@@ -905,6 +905,7 @@ body {
 }
 
 #user-comms .comms-link a {
+    margin-left: 5px;
     color: inherit;
     background-color: inherit;
     text-shadow: none;
