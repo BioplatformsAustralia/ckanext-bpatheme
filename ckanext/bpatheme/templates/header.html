@@ -148,8 +148,10 @@
             {% if h.get_os_env_value('COMMS_LINK_HREF') %}
               <span class="comms-link">{{ h.get_os_env_value('COMMS_LINK_PRE') }}
                   <a target="_blank" rel="noopener noreferrer"
-                     href="{{ h.get_os_env_value('COMMS_LINK_HREF') }}">{{ h.get_os_env_value('COMMS_LINK_TEXT') }}</a>{{ h.get_os_env_value('COMMS_LINK_POST') }}
-              <i class="fa fa-long-arrow-right" aria-hidden="true"></i>
+                     href="{{ h.get_os_env_value('COMMS_LINK_HREF') }}">{{ h.get_os_env_value('COMMS_LINK_TEXT') }}
+                             <i class="fa fa-long-arrow-right" aria-hidden="true"></i>
+                  </a>
+                {{ h.get_os_env_value('COMMS_LINK_POST') }}
               </span>
             {% endif %}
           </p>
