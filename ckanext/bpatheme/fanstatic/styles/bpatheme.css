@@ -876,10 +876,23 @@ body {
     display: flex;
     justify-content: flex-start;
     flex-direction: row;
+    align-items: baseline;
+}
+
+#user-comms .header-left{
+    margin: 10px;
+    color: var(--mast-hover-color);
+}
+
+#user-comms .coms-link {
+    color: inherit;
+    background-color: inherit;
+    border: 1px solid var(--mast-hover-color);
+    border-radius: 15px;
 }
 
 #user-comms .comms-link a {
-    color: var(--mast-bg-color);
+    color: inherit;
     background-color: inherit;
     text-shadow: none;
     box-shadow: none;
