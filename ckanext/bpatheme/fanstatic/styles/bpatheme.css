@@ -871,16 +871,15 @@ body {
     color: var(--mast-bg-color);
     background-color: var(--mast-color);
     border-top: 2px solid var(--mast-hover-color);
-    border-bottom: 2px solid var(--mast-hover-color);
     border-right: none;
     border-left: none;
-    border-radius: 10px;
+    border-radius: 0;
     width: 100%;
     display: flex;
     justify-content: flex-start;
     flex-direction: row;
     align-items: baseline;
-    padding: 20px;
+    padding: 10px;
 }
 
 #user-comms p {
@@ -897,11 +896,11 @@ body {
 }
 
 #user-comms .comms-link {
-    margin: 0 0 0 30px;
+    margin-left: 30px;
     color: inherit;
     background-color: inherit;
-    border: 2px solid var(--mast-hover-color);
-    border-radius: 3px;
+    border: 1px solid var(--mast-hover-color);
+    border-radius: 10px;
     padding: 5px;
 }
 
