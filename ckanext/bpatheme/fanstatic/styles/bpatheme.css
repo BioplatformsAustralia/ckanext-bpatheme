@@ -879,7 +879,6 @@ body {
 }
 
 #user-comms .comms-link {
-    color: var(--mast-bg-color);
     background-color: inherit;
     text-shadow: none;
     box-shadow: none;
