@@ -138,16 +138,17 @@
         </hgroup><!-- /.dwga-row -->
       </div>
       <div class="container" id="user-comms">
-        <article><i class="fa fa-exclamation-triangle" aria-hidden="true"></i>
-          <h1 class="comms-title">Maintenance message</h1>
-          <div>
-            <p class="comms-message">{{ h.get_os_env_value('COMMS_MESSAGE') }}</p>
-            <p class="comms-link-pre">For more information contact <a href="mailto:#">contact us</a></p>
-            <p class="comms-owner">(Bioplatforms Data Team)</p>
-
-          </div>
-        </article>
+        <div class="header-left"><i class="fa fa-exclamation-triangle" aria-hidden="true"></i></div>
+        <div class="header-right">
+          <h3 class="comms-title">{{ h.get_os_env_value('COMMS_TITLE') }}</h3>
+          <p class="comms-message">{{ h.get_os_env_value('COMMS_MESSAGE') }}</p>
+          <p class="comms-link">{{ h.get_os_env_value('COMMS_LINK_OUTER_LEFT') }} <a
+              href="{{ h.get_os_env_value('COMMS_LINK') }}">{{ h.get_os_env_value('COMMS_LINK_INNER') }}</a>{{ h.get_os_env_value('COMMS_LINK_OUTER_RIGHT') }}
+          </p>
+          <p class="comms-owner">{{ h.get_os_env_value('COMMS_OWNER') }}</p>
+        </div>
       </div>
-    </header>
+  </div>
+  </header>
   </div>
 {% endblock %}
