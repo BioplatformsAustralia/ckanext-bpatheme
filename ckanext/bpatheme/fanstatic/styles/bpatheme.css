@@ -880,6 +880,7 @@ body {
     flex-direction: row;
     align-items: baseline;
     padding: 10px 20px 2px 20px;
+    font-size: 13px;
 }
 
 #user-comms p {
@@ -888,10 +889,6 @@ body {
 
 #user-comms .comms-title {
     margin: 0;
-}
-
-#user-comms .comms-message {
-    margin-bottom: 5px;
 }
 
 #user-comms .header-left{
