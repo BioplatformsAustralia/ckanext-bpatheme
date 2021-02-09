@@ -882,7 +882,7 @@ body {
     align-items: baseline;
 }
 
-#user-comms h1 h2 h3 {
+#user-comms .comms-title {
     margin: 0
 }
 
