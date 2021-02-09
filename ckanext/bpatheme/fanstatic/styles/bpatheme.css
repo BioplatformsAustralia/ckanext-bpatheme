@@ -882,6 +882,10 @@ body {
     align-items: baseline;
 }
 
+#user-comms h1 h2 h3 {
+    margin: 0
+}
+
 #user-comms .header-left{
     margin: 10px;
     color: var(--mast-hover-color);
