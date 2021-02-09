@@ -881,7 +881,10 @@ body {
     flex-direction: row;
     align-items: baseline;
     padding: 20px;
-    margin: 0;
+}
+
+#user-comms p {
+    margin: 0 !important;
 }
 
 #user-comms .comms-title {
