@@ -880,6 +880,7 @@ body {
     justify-content: flex-start;
     flex-direction: row;
     align-items: baseline;
+    padding: 20px;
 }
 
 #user-comms .comms-title {
@@ -887,16 +888,12 @@ body {
 }
 
 #user-comms .header-left{
-    margin: 20px;
     color: var(--mast-hover-color);
-}
-
-#user-comms .header-right{
-    margin: 20px;
+    margin-right: 10px
 }
 
 #user-comms .comms-link {
-    margin: 0 0 0 20px;
+    margin: 0 0 0 30px;
     color: inherit;
     background-color: inherit;
     border: 2px solid var(--mast-hover-color);
