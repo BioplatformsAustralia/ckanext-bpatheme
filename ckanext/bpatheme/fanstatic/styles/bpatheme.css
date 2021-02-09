@@ -879,7 +879,8 @@ body {
 }
 
 #user-comms .comms-link {
-    background-color: inherit;
+    color: var(--mast-bg-color);
+    background-color: var(--mast-color);
     text-shadow: none;
     box-shadow: none;
 }
@@ -889,4 +890,8 @@ body {
     background-color: inherit;
     text-shadow: none;
     box-shadow: none;
+}
+
+#user-comms .comms-owner {
+    font-style:italic;
 }
