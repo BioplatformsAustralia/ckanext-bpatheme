@@ -888,7 +888,8 @@ body {
     color: inherit;
     background-color: inherit;
     border: 1px solid var(--mast-hover-color);
-    border-radius: 15px;
+    border-radius: 3px;
+    padding: 5px;
 }
 
 #user-comms .comms-link a {
