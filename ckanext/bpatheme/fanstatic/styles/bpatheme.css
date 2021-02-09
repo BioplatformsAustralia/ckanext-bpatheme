@@ -870,12 +870,12 @@ body {
     text-align: left;
     color: var(--mast-bg-color);
     background-color: var(--mast-color);
-    border-top: 2px solid var(--mast-color);
-    border-bottom: 2px solid var(--mast-color);
+    border-top: 2px solid var(--mast-hover-color);
+    border-bottom: 2px solid var(--mast-hover-color);
     border-right: none;
     border-left: none;
     border-radius: 10px;
-    width: 95%;
+    width: 100%;
     display: flex;
     justify-content: flex-start;
     flex-direction: row;
