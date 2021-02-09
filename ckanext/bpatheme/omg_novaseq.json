@@ -153,16 +153,6 @@
             "label": "common_name"
         },
         {
-            "field_name": "conservation_sample",
-            "form_placeholder": "",
-            "label": "conservation_sample"
-        },
-        {
-            "field_name": "conservation_status",
-            "form_placeholder": "",
-            "label": "conservation_status"
-        },
-        {
             "field_name": "contextual_data_submission_date",
             "form_placeholder": "",
             "label": "contextual_data_submission_date"
@@ -208,6 +198,16 @@
             "label": "date_of_transfer"
         },
         {
+            "field_name": "ddrad_data",
+            "form_placeholder": "",
+            "label": "ddrad_data"
+        },
+        {
+            "field_name": "ddrad_dataset_ids",
+            "form_placeholder": "",
+            "label": "ddrad_dataset_ids"
+        },
+        {
             "field_name": "death_date",
             "form_placeholder": "",
             "label": "death_date"
@@ -243,6 +243,16 @@
             "label": "dna_treatment"
         },
         {
+            "field_name": "exon_capture_data",
+            "form_placeholder": "",
+            "label": "exon_capture_data"
+        },
+        {
+            "field_name": "exon_capture_dataset_ids",
+            "form_placeholder": "",
+            "label": "exon_capture_dataset_ids"
+        },
+        {
             "field_name": "experimental_design",
             "form_placeholder": "",
             "label": "experimental_design"
@@ -273,14 +283,14 @@
             "label": "folder_name"
         },
         {
-            "field_name": "genome_sample",
+            "field_name": "genome_data",
             "form_placeholder": "",
-            "label": "genome_sample"
+            "label": "genome_data"
         },
         {
-            "field_name": "genome_status",
+            "field_name": "genome_dataset_ids",
             "form_placeholder": "",
-            "label": "genome_status"
+            "label": "genome_dataset_ids"
         },
         {
             "field_name": "genus",
@@ -418,16 +428,6 @@
             "label": "order"
         },
         {
-            "field_name": "phylogenomic_sample",
-            "form_placeholder": "",
-            "label": "phylogenomic_sample"
-        },
-        {
-            "field_name": "phylogenomic_status",
-            "form_placeholder": "",
-            "label": "phylogenomic_status"
-        },
-        {
             "field_name": "phylum",
             "form_placeholder": "",
             "label": "phylum"
@@ -493,9 +493,9 @@
             "label": "state_or_region"
         },
         {
-            "field_name": "subspecies",
+            "field_name": "subspecies_or_variant",
             "form_placeholder": "",
-            "label": "subspecies"
+            "label": "subspecies_or_variant"
         },
         {
             "field_name": "taxon_id",
