@@ -1,4 +1,5 @@
 import datetime
+import os
 from collections import OrderedDict
 import json
 import operator
@@ -159,6 +160,8 @@ def organization_slugs_by_creation_and_rank():
     #return slugs sorted by rank, then by created date
     return [s['slug'] for s in multisort(list(orgs), (('rank', True), ('created', True)))]
 
+def get_os_env_value(key):
+    return os.environ.get(key, '')
 
 class CustomTheme(plugins.SingletonPlugin):
     plugins.implements(plugins.IConfigurer)
@@ -246,7 +249,8 @@ class CustomTheme(plugins.SingletonPlugin):
             'datawa_scheming_select_options': datawa_scheming_select_options,
             'datawa_get_option_label': datawa_get_option_label,
             'organization_slugs_by_creation': organization_slugs_by_creation,
-            'organization_slugs_by_creation_and_rank': organization_slugs_by_creation_and_rank
+            'organization_slugs_by_creation_and_rank': organization_slugs_by_creation_and_rank,
+            'get_os_env_value': get_os_env_value
         }
 
     # Ifacets
