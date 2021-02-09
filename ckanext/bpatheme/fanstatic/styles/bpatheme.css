@@ -884,7 +884,7 @@ body {
     color: var(--mast-hover-color);
 }
 
-#user-comms .coms-link {
+#user-comms .comms-link {
     color: inherit;
     background-color: inherit;
     border: 1px solid var(--mast-hover-color);
