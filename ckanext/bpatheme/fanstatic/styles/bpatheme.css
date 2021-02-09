@@ -870,7 +870,10 @@ body {
     text-align: left;
     color: var(--mast-bg-color);
     background-color: var(--mast-color);
-    border: 1px solid var(--mast-color);
+    border-top: 2px solid var(--mast-color);
+    border-bottom: 2px solid var(--mast-color);
+    border-right: none;
+    border-left: none;
     border-radius: 10px;
     width: 95%;
     display: flex;
@@ -887,10 +890,7 @@ body {
 #user-comms .comms-link {
     color: inherit;
     background-color: inherit;
-    border-top: 2px solid var(--mast-hover-color);
-    border-right: none;
-    border-left: none;
-    border-bottom: 2px solid var(--mast-hover-color);
+    border: 2px solid var(--mast-hover-color);
     border-radius: 3px;
     padding: 5px;
 }
