@@ -888,6 +888,8 @@ body {
     color: inherit;
     background-color: inherit;
     border-top: 2px solid var(--mast-hover-color);
+    border-right: none;
+    border-left: none;
     border-bottom: 2px solid var(--mast-hover-color);
     border-radius: 3px;
     padding: 5px;
