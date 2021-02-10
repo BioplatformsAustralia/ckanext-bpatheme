@@ -485,7 +485,7 @@ body {
     background-color: inherit;
     border: 1px solid var(--mast-hover-color);
     border-radius: 10px;
-    padding: 5px;
+    padding: 3px;
     white-space: nowrap;
 }
 
