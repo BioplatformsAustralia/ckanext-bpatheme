@@ -99,7 +99,9 @@
               {% endif %}
             {% endblock header_logo %}
           </div>
-          {% if h.get_os_env_value('COMMS_MESSAGE') %}
+        </hgroup><!-- /.dwga-row -->
+      </div>
+    {% if h.get_os_env_value('COMMS_MESSAGE') %}
             <div class="col-md-12">
               <div class="container" id="user-comms">
                 <div class="header-left"><i class="fa fa-exclamation-triangle" aria-hidden="true"></i></div>
@@ -126,9 +128,6 @@
               </div>
             </div>
           {% endif %}
-
-        </hgroup><!-- /.dwga-row -->
-      </div>
     </header>
   </div>
 {% endblock %}
