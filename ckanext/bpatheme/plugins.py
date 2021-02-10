@@ -1,4 +1,5 @@
 import datetime
+import os
 from collections import OrderedDict
 import json
 
@@ -106,6 +107,8 @@ def license_data(pkg):
 
     return license_data
 
+def get_os_env_value(key):
+    return os.environ.get(key, '')
 
 class CustomTheme(plugins.SingletonPlugin):
     plugins.implements(plugins.IConfigurer)
@@ -145,7 +148,8 @@ class CustomTheme(plugins.SingletonPlugin):
             'access_level_text': access_level_text,
             'license_data': license_data,
             'datawa_scheming_select_options': datawa_scheming_select_options,
-            'datawa_get_option_label': datawa_get_option_label
+            'datawa_get_option_label': datawa_get_option_label,
+            'get_os_env_value': get_os_env_value
         }
 
     # Ifacets
