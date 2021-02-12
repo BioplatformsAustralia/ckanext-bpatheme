@@ -203,6 +203,11 @@
             "label": "library_location"
         },
         {
+            "field_name": "library_ng_ul",
+            "form_placeholder": "",
+            "label": "library_ng_ul"
+        },
+        {
             "field_name": "library_pcr_cycles",
             "form_placeholder": "",
             "label": "library_pcr_cycles"
@@ -211,6 +216,21 @@
             "field_name": "library_pcr_reps",
             "form_placeholder": "",
             "label": "library_pcr_reps"
+        },
+        {
+            "field_name": "library_pool_index_id",
+            "form_placeholder": "",
+            "label": "library_pool_index_id"
+        },
+        {
+            "field_name": "library_pool_index_sequence",
+            "form_placeholder": "",
+            "label": "library_pool_index_sequence"
+        },
+        {
+            "field_name": "library_pool_oligo_sequence",
+            "form_placeholder": "",
+            "label": "library_pool_oligo_sequence"
         },
         {
             "field_name": "library_prep_date",
