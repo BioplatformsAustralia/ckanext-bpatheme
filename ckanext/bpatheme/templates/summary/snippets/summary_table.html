@@ -3,21 +3,21 @@
 <link rel="stylesheet" href="{{ h.url_for_static('bootstraptable/bootstrap-table.min.css') }}"/>
 
 <div role="main" id="layout-summary" class="hero landing">
-  <div id="summary-text">
-    <p>
-    <p>The Bioplatforms Australia Framework Initiatives are national collaborative projects that use integrated ‘omics
-      infrastructure to generate high-impact data and knowledge resources in support of some of Australia’s biggest
-      scientific challenges.
-    <p>Below is a summary of the genomic resources generated, aiming to provide reference genomes of Australian fauna
-      and
-      flora species, and population genetic datasets.
-    <p>Additional resources, not listed here, are available through the data portal, including microbial genomic
-      resources
-      and other 'omics datasets. We encourage you to use the <a
-          href="{{ h.url_for(controller='package', action='search') }}">search feature</a> to explore the full content
-      of
-      this portal.
-    <p>Table legend:
+  < id="summary-text">
+  <p>
+  <p>The Bioplatforms Australia Framework Initiatives are national collaborative projects that use integrated ‘omics
+    infrastructure to generate high-impact data and knowledge resources in support of some of Australia’s biggest
+    scientific challenges.
+  <p>Below is a summary of the genomic resources generated, aiming to provide reference genomes of Australian fauna
+    and
+    flora species, and population genetic datasets.
+  <p>Additional resources, not listed here, are available through the data portal, including microbial genomic
+    resources
+    and other 'omics datasets. We encourage you to use the <a
+        href="{{ h.url_for(controller='package', action='search') }}">search feature</a> to explore the full content
+    of
+    this portal.
+  <p>Table legend:
     <ul>
       <li>CLR/RS: PacBio datasets generated using the PacBio Sequel I or RSII systems
       <li>HiFi: PacBio datasets generated using the PacBio Sequel II system
@@ -26,28 +26,29 @@
       <li>Blue dots (hyperlink) provide a direct link to the page containing the referential dataset
       <li>P indicates a resource that is planned or in progress
     </ul>
+  </p>
 
-    <p>See the <a href="{{ h.url_for('home.about') }}">About page</a> for more information.
-  </div>
-  <div>
-    <table id="summary-table"
-           data-pagination="true"
-           data-search="true"
-           data-show-columns="true"
-           data-show-pagination-switch="true"
-           data-show-fullscreen="true"
-           data-show-toggle="true"
-           data-page-size="100">
-      <thead>
-      <tr>
-        {% for next_header in spreadsheet_columns %}
-          <th data-sortable="true" data-title-tooltip="{{ next_header }}"
-              data-field="{{ next_header }}">{{ next_header|replace(" ", "\n") }}</th>
-        {% endfor %}
-      </tr>
-      </thead>
-    </table>
-  </div>
+  <p>See the <a href="{{ h.url_for('home.about') }}">About page</a> for more information.
+</div>
+<div>
+  <table id="summary-table"
+         data-pagination="true"
+         data-search="true"
+         data-show-columns="true"
+         data-show-pagination-switch="true"
+         data-show-fullscreen="true"
+         data-show-toggle="true"
+         data-page-size="100">
+    <thead>
+    <tr>
+      {% for next_header in spreadsheet_columns %}
+        <th data-sortable="true" data-title-tooltip="{{ next_header }}"
+            data-field="{{ next_header }}">{{ next_header|replace(" ", "\n") }}</th>
+      {% endfor %}
+    </tr>
+    </thead>
+  </table>
+</div>
 </div>
 <script>
     function cleanData(data) {
