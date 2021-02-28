@@ -192,6 +192,7 @@ img#beta {
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
+    width: 100%;
 }
 
 .headermenu > .menu-item {
@@ -586,7 +587,6 @@ body {
 .site-title .topnav {
     height: 100%;
     position: relative;
-    width: 100%
 }
 
 @media screen and (max-width: 990px) {
