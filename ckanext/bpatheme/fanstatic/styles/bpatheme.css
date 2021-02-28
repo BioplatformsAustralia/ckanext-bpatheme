@@ -202,10 +202,6 @@ img#beta {
     position: relative;
 }
 
-.headermenu > .menu-item-last {
-    margin-right: 0;
-}
-
 .headermenu > .menu-item:last-child {
     display: none;
 }
