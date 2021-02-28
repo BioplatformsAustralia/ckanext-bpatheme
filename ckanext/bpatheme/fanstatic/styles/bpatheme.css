@@ -188,6 +188,10 @@ img#beta {
 /* Make menu like main BPA site */
 .headermenu {
     float: right;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
 }
 
 .headermenu > .menu-item {
@@ -199,6 +203,10 @@ img#beta {
 
 .headermenu > .menu-item-last {
     margin-right: 0;
+}
+
+.headermenu > .menu-item:last-child {
+    display: none;
 }
 
 .dwga-inlineblock {
@@ -577,12 +585,8 @@ body {
 
 .site-title .topnav {
     height: 100%;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
     position: relative;
-    float: right;
+    width: 100%
 }
 
 @media screen and (max-width: 990px) {
@@ -636,6 +640,10 @@ body {
     .masthead .logo img {
         max-height: 100%;
         width: 100px;
+    }
+
+    .headermenu > .menu-item:last-child {
+        display: inline-block;
     }
 
 }
@@ -891,7 +899,7 @@ body {
     margin: 0;
 }
 
-#user-comms .header-left{
+#user-comms .header-left {
     color: var(--mast-hover-color);
     margin-right: 10px;
 }
@@ -923,5 +931,5 @@ body {
 }
 
 #user-comms .comms-owner {
-    font-style:italic;
+    font-style: italic;
 }
