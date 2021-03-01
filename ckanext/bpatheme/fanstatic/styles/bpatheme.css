@@ -627,6 +627,10 @@ body {
         right: 40px;
     }
 
+    .topnav.responsive .headermenu {
+        display: block;
+    }
+
     .topnav.responsive a:not(.icon) {
         float: none;
         display: block;
