@@ -615,14 +615,14 @@ body {
 
     .topnav {
         width: 0;
-        position: absolute;
+        position: relative;
         top: 40px;
         right: 20px;
         transition: 0.4s;
     }
 
     .topnav.responsive {
-        position: absolute;
+        position: relative;
         top: 40px;
         right: 40px;
     }
