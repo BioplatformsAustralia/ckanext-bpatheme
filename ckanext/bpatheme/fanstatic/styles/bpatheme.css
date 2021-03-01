@@ -604,8 +604,8 @@ body {
     .topnav a.icon {
         display: block;
         position: absolute;
-        top: 40px;
-        right: 10px;
+        top: 0;
+        right: 0;
         padding-right: 10px;
     }
 
