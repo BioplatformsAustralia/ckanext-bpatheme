@@ -631,7 +631,7 @@ body {
     }
 
     .topnav.responsive .headermenu {
-        position: absolute;
+        position: relative;
         top: 0;
         right: 40px;
         display: block;
