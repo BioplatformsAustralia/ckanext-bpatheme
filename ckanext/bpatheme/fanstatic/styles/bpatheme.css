@@ -623,6 +623,10 @@ body {
         right: 40px;
     }
 
+    .topnav .headermenu {
+        display: block;
+    }
+
     .topnav.responsive .headermenu a {
         float: none;
         display: block;
