@@ -609,35 +609,22 @@ body {
         padding-right: 10px;
     }
 
-    .topnav {
-        width: 0;
-        position: absolute;
-        top: 0;
-        right: 0;
-    }
-
     .topnav .headermenu {
         width: 0;
         position: absolute;
         top: 0;
-        right: 0;
+        right: 70px;
         transition: 0.4s;
-    }
-
-    .topnav.responsive {
-        position: relative;
-        top: 0;
-        right: 0;
     }
 
     .topnav.responsive .headermenu {
         position: relative;
         top: 0;
-        right: 40px;
+        right: 100px;
         display: block;
     }
 
-    .topnav.responsive a:not(.icon) {
+    .topnav.responsive .headermenu a {
         float: none;
         display: block;
         text-align: left;
