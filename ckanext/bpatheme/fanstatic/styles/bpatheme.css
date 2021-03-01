@@ -595,33 +595,35 @@ body {
         align-items: flex-start;
     }
 
-    .topnav .headermenu a {
+    .topnav a {
         display: none;
+        right: 30px;
         margin-bottom: 10px;
     }
 
     .topnav a.icon {
         display: block;
         position: absolute;
-        padding-right: 10px;
         top: 40px;
-        right: 20px;
+        right: 10px;
+        padding-right: 10px;
     }
 
     .topnav {
         width: 0;
         position: relative;
-        transition: 0.4s;
         top: 40px;
         right: 20px;
+        transition: 0.4s;
     }
 
     .topnav.responsive {
+        position: relative;
         top: 40px;
-        right: 20px;
+        right: 40px;
     }
 
-    .topnav.responsive .headermenu a {
+    .topnav.responsive a:not(.icon) {
         float: none;
         display: block;
         text-align: left;
