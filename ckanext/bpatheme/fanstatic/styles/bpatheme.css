@@ -639,10 +639,6 @@ body {
         width: 100px;
     }
 
-    .headermenu > .menu-item:last-child {
-        display: inline-block;
-    }
-
 }
 
 /*ensure rectangular images are 'squared' before becoming 'circles'*/
