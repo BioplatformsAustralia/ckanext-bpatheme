@@ -595,12 +595,6 @@ body {
         align-items: flex-start;
     }
 
-    .topnav .headermenu a {
-        display: none;
-        right: 30px;
-        margin-bottom: 10px;
-    }
-
     .topnav a.icon {
         display: block;
         position: absolute;
@@ -611,27 +605,20 @@ body {
 
     .topnav {
         width: 0;
-        position: relative;
-        top: 40px;
-        right: 20px;
-        transition: 0.4s;
     }
 
-    .topnav.responsive {
-        position: relative;
+    .topnav.responsive .headermenu {
+        position: absolute;
         top: 40px;
-        right: 40px;
-        transition: 0.4s;
+        right: 60px;
+        transition: 0.5s;
+        display: block;
     }
 
-    .topnav .headermenu {
-        transition: 0.4s;
-    }
-
-    .topnav.responsive .headermenu{
-        position: relative;
-        top: 40px;
-        right: 40px;
+    .topnav .headermenu a {
+        display: none;
+        right: 30px;
+        margin-bottom: 10px;
     }
 
     .topnav.responsive .headermenu a {
