@@ -202,6 +202,10 @@ img#beta {
     position: relative;
 }
 
+.headermenu > .menu-item:last-child {
+    display: none;
+}
+
 .dwga-inlineblock {
     display: inline-block;
 }
@@ -595,40 +599,48 @@ body {
         align-items: flex-start;
     }
 
-    .topnav .headermenu a {
+    .topnav a {
         display: none;
+        right: 30px;
         margin-bottom: 10px;
-    }
-
-    .topnav .headermenu {
-        transition: 0.5s;
     }
 
     .topnav a.icon {
         display: block;
         position: absolute;
-        top: 0;
-        right: 0;
+        top: 40px;
+        right: 10px;
         padding-right: 10px;
     }
 
     .topnav {
         width: 0;
-        position: relative;
+        position: absolute;
+        top: 40px;
+        right: 20px;
         transition: 0.4s;
     }
 
-    .topnav.responsive .headermenu a {
+    .topnav.responsive {
+        position: absolute;
+        top: 40px;
+        right: 40px;
+    }
+
+    .topnav.responsive a:not(.icon) {
         float: none;
         display: block;
         text-align: left;
         right: 30px;
-        transition: 0.5s;
     }
 
     .masthead .logo img {
         max-height: 100%;
         width: 100px;
+    }
+
+    .headermenu > .menu-item:last-child {
+        display: inline-block;
     }
 
 }
