@@ -612,10 +612,13 @@ body {
         width: 0;
         position: relative;
         transition: 0.4s;
+        top: 40px;
+        right: 20px;
     }
 
-    .topnav.responsive .headermenu {
-        right: 30px;
+    .topnav.responsive {
+        top: 40px;
+        right: 20px;
     }
 
     .topnav.responsive .headermenu a {
