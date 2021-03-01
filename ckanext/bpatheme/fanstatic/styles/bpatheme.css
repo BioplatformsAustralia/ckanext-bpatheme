@@ -614,7 +614,11 @@ body {
         position: relative;
         top: 40px;
         right: 20px;
-        transition: 0.4s;
+    }
+
+    .topnav .headermenu {
+        display: block;
+        transition: 0.5s;
     }
 
     .topnav.responsive {
@@ -622,11 +626,7 @@ body {
         top: 40px;
         right: 40px;
     }
-
-    .topnav .headermenu {
-        display: block;
-    }
-
+    
     .topnav.responsive .headermenu a {
         float: none;
         display: block;
