@@ -613,7 +613,7 @@ body {
         width: 0;
         position: absolute;
         top: 0;
-        right: 70px;
+        right: 60px;
         transition: 0.4s;
     }
 
@@ -625,10 +625,7 @@ body {
     }
 
     .topnav.responsive .headermenu a {
-        float: none;
         display: block;
-        text-align: left;
-        right: 30px;
     }
 
     .masthead .logo img {
