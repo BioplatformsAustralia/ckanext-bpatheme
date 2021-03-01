@@ -595,7 +595,7 @@ body {
         align-items: flex-start;
     }
 
-    .topnav a {
+    .topnav .headermenu a {
         display: none;
         margin-bottom: 10px;
     }
@@ -614,11 +614,11 @@ body {
         transition: 0.4s;
     }
 
-    .topnav.responsive {
-        position: relative;
+    .topnav.responsive .headermenu {
+        right: 30px;
     }
 
-    .topnav.responsive a:not(.icon) {
+    .topnav.responsive .headermenu a {
         float: none;
         display: block;
         text-align: left;
