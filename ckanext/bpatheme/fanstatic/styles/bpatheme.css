@@ -597,30 +597,25 @@ body {
 
     .topnav a {
         display: none;
-        right: 30px;
         margin-bottom: 10px;
     }
 
     .topnav a.icon {
         display: block;
         position: absolute;
-        top: 40px;
-        right: 10px;
+        top: 0;
+        right: 0;
         padding-right: 10px;
     }
 
     .topnav {
         width: 0;
         position: relative;
-        top: 40px;
-        right: 20px;
         transition: 0.4s;
     }
 
     .topnav.responsive {
         position: relative;
-        top: 40px;
-        right: 40px;
     }
 
     .topnav.responsive a:not(.icon) {
