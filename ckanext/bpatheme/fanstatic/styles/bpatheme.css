@@ -202,10 +202,6 @@ img#beta {
     position: relative;
 }
 
-.headermenu > .menu-item:last-child {
-    display: none;
-}
-
 .dwga-inlineblock {
     display: inline-block;
 }
@@ -627,6 +623,10 @@ body {
         right: 40px;
     }
 
+    .topnav.responsive .headermenu {
+        display: block;
+    }
+
     .topnav.responsive a:not(.icon) {
         float: none;
         display: block;
@@ -637,10 +637,6 @@ body {
     .masthead .logo img {
         max-height: 100%;
         width: 100px;
-    }
-
-    .headermenu > .menu-item:last-child {
-        display: inline-block;
     }
 
 }
