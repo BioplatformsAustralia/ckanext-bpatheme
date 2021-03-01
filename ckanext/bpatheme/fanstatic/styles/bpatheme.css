@@ -622,6 +622,7 @@ body {
         float: none;
         display: block;
         text-align: left;
+        right: 30px;
     }
 
     .masthead .logo img {
