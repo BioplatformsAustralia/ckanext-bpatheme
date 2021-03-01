@@ -610,6 +610,14 @@ body {
     }
 
     .topnav {
+        /*width: 0;*/
+        /*position: absolute;*/
+        /*top: 0;*/
+        /*right: 0;*/
+        /*transition: 0.4s;*/
+    }
+    
+    .topnav .headermenu {
         width: 0;
         position: absolute;
         top: 0;
@@ -618,12 +626,15 @@ body {
     }
 
     .topnav.responsive {
-        position: relative;
-        top: 0;
-        right: 40px;
+        /*position: relative;*/
+        /*top: 0;*/
+        /*right: 40px;*/
     }
 
     .topnav.responsive .headermenu {
+        position: relative;
+        top: 0;
+        right: 40px;
         display: block;
     }
 
