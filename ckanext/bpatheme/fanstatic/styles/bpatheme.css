@@ -607,7 +607,7 @@ body {
 
     .topnav a.icon {
         display: block;
-        position: fixed;
+        position: absolute;
         top: 40px;
         right: 10px;
         padding-right: 10px;
@@ -615,14 +615,14 @@ body {
 
     .topnav {
         width: 0;
-        position: fixed;
+        position: absolute;
         top: 40px;
         right: 20px;
         transition: 0.4s;
     }
 
     .topnav.responsive {
-        position: fixed;
+        position: absolute;
         top: 40px;
         right: 40px;
     }
