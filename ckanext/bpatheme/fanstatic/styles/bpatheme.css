@@ -600,6 +600,10 @@ body {
         margin-bottom: 10px;
     }
 
+    .topnav .headermenu {
+        transition: 0.5s;
+    }
+
     .topnav a.icon {
         display: block;
         position: absolute;
@@ -614,15 +618,12 @@ body {
         transition: 0.4s;
     }
 
-    .topnav.responsive {
-        position: relative;
-    }
-
     .topnav.responsive .headermenu a {
         float: none;
         display: block;
         text-align: left;
         right: 30px;
+        transition: 0.5s;
     }
 
     .masthead .logo img {
