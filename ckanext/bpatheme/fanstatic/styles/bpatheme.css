@@ -621,10 +621,17 @@ body {
         position: relative;
         top: 40px;
         right: 40px;
+        transition: 0.4s;
     }
 
     .topnav .headermenu {
-        display: block;
+        transition: 0.4s;
+    }
+
+    .topnav.responsive .headermenu{
+        position: relative;
+        top: 40px;
+        right: 40px;
     }
 
     .topnav.responsive .headermenu a {
@@ -632,6 +639,7 @@ body {
         display: block;
         text-align: left;
         right: 30px;
+        transition: 0.4s;
     }
 
     .masthead .logo img {
