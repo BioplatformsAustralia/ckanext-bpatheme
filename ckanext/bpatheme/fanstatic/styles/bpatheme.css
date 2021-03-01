@@ -202,10 +202,6 @@ img#beta {
     position: relative;
 }
 
-.headermenu > .menu-item:last-child {
-    display: none;
-}
-
 .dwga-inlineblock {
     display: inline-block;
 }
@@ -637,10 +633,6 @@ body {
     .masthead .logo img {
         max-height: 100%;
         width: 100px;
-    }
-
-    .headermenu > .menu-item:last-child {
-        display: inline-block;
     }
 
 }
