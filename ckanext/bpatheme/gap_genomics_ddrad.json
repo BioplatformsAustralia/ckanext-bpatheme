@@ -58,16 +58,6 @@
             "label": "Resource Permissions"
         },
         {
-            "field_name": "analysis_software",
-            "form_placeholder": "",
-            "label": "analysis_software"
-        },
-        {
-            "field_name": "analysis_software_version",
-            "form_placeholder": "",
-            "label": "analysis_software_version"
-        },
-        {
             "field_name": "archive_ingestion_date",
             "form_placeholder": "",
             "label": "archive_ingestion_date"
@@ -78,29 +68,14 @@
             "label": "base_url"
         },
         {
-            "field_name": "bpa_dataset_id",
-            "form_placeholder": "",
-            "label": "bpa_dataset_id"
-        },
-        {
-            "field_name": "cell_postion",
-            "form_placeholder": "",
-            "label": "cell_postion"
-        },
-        {
             "field_name": "contextual_data_submission_date",
             "form_placeholder": "",
             "label": "contextual_data_submission_date"
         },
         {
-            "field_name": "data_context",
+            "field_name": "country",
             "form_placeholder": "",
-            "label": "data_context"
-        },
-        {
-            "field_name": "data_custodian",
-            "form_placeholder": "",
-            "label": "data_custodian"
+            "label": "country"
         },
         {
             "field_name": "data_generated",
@@ -133,24 +108,14 @@
             "label": "description"
         },
         {
-            "field_name": "dna_treatment",
-            "form_placeholder": "",
-            "label": "dna_treatment"
-        },
-        {
             "field_name": "experimental_design",
             "form_placeholder": "",
             "label": "experimental_design"
         },
         {
-            "field_name": "file_name",
+            "field_name": "family",
             "form_placeholder": "",
-            "label": "file_name"
-        },
-        {
-            "field_name": "file_type",
-            "form_placeholder": "",
-            "label": "file_type"
+            "label": "family"
         },
         {
             "field_name": "flowcell_id",
@@ -158,54 +123,14 @@
             "label": "flowcell_id"
         },
         {
-            "field_name": "flowcell_type",
-            "form_placeholder": "",
-            "label": "flowcell_type"
-        },
-        {
             "field_name": "folder_name",
             "form_placeholder": "",
             "label": "folder_name"
         },
         {
-            "field_name": "genus",
-            "form_placeholder": "",
-            "label": "genus"
-        },
-        {
-            "field_name": "insert_size_range",
-            "form_placeholder": "",
-            "label": "insert_size_range"
-        },
-        {
-            "field_name": "latitude",
-            "form_placeholder": "",
-            "label": "latitude"
-        },
-        {
             "field_name": "library_comments",
             "form_placeholder": "",
             "label": "library_comments"
-        },
-        {
-            "field_name": "library_construction_protocol",
-            "form_placeholder": "",
-            "label": "library_construction_protocol"
-        },
-        {
-            "field_name": "library_layout",
-            "form_placeholder": "",
-            "label": "library_layout"
-        },
-        {
-            "field_name": "library_location",
-            "form_placeholder": "",
-            "label": "library_location"
-        },
-        {
-            "field_name": "library_ng_ul",
-            "form_placeholder": "",
-            "label": "library_ng_ul"
         },
         {
             "field_name": "library_pcr_cycles",
@@ -218,24 +143,14 @@
             "label": "library_pcr_reps"
         },
         {
-            "field_name": "library_pool_index_id",
-            "form_placeholder": "",
-            "label": "library_pool_index_id"
-        },
-        {
-            "field_name": "library_pool_index_sequence",
-            "form_placeholder": "",
-            "label": "library_pool_index_sequence"
-        },
-        {
-            "field_name": "library_pool_oligo_sequence",
-            "form_placeholder": "",
-            "label": "library_pool_oligo_sequence"
-        },
-        {
             "field_name": "library_prep_date",
             "form_placeholder": "",
             "label": "library_prep_date"
+        },
+        {
+            "field_name": "library_prep_method",
+            "form_placeholder": "",
+            "label": "library_prep_method"
         },
         {
             "field_name": "library_prepared_by",
@@ -243,44 +158,14 @@
             "label": "library_prepared_by"
         },
         {
-            "field_name": "library_selection",
-            "form_placeholder": "",
-            "label": "library_selection"
-        },
-        {
-            "field_name": "library_source",
-            "form_placeholder": "",
-            "label": "library_source"
-        },
-        {
-            "field_name": "library_status",
-            "form_placeholder": "",
-            "label": "library_status"
-        },
-        {
-            "field_name": "library_strategy",
-            "form_placeholder": "",
-            "label": "library_strategy"
-        },
-        {
             "field_name": "library_type",
             "form_placeholder": "",
             "label": "library_type"
         },
         {
-            "field_name": "license_id",
+            "field_name": "location_notes",
             "form_placeholder": "",
-            "label": "license_id"
-        },
-        {
-            "field_name": "longitude",
-            "form_placeholder": "",
-            "label": "longitude"
-        },
-        {
-            "field_name": "movie_length",
-            "form_placeholder": "",
-            "label": "movie_length"
+            "label": "location_notes"
         },
         {
             "field_name": "n_libraries_pooled",
@@ -298,9 +183,39 @@
             "label": "notes"
         },
         {
+            "field_name": "plate_name",
+            "form_placeholder": "",
+            "label": "plate_name"
+        },
+        {
+            "field_name": "project_aim",
+            "form_placeholder": "",
+            "label": "project_aim"
+        },
+        {
             "field_name": "sample_submission_date",
             "form_placeholder": "",
             "label": "sample_submission_date"
+        },
+        {
+            "field_name": "sample_submitter_email",
+            "form_placeholder": "",
+            "label": "sample_submitter_email"
+        },
+        {
+            "field_name": "sample_submitter_name",
+            "form_placeholder": "",
+            "label": "sample_submitter_name"
+        },
+        {
+            "field_name": "scientific_name_notes",
+            "form_placeholder": "",
+            "label": "scientific_name_notes"
+        },
+        {
+            "field_name": "sequence_length",
+            "form_placeholder": "",
+            "label": "sequence_length"
         },
         {
             "field_name": "sequencing_facility",
@@ -308,19 +223,19 @@
             "label": "sequencing_facility"
         },
         {
-            "field_name": "sequencing_model",
-            "form_placeholder": "",
-            "label": "sequencing_model"
-        },
-        {
             "field_name": "sequencing_platform",
             "form_placeholder": "",
             "label": "sequencing_platform"
         },
         {
-            "field_name": "species",
+            "field_name": "software_version",
             "form_placeholder": "",
-            "label": "species"
+            "label": "software_version"
+        },
+        {
+            "field_name": "state_or_territory",
+            "form_placeholder": "",
+            "label": "state_or_territory"
         },
         {
             "field_name": "ticket",
@@ -328,17 +243,32 @@
             "label": "ticket"
         },
         {
+            "field_name": "tissue_number",
+            "form_placeholder": "",
+            "label": "tissue_number"
+        },
+        {
             "field_name": "title",
             "form_placeholder": "",
             "label": "title"
         },
         {
-            "field_name": "work_order",
+            "field_name": "voucher_id",
             "form_placeholder": "",
-            "label": "work_order"
+            "label": "voucher_id"
+        },
+        {
+            "field_name": "voucher_number",
+            "form_placeholder": "",
+            "label": "voucher_number"
+        },
+        {
+            "field_name": "voucher_or_tissue_number",
+            "form_placeholder": "",
+            "label": "voucher_or_tissue_number"
         }
     ],
-    "dataset_type": "tsi-genomics-ddrad",
+    "dataset_type": "gap-genomics-ddrad",
     "resource_fields": [
         {
             "field_name": "name",
@@ -400,8 +330,8 @@
             "preset": "resource_format_autocomplete"
         },
         {
-            "field_name": "bpa_dataset_id",
-            "label": "bpa_dataset_id"
+            "field_name": "dataset_id",
+            "label": "dataset_id"
         },
         {
             "field_name": "flowcell_id",
