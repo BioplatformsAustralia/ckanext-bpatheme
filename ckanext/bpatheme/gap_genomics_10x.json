@@ -83,6 +83,11 @@
             "label": "ccg_jira_ticket"
         },
         {
+            "field_name": "country",
+            "form_placeholder": "",
+            "label": "country"
+        },
+        {
             "field_name": "data_generated",
             "form_placeholder": "",
             "label": "data_generated"
@@ -136,11 +141,6 @@
             "field_name": "family",
             "form_placeholder": "",
             "label": "family"
-        },
-        {
-            "field_name": "file_count",
-            "form_placeholder": "",
-            "label": "file_count"
         },
         {
             "field_name": "flow_cell_id",
@@ -233,6 +233,16 @@
             "label": "living_collections_recorded_by"
         },
         {
+            "field_name": "location_id",
+            "form_placeholder": "",
+            "label": "location_id"
+        },
+        {
+            "field_name": "location_notes",
+            "form_placeholder": "",
+            "label": "location_notes"
+        },
+        {
             "field_name": "nagoya_protocol_compliance",
             "form_placeholder": "",
             "label": "nagoya_protocol_compliance"
@@ -251,6 +261,11 @@
             "field_name": "notes",
             "form_placeholder": "",
             "label": "notes"
+        },
+        {
+            "field_name": "population_group",
+            "form_placeholder": "",
+            "label": "population_group"
         },
         {
             "field_name": "preservation_date_begin",
@@ -326,6 +341,16 @@
             "field_name": "silica_gel_pressed_sheet",
             "form_placeholder": "",
             "label": "silica_gel_pressed_sheet"
+        },
+        {
+            "field_name": "species_complex",
+            "form_placeholder": "",
+            "label": "species_complex"
+        },
+        {
+            "field_name": "state_or_territory",
+            "form_placeholder": "",
+            "label": "state_or_territory"
         },
         {
             "field_name": "ticket",
