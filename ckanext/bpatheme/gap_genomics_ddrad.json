@@ -233,6 +233,11 @@
             "label": "software_version"
         },
         {
+            "field_name": "species_complex",
+            "form_placeholder": "",
+            "label": "species_complex"
+        },
+        {
             "field_name": "state_or_territory",
             "form_placeholder": "",
             "label": "state_or_territory"
@@ -243,29 +248,9 @@
             "label": "ticket"
         },
         {
-            "field_name": "tissue_number",
-            "form_placeholder": "",
-            "label": "tissue_number"
-        },
-        {
             "field_name": "title",
             "form_placeholder": "",
             "label": "title"
-        },
-        {
-            "field_name": "voucher_id",
-            "form_placeholder": "",
-            "label": "voucher_id"
-        },
-        {
-            "field_name": "voucher_number",
-            "form_placeholder": "",
-            "label": "voucher_number"
-        },
-        {
-            "field_name": "voucher_or_tissue_number",
-            "form_placeholder": "",
-            "label": "voucher_or_tissue_number"
         }
     ],
     "dataset_type": "gap-genomics-ddrad",
