@@ -68,11 +68,6 @@
             "label": "base_url"
         },
         {
-            "field_name": "contextual_data_submission_date",
-            "form_placeholder": "",
-            "label": "contextual_data_submission_date"
-        },
-        {
             "field_name": "country",
             "form_placeholder": "",
             "label": "country"
