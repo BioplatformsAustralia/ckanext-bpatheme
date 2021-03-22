@@ -63,6 +63,16 @@
             "label": "archive_ingestion_date"
         },
         {
+            "field_name": "bait_set_name",
+            "form_placeholder": "",
+            "label": "bait_set_name"
+        },
+        {
+            "field_name": "bait_set_reference",
+            "form_placeholder": "",
+            "label": "bait_set_reference"
+        },
+        {
             "field_name": "base_url",
             "form_placeholder": "",
             "label": "base_url"
@@ -103,6 +113,16 @@
             "label": "description"
         },
         {
+            "field_name": "dna_extract",
+            "form_placeholder": "",
+            "label": "dna_extract"
+        },
+        {
+            "field_name": "dna_extract_pressed_sheet",
+            "form_placeholder": "",
+            "label": "dna_extract_pressed_sheet"
+        },
+        {
             "field_name": "experimental_design",
             "form_placeholder": "",
             "label": "experimental_design"
@@ -121,6 +141,51 @@
             "field_name": "folder_name",
             "form_placeholder": "",
             "label": "folder_name"
+        },
+        {
+            "field_name": "genomic_material_associated_references",
+            "form_placeholder": "",
+            "label": "genomic_material_associated_references"
+        },
+        {
+            "field_name": "genomic_material_preparation_date",
+            "form_placeholder": "",
+            "label": "genomic_material_preparation_date"
+        },
+        {
+            "field_name": "genomic_material_preparation_materials",
+            "form_placeholder": "",
+            "label": "genomic_material_preparation_materials"
+        },
+        {
+            "field_name": "genomic_material_preparation_process",
+            "form_placeholder": "",
+            "label": "genomic_material_preparation_process"
+        },
+        {
+            "field_name": "genomic_material_preparation_type",
+            "form_placeholder": "",
+            "label": "genomic_material_preparation_type"
+        },
+        {
+            "field_name": "genomic_material_prepared_by",
+            "form_placeholder": "",
+            "label": "genomic_material_prepared_by"
+        },
+        {
+            "field_name": "herbarium_code",
+            "form_placeholder": "",
+            "label": "herbarium_code"
+        },
+        {
+            "field_name": "id_vetting_by",
+            "form_placeholder": "",
+            "label": "id_vetting_by"
+        },
+        {
+            "field_name": "id_vetting_date",
+            "form_placeholder": "",
+            "label": "id_vetting_date"
         },
         {
             "field_name": "library_comments",
@@ -158,6 +223,21 @@
             "label": "library_type"
         },
         {
+            "field_name": "living_collections_event_date",
+            "form_placeholder": "",
+            "label": "living_collections_event_date"
+        },
+        {
+            "field_name": "living_collections_material_sample_rna",
+            "form_placeholder": "",
+            "label": "living_collections_material_sample_rna"
+        },
+        {
+            "field_name": "living_collections_recorded_by",
+            "form_placeholder": "",
+            "label": "living_collections_recorded_by"
+        },
+        {
             "field_name": "location_notes",
             "form_placeholder": "",
             "label": "location_notes"
@@ -166,6 +246,16 @@
             "field_name": "n_libraries_pooled",
             "form_placeholder": "",
             "label": "n_libraries_pooled"
+        },
+        {
+            "field_name": "nagoya_protocol_compliance",
+            "form_placeholder": "",
+            "label": "nagoya_protocol_compliance"
+        },
+        {
+            "field_name": "nagoya_protocol_permit_number",
+            "form_placeholder": "",
+            "label": "nagoya_protocol_permit_number"
         },
         {
             "field_name": "name",
@@ -181,6 +271,21 @@
             "field_name": "plate_name",
             "form_placeholder": "",
             "label": "plate_name"
+        },
+        {
+            "field_name": "preservation_date_begin",
+            "form_placeholder": "",
+            "label": "preservation_date_begin"
+        },
+        {
+            "field_name": "preservation_temperature",
+            "form_placeholder": "",
+            "label": "preservation_temperature"
+        },
+        {
+            "field_name": "preservation_type",
+            "form_placeholder": "",
+            "label": "preservation_type"
         },
         {
             "field_name": "project_aim",
@@ -203,11 +308,6 @@
             "label": "sample_submitter_name"
         },
         {
-            "field_name": "scientific_name_notes",
-            "form_placeholder": "",
-            "label": "scientific_name_notes"
-        },
-        {
             "field_name": "sequence_length",
             "form_placeholder": "",
             "label": "sequence_length"
@@ -221,6 +321,21 @@
             "field_name": "sequencing_platform",
             "form_placeholder": "",
             "label": "sequencing_platform"
+        },
+        {
+            "field_name": "silica_gel",
+            "form_placeholder": "",
+            "label": "silica_gel"
+        },
+        {
+            "field_name": "silica_gel_id",
+            "form_placeholder": "",
+            "label": "silica_gel_id"
+        },
+        {
+            "field_name": "silica_gel_pressed_sheet",
+            "form_placeholder": "",
+            "label": "silica_gel_pressed_sheet"
         },
         {
             "field_name": "software_version",
@@ -246,6 +361,31 @@
             "field_name": "title",
             "form_placeholder": "",
             "label": "title"
+        },
+        {
+            "field_name": "voucher_herbarium_catalog_number",
+            "form_placeholder": "",
+            "label": "voucher_herbarium_catalog_number"
+        },
+        {
+            "field_name": "voucher_herbarium_collector_id",
+            "form_placeholder": "",
+            "label": "voucher_herbarium_collector_id"
+        },
+        {
+            "field_name": "voucher_herbarium_event_date",
+            "form_placeholder": "",
+            "label": "voucher_herbarium_event_date"
+        },
+        {
+            "field_name": "voucher_herbarium_record_number",
+            "form_placeholder": "",
+            "label": "voucher_herbarium_record_number"
+        },
+        {
+            "field_name": "voucher_herbarium_recorded_by",
+            "form_placeholder": "",
+            "label": "voucher_herbarium_recorded_by"
         }
     ],
     "dataset_type": "gap-genomics-ddrad",
