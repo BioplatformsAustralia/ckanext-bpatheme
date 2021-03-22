@@ -143,6 +143,11 @@
             "label": "family"
         },
         {
+            "field_name": "flow_cell_id",
+            "form_placeholder": "",
+            "label": "flow_cell_id"
+        },
+        {
             "field_name": "flow_cell_type",
             "form_placeholder": "",
             "label": "flow_cell_type"
@@ -296,11 +301,6 @@
             "field_name": "project_aim",
             "form_placeholder": "",
             "label": "project_aim"
-        },
-        {
-            "field_name": "run_id",
-            "form_placeholder": "",
-            "label": "run_id"
         },
         {
             "field_name": "sample_id",
@@ -473,6 +473,10 @@
             "label": "facility_id"
         },
         {
+            "field_name": "flow_cell_id",
+            "label": "flow_cell_id"
+        },
+        {
             "field_name": "format",
             "label": "format"
         },
@@ -487,10 +491,6 @@
         {
             "field_name": "resource_type",
             "label": "resource_type"
-        },
-        {
-            "field_name": "run_id",
-            "label": "run_id"
         },
         {
             "field_name": "sample_id",
