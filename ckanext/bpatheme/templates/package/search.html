@@ -71,7 +71,7 @@
 {% endblock %}
 
 
-{% block secondary_content %}{% snippet "spatial/snippets/spatial_query.html", default_extent="[[-40,110], [0, 130]]" %}
+{% block secondary_content %}
 <div class="filters">
   <div>
     {% for facet in c.facet_titles %}
@@ -80,4 +80,5 @@
   </div>
   <a class="close no-text hide-filters"><i class="fa fa-times-circle"></i><span class="text">close</span></a>
 </div>
+{% snippet "spatial/snippets/spatial_query.html", default_extent="[[-40,110], [0, 130]]" %}
 {% endblock %}
