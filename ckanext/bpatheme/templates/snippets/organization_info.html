@@ -1,0 +1,36 @@
+{#
+Embeds organization info links within the sidebar of a page.
+
+organization    - The organization dict.
+truncate - A max length for the organization description. If not provided the description
+           will be full length.
+has_context_title - Boolean for whether to display a module-heading for when
+                    this snippet appears within a non-organization template
+                    (e.g. dataset page sidebar)
+
+Example:
+
+    {% snippet 'snippets/organization_info.html', organization=c.group_dict %}
+
+#}
+
+{% set truncate = truncate or 0 %}
+{% set url = h.url_for(organization.type + '_read', id=organization.name, ) %}
+
+{% block organization_info %}
+  <div class="module module-narrow module-shallow context-info">
+  <section class="module module-narrow organization_info">
+  {% block organization_info_title %}
+  {% if has_context_title %}
+    <h2 class="module-heading"><i class="fa fa-info-circle"></i> Supporting Information</h2>
+  {% endif %}
+  {% endblock %}
+  {% block organization_info_nav %}
+     <ul class="nav nav-simple">
+	  <li class="nav-item"><a href="/organization/pages/{{ organization.name }}/information">Initiative Information</a></li>
+	  <li class="nav-item"><a href="/organization/pages/{{ organization.name }}/methods">Methods</a></li>
+     </ul>
+  {% endblock %}
+  </section>
+  </div>
+{% endblock %}
