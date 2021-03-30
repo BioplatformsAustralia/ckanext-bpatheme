@@ -2827,20 +2827,12 @@
             "label": "flow_id"
         },
         {
-            "field_name": "format",
-            "label": "format"
-        },
-        {
             "field_name": "index",
             "label": "index"
         },
         {
             "field_name": "lane",
             "label": "lane"
-        },
-        {
-            "field_name": "md5",
-            "label": "md5"
         },
         {
             "field_name": "read",
