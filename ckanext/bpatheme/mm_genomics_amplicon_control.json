@@ -146,11 +146,6 @@
             "field_name": "ticket",
             "form_placeholder": "",
             "label": "ticket"
-        },
-        {
-            "field_name": "title",
-            "form_placeholder": "",
-            "label": "title"
         }
     ],
     "dataset_type": "mm-genomics-amplicon-control",
@@ -245,10 +240,6 @@
         {
             "field_name": "md5",
             "label": "md5"
-        },
-        {
-            "field_name": "name",
-            "label": "name"
         },
         {
             "field_name": "read",

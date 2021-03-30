@@ -2328,11 +2328,6 @@
             "label": "tin_meth"
         },
         {
-            "field_name": "title",
-            "form_placeholder": "",
-            "label": "title"
-        },
-        {
             "field_name": "tot_carb",
             "form_placeholder": "",
             "label": "tot_carb (%)"
@@ -2681,10 +2676,6 @@
         {
             "field_name": "md5",
             "label": "md5"
-        },
-        {
-            "field_name": "name",
-            "label": "name"
         }
     ],
     "scheming_version": 1
