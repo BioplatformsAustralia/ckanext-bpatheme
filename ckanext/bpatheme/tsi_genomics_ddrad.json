@@ -128,6 +128,16 @@
             "label": "date_of_transfer"
         },
         {
+            "field_name": "decimal_latitude_public",
+            "form_placeholder": "",
+            "label": "decimal_latitude_public"
+        },
+        {
+            "field_name": "decimal_longitude_public",
+            "form_placeholder": "",
+            "label": "decimal_longitude_public"
+        },
+        {
             "field_name": "description",
             "form_placeholder": "",
             "label": "description"
@@ -203,6 +213,11 @@
             "label": "library_location"
         },
         {
+            "field_name": "library_ng_ul",
+            "form_placeholder": "",
+            "label": "library_ng_ul"
+        },
+        {
             "field_name": "library_pcr_cycles",
             "form_placeholder": "",
             "label": "library_pcr_cycles"
@@ -211,6 +226,21 @@
             "field_name": "library_pcr_reps",
             "form_placeholder": "",
             "label": "library_pcr_reps"
+        },
+        {
+            "field_name": "library_pool_index_id",
+            "form_placeholder": "",
+            "label": "library_pool_index_id"
+        },
+        {
+            "field_name": "library_pool_index_sequence",
+            "form_placeholder": "",
+            "label": "library_pool_index_sequence"
+        },
+        {
+            "field_name": "library_pool_oligo_sequence",
+            "form_placeholder": "",
+            "label": "library_pool_oligo_sequence"
         },
         {
             "field_name": "library_prep_date",

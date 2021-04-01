@@ -83,6 +83,11 @@
             "label": "cell_postion"
         },
         {
+            "field_name": "country",
+            "form_placeholder": "",
+            "label": "country"
+        },
+        {
             "field_name": "data_generated",
             "form_placeholder": "",
             "label": "data_generated"
@@ -138,9 +143,9 @@
             "label": "family"
         },
         {
-            "field_name": "file_count",
+            "field_name": "flow_cell_id",
             "form_placeholder": "",
-            "label": "file_count"
+            "label": "flow_cell_id"
         },
         {
             "field_name": "flow_cell_type",
@@ -238,6 +243,16 @@
             "label": "living_collections_recorded_by"
         },
         {
+            "field_name": "location_id",
+            "form_placeholder": "",
+            "label": "location_id"
+        },
+        {
+            "field_name": "location_notes",
+            "form_placeholder": "",
+            "label": "location_notes"
+        },
+        {
             "field_name": "nagoya_protocol_compliance",
             "form_placeholder": "",
             "label": "nagoya_protocol_compliance"
@@ -263,6 +278,11 @@
             "label": "notes"
         },
         {
+            "field_name": "population_group",
+            "form_placeholder": "",
+            "label": "population_group"
+        },
+        {
             "field_name": "preservation_date_begin",
             "form_placeholder": "",
             "label": "preservation_date_begin"
@@ -281,11 +301,6 @@
             "field_name": "project_aim",
             "form_placeholder": "",
             "label": "project_aim"
-        },
-        {
-            "field_name": "run_id",
-            "form_placeholder": "",
-            "label": "run_id"
         },
         {
             "field_name": "sample_id",
@@ -341,6 +356,16 @@
             "field_name": "silica_gel_pressed_sheet",
             "form_placeholder": "",
             "label": "silica_gel_pressed_sheet"
+        },
+        {
+            "field_name": "species_complex",
+            "form_placeholder": "",
+            "label": "species_complex"
+        },
+        {
+            "field_name": "state_or_territory",
+            "form_placeholder": "",
+            "label": "state_or_territory"
         },
         {
             "field_name": "ticket",
@@ -448,6 +473,10 @@
             "label": "facility_id"
         },
         {
+            "field_name": "flow_cell_id",
+            "label": "flow_cell_id"
+        },
+        {
             "field_name": "format",
             "label": "format"
         },
@@ -462,10 +491,6 @@
         {
             "field_name": "resource_type",
             "label": "resource_type"
-        },
-        {
-            "field_name": "run_id",
-            "label": "run_id"
         },
         {
             "field_name": "sample_id",

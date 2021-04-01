@@ -5,7 +5,7 @@
 	{% else %}
 		{% set search_by = '' %}
 	{% endif %}
-	{% set search_by_options = ({'text':'All fields', 'value':''},{'text':'Species', 'value':'species'},{'text':'Scientific Name', 'value':'scientific_name'},{'text':'Common Name', 'value':'common_name'}) %}
+	{% set search_by_options = ({'text':'All fields', 'value':''},{'text':'Scientific Name', 'value':'scientific_name'},{'text':'Common Name', 'value':'common_name'},{'text':'Family', 'value':'family'}) %}
 	{{ form.select('ext_search_by', label=_('Search By'), selected=search_by, options=search_by_options) }}
     </div>
     <div class="input-group search-input-group">

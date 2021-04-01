@@ -258,7 +258,6 @@ class CustomTheme(plugins.SingletonPlugin):
         ## In addtion to the defaults, we want these facets
         facets_dict['organization'] = _('Initiative')
         facets_dict['type'] = _('Data Type')
-        facets_dict['access_level'] = _('Access Level')
 
         ## We want the facets to appear in this order, with any others at the end
         facet_order = [
@@ -266,7 +265,6 @@ class CustomTheme(plugins.SingletonPlugin):
                 'type',
                 'res_format',
                 'tags',
-                'access_level',
                 ]
 
         ## Updating facet positions

@@ -35,7 +35,9 @@
 
 {% block content_primary_nav %}
   {{ h.build_nav_icon('dataset_read', _('Dataset'), id=pkg.name) }}
-  {{ h.build_nav_icon('dataset_groups', _('Groups'), id=pkg.name) }}
+  {% if c.pkg_dict.groups %}
+    {{ h.build_nav_icon('dataset_groups', _('Groups'), id=pkg.name) }}
+  {% endif %}
   {{ h.build_nav_icon('dataset_activity', _('Activity Stream'), id=pkg.name) }}
 {% endblock %}
 
@@ -66,6 +68,7 @@
     {% if pkg.organization %}
       {% set org = h.get_organization(pkg.organization.name) %}
       {% snippet "snippets/organization.html", organization=org, has_context_title=true %}
+      {% snippet "snippets/organization_info.html", organization=org, has_context_title=true %}
     {% endif %}
   {% endblock %}
 
