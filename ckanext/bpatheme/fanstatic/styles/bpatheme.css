@@ -920,3 +920,13 @@ body {
 #user-comms .comms-owner {
     font-style: italic;
 }
+
+/* styling for map */
+
+.dataset-map-expanded #dataset-map {
+    position: fixed;
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 60%;
+}
