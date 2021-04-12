@@ -2648,6 +2648,102 @@
             "label": "run"
         },
         {
+            "field_name": "agrochemical_additions",
+            "label": "agrochemical_additions"
+        },
+        {
+            "field_name": "bpa_id",
+            "label": "bpa_id"
+        },
+        {
+            "field_name": "conductivity",
+            "label": "conductivity"
+        },
+        {
+            "field_name": "crop_rotation_1yr_since_present",
+            "label": "crop_rotation_1yr_since_present"
+        },
+        {
+            "field_name": "crop_rotation_2yrs_since_present",
+            "label": "crop_rotation_2yrs_since_present"
+        },
+        {
+            "field_name": "crop_rotation_3yrs_since_present",
+            "label": "crop_rotation_3yrs_since_present"
+        },
+        {
+            "field_name": "crop_rotation_4yrs_since_present",
+            "label": "crop_rotation_4yrs_since_present"
+        },
+        {
+            "field_name": "crop_rotation_5yrs_since_present",
+            "label": "crop_rotation_5yrs_since_present"
+        },
+        {
+            "field_name": "date_since_change_in_land_use",
+            "label": "date_since_change_in_land_use"
+        },
+        {
+            "field_name": "extreme_events",
+            "label": "extreme_events"
+        },
+        {
+            "field_name": "fao_soil_classification",
+            "label": "fao_soil_classification"
+        },
+        {
+            "field_name": "fire_history",
+            "label": "fire_history"
+        },
+        {
+            "field_name": "fire_intensity_if_known",
+            "label": "fire_intensity_if_known"
+        },
+        {
+            "field_name": "flooding",
+            "label": "flooding"
+        },
+        {
+            "field_name": "geo_loc_name",
+            "label": "geo_loc_name"
+        },
+        {
+            "field_name": "horizon_classification",
+            "label": "horizon_classification"
+        },
+        {
+            "field_name": "immediate_previous_land_use",
+            "label": "immediate_previous_land_use"
+        },
+        {
+            "field_name": "profile_position",
+            "label": "profile_position"
+        },
+        {
+            "field_name": "soil_sample_storage_method",
+            "label": "soil_sample_storage_method"
+        },
+        {
+            "field_name": "tillage",
+            "label": "tillage"
+        },
+        {
+            "field_name": "vegetation_dom_grasses",
+            "label": "vegetation_dom_grasses"
+        },
+        {
+            "field_name": "vegetation_dom_shrubs",
+            "label": "vegetation_dom_shrubs"
+        },
+        {
+            "field_name": "vegetation_dom_trees",
+            "label": "vegetation_dom_trees"
+        },
+        {
+            "field_name": "vegetation_total_cover",
+            "label": "vegetation_total_cover"
+        },
+        {
             "field_name": "vendor",
             "label": "vendor"
         }
