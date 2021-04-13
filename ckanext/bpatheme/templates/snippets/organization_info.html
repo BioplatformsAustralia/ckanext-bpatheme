@@ -14,6 +14,7 @@ Example:
 
 #}
 
+
 {% set truncate = truncate or 0 %}
 {% set url = h.url_for(organization.type + '_read', id=organization.name, ) %}
 
@@ -27,8 +28,8 @@ Example:
   {% endblock %}
   {% block organization_info_nav %}
      <ul class="nav nav-simple">
-	  <li class="nav-item"><a href="/organization/pages/{{ organization.name }}/information">Initiative Information</a></li>
-	  <li class="nav-item"><a href="/organization/pages/{{ organization.name }}/methods">Methods</a></li>
+          {% snippet 'snippets/organization_info_link.html', organization=organization, title="Initiative Information", key="info_url", alternative="information" %}
+          {% snippet 'snippets/organization_info_link.html', organization=organization, title="Methods", key="methods_url", alternative="methods" %}
      </ul>
   {% endblock %}
   </section>
