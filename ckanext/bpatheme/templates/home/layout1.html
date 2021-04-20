@@ -186,8 +186,26 @@
     {% if projects.append(stemcells) %} {% endif %}
 
     {% macro render_initiative(i) %}
+      {% set vars = { 'usedefault': True }  %}
+      {% set organization = h.get_organization(i.slug) %}
+
+      {% if 'extras' in organization %}
+        {% for item in organization['extras'] %}
+          {% if 'key' in item %}
+             {% if item['key'] == 'dataset_url' and item['value']|length %}
+               {% if vars.update({'usedefault': False}) %} {% endif %}
+               {% if vars.update({'org_link': item['value']}) %} {% endif %}
+             {% endif %}
+          {% endif %}
+        {% endfor %}
+      {% endif %}
+
+      {% if vars.usedefault %}
+        {% if vars.update({'org_link': h.url_for('dataset', organization=i.slug)}) %} {% endif %}
+      {% endif %}
+
+      {% set org_link = vars.org_link %}
       <div>
-        {% set org_link = h.url_for('dataset', organization=i.slug) %}
         <a href="{{ org_link }}">
           <img class="icon_logo_default" src="{{ i.icon }}" alt="{{ i.title }}">
         </a>
