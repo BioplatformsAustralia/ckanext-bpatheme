@@ -58,6 +58,11 @@
             "label": "Resource Permissions"
         },
         {
+            "field_name": "sequence_data_type",
+            "form_placeholder": "used by ckanext-bpatheme",
+            "label": "Sequence Data Type"
+        },
+        {
             "field_name": "characteristics",
             "form_placeholder": "",
             "label": "characteristics"
@@ -136,11 +141,6 @@
             "field_name": "source_name",
             "form_placeholder": "",
             "label": "source_name"
-        },
-        {
-            "field_name": "title",
-            "form_placeholder": "",
-            "label": "title"
         },
         {
             "field_name": "url",
@@ -236,10 +236,6 @@
             "label": "flowcell"
         },
         {
-            "field_name": "format",
-            "label": "format"
-        },
-        {
             "field_name": "lane_number",
             "label": "lane_number"
         },
@@ -254,14 +250,6 @@
         {
             "field_name": "library_type",
             "label": "library_type"
-        },
-        {
-            "field_name": "md5",
-            "label": "md5"
-        },
-        {
-            "field_name": "name",
-            "label": "name"
         },
         {
             "field_name": "number",

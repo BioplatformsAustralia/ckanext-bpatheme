@@ -58,6 +58,11 @@
             "label": "Resource Permissions"
         },
         {
+            "field_name": "sequence_data_type",
+            "form_placeholder": "used by ckanext-bpatheme",
+            "label": "Sequence Data Type"
+        },
+        {
             "field_name": "analytical_platform",
             "form_placeholder": "",
             "label": "analytical_platform"
@@ -168,11 +173,6 @@
             "label": "omics"
         },
         {
-            "field_name": "replicate",
-            "form_placeholder": "",
-            "label": "replicate"
-        },
-        {
             "field_name": "sample_id",
             "form_placeholder": "",
             "label": "sample_id"
@@ -206,11 +206,6 @@
             "field_name": "ticket",
             "form_placeholder": "",
             "label": "ticket"
-        },
-        {
-            "field_name": "title",
-            "form_placeholder": "",
-            "label": "title"
         },
         {
             "field_name": "work_order",
@@ -278,18 +273,6 @@
             "field_name": "format",
             "label": "Format",
             "preset": "resource_format_autocomplete"
-        },
-        {
-            "field_name": "format",
-            "label": "format"
-        },
-        {
-            "field_name": "md5",
-            "label": "md5"
-        },
-        {
-            "field_name": "name",
-            "label": "name"
         }
     ],
     "scheming_version": 1
