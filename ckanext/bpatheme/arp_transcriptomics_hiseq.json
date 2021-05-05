@@ -58,6 +58,11 @@
             "label": "Resource Permissions"
         },
         {
+            "field_name": "sequence_data_type",
+            "form_placeholder": "used by ckanext-bpatheme",
+            "label": "Sequence Data Type"
+        },
+        {
             "field_name": "additional_notes",
             "form_placeholder": "",
             "label": "additional_notes"
@@ -298,11 +303,6 @@
             "label": "ticket"
         },
         {
-            "field_name": "title",
-            "form_placeholder": "",
-            "label": "title"
-        },
-        {
             "field_name": "volume_ul",
             "form_placeholder": "",
             "label": "volume_ul"
@@ -379,10 +379,6 @@
             "label": "flow_cell_id"
         },
         {
-            "field_name": "format",
-            "label": "format"
-        },
-        {
             "field_name": "index",
             "label": "index"
         },
@@ -393,14 +389,6 @@
         {
             "field_name": "library",
             "label": "library"
-        },
-        {
-            "field_name": "md5",
-            "label": "md5"
-        },
-        {
-            "field_name": "name",
-            "label": "name"
         },
         {
             "field_name": "read",

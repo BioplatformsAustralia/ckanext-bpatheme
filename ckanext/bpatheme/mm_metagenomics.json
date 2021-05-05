@@ -58,6 +58,21 @@
             "label": "Resource Permissions"
         },
         {
+            "field_name": "sequence_data_type",
+            "form_placeholder": "used by ckanext-bpatheme",
+            "label": "Sequence Data Type"
+        },
+        {
+            "field_name": "absorbance_260_280_ratio_submitter",
+            "form_placeholder": "",
+            "label": "absorbance_260_280_ratio_submitter"
+        },
+        {
+            "field_name": "absorbance_260_280_ratio_submitter_meth",
+            "form_placeholder": "",
+            "label": "absorbance_260_280_ratio_submitter_meth"
+        },
+        {
             "field_name": "acid_volatile_sulphides",
             "form_placeholder": "",
             "label": "acid_volatile_sulphides"

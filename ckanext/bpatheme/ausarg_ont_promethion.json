@@ -58,6 +58,11 @@
             "label": "Resource Permissions"
         },
         {
+            "field_name": "sequence_data_type",
+            "form_placeholder": "used by ckanext-bpatheme",
+            "label": "Sequence Data Type"
+        },
+        {
             "field_name": "access_rights",
             "form_placeholder": "",
             "label": "access_rights"
@@ -96,6 +101,11 @@
             "field_name": "associated_media",
             "form_placeholder": "",
             "label": "associated_media"
+        },
+        {
+            "field_name": "ausarg_project",
+            "form_placeholder": "",
+            "label": "ausarg_project"
         },
         {
             "field_name": "barcode_id",
@@ -563,11 +573,6 @@
             "label": "tissue_type"
         },
         {
-            "field_name": "title",
-            "form_placeholder": "",
-            "label": "title"
-        },
-        {
             "field_name": "type_status",
             "form_placeholder": "",
             "label": "type_status"
@@ -672,20 +677,8 @@
             "label": "flowcell_id"
         },
         {
-            "field_name": "format",
-            "label": "format"
-        },
-        {
             "field_name": "library_id",
             "label": "library_id"
-        },
-        {
-            "field_name": "md5",
-            "label": "md5"
-        },
-        {
-            "field_name": "name",
-            "label": "name"
         },
         {
             "field_name": "resource_type",

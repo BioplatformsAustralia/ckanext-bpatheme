@@ -58,6 +58,11 @@
             "label": "Resource Permissions"
         },
         {
+            "field_name": "sequence_data_type",
+            "form_placeholder": "used by ckanext-bpatheme",
+            "label": "Sequence Data Type"
+        },
+        {
             "field_name": "bait_set_name",
             "form_placeholder": "",
             "label": "bait_set_name"
@@ -101,6 +106,11 @@
             "field_name": "dataset_id",
             "form_placeholder": "",
             "label": "dataset_id"
+        },
+        {
+            "field_name": "date_data_published",
+            "form_placeholder": "",
+            "label": "date_data_published"
         },
         {
             "field_name": "date_of_transfer",
@@ -373,11 +383,6 @@
             "label": "ticket"
         },
         {
-            "field_name": "title",
-            "form_placeholder": "",
-            "label": "title"
-        },
-        {
             "field_name": "voucher_herbarium_catalog_number",
             "form_placeholder": "",
             "label": "voucher_herbarium_catalog_number"
@@ -475,18 +480,6 @@
         {
             "field_name": "flow_cell_id",
             "label": "flow_cell_id"
-        },
-        {
-            "field_name": "format",
-            "label": "format"
-        },
-        {
-            "field_name": "md5",
-            "label": "md5"
-        },
-        {
-            "field_name": "name",
-            "label": "name"
         },
         {
             "field_name": "resource_type",
