@@ -1,0 +1,501 @@
+{
+    "about_url": "https://data.bioplatforms.com/",
+    "dataset_fields": [
+        {
+            "display_property": "dct:publisher",
+            "field_name": "owner_org",
+            "form_snippet": "organization.html",
+            "label": "Organization",
+            "validators": "owner_org_validator unicode"
+        },
+        {
+            "field_name": "title",
+            "form_placeholder": "",
+            "label": "Title",
+            "preset": "title"
+        },
+        {
+            "display_property": "dcat:Dataset/dct:description",
+            "field_name": "notes",
+            "form_placeholder": "eg. Some useful notes about the data",
+            "form_snippet": "markdown.html",
+            "label": "Description"
+        },
+        {
+            "field_name": "name",
+            "form_placeholder": "",
+            "label": "URL",
+            "preset": "dataset_slug"
+        },
+        {
+            "display_property": "dcat:Dataset/dct:keyword",
+            "field_name": "tag_string",
+            "form_attrs": {
+                "data-module": "autocomplete",
+                "data-module-source": "/api/2/util/tag/autocomplete?incomplete=?",
+                "data-module-tags": ""
+            },
+            "form_placeholder": "type to auto-complete",
+            "label": "Tags",
+            "validators": "ignore_missing tag_string_convert"
+        },
+        {
+            "display_property": "dcat:Dataset/dct:spatial",
+            "display_snippet": "spatial.html",
+            "field_name": "spatial",
+            "form_placeholder": "Paste a valid GeoJSON geometry",
+            "label": "Geospatial Coverage"
+        },
+        {
+            "display_property": "dcat:Dataset/dcat:distribution/dcat:Distribution/dct:license",
+            "field_name": "license_id",
+            "form_snippet": "license.html",
+            "label": "License"
+        },
+        {
+            "field_name": "resource_permissions",
+            "form_placeholder": "used by ckanext-initiatives",
+            "label": "Resource Permissions"
+        },
+        {
+            "field_name": "sequence_data_type",
+            "form_placeholder": "used by ckanext-bpatheme",
+            "label": "Sequence Data Type"
+        },
+        {
+            "field_name": "analysis_software",
+            "form_placeholder": "",
+            "label": "analysis_software"
+        },
+        {
+            "field_name": "analysis_software_version",
+            "form_placeholder": "",
+            "label": "analysis_software_version"
+        },
+        {
+            "field_name": "archive_ingestion_date",
+            "form_placeholder": "",
+            "label": "archive_ingestion_date"
+        },
+        {
+            "field_name": "base_url",
+            "form_placeholder": "",
+            "label": "base_url"
+        },
+        {
+            "field_name": "cell_postion",
+            "form_placeholder": "",
+            "label": "cell_postion"
+        },
+        {
+            "field_name": "contextual_data_submission_date",
+            "form_placeholder": "",
+            "label": "contextual_data_submission_date"
+        },
+        {
+            "field_name": "data_context",
+            "form_placeholder": "",
+            "label": "data_context"
+        },
+        {
+            "field_name": "data_custodian",
+            "form_placeholder": "",
+            "label": "data_custodian"
+        },
+        {
+            "field_name": "data_generated",
+            "form_placeholder": "",
+            "label": "data_generated"
+        },
+        {
+            "field_name": "data_type",
+            "form_placeholder": "",
+            "label": "data_type"
+        },
+        {
+            "field_name": "dataset_id",
+            "form_placeholder": "",
+            "label": "dataset_id"
+        },
+        {
+            "field_name": "dataset_url",
+            "form_placeholder": "",
+            "label": "dataset_url"
+        },
+        {
+            "field_name": "date_of_transfer",
+            "form_placeholder": "",
+            "label": "date_of_transfer"
+        },
+        {
+            "field_name": "description",
+            "form_placeholder": "",
+            "label": "description"
+        },
+        {
+            "field_name": "dna_treatment",
+            "form_placeholder": "",
+            "label": "dna_treatment"
+        },
+        {
+            "field_name": "experimental_design",
+            "form_placeholder": "",
+            "label": "experimental_design"
+        },
+        {
+            "field_name": "facility",
+            "form_placeholder": "",
+            "label": "facility"
+        },
+        {
+            "field_name": "facility_project_code",
+            "form_placeholder": "",
+            "label": "facility_project_code"
+        },
+        {
+            "field_name": "facility_sample_id",
+            "form_placeholder": "",
+            "label": "facility_sample_id"
+        },
+        {
+            "field_name": "file_type",
+            "form_placeholder": "",
+            "label": "file_type"
+        },
+        {
+            "field_name": "flowcell_id",
+            "form_placeholder": "",
+            "label": "flowcell_id"
+        },
+        {
+            "field_name": "flowcell_type",
+            "form_placeholder": "",
+            "label": "flowcell_type"
+        },
+        {
+            "field_name": "folder_name",
+            "form_placeholder": "",
+            "label": "folder_name"
+        },
+        {
+            "field_name": "genus",
+            "form_placeholder": "",
+            "label": "genus"
+        },
+        {
+            "field_name": "insert_size_range",
+            "form_placeholder": "",
+            "label": "insert_size_range"
+        },
+        {
+            "field_name": "latitude",
+            "form_placeholder": "",
+            "label": "latitude"
+        },
+        {
+            "field_name": "library_comments",
+            "form_placeholder": "",
+            "label": "library_comments"
+        },
+        {
+            "field_name": "library_construction_protocol",
+            "form_placeholder": "",
+            "label": "library_construction_protocol"
+        },
+        {
+            "field_name": "library_id",
+            "form_placeholder": "",
+            "label": "library_id"
+        },
+        {
+            "field_name": "library_index_seq_p5",
+            "form_placeholder": "",
+            "label": "library_index_seq_p5"
+        },
+        {
+            "field_name": "library_index_sequence",
+            "form_placeholder": "",
+            "label": "library_index_sequence"
+        },
+        {
+            "field_name": "library_layout",
+            "form_placeholder": "",
+            "label": "library_layout"
+        },
+        {
+            "field_name": "library_location",
+            "form_placeholder": "",
+            "label": "library_location"
+        },
+        {
+            "field_name": "library_ng_ul",
+            "form_placeholder": "",
+            "label": "library_ng_ul"
+        },
+        {
+            "field_name": "library_oligo_sequence",
+            "form_placeholder": "",
+            "label": "library_oligo_sequence"
+        },
+        {
+            "field_name": "library_oligo_sequence_p5",
+            "form_placeholder": "",
+            "label": "library_oligo_sequence_p5"
+        },
+        {
+            "field_name": "library_pcr_cycles",
+            "form_placeholder": "",
+            "label": "library_pcr_cycles"
+        },
+        {
+            "field_name": "library_pcr_reps",
+            "form_placeholder": "",
+            "label": "library_pcr_reps"
+        },
+        {
+            "field_name": "library_prep_date",
+            "form_placeholder": "",
+            "label": "library_prep_date"
+        },
+        {
+            "field_name": "library_prepared_by",
+            "form_placeholder": "",
+            "label": "library_prepared_by"
+        },
+        {
+            "field_name": "library_selection",
+            "form_placeholder": "",
+            "label": "library_selection"
+        },
+        {
+            "field_name": "library_source",
+            "form_placeholder": "",
+            "label": "library_source"
+        },
+        {
+            "field_name": "library_strategy",
+            "form_placeholder": "",
+            "label": "library_strategy"
+        },
+        {
+            "field_name": "library_type",
+            "form_placeholder": "",
+            "label": "library_type"
+        },
+        {
+            "field_name": "longitude",
+            "form_placeholder": "",
+            "label": "longitude"
+        },
+        {
+            "field_name": "movie_length",
+            "form_placeholder": "",
+            "label": "movie_length"
+        },
+        {
+            "field_name": "n_libraries_pooled",
+            "form_placeholder": "",
+            "label": "n_libraries_pooled"
+        },
+        {
+            "field_name": "name",
+            "form_placeholder": "",
+            "label": "name"
+        },
+        {
+            "field_name": "notes",
+            "form_placeholder": "",
+            "label": "notes"
+        },
+        {
+            "field_name": "p5_library_index_id",
+            "form_placeholder": "",
+            "label": "p5_library_index_id"
+        },
+        {
+            "field_name": "p5_library_index_sequence",
+            "form_placeholder": "",
+            "label": "p5_library_index_sequence"
+        },
+        {
+            "field_name": "p5_library_oligo_sequence",
+            "form_placeholder": "",
+            "label": "p5_library_oligo_sequence"
+        },
+        {
+            "field_name": "p7_library_index_id",
+            "form_placeholder": "",
+            "label": "p7_library_index_id"
+        },
+        {
+            "field_name": "p7_library_index_sequence",
+            "form_placeholder": "",
+            "label": "p7_library_index_sequence"
+        },
+        {
+            "field_name": "p7_library_oligo_sequence",
+            "form_placeholder": "",
+            "label": "p7_library_oligo_sequence"
+        },
+        {
+            "field_name": "sample_id",
+            "form_placeholder": "",
+            "label": "sample_id"
+        },
+        {
+            "field_name": "sample_submission_date",
+            "form_placeholder": "",
+            "label": "sample_submission_date"
+        },
+        {
+            "field_name": "sequencing_facility",
+            "form_placeholder": "",
+            "label": "sequencing_facility"
+        },
+        {
+            "field_name": "sequencing_kit_chemistry_version",
+            "form_placeholder": "",
+            "label": "sequencing_kit_chemistry_version"
+        },
+        {
+            "field_name": "sequencing_model",
+            "form_placeholder": "",
+            "label": "sequencing_model"
+        },
+        {
+            "field_name": "sequencing_platform",
+            "form_placeholder": "",
+            "label": "sequencing_platform"
+        },
+        {
+            "field_name": "species",
+            "form_placeholder": "",
+            "label": "species"
+        },
+        {
+            "field_name": "specimen_id",
+            "form_placeholder": "",
+            "label": "specimen_id"
+        },
+        {
+            "field_name": "ticket",
+            "form_placeholder": "",
+            "label": "ticket"
+        },
+        {
+            "field_name": "tissue_number",
+            "form_placeholder": "",
+            "label": "tissue_number"
+        },
+        {
+            "field_name": "voucher_id",
+            "form_placeholder": "",
+            "label": "voucher_id"
+        },
+        {
+            "field_name": "voucher_or_tissue_number",
+            "form_placeholder": "",
+            "label": "voucher_or_tissue_number"
+        },
+        {
+            "field_name": "work_order",
+            "form_placeholder": "",
+            "label": "work_order"
+        }
+    ],
+    "dataset_type": "ausarg-exon-capture",
+    "resource_fields": [
+        {
+            "field_name": "name",
+            "label": "Name"
+        },
+        {
+            "field_name": "description",
+            "label": "Description"
+        },
+        {
+            "field_name": "url",
+            "form_placeholder": "http://downloads-qcif.bioplatforms.com/my-dataset.fastq.gz",
+            "label": "Data File",
+            "preset": "resource_url_upload",
+            "upload_label": "Sequence File"
+        },
+        {
+            "field_name": "md5",
+            "label": "MD5"
+        },
+        {
+            "field_name": "sha256",
+            "label": "SHA256"
+        },
+        {
+            "field_name": "size",
+            "label": "File size (bytes)"
+        },
+        {
+            "field_name": "s3etag_8388608",
+            "label": "S3 E-Tag (8MB multipart)"
+        },
+        {
+            "field_name": "s3etag_16777216",
+            "label": "S3 E-Tag (16MB multipart)"
+        },
+        {
+            "field_name": "s3etag_33554432",
+            "label": "S3 E-Tag (32MB multipart)"
+        },
+        {
+            "field_name": "s3etag_67108864",
+            "label": "S3 E-Tag (64MB multipart)"
+        },
+        {
+            "field_name": "s3etag_134217728",
+            "label": "S3 E-Tag (128MB multipart)"
+        },
+        {
+            "field_name": "s3_etag_verified_at",
+            "form_placeholder": "",
+            "label": "S3 E-Tag Verified At",
+            "preset": "datetime"
+        },
+        {
+            "display_property": "dcat:Dataset/dcat:distribution/dcat:Distribution/dcat:format",
+            "field_name": "format",
+            "label": "Format",
+            "preset": "resource_format_autocomplete"
+        },
+        {
+            "field_name": "flowcell_id",
+            "label": "flowcell_id"
+        },
+        {
+            "field_name": "flowcellindex",
+            "label": "flowcellindex"
+        },
+        {
+            "field_name": "index",
+            "label": "index"
+        },
+        {
+            "field_name": "lane",
+            "label": "lane"
+        },
+        {
+            "field_name": "library_id",
+            "label": "library_id"
+        },
+        {
+            "field_name": "read",
+            "label": "read"
+        },
+        {
+            "field_name": "resource_type",
+            "label": "resource_type"
+        },
+        {
+            "field_name": "runsamplenum",
+            "label": "runsamplenum"
+        }
+    ],
+    "scheming_version": 1
+}
