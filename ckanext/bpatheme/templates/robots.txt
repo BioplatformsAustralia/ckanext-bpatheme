@@ -1,0 +1,15 @@
+User-agent: *
+{% block all_user_agents -%}
+Disallow: /dataset?*
+Disallow: /dataset/
+Disallow: /bulk/
+Disallow: /fanstatic/
+Disallow: /dataset/rate/
+Disallow: /revision/
+Disallow: /dataset/*/history
+Disallow: /api/
+Crawl-Delay: 10
+{%- endblock %}
+
+{% block additional_user_agents -%}
+{%- endblock %}
