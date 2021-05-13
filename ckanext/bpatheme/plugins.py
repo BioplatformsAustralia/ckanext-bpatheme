@@ -257,12 +257,12 @@ class CustomTheme(plugins.SingletonPlugin):
     def dataset_facets(self, facets_dict, package_type):
         ## In addtion to the defaults, we want these facets
         facets_dict['organization'] = _('Initiative')
-        facets_dict['type'] = _('Data Type')
+        facets_dict['sequence_data_type'] = _('Sequence Data Type')
 
         ## We want the facets to appear in this order, with any others at the end
         facet_order = [
                 'organization',
-                'type',
+                'sequence_data_type',
                 'res_format',
                 'tags',
                 ]

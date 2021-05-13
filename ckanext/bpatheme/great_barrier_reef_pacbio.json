@@ -58,6 +58,11 @@
             "label": "Resource Permissions"
         },
         {
+            "field_name": "sequence_data_type",
+            "form_placeholder": "used by ckanext-bpatheme",
+            "label": "Sequence Data Type"
+        },
+        {
             "field_name": "casava_version",
             "form_placeholder": "",
             "label": "casava_version"
@@ -131,11 +136,6 @@
             "field_name": "ticket",
             "form_placeholder": "",
             "label": "ticket"
-        },
-        {
-            "field_name": "title",
-            "form_placeholder": "",
-            "label": "title"
         }
     ],
     "dataset_type": "great-barrier-reef-pacbio",
@@ -202,18 +202,6 @@
         {
             "field_name": "flow_cell_id",
             "label": "flow_cell_id"
-        },
-        {
-            "field_name": "format",
-            "label": "format"
-        },
-        {
-            "field_name": "md5",
-            "label": "md5"
-        },
-        {
-            "field_name": "name",
-            "label": "name"
         },
         {
             "field_name": "run_number",
