@@ -1,8 +1,10 @@
+{% block styles %}
 {#{% resource 'fanstatic/vendor/jquery.min.js' %}#}
 <script type="text/javascript" src="{{ h.url_for_static('fanstatic/vendor/jquery.min.js') }}"></script>
 
 {% resource 'bpatheme/vendor/bootstraptable/bootstrap-table.min.js' %}
 {% resource 'bpatheme/vendor/bootstraptable/bootstrap-table.min.css' %}
+{% endblock %}
 
 <div role="main" id="layout-summary" class="hero landing">
   <div id="summary-text">
