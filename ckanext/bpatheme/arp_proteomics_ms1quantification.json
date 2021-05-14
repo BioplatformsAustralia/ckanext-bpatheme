@@ -58,6 +58,11 @@
             "label": "Resource Permissions"
         },
         {
+            "field_name": "sequence_data_type",
+            "form_placeholder": "used by ckanext-bpatheme",
+            "label": "Sequence Data Type"
+        },
+        {
             "field_name": "acquisition_mode_fragmentation",
             "form_placeholder": "",
             "label": "acquisition_mode_fragmentation"
@@ -303,11 +308,6 @@
             "label": "ticket"
         },
         {
-            "field_name": "title",
-            "form_placeholder": "",
-            "label": "title"
-        },
-        {
             "field_name": "treatment",
             "form_placeholder": "",
             "label": "treatment"
@@ -382,14 +382,6 @@
         {
             "field_name": "machine_data",
             "label": "machine_data"
-        },
-        {
-            "field_name": "md5",
-            "label": "md5"
-        },
-        {
-            "field_name": "name",
-            "label": "name"
         },
         {
             "field_name": "resource_type",

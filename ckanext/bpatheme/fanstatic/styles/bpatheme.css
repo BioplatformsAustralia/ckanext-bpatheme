@@ -495,7 +495,7 @@ body {
 
 /* Background for search area */
 .search-background {
-    background-image: url("/header-background_2.png");
+    background-image: url("/header-background_2.webp");
     background-size: cover;
     background-repeat: no-repeat;
     width: 100%;
@@ -919,4 +919,14 @@ body {
 
 #user-comms .comms-owner {
     font-style: italic;
+}
+
+/* styling for map */
+
+.dataset-map-expanded #dataset-map {
+    position: fixed;
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 60%;
 }
