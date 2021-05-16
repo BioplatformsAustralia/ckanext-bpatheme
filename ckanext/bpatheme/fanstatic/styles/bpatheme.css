@@ -483,10 +483,8 @@ body {
 }
 
 .site-footer-logo img {
-    max-width: 150px;
-    padding-top: calc(137.14px / 150px * 100%);
-    height: 0;
-    overflow: hidden;
+    width:150px;
+    height: 137.14px;
 }
 
 /* Need this to break out of the automatically generated .container class*/
