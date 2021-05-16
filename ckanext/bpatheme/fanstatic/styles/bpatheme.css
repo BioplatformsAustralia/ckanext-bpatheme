@@ -482,9 +482,14 @@ body {
     text-align: center;
 }
 
-.site-footer-logo img {
+.site-footer-logo img.bpa-img {
     width:150px;
     height: 137.14px;
+}
+
+.site-footer-logo img.ncris-img {
+    width:150px;
+    height: 100px;
 }
 
 /* Need this to break out of the automatically generated .container class*/
