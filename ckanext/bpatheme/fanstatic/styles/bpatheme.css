@@ -484,7 +484,7 @@ body {
 
 .site-footer-logo img {
     max-width: 150px;
-    padding-top: 137.14px / 150px * 100%;
+    padding-top: calc(137.14px / 150px * 100%);
     height: 0;
     overflow: hidden;
 }
