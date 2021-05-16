@@ -282,6 +282,8 @@ ul.nav {
 
 .masthead .logo img {
     max-height: 100%;
+    height: 83.2px;
+    width: 350px;
 }
 
 img {
@@ -483,12 +485,12 @@ body {
 }
 
 .site-footer-logo img.bpa-img {
-    width:150px;
+    width: 150px;
     height: 137.14px;
 }
 
 .site-footer-logo img.ncris-img {
-    width:150px;
+    width: 150px;
     height: 100px;
 }
 
@@ -637,6 +639,7 @@ body {
     .masthead .logo img {
         max-height: 100%;
         width: 100px;
+        height: 91.22px
     }
 
 }
