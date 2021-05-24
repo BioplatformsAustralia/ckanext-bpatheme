@@ -58,11 +58,6 @@
             "label": "Resource Permissions"
         },
         {
-            "field_name": "sequence_data_type",
-            "form_placeholder": "used by ckanext-bpatheme",
-            "label": "Sequence Data Type"
-        },
-        {
             "field_name": "absorbance_260_280_ratio_submitter",
             "form_placeholder": "",
             "label": "absorbance_260_280_ratio_submitter"
@@ -90,7 +85,7 @@
         {
             "field_name": "alkalinity",
             "form_placeholder": "",
-            "label": "alkalinity"
+            "label": "alkalinity (\u00b5mol/kg)"
         },
         {
             "field_name": "alkalinity_meth",
@@ -110,7 +105,7 @@
         {
             "field_name": "alpha_beta_car",
             "form_placeholder": "",
-            "label": "alpha_beta_car"
+            "label": "alpha_beta_car (mg/m3)"
         },
         {
             "field_name": "alpha_beta_car_meth",
@@ -125,7 +120,7 @@
         {
             "field_name": "ammonium",
             "form_placeholder": "",
-            "label": "ammonium (\u00b5mol/l)"
+            "label": "ammonium (\u00b5mol/L)"
         },
         {
             "field_name": "ammonium_meth",
@@ -165,7 +160,7 @@
         {
             "field_name": "antimony",
             "form_placeholder": "",
-            "label": "antimony"
+            "label": "antimony (ppm)"
         },
         {
             "field_name": "antimony_meth",
@@ -635,7 +630,7 @@
         {
             "field_name": "dna_concentration_submitter",
             "form_placeholder": "",
-            "label": "dna_concentration_submitter (ng/ul)"
+            "label": "dna_concentration_submitter (ng/\u00b5L)"
         },
         {
             "field_name": "dna_concentration_submitter_meth",
@@ -930,7 +925,7 @@
         {
             "field_name": "gadolinium",
             "form_placeholder": "",
-            "label": "gadolinium"
+            "label": "gadolinium (ppm)"
         },
         {
             "field_name": "gadolinium_meth",
@@ -1248,11 +1243,6 @@
             "label": "library_construction_protocol"
         },
         {
-            "field_name": "license_id",
-            "form_placeholder": "",
-            "label": "license_id"
-        },
-        {
             "field_name": "light_intensity",
             "form_placeholder": "",
             "label": "light_intensity (lux)"
@@ -1260,7 +1250,7 @@
         {
             "field_name": "light_intensity_bottom",
             "form_placeholder": "",
-            "label": "light_intensity_bottom (\u00b5mol/m^2/s^-1)"
+            "label": "light_intensity_bottom (\u00b5mol/m2/s)"
         },
         {
             "field_name": "light_intensity_bottom_meth",
@@ -1270,7 +1260,7 @@
         {
             "field_name": "light_intensity_meadow",
             "form_placeholder": "",
-            "label": "light_intensity_meadow (\u00b5mol/m^2/s^-1)"
+            "label": "light_intensity_meadow (\u00b5mol/m2/s)"
         },
         {
             "field_name": "light_intensity_meadow_meth",
@@ -1285,7 +1275,7 @@
         {
             "field_name": "light_intensity_surface",
             "form_placeholder": "",
-            "label": "light_intensity_surface (\u00b5mol/m^2/s^-1)"
+            "label": "light_intensity_surface (\u00b5mol/m2/s)"
         },
         {
             "field_name": "light_intensity_surface_meth",
@@ -1380,7 +1370,7 @@
         {
             "field_name": "molybdenum",
             "form_placeholder": "",
-            "label": "molybdenum (\u00b5mol/kg)"
+            "label": "molybdenum (\u00b5g/kg)"
         },
         {
             "field_name": "molybdenum_meth",
@@ -1630,7 +1620,7 @@
         {
             "field_name": "par",
             "form_placeholder": "",
-            "label": "par (\u00b5mol/m^2/s^-1)"
+            "label": "par (\u00b5mol/m2/s)"
         },
         {
             "field_name": "par_meth",
@@ -1775,7 +1765,7 @@
         {
             "field_name": "potassium",
             "form_placeholder": "",
-            "label": "potassium"
+            "label": "potassium (mg/l)"
         },
         {
             "field_name": "potassium_colwell",
@@ -1825,7 +1815,7 @@
         {
             "field_name": "prochlorococcus",
             "form_placeholder": "",
-            "label": "prochlorococcus (cells_ml)"
+            "label": "prochlorococcus (cells/ml)"
         },
         {
             "field_name": "prochlorococcus_meth",
@@ -1905,12 +1895,12 @@
         {
             "field_name": "salinity",
             "form_placeholder": "",
-            "label": "salinity (practical salinity unit)"
+            "label": "salinity (psu)"
         },
         {
             "field_name": "salinity_lab",
             "form_placeholder": "",
-            "label": "salinity_lab (practical salinity unit)"
+            "label": "salinity_lab (psu)"
         },
         {
             "field_name": "salinity_lab_meth",
@@ -1945,12 +1935,12 @@
         {
             "field_name": "samp_size",
             "form_placeholder": "",
-            "label": "samp_size (liter)"
+            "label": "samp_size (l)"
         },
         {
             "field_name": "samp_vol_we_dna_ext",
             "form_placeholder": "",
-            "label": "samp_vol_we_dna_ext (liter)"
+            "label": "samp_vol_we_dna_ext (l)"
         },
         {
             "field_name": "sample_attribution",
@@ -2120,7 +2110,7 @@
         {
             "field_name": "sedimentation_rate",
             "form_placeholder": "",
-            "label": "sedimentation_rate (g/(cm2 x yr))"
+            "label": "sedimentation_rate (g/cm2/yr)"
         },
         {
             "field_name": "sedimentation_rate_meth",
@@ -2285,7 +2275,7 @@
         {
             "field_name": "temp",
             "form_placeholder": "",
-            "label": "temp (deg c)"
+            "label": "temp (degC)"
         },
         {
             "field_name": "temp_meth",
@@ -2390,7 +2380,7 @@
         {
             "field_name": "tot_org_carb",
             "form_placeholder": "",
-            "label": "tot_org_carb (%)"
+            "label": "tot_org_carb"
         },
         {
             "field_name": "tot_phosp",
@@ -2428,9 +2418,9 @@
             "label": "total_nitrogen (mg/kg)"
         },
         {
-            "field_name": "total_nitrogen_method",
+            "field_name": "total_nitrogen_meth",
             "form_placeholder": "",
-            "label": "total_nitrogen_method"
+            "label": "total_nitrogen_meth"
         },
         {
             "field_name": "total_phosphorous",
@@ -2480,7 +2470,7 @@
         {
             "field_name": "turbidity",
             "form_placeholder": "",
-            "label": "turbidity (ntu or ftu)"
+            "label": "turbidity (mtu_or_ftu)"
         },
         {
             "field_name": "turbidity_meth",
