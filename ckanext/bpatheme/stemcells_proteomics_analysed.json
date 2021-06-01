@@ -58,6 +58,11 @@
             "label": "Resource Permissions"
         },
         {
+            "field_name": "sequence_data_type",
+            "form_placeholder": "used by ckanext-bpatheme",
+            "label": "Sequence Data Type"
+        },
+        {
             "field_name": "analytical_platform",
             "form_placeholder": "",
             "label": "analytical_platform"
@@ -213,11 +218,6 @@
             "label": "tissue"
         },
         {
-            "field_name": "title",
-            "form_placeholder": "",
-            "label": "title"
-        },
-        {
             "field_name": "translation",
             "form_placeholder": "",
             "label": "translation"
@@ -293,18 +293,6 @@
             "field_name": "format",
             "label": "Format",
             "preset": "resource_format_autocomplete"
-        },
-        {
-            "field_name": "format",
-            "label": "format"
-        },
-        {
-            "field_name": "md5",
-            "label": "md5"
-        },
-        {
-            "field_name": "name",
-            "label": "name"
         }
     ],
     "scheming_version": 1

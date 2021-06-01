@@ -58,6 +58,11 @@
             "label": "Resource Permissions"
         },
         {
+            "field_name": "sequence_data_type",
+            "form_placeholder": "used by ckanext-bpatheme",
+            "label": "Sequence Data Type"
+        },
+        {
             "field_name": "analysissoftwareversion",
             "form_placeholder": "",
             "label": "analysissoftwareversion"
@@ -83,6 +88,11 @@
             "label": "ccg_jira_ticket"
         },
         {
+            "field_name": "country",
+            "form_placeholder": "",
+            "label": "country"
+        },
+        {
             "field_name": "data_generated",
             "form_placeholder": "",
             "label": "data_generated"
@@ -96,6 +106,11 @@
             "field_name": "dataset_id",
             "form_placeholder": "",
             "label": "dataset_id"
+        },
+        {
+            "field_name": "date_data_published",
+            "form_placeholder": "",
+            "label": "date_data_published"
         },
         {
             "field_name": "date_of_transfer",
@@ -136,11 +151,6 @@
             "field_name": "family",
             "form_placeholder": "",
             "label": "family"
-        },
-        {
-            "field_name": "file_count",
-            "form_placeholder": "",
-            "label": "file_count"
         },
         {
             "field_name": "flow_cell_id",
@@ -233,6 +243,16 @@
             "label": "living_collections_recorded_by"
         },
         {
+            "field_name": "location_id",
+            "form_placeholder": "",
+            "label": "location_id"
+        },
+        {
+            "field_name": "location_notes",
+            "form_placeholder": "",
+            "label": "location_notes"
+        },
+        {
             "field_name": "nagoya_protocol_compliance",
             "form_placeholder": "",
             "label": "nagoya_protocol_compliance"
@@ -251,6 +271,11 @@
             "field_name": "notes",
             "form_placeholder": "",
             "label": "notes"
+        },
+        {
+            "field_name": "population_group",
+            "form_placeholder": "",
+            "label": "population_group"
         },
         {
             "field_name": "preservation_date_begin",
@@ -333,14 +358,19 @@
             "label": "silica_gel_pressed_sheet"
         },
         {
+            "field_name": "species_complex",
+            "form_placeholder": "",
+            "label": "species_complex"
+        },
+        {
+            "field_name": "state_or_territory",
+            "form_placeholder": "",
+            "label": "state_or_territory"
+        },
+        {
             "field_name": "ticket",
             "form_placeholder": "",
             "label": "ticket"
-        },
-        {
-            "field_name": "title",
-            "form_placeholder": "",
-            "label": "title"
         },
         {
             "field_name": "voucher_herbarium_catalog_number",
@@ -434,10 +464,6 @@
             "label": "flow_cell_id"
         },
         {
-            "field_name": "format",
-            "label": "format"
-        },
-        {
             "field_name": "index",
             "label": "index"
         },
@@ -448,14 +474,6 @@
         {
             "field_name": "library_id",
             "label": "library_id"
-        },
-        {
-            "field_name": "md5",
-            "label": "md5"
-        },
-        {
-            "field_name": "name",
-            "label": "name"
         },
         {
             "field_name": "read",

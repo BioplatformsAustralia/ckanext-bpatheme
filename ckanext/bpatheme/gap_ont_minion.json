@@ -58,6 +58,11 @@
             "label": "Resource Permissions"
         },
         {
+            "field_name": "sequence_data_type",
+            "form_placeholder": "used by ckanext-bpatheme",
+            "label": "Sequence Data Type"
+        },
+        {
             "field_name": "bait_set_name",
             "form_placeholder": "",
             "label": "bait_set_name"
@@ -83,6 +88,11 @@
             "label": "cell_postion"
         },
         {
+            "field_name": "country",
+            "form_placeholder": "",
+            "label": "country"
+        },
+        {
             "field_name": "data_generated",
             "form_placeholder": "",
             "label": "data_generated"
@@ -96,6 +106,11 @@
             "field_name": "dataset_id",
             "form_placeholder": "",
             "label": "dataset_id"
+        },
+        {
+            "field_name": "date_data_published",
+            "form_placeholder": "",
+            "label": "date_data_published"
         },
         {
             "field_name": "date_of_transfer",
@@ -138,9 +153,9 @@
             "label": "family"
         },
         {
-            "field_name": "file_count",
+            "field_name": "flow_cell_id",
             "form_placeholder": "",
-            "label": "file_count"
+            "label": "flow_cell_id"
         },
         {
             "field_name": "flow_cell_type",
@@ -238,6 +253,16 @@
             "label": "living_collections_recorded_by"
         },
         {
+            "field_name": "location_id",
+            "form_placeholder": "",
+            "label": "location_id"
+        },
+        {
+            "field_name": "location_notes",
+            "form_placeholder": "",
+            "label": "location_notes"
+        },
+        {
             "field_name": "nagoya_protocol_compliance",
             "form_placeholder": "",
             "label": "nagoya_protocol_compliance"
@@ -263,6 +288,11 @@
             "label": "notes"
         },
         {
+            "field_name": "population_group",
+            "form_placeholder": "",
+            "label": "population_group"
+        },
+        {
             "field_name": "preservation_date_begin",
             "form_placeholder": "",
             "label": "preservation_date_begin"
@@ -281,11 +311,6 @@
             "field_name": "project_aim",
             "form_placeholder": "",
             "label": "project_aim"
-        },
-        {
-            "field_name": "run_id",
-            "form_placeholder": "",
-            "label": "run_id"
         },
         {
             "field_name": "sample_id",
@@ -343,14 +368,19 @@
             "label": "silica_gel_pressed_sheet"
         },
         {
+            "field_name": "species_complex",
+            "form_placeholder": "",
+            "label": "species_complex"
+        },
+        {
+            "field_name": "state_or_territory",
+            "form_placeholder": "",
+            "label": "state_or_territory"
+        },
+        {
             "field_name": "ticket",
             "form_placeholder": "",
             "label": "ticket"
-        },
-        {
-            "field_name": "title",
-            "form_placeholder": "",
-            "label": "title"
         },
         {
             "field_name": "voucher_herbarium_catalog_number",
@@ -448,24 +478,12 @@
             "label": "facility_id"
         },
         {
-            "field_name": "format",
-            "label": "format"
-        },
-        {
-            "field_name": "md5",
-            "label": "md5"
-        },
-        {
-            "field_name": "name",
-            "label": "name"
+            "field_name": "flow_cell_id",
+            "label": "flow_cell_id"
         },
         {
             "field_name": "resource_type",
             "label": "resource_type"
-        },
-        {
-            "field_name": "run_id",
-            "label": "run_id"
         },
         {
             "field_name": "sample_id",

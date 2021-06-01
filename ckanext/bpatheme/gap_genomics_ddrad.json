@@ -63,54 +63,19 @@
             "label": "Sequence Data Type"
         },
         {
-            "field_name": "access_rights",
-            "form_placeholder": "",
-            "label": "access_rights"
-        },
-        {
-            "field_name": "ala_species_name",
-            "form_placeholder": "",
-            "label": "ala_species_name"
-        },
-        {
-            "field_name": "ala_specimen_url",
-            "form_placeholder": "",
-            "label": "ala_specimen_url"
-        },
-        {
-            "field_name": "analysis_software",
-            "form_placeholder": "",
-            "label": "analysis_software"
-        },
-        {
-            "field_name": "analysis_software_version",
-            "form_placeholder": "",
-            "label": "analysis_software_version"
-        },
-        {
-            "field_name": "ancillary_notes",
-            "form_placeholder": "",
-            "label": "ancillary_notes"
-        },
-        {
             "field_name": "archive_ingestion_date",
             "form_placeholder": "",
             "label": "archive_ingestion_date"
         },
         {
-            "field_name": "associated_media",
+            "field_name": "bait_set_name",
             "form_placeholder": "",
-            "label": "associated_media"
+            "label": "bait_set_name"
         },
         {
-            "field_name": "ausarg_project",
+            "field_name": "bait_set_reference",
             "form_placeholder": "",
-            "label": "ausarg_project"
-        },
-        {
-            "field_name": "barcode_id",
-            "form_placeholder": "",
-            "label": "barcode_id"
+            "label": "bait_set_reference"
         },
         {
             "field_name": "base_url",
@@ -118,69 +83,9 @@
             "label": "base_url"
         },
         {
-            "field_name": "birth_date",
-            "form_placeholder": "",
-            "label": "birth_date"
-        },
-        {
-            "field_name": "cell_postion",
-            "form_placeholder": "",
-            "label": "cell_postion"
-        },
-        {
-            "field_name": "certainty",
-            "form_placeholder": "",
-            "label": "certainty"
-        },
-        {
-            "field_name": "class",
-            "form_placeholder": "",
-            "label": "class"
-        },
-        {
-            "field_name": "collection_date",
-            "form_placeholder": "",
-            "label": "collection_date"
-        },
-        {
-            "field_name": "collection_method",
-            "form_placeholder": "",
-            "label": "collection_method"
-        },
-        {
-            "field_name": "collector",
-            "form_placeholder": "",
-            "label": "collector"
-        },
-        {
-            "field_name": "collector_sample_id",
-            "form_placeholder": "",
-            "label": "collector_sample_id"
-        },
-        {
-            "field_name": "common_name",
-            "form_placeholder": "",
-            "label": "common_name"
-        },
-        {
-            "field_name": "contextual_data_submission_date",
-            "form_placeholder": "",
-            "label": "contextual_data_submission_date"
-        },
-        {
-            "field_name": "coord_uncertainty_metres",
-            "form_placeholder": "",
-            "label": "coord_uncertainty_metres"
-        },
-        {
             "field_name": "country",
             "form_placeholder": "",
             "label": "country"
-        },
-        {
-            "field_name": "data_custodian",
-            "form_placeholder": "",
-            "label": "data_custodian"
         },
         {
             "field_name": "data_generated",
@@ -208,19 +113,19 @@
             "label": "date_of_transfer"
         },
         {
-            "field_name": "death_date",
-            "form_placeholder": "",
-            "label": "death_date"
-        },
-        {
             "field_name": "description",
             "form_placeholder": "",
             "label": "description"
         },
         {
-            "field_name": "dna_treatment",
+            "field_name": "dna_extract",
             "form_placeholder": "",
-            "label": "dna_treatment"
+            "label": "dna_extract"
+        },
+        {
+            "field_name": "dna_extract_pressed_sheet",
+            "form_placeholder": "",
+            "label": "dna_extract_pressed_sheet"
         },
         {
             "field_name": "experimental_design",
@@ -228,19 +133,9 @@
             "label": "experimental_design"
         },
         {
-            "field_name": "facility_sample_id",
-            "form_placeholder": "",
-            "label": "facility_sample_id"
-        },
-        {
             "field_name": "family",
             "form_placeholder": "",
             "label": "family"
-        },
-        {
-            "field_name": "file_name",
-            "form_placeholder": "",
-            "label": "file_name"
         },
         {
             "field_name": "flowcell_id",
@@ -248,89 +143,59 @@
             "label": "flowcell_id"
         },
         {
-            "field_name": "flowcell_type",
-            "form_placeholder": "",
-            "label": "flowcell_type"
-        },
-        {
             "field_name": "folder_name",
             "form_placeholder": "",
             "label": "folder_name"
         },
         {
-            "field_name": "genotypic_sex",
+            "field_name": "genomic_material_associated_references",
             "form_placeholder": "",
-            "label": "genotypic_sex"
+            "label": "genomic_material_associated_references"
         },
         {
-            "field_name": "genus",
+            "field_name": "genomic_material_preparation_date",
             "form_placeholder": "",
-            "label": "genus"
+            "label": "genomic_material_preparation_date"
         },
         {
-            "field_name": "habitat",
+            "field_name": "genomic_material_preparation_materials",
             "form_placeholder": "",
-            "label": "habitat"
+            "label": "genomic_material_preparation_materials"
         },
         {
-            "field_name": "identified_by",
+            "field_name": "genomic_material_preparation_process",
             "form_placeholder": "",
-            "label": "identified_by"
+            "label": "genomic_material_preparation_process"
         },
         {
-            "field_name": "insert_size_range",
+            "field_name": "genomic_material_preparation_type",
             "form_placeholder": "",
-            "label": "insert_size_range"
+            "label": "genomic_material_preparation_type"
         },
         {
-            "field_name": "institution_name",
+            "field_name": "genomic_material_prepared_by",
             "form_placeholder": "",
-            "label": "institution_name"
+            "label": "genomic_material_prepared_by"
         },
         {
-            "field_name": "latitude",
+            "field_name": "herbarium_code",
             "form_placeholder": "",
-            "label": "latitude"
+            "label": "herbarium_code"
+        },
+        {
+            "field_name": "id_vetting_by",
+            "form_placeholder": "",
+            "label": "id_vetting_by"
+        },
+        {
+            "field_name": "id_vetting_date",
+            "form_placeholder": "",
+            "label": "id_vetting_date"
         },
         {
             "field_name": "library_comments",
             "form_placeholder": "",
             "label": "library_comments"
-        },
-        {
-            "field_name": "library_construction_protocol",
-            "form_placeholder": "",
-            "label": "library_construction_protocol"
-        },
-        {
-            "field_name": "library_id",
-            "form_placeholder": "",
-            "label": "library_id"
-        },
-        {
-            "field_name": "library_index_id",
-            "form_placeholder": "",
-            "label": "library_index_id"
-        },
-        {
-            "field_name": "library_index_sequence",
-            "form_placeholder": "",
-            "label": "library_index_sequence"
-        },
-        {
-            "field_name": "library_location",
-            "form_placeholder": "",
-            "label": "library_location"
-        },
-        {
-            "field_name": "library_ng_ul",
-            "form_placeholder": "",
-            "label": "library_ng_ul"
-        },
-        {
-            "field_name": "library_oligo_sequence",
-            "form_placeholder": "",
-            "label": "library_oligo_sequence"
         },
         {
             "field_name": "library_pcr_cycles",
@@ -348,14 +213,14 @@
             "label": "library_prep_date"
         },
         {
+            "field_name": "library_prep_method",
+            "form_placeholder": "",
+            "label": "library_prep_method"
+        },
+        {
             "field_name": "library_prepared_by",
             "form_placeholder": "",
             "label": "library_prepared_by"
-        },
-        {
-            "field_name": "library_status",
-            "form_placeholder": "",
-            "label": "library_status"
         },
         {
             "field_name": "library_type",
@@ -363,64 +228,39 @@
             "label": "library_type"
         },
         {
-            "field_name": "lifestage",
+            "field_name": "living_collections_event_date",
             "form_placeholder": "",
-            "label": "lifestage"
+            "label": "living_collections_event_date"
         },
         {
-            "field_name": "location_generalisation",
+            "field_name": "living_collections_material_sample_rna",
             "form_placeholder": "",
-            "label": "location_generalisation"
+            "label": "living_collections_material_sample_rna"
         },
         {
-            "field_name": "location_text",
+            "field_name": "living_collections_recorded_by",
             "form_placeholder": "",
-            "label": "location_text"
+            "label": "living_collections_recorded_by"
         },
         {
-            "field_name": "longitude",
+            "field_name": "location_notes",
             "form_placeholder": "",
-            "label": "longitude"
-        },
-        {
-            "field_name": "material_conc_ng_ul",
-            "form_placeholder": "",
-            "label": "material_conc_ng_ul"
-        },
-        {
-            "field_name": "material_extracted_by",
-            "form_placeholder": "",
-            "label": "material_extracted_by"
-        },
-        {
-            "field_name": "material_extraction_date",
-            "form_placeholder": "",
-            "label": "material_extraction_date"
-        },
-        {
-            "field_name": "material_extraction_method",
-            "form_placeholder": "",
-            "label": "material_extraction_method"
-        },
-        {
-            "field_name": "material_extraction_type",
-            "form_placeholder": "",
-            "label": "material_extraction_type"
-        },
-        {
-            "field_name": "method_of_determination",
-            "form_placeholder": "",
-            "label": "method_of_determination"
-        },
-        {
-            "field_name": "movie_length",
-            "form_placeholder": "",
-            "label": "movie_length"
+            "label": "location_notes"
         },
         {
             "field_name": "n_libraries_pooled",
             "form_placeholder": "",
             "label": "n_libraries_pooled"
+        },
+        {
+            "field_name": "nagoya_protocol_compliance",
+            "form_placeholder": "",
+            "label": "nagoya_protocol_compliance"
+        },
+        {
+            "field_name": "nagoya_protocol_permit_number",
+            "form_placeholder": "",
+            "label": "nagoya_protocol_permit_number"
         },
         {
             "field_name": "name",
@@ -433,44 +273,49 @@
             "label": "notes"
         },
         {
-            "field_name": "order",
+            "field_name": "plate_name",
             "form_placeholder": "",
-            "label": "order"
+            "label": "plate_name"
         },
         {
-            "field_name": "phenotypic_sex",
+            "field_name": "preservation_date_begin",
             "form_placeholder": "",
-            "label": "phenotypic_sex"
+            "label": "preservation_date_begin"
         },
         {
-            "field_name": "phylum",
+            "field_name": "preservation_temperature",
             "form_placeholder": "",
-            "label": "phylum"
+            "label": "preservation_temperature"
         },
         {
-            "field_name": "prior_genetics",
+            "field_name": "preservation_type",
             "form_placeholder": "",
-            "label": "prior_genetics"
+            "label": "preservation_type"
         },
         {
-            "field_name": "sample_custodian",
+            "field_name": "project_aim",
             "form_placeholder": "",
-            "label": "sample_custodian"
-        },
-        {
-            "field_name": "sample_id",
-            "form_placeholder": "",
-            "label": "sample_id"
-        },
-        {
-            "field_name": "sample_quality",
-            "form_placeholder": "",
-            "label": "sample_quality"
+            "label": "project_aim"
         },
         {
             "field_name": "sample_submission_date",
             "form_placeholder": "",
             "label": "sample_submission_date"
+        },
+        {
+            "field_name": "sample_submitter_email",
+            "form_placeholder": "",
+            "label": "sample_submitter_email"
+        },
+        {
+            "field_name": "sample_submitter_name",
+            "form_placeholder": "",
+            "label": "sample_submitter_name"
+        },
+        {
+            "field_name": "sequence_length",
+            "form_placeholder": "",
+            "label": "sequence_length"
         },
         {
             "field_name": "sequencing_facility",
@@ -483,49 +328,34 @@
             "label": "sequencing_platform"
         },
         {
-            "field_name": "source_population",
+            "field_name": "silica_gel",
             "form_placeholder": "",
-            "label": "source_population"
+            "label": "silica_gel"
         },
         {
-            "field_name": "species",
+            "field_name": "silica_gel_id",
             "form_placeholder": "",
-            "label": "species"
+            "label": "silica_gel_id"
         },
         {
-            "field_name": "species_name",
+            "field_name": "silica_gel_pressed_sheet",
             "form_placeholder": "",
-            "label": "species_name"
+            "label": "silica_gel_pressed_sheet"
         },
         {
-            "field_name": "specimen_id",
+            "field_name": "software_version",
             "form_placeholder": "",
-            "label": "specimen_id"
+            "label": "software_version"
         },
         {
-            "field_name": "specimen_id_description",
+            "field_name": "species_complex",
             "form_placeholder": "",
-            "label": "specimen_id_description"
+            "label": "species_complex"
         },
         {
-            "field_name": "state_or_region",
+            "field_name": "state_or_territory",
             "form_placeholder": "",
-            "label": "state_or_region"
-        },
-        {
-            "field_name": "subspecies",
-            "form_placeholder": "",
-            "label": "subspecies"
-        },
-        {
-            "field_name": "taxon_id",
-            "form_placeholder": "",
-            "label": "taxon_id"
-        },
-        {
-            "field_name": "taxonomic_group",
-            "form_placeholder": "",
-            "label": "taxonomic_group"
+            "label": "state_or_territory"
         },
         {
             "field_name": "ticket",
@@ -533,52 +363,32 @@
             "label": "ticket"
         },
         {
-            "field_name": "tissue_collection",
+            "field_name": "voucher_herbarium_catalog_number",
             "form_placeholder": "",
-            "label": "tissue_collection"
+            "label": "voucher_herbarium_catalog_number"
         },
         {
-            "field_name": "tissue_number",
+            "field_name": "voucher_herbarium_collector_id",
             "form_placeholder": "",
-            "label": "tissue_number"
+            "label": "voucher_herbarium_collector_id"
         },
         {
-            "field_name": "tissue_preservation",
+            "field_name": "voucher_herbarium_event_date",
             "form_placeholder": "",
-            "label": "tissue_preservation"
+            "label": "voucher_herbarium_event_date"
         },
         {
-            "field_name": "tissue_type",
+            "field_name": "voucher_herbarium_record_number",
             "form_placeholder": "",
-            "label": "tissue_type"
+            "label": "voucher_herbarium_record_number"
         },
         {
-            "field_name": "type_status",
+            "field_name": "voucher_herbarium_recorded_by",
             "form_placeholder": "",
-            "label": "type_status"
-        },
-        {
-            "field_name": "voucher_number",
-            "form_placeholder": "",
-            "label": "voucher_number"
-        },
-        {
-            "field_name": "voucher_or_tissue_number",
-            "form_placeholder": "",
-            "label": "voucher_or_tissue_number"
-        },
-        {
-            "field_name": "wild_captive",
-            "form_placeholder": "",
-            "label": "wild_captive"
-        },
-        {
-            "field_name": "work_order",
-            "form_placeholder": "",
-            "label": "work_order"
+            "label": "voucher_herbarium_recorded_by"
         }
     ],
-    "dataset_type": "ausarg-pacbio-hifi",
+    "dataset_type": "gap-genomics-ddrad",
     "resource_fields": [
         {
             "field_name": "name",
@@ -640,20 +450,24 @@
             "preset": "resource_format_autocomplete"
         },
         {
-            "field_name": "facility",
-            "label": "facility"
-        },
-        {
-            "field_name": "flowcell2_id",
-            "label": "flowcell2_id"
+            "field_name": "dataset_id",
+            "label": "dataset_id"
         },
         {
             "field_name": "flowcell_id",
             "label": "flowcell_id"
         },
         {
-            "field_name": "library_id",
-            "label": "library_id"
+            "field_name": "index",
+            "label": "index"
+        },
+        {
+            "field_name": "lane",
+            "label": "lane"
+        },
+        {
+            "field_name": "read",
+            "label": "read"
         },
         {
             "field_name": "resource_type",

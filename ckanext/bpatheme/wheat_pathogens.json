@@ -58,6 +58,11 @@
             "label": "Resource Permissions"
         },
         {
+            "field_name": "sequence_data_type",
+            "form_placeholder": "used by ckanext-bpatheme",
+            "label": "Sequence Data Type"
+        },
+        {
             "field_name": "collection_date",
             "form_placeholder": "",
             "label": "collection_date"
@@ -148,11 +153,6 @@
             "label": "species"
         },
         {
-            "field_name": "title",
-            "form_placeholder": "",
-            "label": "title"
-        },
-        {
             "field_name": "wheat_pathogenicity",
             "form_placeholder": "",
             "label": "wheat_pathogenicity"
@@ -228,24 +228,12 @@
             "label": "flowcell"
         },
         {
-            "field_name": "format",
-            "label": "format"
-        },
-        {
             "field_name": "index_number",
             "label": "index_number"
         },
         {
             "field_name": "lane_number",
             "label": "lane_number"
-        },
-        {
-            "field_name": "md5",
-            "label": "md5"
-        },
-        {
-            "field_name": "name",
-            "label": "name"
         },
         {
             "field_name": "resource_type",

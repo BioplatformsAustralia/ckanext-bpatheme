@@ -58,6 +58,11 @@
             "label": "Resource Permissions"
         },
         {
+            "field_name": "sequence_data_type",
+            "form_placeholder": "used by ckanext-bpatheme",
+            "label": "Sequence Data Type"
+        },
+        {
             "field_name": "analysis_software_version",
             "form_placeholder": "",
             "label": "analysis_software_version"
@@ -248,11 +253,6 @@
             "label": "tissue"
         },
         {
-            "field_name": "title",
-            "form_placeholder": "",
-            "label": "title"
-        },
-        {
             "field_name": "total_samples",
             "form_placeholder": "",
             "label": "total_samples"
@@ -334,10 +334,6 @@
             "label": "flow_id"
         },
         {
-            "field_name": "format",
-            "label": "format"
-        },
-        {
             "field_name": "index",
             "label": "index"
         },
@@ -348,14 +344,6 @@
         {
             "field_name": "lane",
             "label": "lane"
-        },
-        {
-            "field_name": "md5",
-            "label": "md5"
-        },
-        {
-            "field_name": "name",
-            "label": "name"
         },
         {
             "field_name": "project",

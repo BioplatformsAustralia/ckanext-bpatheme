@@ -58,6 +58,11 @@
             "label": "Resource Permissions"
         },
         {
+            "field_name": "sequence_data_type",
+            "form_placeholder": "used by ckanext-bpatheme",
+            "label": "Sequence Data Type"
+        },
+        {
             "field_name": "analysis_software",
             "form_placeholder": "",
             "label": "analysis_software"
@@ -126,6 +131,16 @@
             "field_name": "date_of_transfer",
             "form_placeholder": "",
             "label": "date_of_transfer"
+        },
+        {
+            "field_name": "decimal_latitude_public",
+            "form_placeholder": "",
+            "label": "decimal_latitude_public"
+        },
+        {
+            "field_name": "decimal_longitude_public",
+            "form_placeholder": "",
+            "label": "decimal_longitude_public"
         },
         {
             "field_name": "description",
@@ -203,6 +218,11 @@
             "label": "library_location"
         },
         {
+            "field_name": "library_ng_ul",
+            "form_placeholder": "",
+            "label": "library_ng_ul"
+        },
+        {
             "field_name": "library_pcr_cycles",
             "form_placeholder": "",
             "label": "library_pcr_cycles"
@@ -211,6 +231,21 @@
             "field_name": "library_pcr_reps",
             "form_placeholder": "",
             "label": "library_pcr_reps"
+        },
+        {
+            "field_name": "library_pool_index_id",
+            "form_placeholder": "",
+            "label": "library_pool_index_id"
+        },
+        {
+            "field_name": "library_pool_index_sequence",
+            "form_placeholder": "",
+            "label": "library_pool_index_sequence"
+        },
+        {
+            "field_name": "library_pool_oligo_sequence",
+            "form_placeholder": "",
+            "label": "library_pool_oligo_sequence"
         },
         {
             "field_name": "library_prep_date",
@@ -308,11 +343,6 @@
             "label": "ticket"
         },
         {
-            "field_name": "title",
-            "form_placeholder": "",
-            "label": "title"
-        },
-        {
             "field_name": "work_order",
             "form_placeholder": "",
             "label": "work_order"
@@ -388,24 +418,12 @@
             "label": "flowcell_id"
         },
         {
-            "field_name": "format",
-            "label": "format"
-        },
-        {
             "field_name": "index",
             "label": "index"
         },
         {
             "field_name": "lane",
             "label": "lane"
-        },
-        {
-            "field_name": "md5",
-            "label": "md5"
-        },
-        {
-            "field_name": "name",
-            "label": "name"
         },
         {
             "field_name": "read",

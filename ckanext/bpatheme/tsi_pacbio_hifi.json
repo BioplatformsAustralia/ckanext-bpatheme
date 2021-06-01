@@ -58,6 +58,11 @@
             "label": "Resource Permissions"
         },
         {
+            "field_name": "sequence_data_type",
+            "form_placeholder": "used by ckanext-bpatheme",
+            "label": "Sequence Data Type"
+        },
+        {
             "field_name": "access_rights",
             "form_placeholder": "",
             "label": "access_rights"
@@ -201,6 +206,16 @@
             "field_name": "death_date",
             "form_placeholder": "",
             "label": "death_date"
+        },
+        {
+            "field_name": "decimal_latitude_public",
+            "form_placeholder": "",
+            "label": "decimal_latitude_public"
+        },
+        {
+            "field_name": "decimal_longitude_public",
+            "form_placeholder": "",
+            "label": "decimal_longitude_public"
         },
         {
             "field_name": "description",
@@ -563,11 +578,6 @@
             "label": "tissue_type"
         },
         {
-            "field_name": "title",
-            "form_placeholder": "",
-            "label": "title"
-        },
-        {
             "field_name": "type_status",
             "form_placeholder": "",
             "label": "type_status"
@@ -653,20 +663,8 @@
             "label": "flowcell_id"
         },
         {
-            "field_name": "format",
-            "label": "format"
-        },
-        {
             "field_name": "library_id",
             "label": "library_id"
-        },
-        {
-            "field_name": "md5",
-            "label": "md5"
-        },
-        {
-            "field_name": "name",
-            "label": "name"
         },
         {
             "field_name": "resource_type",
