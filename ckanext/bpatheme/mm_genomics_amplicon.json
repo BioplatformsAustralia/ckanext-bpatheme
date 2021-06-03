@@ -553,6 +553,11 @@
             "label": "data_type"
         },
         {
+            "field_name": "database_schema_definitions_url",
+            "form_placeholder": "",
+            "label": "database_schema_definitions_url"
+        },
+        {
             "field_name": "dataset_url",
             "form_placeholder": "",
             "label": "dataset_url"
