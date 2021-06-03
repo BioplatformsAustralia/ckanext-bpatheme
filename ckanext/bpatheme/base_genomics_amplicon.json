@@ -2797,8 +2797,16 @@
             "label": "flow_id"
         },
         {
+            "field_name": "flow_id2",
+            "label": "flow_id2"
+        },
+        {
             "field_name": "index",
             "label": "index"
+        },
+        {
+            "field_name": "index2",
+            "label": "index2"
         },
         {
             "field_name": "lane",
