@@ -123,11 +123,6 @@
             "label": "folder_name"
         },
         {
-            "field_name": "license_id",
-            "form_placeholder": "",
-            "label": "license_id"
-        },
-        {
             "field_name": "name",
             "form_placeholder": "",
             "label": "name"
@@ -156,11 +151,6 @@
             "field_name": "ticket",
             "form_placeholder": "",
             "label": "ticket"
-        },
-        {
-            "field_name": "title",
-            "form_placeholder": "",
-            "label": "title"
         }
     ],
     "dataset_type": "base-genomics-amplicon-control",
@@ -237,20 +227,8 @@
             "label": "flow_id"
         },
         {
-            "field_name": "format",
-            "label": "format"
-        },
-        {
             "field_name": "index",
             "label": "index"
-        },
-        {
-            "field_name": "md5",
-            "label": "md5"
-        },
-        {
-            "field_name": "name",
-            "label": "name"
         },
         {
             "field_name": "resource_type",

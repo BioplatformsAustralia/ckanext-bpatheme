@@ -13,58 +13,137 @@
    The "account masthead" bar across the top of the site
    ===================================================== */
 .leaflet-draw-toolbar a {
-  background-image: url("img/spritesheet.png");
-  background-repeat: no-repeat;
+    background-image: url("img/spritesheet.png");
+    background-repeat: no-repeat;
 }
 
 .leaflet-retina .leaflet-draw-toolbar a {
-  background-image: url("img/spritesheet-2x.png");
-  background-size: 270px 30px;
+    background-image: url("img/spritesheet-2x.png");
+    background-size: 270px 30px;
 }
+
 .nav-tabs {
-  font-size: 10pt;
+    font-size: 10pt;
 }
+
 img#beta {
-  position: absolute;
-  top: 0;
-  left: 0;
-  z-index: 500;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 500;
 }
+
 .leaflet-touch .leaflet-draw-toolbar .leaflet-draw-draw-rectangle {
-  background-position: 50% 50% !important;
+    background-position: 50% 50% !important;
+}
+
+.container-header.masthead {
+    background: none;
+    background-color: var(--mast-bg-color);
 }
 
 .account-masthead {
-  height: 39px;
-  background: none;
-  background-color: #fefefe;
+    height: 39px;
+    background: none;
+    background-color: var(--mast-bg-color);
 }
 
 /* The "bubble" containing the number of new notifications. */
 .account-masthead .account .notifications a span {
-  background-color: #fcfcfc;
-}
-
-/* The text and icons in the user account info. */
-.account-masthead .account ul li a {
-  color: rgb(105, 115, 124);
+    background-color: var(--mast-color);
 }
 
 /* Transparent separator between links */
 .account-masthead .account ul li {
-  border-left: 2px transparent;
+    border-left: 2px transparent;
 }
 
-/* Links on a:hover. */
-.account-masthead .account ul li a:hover {
-  color: rgb(40, 40, 40);
-  background-color: #ffffff;
+/* The text and icons in the user account info. */
+.masthead a,
+.masthead hgroup h2,
+.masthead .nav > li > a,
+.masthead .nav > .active > a,
+.account-masthead .account .notifications a span,
+.account-masthead .account ul li a,
+.masthead .site-title a,
+.masthead .site-title a:active,
+.site-footer,
+.site-footer a {
+    color: var(--mast-color);
+    background-color: var(--mast-bg-color);
+    text-shadow: none;
+    box-shadow: none;
 }
 
-/* The "dashboard" and number of notifiations background */
-.account-masthead .account .notifications a:hover span {
-  color: rgb(105, 115, 124);
-  background-color: inherit;
+/* The text and icons in the user account info. */
+.masthead a,
+.masthead hgroup h2,
+.masthead .nav > li > a,
+.masthead .nav > .active > a,
+.masthead .site-title a,
+.masthead .site-title a:active,
+.site-footer {
+    font-family: "Akkurat Pro", Arial, Helvetica, sans-serif;
+    font-size: 2rem;
+}
+
+/* The text and icons in the user account info. */
+.account-masthead .account .notifications a span,
+.account-masthead .account ul li a {
+    font-size: 1.5rem;
+}
+
+.masthead .nav > .active > a:hover,
+.masthead .nav > .active > a:focus,
+.masthead .nav > li > a:focus,
+.masthead .nav > li > a:hover,
+.account-masthead .account .notifications a:hover span,
+.account-masthead .account ul li a:hover,
+.masthead .site-title a:hover,
+.masthead .site-title a:focus, .site-footer-links a:focus {
+    color: var(--mast-hover-color);
+    background-color: inherit;
+    text-shadow: none;
+    box-shadow: none;
+}
+
+.site-footer-links a {
+    font-size: smaller;
+}
+
+.account-masthead .account ul li.login {
+    color: var(--mast-bg-color);
+    background-color: var(--mast-color);
+    border: 1px solid var(--mast-color);
+    border-radius: 25px;
+    margin-right: 10px;
+}
+
+.account-masthead .account ul li.register {
+    color: var(--mast-color);
+    background-color: var(--mast-bg-color);
+    border: 1px solid var(--mast-color);
+    border-radius: 25px;
+}
+
+.account-masthead .account ul li.login a, .account-masthead .account ul li.register a {
+    color: inherit;
+    background-color: inherit;
+    border: 1px solid var(--mast-color);
+    border-radius: 25px;
+}
+
+.account-masthead .account ul li.login a:hover, .account-masthead .account ul li.register a:hover, .site-footer-links a:hover {
+    color: var(--mast-hover-color);
+}
+
+.account-masthead .account.not-authed span.login, .account-masthead .account.not-authed span.register {
+    margin: 0 10px 0 10px;
+    position: relative;
+    top: 0;
+    left: 0;
+    color: inherit;
+    background-color: inherit;
 }
 
 /* ========================================================================
@@ -72,131 +151,143 @@ img#beta {
    ======================================================================== */
 
 .dwga-header-container {
-  padding: 5px;
-  background: none;
+    padding: 5px;
+    background: none;
 }
 
 /* Invisible debug output for controller/action */
 .debug {
-  color: #fefefe;
+    color: #fefefe;
 }
 
 .dwga-search {
-  float: right;
+    float: right;
 }
 
 /* Padding around logo and search */
 .dwga-header-row {
-  padding: 10px;
-  margin-left: 0px;
-  text-align: center;
+    padding: 10px 10px 10px 0px;
+    margin-left: 0px;
+    text-align: left;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.dwga-header-row > div {
+    padding-left: 0;
 }
 
 .dwga-header-row .logo {
     height: auto;
-    width: 500px;
+    width: 350px;
+}
+
+/* Make menu like main BPA site */
+.headermenu {
+    float: right;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+.headermenu > .menu-item {
+    display: inline-block;
+    list-style-type: none;
+    margin: 0 1rem 0 0;
+    position: relative;
 }
 
 .dwga-inlineblock {
-  display: inline-block;
+    display: inline-block;
 }
 
 .dwga-title {
-  margin-left: 15px;
+    margin-left: 15px;
 }
+
 .masthead {
-  border-top: 1px solid #efefef;
-  border-bottom: 1px solid #efefef;
-  background: none;
-  background-color: #fcfcfc;
+    border-top: 1px solid var(--mast-bg-color);
+    border-bottom: 1px solid var(--mast-bg-color);
+    background: none;
+    background-color: var(--mast-bg-color);
 }
 
 .dwga-header {
-  color: #69737c;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  box-sizing: border-box;
-  display: block;
-  font-family: "Open Sans", Helvetica, Arial, sans-serif;
-  font-size: 17px;
-  font-weight: normal;
-  height: 134px;
-  line-height: 27.09375px;
-  margin-bottom: 0px;
-  margin-left: 101px;
-  margin-right: 101px;
-  margin-top: 0px;
-  padding-bottom: 10px;
-  padding-left: 20px;
-  padding-right: 20px;
-  padding-top: 10px;
+    color: #69737c;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    box-sizing: border-box;
+    display: block;
+    font-family: "Open Sans", Helvetica, Arial, sans-serif;
+    font-size: 17px;
+    font-weight: normal;
+    height: 134px;
+    line-height: 27.09375px;
+    margin-bottom: 0px;
+    margin-left: 101px;
+    margin-right: 101px;
+    margin-top: 0px;
+    padding-bottom: 10px;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 10px;
 }
 
 /* Alignment of navigation */
 .masthead .navigation,
 ul.nav {
-  margin: 0px 0px 2px 0px;
+    margin: 0px 0px 2px 0px;
 }
+
 /* Float the navbar left */
 /* data.wa.gov.au floats left, here it looks better floating right */
 .masthead .nav-collapse {
-  float: left;
-}
-
-/* Navigation links on hover */
-.masthead .navigation ul.nav li a:hover,
-.masthead .navigation ul.nav li.active a {
-  background: none;
-  color: #2ea3f2;
-  text-decoration: none;
-  box-shadow: none;
+    float: left;
 }
 
 /* Space the nav links (Dataset, Orgs, Groups) so the hover/active underline is separated */
 .navbar .nav > li > a {
-  margin-left: 2px;
+    margin-left: 2px;
 }
 
 /* The "box shadow" effect that appears around the search box when it
    has the keyboard cursor's focus. */
 .masthead input[type="text"]:focus {
-  -webkit-box-shadow: inset 0px 0px 2px 0px rgba(0, 0, 0, 0.7);
-  box-shadow: inset 0px 0px 2px 0px rgba(0, 0, 0, 0.7);
-}
-
-.masthead a,
-.masthead hgroup h2,
-.masthead .nav > li > a,
-.masthead .nav > li > a:focus,
-.masthead .nav > li > a:hover,
-.masthead .nav > .active > a,
-.masthead .nav > .active > a:hover,
-.masthead .nav > .active > a:focus,
-.account-masthead .account .notifications a span {
-  color: rgb(105, 115, 124);
-  text-shadow: none;
-  margin-left: 2px;
+    -webkit-box-shadow: inset 0px 0px 2px 0px rgba(0, 0, 0, 0.7);
+    box-shadow: inset 0px 0px 2px 0px rgba(0, 0, 0, 0.7);
 }
 
 /* changes for bpa logo */
 .masthead #dwga-header-container .dwga-logo {
-  background: none;
+    background: none;
 }
+
 .masthead #dwga-header-container .dwga-logo:hover {
-  background: none;
+    background: none;
 }
+
 .masthead #dwga-header-container .dwga-logo .logo {
-  display: inline-block;
+    display: inline-block;
 }
+
 .masthead #dwga-header-container .dwga-logo {
-  height: 100%;
-  width: 100%;
+    height: 100%;
+    width: 100%;
 }
+
 .masthead .logo img {
-  max-height: 100%;
+    max-height: 100%;
+    height: 83.2px;
+    width: 350px;
 }
+
 img {
-  max-width: 100%;
+    max-width: 100%;
 }
 
 /* end of changes for bpa logo */
@@ -213,7 +304,7 @@ img {
 .toolbar,
 .toolbar::before,
 .toolbar::after {
-  border-bottom: none;
+    border-bottom: none;
 }
 
 /* hide breadcrums */
@@ -229,81 +320,83 @@ img {
 
 /* Hide featured section */
 .featured {
-  visibility: hidden;
-  height: 0px;
+    visibility: hidden;
+    height: 0px;
 }
 
 /* The background outside of the hero pane */
 .hero,
 [role="main"] {
-  background: #fefefe;
+    background: #fefefe;
 }
+
 /* Remove the "box shadow" effect around various boxes on the page. */
 .box {
-  box-shadow: none;
+    box-shadow: none;
 }
+
 /* Remove the borders around the "Welcome to CKAN" and "Search Your Data"
    boxes. */
 .hero .box {
-  border: none;
+    border: none;
 }
-/* Change the colors of the "Search Your Data" box. */
-.homepage .module-search .module-content {
-  color: rgb(105, 115, 124);
-  background-color: white;
-}
+
+
 /* Change the background color of the "Popular Tags" box. */
 .homepage .module-search .tags {
-  color: rgb(105, 115, 124);
-  background-color: #fcfcfc;
+    color: rgb(105, 115, 124);
+    background-color: #fcfcfc;
 }
+
 /* Remove some padding. This makes the bottom edges of the "Welcome to CKAN"
    and "Search Your Data" boxes line up. */
 .module-content:last-child {
-  padding-bottom: 0px;
+    padding-bottom: 0px;
 }
+
 .module-content p {
-  margin-top: 1em;
-  margin-bottom: 1em;
+    margin-top: 1em;
+    margin-bottom: 1em;
 }
-.homepage .module-search {
-  padding: 0px;
-}
+
 /* Bottom half of front page for featured orgs/groups */
 .homepage [role="main"] {
-  min-height: 100px;
+    min-height: 100px;
+    padding-top: unset;
 }
 
 /* private datasets */
 .module-content .dataset-private {
-  margin-top: 14px;
-  margin-right: 10px;
+    margin-top: 14px;
+    margin-right: 10px;
 }
+
 .module-content .label-private {
-  background-color: #333333;
-  font-family: Arial, sans-serif;
+    background-color: #333333;
+    font-family: Arial, sans-serif;
 }
 
 .module-content .label.label-inverse a {
-  text-decoration: none;
-  /* color: #ffffff !important; */
-  color: lightgrey;
+    text-decoration: none;
+    /* color: #ffffff !important; */
+    color: lightgrey;
 }
+
 a,
 a:active,
 a:hover,
 a:focus {
-  color: rgb(32, 57, 157);
-  text-decoration: none;
+    color: rgb(32, 57, 157);
+    text-decoration: none;
 }
 
 /* The box around featured orgs/groups */
 .box {
-  border: none;
+    border: none;
 }
 
 .btn {
-  border: 1px solid #cccccc;
+    border: 1px solid #cccccc;
 }
 
 h1,
@@ -311,56 +404,36 @@ h2,
 h3,
 h4,
 h5 {
-  font-weight: bold;
+    font-weight: bold;
+}
+
+h1.pull-left {
+    margin-bottom: 0px;
 }
 
 /* page header for bar with menu home|dataset|methods|gallery|information etc */
 .wrapper .page-header {
-  background: none;
+    background: none;
 }
 
 .module-content p {
-  margin-top: 1em;
-  margin-bottom: 1em;
+    margin-top: 1em;
+    margin-bottom: 1em;
 }
 
 body {
-  font-family: "Open Sans", Helvetica, Arial, sans-serif;
-  font-size: 12pt;
+    font-family: "Open Sans", Helvetica, Arial, sans-serif;
+    font-size: 12pt;
 }
 
-/* ====================================
-   The footer at the bottom of the site
-   ==================================== */
-
-.site-footer,
 body {
-  color: rgb(86, 86, 86);
-  background-color: rgb(200, 200, 200);
-}
-/* The text in the footer. */
-.site-footer,
-.site-footer label,
-.site-footer small {
-  color: rgb(230, 230, 230);
-  background-color: #1e73be;
-}
-/* The link texts in the footer. */
-.site-footer a {
-  color: rgb(255, 255, 255);
-}
-
-.site-footer ul.nav li a:hover {
-  color: rgb(255, 255, 255);
-  background-color: rgb(22, 47, 137);
-  text-decoration: none;
-  box-shadow: none;
-  text-shadow: none;
+    color: rgb(86, 86, 86);
+    background-color: rgb(200, 200, 200);
 }
 
 /* The debug toggle */
 #debug-toggle {
-  color: rgb(200, 200, 200);
+    color: rgb(200, 200, 200);
 }
 
 /* Fix wrapping of label in list on resource page */
@@ -371,50 +444,97 @@ body {
 } */
 
 .org-sidebar {
-  list-style: none;
-  padding: 0 0 0 0;
-  margin: 0 0 0 0;
+    list-style: none;
+    padding: 0 0 0 0;
+    margin: 0 0 0 0;
 }
 
 .list-group-item {
-  position: relative;
-  display: block;
-  padding: 10px 15px;
-  margin-bottom: -1px;
-  background-color: #fff;
-  border: 1px solid #ddd;
-  color: #555;
+    position: relative;
+    display: block;
+    padding: 10px 15px;
+    margin-bottom: -1px;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    color: #555;
 }
 
 .site-footer {
-  padding: 0px;
-  min-height: 0px;
+    padding: 0px;
+    min-height: 0px;
 }
 
 .site-footer-links {
-  text-align: center;
-  /* padding-top: 20px;
-  padding-bottom: 20px; */
-  padding: 20px;
+    text-align: center;
+    /* padding-top: 20px;
+    padding-bottom: 20px; */
+    padding: 20px;
 }
 
 .site-footer-links a {
-  padding-right: 15px;
+    padding-right: 20px;
+}
+
+.site-footer-logo, .site-footer-logo span, .site-footer-logo a {
+    background-color: var(--site-footer-logo-bg-color);
 }
 
 .site-footer-logo {
-  background-color: #171717;
-  /* padding-top: 30px;
-  padding-bottom: 30px; */
-  padding: 30px;
-  text-align: center;
+    padding: 30px;
+    text-align: center;
+}
+
+.site-footer-logo img.bpa-img {
+    width: 150px;
+    height: 137.14px;
+}
+
+.site-footer-logo img.ncris-img {
+    width: 150px;
+    height: 100px;
 }
 
 /* Need this to break out of the automatically generated .container class*/
 .site-footer .container {
-  width: 100%;
-  padding-left: 0px;
-  padding-right: 0px;
+    width: 100%;
+    padding-left: 0px;
+    padding-right: 0px;
+}
+
+/* Background for search area */
+.search-background {
+    background-image: url("/header-background_2.webp");
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 100%;
+    padding: 5px;
+}
+
+.search-instructions {
+    font-size: xx-small;
+    clear: both;
+}
+
+/** show background image 'transparently', but ensure inputs are white (no transparency) **/
+.homepage .module-search {
+    padding: 0;
+    margin: 5%;
+    background-color: transparent;
+}
+
+.homepage .module-search .module-content {
+    color: rgb(105, 115, 124);
+    background-color: rgba(255, 255, 255, 0.9)
+}
+
+.featured-orgs {
+    padding-top: 15px;
+}
+
+.featured-orgs .heading {
+    margin: 0 0 20px -5px;
+    font-size: 24px;
+    line-height: 40px;
 }
 
 /* ====================================
@@ -422,23 +542,25 @@ body {
    ==================================== */
 
 .pull-left > img {
-  padding-left: 20px;
-  /*height: 80px;*/
+    padding-left: 20px;
 }
 
 .data_portal_text {
-  color: black;
-  line-height: 3;
-  padding-left: 140px;
-  font-size: 28px;
+    color: black;
+    line-height: 3;
+    padding-left: 140px;
+    font-size: 28px;
 }
 
-.dwga-inlineblock {
-  /*display: block;*/
+
+.topnav {
+    overflow: visible;
 }
 
-.site-footer-logo img {
-    max-width: 150px;
+
+/* Hide the link that should open and close the topnav on small screens */
+.topnav .icon {
+    display: none;
 }
 
 .header-left {
@@ -448,6 +570,305 @@ body {
 .header-right {
     padding-right: 0;
 }
+
+.site-parent {
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+
+.site-title {
+    margin-left: 15px;
+    height: 100%;
+    position: relative;
+}
+
+.site-title .topnav {
+    height: 100%;
+    position: relative;
+    width: 100%
+}
+
+@media screen and (max-width: 990px) {
+    .site-title .topnav .headermenu {
+        flex-direction: column;
+        align-items: flex-end;
+        justify-content: flex-start;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .dwga-header-row {
+        align-items: flex-start;
+    }
+
+    .topnav a {
+        display: none;
+        right: 30px;
+        margin-bottom: 10px;
+    }
+
+    .topnav a.icon {
+        display: block;
+        position: absolute;
+        top: 0;
+        right: 0;
+        padding-right: 10px;
+    }
+
+    .topnav .headermenu {
+        width: 0;
+        position: absolute;
+        top: 0;
+        right: 60px;
+        transition: 0.4s;
+    }
+
+    .topnav.responsive .headermenu {
+        position: relative;
+        top: 0;
+        right: 100px;
+        display: block;
+    }
+
+    .topnav.responsive .headermenu a {
+        display: block;
+    }
+
+    .masthead .logo img {
+        max-height: 100%;
+        width: 100px;
+        height: 91.22px
+    }
+
+}
+
+/*ensure rectangular images are 'squared' before becoming 'circles'*/
+.icon_logo_default {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+.icon_logo_child {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+.no-circular-logo {
+    border-radius: 6px !important;
+}
+
+.project-details {
+    margin: 0 15px 25px 0
+}
+
+.project-details h3 {
+    margin-top: 5px
+}
+
+.project-details .nav-pills {
+    padding: 0 0 0 0
+}
+
+.project-details .nav-pills li a {
+    padding: 0 25px 15px 0
+}
+
+.project-name {
+    min-height: 60px;
+}
+
+.project-description, .truncate-overflow {
+    line-height: var(--pd-lh);
+    position: relative;
+    text-align: left;
+    padding-right: 1em; /* space for ellipsis */
+    margin: 0 0 0 0;
+    min-height: 90px;
+}
+
+.truncate-overflow {
+    --max-lines: 3;
+    max-height: calc(var(--pd-lh) * var(--max-lines));
+    overflow: hidden;
+}
+
+.truncate-overflow::before, .truncate-overflow::after {
+    position: absolute;
+    bottom: 0;
+}
+
+.truncate-overflow::before {
+    height: var(--pd-lh);
+    content: "...";
+    right: 0;
+}
+
+.truncate-overflow::after {
+    height: var(--pd-lh);
+    content: "";
+    left: 0;
+    width: 100%;
+    background-image: linear-gradient(rgba(255, 255, 255, 0) 0%, rgb(255, 255, 255) 100%);
+}
+
+.truncate-toggle {
+    display: inline-block;
+    margin-top: -10px;
+}
+
+.truncate-toggle::after {
+    content: "";
+}
+
+.module h1 {
+    /* ensure text kept within container */
+    overflow-wrap: anywhere;
+}
+
+.form-select.control-order-by {
+    float: left;
+    flex-direction: row;
+    justify-content: flex-end;
+    margin-left: 0px;
+}
+
+.form-select {
+    margin-bottom: 0px;
+}
+
+.form-group {
+    padding-bottom: 0px;
+}
+
+.search-form {
+    padding-bottom: 0px;
+}
+
+.search-form.control-order-by {
+    margin-left: 0px;
+}
+
+.bulk-btn {
+    float: right;
+    margin: 0 0 0 0;
+}
+
+.bulk-btn a {
+}
+
+.bulkdl {
+    display: flex;
+    flex-direction: column;
+    flex: initial;
+}
+
+.bulkdl-lr {
+    float: right;
+    text-align: right;
+    margin-bottom: 1em;
+    line-height: 1.5;
+}
+
+.bulkdl-btn {
+    float: right;
+    margin-bottom: 1em;
+}
+
+.results {
+    display: flex;
+}
+
+.result-count {
+    flex: 1;
+}
+
+.result-found {
+    margin-top: 0px;
+}
+
+.resources {
+    border-top: 1px dotted #dddddd;
+    display: block;
+    clear: both;
+}
+
+.fa-sync::before {
+    content: "\f021";
+}
+
+.fa-caret-square-down::before {
+    content: "\f150";
+}
+
+.fa-caret-square-up::before {
+    content: "\f151";
+}
+
+.bootstrap-table .fixed-table-toolbar {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    margin-right: 10px;
+}
+
+.bootstrap-table .page-list .dropdown-menu .dropdown-item {
+    padding: 0 0 0 15px;
+}
+
+#summary-table th, #summary-table td {
+    width: auto;
+    font-size: 10px;
+
+}
+
+/*break whitespace on new-line*/
+#summary-table th .th-inner {
+    white-space: pre;
+}
+
+#summary-table th .th-inner.sortable {
+    padding-right: 15px !important;
+}
+
+@media screen and (min-width: 1201px) {
+
+    #summary-table th:nth-child(1),
+    #summary-table td:nth-child(1) {
+        min-width: 16em;
+        width: 16em;
+    }
+
+    .fullscreen #summary-table th:nth-child(1),
+    .fullscreen #summary-table td:nth-child(1) {
+        min-width: 16em;
+        width: auto;
+    }
+
+
+    #summary-table th:nth-child(n+4),
+    #summary-table td:nth-child(n+4) {
+        width: 8em;
+        text-align: center;
+    }
+}
+
+@media screen and (max-width: 1200px) {
+
+
+    #summary-table th:nth-child(n+4),
+    #summary-table td:nth-child(n+4) {
+        min-width: 4em;
+        text-align: center;
+        with: auto;
+    }
+}
+
 
 #user-comms {
     text-align: left;
@@ -474,7 +895,7 @@ body {
     margin: 0;
 }
 
-#user-comms .header-left{
+#user-comms .header-left {
     color: var(--mast-hover-color);
     margin-right: 10px;
 }
@@ -485,7 +906,7 @@ body {
     background-color: inherit;
     border: 1px solid var(--mast-hover-color);
     border-radius: 10px;
-    padding: 3px;
+    padding: 5px;
     white-space: nowrap;
 }
 
@@ -506,5 +927,15 @@ body {
 }
 
 #user-comms .comms-owner {
-  font-style: italic;
+    font-style: italic;
+}
+
+/* styling for map */
+
+.dataset-map-expanded #dataset-map {
+    position: fixed;
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 60%;
 }
