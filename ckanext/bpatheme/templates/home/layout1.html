@@ -19,7 +19,7 @@
                 'logo' : "new_ausmicro_logo.webp",
                 'has_logo' : "true",
                 'icon' : "icon_amd.webp",
-                'iconalt' : "icon_amd.png",
+                'icon-alt' : "icon_amd.png",
                 'slug' : "australian-microbiome",
                 'url' : "https://bioplatforms.com/projects/australian-microbiome/",
                 'title' : "Australian Microbiome",
@@ -32,7 +32,7 @@
         {% set sepsis = {
                 'logo' : "sepsis.webp",
                 'icon' : "icon_sepsis.webp",
-                'iconalt' : "icon_sepsis.png",
+                'icon-alt' : "icon_sepsis.png",
                 'slug' : "bpa-sepsis",
                 'url' : "https://bioplatforms.com/projects/sepsis/",
                 'title' : "Antibiotic Resistant Sepsis Pathogens",
@@ -49,7 +49,7 @@
                 'has_logo' : "true",
                 'special_class' : "no-circular-logo",
                 'icon' : "icon_omg.webp",
-                'iconalt' : "icon_omg.png",
+                'icon-alt' : "icon_omg.png",
                 'slug' : "bpa-omg",
                 'url' : "http://www.bioplatforms.com/oz-mammals/",
                 'title' : "Oz Mammals Genomics Initiative",
@@ -66,7 +66,7 @@
                 'has_logo' : "true",
                 'special_class' : "no-circular-logo",
                 'icon' : "icon_gap.webp",
-                'iconalt' : "icon_gap.png",
+                'icon-alt' : "icon_gap.png",
                 'slug' : "bpa-plants",
                 'url' : "https://bioplatforms.com/projects/genomics-for-australian-plants/",
                 'title' : "Genomics for Australian Plants",
@@ -81,7 +81,7 @@
                 'logo' : "AusARG-Logo-RGB-150dpi-Transparent.webp",
                 'has_logo' : "true",
                 'icon' : "icon_arg.webp",
-                'iconalt' : "icon_arg.png",
+                'icon-alt' : "icon_arg.png",
                 'slug' : "ausarg",
                 'url' : "https://bioplatforms.com/projects/reptiles-and-amphibians/",
                 'title' : "Australian Amphibian and Reptile Genomics Initiative",
@@ -98,7 +98,7 @@
                 'logo' : "Threatened-Species-Initiative-Logo-150dpi-RGB.webp",
                 'has_logo' : "true",
                 'icon' : "icon_tsi.webp",
-                'iconalt' : "icon_tsi.png",
+                'icon-alt' : "icon_tsi.png",
                 'slug' : "threatened-species",
                 'url' : "https://bioplatforms.com/projects/threatened-species/",
                 'title' : "Threatened Species Initiative",
@@ -113,7 +113,7 @@
         {% set gbr = {
                 'logo' : "coral.webp",
                 'icon' : "icon_gbr.webp",
-                'iconalt' : "icon_gbr.png",
+                'icon-alt' : "icon_gbr.png",
                 'slug' : "bpa-great-barrier-reef",
                 'url' : "https://bioplatforms.com/projects/great-barrier-reef/",
                 'title' : "Great Barrier Reef",
@@ -128,7 +128,7 @@
         {% set melanoma = {
                 'logo' : "melanoma.webp",
                 'icon' : "icon_melanoma.webp",
-                'iconalt' : "icon_melanoma.png",
+                'icon-alt' : "icon_melanoma.png",
                 'slug' : "bpa-melanoma",
                 'url' : "http://www.bioplatforms.com/melanoma",
                 'title' : "Melanoma",
@@ -141,7 +141,7 @@
         {% set wpt = {
                 'logo' : "fusarium_head_blight_infected_ear.webp",
                 'icon' : "icon_wheat_pathogens_transcript.webp",
-                'iconalt' : "icon_wheat_pathogens_transcript.png",
+                'icon-alt' : "icon_wheat_pathogens_transcript.png",
                 'slug' : "bpa-wheat-pathogens-transcript",
                 'url' : "http://www.bioplatforms.com/wheat-datasets",
                 'title' : "Wheat Pathogens Transcript",
@@ -155,7 +155,7 @@
         {% set wpg = {
                 'logo' : "stagonospora_nodorum.webp",
                 'icon' :"icon_wheat_pathogens_genomes.webp",
-                'iconalt' :"icon_wheat_pathogens_genomes.png",
+                'icon-alt' :"icon_wheat_pathogens_genomes.png",
                 'slug' : "bpa-wheat-pathogens-genomes",
                 'url' : "http://www.bioplatforms.com/wheat-datasets",
                 'title' : "Wheat Pathogens Genomes",
@@ -170,7 +170,7 @@
         {% set wc = {
                 'logo' : "wheat.webp",
                 'icon' : "icon_wheat.webp",
-                'iconalt' : "icon_wheat.png",
+                'icon-alt' : "icon_wheat.png",
                 'slug' : "bpa-wheat-cultivars",
                 'url' : "http://www.bioplatforms.com/wheat-datasets",
                 'title' : "Wheat Cultivars",
@@ -186,7 +186,7 @@
         {% set stemcells = {
                 'logo' : "stemcell.webp",
                 'icon' : "icon_stemcells.webp",
-                'iconalt' : "icon_stemcells.png",
+                'icon-alt' : "icon_stemcells.png",
                 'slug' : "bpa-stemcells",
                 'url' : "http://www.bioplatforms.com/stem-cells",
                 'title' : "Stem Cells",
@@ -221,8 +221,8 @@
                 <a href="{{ org_link }}">
                     <picture>
                         <source srcset="{{ i.icon }}" type="image/webp">
-                        <source srcset="{{ i.iconalt }}" type="image/jpeg">
-                        <img class="icon_logo_default" src="{{ i.iconalt }}" alt="{{ i.title }}">
+                        <source srcset="{{ i.icon-alt }}" type="image/jpeg">
+                        <img class="icon_logo_default" src="{{ i.icon-alt }}" alt="{{ i.title }}">
                     </picture>
                 </a>
             </div>
