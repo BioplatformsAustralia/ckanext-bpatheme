@@ -2,16 +2,25 @@
 
 {% block footer_content %}
     <div class="site-footer-links">
-	    <a href="{{ h.url_for(controller='organization', action='index') }}">Organisations</a>
-	    <a href="{{ h.url_for(controller='package', action='search') }}">Datasets</a>
-	    <a href="/organization/pages/bioplatforms-australia/api-access">API Access</a>
-      <a href="mailto:help@bioplatforms.com">Contact</a>
-      <a href="http://www.bioplatforms.com">Operated by Bioplatforms Australia</a>
+        <a href="{{ h.url_for(controller='organization', action='index') }}">Organisations</a>
+        <a href="{{ h.url_for(controller='package', action='search') }}">Datasets</a>
+        <a href="/organization/pages/bioplatforms-australia/api-access">API Access</a>
+        <a href="mailto:help@bioplatforms.com">Contact</a>
+        <a href="http://www.bioplatforms.com">Operated by Bioplatforms Australia</a>
     </div>
 
     <div class="site-footer-logo">
-        <span><a href="https://www.bioplatforms.com/"><img class="bpa-img" src="{{ h.url_for_static('BIO-RGB_Large-NEGTRANS.webp') }}" alt="Bioplatforms Australia" /></a></span>
-        <span style="padding-left: 30px;"><a href="https://www.education.gov.au/national-collaborative-research-infrastructure-strategy-ncris"><img class="nris-img" src="{{ h.url_for_static('ncris-footer.webp') }}" alt="NCRIS" /></a></span>
+        <span><a href="https://www.bioplatforms.com/">
+              <picture>
+                  <source srcset="{{ h.url_for_static('BIO-RGB_Large-NEGTRANS.webp') }}" type="image/webp">
+                  <source srcset="{{ h.url_for_static('BIO-RGB_Large-NEGTRANS.png') }}" type="image/png">
+                  <img class="bpa-img" src="{{ h.url_for_static('BIO-RGB_Large-NEGTRANS.png') }}"
+                       alt="Bioplatforms Australia"/>
+              </picture>
+        </a></span>
+        <span style="padding-left: 30px;"><a
+                href="https://www.education.gov.au/national-collaborative-research-infrastructure-strategy-ncris"><img
+                class="nris-img" src="{{ h.url_for_static('ncris-footer.webp') }}" alt="NCRIS"/></a></span>
     </div>
 
 
