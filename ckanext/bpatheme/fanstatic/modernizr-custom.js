@@ -167,4 +167,5 @@ Modernizr.on('webp', function (result) {
     }
     var x = document.querySelector("html");
     console.log("after test: " + x)
+    console.dir(x)
 });
