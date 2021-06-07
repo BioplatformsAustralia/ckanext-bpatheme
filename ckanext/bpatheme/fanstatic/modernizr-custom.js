@@ -165,4 +165,6 @@ Modernizr.on('webp', function (result) {
         // not-supported
         console.log("no there is no webp here, consider png")
     }
+    var x = document.querySelector("html");
+    console.log("after test: " + x)
 });

@@ -502,7 +502,7 @@ body {
 }
 
 /* Background for search area */
-.webp.search-background {
+.webp .search-background {
     background-image: url("/header-background_2.webp");
     background-size: cover;
     background-repeat: no-repeat;
@@ -510,7 +510,7 @@ body {
     padding: 5px;
 }
 
-.no-webp.search-background {
+.no-webp .search-background {
     background-image: url("/header-background_2.png");
     background-size: cover;
     background-repeat: no-repeat;
