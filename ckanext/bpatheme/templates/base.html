@@ -37,6 +37,10 @@
     console.log('navigator.appName=' + navigator.appName)
     console.log('navigator.userAgent=' + navigator.userAgent)
 
+    var x = document.getElement;
+    x.className += 'no-js'
+    console.log("setup html tag.")
+
     function toggleMenuCollapse() {
         var x = document.getElementById("headernav-topnav");
         if (x.className === "topnav") {
