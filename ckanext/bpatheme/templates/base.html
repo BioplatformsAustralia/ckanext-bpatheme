@@ -42,6 +42,17 @@
     {#x.className += 'no-js no-webp'#}
     {#console.log("setup html tag.")#}
 
+    Modernizr.on('webp', function (result) {
+    if (result) {
+        console.log("yes there is webp here")
+    } else {
+        // not-supported
+        console.log("no there is no webp here, consider png")
+    }
+    var x = document.querySelector("html");
+    console.log("after test: " + x)
+    console.dir(x)
+
     function toggleMenuCollapse() {
         var x = document.getElementById("headernav-topnav");
         if (x.className === "topnav") {
