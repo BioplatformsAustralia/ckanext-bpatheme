@@ -261,7 +261,8 @@
             <div class="row row-eq-height">
                 {% for p in projects|sort(attribute='order', reverse=true) %}
                     <div class="col-sm-3">
-                        {{ render_initiative(p) }}
+{#                        {{ render_initiative(p) }}#}
+                    <div data-module="fetch-async-page"></div>
                     </div>
                     {% if loop.index is divisibleby 4 %}
                         {# restart row #}
