@@ -2,7 +2,8 @@
 from setuptools import setup
 
 install_requires=[
-    'pandas==0.24.2'
+    'pandas==0.24.2',
+    'Jinja2==2.9'
 ]
 
 setup(
