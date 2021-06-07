@@ -502,8 +502,16 @@ body {
 }
 
 /* Background for search area */
-.search-background {
+.webp .search-background {
     background-image: url("/header-background_2.webp");
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 100%;
+    padding: 5px;
+}
+
+.no-webp .search-background {
+    background-image: url("/header-background_2.png");
     background-size: cover;
     background-repeat: no-repeat;
     width: 100%;
