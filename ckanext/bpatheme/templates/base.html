@@ -12,14 +12,6 @@
     {% resource "bpatheme/datawa-organization-opener.js" %}
     {% resource "bpatheme/datawa.js" %}
     <script>/* Toggle between adding and removing the "responsive" class to topnav when the user clicks on the icon */
-    Modernizr.on('webp', function (result) {
-        if (result) {
-            console.log("yes there is webp here")
-        } else {
-            // not-supported
-            console.log("no there is no webp here, consider png")
-        }
-    });
 
     function toggleMenuCollapse() {
         var x = document.getElementById("headernav-topnav");
