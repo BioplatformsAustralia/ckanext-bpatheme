@@ -1,6 +1,6 @@
 'use strict';
 
-ckan.module('bpatheme_fetchasync', function ($) {
+ckan.module('bpatheme_project_icon_block', function ($) {
     return {
         initialize: function () {
             $.proxyAll(this, /_on/);
@@ -8,7 +8,7 @@ ckan.module('bpatheme_fetchasync', function ($) {
                 this.options[key] = this.options.project[key]
             }
             delete this.options.project
-            this.sandbox.client.getTemplate('bpatheme_fetchasync.html', this.options, this._onReceiveSnippet);
+            this.sandbox.client.getTemplate('bpatheme_project_icon_block.html', this.options, this._onReceiveSnippet);
         },
         _onReceiveSnippet: function (html) {
             this.el[0].innerHTML = html;
