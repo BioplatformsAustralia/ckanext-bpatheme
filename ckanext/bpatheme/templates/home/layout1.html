@@ -211,7 +211,7 @@
             <div class="row row-eq-height">
                 {% for p in projects|sort(attribute='order', reverse=true) %}
                     <div class="col-sm-3" data-module="bpatheme_project_icon_block" data-module-project="{{ h.dump_json(p) }}" >
-                        <div class="placeholder loading"><i>Loading image. Please wait</i></div>
+                        <div class="placeholder loading" ></div>
                     </div>
                     {% if loop.index is divisibleby 4 %}
                         {# restart row #}

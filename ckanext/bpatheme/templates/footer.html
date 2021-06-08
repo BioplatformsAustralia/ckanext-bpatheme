@@ -8,23 +8,17 @@
         <a href="mailto:help@bioplatforms.com">Contact</a>
         <a href="http://www.bioplatforms.com">Operated by Bioplatforms Australia</a>
     </div>
-
     <div class="site-footer-logo">
+     {% set footer_alt_text_bpa = "Bioplatforms Australia" %}
         <span><a href="https://www.bioplatforms.com/">
-              <picture>
-                  <source srcset="{{ h.url_for_static('BIO-RGB_Large-NEGTRANS.webp') }}" type="image/webp">
-                  <source srcset="{{ h.url_for_static('BIO-RGB_Large-NEGTRANS.png') }}" type="image/png">
-                  <img class="bpa-img" src="{{ h.url_for_static('BIO-RGB_Large-NEGTRANS.png') }}"
-                       alt="Bioplatforms Australia"/>
-              </picture>
+            <div class="placeholder" data-module="bpatheme_footer_image" data-module-alt="{{ footer_alt_text_bpa }}">{{ footer_alt_text_bpa }}<span class="loading"></span>
+            </div>
         </a></span>
+        {% set footer_alt_text_ncris = "NCRIS" %}
         <span style="padding-left: 30px;"><a
                 href="https://www.education.gov.au/national-collaborative-research-infrastructure-strategy-ncris">
-             <picture>
-                 <source srcset="{{ h.url_for_static('ncris-footer.webp') }}" type="image/webp">
-                 <source srcset="{{ h.url_for_static('ncris-footer.png') }}" type="image/png">
-                 <img class="nris-img" src="{{ h.url_for_static('ncris-footer.webp') }}" alt="NCRIS"/>
-             </picture>
+            <div class="placeholder" data-module="bpatheme_footer_image" data-module-alt="{{ footer_alt_text_ncris }}">{{ footer_alt_text_ncris }}<span class="loading"></span>
+            </div>
         </a></span>
     </div>
 
