@@ -522,7 +522,6 @@ body {
 /*    padding: 5px;*/
 /*}*/
 .search-background {
-    background-image: url("/header-background_2.png");
     background-size: cover;
     background-repeat: no-repeat;
     width: 100%;
@@ -534,16 +533,21 @@ body {
     position: relative;
 }
 
-.lazyload.search-background,
+.lazyload.search-background {
+    background-image: url("/header-background_2_small.png");
+}
+
 .lazyloading.search-background {
     -webkit-filter: blur(10px);
     filter: blur(10px);
+    background-image: url("/header-background_2.png");
 }
 
 .lazyloaded.search-background {
     transition: filter 1200ms, -webkit-filter 1200ms;
     -webkit-filter: blur(0);
     filter: blur(0);
+    background-image: url("/header-background_2.png");
 }
 
 .search-instructions {
