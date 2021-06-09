@@ -543,6 +543,15 @@ body {
     filter: blur(0);
 }
 
+/*.homepage .module-search .module-content,*/
+.lazyload.search-background .search-form,
+.lazyloading.search-background .search-form,
+.lazyloaded.search-background .search-form {
+    -webkit-filter: blur(0);
+    filter: blur(0);
+    opacity: 1;
+}
+
 /*.lazyload,*/
 /*.lazyloading {*/
 /*    opacity: 0;*/
