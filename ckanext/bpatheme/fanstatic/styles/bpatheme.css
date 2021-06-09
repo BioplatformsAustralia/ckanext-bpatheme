@@ -543,13 +543,13 @@ body {
     filter: blur(0);
 }
 
-/*.homepage .module-search .module-content,*/
-.lazyload.search-background .search-form,
-.lazyloading.search-background .search-form,
-.lazyloaded.search-background .search-form {
-    -webkit-filter: blur(0);
-    filter: blur(0);
-    opacity: 1;
+.homepage .module-search .module-content,
+.lazyload.search-background .module-search .module-content,
+.lazyloading.search-background .module-search .module-content,
+.lazyloaded.search-background .module-search .module-content {
+    -webkit-filter: blur(0)!important;
+    filter: blur(0)!important;
+    opacity: 1!important;
 }
 
 /*.lazyload,*/
