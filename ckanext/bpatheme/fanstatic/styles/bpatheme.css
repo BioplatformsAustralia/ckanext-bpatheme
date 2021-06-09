@@ -550,6 +550,7 @@ body {
     -webkit-filter: blur(0)!important;
     filter: blur(0)!important;
     opacity: 1!important;
+    transition: none;
 }
 
 /*.lazyload,*/
