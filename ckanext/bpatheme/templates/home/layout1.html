@@ -8,7 +8,7 @@
     }
 </style>
 <div role="main" class="hero landing">
-    <div class="search-background lazyload" data-lowsrc="{{ h.url_for_static_or_external('header-background_2_small.png') }}">
+    <div class="search-background lazyload">
         {% block search %}
             {% snippet 'home/snippets/search.html' %}
         {% endblock %}
