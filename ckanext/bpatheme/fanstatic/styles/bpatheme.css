@@ -537,14 +537,9 @@ body {
     background-image: url("/header-background_2.png");
 }
 
-.lazyload,
-.lazyloading {
-    opacity: 0.5;
-}
-
 .lazyloaded {
     opacity: 1;
-    transition: opacity 300ms;
+    transition: opacity 1000ms;
 }
 
 .search-instructions {
