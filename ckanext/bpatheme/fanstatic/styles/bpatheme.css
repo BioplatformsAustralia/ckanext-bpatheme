@@ -522,11 +522,29 @@ body {
 /*    padding: 5px;*/
 /*}*/
 .search-background {
-    background-image: url("/header-background_2_small.png");
     background-size: cover;
     background-repeat: no-repeat;
     width: 100%;
     padding: 5px;
+}
+
+.lazyload.search-background,
+.lazyloading.search-background {
+    background-image: url("/header-background_2_small.png");
+}
+
+.lazyloaded.search-background {
+    background-image: url("/header-background_2.png");
+}
+
+.lazyload,
+.lazyloading {
+    opacity: 0;
+}
+
+.lazyloaded {
+    opacity: 1;
+    transition: opacity 300ms;
 }
 
 .search-instructions {
