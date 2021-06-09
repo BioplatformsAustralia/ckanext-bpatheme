@@ -955,7 +955,7 @@ body {
 .loading:before {
     padding-left: 10px;
     font-style: italic;
-    content: "Loading image. Please wait";
+    content: "Loading. Please wait";
     overflow: hidden;
     display: inline-block;
     vertical-align: bottom;
