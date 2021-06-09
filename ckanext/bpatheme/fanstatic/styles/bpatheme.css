@@ -537,7 +537,7 @@ body {
 .lazyloading.search-background {
     -webkit-filter: blur(10px);
     filter: blur(10px);
-    background-image: url("/header-background_2.png");
+    background-image: url("/header-background_2_small.png");
 }
 
 .lazyloaded.search-background {
