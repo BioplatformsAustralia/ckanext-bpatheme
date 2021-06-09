@@ -533,11 +533,7 @@ body {
     position: relative;
 }
 
-.lazyload.search-background {
-    -webkit-filter: blur(10px);
-    filter: blur(10px);
-    background-image: url("/header-background_2_small.png");
-}
+.lazyload.search-background,
 .lazyloading.search-background {
     -webkit-filter: blur(10px);
     filter: blur(10px);
