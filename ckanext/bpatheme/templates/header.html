@@ -105,7 +105,7 @@
                                             <source media="(max-width:600px)"
                                                     srcset="{{ h.url_for_static_or_external('BIO-RGB_Symbol-NEG.png') }}" type="image/png">
                                             <source srcset="{{ h.url_for_static_or_external('BIO-RGB_Full-NEG_Portal_TRANS2.webp') }}" type="image/webp">
-                                            <img loading="lazy" src="{{ h.url_for_static_or_external('BIO-RGB_Full-NEG_Portal_TRANS2.png') }}"
+                                            <img class="lazyload" loading="lazy" src="{{ h.url_for_static_or_external('BIO-RGB_Full-NEG_Portal_TRANS2.png') }}"
                                                  alt="{{ g.site_title }}" title="{{ g.site_title }}"/>
                                         </picture>
                                     </a>
