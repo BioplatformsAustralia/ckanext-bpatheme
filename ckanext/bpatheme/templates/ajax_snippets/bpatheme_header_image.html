@@ -1,0 +1,9 @@
+<picture>
+    <source media="(max-width:600px)"
+            srcset="{{ h.url_for_static_or_external('BIO-RGB_Symbol-NEG.webp') }}" type="image/webp">
+    <source media="(max-width:600px)"
+            srcset="{{ h.url_for_static_or_external('BIO-RGB_Symbol-NEG.png') }}" type="image/png">
+    <source srcset="{{ h.url_for_static_or_external('BIO-RGB_Full-NEG_Portal_TRANS2.webp') }}" type="image/webp">
+    <img src="{{ h.url_for_static_or_external('BIO-RGB_Full-NEG_Portal_TRANS2.png') }}"
+         alt="{{ alt }}" title="{{ alt }}"/>
+</picture>
