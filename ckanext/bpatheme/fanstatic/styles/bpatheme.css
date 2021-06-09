@@ -982,7 +982,7 @@ body {
 .loading:before {
     padding-left: 10px;
     font-style: italic;
-    content: "Loading. Please wait";
+    content: "Loading";
     overflow: hidden;
     display: inline-block;
     vertical-align: bottom;
