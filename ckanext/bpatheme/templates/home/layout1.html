@@ -8,7 +8,7 @@
     }
 </style>
 <div role="main" class="hero landing">
-    <div class="lazyload search-background">
+    <div class="lazyload" data-lowsrc="{{ h.url_for_static_or_external('header-background_2_small.png') }}">
         {% block search %}
             {% snippet 'home/snippets/search.html' %}
         {% endblock %}
@@ -210,8 +210,9 @@
             {% endfor %}
             <div class="row row-eq-height">
                 {% for p in projects|sort(attribute='order', reverse=true) %}
-                    <div class="col-sm-3" data-module="bpatheme_project_icon_block" data-module-project="{{ h.dump_json(p) }}" >
-                        <div class="placeholder loading" ></div>
+                    <div class="col-sm-3" data-module="bpatheme_project_icon_block"
+                         data-module-project="{{ h.dump_json(p) }}">
+                        <div class="placeholder loading"></div>
                     </div>
                     {% if loop.index is divisibleby 4 %}
                         {# restart row #}

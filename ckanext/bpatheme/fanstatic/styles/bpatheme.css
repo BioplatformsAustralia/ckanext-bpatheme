@@ -522,25 +522,28 @@ body {
 /*    padding: 5px;*/
 /*}*/
 .search-background {
+    background-image: url("/header-background_2.png");
     background-size: cover;
     background-repeat: no-repeat;
     width: 100%;
     padding: 5px;
 }
 
-.lazyload.search-background,
-.lazyloading.search-background {
-    background-image: url("/header-background_2.png");
-    -webkit-filter: blur(5px);
-    filter: blur(5px);
-    transition: filter 2400ms, -webkit-filter 2400ms;
-}
 
-.lazyloaded.search-background {
-    background-image: url("/header-background_2.png");
-    -webkit-filter: blur(0);
-    filter: blur(0);
-}
+
+/*.lazyload.search-background,*/
+/*.lazyloading.search-background {*/
+/*    !*background-image: url("/header-background_2_small.png");*!*/
+/*    -webkit-filter: blur(5px);*/
+/*    filter: blur(5px);*/
+/*    transition: filter 2400ms, -webkit-filter 2400ms;*/
+/*}*/
+
+/*.lazyloaded.search-background {*/
+/*    background-image: url("/header-background_2.png");*/
+/*    -webkit-filter: blur(0);*/
+/*    filter: blur(0);*/
+/*}*/
 
 /*.lazyload,*/
 /*.lazyloading {*/
