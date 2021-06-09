@@ -9,10 +9,10 @@
 </style>
 <div role="main" class="hero landing">
     <div class="search-background lazyload">
-        {% block search %}
-            {% snippet 'home/snippets/search.html' %}
-        {% endblock %}
     </div>
+    {% block search %}
+        {% snippet 'home/snippets/search.html' %}
+    {% endblock %}
     <div class="featured-orgs">
         {% set projects = [] %}
         {% set amdb = {
