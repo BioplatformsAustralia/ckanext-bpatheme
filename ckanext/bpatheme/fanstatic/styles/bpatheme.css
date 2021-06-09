@@ -953,14 +953,16 @@ body {
 }
 
 .loading:before {
+    padding-left: 15px;
     font-style: italic;
-    content: " Loading image. Please wait";
+    content: "Loading image. Please wait";
     overflow: hidden;
     display: inline-block;
     vertical-align: bottom;
 }
 
 .loading:after {
+    padding-left: 15px;
     content: "...";
     overflow: hidden;
     display: inline-block;
