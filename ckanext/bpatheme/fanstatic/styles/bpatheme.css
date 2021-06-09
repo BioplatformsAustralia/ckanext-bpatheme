@@ -962,7 +962,6 @@ body {
 }
 
 .loading:after {
-    padding-left: 10px;
     content: "...";
     overflow: hidden;
     display: inline-block;
