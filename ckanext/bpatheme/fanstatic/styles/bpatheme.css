@@ -484,6 +484,10 @@ body {
     text-align: center;
 }
 
+.site-footer-logo .ncris-footer {
+    padding-left: 30px;
+}
+
 .site-footer-logo img.bpa-img {
     width: 150px;
     height: 137.14px;
@@ -950,7 +954,7 @@ body {
 
 .loading:before {
     font-style: italic;
-    content: "Loading image. Please wait";
+    content: " Loading image. Please wait";
     overflow: hidden;
     display: inline-block;
     vertical-align: bottom;
