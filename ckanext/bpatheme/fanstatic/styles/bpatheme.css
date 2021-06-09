@@ -554,7 +554,7 @@ body {
 /** show background image 'transparently', but ensure inputs are white (no transparency) **/
 .homepage .module-search {
     padding: 0;
-    margin: 5%;
+    margin: 2%;
     background-color: transparent;
 }
 
