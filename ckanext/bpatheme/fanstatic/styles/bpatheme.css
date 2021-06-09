@@ -538,15 +538,10 @@ body {
     -webkit-filter: blur(10px);
     filter: blur(10px);
     background-image: url("/header-background_2_small.png");
-     background-size: cover;
-    background-repeat: no-repeat;
-    width: 100%;
-    padding: 5px;
-    height: 320px;
 }
 
 .lazyloaded.search-background {
-    transition: filter 1200ms, -webkit-filter 1200ms;
+    transition: filter 1000ms, -webkit-filter 1000ms;
     -webkit-filter: blur(0);
     filter: blur(0);
     background-image: url("/header-background_2.png");
