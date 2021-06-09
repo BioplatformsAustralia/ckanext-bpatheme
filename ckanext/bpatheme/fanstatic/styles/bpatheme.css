@@ -532,13 +532,13 @@ body {
 .lazyload.search-background,
 .lazyloading.search-background {
     -webkit-filter: blur(10px);
-    opacity: 0;
+    opacity: 0.5;
     filter: blur(10px);
 }
 
 .lazyloaded.search-background {
     opacity: 1;
-    transition: opacity 1000ms, filter 2400ms, -webkit-filter 2400ms;
+    transition: opacity 500ms, filter 1200ms, -webkit-filter 1200ms;
     -webkit-filter: blur(0);
     filter: blur(0);
 }
