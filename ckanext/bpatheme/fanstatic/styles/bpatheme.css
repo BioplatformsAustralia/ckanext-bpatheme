@@ -556,6 +556,8 @@ body {
     padding: 0;
     margin: 2%;
     background-color: transparent;
+    position: absolute;
+    top: 0;
 }
 
 .homepage .module-search .module-content {
