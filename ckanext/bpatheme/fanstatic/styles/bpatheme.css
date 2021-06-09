@@ -527,6 +527,11 @@ body {
     background-repeat: no-repeat;
     width: 100%;
     padding: 5px;
+    height: 300px;
+}
+
+.search-wrapper {
+    position: relative;
 }
 
 .lazyload.search-background,
@@ -540,25 +545,6 @@ body {
     -webkit-filter: blur(0);
     filter: blur(0);
 }
-
-.homepage .lazyload .module-search .module-content,
-.homepage .lazyloading .module-search .module-content,
-.homepage .lazyloaded .module-search .module-content {
-    -webkit-filter: blur(0)!important;
-    filter: blur(0)!important;
-    transition: none;
-}
-
-/*.lazyload,*/
-/*.lazyloading {*/
-/*    opacity: 0;*/
-/*    transition: opacity 1400ms;*/
-/*}*/
-
-/*.lazyloaded {*/
-/*    opacity: 1;*/
-/*    transition: opacity 2300ms;*/
-/*}*/
 
 .search-instructions {
     font-size: xx-small;
