@@ -95,23 +95,14 @@
                         {% if g.site_logo %}
                             <div class="col-md-6 header-left">
                                 <div class="dwga-logo dwga-inlineblock">
-{#                                    <a class="logo placeholder" data-module="bpatheme_header_image" data-module-alt="{{ g.site_title }}" href="{{ h.url('home') }}">#}
-{#                                       {{ g.site_title }}#}
-{#                                    </a>#}
                                      <a class="logo" href="{{ h.url('home') }}">
-{#                                        <picture>#}
-{#                                            <source media="(max-width:600px)"#}
-{#                                                    data-srcset="{{ h.url_for_static_or_external('BIO-RGB_Symbol-NEG.webp') }}" type="image/webp">#}
-{#                                            <source media="(max-width:600px)"#}
-{#                                                    data-srcset="{{ h.url_for_static_or_external('BIO-RGB_Symbol-NEG.png') }}" type="image/png">#}
-{#                                            <source data-srcset="{{ h.url_for_static_or_external('BIO-RGB_Full-NEG_Portal_TRANS2.webp') }}" type="image/webp">#}
-{#                                            <img class="lazyload" loading="lazy" data-src="{{ h.url_for_static_or_external('BIO-RGB_Full-NEG_Portal_TRANS2.png') }}"#}
-{#                                                 alt="{{ g.site_title }}" title="{{ g.site_title }}"/>#}
-{#                                        </picture>#}
-                                         <picture>
-                                           <source data-sizes="auto"
-                                                    data-srcset="{{ h.url_for_static_or_external('BIO-RGB_Symbol-NEG.png') }} 100w,  {{ h.url_for_static_or_external('BIO-RGB_Full-NEG_Portal_TRANS2_small.png') }} 300w" type="image/png">
-                                            <img data-sizes="auto" class="lazyload" loading="lazy" data-src="{{ h.url_for_static_or_external('BIO-RGB_Full-NEG_Portal_TRANS2_small.png') }}"
+                                        <picture>
+                                            <source media="(max-width:600px)"
+                                                    data-srcset="{{ h.url_for_static_or_external('BIO-RGB_Symbol-NEG.webp') }}" type="image/webp">
+                                            <source media="(max-width:600px)"
+                                                    data-srcset="{{ h.url_for_static_or_external('BIO-RGB_Symbol-NEG.png') }}" type="image/png">
+                                            <source data-srcset="{{ h.url_for_static_or_external('BIO-RGB_Full-NEG_Portal_TRANS2.webp') }}" type="image/webp">
+                                            <img class="lazyload" loading="lazy" data-src="{{ h.url_for_static_or_external('BIO-RGB_Full-NEG_Portal_TRANS2_small.png') }}"
                                                  alt="{{ g.site_title }}" title="{{ g.site_title }}"/>
                                         </picture>
                                     </a>
