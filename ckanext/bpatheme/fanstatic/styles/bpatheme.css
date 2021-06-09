@@ -532,7 +532,7 @@ body {
 .lazyload.search-background,
 .lazyloading.search-background {
     -webkit-filter: blur(10px);
-    opacity: 0.5Z;
+    opacity: 0.5;
     filter: blur(10px);
     transition: opacity 1000ms, filter 2400ms, -webkit-filter 2400ms;
 }
