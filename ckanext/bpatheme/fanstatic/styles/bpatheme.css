@@ -522,7 +522,7 @@ body {
 /*    padding: 5px;*/
 /*}*/
 .search-background {
-    background-image: url("/header-background_2.png");
+    background-image: url("/header-background_2_small.png");
     background-size: cover;
     background-repeat: no-repeat;
     width: 100%;
