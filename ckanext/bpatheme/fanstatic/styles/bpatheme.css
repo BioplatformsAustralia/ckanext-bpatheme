@@ -537,10 +537,10 @@ body {
     background-image: url("/header-background_2.png");
 }
 
-.lazyload,
-.lazyloading {
-    opacity: 0.1;
-}
+/*.lazyload,*/
+/*.lazyloading {*/
+/*    opacity: 0.1;*/
+/*}*/
 
 .lazyloaded {
     opacity: 1;
