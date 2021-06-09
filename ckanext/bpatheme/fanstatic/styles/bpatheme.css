@@ -522,7 +522,7 @@ body {
 /*    padding: 5px;*/
 /*}*/
 .search-background {
-    background-image: url("/BIO-RGB_Full-NEG_Portal_TRANS.png");
+    background-image: url("/header-background_2.png");
     background-size: cover;
     background-repeat: no-repeat;
     width: 100%;
@@ -532,7 +532,7 @@ body {
 .lazyload.search-background,
 .lazyloading.search-background {
     -webkit-filter: blur(10px);
-    opacity: 0.5;
+    opacity: 0.5Z;
     filter: blur(10px);
     transition: opacity 1000ms, filter 2400ms, -webkit-filter 2400ms;
 }
