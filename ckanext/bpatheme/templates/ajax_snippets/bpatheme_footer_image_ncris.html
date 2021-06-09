@@ -1,5 +1,6 @@
 <picture>
-    <source srcset="{{ h.url_for_static('ncris-footer.webp') }}" type="image/webp">
-    <source srcset="{{ h.url_for_static('ncris-footer.png') }}" type="image/png">
-    <img loading="lazy" class="nris-img lazyload" src="{{ h.url_for_static('ncris-footer.webp') }}" alt="{{ alt }}"/>
+    <source data-srcset="{{ h.url_for_static('ncris-footer.webp') }}" type="image/webp">
+    <source data-srcset="{{ h.url_for_static('ncris-footer.png') }}" type="image/png">
+    <img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" loading="lazy"
+         class="nris-img lazyload" data-src="{{ h.url_for_static('ncris-footer.png') }}" alt="{{ alt }}"/>
 </picture>
