@@ -547,7 +547,6 @@ body {
     transition: filter 1200ms, -webkit-filter 1200ms;
     -webkit-filter: blur(0);
     filter: blur(0);
-    background-image: url("/header-background_2.png");
 }
 
 .search-instructions {
