@@ -534,9 +534,10 @@ body {
 }
 
 .lazyload.search-background {
+    -webkit-filter: blur(10px);
+    filter: blur(10px);
     background-image: url("/header-background_2_small.png");
 }
-
 .lazyloading.search-background {
     -webkit-filter: blur(10px);
     filter: blur(10px);
@@ -547,6 +548,7 @@ body {
     transition: filter 1200ms, -webkit-filter 1200ms;
     -webkit-filter: blur(0);
     filter: blur(0);
+    background-image: url("/header-background_2.png");
 }
 
 .search-instructions {
