@@ -953,7 +953,6 @@ body {
 }
 
 .loading:before {
-    padding-left: 10px;
     font-style: italic;
     content: "Loading image. Please wait";
     overflow: hidden;
@@ -962,7 +961,6 @@ body {
 }
 
 .loading:after {
-    padding-left: 10px;
     content: "...";
     overflow: hidden;
     display: inline-block;
