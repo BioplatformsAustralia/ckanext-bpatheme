@@ -543,12 +543,12 @@ body {
     filter: blur(0);
 }
 
-.homepage .module-search .module-content,
-.lazyload.search-background .module-search .module-content,
-.lazyloading.search-background .module-search .module-content,
-.lazyloaded.search-background .module-search .module-content {
+.homepage .lazyload .module-search .module-content,
+.homepage .lazyloading .module-search .module-content,
+.homepage .lazyloaded .module-search .module-content {
     -webkit-filter: blur(0)!important;
     filter: blur(0)!important;
+    transition: none;
 }
 
 /*.lazyload,*/
