@@ -58,6 +58,7 @@
     const spreadsheet_data = JSON.parse(cleanData('{{ spreadsheet_data }}'));
     const $table = $('#summary-table');
     $(function () {
+        console.log("device.mobile() === %s", device.mobile());
         $table.bootstrapTable({
             data: spreadsheet_data
         });
