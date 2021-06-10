@@ -635,6 +635,15 @@ body {
 }
 
 @media screen and (max-width: 600px) {
+
+    .masthead {
+        height: auto;
+    }
+
+    .masthead .unstyled {
+        padding: 0
+    }
+
     .dwga-header-row {
         align-items: flex-start;
     }
