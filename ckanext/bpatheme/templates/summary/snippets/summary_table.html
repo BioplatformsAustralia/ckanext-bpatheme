@@ -63,7 +63,7 @@
     }
     const $table = $('#summary-table');
     $(function () {
-        if (device && device.desktop()) {
+        if (device && device.mobile()) {
             summary_config['cardView'] = true
         }
         $table.bootstrapTable(summary_config);
