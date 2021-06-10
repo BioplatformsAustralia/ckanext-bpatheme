@@ -636,11 +636,11 @@ body {
 
 @media screen and (max-width: 600px) {
 
-    .masthead {
+    .account-masthead {
         height: auto;
     }
 
-    .masthead .unstyled {
+    .account-masthead .unstyled {
         padding: 0
     }
 
