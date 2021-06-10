@@ -56,14 +56,16 @@
 
     const spreadsheet_data = JSON.parse(cleanData('{{ spreadsheet_data }}'));
     const $table = $('#summary-table');
+    console.log("1 window device.desktop() === %s", window.device.desktop());
+     console.log("2 device.desktop() === %s", device.desktop());
     jQuery(document).ready(function () {
          console.dir(document.documentElement.classList.length)
         console.dir(window.device);
-         console.log("1device.mobile() === %s", device.mobile());
+         console.log("4 device.desktop() === %s", device.desktop());
     });
     $(function () {
         console.dir(document.documentElement.classList.length)
-        console.log("2 device.mobile() === %s", device.mobile());
+        console.log("3 device.desktop() === %s", device.desktop());
         $table.bootstrapTable({
             data: spreadsheet_data
         });
