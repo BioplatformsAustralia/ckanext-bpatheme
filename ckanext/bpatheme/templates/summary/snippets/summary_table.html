@@ -56,11 +56,12 @@
 
     const spreadsheet_data = JSON.parse(cleanData('{{ spreadsheet_data }}'));
     const $table = $('#summary-table');
+    jQuery(document).ready(function () {
+         console.dir(document.documentElement.classList.length)
+        console.dir(window.device);
+    });
     $(function () {
-        {#console.log("device.mobile() === %s", device.mobile());#}
-        console.dir(document.documentElement)
-        console.dir(document.documentElement.classList)
-         console.dir(document.documentElement.className)
+        console.dir(document.documentElement.classList.length)
         $table.bootstrapTable({
             data: spreadsheet_data
         });
