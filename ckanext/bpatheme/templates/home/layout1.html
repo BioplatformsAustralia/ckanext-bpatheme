@@ -216,12 +216,10 @@
                          data-module-project="{{ h.dump_json(p) }}">
                         <div class="placeholder loading">
                             <div class="project-name">
-                                <a href="{{ org_link }}">
-                                    <h3>{{ title }}</h3>
-                                </a>
+                                <h3>{{ p.title }}</h3>
                             </div>
                             <p class="project-description truncate-overflow">
-                                {{ description }}
+                                {{ p.description }}
                             </p>
                         </div>
                     </div>
