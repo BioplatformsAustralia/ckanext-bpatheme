@@ -58,12 +58,12 @@
     const $table = $('#summary-table');
     jQuery(document).ready(function () {
          console.dir(document.documentElement.classList.length)
-        console.dir(window.device);
-         console.log("4 device.desktop() === %s", device.desktop());
+        console.dir(device);
+         console.log("4 device.desktop() === %s",window.device.desktop());
     });
     $(function () {
         console.dir(document.documentElement.classList.length)
-        console.log("3 device.desktop() === %s", device.desktop());
+        console.log("3 device.desktop() === %s", window.device.desktop());
         $table.bootstrapTable({
             data: spreadsheet_data
         });
