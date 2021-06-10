@@ -61,16 +61,16 @@
     const spreadsheet_data = JSON.parse(cleanData('{{ spreadsheet_data }}'));
     const $table = $('#summary-table');
     $(function () {
-        console.dir(document.documentElement.classList.length)
-        if (!window.device) {
-            setTimeout(function () {
-                console.log("last device.desktop() === %s", device.desktop());
-            }, 3000);
+        if (device && device.desktop()) {
+            console.log("device.desktop() === %s");
+            $table.bootstrapTable({
+                data: spreadsheet_data,
+                cardView: true
+            });
         } else {
-            console.log("ready early 3 device.desktop() === %s", device.desktop());
+            $table.bootstrapTable({
+                data: spreadsheet_data
+            });
         }
-        $table.bootstrapTable({
-            data: spreadsheet_data
-        });
     })
 </script>
