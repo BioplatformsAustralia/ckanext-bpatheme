@@ -215,13 +215,13 @@
                     <div class="col-sm-3" data-module="bpatheme_project_icon_block"
                          data-module-project="{{ h.dump_json(p) }}">
                         <div class="placeholder loading">
-                            <div class="project-name">
-                                <h3>{{ p.title }}</h3>
-                            </div>
-                            <p class="project-description truncate-overflow">
-                                {{ p.description }}
-                            </p>
                         </div>
+                        <div class="project-name">
+                            <h3>{{ p.title }}</h3>
+                        </div>
+                        <p class="project-description truncate-overflow">
+                            {{ p.description }}
+                        </p>
                     </div>
                     {% if loop.index is divisibleby 4 %}
                         {# restart row #}
