@@ -58,7 +58,7 @@
     const $table = $('#summary-table');
     $(function () {
         {#console.log("device.mobile() === %s", device.mobile());#}
-        console.dir($('html')[0])
+        console.dir(document.documentElement)
         $table.bootstrapTable({
             data: spreadsheet_data
         });
