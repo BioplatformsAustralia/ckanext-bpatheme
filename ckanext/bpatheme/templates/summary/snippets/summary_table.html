@@ -1,53 +1,58 @@
+<script type="text/javascript" src="https://unpkg.com/current-device/umd/current-device.min.js"></script>
 <script type="text/javascript" src="{{ h.url_for_static('fanstatic/vendor/jquery.min.js') }}"></script>
 <script type="text/javascript" src="{{ h.url_for_static('bootstraptable/bootstrap-table.min.js') }}"></script>
 <link rel="stylesheet" href="{{ h.url_for_static('bootstraptable/bootstrap-table.min.css') }}"/>
 
 <div role="main" id="layout-summary" class="hero landing">
-  <div id="summary-text">
-    <p>
-    <p>The Bioplatforms Australia Framework Initiatives are national collaborative projects that use integrated ‘omics
-      infrastructure to generate high-impact data and knowledge resources in support of some of Australia’s biggest
-      scientific challenges.
-    <p>Below is a summary of the genomic resources generated, aiming to provide reference genomes of Australian fauna
-      and
-      flora species, and population genetic datasets.
-    <p>Additional resources, not listed here, are available through the data portal, including microbial genomic
-      resources
-      and other 'omics datasets. We encourage you to use the <a
-          href="{{ h.url_for(controller='package', action='search') }}">search feature</a> to explore the full content
-      of
-      this portal.
-    <div>Table legend:
-      <ul>
-        <li>CLR/RS: PacBio datasets generated using the PacBio Sequel I or RSII systems
-        <li>HiFi: PacBio datasets generated using the PacBio Sequel II system
-        <li>ONT: Oxford Nanopore Technology datasets generated using either a MinION or PromethION system
-        <li>10X: datasets generated through Chromium 10X Genomics
-        <li>Blue dots (hyperlink) provide a direct link to the page containing the referential dataset
-        <li>P indicates a resource that is planned or in progress
-      </ul>
+    <div id="summary-text">
+        <p>
+        <p>The Bioplatforms Australia Framework Initiatives are national collaborative projects that use integrated
+            ‘omics
+            infrastructure to generate high-impact data and knowledge resources in support of some of Australia’s
+            biggest
+            scientific challenges.
+        <p>Below is a summary of the genomic resources generated, aiming to provide reference genomes of Australian
+            fauna
+            and
+            flora species, and population genetic datasets.
+        <p>Additional resources, not listed here, are available through the data portal, including microbial genomic
+            resources
+            and other 'omics datasets. We encourage you to use the <a
+                    href="{{ h.url_for(controller='package', action='search') }}">search feature</a> to explore the full
+            content
+            of
+            this portal.
+        <div>Table legend:
+            <ul>
+                <li>CLR/RS: PacBio datasets generated using the PacBio Sequel I or RSII systems
+                <li>HiFi: PacBio datasets generated using the PacBio Sequel II system
+                <li>ONT: Oxford Nanopore Technology datasets generated using either a MinION or PromethION system
+                <li>10X: datasets generated through Chromium 10X Genomics
+                <li>Blue dots (hyperlink) provide a direct link to the page containing the referential dataset
+                <li>P indicates a resource that is planned or in progress
+            </ul>
+        </div>
+        <p>See the <a href="{{ h.url_for('home.about') }}">About page</a> for more information.
     </div>
-    <p>See the <a href="{{ h.url_for('home.about') }}">About page</a> for more information.
-  </div>
-  <div>
-    <table id="summary-table"
-           data-pagination="true"
-           data-search="true"
-           data-show-columns="true"
-           data-show-pagination-switch="true"
-           data-show-fullscreen="true"
-           data-show-toggle="true"
-           data-page-size="100">
-      <thead>
-      <tr>
-        {% for next_header in spreadsheet_columns %}
-          <th data-sortable="true" data-title-tooltip="{{ next_header }}"
-              data-field="{{ next_header }}">{{ next_header|replace(" ", "\n") }}</th>
-        {% endfor %}
-      </tr>
-      </thead>
-    </table>
-  </div>
+    <div>
+        <table id="summary-table"
+               data-pagination="true"
+               data-search="true"
+               data-show-columns="true"
+               data-show-pagination-switch="true"
+               data-show-fullscreen="true"
+               data-show-toggle="true"
+               data-page-size="100">
+            <thead>
+            <tr>
+                {% for next_header in spreadsheet_columns %}
+                    <th data-sortable="true" data-title-tooltip="{{ next_header }}"
+                        data-field="{{ next_header }}">{{ next_header|replace(" ", "\n") }}</th>
+                {% endfor %}
+            </tr>
+            </thead>
+        </table>
+    </div>
 </div>
 <script defer async>
     function cleanData(data) {
@@ -56,18 +61,20 @@
 
     const spreadsheet_data = JSON.parse(cleanData('{{ spreadsheet_data }}'));
     const $table = $('#summary-table');
-     jQuery(document).ready(function () {
-          if (!window.device || !device) {
-               console.log("jquery not ready for device yet...");
-          } else {
-               console.log("3 device.desktop() === %s", window.device.desktop());
-                console.log("3 device.desktop() === %s", device.desktop());
-          }
+    jQuery(document).ready(function () {
+        if (!window.device || !device) {
+            console.log("jquery not ready for device yet...");
+        } else {
+            console.log("3 device.desktop() === %s", window.device.desktop());
+            console.log("3 device.desktop() === %s", device.desktop());
+        }
     });
     $(function () {
         console.dir(document.documentElement.classList.length)
         if (!window.device) {
-            setTimeout(function(){ console.log("last device.desktop() === %s", device.desktop()); }, 3000);
+            setTimeout(function () {
+                console.log("last device.desktop() === %s", device.desktop());
+            }, 3000);
         } else {
             console.log("3 device.desktop() === %s", window.device.desktop());
         }
