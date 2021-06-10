@@ -1,6 +1,7 @@
 <picture>
-    <source srcset="{{ h.url_for_static('BIO-RGB_Large-NEGTRANS_small.webp') }}" type="image/webp">
-    <source srcset="{{ h.url_for_static('BIO-RGB_Large-NEGTRANS_small.png') }}" type="image/png">
-    <img loading="lazy" class="bpa-img lazyload" src="{{ h.url_for_static('BIO-RGB_Large-NEGTRANS_small.png') }}"
+    <source data-srcset="{{ h.url_for_static('BIO-RGB_Large-NEGTRANS_small.webp') }}" type="image/webp">
+    <source data-srcset="{{ h.url_for_static('BIO-RGB_Large-NEGTRANS_small.png') }}" type="image/png">
+    <img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" loading="lazy"
+         class="bpa-img lazyload" data-src="{{ h.url_for_static('BIO-RGB_Large-NEGTRANS_small.png') }}"
          alt="{{ alt }}"/>
 </picture>
