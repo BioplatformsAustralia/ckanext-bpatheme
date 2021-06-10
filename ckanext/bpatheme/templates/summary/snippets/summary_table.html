@@ -58,19 +58,14 @@
         return data.replace(/&#34;/g, '"').replace(/&lt;/g, "<").replace(/&gt;/g, ">");
     }
 
-    const spreadsheet_data = JSON.parse(cleanData('{{ spreadsheet_data }}'));
+    const summary_config = {
+        data: JSON.parse(cleanData('{{ spreadsheet_data }}'))
+    }
     const $table = $('#summary-table');
     $(function () {
         if (device && device.desktop()) {
-            console.log("device.desktop() === %s");
-            $table.bootstrapTable({
-                data: spreadsheet_data,
-                cardView: true
-            });
-        } else {
-            $table.bootstrapTable({
-                data: spreadsheet_data
-            });
+            summary_config['cardView'] = true
         }
+        $table.bootstrapTable(summary_config);
     })
 </script>
