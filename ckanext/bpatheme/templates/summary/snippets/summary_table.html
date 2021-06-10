@@ -59,6 +59,9 @@
      jQuery(document).ready(function () {
           if (!window.device || !device) {
                console.log("jquery not ready for device yet...");
+          } else {
+               console.log("3 device.desktop() === %s", window.device.desktop());
+                console.log("3 device.desktop() === %s", device.desktop());
           }
     });
     $(function () {
