@@ -214,7 +214,16 @@
                 {% for p in projects|sort(attribute='order', reverse=true) %}
                     <div class="col-sm-3" data-module="bpatheme_project_icon_block"
                          data-module-project="{{ h.dump_json(p) }}">
-                        <div class="placeholder loading"></div>
+                        <div class="placeholder loading">
+                            <div class="project-name">
+                                <a href="{{ org_link }}">
+                                    <h3>{{ title }}</h3>
+                                </a>
+                            </div>
+                            <p class="project-description truncate-overflow">
+                                {{ description }}
+                            </p>
+                        </div>
                     </div>
                     {% if loop.index is divisibleby 4 %}
                         {# restart row #}
