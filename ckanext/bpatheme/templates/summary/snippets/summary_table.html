@@ -59,9 +59,11 @@
     jQuery(document).ready(function () {
          console.dir(document.documentElement.classList.length)
         console.dir(window.device);
+         console.log("1device.mobile() === %s", device.mobile());
     });
     $(function () {
         console.dir(document.documentElement.classList.length)
+        console.log("2 device.mobile() === %s", device.mobile());
         $table.bootstrapTable({
             data: spreadsheet_data
         });
