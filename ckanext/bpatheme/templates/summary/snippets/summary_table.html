@@ -60,14 +60,6 @@
 
     const spreadsheet_data = JSON.parse(cleanData('{{ spreadsheet_data }}'));
     const $table = $('#summary-table');
-    jQuery(document).ready(function () {
-        if (!window.device || !device) {
-            console.log("jquery not ready for device yet...");
-        } else {
-            console.log("3 device.desktop() === %s", window.device.desktop());
-            console.log("3 device.desktop() === %s", device.desktop());
-        }
-    });
     $(function () {
         console.dir(document.documentElement.classList.length)
         if (!window.device) {
@@ -75,7 +67,7 @@
                 console.log("last device.desktop() === %s", device.desktop());
             }, 3000);
         } else {
-            console.log("3 device.desktop() === %s", window.device.desktop());
+            console.log("ready early 3 device.desktop() === %s", window.device.desktop());
         }
         $table.bootstrapTable({
             data: spreadsheet_data
