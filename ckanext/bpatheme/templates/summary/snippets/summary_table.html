@@ -63,6 +63,7 @@
     }
     const $table = $('#summary-table');
     $(function () {
+        {#depends on current-device.js#}
         if (device && device.mobile()) {
             summary_config['cardView'] = true
         }
