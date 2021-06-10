@@ -283,7 +283,6 @@ ul.nav {
 .masthead .logo img {
     max-height: 100%;
     height: 83.2px;
-    /*width: 350px;*/
 }
 
 img {
@@ -671,6 +670,10 @@ body {
 
     .topnav.responsive .headermenu a {
         display: block;
+    }
+
+    .dwga-header-row .logo {
+        width: 260px;
     }
 
     .masthead .logo img {
