@@ -5,7 +5,7 @@
         <a href="{{ h.url_for(controller='organization', action='index') }}">Organisations</a>
         <a href="{{ h.url_for(controller='package', action='search') }}">Datasets</a>
         <a href="/organization/pages/bioplatforms-australia/api-access">API Access</a>
-        <a href="mailto:help@bioplatforms.com">Contact</a>
+        <a href="{{ h.url_for(controller='ckanext.bpatheme.controller:ContactController', action='index') }}">Contact</a>
         <a href="http://www.bioplatforms.com">Operated by Bioplatforms Australia</a>
     </div>
     <div class="site-footer-logo">
