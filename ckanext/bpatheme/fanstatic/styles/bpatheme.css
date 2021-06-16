@@ -556,6 +556,8 @@ body {
     background-color: transparent;
     position: absolute;
     top: 0;
+    /*firefox needs min width spelt out*/
+    width: 90%;
 }
 
 .homepage .module-search .module-content {
