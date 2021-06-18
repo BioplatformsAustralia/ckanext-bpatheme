@@ -183,11 +183,6 @@
             "label": "file_type"
         },
         {
-            "field_name": "flow_cell_id",
-            "form_placeholder": "",
-            "label": "flow_cell_id"
-        },
-        {
             "field_name": "flowcell_id",
             "form_placeholder": "",
             "label": "flowcell_id"
@@ -449,8 +444,8 @@
             "label": "facility_id"
         },
         {
-            "field_name": "flow_cell_id",
-            "label": "flow_cell_id"
+            "field_name": "flowcell_id",
+            "label": "flowcell_id"
         },
         {
             "field_name": "index",
