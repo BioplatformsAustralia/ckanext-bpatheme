@@ -253,6 +253,11 @@
             "label": "file_name"
         },
         {
+            "field_name": "file_type",
+            "form_placeholder": "",
+            "label": "file_type"
+        },
+        {
             "field_name": "flowcell_id",
             "form_placeholder": "",
             "label": "flowcell_id"
@@ -328,6 +333,11 @@
             "label": "library_index_sequence"
         },
         {
+            "field_name": "library_layout",
+            "form_placeholder": "",
+            "label": "library_layout"
+        },
+        {
             "field_name": "library_location",
             "form_placeholder": "",
             "label": "library_location"
@@ -363,9 +373,24 @@
             "label": "library_prepared_by"
         },
         {
+            "field_name": "library_selection",
+            "form_placeholder": "",
+            "label": "library_selection"
+        },
+        {
+            "field_name": "library_source",
+            "form_placeholder": "",
+            "label": "library_source"
+        },
+        {
             "field_name": "library_status",
             "form_placeholder": "",
             "label": "library_status"
+        },
+        {
+            "field_name": "library_strategy",
+            "form_placeholder": "",
+            "label": "library_strategy"
         },
         {
             "field_name": "library_type",
@@ -486,6 +511,16 @@
             "field_name": "sequencing_facility",
             "form_placeholder": "",
             "label": "sequencing_facility"
+        },
+        {
+            "field_name": "sequencing_kit_chemistry_version",
+            "form_placeholder": "",
+            "label": "sequencing_kit_chemistry_version"
+        },
+        {
+            "field_name": "sequencing_model",
+            "form_placeholder": "",
+            "label": "sequencing_model"
         },
         {
             "field_name": "sequencing_platform",
