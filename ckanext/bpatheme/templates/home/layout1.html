@@ -199,6 +199,21 @@
             } %}
         {% if projects.append(stemcells) %} {% endif %}
 
+        {% set grasslands = {
+                'logo' : "Australian-Grasslands.webp",
+                'icon' : "icon_grasslands.webp",
+                'iconalt' : "icon_grasslands.png",
+                'slug' : "australian-grasslands",
+                'url' : "http://www.bioplatforms.com/grasslands",
+                'title' : "Australian Grasslands",
+                'description' : "
+			The Australian Grasslands Initiative is a national collaborative project,
+			which aims to identify mechanisms of adaptation in grasses to Australia's
+			diverse range of soils and climates.
+                ",
+            } %}
+        {% if projects.append(grasslands) %} {% endif %}
+
         <div class="container">
             <h3 class="heading">{{ _("Search within a project") }}</h3>
             {# enable project sorting by rank order, then by order in config #}
