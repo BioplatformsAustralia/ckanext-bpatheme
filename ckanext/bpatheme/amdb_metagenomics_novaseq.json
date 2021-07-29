@@ -903,6 +903,11 @@
             "label": "flooding"
         },
         {
+            "field_name": "flowcell",
+            "form_placeholder": "",
+            "label": "flowcell"
+        },
+        {
             "field_name": "fluor",
             "form_placeholder": "",
             "label": "fluor (AU)"

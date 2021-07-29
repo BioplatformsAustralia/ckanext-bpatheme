@@ -178,6 +178,11 @@
             "label": "country"
         },
         {
+            "field_name": "data_context",
+            "form_placeholder": "",
+            "label": "data_context"
+        },
+        {
             "field_name": "data_custodian",
             "form_placeholder": "",
             "label": "data_custodian"
@@ -213,6 +218,16 @@
             "label": "death_date"
         },
         {
+            "field_name": "decimal_latitude_public",
+            "form_placeholder": "",
+            "label": "decimal_latitude_public"
+        },
+        {
+            "field_name": "decimal_longitude_public",
+            "form_placeholder": "",
+            "label": "decimal_longitude_public"
+        },
+        {
             "field_name": "description",
             "form_placeholder": "",
             "label": "description"
@@ -228,6 +243,11 @@
             "label": "experimental_design"
         },
         {
+            "field_name": "facility_project_code",
+            "form_placeholder": "",
+            "label": "facility_project_code"
+        },
+        {
             "field_name": "facility_sample_id",
             "form_placeholder": "",
             "label": "facility_sample_id"
@@ -241,6 +261,11 @@
             "field_name": "file_name",
             "form_placeholder": "",
             "label": "file_name"
+        },
+        {
+            "field_name": "file_type",
+            "form_placeholder": "",
+            "label": "file_type"
         },
         {
             "field_name": "flowcell_id",
@@ -318,6 +343,11 @@
             "label": "library_index_sequence"
         },
         {
+            "field_name": "library_layout",
+            "form_placeholder": "",
+            "label": "library_layout"
+        },
+        {
             "field_name": "library_location",
             "form_placeholder": "",
             "label": "library_location"
@@ -353,9 +383,24 @@
             "label": "library_prepared_by"
         },
         {
+            "field_name": "library_selection",
+            "form_placeholder": "",
+            "label": "library_selection"
+        },
+        {
+            "field_name": "library_source",
+            "form_placeholder": "",
+            "label": "library_source"
+        },
+        {
             "field_name": "library_status",
             "form_placeholder": "",
             "label": "library_status"
+        },
+        {
+            "field_name": "library_strategy",
+            "form_placeholder": "",
+            "label": "library_strategy"
         },
         {
             "field_name": "library_type",
@@ -476,6 +521,16 @@
             "field_name": "sequencing_facility",
             "form_placeholder": "",
             "label": "sequencing_facility"
+        },
+        {
+            "field_name": "sequencing_kit_chemistry_version",
+            "form_placeholder": "",
+            "label": "sequencing_kit_chemistry_version"
+        },
+        {
+            "field_name": "sequencing_model",
+            "form_placeholder": "",
+            "label": "sequencing_model"
         },
         {
             "field_name": "sequencing_platform",
