@@ -657,6 +657,10 @@
             "label": "facility_id"
         },
         {
+            "field_name": "flowcell2_id",
+            "label": "flowcell2_id"
+        },
+        {
             "field_name": "flowcell_id",
             "label": "flowcell_id"
         },
