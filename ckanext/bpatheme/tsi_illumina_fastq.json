@@ -513,6 +513,11 @@
             "label": "sequencing_facility"
         },
         {
+            "field_name": "sequencing_kit_chemistry_version",
+            "form_placeholder": "",
+            "label": "sequencing_kit_chemistry_version"
+        },
+        {
             "field_name": "sequencing_model",
             "form_placeholder": "",
             "label": "sequencing_model"
