@@ -273,9 +273,19 @@
             "label": "family"
         },
         {
+            "field_name": "fast5_compression",
+            "form_placeholder": "",
+            "label": "fast5_compression"
+        },
+        {
             "field_name": "file_count",
             "form_placeholder": "",
             "label": "file_count"
+        },
+        {
+            "field_name": "file_type",
+            "form_placeholder": "",
+            "label": "file_type"
         },
         {
             "field_name": "flowcell_id",
@@ -353,6 +363,11 @@
             "label": "library_index_seq"
         },
         {
+            "field_name": "library_layout",
+            "form_placeholder": "",
+            "label": "library_layout"
+        },
+        {
             "field_name": "library_location",
             "form_placeholder": "",
             "label": "library_location"
@@ -388,9 +403,24 @@
             "label": "library_prepared_by"
         },
         {
+            "field_name": "library_selection",
+            "form_placeholder": "",
+            "label": "library_selection"
+        },
+        {
+            "field_name": "library_source",
+            "form_placeholder": "",
+            "label": "library_source"
+        },
+        {
             "field_name": "library_status",
             "form_placeholder": "",
             "label": "library_status"
+        },
+        {
+            "field_name": "library_strategy",
+            "form_placeholder": "",
+            "label": "library_strategy"
         },
         {
             "field_name": "library_type",
@@ -441,6 +471,11 @@
             "field_name": "method_of_determination",
             "form_placeholder": "",
             "label": "method_of_determination"
+        },
+        {
+            "field_name": "model_base_caller",
+            "form_placeholder": "",
+            "label": "model_base_caller"
         },
         {
             "field_name": "movie_length",
@@ -511,6 +546,16 @@
             "field_name": "sequencing_facility",
             "form_placeholder": "",
             "label": "sequencing_facility"
+        },
+        {
+            "field_name": "sequencing_kit_chemistry_version",
+            "form_placeholder": "",
+            "label": "sequencing_kit_chemistry_version"
+        },
+        {
+            "field_name": "sequencing_model",
+            "form_placeholder": "",
+            "label": "sequencing_model"
         },
         {
             "field_name": "sequencing_platform",
