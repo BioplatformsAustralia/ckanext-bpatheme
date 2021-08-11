@@ -283,11 +283,6 @@
             "label": "library_type"
         },
         {
-            "field_name": "license_id",
-            "form_placeholder": "",
-            "label": "license_id"
-        },
-        {
             "field_name": "longitude",
             "form_placeholder": "",
             "label": "longitude"
