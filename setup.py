@@ -7,12 +7,12 @@ install_requires=[
 
 setup(
     name='ckanext-bpatheme',
-    version='3.1.22',
+    version='3.1.27',
     description='',
     license='AGPL3',
-    author='data.wa.gov.au team',
-    author_email='florian.mayer@dpaw.wa.gov.au',
-    url='http://govhack2015.readthedocs.org/',
+    author='Bioplatforms Australia',
+    author_email='help@bioplatforms.com',
+    url='https://github.com/BioplatformsAustralia/ckanext-bpatheme',
     namespace_packages=['ckanext'],
     packages=['ckanext.bpatheme'],
     install_requires=install_requires,

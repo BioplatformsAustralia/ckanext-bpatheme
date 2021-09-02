@@ -228,6 +228,11 @@
             "label": "library_type"
         },
         {
+            "field_name": "living_collections_catalog_number",
+            "form_placeholder": "",
+            "label": "living_collections_catalog_number"
+        },
+        {
             "field_name": "living_collections_event_date",
             "form_placeholder": "",
             "label": "living_collections_event_date"
@@ -236,6 +241,11 @@
             "field_name": "living_collections_material_sample_rna",
             "form_placeholder": "",
             "label": "living_collections_material_sample_rna"
+        },
+        {
+            "field_name": "living_collections_record_number",
+            "form_placeholder": "",
+            "label": "living_collections_record_number"
         },
         {
             "field_name": "living_collections_recorded_by",
