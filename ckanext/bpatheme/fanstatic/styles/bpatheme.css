@@ -981,6 +981,15 @@ body {
     font-style: italic;
 }
 
+.s3filestore_url_window {
+    cursor: pointer;
+}
+
+.fa-copy {
+    padding-right: 8px;
+    font-size: 20px;
+}
+
 /* styling for map */
 
 .dataset-map-expanded #dataset-map {
