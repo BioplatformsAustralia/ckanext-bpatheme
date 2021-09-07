@@ -38,9 +38,7 @@
                                 {% endif %}
                             </a>
                         </li>
-                        {% if res.has_views or res.url_type == 'upload' %}
                             {% snippet 'ckanext_s3filestore/snippets/download_window_link.html', id=pkg.name, resource_id=res.id %}
-                        {% endif %}
                         {% endif %}
                         {% if can_edit %}
                         <li>
