@@ -10,7 +10,7 @@
         <div class="dropdown btn-group">
                     <a href="#" class="btn btn-primary dropdown-toggle" data-toggle="dropdown">
                         <i class="fa    fa-share"></i>
-                        {{ _('Explore') }}
+                        {{ _('Access') }}
                         <span class="caret"></span>
                     </a>
                     <ul class="dropdown-menu">
@@ -31,7 +31,7 @@
                             <a href="{{ res.url }}" class="resource-url-analytics" target="_blank">
                                 {% if res.has_views or res.url_type == 'upload' %}
                                 <i class="fa fa-arrow-circle-o-down"></i>
-                                {{ _('Download') }}
+                                {{ _('Download to desktop') }}
                                 {% else %}
                                 <i class="fa fa-external-link"></i>
                                 {{ _('Go to resource') }}
