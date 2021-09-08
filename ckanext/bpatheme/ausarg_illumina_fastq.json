@@ -358,9 +358,19 @@
             "label": "library_index_id"
         },
         {
+            "field_name": "library_index_id_dual",
+            "form_placeholder": "",
+            "label": "library_index_id_dual"
+        },
+        {
             "field_name": "library_index_seq",
             "form_placeholder": "",
             "label": "library_index_seq"
+        },
+        {
+            "field_name": "library_index_seq_dual",
+            "form_placeholder": "",
+            "label": "library_index_seq_dual"
         },
         {
             "field_name": "library_layout",
@@ -381,6 +391,11 @@
             "field_name": "library_oligo_sequence",
             "form_placeholder": "",
             "label": "library_oligo_sequence"
+        },
+        {
+            "field_name": "library_oligo_sequence_dual",
+            "form_placeholder": "",
+            "label": "library_oligo_sequence_dual"
         },
         {
             "field_name": "library_pcr_cycles",
