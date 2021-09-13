@@ -985,10 +985,17 @@ body {
     cursor: pointer;
 }
 
-.fa-copy {
-    padding-right: 8px;
-    font-size: 20px;
+.download-window-links {
+    padding-right: 1px;
+    font-size: 16px;
 }
+
+.resource-actions {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
 
 /* styling for map */
 
