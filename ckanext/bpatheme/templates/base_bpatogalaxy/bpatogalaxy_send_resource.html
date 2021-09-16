@@ -1,0 +1,21 @@
+{% extends "page.html" %}
+
+{%- block styles %}
+  {{ super() }}
+{% endblock %}
+
+{% block main_content %}
+<h3>TEST</h3>
+<ul>
+    <li>Test send resource from PROD AWS s3 bucket to Galaxy</li>
+    <li>{{ package_id }}</li>
+    <li>{{ resource_id }}</li>
+    <li>
+        {% snippet 'bpatogalaxy/snippets/download_window_link_bpatogalaxy.html', id=package_id, resource_id=resource_id
+        %}
+    </li>
+    {% if url %}
+      {{ h.bpatogalaxy_send_temp_presigned_url_to_galaxy_helper(url) }}
+    {% endif %}
+</ul>
+{% endblock %}
