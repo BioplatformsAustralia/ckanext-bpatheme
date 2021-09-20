@@ -42,11 +42,13 @@
                         <span class="caret"></span>
                     </a>
                     <ul class="dropdown-menu ">
+                        {% if h.check_access('resource_show', {'id':res.id }) %}
                         <li>
                             {% snippet 'ckanext_s3filestore/snippets/download_window_link.html', id=pkg.name,
                             resource_id=res.id
                             %}
                         </li>
+                        {% endif %}
                         {% if res.url and h.is_url(res.url) %}
                         <li>
                             <a class="resource-url-analytics resource-type-{{ res.resource_type }}"
