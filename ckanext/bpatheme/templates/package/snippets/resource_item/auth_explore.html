@@ -42,6 +42,9 @@
                             {% snippet 'ckanext_s3filestore/snippets/download_window_link.html', id=pkg.name, resource_id=res.id %}
                         </li>
                         <li>
+                            {% snippet 'bpatogalaxy/snippets/download_window_link_bpatogalaxy.html', id=pkg.name, resource_id=res.id %}
+                        </li>
+                        <li>
                             <a href="{{ h.url_for(controller='ckanext.bpatogalaxy.controller:BpatogalaxyController', action='send_resource_to_galaxy', package_id=pkg.name, resource_id=res.id) }}" >Send File/Resource to Galaxy</a>
                         </li>
                         {% endif %}
