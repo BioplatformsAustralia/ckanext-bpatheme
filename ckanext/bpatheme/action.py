@@ -1,14 +1,19 @@
 from ckan import model
-from ckan.common import c, _
+from ckan.common import config, c, _
 import ckan.logic
 import ckan.plugins.toolkit as toolkit
 from ckan.logic.action.create import user_create
 from ckan.lib.helpers import flash_success
 
+from mail import mail_welcome_email
+
+import os
 import logging
 
 log = logging.getLogger(__name__)
 
+class EmailUser:
+    pass
 
 def custom_user_create(context, data_dict=None):
     from ckan.logic.auth import create
@@ -51,6 +56,18 @@ def custom_user_create(context, data_dict=None):
     # un stash values
     c.user_obj = stash_c_user_obj
     c.user = stash_c_user
+
+    # send welcome to the new user
+    url = config.get('ckan.site_url', "")
+    site_name = config.get('ckan.site_description', "")
+    site_email = os.environ.get('BIOPLATFORMS_HELPDESK_ADDRESS',config.get('error_email_from', ""))
+
+    welcome = EmailUser()
+    welcome.email = newuser['email']
+    welcome.username = newuser['name']
+    welcome.display_name = newuser['display_name']
+
+    mail_welcome_email(welcome, site_name, site_email, url)
 
     flash_success(_("Membership created.  You have been logged in."))
 
