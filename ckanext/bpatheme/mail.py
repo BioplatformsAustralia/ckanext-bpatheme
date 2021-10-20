@@ -26,6 +26,8 @@ initiatives you have request access to.
 
 For datasets less than 12 months old that are still under embargo, we request 
 that you reach out to their data custodian for collaboration opportunities.
+If you are unsure of who to contact, please let us know and we can facilitate
+a conversation.
 
 Use of the Bioplatforms Australia Data Portal is subject to Terms and
 Conditions.  These, along with a Privacy statement on data collection, can be
