@@ -3,7 +3,7 @@ from ckan.common import config, c, _
 import ckan.logic
 import ckan.plugins.toolkit as toolkit
 from ckan.logic.action.create import user_create
-from ckan.lib.helpers import flash_success
+from ckan.lib.helpers import flash_success, flash_notice
 
 from mail import mail_welcome_email
 
@@ -34,6 +34,7 @@ def custom_user_create(context, data_dict=None):
     c.user = newuser["name"]
 
     # find organization check boxes
+    membership_requested = False
     orgs = toolkit.get_action("get_available_organizations")({}, {})
 
     for org in orgs:
@@ -41,6 +42,7 @@ def custom_user_create(context, data_dict=None):
         log.debug("looking for {}".format(id))
         if id in data_dict:
             log.debug("found {}".format(id))
+            membership_requested = True
             create_dict = {}
             create_dict["role"] = "member"
             create_dict["group"] = org.get("name")
@@ -56,6 +58,10 @@ def custom_user_create(context, data_dict=None):
     # un stash values
     c.user_obj = stash_c_user_obj
     c.user = stash_c_user
+
+    # if no requests, flash notice
+    if not membership_requested:
+        flash_notice(_("No initiative memberships were requested.  Please request access using the \"Memberships\" button in the top right."))
 
     # send welcome to the new user
     url = config.get('ckan.site_url', "")
