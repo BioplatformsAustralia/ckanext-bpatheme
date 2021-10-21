@@ -7,7 +7,7 @@ install_requires=[
 
 setup(
     name='ckanext-bpatheme',
-    version='3.1.35',
+    version='3.1.36',
     description='',
     license='AGPL3',
     author='Bioplatforms Australia',
