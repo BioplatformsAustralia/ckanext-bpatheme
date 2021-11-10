@@ -14,6 +14,9 @@ import ckanext.scheming.helpers as sh
 
 from ckanext.bpatheme import action
 
+import logging
+
+log = logging.getLogger(__name__)
 
 def get_current_year():
     return datetime.datetime.today().year
@@ -171,6 +174,64 @@ def get_os_env_value(key):
     return config.get(config_key) or os.environ.get(key, '')
 
 
+# embargo functions
+
+def _is_embargo_current(pkg):
+    #if pkg.get('access_control_date', None) or pkg.get('access_control_reason', None):
+    embargo = pkg.get('access_control_date', None)
+    if not embargo:
+        # not found - assume current
+        return True
+
+    try:
+        embargo_end = datetime.datetime.strptime(embargo, "%Y-%m-%d")
+        if embargo_end < datetime.datetime.now():
+            return False
+    except ValueError:
+        return True
+
+    return True
+
+def has_embargo(pkg):
+    mode = pkg.get('access_control_mode','')
+    if mode in ('open'):
+        return False
+
+    if mode in ('closed','date'):
+        if mode in ('date') and not _is_embargo_current(pkg):
+            return False
+        else:
+            return True
+
+    if pkg.get('access_control_date', None) or pkg.get('access_control_reason', None):
+        return True
+
+    return False
+
+def has_timed_embargo(pkg):
+    embargo = pkg.get('access_control_date', None)
+    try:
+        if embargo and datetime.datetime.strptime(embargo, "%Y-%m-%d"):
+            return True
+    except ValueError:
+        return False
+
+    return False
+
+def has_embargo_reason(pkg):
+    if 'access_control_reason' in pkg:
+        if pkg['access_control_reason'] is not None and\
+            len(pkg['access_control_reason']) > 0:
+            return True
+    return False
+
+def get_embargo_reason(pkg):
+    return pkg.get('access_control_reason', "")
+
+def get_embargo_date(pkg):
+    return pkg.get('access_control_date', None)
+
+
 class CustomTheme(plugins.SingletonPlugin):
     plugins.implements(plugins.IConfigurer)
     plugins.implements(plugins.ITemplateHelpers)
@@ -183,7 +244,7 @@ class CustomTheme(plugins.SingletonPlugin):
     def get_actions(self):
         return {
             'user_create': action.custom_user_create,
-        }
+            }
 
     # IRoutes
     def after_map(self, map):
@@ -274,7 +335,12 @@ class CustomTheme(plugins.SingletonPlugin):
             'datawa_get_option_label': datawa_get_option_label,
             'organization_slugs_by_creation': organization_slugs_by_creation,
             'organization_slugs_by_creation_and_rank': organization_slugs_by_creation_and_rank,
-            'get_os_env_value': get_os_env_value
+            'get_os_env_value': get_os_env_value,
+            'has_embargo': has_embargo,
+            'has_timed_embargo': has_timed_embargo,
+            'has_embargo_reason': has_embargo_reason,
+            'get_embargo_reason': get_embargo_reason,
+            'get_embargo_date': get_embargo_date,
         }
 
     # Ifacets

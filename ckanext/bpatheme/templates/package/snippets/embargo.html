@@ -1,0 +1,66 @@
+{% set pkg = c.pkg_dict or pkg_dict %}
+
+{% block package_embargo %}
+    {#
+    Process the four embargo states:
+
+    Open = No embargo period needs to be applied for the data. For example, we might have a set of data that is required to be made available immediately due to the funding associated with it
+
+    Embargo with default policy period = Unless otherwise noted, this would be a standardised length of time for the data associated with the initiative it was ingested under
+
+    Embargo with a specific date = For example, a longer period of embargo needs to be set. A reason should be given. Eg researcher needs to await publication in Nature, etc
+
+    Closed = A dataset that will always have a higher restriction on it.
+
+    The fields that control this are:  "access_control_date" and "access_control_reason".
+    #}
+
+  {% if pkg %}
+    {% if h.has_embargo(pkg) %}
+    <div class="clearfix"></div>
+    <div class="alert alert-info" role="alert">
+      <p>
+      This dataset is 
+      {% if h.has_timed_embargo(pkg) %}
+      currently under a short embargo period until
+      {{ h.render_datetime(h.get_embargo_date(pkg)) }}
+      {% else %}
+      under an embargo
+      {% endif %}
+      to enable primary access by research 
+      partners.   
+      </p>
+
+      <p>
+      If you would like access
+      {% if h.has_timed_embargo(pkg) %}
+      during this period 
+      {% else %}
+      this data
+      {% endif %}
+
+      please contact us
+      <a href="{{ h.url_for(controller='ckanext.bpatheme.controller:ContactController', action='index') }}">here</a>,
+      or contact the project lead directly (see 
+      details in the table below)
+      
+      {% if h.has_timed_embargo(pkg) %}
+      for collaboration opportunities.   
+      {% else %}
+      for information about the embargo.
+      {% endif %}
+      </p>
+
+      {% if h.has_embargo_reason(pkg) %}
+      <p>
+      The embargo is for the following reason:
+      </p>
+
+      <blockquote>
+      {{ h.get_embargo_reason(pkg) }}
+      </blockquote>
+      {% endif %}
+    </div>
+    {% endif %}
+  {% endif %}
+{% endblock %}
