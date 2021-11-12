@@ -158,6 +158,11 @@
             "label": "experimental_design"
         },
         {
+            "field_name": "facility_project_code",
+            "form_placeholder": "",
+            "label": "facility_project_code"
+        },
+        {
             "field_name": "file_name",
             "form_placeholder": "",
             "label": "file_name"
@@ -316,6 +321,11 @@
             "field_name": "sequencing_facility",
             "form_placeholder": "",
             "label": "sequencing_facility"
+        },
+        {
+            "field_name": "sequencing_kit_chemistry_version",
+            "form_placeholder": "",
+            "label": "sequencing_kit_chemistry_version"
         },
         {
             "field_name": "sequencing_model",
