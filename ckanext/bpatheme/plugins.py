@@ -262,6 +262,22 @@ def has_related_data(pkg):
     return False
 
 
+def make_ands_id(s):
+    "returns a BPA ID with the prefix"
+
+    BPA_PREFIX = "102.100.100/"
+    ands_id_re = re.compile(r"^102\.100\.100[/\.](\d+)$")
+    ands_id_abbrev_re = re.compile(r"^(\d+)$")
+
+    m = ands_id_re.match(s)
+    if m:
+        return BPA_PREFIX + m.groups()[0]
+    m = ands_id_abbrev_re.match(s)
+    if m:
+        return BPA_PREFIX + m.groups()[0]
+    return s
+
+
 def render_related_data(pkg):
     recognised = {}
     recognised["sample_id"] = "Sample ID"
@@ -292,7 +308,11 @@ def render_related_data(pkg):
             if key in recognised:
                 key_name = recognised[key]
                 value = link[3]
-                query = link[1]
+                if re.match("(bpa_)?(library|dataset|sample)_id", key):
+                    # these need to be in ANDS format
+                    query = "{}:{}".format(key, make_ands_id(value))
+                else:
+                    query = link[1]
                 response += "<li>"
                 response += '<a href="{}">{}</a>'.format(
                     h.url_for(controller="package", action="search", q=query),
