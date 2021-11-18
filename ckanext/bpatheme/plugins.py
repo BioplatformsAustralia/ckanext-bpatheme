@@ -18,35 +18,36 @@ import logging
 
 log = logging.getLogger(__name__)
 
+
 def get_current_year():
     return datetime.datetime.today().year
 
 
 def wa_license_icon(id):
     icons = {
-        'cc-by': ['cc', 'cc-by'],
-        'cc-nc': ['cc', 'cc-by', 'cc-nc'],
-        'cc-by-sa': ['cc', 'cc-by', 'cc-sa'],
-        'cc-zero': ['cc', 'cc-zero'],
+        "cc-by": ["cc", "cc-by"],
+        "cc-nc": ["cc", "cc-by", "cc-nc"],
+        "cc-by-sa": ["cc", "cc-by", "cc-sa"],
+        "cc-zero": ["cc", "cc-zero"],
     }
     if id not in icons:
-        return ''
+        return ""
     # return h.url_for_static('license-{}.png'.format(id))
     return Markup(
-        ''.join(
-            '<img width=20 src="{}">'.
-                format(h.url_for_static('{}.png'.format(icon)))
+        "".join(
+            '<img width=20 src="{}">'.format(h.url_for_static("{}.png".format(icon)))
             for icon in icons[id]
         )
     )
 
 
 def datawa_scheming_select_options(field_name):
-    schema = sh.scheming_get_dataset_schema('dataset')
+    schema = sh.scheming_get_dataset_schema("dataset")
     try:
         access_level_options = sh.scheming_field_by_name(
-            schema['dataset_fields'], field_name)['choices']
-        options = {i['value']: i['label'] for i in access_level_options}
+            schema["dataset_fields"], field_name
+        )["choices"]
+        options = {i["value"]: i["label"] for i in access_level_options}
     except Exception as e:
         raise e
     return options
@@ -66,71 +67,79 @@ def access_level_text(access_level=None, all=False, as_json=False):
         "fees_apply": "This dataset is available for use subject to payment",
         "restricted": "This dataset is available for use subject to approval",
         "govt_only": "This dataset is available for government use only",
-        "mixed": "A variety of access levels apply to this dataset's resources"
+        "mixed": "A variety of access levels apply to this dataset's resources",
     }
     if all:
         return json.dumps(access_level_text) if as_json else access_level_text
     if access_level in access_level_text:
         return access_level_text[access_level]
-    return ''
+    return ""
 
 
 def license_data(pkg):
-    license_id = ''
-    license_icon = ''
-    license_title = ''
-    license_url = ''
+    license_id = ""
+    license_icon = ""
+    license_title = ""
+    license_url = ""
     license_specified = True
 
-    if 'license_id' in pkg and pkg['license_id']:
-        license_id = pkg['license_id']
-        license_title = pkg['license_title']
-        if license_id.startswith('custom'):
-            license_icon = 'custom'
-            if 'custom_license_url' in pkg and pkg['custom_license_url']:
-                license_url = pkg['custom_license_url']
+    if "license_id" in pkg and pkg["license_id"]:
+        license_id = pkg["license_id"]
+        license_title = pkg["license_title"]
+        if license_id.startswith("custom"):
+            license_icon = "custom"
+            if "custom_license_url" in pkg and pkg["custom_license_url"]:
+                license_url = pkg["custom_license_url"]
             else:
-                license_title = 'Custom licence not supplied'
+                license_title = "Custom licence not supplied"
                 license_specified = False
         else:
             license_icon = license_id
-            if 'license_url' in pkg:
-                license_url = pkg['license_url']
+            if "license_url" in pkg:
+                license_url = pkg["license_url"]
     else:
-        license_id = 'not_specified'
-        license_icon = 'not_specified'
-        license_title = 'Licence not supplied'
+        license_id = "not_specified"
+        license_icon = "not_specified"
+        license_title = "Licence not supplied"
         license_specified = False
 
     license_data = {
-        'license_id': license_id,
-        'license_icon': license_icon,
-        'license_title': license_title,
-        'license_url': license_url,
-        'license_specified': license_specified
+        "license_id": license_id,
+        "license_icon": license_icon,
+        "license_title": license_title,
+        "license_url": license_url,
+        "license_specified": license_specified,
     }
 
     return license_data
 
 
 def organization_slugs_by_creation():
-    ''' Retuns a list of organization slugs ordered from newest to oldest '''
+    """ Retuns a list of organization slugs ordered from newest to oldest """
 
     # Get a list of all the site's organizations from CKAN
-    organizations = toolkit.get_action('organization_list')(
-        data_dict={'sort': 'package_count desc', 'all_fields': True, 'include_dataset_count': True,
-                   'include_groups': True})
+    organizations = toolkit.get_action("organization_list")(
+        data_dict={
+            "sort": "package_count desc",
+            "all_fields": True,
+            "include_dataset_count": True,
+            "include_groups": True,
+        }
+    )
 
     # FIXME Not sure why this only returns organisations that have packages in them
 
     # return slugs
-    return [s['name'] for s in sorted(organizations, reverse=True, key=lambda k: k['created'])]
+    return [
+        s["name"]
+        for s in sorted(organizations, reverse=True, key=lambda k: k["created"])
+    ]
 
 
 def organization_slugs_by_creation_and_rank():
-    ''' Retuns a list of organization slugs ordered from 
+    """ Retuns a list of organization slugs ordered from 
         highest rank to lowest,
-        newest to oldest '''
+        newest to oldest """
 
     def multisort(xs, specs):
         for key, reverse in reversed(specs):
@@ -138,47 +147,52 @@ def organization_slugs_by_creation_and_rank():
         return xs
 
     # Get a list of all the site's organizations from CKAN
-    organizations = toolkit.get_action('organization_list')(
-        data_dict={'sort': 'package_count desc', 'all_fields': True, 'include_extras': True,
-                   'include_dataset_count': True, 'include_groups': True})
+    organizations = toolkit.get_action("organization_list")(
+        data_dict={
+            "sort": "package_count desc",
+            "all_fields": True,
+            "include_extras": True,
+            "include_dataset_count": True,
+            "include_groups": True,
+        }
+    )
 
     # FIXME Not sure why this only returns organisations that have packages in them
 
     # generate a list of dicts - slug, creation, rank
-    # 
+    #
     # Add a 'rank' key under the Custom Fields for the organization
-    # with either a positive or negative value to manually 
+    # with either a positive or negative value to manually
     # promote (postive values greater than 1) or demote (values less than 1)
     orgs = []
     for o in organizations:
         rank = 1
-        if 'extras' in o:
-            for e in o['extras']:
-                if e['key'] == 'rank':
+        if "extras" in o:
+            for e in o["extras"]:
+                if e["key"] == "rank":
                     try:
-                        rank = int(e['value'])
+                        rank = int(e["value"])
                     except ValueError:
                         rank = 1
-        orgs.append({
-            'slug': o['name'],
-            'created': o['created'],
-            'rank': rank
-        })
+        orgs.append({"slug": o["name"], "created": o["created"], "rank": rank})
 
     # return slugs sorted by rank, then by created date
-    return [s['slug'] for s in multisort(list(orgs), (('rank', True), ('created', True)))]
+    return [
+        s["slug"] for s in multisort(list(orgs), (("rank", True), ("created", True)))
+    ]
 
 
 def get_os_env_value(key):
-    config_key = 'ckanext.bpatheme.' + key.lower()
-    return config.get(config_key) or os.environ.get(key, '')
+    config_key = "ckanext.bpatheme." + key.lower()
+    return config.get(config_key) or os.environ.get(key, "")
 
 
 # embargo functions
 
+
 def _is_embargo_current(pkg):
-    #if pkg.get('access_control_date', None) or pkg.get('access_control_reason', None):
-    embargo = pkg.get('access_control_date', None)
+    # if pkg.get('access_control_date', None) or pkg.get('access_control_reason', None):
+    embargo = pkg.get("access_control_date", None)
     if not embargo:
         # not found - assume current
         return True
@@ -192,24 +206,26 @@ def _is_embargo_current(pkg):
 
     return True
 
+
 def has_embargo(pkg):
-    mode = pkg.get('access_control_mode','')
-    if mode in ('open'):
+    mode = pkg.get("access_control_mode", "")
+    if mode in ("open"):
         return False
 
-    if mode in ('closed','date'):
-        if mode in ('date') and not _is_embargo_current(pkg):
+    if mode in ("closed", "date"):
+        if mode in ("date") and not _is_embargo_current(pkg):
             return False
         else:
             return True
 
-    if pkg.get('access_control_date', None) or pkg.get('access_control_reason', None):
+    if pkg.get("access_control_date", None) or pkg.get("access_control_reason", None):
         return True
 
     return False
 
+
 def has_timed_embargo(pkg):
-    embargo = pkg.get('access_control_date', None)
+    embargo = pkg.get("access_control_date", None)
     try:
         if embargo and datetime.datetime.strptime(embargo, "%Y-%m-%d"):
             return True
@@ -218,18 +234,23 @@ def has_timed_embargo(pkg):
 
     return False
 
+
 def has_embargo_reason(pkg):
-    if 'access_control_reason' in pkg:
-        if pkg['access_control_reason'] is not None and\
-            len(pkg['access_control_reason']) > 0:
+    if "access_control_reason" in pkg:
+        if (
+            pkg["access_control_reason"] is not None
+            and len(pkg["access_control_reason"]) > 0
+        ):
             return True
     return False
 
+
 def get_embargo_reason(pkg):
-    return pkg.get('access_control_reason', "")
+    return pkg.get("access_control_reason", "")
+
 
 def get_embargo_date(pkg):
-    return pkg.get('access_control_date', None)
+    return pkg.get("access_control_date", None)
 
 
 class CustomTheme(plugins.SingletonPlugin):
@@ -242,18 +263,22 @@ class CustomTheme(plugins.SingletonPlugin):
 
     # IActions
     def get_actions(self):
-        return {
-            'user_create': action.custom_user_create,
-            }
+        return {"user_create": action.custom_user_create}
 
     # IRoutes
     def after_map(self, map):
-        map.connect('bpatheme_summary', '/summary',
-                    controller='ckanext.bpatheme.controller:SummaryController',
-                    action='index')
-        map.connect('bpatheme_contact', '/contact',
-                    controller='ckanext.bpatheme.controller:ContactController',
-                    action='index')
+        map.connect(
+            "bpatheme_summary",
+            "/summary",
+            controller="ckanext.bpatheme.controller:SummaryController",
+            action="index",
+        )
+        map.connect(
+            "bpatheme_contact",
+            "/contact",
+            controller="ckanext.bpatheme.controller:ContactController",
+            action="index",
+        )
         return map
 
     # IPackageController
@@ -308,54 +333,50 @@ class CustomTheme(plugins.SingletonPlugin):
     def update_config(self, config):
         toolkit.add_template_directory(config, "templates")
         toolkit.add_public_directory(config, "static")
-        toolkit.add_resource('fanstatic', 'bpatheme')
+        toolkit.add_resource("fanstatic", "bpatheme")
 
     def update_config_schema(self, schema):
-        ignore_missing = toolkit.get_validator('ignore_missing')
-        unicode_safe = toolkit.get_validator('unicode_safe')
-        schema.update({
-            'ckanext.datawa.slip_harvester_token': [ignore_missing, unicode],
-            'ckanext.bpatheme.comms_message': [ignore_missing, unicode_safe],
-            'ckanext.bpatheme.comms_title': [ignore_missing, unicode_safe],
-
-            'ckanext.bpatheme.comms_link_href': [ignore_missing, unicode_safe],
-            'ckanext.bpatheme.comms_link_text': [ignore_missing, unicode_safe],
-            'ckanext.bpatheme.comms_owner': [ignore_missing, unicode_safe]
-        })
+        ignore_missing = toolkit.get_validator("ignore_missing")
+        unicode_safe = toolkit.get_validator("unicode_safe")
+        schema.update(
+            {
+                "ckanext.datawa.slip_harvester_token": [ignore_missing, unicode],
+                "ckanext.bpatheme.comms_message": [ignore_missing, unicode_safe],
+                "ckanext.bpatheme.comms_title": [ignore_missing, unicode_safe],
+                "ckanext.bpatheme.comms_link_href": [ignore_missing, unicode_safe],
+                "ckanext.bpatheme.comms_link_text": [ignore_missing, unicode_safe],
+                "ckanext.bpatheme.comms_owner": [ignore_missing, unicode_safe],
+            }
+        )
         return schema
 
     # ITemplateHelpers
     def get_helpers(self):
         return {
-            'get_current_year': get_current_year,
-            'wa_license_icon': wa_license_icon,
-            'access_level_text': access_level_text,
-            'license_data': license_data,
-            'datawa_scheming_select_options': datawa_scheming_select_options,
-            'datawa_get_option_label': datawa_get_option_label,
-            'organization_slugs_by_creation': organization_slugs_by_creation,
-            'organization_slugs_by_creation_and_rank': organization_slugs_by_creation_and_rank,
-            'get_os_env_value': get_os_env_value,
-            'has_embargo': has_embargo,
-            'has_timed_embargo': has_timed_embargo,
-            'has_embargo_reason': has_embargo_reason,
-            'get_embargo_reason': get_embargo_reason,
-            'get_embargo_date': get_embargo_date,
+            "get_current_year": get_current_year,
+            "wa_license_icon": wa_license_icon,
+            "access_level_text": access_level_text,
+            "license_data": license_data,
+            "datawa_scheming_select_options": datawa_scheming_select_options,
+            "datawa_get_option_label": datawa_get_option_label,
+            "organization_slugs_by_creation": organization_slugs_by_creation,
+            "organization_slugs_by_creation_and_rank": organization_slugs_by_creation_and_rank,
+            "get_os_env_value": get_os_env_value,
+            "has_embargo": has_embargo,
+            "has_timed_embargo": has_timed_embargo,
+            "has_embargo_reason": has_embargo_reason,
+            "get_embargo_reason": get_embargo_reason,
+            "get_embargo_date": get_embargo_date,
         }
 
     # Ifacets
     def dataset_facets(self, facets_dict, package_type):
         ## In addtion to the defaults, we want these facets
-        facets_dict['organization'] = _('Initiative')
-        facets_dict['sequence_data_type'] = _('Sequence Data Type')
+        facets_dict["organization"] = _("Initiative")
+        facets_dict["sequence_data_type"] = _("Sequence Data Type")
 
         ## We want the facets to appear in this order, with any others at the end
-        facet_order = [
-            'organization',
-            'sequence_data_type',
-            'res_format',
-            'tags',
-        ]
+        facet_order = ["organization", "sequence_data_type", "res_format", "tags"]
 
         ## Updating facet positions
         fct_keys = [key for key in facets_dict.keys()]
@@ -374,7 +395,7 @@ class CustomTheme(plugins.SingletonPlugin):
         facets_dict = self.dataset_facets(facets_dict, package_type)
 
         fct_keys = [key for key in facets_dict.keys()]
-        if 'organization' in fct_keys:
-            del facets_dict['organization']
+        if "organization" in fct_keys:
+            del facets_dict["organization"]
 
         return facets_dict
