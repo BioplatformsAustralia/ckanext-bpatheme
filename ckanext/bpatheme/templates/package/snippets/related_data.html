@@ -1,0 +1,17 @@
+{% set pkg = c.pkg_dict or pkg_dict %}
+
+{% block package_related_data %}
+
+  {% if pkg %}
+
+    {% if h.has_related_data(pkg) %}
+      <section id="dataset-related-data" class="related-data">
+        <h3>{{ _('Related Data and Notes') }}</h3>
+        {% block related_data %}
+          {{ h.render_related_data(pkg)|safe }}
+        {% endblock %}
+      </section>
+    {% endif %}
+  {% endif %}
+
+{% endblock %}

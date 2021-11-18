@@ -3,6 +3,7 @@ import os
 from collections import OrderedDict
 import json
 import operator
+import re
 
 from ckan.common import c, _, config
 import ckan.lib.helpers as h
@@ -253,6 +254,58 @@ def get_embargo_date(pkg):
     return pkg.get("access_control_date", None)
 
 
+def has_related_data(pkg):
+    related = pkg.get("related_data", "")
+    if related:
+        return True
+
+    return False
+
+
+def render_related_data(pkg):
+    recognised = {}
+    recognised["sample_id"] = "Sample ID"
+    recognised["bpa_sample_id"] = "Sample ID"
+    recognised["dataset_id"] = "Dataset ID"
+    recognised["bpa_dataset_id"] = "Dataset ID"
+    recognised["library_id"] = "Library ID"
+    recognised["bpa_library_id"] = "Library ID"
+    recognised["ticket"] = "Ticket"
+
+    related = pkg.get("related_data", "")
+    words = related.split()
+    description = []
+    links = []
+
+    for item in words:
+        x = re.search("^(\w+):(.*)$", item)
+        if x:
+            links.append((item, x.group(0), x.group(1), x.group(2)))
+        else:
+            description.append(item)
+
+    response = "<p>" + " ".join(description) + "</p>"
+    if links:
+        response += "<ul>"
+        for link in links:
+            key = link[2]
+            if key in recognised:
+                key_name = recognised[key]
+                value = link[3]
+                query = link[1]
+                response += "<li>"
+                response += '<a href="{}">{}</a>'.format(
+                    h.url_for(controller="package", action="search", q=query),
+                    "{} {}".format(key_name, value),
+                )
+                response += "</li>"
+            else:
+                response += "<li>{}</li>".format(link[0])
+        response += "</ul>"
+
+    return response
+
+
 class CustomTheme(plugins.SingletonPlugin):
     plugins.implements(plugins.IConfigurer)
     plugins.implements(plugins.ITemplateHelpers)
@@ -367,6 +420,8 @@ class CustomTheme(plugins.SingletonPlugin):
             "has_embargo_reason": has_embargo_reason,
             "get_embargo_reason": get_embargo_reason,
             "get_embargo_date": get_embargo_date,
+            "has_related_data": has_related_data,
+            "render_related_data": render_related_data,
         }
 
     # Ifacets
