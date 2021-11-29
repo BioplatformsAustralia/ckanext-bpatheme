@@ -58,9 +58,34 @@
             "label": "Resource Permissions"
         },
         {
+            "field_name": "access_control_reason",
+            "form_placeholder": "used by ckanext-bpatheme",
+            "label": "Access Control Reason"
+        },
+        {
+            "field_name": "access_control_date",
+            "form_placeholder": "used by ckanext-bpatheme",
+            "label": "Access Control Date"
+        },
+        {
+            "field_name": "access_control_mode",
+            "form_placeholder": "used by ckanext-bpatheme",
+            "label": "Access Control Mode"
+        },
+        {
             "field_name": "sequence_data_type",
             "form_placeholder": "used by ckanext-bpatheme",
             "label": "Sequence Data Type"
+        },
+        {
+            "field_name": "related_data",
+            "form_placeholder": "used by ckanext-bpatheme",
+            "label": "Related Data"
+        },
+        {
+            "field_name": "additional_notes",
+            "form_placeholder": "",
+            "label": "additional_notes"
         },
         {
             "field_name": "analytical_platform",
@@ -218,14 +243,14 @@
             "label": "peptide_resuspension_protocol"
         },
         {
-            "field_name": "protein_yield_facility_ug",
+            "field_name": "protein_yield_facility",
             "form_placeholder": "",
-            "label": "protein_yield_facility_ug"
+            "label": "protein_yield_facility"
         },
         {
-            "field_name": "protein_yield_total_ug",
+            "field_name": "protein_yield_total",
             "form_placeholder": "",
-            "label": "protein_yield_total_ug"
+            "label": "protein_yield_total"
         },
         {
             "field_name": "publication_reference",

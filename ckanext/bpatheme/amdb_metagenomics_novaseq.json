@@ -58,9 +58,29 @@
             "label": "Resource Permissions"
         },
         {
+            "field_name": "access_control_reason",
+            "form_placeholder": "used by ckanext-bpatheme",
+            "label": "Access Control Reason"
+        },
+        {
+            "field_name": "access_control_date",
+            "form_placeholder": "used by ckanext-bpatheme",
+            "label": "Access Control Date"
+        },
+        {
+            "field_name": "access_control_mode",
+            "form_placeholder": "used by ckanext-bpatheme",
+            "label": "Access Control Mode"
+        },
+        {
             "field_name": "sequence_data_type",
             "form_placeholder": "used by ckanext-bpatheme",
             "label": "Sequence Data Type"
+        },
+        {
+            "field_name": "related_data",
+            "form_placeholder": "used by ckanext-bpatheme",
+            "label": "Related Data"
         },
         {
             "field_name": "absorbance_260_230_ratio",
@@ -253,6 +273,11 @@
             "label": "bleaching"
         },
         {
+            "field_name": "bleaching_meth",
+            "form_placeholder": "",
+            "label": "bleaching_meth"
+        },
+        {
             "field_name": "boron_hot_cacl2",
             "form_placeholder": "",
             "label": "boron_hot_cacl2 (mg/kg)"
@@ -301,6 +326,11 @@
             "field_name": "carbonate_bicarbonate_meth",
             "form_placeholder": "",
             "label": "carbonate_bicarbonate_meth"
+        },
+        {
+            "field_name": "cast_id",
+            "form_placeholder": "",
+            "label": "cast_id"
         },
         {
             "field_name": "cation_exchange_capacity",
@@ -928,6 +958,11 @@
             "label": "fouling"
         },
         {
+            "field_name": "fouling_meth",
+            "form_placeholder": "",
+            "label": "fouling_meth"
+        },
+        {
             "field_name": "fouling_organisms",
             "form_placeholder": "",
             "label": "fouling_organisms"
@@ -1013,9 +1048,9 @@
             "label": "gravel (%)"
         },
         {
-            "field_name": "gravel_percent_meth",
+            "field_name": "gravel_meth",
             "form_placeholder": "",
-            "label": "gravel_percent_meth"
+            "label": "gravel_meth"
         },
         {
             "field_name": "grazing",
@@ -1023,9 +1058,19 @@
             "label": "grazing (%)"
         },
         {
+            "field_name": "grazing_meth",
+            "form_placeholder": "",
+            "label": "grazing_meth"
+        },
+        {
             "field_name": "grazing_number",
             "form_placeholder": "",
             "label": "grazing_number"
+        },
+        {
+            "field_name": "grazing_number_meth",
+            "form_placeholder": "",
+            "label": "grazing_number_meth"
         },
         {
             "field_name": "gyro",
@@ -1083,14 +1128,39 @@
             "label": "host_abundance_mean (individuals/m2)"
         },
         {
+            "field_name": "host_abundance_mean_meth",
+            "form_placeholder": "",
+            "label": "host_abundance_mean_meth"
+        },
+        {
+            "field_name": "host_abundance_meth",
+            "form_placeholder": "",
+            "label": "host_abundance_meth"
+        },
+        {
             "field_name": "host_abundance_seaweed_mean",
             "form_placeholder": "",
             "label": "host_abundance_seaweed_mean (individuals/m2)"
         },
         {
+            "field_name": "host_abundance_seaweed_mean_meth",
+            "form_placeholder": "",
+            "label": "host_abundance_seaweed_mean_meth"
+        },
+        {
             "field_name": "host_associated_microbiome_zone",
             "form_placeholder": "",
             "label": "host_associated_microbiome_zone"
+        },
+        {
+            "field_name": "host_length",
+            "form_placeholder": "",
+            "label": "host_length (cm)"
+        },
+        {
+            "field_name": "host_length_meth",
+            "form_placeholder": "",
+            "label": "host_length_meth"
         },
         {
             "field_name": "host_species_variety",
@@ -1266,11 +1336,6 @@
             "field_name": "lead_meth",
             "form_placeholder": "",
             "label": "lead_meth"
-        },
-        {
-            "field_name": "length",
-            "form_placeholder": "",
-            "label": "length (cm)"
         },
         {
             "field_name": "library_construction_protocol",
@@ -1913,6 +1978,11 @@
             "label": "root_length_meth"
         },
         {
+            "field_name": "rosette_position",
+            "form_placeholder": "",
+            "label": "rosette_position"
+        },
+        {
             "field_name": "rubidium",
             "form_placeholder": "",
             "label": "rubidium (ppm)"
@@ -2293,6 +2363,11 @@
             "label": "synecochoccus_meth"
         },
         {
+            "field_name": "synonyms",
+            "form_placeholder": "",
+            "label": "synonyms"
+        },
+        {
             "field_name": "tantalum",
             "form_placeholder": "",
             "label": "tantalum (ppm)"
@@ -2388,19 +2463,19 @@
             "label": "tot_depth_water_col (m)"
         },
         {
-            "field_name": "tot_depth_water_meth",
+            "field_name": "tot_depth_water_col_meth",
             "form_placeholder": "",
-            "label": "tot_depth_water_meth"
-        },
-        {
-            "field_name": "tot_n_meth",
-            "form_placeholder": "",
-            "label": "tot_n_meth"
+            "label": "tot_depth_water_col_meth"
         },
         {
             "field_name": "tot_nitro",
             "form_placeholder": "",
             "label": "tot_nitro (%)"
+        },
+        {
+            "field_name": "tot_nitro_meth",
+            "form_placeholder": "",
+            "label": "tot_nitro_meth"
         },
         {
             "field_name": "tot_org_c_meth",
@@ -2548,9 +2623,19 @@
             "label": "vegetation_dom_grasses (%)"
         },
         {
+            "field_name": "vegetation_dom_grasses_meth",
+            "form_placeholder": "",
+            "label": "vegetation_dom_grasses_meth"
+        },
+        {
             "field_name": "vegetation_dom_shrubs",
             "form_placeholder": "",
             "label": "vegetation_dom_shrubs (%)"
+        },
+        {
+            "field_name": "vegetation_dom_shrubs_meth",
+            "form_placeholder": "",
+            "label": "vegetation_dom_shrubs_meth"
         },
         {
             "field_name": "vegetation_dom_trees",
@@ -2558,9 +2643,19 @@
             "label": "vegetation_dom_trees (%)"
         },
         {
+            "field_name": "vegetation_dom_trees_meth",
+            "form_placeholder": "",
+            "label": "vegetation_dom_trees_meth"
+        },
+        {
             "field_name": "vegetation_total_cover",
             "form_placeholder": "",
             "label": "vegetation_total_cover (%)"
+        },
+        {
+            "field_name": "vegetation_total_cover_meth",
+            "form_placeholder": "",
+            "label": "vegetation_total_cover_meth"
         },
         {
             "field_name": "vegetation_type",

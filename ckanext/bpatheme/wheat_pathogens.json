@@ -58,9 +58,29 @@
             "label": "Resource Permissions"
         },
         {
+            "field_name": "access_control_reason",
+            "form_placeholder": "used by ckanext-bpatheme",
+            "label": "Access Control Reason"
+        },
+        {
+            "field_name": "access_control_date",
+            "form_placeholder": "used by ckanext-bpatheme",
+            "label": "Access Control Date"
+        },
+        {
+            "field_name": "access_control_mode",
+            "form_placeholder": "used by ckanext-bpatheme",
+            "label": "Access Control Mode"
+        },
+        {
             "field_name": "sequence_data_type",
             "form_placeholder": "used by ckanext-bpatheme",
             "label": "Sequence Data Type"
+        },
+        {
+            "field_name": "related_data",
+            "form_placeholder": "used by ckanext-bpatheme",
+            "label": "Related Data"
         },
         {
             "field_name": "collection_date",
