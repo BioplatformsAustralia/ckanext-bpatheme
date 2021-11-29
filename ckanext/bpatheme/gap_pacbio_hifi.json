@@ -78,14 +78,19 @@
             "label": "archive_ingestion_date"
         },
         {
+            "field_name": "bait_set_name",
+            "form_placeholder": "",
+            "label": "bait_set_name"
+        },
+        {
+            "field_name": "bait_set_reference",
+            "form_placeholder": "",
+            "label": "bait_set_reference"
+        },
+        {
             "field_name": "base_url",
             "form_placeholder": "",
             "label": "base_url"
-        },
-        {
-            "field_name": "bpa_dataset_id",
-            "form_placeholder": "",
-            "label": "bpa_dataset_id"
         },
         {
             "field_name": "cell_postion",
@@ -98,14 +103,9 @@
             "label": "contextual_data_submission_date"
         },
         {
-            "field_name": "data_context",
+            "field_name": "country",
             "form_placeholder": "",
-            "label": "data_context"
-        },
-        {
-            "field_name": "data_custodian",
-            "form_placeholder": "",
-            "label": "data_custodian"
+            "label": "country"
         },
         {
             "field_name": "data_generated",
@@ -133,19 +133,19 @@
             "label": "date_of_transfer"
         },
         {
-            "field_name": "decimal_latitude_public",
-            "form_placeholder": "",
-            "label": "decimal_latitude_public"
-        },
-        {
-            "field_name": "decimal_longitude_public",
-            "form_placeholder": "",
-            "label": "decimal_longitude_public"
-        },
-        {
             "field_name": "description",
             "form_placeholder": "",
             "label": "description"
+        },
+        {
+            "field_name": "dna_extract",
+            "form_placeholder": "",
+            "label": "dna_extract"
+        },
+        {
+            "field_name": "dna_extract_pressed_sheet",
+            "form_placeholder": "",
+            "label": "dna_extract_pressed_sheet"
         },
         {
             "field_name": "dna_treatment",
@@ -153,24 +153,14 @@
             "label": "dna_treatment"
         },
         {
-            "field_name": "experimental_design",
+            "field_name": "facility_sample_id",
             "form_placeholder": "",
-            "label": "experimental_design"
+            "label": "facility_sample_id"
         },
         {
-            "field_name": "facility_project_code",
+            "field_name": "family",
             "form_placeholder": "",
-            "label": "facility_project_code"
-        },
-        {
-            "field_name": "file_name",
-            "form_placeholder": "",
-            "label": "file_name"
-        },
-        {
-            "field_name": "file_type",
-            "form_placeholder": "",
-            "label": "file_type"
+            "label": "family"
         },
         {
             "field_name": "flowcell_id",
@@ -188,19 +178,54 @@
             "label": "folder_name"
         },
         {
-            "field_name": "genus",
+            "field_name": "genomic_material_associated_references",
             "form_placeholder": "",
-            "label": "genus"
+            "label": "genomic_material_associated_references"
+        },
+        {
+            "field_name": "genomic_material_preparation_date",
+            "form_placeholder": "",
+            "label": "genomic_material_preparation_date"
+        },
+        {
+            "field_name": "genomic_material_preparation_materials",
+            "form_placeholder": "",
+            "label": "genomic_material_preparation_materials"
+        },
+        {
+            "field_name": "genomic_material_preparation_process",
+            "form_placeholder": "",
+            "label": "genomic_material_preparation_process"
+        },
+        {
+            "field_name": "genomic_material_preparation_type",
+            "form_placeholder": "",
+            "label": "genomic_material_preparation_type"
+        },
+        {
+            "field_name": "genomic_material_prepared_by",
+            "form_placeholder": "",
+            "label": "genomic_material_prepared_by"
+        },
+        {
+            "field_name": "herbarium_code",
+            "form_placeholder": "",
+            "label": "herbarium_code"
+        },
+        {
+            "field_name": "id_vetting_by",
+            "form_placeholder": "",
+            "label": "id_vetting_by"
+        },
+        {
+            "field_name": "id_vetting_date",
+            "form_placeholder": "",
+            "label": "id_vetting_date"
         },
         {
             "field_name": "insert_size_range",
             "form_placeholder": "",
             "label": "insert_size_range"
-        },
-        {
-            "field_name": "latitude",
-            "form_placeholder": "",
-            "label": "latitude"
         },
         {
             "field_name": "library_comments",
@@ -211,6 +236,11 @@
             "field_name": "library_construction_protocol",
             "form_placeholder": "",
             "label": "library_construction_protocol"
+        },
+        {
+            "field_name": "library_id",
+            "form_placeholder": "",
+            "label": "library_id"
         },
         {
             "field_name": "library_layout",
@@ -236,21 +266,6 @@
             "field_name": "library_pcr_reps",
             "form_placeholder": "",
             "label": "library_pcr_reps"
-        },
-        {
-            "field_name": "library_pool_index_id",
-            "form_placeholder": "",
-            "label": "library_pool_index_id"
-        },
-        {
-            "field_name": "library_pool_index_sequence",
-            "form_placeholder": "",
-            "label": "library_pool_index_sequence"
-        },
-        {
-            "field_name": "library_pool_oligo_sequence",
-            "form_placeholder": "",
-            "label": "library_pool_oligo_sequence"
         },
         {
             "field_name": "library_prep_date",
@@ -288,9 +303,39 @@
             "label": "library_type"
         },
         {
-            "field_name": "longitude",
+            "field_name": "living_collections_catalog_number",
             "form_placeholder": "",
-            "label": "longitude"
+            "label": "living_collections_catalog_number"
+        },
+        {
+            "field_name": "living_collections_event_date",
+            "form_placeholder": "",
+            "label": "living_collections_event_date"
+        },
+        {
+            "field_name": "living_collections_material_sample_rna",
+            "form_placeholder": "",
+            "label": "living_collections_material_sample_rna"
+        },
+        {
+            "field_name": "living_collections_record_number",
+            "form_placeholder": "",
+            "label": "living_collections_record_number"
+        },
+        {
+            "field_name": "living_collections_recorded_by",
+            "form_placeholder": "",
+            "label": "living_collections_recorded_by"
+        },
+        {
+            "field_name": "location_id",
+            "form_placeholder": "",
+            "label": "location_id"
+        },
+        {
+            "field_name": "location_notes",
+            "form_placeholder": "",
+            "label": "location_notes"
         },
         {
             "field_name": "movie_length",
@@ -303,6 +348,16 @@
             "label": "n_libraries_pooled"
         },
         {
+            "field_name": "nagoya_protocol_compliance",
+            "form_placeholder": "",
+            "label": "nagoya_protocol_compliance"
+        },
+        {
+            "field_name": "nagoya_protocol_permit_number",
+            "form_placeholder": "",
+            "label": "nagoya_protocol_permit_number"
+        },
+        {
             "field_name": "name",
             "form_placeholder": "",
             "label": "name"
@@ -313,19 +368,69 @@
             "label": "notes"
         },
         {
+            "field_name": "population_group",
+            "form_placeholder": "",
+            "label": "population_group"
+        },
+        {
+            "field_name": "preservation_date_begin",
+            "form_placeholder": "",
+            "label": "preservation_date_begin"
+        },
+        {
+            "field_name": "preservation_temperature",
+            "form_placeholder": "",
+            "label": "preservation_temperature"
+        },
+        {
+            "field_name": "preservation_type",
+            "form_placeholder": "",
+            "label": "preservation_type"
+        },
+        {
+            "field_name": "project_aim",
+            "form_placeholder": "",
+            "label": "project_aim"
+        },
+        {
+            "field_name": "sample_id",
+            "form_placeholder": "",
+            "label": "sample_id"
+        },
+        {
             "field_name": "sample_submission_date",
             "form_placeholder": "",
             "label": "sample_submission_date"
         },
         {
+            "field_name": "sample_submitter_email",
+            "form_placeholder": "",
+            "label": "sample_submitter_email"
+        },
+        {
+            "field_name": "sample_submitter_name",
+            "form_placeholder": "",
+            "label": "sample_submitter_name"
+        },
+        {
+            "field_name": "scientific_name",
+            "form_placeholder": "",
+            "label": "scientific_name"
+        },
+        {
+            "field_name": "scientific_name_authorship",
+            "form_placeholder": "",
+            "label": "scientific_name_authorship"
+        },
+        {
+            "field_name": "scientific_name_notes",
+            "form_placeholder": "",
+            "label": "scientific_name_notes"
+        },
+        {
             "field_name": "sequencing_facility",
             "form_placeholder": "",
             "label": "sequencing_facility"
-        },
-        {
-            "field_name": "sequencing_kit_chemistry_version",
-            "form_placeholder": "",
-            "label": "sequencing_kit_chemistry_version"
         },
         {
             "field_name": "sequencing_model",
@@ -338,9 +443,29 @@
             "label": "sequencing_platform"
         },
         {
-            "field_name": "species",
+            "field_name": "silica_gel",
             "form_placeholder": "",
-            "label": "species"
+            "label": "silica_gel"
+        },
+        {
+            "field_name": "silica_gel_id",
+            "form_placeholder": "",
+            "label": "silica_gel_id"
+        },
+        {
+            "field_name": "silica_gel_pressed_sheet",
+            "form_placeholder": "",
+            "label": "silica_gel_pressed_sheet"
+        },
+        {
+            "field_name": "species_complex",
+            "form_placeholder": "",
+            "label": "species_complex"
+        },
+        {
+            "field_name": "state_or_territory",
+            "form_placeholder": "",
+            "label": "state_or_territory"
         },
         {
             "field_name": "ticket",
@@ -348,12 +473,32 @@
             "label": "ticket"
         },
         {
-            "field_name": "work_order",
+            "field_name": "voucher_herbarium_catalog_number",
             "form_placeholder": "",
-            "label": "work_order"
+            "label": "voucher_herbarium_catalog_number"
+        },
+        {
+            "field_name": "voucher_herbarium_collector_id",
+            "form_placeholder": "",
+            "label": "voucher_herbarium_collector_id"
+        },
+        {
+            "field_name": "voucher_herbarium_event_date",
+            "form_placeholder": "",
+            "label": "voucher_herbarium_event_date"
+        },
+        {
+            "field_name": "voucher_herbarium_record_number",
+            "form_placeholder": "",
+            "label": "voucher_herbarium_record_number"
+        },
+        {
+            "field_name": "voucher_herbarium_recorded_by",
+            "form_placeholder": "",
+            "label": "voucher_herbarium_recorded_by"
         }
     ],
-    "dataset_type": "tsi-genomics-ddrad",
+    "dataset_type": "gap-pacbio-hifi",
     "resource_fields": [
         {
             "field_name": "name",
@@ -415,28 +560,20 @@
             "preset": "resource_format_autocomplete"
         },
         {
-            "field_name": "bpa_dataset_id",
-            "label": "bpa_dataset_id"
+            "field_name": "facility",
+            "label": "facility"
         },
         {
             "field_name": "flowcell_id",
             "label": "flowcell_id"
         },
         {
-            "field_name": "index",
-            "label": "index"
-        },
-        {
-            "field_name": "lane",
-            "label": "lane"
-        },
-        {
-            "field_name": "read",
-            "label": "read"
-        },
-        {
             "field_name": "resource_type",
             "label": "resource_type"
+        },
+        {
+            "field_name": "sample_id",
+            "label": "sample_id"
         }
     ],
     "scheming_version": 1

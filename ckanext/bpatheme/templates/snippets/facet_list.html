@@ -17,7 +17,7 @@
                     {% set label = label_function(item) if label_function else item.display_name %}
                     {% set count = count_label(item['count']) if count_label else ('%d' % item['count']) %}
                       <li class="{{ nav_item_class or 'nav-item' }}{% if item.active %} active{% endif %}">
-                        <a href="{{ href }}" title="{{ label }}">
+                        <a href="{{ href }}" rel="nofollow" title="{{ label }}">
                           <span class="item-label">{{ label }}</span>
                           <span class="hidden separator"> - </span>
                           <span class="item-count badge">{{ count }}</span>
@@ -30,10 +30,10 @@
               <p class="module-footer">
                 {% if h.get_param_int('_%s_limit' % name) %}
                   {% if h.has_more_facets(name) %}
-                    <a href="{{ h.remove_url_param('_%s_limit' % name, replace=0, extras=extras, alternative_url=alternative_url) }}" class="read-more">{{ _('Show More {facet_type}').format(facet_type=title) }}</a>
+                    <a href="{{ h.remove_url_param('_%s_limit' % name, replace=0, extras=extras, alternative_url=alternative_url) }}" class="read-more" rel="nofollow">{{ _('Show More {facet_type}').format(facet_type=title) }}</a>
                   {% endif %}
                 {% else %}
-                  <a href="{{ h.remove_url_param('_%s_limit' % name, extras=extras, alternative_url=alternative_url) }}" class="read-more">{{ _('Show Only Popular {facet_type}').format(facet_type=title) }}</a>
+                  <a href="{{ h.remove_url_param('_%s_limit' % name, extras=extras, alternative_url=alternative_url) }}" class="read-more" rel="nofollow">{{ _('Show Only Popular {facet_type}').format(facet_type=title) }}</a>
                 {% endif %}
               </p>
             {% else %}
