@@ -1718,6 +1718,11 @@
             "label": "pass_fail"
         },
         {
+            "field_name": "pcr_plate_name",
+            "form_placeholder": "",
+            "label": "pcr_plate_name"
+        },
+        {
             "field_name": "perid",
             "form_placeholder": "",
             "label": "perid (mg/m3)"
