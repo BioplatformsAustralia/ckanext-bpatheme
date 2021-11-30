@@ -1,0 +1,49 @@
+{% set pkg = c.pkg_dict or pkg_dict %}
+
+{% block package_open %}
+    {#
+    If the package embargo has expired, render text about the license and attribution
+    #}
+
+  {% if pkg %}
+    <section class="open-data">
+    <div class="clearfix"></div>
+    <div class="open-data">
+    {% if not h.has_embargo(pkg) %}
+    {# 
+       FIXME This needs to be tidied up further and better integrated with the default 
+       CKAN license setup
+    #}
+        {% if pkg.license_id %}
+            {% if pkg.license_id.startswith("CC-BY-4.0-AU") %}
+            This data is made available openly under a <a href="https://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution</a> license. 
+            {% endif %}
+        {% endif %}
+    {% endif %}
+
+    Please see the initiative 
+    {% if pkg.organization %}
+          {% set organization = h.get_organization(pkg.organization.name) %}
+          {% set key = "policy_url" %}
+          {% if 'extras' in organization %}
+            {% for item in organization['extras'] %}
+              {% if 'key' in item %}
+                 {% if item['key'] == key and item['value']|length %}
+                   <a href="{{ item['value'] }}">Data Policy</a>
+                 {% else %}
+                   Data Policy
+                 {% endif %}
+              {% endif %}
+            {% endfor %}
+          {% else %}
+             Data Policy
+          {% endif %}
+    {% else %}
+    Data Policy
+    {% endif %}
+    for attribution information.
+    </div>
+    <div class="clearfix"></div>
+    </section>
+  {% endif %}
+{% endblock %}

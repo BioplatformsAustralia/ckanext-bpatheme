@@ -549,6 +549,12 @@ body {
     clear: both;
 }
 
+.open-data {
+    font-size: x-small;
+    clear: both;
+    margin-bottom: 5px;
+}
+
 /** show background image 'transparently', but ensure inputs are white (no transparency) **/
 .homepage .module-search {
     padding: 0;
