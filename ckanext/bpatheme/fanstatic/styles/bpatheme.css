@@ -946,6 +946,11 @@ body {
     margin: 0;
 }
 
+#user-comms .comms-message {
+    display: inline-block;
+    padding-bottom: 10px;
+}
+
 #user-comms .header-left {
     color: var(--mast-hover-color);
     margin-right: 10px;

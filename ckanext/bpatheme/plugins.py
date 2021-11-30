@@ -4,7 +4,7 @@ from collections import OrderedDict
 import json
 import operator
 
-from ckan.common import c, _
+from ckan.common import c, _, config
 import ckan.lib.helpers as h
 import ckan.plugins as plugins
 import ckan.plugins.toolkit as toolkit
@@ -13,6 +13,7 @@ from markupsafe import Markup
 import ckanext.scheming.helpers as sh
 
 from ckanext.bpatheme import action
+
 
 def get_current_year():
     return datetime.datetime.today().year
@@ -31,7 +32,7 @@ def wa_license_icon(id):
     return Markup(
         ''.join(
             '<img width=20 src="{}">'.
-            format(h.url_for_static('{}.png'.format(icon)))
+                format(h.url_for_static('{}.png'.format(icon)))
             for icon in icons[id]
         )
     )
@@ -73,7 +74,7 @@ def access_level_text(access_level=None, all=False, as_json=False):
 
 def license_data(pkg):
     license_id = ''
-    license_icon= ''
+    license_icon = ''
     license_title = ''
     license_url = ''
     license_specified = True
@@ -98,9 +99,8 @@ def license_data(pkg):
         license_title = 'Licence not supplied'
         license_specified = False
 
-
     license_data = {
-        'license_id' : license_id,
+        'license_id': license_id,
         'license_icon': license_icon,
         'license_title': license_title,
         'license_url': license_url,
@@ -109,17 +109,20 @@ def license_data(pkg):
 
     return license_data
 
+
 def organization_slugs_by_creation():
     ''' Retuns a list of organization slugs ordered from newest to oldest '''
 
     # Get a list of all the site's organizations from CKAN
     organizations = toolkit.get_action('organization_list')(
-            data_dict={'sort': 'package_count desc', 'all_fields': True, 'include_dataset_count': True, 'include_groups': True})
+        data_dict={'sort': 'package_count desc', 'all_fields': True, 'include_dataset_count': True,
+                   'include_groups': True})
 
     # FIXME Not sure why this only returns organisations that have packages in them
 
     # return slugs
     return [s['name'] for s in sorted(organizations, reverse=True, key=lambda k: k['created'])]
+
 
 def organization_slugs_by_creation_and_rank():
     ''' Retuns a list of organization slugs ordered from 
@@ -133,7 +136,8 @@ def organization_slugs_by_creation_and_rank():
 
     # Get a list of all the site's organizations from CKAN
     organizations = toolkit.get_action('organization_list')(
-            data_dict={'sort': 'package_count desc', 'all_fields': True, 'include_extras': True, 'include_dataset_count': True, 'include_groups': True})
+        data_dict={'sort': 'package_count desc', 'all_fields': True, 'include_extras': True,
+                   'include_dataset_count': True, 'include_groups': True})
 
     # FIXME Not sure why this only returns organisations that have packages in them
 
@@ -156,13 +160,16 @@ def organization_slugs_by_creation_and_rank():
             'slug': o['name'],
             'created': o['created'],
             'rank': rank
-            })
+        })
 
-    #return slugs sorted by rank, then by created date
+    # return slugs sorted by rank, then by created date
     return [s['slug'] for s in multisort(list(orgs), (('rank', True), ('created', True)))]
 
+
 def get_os_env_value(key):
-    return os.environ.get(key, '')
+    config_key = 'ckanext.bpatheme.' + key.lower()
+    return config.get(config_key) or os.environ.get(key, '')
+
 
 class CustomTheme(plugins.SingletonPlugin):
     plugins.implements(plugins.IConfigurer)
@@ -176,8 +183,7 @@ class CustomTheme(plugins.SingletonPlugin):
     def get_actions(self):
         return {
             'user_create': action.custom_user_create,
-	    }
-
+        }
 
     # IRoutes
     def after_map(self, map):
@@ -245,10 +251,16 @@ class CustomTheme(plugins.SingletonPlugin):
 
     def update_config_schema(self, schema):
         ignore_missing = toolkit.get_validator('ignore_missing')
+        unicode_safe = toolkit.get_validator('unicode_safe')
         schema.update({
             'ckanext.datawa.slip_harvester_token': [ignore_missing, unicode],
-        })
+            'ckanext.bpatheme.comms_message': [ignore_missing, unicode_safe],
+            'ckanext.bpatheme.comms_title': [ignore_missing, unicode_safe],
 
+            'ckanext.bpatheme.comms_link_href': [ignore_missing, unicode_safe],
+            'ckanext.bpatheme.comms_link_text': [ignore_missing, unicode_safe],
+            'ckanext.bpatheme.comms_owner': [ignore_missing, unicode_safe]
+        })
         return schema
 
     # ITemplateHelpers
@@ -273,11 +285,11 @@ class CustomTheme(plugins.SingletonPlugin):
 
         ## We want the facets to appear in this order, with any others at the end
         facet_order = [
-                'organization',
-                'sequence_data_type',
-                'res_format',
-                'tags',
-                ]
+            'organization',
+            'sequence_data_type',
+            'res_format',
+            'tags',
+        ]
 
         ## Updating facet positions
         fct_keys = [key for key in facets_dict.keys()]
@@ -287,7 +299,7 @@ class CustomTheme(plugins.SingletonPlugin):
         for item in facet_order:
             fct_keys.insert(facet_order.index(item), fct_keys.pop(fct_keys.index(item)))
         # create OrderedDict of facets
-        updated_facet_dict = OrderedDict([(key,facets_dict[key]) for key in fct_keys])
+        updated_facet_dict = OrderedDict([(key, facets_dict[key]) for key in fct_keys])
         facets_dict = updated_facet_dict
 
         return facets_dict

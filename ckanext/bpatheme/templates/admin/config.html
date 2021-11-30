@@ -1,0 +1,22 @@
+{% ckan_extends %}
+
+{% import 'macros/form.html' as form %}
+
+{% block admin_form %}
+
+  {{ super() }}
+
+  <h3>Custom configuration options </h3>
+
+  {{ form.input('ckanext.bpatheme.comms_message', id='field-ckanext.bpatheme.comms_message', label=_('Comms message'), value=data['ckanext.bpatheme.comms_message'], error=errors['ckanext.bpatheme.comms_message']) }}
+
+
+{% endblock %}
+
+
+{% block admin_form_help %}
+
+  {{ super() }}
+
+  <p><strong>Comms message:</strong> Message used for showing a maintenance banner.</p>
+{% endblock %}
