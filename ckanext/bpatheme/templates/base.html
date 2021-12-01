@@ -1,44 +1,52 @@
 {% ckan_extends %}
 
 {% block styles %}
-  {{ super() }}
-  {% resource 'bpatheme/styles/bpatheme.css' %}
-  {% resource 'bpatheme/drop_down_menu.js' %}
+    {{ super() }}
+    {% resource 'bpatheme/styles/bpatheme.css' %}
+    {% resource 'bpatheme/drop_down_menu.js' %}
+    {% resource 'bpatheme/modernizr-custom.js' %}
+    {% resource 'bpatheme/bpatheme_project_icon_block.js' %}
+    {% resource 'bpatheme/bpatheme_footer_image.js' %}
+    {% resource 'bpatheme/lazy-sizes.js' %}
+    {% resource 'bpatheme/extra-drop-down.js' %}
+
 {% endblock %}
 
 {% block scripts %}
-  {{ super() }}
-  {% resource "bpatheme/datawa-organization-opener.js" %}
-  {% resource "bpatheme/datawa.js" %}
-  <script>/* Toggle between adding and removing the "responsive" class to topnav when the user clicks on the icon */
-  function toggleMenuCollapse() {
-      var x = document.getElementById("headernav-topnav");
-      if (x.className === "topnav") {
-          x.className += " responsive";
-      } else {
-          x.className = "topnav";
-      }
-  }
+    {{ super() }}
+    {% resource "bpatheme/datawa-organization-opener.js" %}
+    {% resource "bpatheme/datawa.js" %}
+    <script src="https://unpkg.com/current-device/umd/current-device.min.js" defer></script>
+    <script>/* Toggle between adding and removing the "responsive" class to topnav when the user clicks on the icon */
 
-  function toggleExpandedButton(e) {
-      const previous = e.previousElementSibling;
-      if (e.className === "truncate-toggle") {
-          e.className += " off";
-          e.innerText = "read less";
-          previous.className = "project-description"
-      } else {
-          e.className = "truncate-toggle";
-          e.innerText = "read more";
-          previous.className += " truncate-overflow"
-      }
-  }
+    function toggleMenuCollapse() {
+        var x = document.getElementById("headernav-topnav");
+        if (x.className === "topnav") {
+            x.className += " responsive";
+        } else {
+            x.className = "topnav";
+        }
+    }
 
-  </script>
+    function toggleExpandedButton(e) {
+        const previous = e.previousElementSibling;
+        if (e.className === "truncate-toggle") {
+            e.className += " off";
+            e.innerText = "read less";
+            previous.className = "project-description"
+        } else {
+            e.className = "truncate-toggle";
+            e.innerText = "read more";
+            previous.className += " truncate-overflow"
+        }
+    }
+
+    </script>
 
 {% endblock %}
 
 {% block meta %}
-  {{ super() }}
-  <meta name="google-site-verification" content="SALCs2HUU_-WFKh7s27fxGa7XLBp32nGuuA5zgtr3Zk"/>
-  <meta name="msvalidate.01" content="DF3D66336DE6B56D6818F9FD7BE04800"/>
+    {{ super() }}
+    <meta name="google-site-verification" content="SALCs2HUU_-WFKh7s27fxGa7XLBp32nGuuA5zgtr3Zk"/>
+    <meta name="msvalidate.01" content="DF3D66336DE6B56D6818F9FD7BE04800"/>
 {% endblock %}

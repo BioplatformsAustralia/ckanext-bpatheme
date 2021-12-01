@@ -634,6 +634,10 @@
             "label": "bpa_library_id"
         },
         {
+            "field_name": "facility",
+            "label": "facility"
+        },
+        {
             "field_name": "flow_cell_id",
             "label": "flow_cell_id"
         },
@@ -652,6 +656,10 @@
         {
             "field_name": "resource_type",
             "label": "resource_type"
+        },
+        {
+            "field_name": "runsamplenum",
+            "label": "runsamplenum"
         },
         {
             "field_name": "voucher_id",

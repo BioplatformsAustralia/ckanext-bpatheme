@@ -67,7 +67,6 @@ def create_query_parameter(query_format, url):
 
 
 class SummaryController(base.BaseController):
-
     def index(self):
         if not os.path.exists(summary_table_data_path):
             log.error("Could not find path to summary table data: {0}".format(summary_table_data_path))
@@ -85,3 +84,7 @@ class SummaryController(base.BaseController):
         bt_json = df.to_json(orient="records")
         return base.render('summary/index.html',
                            extra_vars={'spreadsheet_data': bt_json, 'spreadsheet_columns': bt_header})
+
+class ContactController(base.BaseController):
+    def index(self):
+        return base.render('home/contact.html')

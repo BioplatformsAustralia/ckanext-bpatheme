@@ -183,6 +183,11 @@
             "label": "country"
         },
         {
+            "field_name": "data_context",
+            "form_placeholder": "",
+            "label": "data_context"
+        },
+        {
             "field_name": "data_custodian",
             "form_placeholder": "",
             "label": "data_custodian"
@@ -218,6 +223,16 @@
             "label": "death_date"
         },
         {
+            "field_name": "decimal_latitude_public",
+            "form_placeholder": "",
+            "label": "decimal_latitude_public"
+        },
+        {
+            "field_name": "decimal_longitude_public",
+            "form_placeholder": "",
+            "label": "decimal_longitude_public"
+        },
+        {
             "field_name": "description",
             "form_placeholder": "",
             "label": "description"
@@ -243,6 +258,11 @@
             "label": "facility"
         },
         {
+            "field_name": "facility_project_code",
+            "form_placeholder": "",
+            "label": "facility_project_code"
+        },
+        {
             "field_name": "facility_sample_id",
             "form_placeholder": "",
             "label": "facility_sample_id"
@@ -253,9 +273,19 @@
             "label": "family"
         },
         {
+            "field_name": "fast5_compression",
+            "form_placeholder": "",
+            "label": "fast5_compression"
+        },
+        {
             "field_name": "file_count",
             "form_placeholder": "",
             "label": "file_count"
+        },
+        {
+            "field_name": "file_type",
+            "form_placeholder": "",
+            "label": "file_type"
         },
         {
             "field_name": "flowcell_id",
@@ -328,9 +358,24 @@
             "label": "library_index_id"
         },
         {
+            "field_name": "library_index_id_dual",
+            "form_placeholder": "",
+            "label": "library_index_id_dual"
+        },
+        {
             "field_name": "library_index_seq",
             "form_placeholder": "",
             "label": "library_index_seq"
+        },
+        {
+            "field_name": "library_index_seq_dual",
+            "form_placeholder": "",
+            "label": "library_index_seq_dual"
+        },
+        {
+            "field_name": "library_layout",
+            "form_placeholder": "",
+            "label": "library_layout"
         },
         {
             "field_name": "library_location",
@@ -346,6 +391,11 @@
             "field_name": "library_oligo_sequence",
             "form_placeholder": "",
             "label": "library_oligo_sequence"
+        },
+        {
+            "field_name": "library_oligo_sequence_dual",
+            "form_placeholder": "",
+            "label": "library_oligo_sequence_dual"
         },
         {
             "field_name": "library_pcr_cycles",
@@ -368,9 +418,24 @@
             "label": "library_prepared_by"
         },
         {
+            "field_name": "library_selection",
+            "form_placeholder": "",
+            "label": "library_selection"
+        },
+        {
+            "field_name": "library_source",
+            "form_placeholder": "",
+            "label": "library_source"
+        },
+        {
             "field_name": "library_status",
             "form_placeholder": "",
             "label": "library_status"
+        },
+        {
+            "field_name": "library_strategy",
+            "form_placeholder": "",
+            "label": "library_strategy"
         },
         {
             "field_name": "library_type",
@@ -421,6 +486,11 @@
             "field_name": "method_of_determination",
             "form_placeholder": "",
             "label": "method_of_determination"
+        },
+        {
+            "field_name": "model_base_caller",
+            "form_placeholder": "",
+            "label": "model_base_caller"
         },
         {
             "field_name": "movie_length",
@@ -491,6 +561,16 @@
             "field_name": "sequencing_facility",
             "form_placeholder": "",
             "label": "sequencing_facility"
+        },
+        {
+            "field_name": "sequencing_kit_chemistry_version",
+            "form_placeholder": "",
+            "label": "sequencing_kit_chemistry_version"
+        },
+        {
+            "field_name": "sequencing_model",
+            "form_placeholder": "",
+            "label": "sequencing_model"
         },
         {
             "field_name": "sequencing_platform",

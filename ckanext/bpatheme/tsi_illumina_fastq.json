@@ -293,9 +293,9 @@
             "label": "habitat"
         },
         {
-            "field_name": "identified_by",
+            "field_name": "health_state",
             "form_placeholder": "",
-            "label": "identified_by"
+            "label": "health_state"
         },
         {
             "field_name": "insert_size_range",
@@ -503,14 +503,34 @@
             "label": "sample_quality"
         },
         {
+            "field_name": "sample_type",
+            "form_placeholder": "",
+            "label": "sample_type"
+        },
+        {
             "field_name": "scientific_name",
             "form_placeholder": "",
             "label": "scientific_name"
         },
         {
+            "field_name": "scientific_name_authorship",
+            "form_placeholder": "",
+            "label": "scientific_name_authorship"
+        },
+        {
+            "field_name": "scientific_name_note",
+            "form_placeholder": "",
+            "label": "scientific_name_note"
+        },
+        {
             "field_name": "sequencing_facility",
             "form_placeholder": "",
             "label": "sequencing_facility"
+        },
+        {
+            "field_name": "sequencing_kit_chemistry_version",
+            "form_placeholder": "",
+            "label": "sequencing_kit_chemistry_version"
         },
         {
             "field_name": "sequencing_model",
@@ -573,6 +593,11 @@
             "label": "tissue_collection"
         },
         {
+            "field_name": "tissue_collection_type",
+            "form_placeholder": "",
+            "label": "tissue_collection_type"
+        },
+        {
             "field_name": "tissue_number",
             "form_placeholder": "",
             "label": "tissue_number"
@@ -581,6 +606,11 @@
             "field_name": "tissue_preservation",
             "form_placeholder": "",
             "label": "tissue_preservation"
+        },
+        {
+            "field_name": "tissue_preservation_temperature",
+            "form_placeholder": "",
+            "label": "tissue_preservation_temperature"
         },
         {
             "field_name": "tissue_type",

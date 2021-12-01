@@ -12,6 +12,7 @@ from markupsafe import Markup
 
 import ckanext.scheming.helpers as sh
 
+from ckanext.bpatheme import action
 
 def get_current_year():
     return datetime.datetime.today().year
@@ -169,11 +170,22 @@ class CustomTheme(plugins.SingletonPlugin):
     plugins.implements(plugins.IPackageController, inherit=True)
     plugins.implements(plugins.IFacets, inherit=True)
     plugins.implements(plugins.IRoutes, inherit=True)
+    plugins.implements(plugins.IActions)
+
+    # IActions
+    def get_actions(self):
+        return {
+            'user_create': action.custom_user_create,
+	    }
+
 
     # IRoutes
     def after_map(self, map):
         map.connect('bpatheme_summary', '/summary',
                     controller='ckanext.bpatheme.controller:SummaryController',
+                    action='index')
+        map.connect('bpatheme_contact', '/contact',
+                    controller='ckanext.bpatheme.controller:ContactController',
                     action='index')
         return map
 

@@ -1,0 +1,46 @@
+{% set vars = { 'usedefault': True } %}
+{% set organization = h.get_organization(slug) %}
+
+{% if 'extras' in organization %}
+    {% for item in organization['extras'] %}
+        {% if 'key' in item %}
+            {% if item['key'] == 'dataset_url' and item['value']|length %}
+                {% if vars.update({'usedefault': False}) %} {% endif %}
+                {% if vars.update({'org_link': item['value']}) %} {% endif %}
+            {% endif %}
+        {% endif %}
+    {% endfor %}
+{% endif %}
+
+{% if vars.usedefault %}
+    {% if vars.update({'org_link': h.url_for('dataset', organization=slug)}) %} {% endif %}
+{% endif %}
+
+{% set org_link = vars.org_link %}
+<div>
+    <a href="{{ org_link }}">
+        <picture>
+            <source data-srcset="{{ icon }}" type="image/webp">
+            <img loading="lazy" class="lazyload icon_logo_default" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="  data-src="{{ iconalt }}" alt="{{ title }}">
+        </picture>
+    </a>
+</div>
+<div class="project-details">
+    <div class="project-name">
+        <a href="{{ org_link }}">
+            <h3>{{ title }}</h3>
+        </a>
+    </div>
+    <p class="project-description truncate-overflow">
+        {{ description }}
+    </p>
+    <label class="truncate-toggle" for="project-description" role="button"
+           onclick="toggleExpandedButton(this)">read
+        more</label>
+    <ul class="nav nav-pills">
+        <li><a href="{{ org_link }}"><span
+                class="fa fa-database"></span> Datasets</a></li>
+        <li><a href="{{ url }}"> <span
+                class="fa fa-globe"></span> Project</a></li>
+    </ul>
+</div>

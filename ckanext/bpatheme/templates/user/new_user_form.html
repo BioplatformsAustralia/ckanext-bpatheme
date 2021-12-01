@@ -7,7 +7,15 @@
     {{ form.input("email", id="field-email", label=_("Email"), type="email", placeholder=_("joe@example.com"), value=data.email, error=errors.email, classes=["control-medium"], is_required=True) }}
 
     {{ form.textarea("request_reason", id="field-request_reason", label=_("Reason for Request"), placeholder="Please provide a brief outline of your interest in the project data.", value=data.request_reason, error=errors.request_reason, classes=["control-medium"], is_required=True) }}
-    {{ form.select('project_of_interest', label=_('Project of Interest'), options=[{'value': ""}, {'value': "Australian Microbiome", 'name': "ausmicro"}, {'value': "Antibiotic Resistant Sepsis Pathogens", 'name': "sepsis"}, {'value': "Oz Mammals Genomics Initiative", 'name': "omg"}, {'value': "Threatened Species Initiative", 'name': "threatened-species"}, {'value': "Genomics for Australian Plants", 'name': "bpa-plants"}, {'value': "Australian Amphibian and Reptile Genomics Initiative", 'name': "ausarg"}, {'value': "Great Barrier Reef", 'name': "gbr"}, {'value': "Wheat Pathogens Transcript", 'name': "wheat_pathogens_transcript"}, {'value': "Wheat Pathogens Genomes", 'name': "wheat_pathogens_genomes"}, {'value': "Wheat Cultivars", 'name': "wheat_cultivars"}], classes=["control-medium"], is_required=True) }}
+
+    <p>Select organizations that you wish to request membership of: </p>
+
+    {% set available_orgs = h.get_available_organizations() %}
+    {% for org in available_orgs %}
+       {{ form.checkbox('org-{}'.format(org.name), label=org.display_name, id='field-{}'.format(org.name), checked=false, value=True) }}
+    {% endfor %}
+
+    <p>Please provide a password for your account: </p>
 
     {{ form.input("password1", id="field-password", label=_("Password"), type="password", placeholder="••••••••", value=data.password1, error=errors.password1, classes=["control-medium"], is_required=True) }}
     {{ form.input("password2", id="field-confirm-password", label=_("Confirm"), type="password", placeholder="••••••••", value=data.password2, error=errors.password1, classes=["control-medium"], is_required=True) }}

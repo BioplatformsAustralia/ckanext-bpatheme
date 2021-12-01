@@ -90,7 +90,7 @@
         {
             "field_name": "alkalinity",
             "form_placeholder": "",
-            "label": "alkalinity"
+            "label": "alkalinity (\u00b5mol/kg)"
         },
         {
             "field_name": "alkalinity_meth",
@@ -110,7 +110,7 @@
         {
             "field_name": "alpha_beta_car",
             "form_placeholder": "",
-            "label": "alpha_beta_car"
+            "label": "alpha_beta_car (mg/m3)"
         },
         {
             "field_name": "alpha_beta_car_meth",
@@ -125,22 +125,12 @@
         {
             "field_name": "ammonium",
             "form_placeholder": "",
-            "label": "ammonium (\u00b5mol/l)"
+            "label": "ammonium (\u00b5mol/L)"
         },
         {
             "field_name": "ammonium_meth",
             "form_placeholder": "",
             "label": "ammonium_meth"
-        },
-        {
-            "field_name": "ammonium_nitrogen_vol",
-            "form_placeholder": "",
-            "label": "ammonium_nitrogen_vol (mg/l)"
-        },
-        {
-            "field_name": "ammonium_nitrogen_vol_meth",
-            "form_placeholder": "",
-            "label": "ammonium_nitrogen_vol_meth"
         },
         {
             "field_name": "ammonium_nitrogen_wt",
@@ -170,7 +160,7 @@
         {
             "field_name": "antimony",
             "form_placeholder": "",
-            "label": "antimony"
+            "label": "antimony (ppm)"
         },
         {
             "field_name": "antimony_meth",
@@ -215,7 +205,7 @@
         {
             "field_name": "barium",
             "form_placeholder": "",
-            "label": "barium"
+            "label": "barium (ppm)"
         },
         {
             "field_name": "barium_meth",
@@ -235,22 +225,12 @@
         {
             "field_name": "beta_epi_car",
             "form_placeholder": "",
-            "label": "beta_epi_car (mg/m3)"
+            "label": "beta_epi_car"
         },
         {
             "field_name": "beta_epi_car_meth",
             "form_placeholder": "",
             "label": "beta_epi_car_meth"
-        },
-        {
-            "field_name": "biomass",
-            "form_placeholder": "",
-            "label": "biomass"
-        },
-        {
-            "field_name": "biomass_meth",
-            "form_placeholder": "",
-            "label": "biomass_meth"
         },
         {
             "field_name": "biotic_relationship",
@@ -260,7 +240,7 @@
         {
             "field_name": "bleaching",
             "form_placeholder": "",
-            "label": "bleaching (%)"
+            "label": "bleaching"
         },
         {
             "field_name": "boron_hot_cacl2",
@@ -273,14 +253,9 @@
             "label": "boron_hot_cacl2_meth"
         },
         {
-            "field_name": "bottle_number",
-            "form_placeholder": "",
-            "label": "bottle_number"
-        },
-        {
             "field_name": "but_fuco",
             "form_placeholder": "",
-            "label": "but_fuco"
+            "label": "but_fuco (mg/m3)"
         },
         {
             "field_name": "but_fuco_meth",
@@ -310,7 +285,7 @@
         {
             "field_name": "carbonate_bicarbonate",
             "form_placeholder": "",
-            "label": "carbonate_bicarbonate (mg/l)"
+            "label": "carbonate_bicarbonate (mg/L)"
         },
         {
             "field_name": "carbonate_bicarbonate_meth",
@@ -320,7 +295,7 @@
         {
             "field_name": "cation_exchange_capacity",
             "form_placeholder": "",
-            "label": "cation_exchange_capacity"
+            "label": "cation_exchange_capacity (meq/100g)"
         },
         {
             "field_name": "cation_exchange_capacity_meth",
@@ -330,7 +305,7 @@
         {
             "field_name": "cerium",
             "form_placeholder": "",
-            "label": "cerium"
+            "label": "cerium (ppm)"
         },
         {
             "field_name": "cerium_meth",
@@ -340,7 +315,7 @@
         {
             "field_name": "cesium",
             "form_placeholder": "",
-            "label": "cesium"
+            "label": "cesium (ppm)"
         },
         {
             "field_name": "cesium_meth",
@@ -350,7 +325,7 @@
         {
             "field_name": "chloride",
             "form_placeholder": "",
-            "label": "chloride (mg/l)"
+            "label": "chloride (mg/L)"
         },
         {
             "field_name": "chloride_meth",
@@ -360,7 +335,7 @@
         {
             "field_name": "chlorophyll_a",
             "form_placeholder": "",
-            "label": "chlorophyll_a (\u00b5g/l)"
+            "label": "chlorophyll_a (mg/m3)"
         },
         {
             "field_name": "chlorophyll_a_meth",
@@ -368,9 +343,59 @@
             "label": "chlorophyll_a_meth"
         },
         {
+            "field_name": "chlorophyll_b",
+            "form_placeholder": "",
+            "label": "chlorophyll_b (mg/m3)"
+        },
+        {
+            "field_name": "chlorophyll_b_meth",
+            "form_placeholder": "",
+            "label": "chlorophyll_b_meth"
+        },
+        {
+            "field_name": "chlorophyll_c1",
+            "form_placeholder": "",
+            "label": "chlorophyll_c1 (mg/m3)"
+        },
+        {
+            "field_name": "chlorophyll_c1_meth",
+            "form_placeholder": "",
+            "label": "chlorophyll_c1_meth"
+        },
+        {
+            "field_name": "chlorophyll_c1c2",
+            "form_placeholder": "",
+            "label": "chlorophyll_c1c2 (mg/m3)"
+        },
+        {
+            "field_name": "chlorophyll_c1c2_meth",
+            "form_placeholder": "",
+            "label": "chlorophyll_c1c2_meth"
+        },
+        {
+            "field_name": "chlorophyll_c2",
+            "form_placeholder": "",
+            "label": "chlorophyll_c2 (mg/m3)"
+        },
+        {
+            "field_name": "chlorophyll_c2_meth",
+            "form_placeholder": "",
+            "label": "chlorophyll_c2_meth"
+        },
+        {
+            "field_name": "chlorophyll_c3",
+            "form_placeholder": "",
+            "label": "chlorophyll_c3 (mg/m3)"
+        },
+        {
+            "field_name": "chlorophyll_c3_meth",
+            "form_placeholder": "",
+            "label": "chlorophyll_c3_meth"
+        },
+        {
             "field_name": "chlorophyll_ctd",
             "form_placeholder": "",
-            "label": "chlorophyll_ctd (ug/l)"
+            "label": "chlorophyll_ctd (mg/m3)"
         },
         {
             "field_name": "chlorophyll_ctd_meth",
@@ -403,6 +428,16 @@
             "label": "clay_meth"
         },
         {
+            "field_name": "coarse_sand",
+            "form_placeholder": "",
+            "label": "coarse_sand (%)"
+        },
+        {
+            "field_name": "coarse_sand_meth",
+            "form_placeholder": "",
+            "label": "coarse_sand_meth"
+        },
+        {
             "field_name": "coastal_id",
             "form_placeholder": "",
             "label": "coastal_id"
@@ -428,14 +463,19 @@
             "label": "color"
         },
         {
+            "field_name": "color_meth",
+            "form_placeholder": "",
+            "label": "color_meth"
+        },
+        {
             "field_name": "conductivity",
             "form_placeholder": "",
-            "label": "conductivity (ds/m)"
+            "label": "conductivity (dS/m)"
         },
         {
             "field_name": "conductivity_aqueous",
             "form_placeholder": "",
-            "label": "conductivity_aqueous (s/m)"
+            "label": "conductivity_aqueous (S/m)"
         },
         {
             "field_name": "conductivity_aqueous_meth",
@@ -451,76 +491,6 @@
             "field_name": "contextual_data_submission_date",
             "form_placeholder": "",
             "label": "contextual_data_submission_date"
-        },
-        {
-            "field_name": "course_sand",
-            "form_placeholder": "",
-            "label": "course_sand"
-        },
-        {
-            "field_name": "course_sand_meth",
-            "form_placeholder": "",
-            "label": "course_sand_meth"
-        },
-        {
-            "field_name": "cphl_a",
-            "form_placeholder": "",
-            "label": "cphl_a (mg/m3)"
-        },
-        {
-            "field_name": "cphl_a_meth",
-            "form_placeholder": "",
-            "label": "cphl_a_meth"
-        },
-        {
-            "field_name": "cphl_b",
-            "form_placeholder": "",
-            "label": "cphl_b (mg/m3)"
-        },
-        {
-            "field_name": "cphl_b_meth",
-            "form_placeholder": "",
-            "label": "cphl_b_meth"
-        },
-        {
-            "field_name": "cphl_c1",
-            "form_placeholder": "",
-            "label": "cphl_c1 (mg/m3)"
-        },
-        {
-            "field_name": "cphl_c1_meth",
-            "form_placeholder": "",
-            "label": "cphl_c1_meth"
-        },
-        {
-            "field_name": "cphl_c1c2",
-            "form_placeholder": "",
-            "label": "cphl_c1c2 (mg/m3)"
-        },
-        {
-            "field_name": "cphl_c1c2_meth",
-            "form_placeholder": "",
-            "label": "cphl_c1c2_meth"
-        },
-        {
-            "field_name": "cphl_c2",
-            "form_placeholder": "",
-            "label": "cphl_c2 (mg/m3)"
-        },
-        {
-            "field_name": "cphl_c2_meth",
-            "form_placeholder": "",
-            "label": "cphl_c2_meth"
-        },
-        {
-            "field_name": "cphl_c3",
-            "form_placeholder": "",
-            "label": "cphl_c3 (mg/m3)"
-        },
-        {
-            "field_name": "cphl_c3_meth",
-            "form_placeholder": "",
-            "label": "cphl_c3_meth"
         },
         {
             "field_name": "cphlide_a",
@@ -558,21 +528,6 @@
             "label": "crop_rotation_5yrs_since_present"
         },
         {
-            "field_name": "ctdchlf",
-            "form_placeholder": "",
-            "label": "ctdchlf"
-        },
-        {
-            "field_name": "ctdchlf_meth",
-            "form_placeholder": "",
-            "label": "ctdchlf_meth"
-        },
-        {
-            "field_name": "cur_land_use",
-            "form_placeholder": "",
-            "label": "cur_land_use"
-        },
-        {
             "field_name": "data_generated",
             "form_placeholder": "",
             "label": "data_generated"
@@ -581,6 +536,11 @@
             "field_name": "data_type",
             "form_placeholder": "",
             "label": "data_type"
+        },
+        {
+            "field_name": "database_schema_definitions_url",
+            "form_placeholder": "",
+            "label": "database_schema_definitions_url"
         },
         {
             "field_name": "dataset_url",
@@ -600,7 +560,7 @@
         {
             "field_name": "days_since_planting",
             "form_placeholder": "",
-            "label": "days_since_planting"
+            "label": "days_since_planting (days)"
         },
         {
             "field_name": "density",
@@ -615,7 +575,7 @@
         {
             "field_name": "depth",
             "form_placeholder": "",
-            "label": "depth"
+            "label": "depth (m)"
         },
         {
             "field_name": "depth_lower",
@@ -675,7 +635,7 @@
         {
             "field_name": "dna_concentration_submitter",
             "form_placeholder": "",
-            "label": "dna_concentration_submitter"
+            "label": "dna_concentration_submitter (ng/\u00b5L)"
         },
         {
             "field_name": "dna_concentration_submitter_meth",
@@ -765,7 +725,7 @@
         {
             "field_name": "dysprosium",
             "form_placeholder": "",
-            "label": "dysprosium"
+            "label": "dysprosium (ppm)"
         },
         {
             "field_name": "dysprosium_meth",
@@ -785,7 +745,7 @@
         {
             "field_name": "elev",
             "form_placeholder": "",
-            "label": "elev"
+            "label": "elev (m)"
         },
         {
             "field_name": "env_broad_scale",
@@ -798,11 +758,6 @@
             "label": "env_local_scale"
         },
         {
-            "field_name": "env_material",
-            "form_placeholder": "",
-            "label": "env_material"
-        },
-        {
             "field_name": "env_medium",
             "form_placeholder": "",
             "label": "env_medium"
@@ -810,7 +765,7 @@
         {
             "field_name": "erbium",
             "form_placeholder": "",
-            "label": "erbium"
+            "label": "erbium (ppm)"
         },
         {
             "field_name": "erbium_meth",
@@ -820,7 +775,7 @@
         {
             "field_name": "europium",
             "form_placeholder": "",
-            "label": "europium"
+            "label": "europium (ppm)"
         },
         {
             "field_name": "europium_meth",
@@ -930,7 +885,7 @@
         {
             "field_name": "fluor",
             "form_placeholder": "",
-            "label": "fluor"
+            "label": "fluor (AU)"
         },
         {
             "field_name": "fluor_meth",
@@ -945,7 +900,7 @@
         {
             "field_name": "fouling",
             "form_placeholder": "",
-            "label": "fouling (%)"
+            "label": "fouling"
         },
         {
             "field_name": "fouling_organisms",
@@ -955,7 +910,7 @@
         {
             "field_name": "fresh_weight",
             "form_placeholder": "",
-            "label": "fresh_weight"
+            "label": "fresh_weight (g)"
         },
         {
             "field_name": "fresh_weight_meth",
@@ -980,7 +935,7 @@
         {
             "field_name": "gadolinium",
             "form_placeholder": "",
-            "label": "gadolinium"
+            "label": "gadolinium (ppm)"
         },
         {
             "field_name": "gadolinium_meth",
@@ -990,7 +945,7 @@
         {
             "field_name": "gallium",
             "form_placeholder": "",
-            "label": "gallium"
+            "label": "gallium (ppm)"
         },
         {
             "field_name": "gallium_meth",
@@ -1008,14 +963,9 @@
             "label": "geo_loc_name"
         },
         {
-            "field_name": "geospatial_coverage",
-            "form_placeholder": "",
-            "label": "geospatial_coverage"
-        },
-        {
             "field_name": "germanium",
             "form_placeholder": "",
-            "label": "germanium"
+            "label": "germanium (ppm)"
         },
         {
             "field_name": "germanium_meth",
@@ -1025,7 +975,7 @@
         {
             "field_name": "gold",
             "form_placeholder": "",
-            "label": "gold"
+            "label": "gold (ppm)"
         },
         {
             "field_name": "gold_meth",
@@ -1065,7 +1015,7 @@
         {
             "field_name": "hafnium",
             "form_placeholder": "",
-            "label": "hafnium"
+            "label": "hafnium (ppm)"
         },
         {
             "field_name": "hafnium_meth",
@@ -1085,7 +1035,7 @@
         {
             "field_name": "holmium",
             "form_placeholder": "",
-            "label": "holmium"
+            "label": "holmium (ppm)"
         },
         {
             "field_name": "holmium_meth",
@@ -1110,7 +1060,7 @@
         {
             "field_name": "host_abundance_seaweed_mean",
             "form_placeholder": "",
-            "label": "host_abundance_seaweed_mean (ind/m2)"
+            "label": "host_abundance_seaweed_mean (individuals/m2)"
         },
         {
             "field_name": "host_associated_microbiome_zone",
@@ -1135,7 +1085,7 @@
         {
             "field_name": "icp_te_boron",
             "form_placeholder": "",
-            "label": "icp_te_boron (mg/l)"
+            "label": "icp_te_boron (mg/L)"
         },
         {
             "field_name": "icp_te_boron_meth",
@@ -1145,7 +1095,7 @@
         {
             "field_name": "icp_te_calcium",
             "form_placeholder": "",
-            "label": "icp_te_calcium (mg/l)"
+            "label": "icp_te_calcium (mg/L)"
         },
         {
             "field_name": "icp_te_calcium_meth",
@@ -1155,7 +1105,7 @@
         {
             "field_name": "icp_te_copper",
             "form_placeholder": "",
-            "label": "icp_te_copper (mg/l)"
+            "label": "icp_te_copper (mg/L)"
         },
         {
             "field_name": "icp_te_copper_meth",
@@ -1165,7 +1115,7 @@
         {
             "field_name": "icp_te_iron",
             "form_placeholder": "",
-            "label": "icp_te_iron (mg/l)"
+            "label": "icp_te_iron (mg/L)"
         },
         {
             "field_name": "icp_te_iron_meth",
@@ -1175,7 +1125,7 @@
         {
             "field_name": "icp_te_manganese",
             "form_placeholder": "",
-            "label": "icp_te_manganese (mg/l)"
+            "label": "icp_te_manganese (mg/L)"
         },
         {
             "field_name": "icp_te_manganese_meth",
@@ -1185,7 +1135,7 @@
         {
             "field_name": "icp_te_phosphorus",
             "form_placeholder": "",
-            "label": "icp_te_phosphorus (mg/l)"
+            "label": "icp_te_phosphorus (mg/L)"
         },
         {
             "field_name": "icp_te_phosphorus_meth",
@@ -1195,7 +1145,7 @@
         {
             "field_name": "icp_te_sulfur",
             "form_placeholder": "",
-            "label": "icp_te_sulfur (mg/l)"
+            "label": "icp_te_sulfur (mg/L)"
         },
         {
             "field_name": "icp_te_sulfur_meth",
@@ -1205,7 +1155,7 @@
         {
             "field_name": "icp_te_zinc",
             "form_placeholder": "",
-            "label": "icp_te_zinc (mg/l)"
+            "label": "icp_te_zinc (mg/L)"
         },
         {
             "field_name": "icp_te_zinc_meth",
@@ -1230,7 +1180,7 @@
         {
             "field_name": "inorganic_fraction",
             "form_placeholder": "",
-            "label": "inorganic_fraction (mg/l)"
+            "label": "inorganic_fraction (mg/L)"
         },
         {
             "field_name": "inorganic_fraction_meth",
@@ -1245,7 +1195,7 @@
         {
             "field_name": "iridium",
             "form_placeholder": "",
-            "label": "iridium"
+            "label": "iridium (ppm)"
         },
         {
             "field_name": "iridium_meth",
@@ -1265,7 +1215,7 @@
         {
             "field_name": "lanthanum",
             "form_placeholder": "",
-            "label": "lanthanum"
+            "label": "lanthanum (ppm)"
         },
         {
             "field_name": "lanthanum_meth",
@@ -1275,12 +1225,12 @@
         {
             "field_name": "lat_lon",
             "form_placeholder": "",
-            "label": "lat_lon"
+            "label": "lat_lon (decimal_degrees)"
         },
         {
             "field_name": "latitude",
             "form_placeholder": "",
-            "label": "latitude"
+            "label": "latitude (decimal_degrees)"
         },
         {
             "field_name": "lead",
@@ -1303,19 +1253,14 @@
             "label": "library_construction_protocol"
         },
         {
-            "field_name": "license_id",
-            "form_placeholder": "",
-            "label": "license_id"
-        },
-        {
             "field_name": "light_intensity",
             "form_placeholder": "",
-            "label": "light_intensity"
+            "label": "light_intensity (lux)"
         },
         {
             "field_name": "light_intensity_bottom",
             "form_placeholder": "",
-            "label": "light_intensity_bottom (\u00b5mol/m^2/s^-1)"
+            "label": "light_intensity_bottom (\u00b5mol/m2/s)"
         },
         {
             "field_name": "light_intensity_bottom_meth",
@@ -1325,7 +1270,7 @@
         {
             "field_name": "light_intensity_meadow",
             "form_placeholder": "",
-            "label": "light_intensity_meadow (\u00b5mol/m^2/s^-1)"
+            "label": "light_intensity_meadow (\u00b5mol/m2/s)"
         },
         {
             "field_name": "light_intensity_meadow_meth",
@@ -1340,7 +1285,7 @@
         {
             "field_name": "light_intensity_surface",
             "form_placeholder": "",
-            "label": "light_intensity_surface (\u00b5mol/m^2/s^-1)"
+            "label": "light_intensity_surface (\u00b5mol/m2/s)"
         },
         {
             "field_name": "light_intensity_surface_meth",
@@ -1360,7 +1305,7 @@
         {
             "field_name": "longitude",
             "form_placeholder": "",
-            "label": "longitude"
+            "label": "longitude (decimal_degrees)"
         },
         {
             "field_name": "lut",
@@ -1375,7 +1320,7 @@
         {
             "field_name": "lutetium",
             "form_placeholder": "",
-            "label": "lutetium"
+            "label": "lutetium (ppm)"
         },
         {
             "field_name": "lutetium_meth",
@@ -1395,22 +1340,12 @@
         {
             "field_name": "magnesium",
             "form_placeholder": "",
-            "label": "magnesium"
+            "label": "magnesium (mg/L)"
         },
         {
             "field_name": "magnesium_meth",
             "form_placeholder": "",
             "label": "magnesium_meth"
-        },
-        {
-            "field_name": "metals",
-            "form_placeholder": "",
-            "label": "metals"
-        },
-        {
-            "field_name": "metals_meth",
-            "form_placeholder": "",
-            "label": "metals_meth"
         },
         {
             "field_name": "mg_dvp",
@@ -1425,7 +1360,7 @@
         {
             "field_name": "microbial_abundance",
             "form_placeholder": "",
-            "label": "microbial_abundance (cells/ml)"
+            "label": "microbial_abundance (cells/mL)"
         },
         {
             "field_name": "microbial_abundance_meth",
@@ -1445,7 +1380,7 @@
         {
             "field_name": "molybdenum",
             "form_placeholder": "",
-            "label": "molybdenum"
+            "label": "molybdenum (\u00b5g/kg)"
         },
         {
             "field_name": "molybdenum_meth",
@@ -1455,7 +1390,7 @@
         {
             "field_name": "mud",
             "form_placeholder": "",
-            "label": "mud (%)"
+            "label": "mud"
         },
         {
             "field_name": "mud_meth",
@@ -1465,7 +1400,7 @@
         {
             "field_name": "myxo",
             "form_placeholder": "",
-            "label": "myxo"
+            "label": "myxo (mg/m3)"
         },
         {
             "field_name": "myxo_meth",
@@ -1476,6 +1411,16 @@
             "field_name": "name",
             "form_placeholder": "",
             "label": "name"
+        },
+        {
+            "field_name": "ncbi_bioproject_accession",
+            "form_placeholder": "",
+            "label": "ncbi_bioproject_accession"
+        },
+        {
+            "field_name": "ncbi_biosample_accession",
+            "form_placeholder": "",
+            "label": "ncbi_biosample_accession"
         },
         {
             "field_name": "neo",
@@ -1490,7 +1435,7 @@
         {
             "field_name": "neodymium",
             "form_placeholder": "",
-            "label": "neodymium"
+            "label": "neodymium (ppm)"
         },
         {
             "field_name": "neodymium_meth",
@@ -1500,7 +1445,7 @@
         {
             "field_name": "nickel",
             "form_placeholder": "",
-            "label": "nickel"
+            "label": "nickel (ppm)"
         },
         {
             "field_name": "nickel_meth",
@@ -1510,7 +1455,7 @@
         {
             "field_name": "niobium_columbium",
             "form_placeholder": "",
-            "label": "niobium_columbium"
+            "label": "niobium_columbium (ppm)"
         },
         {
             "field_name": "niobium_columbium_meth",
@@ -1520,7 +1465,7 @@
         {
             "field_name": "nitrate",
             "form_placeholder": "",
-            "label": "nitrate (\u00b5mol/l)"
+            "label": "nitrate (\u00b5mol/L)"
         },
         {
             "field_name": "nitrate_meth",
@@ -1530,7 +1475,7 @@
         {
             "field_name": "nitrate_nitrite",
             "form_placeholder": "",
-            "label": "nitrate_nitrite"
+            "label": "nitrate_nitrite (\u00b5mol/L)"
         },
         {
             "field_name": "nitrate_nitrite_meth",
@@ -1550,7 +1495,7 @@
         {
             "field_name": "nitrite",
             "form_placeholder": "",
-            "label": "nitrite (\u00b5mol/l)"
+            "label": "nitrite (\u00b5mol/L)"
         },
         {
             "field_name": "nitrite_meth",
@@ -1565,7 +1510,7 @@
         {
             "field_name": "npic",
             "form_placeholder": "",
-            "label": "npic (mg/l)"
+            "label": "npic (mg/L)"
         },
         {
             "field_name": "npic_meth",
@@ -1575,7 +1520,7 @@
         {
             "field_name": "npoc",
             "form_placeholder": "",
-            "label": "npoc (mg/l)"
+            "label": "npoc (mg/L)"
         },
         {
             "field_name": "npoc_meth",
@@ -1598,14 +1543,9 @@
             "label": "nucl_acid_ext"
         },
         {
-            "field_name": "operation_cast_id",
-            "form_placeholder": "",
-            "label": "operation_cast_id"
-        },
-        {
             "field_name": "org_matter",
             "form_placeholder": "",
-            "label": "org_matter"
+            "label": "org_matter (%)"
         },
         {
             "field_name": "org_matter_meth",
@@ -1625,7 +1565,7 @@
         {
             "field_name": "organic_fraction",
             "form_placeholder": "",
-            "label": "organic_fraction (mg/l)"
+            "label": "organic_fraction (mg/L)"
         },
         {
             "field_name": "organic_fraction_meth",
@@ -1635,7 +1575,7 @@
         {
             "field_name": "osmium",
             "form_placeholder": "",
-            "label": "osmium"
+            "label": "osmium (ppm)"
         },
         {
             "field_name": "osmium_meth",
@@ -1645,12 +1585,12 @@
         {
             "field_name": "oxygen",
             "form_placeholder": "",
-            "label": "oxygen (ml/l)"
+            "label": "oxygen (\u00b5mol/L)"
         },
         {
             "field_name": "oxygen_ctd_vol",
             "form_placeholder": "",
-            "label": "oxygen_ctd_vol (\u00b5mol/l)"
+            "label": "oxygen_ctd_vol (mL/L)"
         },
         {
             "field_name": "oxygen_ctd_vol_meth",
@@ -1660,7 +1600,7 @@
         {
             "field_name": "oxygen_ctd_wt",
             "form_placeholder": "",
-            "label": "oxygen_ctd_wt (\u00b5mol_per_kg)"
+            "label": "oxygen_ctd_wt (\u00b5mol/kg)"
         },
         {
             "field_name": "oxygen_ctd_wt_meth",
@@ -1675,7 +1615,7 @@
         {
             "field_name": "palladium",
             "form_placeholder": "",
-            "label": "palladium"
+            "label": "palladium (ppm)"
         },
         {
             "field_name": "palladium_meth",
@@ -1695,7 +1635,7 @@
         {
             "field_name": "par",
             "form_placeholder": "",
-            "label": "par"
+            "label": "par (\u00b5mol/m2/s)"
         },
         {
             "field_name": "par_meth",
@@ -1705,7 +1645,7 @@
         {
             "field_name": "part_org_carb",
             "form_placeholder": "",
-            "label": "part_org_carb"
+            "label": "part_org_carb (\u00b5mol/L)"
         },
         {
             "field_name": "part_org_carb_meth",
@@ -1755,7 +1695,7 @@
         {
             "field_name": "phosphate",
             "form_placeholder": "",
-            "label": "phosphate (\u00b5mol/l)"
+            "label": "phosphate (\u00b5mol/L)"
         },
         {
             "field_name": "phosphate_meth",
@@ -1795,22 +1735,12 @@
         {
             "field_name": "picoeukaryotes",
             "form_placeholder": "",
-            "label": "picoeukaryotes"
+            "label": "picoeukaryotes (cells/mL)"
         },
         {
             "field_name": "picoeukaryotes_meth",
             "form_placeholder": "",
             "label": "picoeukaryotes_meth"
-        },
-        {
-            "field_name": "pigments",
-            "form_placeholder": "",
-            "label": "pigments"
-        },
-        {
-            "field_name": "pigments_meth",
-            "form_placeholder": "",
-            "label": "pigments_meth"
         },
         {
             "field_name": "plant_id",
@@ -1830,7 +1760,7 @@
         {
             "field_name": "platinum",
             "form_placeholder": "",
-            "label": "platinum"
+            "label": "platinum (ppm)"
         },
         {
             "field_name": "platinum_meth",
@@ -1840,7 +1770,7 @@
         {
             "field_name": "pn",
             "form_placeholder": "",
-            "label": "pn (\u00b5mol/l)"
+            "label": "pn (\u00b5mol/L)"
         },
         {
             "field_name": "pn_meth",
@@ -1848,19 +1778,9 @@
             "label": "pn_meth"
         },
         {
-            "field_name": "porewater_ph",
-            "form_placeholder": "",
-            "label": "porewater_ph"
-        },
-        {
-            "field_name": "porewater_ph_meth",
-            "form_placeholder": "",
-            "label": "porewater_ph_meth"
-        },
-        {
             "field_name": "potassium",
             "form_placeholder": "",
-            "label": "potassium"
+            "label": "potassium (mg/L)"
         },
         {
             "field_name": "potassium_colwell",
@@ -1890,7 +1810,7 @@
         {
             "field_name": "praseodymium",
             "form_placeholder": "",
-            "label": "praseodymium"
+            "label": "praseodymium (ppm)"
         },
         {
             "field_name": "praseodymium_meth",
@@ -1898,9 +1818,9 @@
             "label": "praseodymium_meth"
         },
         {
-            "field_name": "pres_rel_dbar",
+            "field_name": "pres_rel",
             "form_placeholder": "",
-            "label": "pres_rel_dbar"
+            "label": "pres_rel (dbar)"
         },
         {
             "field_name": "pres_rel_meth",
@@ -1910,7 +1830,7 @@
         {
             "field_name": "prochlorococcus",
             "form_placeholder": "",
-            "label": "prochlorococcus"
+            "label": "prochlorococcus (cells/mL)"
         },
         {
             "field_name": "prochlorococcus_meth",
@@ -1950,7 +1870,7 @@
         {
             "field_name": "rhodium",
             "form_placeholder": "",
-            "label": "rhodium"
+            "label": "rhodium (ppm)"
         },
         {
             "field_name": "rhodium_meth",
@@ -1960,7 +1880,7 @@
         {
             "field_name": "root_length",
             "form_placeholder": "",
-            "label": "root_length"
+            "label": "root_length (cm)"
         },
         {
             "field_name": "root_length_meth",
@@ -1970,7 +1890,7 @@
         {
             "field_name": "rubidium",
             "form_placeholder": "",
-            "label": "rubidium"
+            "label": "rubidium (ppm)"
         },
         {
             "field_name": "rubidium_meth",
@@ -1980,7 +1900,7 @@
         {
             "field_name": "ruthenium",
             "form_placeholder": "",
-            "label": "ruthenium"
+            "label": "ruthenium (ppm)"
         },
         {
             "field_name": "ruthenium_meth",
@@ -1990,12 +1910,12 @@
         {
             "field_name": "salinity",
             "form_placeholder": "",
-            "label": "salinity"
+            "label": "salinity (PSU)"
         },
         {
             "field_name": "salinity_lab",
             "form_placeholder": "",
-            "label": "salinity_lab"
+            "label": "salinity_lab (PSU)"
         },
         {
             "field_name": "salinity_lab_meth",
@@ -2010,7 +1930,7 @@
         {
             "field_name": "samarium",
             "form_placeholder": "",
-            "label": "samarium"
+            "label": "samarium (ppm)"
         },
         {
             "field_name": "samarium_meth",
@@ -2030,17 +1950,22 @@
         {
             "field_name": "samp_size",
             "form_placeholder": "",
-            "label": "samp_size"
+            "label": "samp_size (L)"
         },
         {
             "field_name": "samp_vol_we_dna_ext",
             "form_placeholder": "",
-            "label": "samp_vol_we_dna_ext"
+            "label": "samp_vol_we_dna_ext (L)"
         },
         {
             "field_name": "sample_attribution",
             "form_placeholder": "",
             "label": "sample_attribution"
+        },
+        {
+            "field_name": "sample_database_file",
+            "form_placeholder": "",
+            "label": "sample_database_file"
         },
         {
             "field_name": "sample_extraction_id",
@@ -2110,7 +2035,7 @@
         {
             "field_name": "scandium",
             "form_placeholder": "",
-            "label": "scandium"
+            "label": "scandium (ppm)"
         },
         {
             "field_name": "scandium_meth",
@@ -2130,12 +2055,12 @@
         {
             "field_name": "sediment_grain_size",
             "form_placeholder": "",
-            "label": "sediment_grain_size"
+            "label": "sediment_grain_size (%)"
         },
         {
             "field_name": "sediment_grain_size_fract",
             "form_placeholder": "",
-            "label": "sediment_grain_size_fract"
+            "label": "sediment_grain_size_fract (%)"
         },
         {
             "field_name": "sediment_grain_size_fract_meth",
@@ -2150,7 +2075,7 @@
         {
             "field_name": "sediment_porewater_h4sio4",
             "form_placeholder": "",
-            "label": "sediment_porewater_h4sio4 (\u00b5mol/l)"
+            "label": "sediment_porewater_h4sio4 (\u00b5mol/L)"
         },
         {
             "field_name": "sediment_porewater_h4sio4_meth",
@@ -2160,7 +2085,7 @@
         {
             "field_name": "sediment_porewater_nh4",
             "form_placeholder": "",
-            "label": "sediment_porewater_nh4 (\u00b5mol/l)"
+            "label": "sediment_porewater_nh4 (\u00b5mol/L)"
         },
         {
             "field_name": "sediment_porewater_nh4_meth",
@@ -2170,7 +2095,7 @@
         {
             "field_name": "sediment_porewater_no2",
             "form_placeholder": "",
-            "label": "sediment_porewater_no2 (\u00b5mol/l)"
+            "label": "sediment_porewater_no2 (\u00b5mol/L)"
         },
         {
             "field_name": "sediment_porewater_no2_meth",
@@ -2180,7 +2105,7 @@
         {
             "field_name": "sediment_porewater_no3",
             "form_placeholder": "",
-            "label": "sediment_porewater_no3 (\u00b5mol/l)"
+            "label": "sediment_porewater_no3 (\u00b5mol/L)"
         },
         {
             "field_name": "sediment_porewater_no3_meth",
@@ -2190,7 +2115,7 @@
         {
             "field_name": "sediment_porewater_po43",
             "form_placeholder": "",
-            "label": "sediment_porewater_po43 (\u00b5mol/l)"
+            "label": "sediment_porewater_po43 (\u00b5mol/L)"
         },
         {
             "field_name": "sediment_porewater_po43_meth",
@@ -2200,7 +2125,7 @@
         {
             "field_name": "sedimentation_rate",
             "form_placeholder": "",
-            "label": "sedimentation_rate (g/(cm2 x yr))"
+            "label": "sedimentation_rate (g/cm2/yr)"
         },
         {
             "field_name": "sedimentation_rate_meth",
@@ -2210,7 +2135,7 @@
         {
             "field_name": "selenium",
             "form_placeholder": "",
-            "label": "selenium"
+            "label": "selenium (\u00b5g/kg)"
         },
         {
             "field_name": "selenium_meth",
@@ -2225,7 +2150,7 @@
         {
             "field_name": "shoot_length",
             "form_placeholder": "",
-            "label": "shoot_length"
+            "label": "shoot_length (cm)"
         },
         {
             "field_name": "shoot_length_meth",
@@ -2235,7 +2160,7 @@
         {
             "field_name": "silicate",
             "form_placeholder": "",
-            "label": "silicate (\u00b5mol/l)"
+            "label": "silicate (\u00b5mol/L)"
         },
         {
             "field_name": "silicate_meth",
@@ -2255,7 +2180,7 @@
         {
             "field_name": "silver",
             "form_placeholder": "",
-            "label": "silver"
+            "label": "silver (ppm)"
         },
         {
             "field_name": "silver_meth",
@@ -2265,7 +2190,7 @@
         {
             "field_name": "sio2",
             "form_placeholder": "",
-            "label": "sio2 (\u00b5mol/l)"
+            "label": "sio2 (\u00b5mol/L)"
         },
         {
             "field_name": "sio2_meth",
@@ -2275,7 +2200,7 @@
         {
             "field_name": "slope_aspect",
             "form_placeholder": "",
-            "label": "slope_aspect (direction or degrees)"
+            "label": "slope_aspect (direction_or_degrees)"
         },
         {
             "field_name": "slope_aspect_meth",
@@ -2295,7 +2220,7 @@
         {
             "field_name": "sodium",
             "form_placeholder": "",
-            "label": "sodium"
+            "label": "sodium (mg/L)"
         },
         {
             "field_name": "sodium_meth",
@@ -2318,14 +2243,9 @@
             "label": "store_cond"
         },
         {
-            "field_name": "stress",
-            "form_placeholder": "",
-            "label": "stress"
-        },
-        {
             "field_name": "strontium",
             "form_placeholder": "",
-            "label": "strontium"
+            "label": "strontium (ppm)"
         },
         {
             "field_name": "strontium_meth",
@@ -2345,7 +2265,7 @@
         {
             "field_name": "synecochoccus",
             "form_placeholder": "",
-            "label": "synecochoccus"
+            "label": "synecochoccus (cells/mL)"
         },
         {
             "field_name": "synecochoccus_meth",
@@ -2355,7 +2275,7 @@
         {
             "field_name": "tantalum",
             "form_placeholder": "",
-            "label": "tantalum"
+            "label": "tantalum (ppm)"
         },
         {
             "field_name": "tantalum_meth",
@@ -2365,7 +2285,7 @@
         {
             "field_name": "temp",
             "form_placeholder": "",
-            "label": "temp (its-90 deg c)"
+            "label": "temp (degC)"
         },
         {
             "field_name": "temp_meth",
@@ -2375,7 +2295,7 @@
         {
             "field_name": "terbium",
             "form_placeholder": "",
-            "label": "terbium"
+            "label": "terbium (ppm)"
         },
         {
             "field_name": "terbium_meth",
@@ -2395,7 +2315,7 @@
         {
             "field_name": "thorium",
             "form_placeholder": "",
-            "label": "thorium"
+            "label": "thorium (ppm)"
         },
         {
             "field_name": "thorium_meth",
@@ -2405,7 +2325,7 @@
         {
             "field_name": "thulium",
             "form_placeholder": "",
-            "label": "thulium"
+            "label": "thulium (ppm)"
         },
         {
             "field_name": "thulium_meth",
@@ -2425,7 +2345,7 @@
         {
             "field_name": "tin",
             "form_placeholder": "",
-            "label": "tin"
+            "label": "tin (ppm)"
         },
         {
             "field_name": "tin_meth",
@@ -2445,7 +2365,7 @@
         {
             "field_name": "tot_depth_water_col",
             "form_placeholder": "",
-            "label": "tot_depth_water_col"
+            "label": "tot_depth_water_col (m)"
         },
         {
             "field_name": "tot_depth_water_meth",
@@ -2460,7 +2380,7 @@
         {
             "field_name": "tot_nitro",
             "form_placeholder": "",
-            "label": "tot_nitro"
+            "label": "tot_nitro (%)"
         },
         {
             "field_name": "tot_org_c_meth",
@@ -2475,7 +2395,7 @@
         {
             "field_name": "tot_phosp",
             "form_placeholder": "",
-            "label": "tot_phosp"
+            "label": "tot_phosp (%)"
         },
         {
             "field_name": "tot_phosp_meth",
@@ -2505,12 +2425,12 @@
         {
             "field_name": "total_nitrogen",
             "form_placeholder": "",
-            "label": "total_nitrogen"
+            "label": "total_nitrogen (mg/kg)"
         },
         {
-            "field_name": "total_nitrogen_method",
+            "field_name": "total_nitrogen_meth",
             "form_placeholder": "",
-            "label": "total_nitrogen_method"
+            "label": "total_nitrogen_meth"
         },
         {
             "field_name": "total_phosphorous",
@@ -2540,7 +2460,7 @@
         {
             "field_name": "tss",
             "form_placeholder": "",
-            "label": "tss (mg/l)"
+            "label": "tss (mg/L)"
         },
         {
             "field_name": "tss_meth",
@@ -2550,7 +2470,7 @@
         {
             "field_name": "tungsten",
             "form_placeholder": "",
-            "label": "tungsten"
+            "label": "tungsten (ppm)"
         },
         {
             "field_name": "tungsten_meth",
@@ -2560,7 +2480,7 @@
         {
             "field_name": "turbidity",
             "form_placeholder": "",
-            "label": "turbidity (ntu)"
+            "label": "turbidity (NTU_or_FTU)"
         },
         {
             "field_name": "turbidity_meth",
@@ -2570,7 +2490,7 @@
         {
             "field_name": "uranium",
             "form_placeholder": "",
-            "label": "uranium"
+            "label": "uranium (ppm)"
         },
         {
             "field_name": "uranium_meth",
@@ -2595,7 +2515,7 @@
         {
             "field_name": "vanadium",
             "form_placeholder": "",
-            "label": "vanadium"
+            "label": "vanadium (ppm)"
         },
         {
             "field_name": "vanadium_meth",
@@ -2618,11 +2538,6 @@
             "label": "vegetation_dom_trees (%)"
         },
         {
-            "field_name": "vegetation_total_basal_area",
-            "form_placeholder": "",
-            "label": "vegetation_total_basal_area (m2_in_0p25ha)"
-        },
-        {
             "field_name": "vegetation_total_cover",
             "form_placeholder": "",
             "label": "vegetation_total_cover (%)"
@@ -2631,11 +2546,6 @@
             "field_name": "vegetation_type",
             "form_placeholder": "",
             "label": "vegetation_type"
-        },
-        {
-            "field_name": "vegetation_type_descriptive",
-            "form_placeholder": "",
-            "label": "vegetation_type_descriptive"
         },
         {
             "field_name": "viola",
@@ -2660,7 +2570,7 @@
         {
             "field_name": "water_content",
             "form_placeholder": "",
-            "label": "water_content"
+            "label": "water_content (%)"
         },
         {
             "field_name": "water_content_soil_meth",
@@ -2670,7 +2580,7 @@
         {
             "field_name": "water_holding_capacity",
             "form_placeholder": "",
-            "label": "water_holding_capacity"
+            "label": "water_holding_capacity (g/cm3)"
         },
         {
             "field_name": "water_holding_capacity_meth",
@@ -2680,7 +2590,7 @@
         {
             "field_name": "ytterbium",
             "form_placeholder": "",
-            "label": "ytterbium"
+            "label": "ytterbium (ppm)"
         },
         {
             "field_name": "ytterbium_meth",
@@ -2690,7 +2600,7 @@
         {
             "field_name": "yttrium",
             "form_placeholder": "",
-            "label": "yttrium"
+            "label": "yttrium (ppm)"
         },
         {
             "field_name": "yttrium_meth",
@@ -2710,12 +2620,22 @@
         {
             "field_name": "zirconium",
             "form_placeholder": "",
-            "label": "zirconium"
+            "label": "zirconium (ppm)"
         },
         {
             "field_name": "zirconium_meth",
             "form_placeholder": "",
             "label": "zirconium_meth"
+        },
+        {
+            "field_name": "zooplankton_biomass",
+            "form_placeholder": "",
+            "label": "zooplankton_biomass (mg/m3)"
+        },
+        {
+            "field_name": "zooplankton_biomass_meth",
+            "form_placeholder": "",
+            "label": "zooplankton_biomass_meth"
         }
     ],
     "dataset_type": "base-metagenomics",
@@ -2804,6 +2724,10 @@
             "label": "library"
         },
         {
+            "field_name": "ncbi_file_uploaded",
+            "label": "ncbi_file_uploaded"
+        },
+        {
             "field_name": "read",
             "label": "read"
         },
@@ -2814,102 +2738,6 @@
         {
             "field_name": "run",
             "label": "run"
-        },
-        {
-            "field_name": "agrochemical_additions",
-            "label": "agrochemical_additions"
-        },
-        {
-            "field_name": "bpa_id",
-            "label": "bpa_id"
-        },
-        {
-            "field_name": "conductivity",
-            "label": "conductivity"
-        },
-        {
-            "field_name": "crop_rotation_1yr_since_present",
-            "label": "crop_rotation_1yr_since_present"
-        },
-        {
-            "field_name": "crop_rotation_2yrs_since_present",
-            "label": "crop_rotation_2yrs_since_present"
-        },
-        {
-            "field_name": "crop_rotation_3yrs_since_present",
-            "label": "crop_rotation_3yrs_since_present"
-        },
-        {
-            "field_name": "crop_rotation_4yrs_since_present",
-            "label": "crop_rotation_4yrs_since_present"
-        },
-        {
-            "field_name": "crop_rotation_5yrs_since_present",
-            "label": "crop_rotation_5yrs_since_present"
-        },
-        {
-            "field_name": "date_since_change_in_land_use",
-            "label": "date_since_change_in_land_use"
-        },
-        {
-            "field_name": "extreme_events",
-            "label": "extreme_events"
-        },
-        {
-            "field_name": "fao_soil_classification",
-            "label": "fao_soil_classification"
-        },
-        {
-            "field_name": "fire_history",
-            "label": "fire_history"
-        },
-        {
-            "field_name": "fire_intensity_if_known",
-            "label": "fire_intensity_if_known"
-        },
-        {
-            "field_name": "flooding",
-            "label": "flooding"
-        },
-        {
-            "field_name": "geo_loc_name",
-            "label": "geo_loc_name"
-        },
-        {
-            "field_name": "horizon_classification",
-            "label": "horizon_classification"
-        },
-        {
-            "field_name": "immediate_previous_land_use",
-            "label": "immediate_previous_land_use"
-        },
-        {
-            "field_name": "profile_position",
-            "label": "profile_position"
-        },
-        {
-            "field_name": "soil_sample_storage_method",
-            "label": "soil_sample_storage_method"
-        },
-        {
-            "field_name": "tillage",
-            "label": "tillage"
-        },
-        {
-            "field_name": "vegetation_dom_grasses",
-            "label": "vegetation_dom_grasses"
-        },
-        {
-            "field_name": "vegetation_dom_shrubs",
-            "label": "vegetation_dom_shrubs"
-        },
-        {
-            "field_name": "vegetation_dom_trees",
-            "label": "vegetation_dom_trees"
-        },
-        {
-            "field_name": "vegetation_total_cover",
-            "label": "vegetation_total_cover"
         },
         {
             "field_name": "vendor",

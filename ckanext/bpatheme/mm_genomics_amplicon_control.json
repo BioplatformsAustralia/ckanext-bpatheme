@@ -118,11 +118,6 @@
             "label": "folder_name"
         },
         {
-            "field_name": "license_id",
-            "form_placeholder": "",
-            "label": "license_id"
-        },
-        {
             "field_name": "name",
             "form_placeholder": "",
             "label": "name"

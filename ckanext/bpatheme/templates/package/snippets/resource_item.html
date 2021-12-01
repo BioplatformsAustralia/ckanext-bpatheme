@@ -1,0 +1,18 @@
+{% ckan_extends %}
+{% set authorized = h.check_access('resource_show', {'id': res.id, 'resource': res }) %}
+
+{% block resource_item_title %}
+  {% if authorized %}
+    {{ super() }}
+  {% else %}
+      {% snippet 'ckanext_initiatives/snippets/resource_item/nonauth_title.html', res=res %}
+  {% endif %}
+{% endblock %}
+
+{% block resource_item_explore %}
+  {% if authorized %}
+    {% snippet 'package/snippets/resource_item/auth_explore.html', res=res, pkg=pkg %}
+  {% else %}
+    {% snippet 'ckanext_initiatives/snippets/resource_item/nonauth_explore.html', pkg=pkg %}
+  {% endif %}
+{% endblock %}

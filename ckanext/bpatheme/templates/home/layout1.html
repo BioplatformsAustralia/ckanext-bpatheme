@@ -1,24 +1,27 @@
 <style>
-  td .fa {
-    font-size: 1.5em;
-  }
+    td .fa {
+        font-size: 1.5em;
+    }
 
-  .right {
-    width: 150px !important;
-  }
+    .right {
+        width: 150px !important;
+    }
 </style>
 <div role="main" class="hero landing">
-  <div class="search-background">
-    {% block search %}
-      {% snippet 'home/snippets/search.html' %}
-    {% endblock %}
-  </div>
-  <div class="featured-orgs">
-    {% set projects = [] %}
-    {% set amdb = {
+    <div class="search-wrapper">
+        <div class="search-background lazyload">
+        </div>
+        {% block search %}
+            {% snippet 'home/snippets/search.html' %}
+        {% endblock %}
+    </div>
+    <div class="featured-orgs">
+        {% set projects = [] %}
+        {% set amdb = {
                 'logo' : "new_ausmicro_logo.webp",
                 'has_logo' : "true",
                 'icon' : "icon_amd.webp",
+                'iconalt' : "icon_amd.png",
                 'slug' : "australian-microbiome",
                 'url' : "https://bioplatforms.com/projects/australian-microbiome/",
                 'title' : "Australian Microbiome",
@@ -26,11 +29,12 @@
                     containing microbial genome and associated site specific metadata information from a range of
                     Australian environments including soils, marine and freshwater.",
             } %}
-    {% if projects.append(amdb) %} {% endif %}
+        {% if projects.append(amdb) %} {% endif %}
 
-    {% set sepsis = {
+        {% set sepsis = {
                 'logo' : "sepsis.webp",
                 'icon' : "icon_sepsis.webp",
+                'iconalt' : "icon_sepsis.png",
                 'slug' : "bpa-sepsis",
                 'url' : "https://bioplatforms.com/projects/sepsis/",
                 'title' : "Antibiotic Resistant Sepsis Pathogens",
@@ -40,15 +44,16 @@
                         antibiotic-resistant sepsis pathogens.
                 ",
             } %}
-    {% if projects.append(sepsis) %} {% endif %}
+        {% if projects.append(sepsis) %} {% endif %}
 
-    {% set omg = {
+        {% set omg = {
                 'logo' : "omg-logo.webp",
                 'has_logo' : "true",
                 'special_class' : "no-circular-logo",
                 'icon' : "icon_omg.webp",
+                'iconalt' : "icon_omg.png",
                 'slug' : "bpa-omg",
-                'url' : "http://www.bioplatforms.com/oz-mammals/",
+                'url' : "https://bioplatforms.com/oz-mammals/",
                 'title' : "Oz Mammals Genomics Initiative",
                 'description' : "
                         The Oz Mammals Genomics Initiative is an Australia-wide collaboration involving researchers
@@ -56,13 +61,14 @@
                         mammals.
                 ",
             } %}
-    {% if projects.append(omg) %} {% endif %}
+        {% if projects.append(omg) %} {% endif %}
 
-    {% set gap = {
+        {% set gap = {
                 'logo' : "Logo_plants_updown.webp",
                 'has_logo' : "true",
                 'special_class' : "no-circular-logo",
                 'icon' : "icon_gap.webp",
+                'iconalt' : "icon_gap.png",
                 'slug' : "bpa-plants",
                 'url' : "https://bioplatforms.com/projects/genomics-for-australian-plants/",
                 'title' : "Genomics for Australian Plants",
@@ -71,12 +77,13 @@
                         develop genomic resources for the Australian plants community.
                 ",
             } %}
-    {% if projects.append(gap) %} {% endif %}
+        {% if projects.append(gap) %} {% endif %}
 
-    {% set ausarg = {
+        {% set ausarg = {
                 'logo' : "AusARG-Logo-RGB-150dpi-Transparent.webp",
                 'has_logo' : "true",
                 'icon' : "icon_arg.webp",
+                'iconalt' : "icon_arg.png",
                 'slug' : "ausarg",
                 'url' : "https://bioplatforms.com/projects/reptiles-and-amphibians/",
                 'title' : "Australian Amphibian and Reptile Genomics Initiative",
@@ -87,26 +94,28 @@
                         Reptiles.
                 ",
             } %}
-    {% if projects.append(ausarg) %} {% endif %}
+        {% if projects.append(ausarg) %} {% endif %}
 
-    {% set tsi = {
+        {% set tsi = {
                 'logo' : "Threatened-Species-Initiative-Logo-150dpi-RGB.webp",
                 'has_logo' : "true",
                 'icon' : "icon_tsi.webp",
+                'iconalt' : "icon_tsi.png",
                 'slug' : "threatened-species",
                 'url' : "https://bioplatforms.com/projects/threatened-species/",
                 'title' : "Threatened Species Initiative",
                 'description' : "
-                        The Threatened Species Initiative (TSI) will create 
+                        The Threatened Species Initiative (TSI) will create
                         a national library of genomic data to support
                         decision-making for biodiversity conservation.
                 ",
             } %}
-    {% if projects.append(tsi) %} {% endif %}
+        {% if projects.append(tsi) %} {% endif %}
 
-    {% set gbr = {
+        {% set gbr = {
                 'logo' : "coral.webp",
                 'icon' : "icon_gbr.webp",
+                'iconalt' : "icon_gbr.png",
                 'slug' : "bpa-great-barrier-reef",
                 'url' : "https://bioplatforms.com/projects/great-barrier-reef/",
                 'title' : "Great Barrier Reef",
@@ -116,52 +125,56 @@
                         practices.
                 ",
             } %}
-    {% if projects.append(gbr) %} {% endif %}
+        {% if projects.append(gbr) %} {% endif %}
 
-    {% set melanoma = {
+        {% set melanoma = {
                 'logo' : "melanoma.webp",
                 'icon' : "icon_melanoma.webp",
+                'iconalt' : "icon_melanoma.png",
                 'slug' : "bpa-melanoma",
-                'url' : "http://www.bioplatforms.com/melanoma",
+                'url' : "https://bioplatforms.com/melanoma",
                 'title' : "Melanoma",
                 'description' : "
                         The Melanoma Genomics Project aims to whole genome sequence approximately 500 melanoma patients.
                 ",
             } %}
-    {% if projects.append(melanoma) %} {% endif %}
+        {% if projects.append(melanoma) %} {% endif %}
 
-    {% set wpt = {
+        {% set wpt = {
                 'logo' : "fusarium_head_blight_infected_ear.webp",
                 'icon' : "icon_wheat_pathogens_transcript.webp",
+                'iconalt' : "icon_wheat_pathogens_transcript.png",
                 'slug' : "bpa-wheat-pathogens-transcript",
-                'url' : "http://www.bioplatforms.com/wheat-datasets",
+                'url' : "https://bioplatforms.com/wheat-datasets",
                 'title' : "Wheat Pathogens Transcript",
                 'description' : "
                         This dataset contains transcript sequence data from 8 different fungal pathogen species of
                         wheat.
                 ",
             } %}
-    {% if projects.append(wpt) %} {% endif %}
+        {% if projects.append(wpt) %} {% endif %}
 
-    {% set wpg = {
+        {% set wpg = {
                 'logo' : "stagonospora_nodorum.webp",
                 'icon' :"icon_wheat_pathogens_genomes.webp",
+                'iconalt' :"icon_wheat_pathogens_genomes.png",
                 'slug' : "bpa-wheat-pathogens-genomes",
-                'url' : "http://www.bioplatforms.com/wheat-datasets",
+                'url' : "https://bioplatforms.com/wheat-datasets",
                 'title' : "Wheat Pathogens Genomes",
                 'description' : "
                         This dataset contains the genomic sequence from 10 fungal and 2 bacterial pathogen species.
-                        Among the pathogens sequenced are the causal agents of stripe rust, stem rust, tan spot, 
+                        Among the pathogens sequenced are the causal agents of stripe rust, stem rust, tan spot,
                         glume blotch, septoria leaf blotch, bare patch and crown rot/head blight.
                 ",
             } %}
-    {% if projects.append(wpg) %} {% endif %}
+        {% if projects.append(wpg) %} {% endif %}
 
-    {% set wc = {
+        {% set wc = {
                 'logo' : "wheat.webp",
                 'icon' : "icon_wheat.webp",
+                'iconalt' : "icon_wheat.png",
                 'slug' : "bpa-wheat-cultivars",
-                'url' : "http://www.bioplatforms.com/wheat-datasets",
+                'url' : "https://bioplatforms.com/wheat-datasets",
                 'title' : "Wheat Cultivars",
                 'description' : "
                         This dataset contains genomic sequence information from 16 wheat varieties of
@@ -170,90 +183,69 @@
                         populations and genetic diversity.
                 ",
             } %}
-    {% if projects.append(wc) %} {% endif %}
+        {% if projects.append(wc) %} {% endif %}
 
-    {% set stemcells = {
+        {% set stemcells = {
                 'logo' : "stemcell.webp",
                 'icon' : "icon_stemcells.webp",
+                'iconalt' : "icon_stemcells.png",
                 'slug' : "bpa-stemcells",
-                'url' : "http://www.bioplatforms.com/stem-cells",
+                'url' : "https://bioplatforms.com/stem-cells",
                 'title' : "Stem Cells",
                 'description' : "
                         Stem cells allow us to study fundamental processes in tissue growth,
                         development, aging and disease.
                 ",
             } %}
-    {% if projects.append(stemcells) %} {% endif %}
+        {% if projects.append(stemcells) %} {% endif %}
 
-    {% macro render_initiative(i) %}
-      {% set vars = { 'usedefault': True }  %}
-      {% set organization = h.get_organization(i.slug) %}
+        {% set grasslands = {
+                'logo' : "Australian-Grasslands.webp",
+                'icon' : "icon_grasslands.webp",
+                'iconalt' : "icon_grasslands.png",
+                'slug' : "australian-grasslands",
+                'url' : "https://bioplatforms.com/projects/australian-grasslands/",
+                'title' : "Australian Grasslands",
+                'description' : "
+			The Australian Grasslands Initiative is a national collaborative project,
+			which aims to identify mechanisms of adaptation in grasses to Australia's
+			diverse range of soils and climates.
+                ",
+            } %}
+        {% if projects.append(grasslands) %} {% endif %}
 
-      {% if 'extras' in organization %}
-        {% for item in organization['extras'] %}
-          {% if 'key' in item %}
-             {% if item['key'] == 'dataset_url' and item['value']|length %}
-               {% if vars.update({'usedefault': False}) %} {% endif %}
-               {% if vars.update({'org_link': item['value']}) %} {% endif %}
-             {% endif %}
-          {% endif %}
-        {% endfor %}
-      {% endif %}
-
-      {% if vars.usedefault %}
-        {% if vars.update({'org_link': h.url_for('dataset', organization=i.slug)}) %} {% endif %}
-      {% endif %}
-
-      {% set org_link = vars.org_link %}
-      <div>
-        <a href="{{ org_link }}">
-          <img class="icon_logo_default" src="{{ i.icon }}" alt="{{ i.title }}">
-        </a>
-      </div>
-      <div class="project-details">
-        <div class="project-name">
-          <a href="{{ org_link }}">
-            <h3>{{ i.title }}</h3>
-          </a>
-	</div>
-        <p class="project-description truncate-overflow">
-          {{ i.description }}
-        </p>
-        <label class="truncate-toggle" for="project-description" role="button" onclick="toggleExpandedButton(this)">read
-          more</label>
-        <ul class="nav nav-pills">
-          <li><a href="{{ org_link }}"><span
-              class="fa fa-database"></span> Datasets</a></li>
-          <li><a href="{{ i.url }}"> <span
-              class="fa fa-globe"></span> Project</a></li>
-        </ul>
-      </div>
-    {% endmacro %}
-
-    <div class="container">
-      <h3 class="heading">{{ _("Search within a project") }}</h3>
-      {# enable project sorting by rank order, then by order in config #}
-      {% set ranking = h.organization_slugs_by_creation_and_rank() %}
-      {% for p in projects %}
-          {% set _ = p.update({'order':0}) %}
-	  {% if p.slug in ranking %}
-	      {% set order = ranking|length() - ranking.index(p.slug) %}
-              {% set _ = p.update({'order': order}) %}
-          {% endif %}
-      {% endfor %}
-      <div class="row row-eq-height">
-        {% for p in projects|sort(attribute='order', reverse=true) %}
-          <div class="col-sm-3">
-            {{ render_initiative(p) }}
-          </div>
-          {% if loop.index is divisibleby 4 %}
-            {# restart row #}
-            </div>
+        <div class="container">
+            <h3 class="heading">{{ _("Search within a project") }}</h3>
+            {# enable project sorting by rank order, then by order in config #}
+            {% set ranking = h.organization_slugs_by_creation_and_rank() %}
+            {% for p in projects %}
+                {% set _ = p.update({'order':0}) %}
+                {% if p.slug in ranking %}
+                    {% set order = ranking|length() - ranking.index(p.slug) %}
+                    {% set _ = p.update({'order': order}) %}
+                {% endif %}
+            {% endfor %}
             <div class="row row-eq-height">
-          {% endif %}
-        {% endfor %}
-      </div>
+                {% for p in projects|sort(attribute='order', reverse=true) %}
+                    <div class="col-sm-3" data-module="bpatheme_project_icon_block"
+                         data-module-project="{{ h.dump_json(p) }}">
+                        <div class="placeholder loading">
+                        </div>
+                        <div class="project-name">
+                            <h3>{{ p.title }}</h3>
+                        </div>
+                        <p class="project-description truncate-overflow">
+                            {{ p.description }}
+                        </p>
+                    </div>
+                    {% if loop.index is divisibleby 4 %}
+                        {# restart row #}
+                        </div>
+                        <div class="row row-eq-height">
+                    {% endif %}
+                {% endfor %}
+                </div>
+        </div>
     </div>
-  </div>
 </div>
 

@@ -283,7 +283,6 @@ ul.nav {
 .masthead .logo img {
     max-height: 100%;
     height: 83.2px;
-    width: 350px;
 }
 
 img {
@@ -484,6 +483,10 @@ body {
     text-align: center;
 }
 
+.site-footer-logo .ncris-footer {
+    padding-left: 30px;
+}
+
 .site-footer-logo img.bpa-img {
     width: 150px;
     height: 137.14px;
@@ -501,13 +504,44 @@ body {
     padding-right: 0px;
 }
 
-/* Background for search area */
 .search-background {
-    background-image: url("/header-background_2.webp");
     background-size: cover;
     background-repeat: no-repeat;
     width: 100%;
     padding: 5px;
+    height: 320px;
+}
+
+.search-wrapper {
+    position: relative;
+}
+
+.webp .lazyload.search-background, .webp .lazyloading.search-background {
+    background-image: url("/header-background_2_small.webp");
+}
+
+.no-webp .lazyload.search-background, .no-webp .lazyloading.search-background {
+    background-image: url("/header-background_2_small.png");
+}
+
+.webp .lazyloaded.search-background {
+    background-image: url("/header-background_2.webp");
+}
+
+.no-webp .lazyloaded.search-background {
+    background-image: url("/header-background_2.png");
+}
+
+.lazyload.search-background,
+.lazyloading.search-background {
+    -webkit-filter: blur(10px);
+    filter: blur(10px);
+}
+
+.lazyloaded.search-background {
+    transition: filter 1000ms, -webkit-filter 1000ms;
+    -webkit-filter: blur(0);
+    filter: blur(0);
 }
 
 .search-instructions {
@@ -518,8 +552,12 @@ body {
 /** show background image 'transparently', but ensure inputs are white (no transparency) **/
 .homepage .module-search {
     padding: 0;
-    margin: 5%;
+    margin: 3% 5% 3% 5%;
     background-color: transparent;
+    position: absolute;
+    top: 0;
+    /*firefox needs min width spelt out*/
+    width: 90%;
 }
 
 .homepage .module-search .module-content {
@@ -599,6 +637,15 @@ body {
 }
 
 @media screen and (max-width: 600px) {
+
+    .account-masthead {
+        height: auto;
+    }
+
+    .account-masthead .unstyled {
+        padding: 0
+    }
+
     .dwga-header-row {
         align-items: flex-start;
     }
@@ -636,9 +683,13 @@ body {
         display: block;
     }
 
+    .dwga-header-row .logo {
+        width: 225px;
+    }
+
     .masthead .logo img {
         max-height: 100%;
-        width: 100px;
+        /*width: 100px;*/
         height: 91.22px
     }
 
@@ -930,6 +981,22 @@ body {
     font-style: italic;
 }
 
+.s3filestore_url_window {
+    cursor: pointer;
+}
+
+.download-window-links {
+    padding-right: 1px;
+    font-size: 16px;
+}
+
+.resource-actions {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+
 /* styling for map */
 
 .dataset-map-expanded #dataset-map {
@@ -938,4 +1005,38 @@ body {
     left: 50%;
     transform: translate(-50%, -50%);
     width: 60%;
+}
+
+.loading:before {
+    padding-left: 10px;
+    font-style: italic;
+    content: "Loading";
+    overflow: hidden;
+    display: inline-block;
+    vertical-align: bottom;
+}
+
+.loading:after {
+    content: "...";
+    overflow: hidden;
+    display: inline-block;
+    vertical-align: bottom;
+    animation: ellipsis-dot 1s infinite .3s;
+    animation-fill-mode: forwards;
+    width: 1.25em;
+}
+
+@keyframes ellipsis-dot {
+    25% {
+        content: "";
+    }
+    50% {
+        content: ".";
+    }
+    75% {
+        content: "..";
+    }
+    100% {
+        content: "...";
+    }
 }

@@ -2,6 +2,28 @@
 
 {% block subtitle %}{{ _('Register') }}{% endblock %}
 
+
+{% block secondary_content %}
+  <section class="module module-narrow">
+    <h2 class="module-heading"><i class="fa fa-users"></i> {{ _('Register') }}</h2>
+    <div class="module-content">
+      <p>
+        Please register for the Bioplatforms Australia Data Portal by completing
+	the form to the right.
+      </p>
+      <p>
+	Please provide your name, email, a username to use, a password, and the
+	reason for your request.
+      </p>
+      <p>
+	Select the relevant projects of interest to request membership of and
+	these will be submitted for approval.
+      </p>
+    </div>
+  </section>
+{% endblock %}
+
+
 {% block breadcrumb_content %}
   <li class="active">{{ h.nav_link(_('Registration'), named_route='user.register') }}</li>
 {% endblock %}
