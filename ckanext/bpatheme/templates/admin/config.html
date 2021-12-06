@@ -10,7 +10,11 @@
 
   {{ form.input('ckanext.bpatheme.comms_message', id='field-ckanext.bpatheme.comms_message', label=_('Comms message'), value=data['ckanext.bpatheme.comms_message'], error=errors['ckanext.bpatheme.comms_message']) }}
 
+  {{ form.input('ckanext.bpatheme.comms_link_href', id='field-ckanext.bpatheme.comms_link_href', label=_('Comms link URL'), value=data['ckanext.bpatheme.comms_link_href'], error=errors['ckanext.bpatheme.comms_link_href']) }}
 
+  {{ form.input('ckanext.bpatheme.comms_link_text', id='field-ckanext.bpatheme.comms_link_text', label=_('Comms link text'), value=data['ckanext.bpatheme.comms_link_text'], error=errors['ckanext.bpatheme.comms_link_text']) }}
+
+  {{ form.input('ckanext.bpatheme.comms_owner', id='field-ckanext.bpatheme.comms_owner', label=_('Comms owner'), value=data['ckanext.bpatheme.comms_owner'], error=errors['ckanext.bpatheme.comms_owner']) }}
 {% endblock %}
 
 
@@ -19,4 +23,7 @@
   {{ super() }}
 
   <p><strong>Comms message:</strong> Message used for showing a maintenance banner (To remove an existing banner, remove the value for 'Comms message'  - and then click 'Update Config')</p>
+  
+  <p><strong>Comms link URL:</strong> URL for comms link showing in the maintenance banner (If not needed, remove the value for 'Comms links URL'  - and then click 'Update Config')</p>
+
 {% endblock %}
