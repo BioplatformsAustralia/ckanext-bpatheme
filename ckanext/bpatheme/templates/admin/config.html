@@ -8,6 +8,8 @@
 
   <h3>Custom configuration options </h3>
 
+  {{ form.input('ckanext.bpatheme.comms_title', id='field-ckanext.bpatheme.comms_title', label=_('Comms title'), value=data['ckanext.bpatheme.comms_title'], error=errors['ckanext.bpatheme.comms_title']) }}
+
   {{ form.input('ckanext.bpatheme.comms_message', id='field-ckanext.bpatheme.comms_message', label=_('Comms message'), value=data['ckanext.bpatheme.comms_message'], error=errors['ckanext.bpatheme.comms_message']) }}
 
   {{ form.input('ckanext.bpatheme.comms_link_href', id='field-ckanext.bpatheme.comms_link_href', label=_('Comms link URL'), value=data['ckanext.bpatheme.comms_link_href'], error=errors['ckanext.bpatheme.comms_link_href']) }}
