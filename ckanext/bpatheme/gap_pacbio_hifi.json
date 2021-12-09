@@ -413,11 +413,6 @@
             "label": "project_aim"
         },
         {
-            "field_name": "related_data",
-            "form_placeholder": "",
-            "label": "related_data"
-        },
-        {
             "field_name": "sample_id",
             "form_placeholder": "",
             "label": "sample_id"
