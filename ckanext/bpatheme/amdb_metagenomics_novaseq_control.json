@@ -246,6 +246,10 @@
         {
             "field_name": "runsamplenum",
             "label": "runsamplenum"
+        },
+        {
+            "field_name": "vendor",
+            "label": "vendor"
         }
     ],
     "scheming_version": 1
