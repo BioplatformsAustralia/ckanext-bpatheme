@@ -214,6 +214,23 @@
             } %}
         {% if projects.append(grasslands) %} {% endif %}
 
+        {% set pp = {
+                'logo' : "plant_pathogen.webp",
+                'icon' : "icon_plant_pathogen.webp",
+                'iconalt' : "icon_plant_pathogen.png",
+                'slug' : "plant-pathogen",
+                'url' : "https://bioplatforms.com/projects/plant-pathogen-omics/",
+                'title' : "Plant Pathogen 'Omics",
+                'description' : "
+                        The Plant Pathogen ‘Omics Initiative is a national collaborative project, 
+                        which aims to generate high quality molecular reference data for plant 
+                        pathogens in Australia to support fundamental research and development in 
+                        plant protection and contribute to an effective national biosecurity 
+                        surveillance system.
+                ",
+            } %}
+        {% if projects.append(pp) %} {% endif %}
+
         <div class="container">
             <h3 class="heading">{{ _("Search within a project") }}</h3>
             {# enable project sorting by rank order, then by order in config #}
