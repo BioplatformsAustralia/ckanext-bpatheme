@@ -346,12 +346,21 @@ class CustomTheme(plugins.SingletonPlugin):
             controller="ckanext.bpatheme.controller:SummaryController",
             action="index",
         )
+
         map.connect(
             "bpatheme_contact",
             "/contact",
             controller="ckanext.bpatheme.controller:ContactController",
             action="index",
         )
+
+        map.connect(
+            "bpatheme_webtoken",
+            "/user/private/api/bpa/check_permissions",
+            controller="ckanext.bpatheme.controller:TokenController",
+            action="bioplatforms_webtoken",
+        )
+
         return map
 
     # IPackageController
