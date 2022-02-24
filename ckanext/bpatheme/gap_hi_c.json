@@ -143,6 +143,16 @@
             "label": "date_of_transfer_to_archive"
         },
         {
+            "field_name": "decimal_latitude_public",
+            "form_placeholder": "",
+            "label": "decimal_latitude_public"
+        },
+        {
+            "field_name": "decimal_longitude_public",
+            "form_placeholder": "",
+            "label": "decimal_longitude_public"
+        },
+        {
             "field_name": "description",
             "form_placeholder": "",
             "label": "description"
@@ -228,6 +238,11 @@
             "label": "id_vetting_date"
         },
         {
+            "field_name": "latitude",
+            "form_placeholder": "",
+            "label": "latitude"
+        },
+        {
             "field_name": "library_construction_protocol",
             "form_placeholder": "",
             "label": "library_construction_protocol"
@@ -271,6 +286,11 @@
             "field_name": "location_notes",
             "form_placeholder": "",
             "label": "location_notes"
+        },
+        {
+            "field_name": "longitude",
+            "form_placeholder": "",
+            "label": "longitude"
         },
         {
             "field_name": "nagoya_protocol_compliance",
