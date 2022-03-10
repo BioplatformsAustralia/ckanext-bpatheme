@@ -508,6 +508,11 @@
             "label": "collection_date"
         },
         {
+            "field_name": "collection_permit",
+            "form_placeholder": "",
+            "label": "collection_permit"
+        },
+        {
             "field_name": "color",
             "form_placeholder": "",
             "label": "color"
@@ -1176,6 +1181,16 @@
             "field_name": "host_type",
             "form_placeholder": "",
             "label": "host_type"
+        },
+        {
+            "field_name": "hyperspectral_analysis",
+            "form_placeholder": "",
+            "label": "hyperspectral_analysis"
+        },
+        {
+            "field_name": "hyperspectral_analysis_meth",
+            "form_placeholder": "",
+            "label": "hyperspectral_analysis_meth"
         },
         {
             "field_name": "icp_te_boron",
