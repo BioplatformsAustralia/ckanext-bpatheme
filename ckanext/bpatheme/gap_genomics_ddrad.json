@@ -363,6 +363,11 @@
             "label": "sample_submitter_name"
         },
         {
+            "field_name": "scientific_name",
+            "form_placeholder": "",
+            "label": "scientific_name"
+        },
+        {
             "field_name": "sequence_length",
             "form_placeholder": "",
             "label": "sequence_length"
