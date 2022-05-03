@@ -970,6 +970,7 @@ body {
     border-radius: 10px;
     padding: 5px;
     white-space: nowrap;
+    width: min-content;
 }
 
 #user-comms .comms-link a {
