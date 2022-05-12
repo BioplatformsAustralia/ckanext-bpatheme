@@ -4,6 +4,7 @@ from collections import OrderedDict
 import json
 import operator
 import re
+import bitmath
 
 from ckan.common import c, _, config
 import ckan.lib.helpers as h
@@ -326,6 +327,11 @@ def render_related_data(pkg):
     return response
 
 
+def human_readable_size(size_in_bytes):
+
+    return bitmath.Byte(bytes=size_in_bytes).best_prefix().format("{value:.2f} {unit}")
+
+
 class CustomTheme(plugins.SingletonPlugin):
     plugins.implements(plugins.IConfigurer)
     plugins.implements(plugins.ITemplateHelpers)
@@ -451,6 +457,7 @@ class CustomTheme(plugins.SingletonPlugin):
             "get_embargo_date": get_embargo_date,
             "has_related_data": has_related_data,
             "render_related_data": render_related_data,
+            "human_readable_size": human_readable_size,
         }
 
     # Ifacets
