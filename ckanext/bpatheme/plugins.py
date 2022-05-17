@@ -326,6 +326,13 @@ def render_related_data(pkg):
 
     return response
 
+def get_pkg_size(pkg):
+    total_size_in_bytes = 0
+    resources = pkg.get("resources", None)
+    for resource in resources:
+        res_size = resource.get("size", 0)
+        total_size_in_bytes = total_size_in_bytes + res_size
+    return human_readable_size(total_size_in_bytes)
 
 def human_readable_size(size_in_bytes):
 
@@ -458,6 +465,7 @@ class CustomTheme(plugins.SingletonPlugin):
             "has_related_data": has_related_data,
             "render_related_data": render_related_data,
             "human_readable_size": human_readable_size,
+            "get_pkg_size": get_pkg_size,
         }
 
     # Ifacets
