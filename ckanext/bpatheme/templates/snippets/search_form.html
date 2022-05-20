@@ -13,6 +13,9 @@
   <div class="result-count">
     {% if not error %}
     <h2 class="result-found">{% snippet 'snippets/search_result_text.html', query=query, count=count, type=type %}</h2>
+       {% if count > 0 %}
+           <h4 class="size-found">Search Result size is: {{h.get_search_size(c.page.items)}} </h4>
+        {% endif %}
     {% else %}
     <h2 class="result-found">Error</h2>
     {% endif %}

@@ -326,13 +326,24 @@ def render_related_data(pkg):
 
     return response
 
+def get_search_size(items):
+    search_size = 0
+    for pkg in items:
+        search_size = search_size + _get_pkg_size_in_bytes(pkg)
+    return human_readable_size(search_size)
+
 def get_pkg_size(pkg):
+    total_size_in_bytes = _get_pkg_size_in_bytes(pkg)
+    return human_readable_size(total_size_in_bytes)
+
+def _get_pkg_size_in_bytes(pkg):
     total_size_in_bytes = 0
     resources = pkg.get("resources", None)
     for resource in resources:
-        res_size = resource.get("size", 0)
-        total_size_in_bytes = total_size_in_bytes + res_size
-    return human_readable_size(total_size_in_bytes)
+        if "size" in resource:
+            res_size = resource.get("size", 0)
+            total_size_in_bytes = total_size_in_bytes + res_size
+    return total_size_in_bytes
 
 def human_readable_size(size_in_bytes):
 
@@ -466,6 +477,7 @@ class CustomTheme(plugins.SingletonPlugin):
             "render_related_data": render_related_data,
             "human_readable_size": human_readable_size,
             "get_pkg_size": get_pkg_size,
+            "get_search_size": get_search_size,
         }
 
     # Ifacets
