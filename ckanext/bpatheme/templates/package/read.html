@@ -40,12 +40,12 @@
   {% block package_notes %}
     {{ super() }}
   {% endblock %}
-
+  {% set result_size_bytes = h.get_pkg_size_in_bytes(pkg) %}
     <div class="size-info">
-        <h4 class="size-found">Dataset size is: {{h.get_pkg_size(pkg)}} </h4>
+        <h4 class="size-found">Dataset size is: {{h.human_readable_size(result_size_bytes)}} </h4>
     </div>
      <div class="bulk-btn">
-        {% snippet 'ckanext_bulk/snippets/package_button.html', id=c.id %}
+        {% snippet 'ckanext_bulk/snippets/package_button.html', id=c.id , result_size=h.human_readable_size(result_size_bytes), result_size_bytes=result_size_bytes, size_warning_limit=h.get_bulk_size_warning_limit() %}
     </div>
 
 {% endblock %}

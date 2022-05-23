@@ -326,17 +326,13 @@ def render_related_data(pkg):
 
     return response
 
-def get_search_size(items):
+def get_search_size_in_bytes(items):
     search_size = 0
     for pkg in items:
-        search_size = search_size + _get_pkg_size_in_bytes(pkg)
-    return human_readable_size(search_size)
+        search_size = search_size + get_pkg_size_in_bytes(pkg)
+    return search_size
 
-def get_pkg_size(pkg):
-    total_size_in_bytes = _get_pkg_size_in_bytes(pkg)
-    return human_readable_size(total_size_in_bytes)
-
-def _get_pkg_size_in_bytes(pkg):
+def get_pkg_size_in_bytes(pkg):
     total_size_in_bytes = 0
     resources = pkg.get("resources", None)
     for resource in resources:
@@ -349,6 +345,8 @@ def human_readable_size(size_in_bytes):
 
     return bitmath.Byte(bytes=size_in_bytes).best_prefix().format("{value:.2f} {unit}")
 
+def get_bulk_size_warning_limit():
+    return toolkit.asint(config.get("ckanext.bulk.download_size_warning_bytes", 104857600))
 
 class CustomTheme(plugins.SingletonPlugin):
     plugins.implements(plugins.IConfigurer)
@@ -476,8 +474,9 @@ class CustomTheme(plugins.SingletonPlugin):
             "has_related_data": has_related_data,
             "render_related_data": render_related_data,
             "human_readable_size": human_readable_size,
-            "get_pkg_size": get_pkg_size,
-            "get_search_size": get_search_size,
+            "get_pkg_size_in_bytes": get_pkg_size_in_bytes,
+            "get_search_size_in_bytes": get_search_size_in_bytes,
+            "get_bulk_size_warning_limit": get_bulk_size_warning_limit,
         }
 
     # Ifacets

@@ -9,13 +9,18 @@
 {% endblock %}
 
 {% block search_sortby %}
+  {% set result_size_bytes = 0 %}
+  {% if count > 0 %}
+      {% set result_size_bytes = h.get_search_size_in_bytes(c.page.items) %}
+  {% endif %}
+
 <div class="results">
   <div class="result-count">
     {% if not error %}
     <h2 class="result-found">{% snippet 'snippets/search_result_text.html', query=query, count=count, type=type %}</h2>
        {% if count > 0 %}
-           <h4 class="size-found">Search Result size is: {{h.get_search_size(c.page.items)}} </h4>
-        {% endif %}
+            <h4 class="size-found">Search Result size is: {{h.human_readable_size(result_size_bytes)}} </h4>
+       {% endif %}
     {% else %}
     <h2 class="result-found">Error</h2>
     {% endif %}
@@ -38,11 +43,11 @@
     {% endif %}
   </div>
 
-  <div class="bulk-btn">
+  <div class="bulk-btn" >
     {% if bulk_download_type == 'organization' %}
-      {% snippet 'ckanext_bulk/snippets/organization_button.html', id=c.group_dict.id %}
+      {% snippet 'ckanext_bulk/snippets/organization_button.html', id=c.group_dict.id, result_size=h.human_readable_size(result_size_bytes), result_size_bytes=result_size_bytes, size_warning_limit=h.get_bulk_size_warning_limit() %}
     {% else %}
-      {% snippet 'ckanext_bulk/snippets/search_button.html', id=c.group_dict.id %}
+      {% snippet 'ckanext_bulk/snippets/search_button.html', id=c.group_dict.id, result_size=h.human_readable_size(result_size_bytes), result_size_bytes=result_size_bytes, size_warning_limit=h.get_bulk_size_warning_limit() %}
     {% endif %}
   </div>
 </div>
