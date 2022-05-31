@@ -340,7 +340,10 @@ def get_pkg_size_in_bytes(pkg):
     if resources is not None:
         for resource in resources:
             if resource.get("size", None):
-                res_size = int(resource.get("size", 0))
+                try:
+                    res_size = int(resource.get("size", 0))
+                except ValueError:
+                    res_size = 0   # we got a string that wasn't a number
                 total_size_in_bytes = total_size_in_bytes + res_size
     return total_size_in_bytes
 
