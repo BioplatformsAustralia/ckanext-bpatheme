@@ -326,27 +326,33 @@ def render_related_data(pkg):
 
     return response
 
+
 def get_search_size_in_bytes(items):
     search_size = 0
     for pkg in items:
         search_size = search_size + get_pkg_size_in_bytes(pkg)
     return search_size
 
+
 def get_pkg_size_in_bytes(pkg):
     total_size_in_bytes = 0
     resources = pkg.get("resources", None)
-    for resource in resources:
-        if "size" in resource:
-            res_size = resource.get("size", 0)
-            total_size_in_bytes = total_size_in_bytes + res_size
+    if not(resources is None):
+        for resource in resources:
+            if not(resource is None) & "size" in resource:
+                res_size = resource.get("size", 0)
+                total_size_in_bytes = total_size_in_bytes + res_size
     return total_size_in_bytes
+
 
 def human_readable_size(size_in_bytes):
 
     return bitmath.Byte(bytes=size_in_bytes).best_prefix().format("{value:.2f} {unit}")
 
+
 def get_bulk_size_warning_limit():
     return toolkit.asint(config.get("ckanext.bulk.download_size_warning_bytes", 104857600))
+
 
 class CustomTheme(plugins.SingletonPlugin):
     plugins.implements(plugins.IConfigurer)
