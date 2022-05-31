@@ -337,10 +337,10 @@ def get_search_size_in_bytes(items):
 def get_pkg_size_in_bytes(pkg):
     total_size_in_bytes = 0
     resources = pkg.get("resources", None)
-    if not(resources is None):
+    if resources is not None:
         for resource in resources:
-            if not(resource is None) & "size" in resource:
-                res_size = resource.get("size", 0)
+            if resource.get("size", None):
+                res_size = int(resource.get("size", 0))
                 total_size_in_bytes = total_size_in_bytes + res_size
     return total_size_in_bytes
 
