@@ -42,7 +42,7 @@
       </div>
     {% endif %}
   </div>
-
+	{% if request.params.q is defined %}
   <div class="bulk-btn" >
     {% if bulk_download_type == 'organization' %}
       {% snippet 'ckanext_bulk/snippets/organization_button.html', id=c.group_dict.id, result_size=h.human_readable_size(result_size_bytes), result_size_bytes=result_size_bytes, size_warning_limit=h.get_bulk_size_warning_limit() %}
@@ -50,6 +50,7 @@
       {% snippet 'ckanext_bulk/snippets/search_button.html', id=c.group_dict.id, result_size=h.human_readable_size(result_size_bytes), result_size_bytes=result_size_bytes, size_warning_limit=h.get_bulk_size_warning_limit() %}
     {% endif %}
   </div>
+   {% endif %}
 </div>
 {% endblock %}
 
