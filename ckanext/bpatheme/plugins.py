@@ -348,6 +348,15 @@ def get_pkg_size_in_bytes(pkg):
     return total_size_in_bytes
 
 
+def get_package_size_for_user(pkg):
+    pkg_size_in_bytes = get_pkg_size_in_bytes(pkg)
+    if pkg_size_in_bytes > 0:
+        package_size = human_readable_size(pkg_size_in_bytes)
+        return package_size
+
+    return ""
+
+
 def human_readable_size(size_in_bytes):
 
     return bitmath.Byte(bytes=size_in_bytes).best_prefix().format("{value:.2f} {unit}")
@@ -486,6 +495,7 @@ class CustomTheme(plugins.SingletonPlugin):
             "get_pkg_size_in_bytes": get_pkg_size_in_bytes,
             "get_search_size_in_bytes": get_search_size_in_bytes,
             "get_bulk_size_warning_limit": get_bulk_size_warning_limit,
+            "get_package_size_for_user": get_package_size_for_user,
         }
 
     # Ifacets
