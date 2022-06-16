@@ -46,5 +46,6 @@
 
 {% block links %}
   {{ super() }}
+  <link rel="canonical" href="{{ h.url_for(controller='organization', action='read', id=c.group_dict.name, qualified=True, locale='default') }}"/>
   {% include "organization/snippets/feeds.html" %}
 {% endblock %}

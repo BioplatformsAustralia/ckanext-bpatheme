@@ -1,0 +1,6 @@
+{% ckan_extends %}
+
+{% block links %}
+  {{ super() }}
+  <link rel="canonical" href="{{ h.url_for(controller='group', action='read', id=c.group_dict.name, qualified=True, locale='default') }}"/>
+{% endblock %}

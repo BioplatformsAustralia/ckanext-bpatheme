@@ -27,6 +27,11 @@
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
 {% endblock -%}
 
+{% block links %}
+  {{ super() }}
+  <link rel="canonical" href="{{ h.url_for(controller='package', action='read', id=pkg.name, qualified=True, locale='default') }}"/>
+{% endblock %}
+
 {% block content_action %}
   {% if h.check_access('package_update', {'id':pkg.id }) %}
     {% link_for _('Manage'), controller='package', action='edit', id=pkg.name, class_='btn', icon='wrench' %}
