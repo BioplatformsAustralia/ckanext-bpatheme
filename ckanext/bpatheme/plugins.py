@@ -14,8 +14,11 @@ from markupsafe import Markup
 
 import ckanext.scheming.helpers as sh
 
-from ckanext.bpatheme import action
-from ckanext.bpatheme import helper
+from ckanext.bpatheme import (
+    action,
+    helper,
+    blueprint,
+    )
 
 import logging
 
@@ -27,37 +30,12 @@ class CustomTheme(plugins.SingletonPlugin):
     plugins.implements(plugins.ITemplateHelpers)
     plugins.implements(plugins.IPackageController, inherit=True)
     plugins.implements(plugins.IFacets, inherit=True)
-    plugins.implements(plugins.IRoutes, inherit=True)
     plugins.implements(plugins.IActions)
+    plugins.implements(plugins.IBlueprint)
 
     # IActions
     def get_actions(self):
         return {"user_create": action.custom_user_create}
-
-    # IRoutes
-    def after_map(self, map):
-        map.connect(
-            "bpatheme_summary",
-            "/summary",
-            controller="ckanext.bpatheme.controller:SummaryController",
-            action="index",
-        )
-
-        map.connect(
-            "bpatheme_contact",
-            "/contact",
-            controller="ckanext.bpatheme.controller:ContactController",
-            action="index",
-        )
-
-        map.connect(
-            "bpatheme_webtoken",
-            "/user/private/api/bpa/check_permissions",
-            controller="ckanext.bpatheme.controller:TokenController",
-            action="bioplatforms_webtoken",
-        )
-
-        return map
 
     # IPackageController
     def before_search(self, search_params):
@@ -184,3 +162,7 @@ class CustomTheme(plugins.SingletonPlugin):
             del facets_dict["organization"]
 
         return facets_dict
+
+    # IBlueprint
+    def get_blueprint(self):
+        return blueprint.bpatheme

@@ -3,7 +3,7 @@
 {% block subtitle %}{{ _('Contact') }}{% endblock %}
 
 {% block breadcrumb_content %}
-  <li class="active">{% link_for _('Contact'), controller='ckanext.bpatheme.controller:ContactController', action='index' %}</li>
+  <li class="active">{% link_for _('Contact'), 'bpatheme.contact_index' %}</li>
 {% endblock %}
 
 {% block primary %}

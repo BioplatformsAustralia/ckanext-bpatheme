@@ -122,10 +122,10 @@
                                     <a href="{{ h.url_for(controller='package', action='search') }}">Datasets</a>
                                 </li>
                                 <li class="menu-item">
-                                    <a href="{{ h.url_for(controller='ckanext.bpatheme.controller:SummaryController', action='index') }}">Summary</a>
+                                    <a href="{{ h.url_for('bpatheme.summary_index') }}">Summary</a>
                                 </li>
                                 <li class="menu-item">
-                                    <a href="{{ h.url_for(controller='ckanext.bpatheme.controller:ContactController', action='index') }}">Contact</a>
+                                    <a href="{{ h.url_for('bpatheme.contact_index') }}">Contact</a>
                                 </li>
                                 <li class="menu-item menu-item-last">
                                     <a rel="noopener noreferrer"
