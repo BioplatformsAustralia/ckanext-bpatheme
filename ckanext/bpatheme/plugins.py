@@ -96,7 +96,7 @@ class CustomTheme(plugins.SingletonPlugin):
         unicode_safe = toolkit.get_validator("unicode_safe")
         schema.update(
             {
-                "ckanext.datawa.slip_harvester_token": [ignore_missing, unicode],
+                "ckanext.datawa.slip_harvester_token": [ignore_missing, str],
                 "ckanext.bpatheme.comms_message": [ignore_missing, unicode_safe],
                 "ckanext.bpatheme.comms_title": [ignore_missing, unicode_safe],
                 "ckanext.bpatheme.comms_link_href": [ignore_missing, unicode_safe],
@@ -142,7 +142,7 @@ class CustomTheme(plugins.SingletonPlugin):
         facet_order = ["organization", "sequence_data_type", "res_format", "tags"]
 
         ## Updating facet positions
-        fct_keys = [key for key in facets_dict.keys()]
+        fct_keys = [key for key in list(facets_dict.keys())]
         # remove any items from facet_order not in fct_keys
         facet_order = [item for item in facet_order if item in fct_keys]
         # generate new order of facet_keys following facet_order
@@ -157,7 +157,7 @@ class CustomTheme(plugins.SingletonPlugin):
     def organization_facets(self, facets_dict, organization_type, package_type):
         facets_dict = self.dataset_facets(facets_dict, package_type)
 
-        fct_keys = [key for key in facets_dict.keys()]
+        fct_keys = [key for key in list(facets_dict.keys())]
         if "organization" in fct_keys:
             del facets_dict["organization"]
 

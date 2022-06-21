@@ -5,7 +5,7 @@ import ckan.plugins.toolkit as toolkit
 from ckan.logic.action.create import user_create
 from ckan.lib.helpers import flash_success, flash_notice
 
-from mail import mail_welcome_email
+from .mail import mail_welcome_email
 
 import os
 import logging

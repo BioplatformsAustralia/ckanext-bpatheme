@@ -2,9 +2,11 @@
 import json
 import os
 import re
-import urllib
 from logging import getLogger
-from urlparse import urlsplit
+
+# Python 2 to 3
+from six.moves import urllib
+from six.moves.urllib.parse import urlsplit
 
 import ckan.lib.helpers as h
 import pandas as pd
@@ -27,7 +29,7 @@ def replace_df_header_with_row(df, row):
 
 
 def search_and_replace_once(text):
-    for search_keyword, replace_fn in {"yes": replace_yes, "bioplatforms_http": replace_bioplatforms_http, "other_http": replace_url}.items():
+    for search_keyword, replace_fn in list({"yes": replace_yes, "bioplatforms_http": replace_bioplatforms_http, "other_http": replace_url}.items()):
         if re.search(search_patterns[search_keyword], text):
             return replace_fn(text)
     return None
@@ -61,7 +63,7 @@ def replace_url(text):
 def create_query_parameter(query_format, url):
     # get url final path component only and ensure trailing backslash is handled
     last_path = [not_empty for not_empty in urlsplit(url).path.split('/') if not_empty][-1]
-    return urllib.quote("{0}:{1}".format(query_format, last_path))
+    return urllib.parse.quote("{0}:{1}".format(query_format, last_path))
 
 
 def generate_summary():
