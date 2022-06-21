@@ -12,8 +12,10 @@ import logging
 
 log = logging.getLogger(__name__)
 
+
 class EmailUser:
     pass
+
 
 def custom_user_create(context, data_dict=None):
     from ckan.logic.auth import create
@@ -61,17 +63,23 @@ def custom_user_create(context, data_dict=None):
 
     # if no requests, flash notice
     if not membership_requested:
-        flash_notice(_("No initiative memberships were requested.  Please request access using the \"Memberships\" button in the top right."))
+        flash_notice(
+            _(
+                'No initiative memberships were requested.  Please request access using the "Memberships" button in the top right.'
+            )
+        )
 
     # send welcome to the new user
-    url = config.get('ckan.site_url', "")
-    site_name = config.get('ckan.site_description', "")
-    site_email = os.environ.get('BIOPLATFORMS_HELPDESK_ADDRESS',config.get('error_email_from', ""))
+    url = config.get("ckan.site_url", "")
+    site_name = config.get("ckan.site_description", "")
+    site_email = os.environ.get(
+        "BIOPLATFORMS_HELPDESK_ADDRESS", config.get("error_email_from", "")
+    )
 
     welcome = EmailUser()
-    welcome.email = newuser['email']
-    welcome.username = newuser['name']
-    welcome.display_name = newuser['display_name']
+    welcome.email = newuser["email"]
+    welcome.username = newuser["name"]
+    welcome.display_name = newuser["display_name"]
 
     mail_welcome_email(welcome, site_name, site_email, url)
 

@@ -137,9 +137,9 @@ def organization_slugs_by_creation():
 
 
 def organization_slugs_by_creation_and_rank():
-    """ Retuns a list of organization slugs ordered from 
-        highest rank to lowest,
-        newest to oldest """
+    """Retuns a list of organization slugs ordered from
+    highest rank to lowest,
+    newest to oldest"""
 
     def multisort(xs, specs):
         for key, reverse in reversed(specs):
@@ -341,7 +341,7 @@ def get_pkg_size_in_bytes(pkg):
                 try:
                     res_size = int(resource.get("size", 0))
                 except ValueError:
-                    res_size = 0   # we got a string that wasn't a number
+                    res_size = 0  # we got a string that wasn't a number
                 total_size_in_bytes = total_size_in_bytes + res_size
     return total_size_in_bytes
 
@@ -361,4 +361,6 @@ def human_readable_size(size_in_bytes):
 
 
 def get_bulk_size_warning_limit():
-    return toolkit.asint(config.get("ckanext.bulk.download_size_warning_bytes", 104857600))
+    return toolkit.asint(
+        config.get("ckanext.bulk.download_size_warning_bytes", 104857600)
+    )

@@ -4,8 +4,10 @@ import logging
 
 log = logging.getLogger(__name__)
 
+
 def _MESSAGE_WELCOME_EMAIL():
-    return _("""\
+    return _(
+        """\
 Welcome, %(user)s, to the Bioplatforms Australia Data Portal
 
 You can access the portal using the following URL:
@@ -41,26 +43,26 @@ welcome.
 Best wishes,
 %(sitename)s
 %(siteemail)s
-""")
+"""
+    )
 
 
 def _SUBJECT_WELCOME_EMAIL():
-    return _(
-            "Welcome to the Bioplatforms Australia Data Portal")
+    return _("Welcome to the Bioplatforms Australia Data Portal")
 
 
 def mail_welcome_email(user, site_name, site_email, site_url):
     subject = _SUBJECT_WELCOME_EMAIL()
     message = _MESSAGE_WELCOME_EMAIL() % {
-        'user': user.display_name,
-        'username': user.username,
-        'email': user.email,
-        'siteurl': site_url,
-        'sitename': site_name,
-        'siteemail': site_email,
+        "user": user.display_name,
+        "username": user.username,
+        "email": user.email,
+        "siteurl": site_url,
+        "sitename": site_name,
+        "siteemail": site_email,
     }
     headers = {
-        'Reply-To': "{} <{}>".format(site_name, site_email),
+        "Reply-To": "{} <{}>".format(site_name, site_email),
     }
 
     try:

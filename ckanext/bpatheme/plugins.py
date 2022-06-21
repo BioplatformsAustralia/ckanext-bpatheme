@@ -18,7 +18,7 @@ from ckanext.bpatheme import (
     action,
     helper,
     blueprint,
-    )
+)
 
 import logging
 
