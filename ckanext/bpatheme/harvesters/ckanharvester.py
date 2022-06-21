@@ -1,4 +1,6 @@
-import urllib2
+
+# Python 2 to 3
+from six.moves import urllib
 
 from ckan.lib.base import c
 from ckan import model
@@ -41,7 +43,7 @@ class CKANHarvester(HarvesterBase):
         return "/api/%d/search" % self.api_version
 
     def _get_content(self, url):
-        http_request = urllib2.Request(
+        http_request = urllib.request.Request(
             url=url,
         )
 
@@ -50,8 +52,8 @@ class CKANHarvester(HarvesterBase):
             http_request.add_header("Authorization", api_key)
 
         try:
-            http_response = urllib2.urlopen(http_request)
-        except urllib2.URLError, e:
+            http_response = urllib.request.urlopen(http_request)
+        except urllib.error.URLError as e:
             raise ContentFetchError(
                 "Could not fetch url: %s, error: %s" % (url, str(e))
             )
@@ -127,7 +129,7 @@ class CKANHarvester(HarvesterBase):
                 for group_name in config_obj["default_groups"]:
                     try:
                         group = get_action("group_show")(context, {"id": group_name})
-                    except NotFound, e:
+                    except NotFound as e:
                         raise ValueError("Default group not found")
 
             if "default_extras" in config_obj:
@@ -141,7 +143,7 @@ class CKANHarvester(HarvesterBase):
                     user = get_action("user_show")(
                         context, {"id": config_obj.get("user")}
                     )
-                except NotFound, e:
+                except NotFound as e:
                     raise ValueError("User not found")
 
             for key in ("read_only", "force_all"):
@@ -149,7 +151,7 @@ class CKANHarvester(HarvesterBase):
                     if not isinstance(config_obj[key], bool):
                         raise ValueError("%s must be boolean" % key)
 
-        except ValueError, e:
+        except ValueError as e:
             raise e
 
         return config
@@ -198,7 +200,7 @@ class CKANHarvester(HarvesterBase):
                             url = base_rest_url + "/revision/%s" % revision_id
                             try:
                                 content = self._get_content(url)
-                            except ContentFetchError, e:
+                            except ContentFetchError as e:
                                 self._save_gather_error(
                                     "Unable to get content for URL: %s: %s"
                                     % (url, str(e)),
@@ -216,7 +218,7 @@ class CKANHarvester(HarvesterBase):
                         )
                         return None
 
-                except urllib2.HTTPError, e:
+                except urllib.error.HTTPError as e:
                     if e.getcode() == 400:
                         log.info(
                             "CKAN instance %s does not suport revision filtering"
@@ -235,7 +237,7 @@ class CKANHarvester(HarvesterBase):
             url = base_rest_url + "/package"
             try:
                 content = self._get_content(url)
-            except ContentFetchError, e:
+            except ContentFetchError as e:
                 self._save_gather_error(
                     "Unable to get content for URL: %s: %s" % (url, str(e)), harvest_job
                 )
@@ -259,7 +261,7 @@ class CKANHarvester(HarvesterBase):
                     "No packages received for URL: %s" % url, harvest_job
                 )
                 return None
-        except Exception, e:
+        except Exception as e:
             self._save_gather_error("%r" % e.message, harvest_job)
 
     def fetch_stage(self, harvest_object):
@@ -274,7 +276,7 @@ class CKANHarvester(HarvesterBase):
         # Get contents
         try:
             content = self._get_content(url)
-        except ContentFetchError, e:
+        except ContentFetchError as e:
             self._save_object_error(
                 "Unable to get content for package: %s: %r" % (url, e), harvest_object
             )
@@ -338,7 +340,7 @@ class CKANHarvester(HarvesterBase):
                             validated_groups.append(group["name"])
                         else:
                             validated_groups.append(group["id"])
-                    except NotFound, e:
+                    except NotFound as e:
                         log.info("Group %s is not available" % group_name)
                         if remote_groups == "create":
                             try:
@@ -393,7 +395,7 @@ class CKANHarvester(HarvesterBase):
                         data_dict = {"id": remote_org}
                         org = get_action("organization_show")(context, data_dict)
                         validated_org = org["id"]
-                    except NotFound, e:
+                    except NotFound as e:
                         log.info("Organization %s is not available" % remote_org)
                         if remote_orgs == "create":
                             try:
@@ -442,8 +444,8 @@ class CKANHarvester(HarvesterBase):
             # Find any extras whose values are not strings and try to convert
             # them to strings, as non-string extras are not allowed anymore in
             # CKAN 2.0.
-            for key in package_dict["extras"].keys():
-                if not isinstance(package_dict["extras"][key], basestring):
+            for key in list(package_dict["extras"].keys()):
+                if not isinstance(package_dict["extras"][key], str):
                     try:
                         package_dict["extras"][key] = json.dumps(
                             package_dict["extras"][key]
@@ -458,10 +460,10 @@ class CKANHarvester(HarvesterBase):
                 override_extras = self.config.get("override_extras", False)
                 if not "extras" in package_dict:
                     package_dict["extras"] = {}
-                for key, value in default_extras.iteritems():
+                for key, value in default_extras.items():
                     if not key in package_dict["extras"] or override_extras:
                         # Look for replacement strings
-                        if isinstance(value, basestring):
+                        if isinstance(value, str):
                             value = value.format(
                                 harvest_source_id=harvest_object.job.source.id,
                                 harvest_source_url=harvest_object.job.source.url.strip(
@@ -490,28 +492,28 @@ class CKANHarvester(HarvesterBase):
                 model.clear_user_roles(package)
 
                 # Setup harvest user as admin
-                user_name = self.config.get("user", u"harvest")
+                user_name = self.config.get("user", "harvest")
                 user = model.User.get(user_name)
                 pkg_role = model.PackageRole(
                     package=package, user=user, role=model.Role.ADMIN
                 )
 
                 # Other users can only read
-                for user_name in (u"visitor", u"logged_in"):
+                for user_name in ("visitor", "logged_in"):
                     user = model.User.get(user_name)
                     pkg_role = model.PackageRole(
                         package=package, user=user, role=model.Role.READER
                     )
 
             return True
-        except ValidationError, e:
+        except ValidationError as e:
             self._save_object_error(
                 "Invalid package with GUID %s: %r"
                 % (harvest_object.guid, e.error_dict),
                 harvest_object,
                 "Import",
             )
-        except Exception, e:
+        except Exception as e:
             self._save_object_error("%r" % e, harvest_object, "Import")
 
 

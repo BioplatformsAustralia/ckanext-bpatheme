@@ -1,4 +1,6 @@
-import urllib2
+
+# Python 2 to 3
+from six.moves import urllib
 
 from ckan.lib.base import c
 from ckan import model
@@ -83,7 +85,7 @@ class CKANSchemingHarvester(CKANHarvester):
                             validated_groups.append(group["name"])
                         else:
                             validated_groups.append(group["id"])
-                    except NotFound, e:
+                    except NotFound as e:
                         log.info("Group %s is not available" % group_name)
                         if remote_groups == "create":
                             try:
@@ -138,7 +140,7 @@ class CKANSchemingHarvester(CKANHarvester):
                         data_dict = {"id": remote_org}
                         org = get_action("organization_show")(context, data_dict)
                         validated_org = org["id"]
-                    except NotFound, e:
+                    except NotFound as e:
                         log.info("Organization %s is not available" % remote_org)
                         if remote_orgs == "create":
                             try:
@@ -235,26 +237,26 @@ class CKANSchemingHarvester(CKANHarvester):
                 model.clear_user_roles(package)
 
                 # Setup harvest user as admin
-                user_name = self.config.get("user", u"harvest")
+                user_name = self.config.get("user", "harvest")
                 user = model.User.get(user_name)
                 pkg_role = model.PackageRole(
                     package=package, user=user, role=model.Role.ADMIN
                 )
 
                 # Other users can only read
-                for user_name in (u"visitor", u"logged_in"):
+                for user_name in ("visitor", "logged_in"):
                     user = model.User.get(user_name)
                     pkg_role = model.PackageRole(
                         package=package, user=user, role=model.Role.READER
                     )
 
             return True
-        except ValidationError, e:
+        except ValidationError as e:
             self._save_object_error(
                 "Invalid package with GUID %s: %r"
                 % (harvest_object.guid, e.error_dict),
                 harvest_object,
                 "Import",
             )
-        except Exception, e:
+        except Exception as e:
             self._save_object_error("%r" % e, harvest_object, "Import")
