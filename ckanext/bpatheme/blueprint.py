@@ -37,6 +37,13 @@ def contact_index():
     return render("home/contact.html")
 
 
+# BPA Behaviour after login
+def route_after_login():
+     # login redirect to homepage bpa-archive-ops/issues#770
+     route = u'home.index' if g.user else u'user.login'
+     return h.redirect_to(route)
+
+
 # Token for BPA OTU application
 def bioplatforms_webtoken():
     # bpa-otu auth
