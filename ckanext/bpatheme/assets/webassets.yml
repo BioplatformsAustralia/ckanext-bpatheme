@@ -1,0 +1,18 @@
+bpatheme-js:
+  filters: rjsmin
+  output: ckanext-bpatheme/%(version)s_main.js
+  contents:
+     - drop_down_menu.js
+     - modernizr-custom.js
+     - bpatheme_project_icon_block.js
+     - bpatheme_footer_image.js
+     - lazy-sizes.js
+     - extra-drop-down.js
+     - datawa-organization-opener.js
+     - datawa.js
+
+bpatheme-css:
+  filters: cssrewrite
+  output: ckanext-bpatheme/%(version)s_main.css
+  contents:
+     - styles/bpatheme.css
