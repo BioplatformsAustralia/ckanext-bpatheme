@@ -1,11 +1,11 @@
 {% ckan_extends %}
 {% block organization_description %}
       {% set facets = {
-        'fields': c.fields_grouped,
-        'search': c.search_facets,
-        'titles': c.facet_titles,
-        'translated_fields': c.translated_fields,
-        'remove_field': c.remove_field }
+        'fields': fields_grouped,
+        'search': search_facets,
+        'titles': facet_titles,
+        'translated_fields': translated_fields,
+        'remove_field': remove_field }
       %}
       {% set sorting = [
         (_('Relevance'), 'score desc, metadata_modified desc'),
@@ -14,22 +14,22 @@
         (_('Last Modified'), 'metadata_modified desc'),
         (_('Popular'), 'views_recent desc') if g.tracking_enabled else (false, false) ]
       %}
-      {% if c.group_dict.name != 'australian-microbiome' %}
-      {% snippet 'organization/snippets/inline_search_form.html', form_id='organization-datasets-search-form', type='dataset', query=c.q, sorting=sorting, sorting_selected=c.sort_by_selected, count=c.page.item_count, facets=facets, placeholder=_('Search datasets...'), show_empty=request.params, fields=c.fields %}
+      {% if group_dict.name != 'australian-microbiome' %}
+      {% snippet 'organization/snippets/inline_search_form.html', form_id='organization-datasets-search-form', type='dataset', query=q, sorting=sorting, sorting_selected=sort_by_selected, count=page.item_count, facets=facets, placeholder=_('Search datasets...'), show_empty=request.params, fields=fields %}
 
       {% else %}
 
-      {% snippet 'snippets/amdb_buttons.html', c=c %}
+      {% snippet 'snippets/amdb_buttons.html' %}
 
       {% endif %}
 
-      {% if c.group_dict.description %}
-      {{ h.render_markdown(c.group_dict.description) }}
+      {% if group_dict.description %}
+      {{ h.render_markdown(group_dict.description) }}
       {% endif %}
 
       <ul class="nav nav-tabs pull-right" style='padding-top: 2em;'>
-        {{ h.build_nav_icon('organization_pages_index', _('Project Pages'), id=c.group_dict.name) }}
-        {{ h.build_nav_icon('organization_activity', _('Activity Stream'), id=c.group_dict.name, offset=0) }}
+        {{ h.build_nav_icon('organization_pages_index', _('Project Pages'), id=group_dict.name) }}
+        {{ h.build_nav_icon('organization_activity', _('Activity Stream'), id=group_dict.name, offset=0) }}
       </ul>
 
 {% endblock %}

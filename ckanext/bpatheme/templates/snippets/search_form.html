@@ -38,9 +38,9 @@
 	{% if request.params.q is defined %}
   <div class="bulk-btn" >
     {% if bulk_download_type == 'organization' %}
-      {% snippet 'ckanext_bulk/snippets/organization_button.html', id=c.group_dict.id %}
+      {% snippet 'ckanext_bulk/snippets/organization_button.html', id=group_dict.id %}
     {% else %}
-      {% snippet 'ckanext_bulk/snippets/search_button.html', id=c.group_dict.id %}
+      {% snippet 'ckanext_bulk/snippets/search_button.html', id=group_dict.id %}
     {% endif %}
   </div>
    {% endif %}
