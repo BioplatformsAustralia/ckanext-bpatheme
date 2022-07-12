@@ -1,7 +1,4 @@
-{% extends "page.html" %}
-
-{% block subtitle %}{{ _('Register') }}{% endblock %}
-
+{% ckan_extends %}
 
 {% block secondary_content %}
   <section class="module module-narrow">
@@ -21,22 +18,4 @@
       </p>
     </div>
   </section>
-{% endblock %}
-
-
-{% block breadcrumb_content %}
-  <li class="active">{{ h.nav_link(_('Registration'), named_route='user.register') }}</li>
-{% endblock %}
-
-{% block primary_content %}
-  <article class="module">
-    <div class="module-content">
-      {% block primary_content_inner %}
-      <h1 class="page-heading">
-        {% block page_heading %}{{ _('Register for an Account') }}{% endblock %}
-      </h1>
-      {{ form | safe }}
-      {% endblock %}
-    </div>
-  </article>
 {% endblock %}
