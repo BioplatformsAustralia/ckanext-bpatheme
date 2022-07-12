@@ -1,7 +1,7 @@
 #!/usr/bin/env/python
 from setuptools import setup
 
-install_requires = ["pandas==0.24.2"]
+install_requires = ["pandas>=1.4.3"]
 
 setup(
     name="ckanext-bpatheme",
