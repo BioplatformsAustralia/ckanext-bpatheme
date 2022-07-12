@@ -1,5 +1,5 @@
 {% ckan_extends %}
-{% set authorized = h.check_access('resource_show', {'id': res.id, 'resource': res }) %}
+{% set authorized = h.check_access('resource.show', {'id': res.id, 'resource': res }) %}
 
 {% block resource_item_title  %}
  {% if authorized %}

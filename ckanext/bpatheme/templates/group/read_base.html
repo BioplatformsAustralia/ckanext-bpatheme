@@ -2,5 +2,5 @@
 
 {% block links %}
   {{ super() }}
-  <link rel="canonical" href="{{ h.url_for(controller='group', action='read', id=c.group_dict.name, qualified=True, locale='default') }}"/>
+  <link rel="canonical" href="{{ h.url_for('group.read', id=group_dict.name, qualified=True, locale='default') }}"/>
 {% endblock %}

@@ -2,8 +2,8 @@
 
 {% block footer_content %}
     <div class="site-footer-links">
-        <a href="{{ h.url_for(controller='organization', action='index') }}">Organisations</a>
-        <a href="{{ h.url_for(controller='package', action='search') }}">Datasets</a>
+        <a href="{{ h.url_for('organization.index') }}">Organisations</a>
+        <a href="{{ h.url_for('package.search') }}">Datasets</a>
         <a href="/organization/pages/bioplatforms-australia/api-access">API Access</a>
         <a href="{{ h.url_for('bpatheme.contact_index') }}">Contact</a>
         <a href="http://www.bioplatforms.com">Operated by Bioplatforms Australia</a>

@@ -1,6 +1,6 @@
-{% set can_edit = h.check_access('package_update', {'id': pkg.id }) %}
-{% set url_action = 'resource_edit' if url_is_edit and can_edit else 'resource_read' %}
-{% set url = h.url_for(controller='package', action=url_action, id=pkg.name, resource_id=res.id) %}
+{% set can_edit = h.check_access('package.update', {'id': pkg.id }) %}
+{% set url_action = pkg.type ~ ('_resource.edit' if url_is_edit and can_edit else '_resource.read') %}
+{% set url = h.url_for(url_action, id=pkg.name, resource_id=res.id) %}
 
 {% if not url_is_edit %}
 <div class="explore">
@@ -44,7 +44,7 @@
                         {% endif %}
                         {% if can_edit %}
                         <li>
-                            <a href="{{ h.url_for(controller='package', action='resource_edit', id=pkg.name, resource_id=res.id) }}">
+                            <a href="{{ h.url_for(pkg.type ~ '_resource.edit', id=pkg.name, resource_id=res.id) }}"> }}">
                                 <i class="fa fa-pencil-square-o"></i>
                                 {{ _('Edit') }}
                             </a>

@@ -2,7 +2,7 @@
 
 {% block heading_private %}
   {% if package.private %}
-    <span class="dataset-private label label-private">
+                <span class="dataset-private label label-inverse">
       <i class="fa fa-lock"></i>
       {{ _('Private') }}
     </span>
@@ -10,7 +10,7 @@
 {% endblock %}
 
 {% block heading_title %}
-{{ h.link_to(h.truncate(title, truncate_title), h.url_for('dataset_read', controller='package', action='read', id=package.name)) }}
+		{{ h.link_to(h.truncate(title, truncate_title), h.url_for('%s.read' % package.type, id=package.name)) }}
 {% endblock %}
  {% block resources_outer %}
             <ul class="dataset-resources list-unstyled">
@@ -18,7 +18,7 @@
                 <li class="dataset-resources-package-size">{{h.get_package_size_for_user(package)}}</li>
                 {% for resource in h.dict_list_reduce(package.resources, 'format') %}
                 <li>
-                  <a href="{{ h.url_for(controller='package', action='read', id=package.name) }}" class="label label-default" data-format="{{ resource.lower() }}">{{ resource }}</a>
+                  <a href="{{ h.url_for(package.type ~ '.read', id=package.name) }}" class="label label-default" data-format="{{ resource.lower() }}">{{ resource }}</a>
                 </li>
                 {% endfor %}
               {% endblock %}

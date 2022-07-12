@@ -11,15 +11,15 @@
   <div class="clearfix">
         <span class="label label-inverse" style="float: right;">
 <!--        <img src="/json-icon.png"/>-->
-<!--        <a href="/api/3/action/{{ h.url_for('package_show', id=c.pkg.id) }}">JSON</a>-->
+<!--        <a href="/api/3/action/{{ h.url_for(pkg.type ~ '.show', id=pkg.id) }}">JSON</a>-->
         </span>
     <!--<span class="label label-inverse" style="float: right;margin-right: 10px;">
         <img src="/rdf-icon.png"/>
-        <a href="{{ h.url_for('dataset_read', id=c.pkg.id) }}.rdf">RDF</a>
+        <a href="{{ h.url_for(pkg.type ~ '.read', id=pkg.id) }}.rdf">RDF</a>
         </span>-->
     <!--span class="label label-inverse" style="float: right; margin-right: 10px;margin-left: 10px;">
         <i class="icon-file-alt"></i>
-        <a style="color: lightgrey;" href="{{ h.url_for('dataset_read', id=c.pkg.id) }}/gmd">ISO19115/ISO19139 XML</a-->
+        <a style="color: lightgrey;" href="{{ h.url_for(pkg.type ~ '.read', id=pkg.id) }}/gmd">ISO19115/ISO19139 XML</a-->
     </span>
     <!-- {{ super() }} -->
     {% if pkg.private %}
