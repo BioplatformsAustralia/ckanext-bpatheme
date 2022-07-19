@@ -12,7 +12,7 @@ bpatheme-js:
      - datawa.js
 
 bpatheme-css:
-  filters: cssrewrite
+  filter: cssrewrite
   output: ckanext-bpatheme/%(version)s_main.css
   contents:
      - styles/bpatheme.css
