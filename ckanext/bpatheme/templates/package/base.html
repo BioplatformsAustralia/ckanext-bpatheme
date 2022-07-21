@@ -19,7 +19,7 @@
       <li>{% link_for _(dataset_type.title()), named_route=dataset_type ~ '.search' %}</li>
     {% endif %}
     {# Drop truncate #}
-    <li{{ self.breadcrumb_content_selected() }}>{% link_for dataset), named_route=pkg.type ~ '.read', id=pkg.id if is_activity_archive else pkg.name %}</li>  
+    <li{{ self.breadcrumb_content_selected() }}>{% link_for dataset, named_route=pkg.type ~ '.read', id=pkg.id if is_activity_archive else pkg.name %}</li>  
   {% else %}
     <li>{% link_for _(dataset_type.title()), named_route=dataset_type ~ '.search' %}</li>
     <li class="active"><a href="">{{ _('Create Dataset') }}</a></li>
