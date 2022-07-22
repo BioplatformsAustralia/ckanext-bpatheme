@@ -45,7 +45,7 @@
         <h4 class="size-found">Dataset size is: {{h.human_readable_size(result_size_bytes)}} </h4>
     </div>
      <div class="bulk-btn">
-        {% snippet 'ckanext_bulk/snippets/package_button.html', id=c.id , result_size=h.human_readable_size(result_size_bytes), result_size_bytes=result_size_bytes, size_warning_limit=h.get_bulk_size_warning_limit() %}
+        {% snippet 'ckanext_bulk/snippets/package_button.html', id=pkg.id , result_size=h.human_readable_size(result_size_bytes), result_size_bytes=result_size_bytes, size_warning_limit=h.get_bulk_size_warning_limit() %}
     </div>
 
 {% endblock %}
