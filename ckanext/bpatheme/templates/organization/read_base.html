@@ -17,20 +17,20 @@
 {% block content_primary_nav %}
   {{ h.build_nav_icon(group_type + '.about', _('Home'), id=group_dict.name, icon='info-circle') }}
   {{ h.build_nav_icon(group_type + '.read', _('Datasets'), id=group_dict.name, icon='sitemap') }}
-  
-  {% if c.page.name == 'methods' %}
+
+  {% if h.url_last_segment_matches(request.url,'methods') %}
     <li class="active"><a href="/organization/pages/{{ group_dict.name }}/methods">Methods</a></li>
   {% else %}
     <li><a href="/organization/pages/{{ group_dict.name }}/methods">Methods</a></li>
   {% endif %}
 
-  {% if c.page.name == 'gallery' %}
+  {% if h.url_last_segment_matches(request.url,'gallery') %}
     <li class="active"><a href="/organization/pages/{{ group_dict.name }}/gallery">Gallery</a></li>
   {% else %}
     <li><a href="/organization/pages/{{ group_dict.name }}/gallery">Gallery</a></li>
   {% endif %}
 
-  {% if c.page.name == 'information' %}
+  {% if h.url_last_segment_matches(request.url,'information') %}
     <li class="active"><a href="/organization/pages/{{ group_dict.name }}/information">Information</a></li>
   {% else %}
     <li><a href="/organization/pages/{{ group_dict.name }}/information">Information</a></li>

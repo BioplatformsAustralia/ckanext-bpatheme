@@ -130,6 +130,7 @@ class CustomTheme(plugins.SingletonPlugin):
             "get_search_size_in_bytes": helper.get_search_size_in_bytes,
             "get_bulk_size_warning_limit": helper.get_bulk_size_warning_limit,
             "get_package_size_for_user": helper.get_package_size_for_user,
+            "url_last_segment_matches": helper.url_last_segment_matches,
         }
 
     # Ifacets

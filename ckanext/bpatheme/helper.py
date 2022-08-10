@@ -5,6 +5,7 @@ import json
 import operator
 import re
 import bitmath
+from urllib.parse import urlparse
 
 from ckan.common import c, _, config
 import ckan.lib.helpers as h
@@ -364,3 +365,10 @@ def get_bulk_size_warning_limit():
     return toolkit.asint(
         config.get("ckanext.bulk.download_size_warning_bytes", 104857600)
     )
+
+def url_last_segment_matches(url,to_match):
+    parsed = urlparse(url.rstrip("/")) # remove any trailing slash on URLs
+    segments = parsed.path.split("/")
+    if segments[-1] == to_match:
+        return True
+    return False
