@@ -82,3 +82,4 @@ bpatheme.add_url_rule("/contact", view_func=contact_index)
 bpatheme.add_url_rule(
     "/user/private/api/bpa/check_permissions", view_func=bioplatforms_webtoken
 )
+bpatheme.add_url_rule("/after_login", view_func=route_after_login)
