@@ -1015,6 +1015,9 @@ body {
     align-items: flex-end;
 }
 
+.content_action {
+    margin-bottom: 10px;
+}
 
 /* styling for map */
 
