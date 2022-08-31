@@ -28,8 +28,8 @@
       {% endif %}
 
       <ul class="nav nav-tabs pull-right" style='padding-top: 2em;'>
-        {{ h.build_nav_icon('organization_pages_index', _('Project Pages'), id=group_dict.name) }}
-        {{ h.build_nav_icon('organization_activity', _('Activity Stream'), id=group_dict.name, offset=0) }}
+        {{ h.build_nav_icon('pages.organization_pages_index', _('Project Pages'), id=group_dict.name, icon="file") }}
+        {{ h.build_nav_icon('organization.activity', _('Activity Stream'), id=group_dict.name, offset=0, icon="clock-o") }}
       </ul>
 
 {% endblock %}
