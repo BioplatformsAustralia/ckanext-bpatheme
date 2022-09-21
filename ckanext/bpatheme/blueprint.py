@@ -75,7 +75,7 @@ def bioplatforms_webtoken():
     digest_maker.update(data_portion)
     digest = digest_maker.hexdigest()
 
-    return (digest + b'||' + data_portion).decode('utf-8')
+    return '{}||{}'.format(digest.decode('utf-8'), data_portion.decode('utf-8'))
 
 
 bpatheme.add_url_rule("/summary", view_func=summary_index)
