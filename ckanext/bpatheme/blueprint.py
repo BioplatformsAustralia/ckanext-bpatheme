@@ -68,14 +68,14 @@ def bioplatforms_webtoken():
         "organisations": organisations,
     }
 
-    data_portion = json.dumps(data_portion).encode('utf-8')
+    data_portion = json.dumps(data_portion)
 
     secret_key = os.environ.get("BPAOTU_AUTH_SECRET_KEY").encode('utf-8')
     digest_maker = hmac.new(secret_key, digestmod=hashlib.md5)
-    digest_maker.update(data_portion)
+    digest_maker.update(data_portion.encode('utf-8'))
     digest = digest_maker.hexdigest()
 
-    return '{}||{}'.format(digest.decode('utf-8'), data_portion.decode('utf-8'))
+    return '{}||{}'.format(digest, data_portion)
 
 
 bpatheme.add_url_rule("/summary", view_func=summary_index)
