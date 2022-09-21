@@ -69,7 +69,7 @@ def bioplatforms_webtoken():
 
     data_portion = json.dumps(data_portion)
 
-    secret_key = os.environ.get("BPAOTU_AUTH_SECRET_KEY")
+    secret_key = os.environ.get("BPAOTU_AUTH_SECRET_KEY").encode('utf-8')
     digest_maker = hmac.new(secret_key)
     digest_maker.update(data_portion)
     digest = digest_maker.hexdigest()
