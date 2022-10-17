@@ -34,7 +34,7 @@
       </div>
     {% endif %}
   </div>
-	{% if request.params.q is defined %}
+	{% if request.params.q is defined or c.userobj.sysadmin %}
   <div class="bulk-btn" >
     {% if bulk_download_type == 'organization' %}
       {% snippet 'ckanext_bulk/snippets/organization_button.html', id=id %}
