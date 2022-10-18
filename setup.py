@@ -5,7 +5,7 @@ install_requires = ["pandas>=1.4.3"]
 
 setup(
     name="ckanext-bpatheme",
-    version="3.4.12",
+    version="3.4.13",
     description="CKAN Theme for the Bioplatforms Australia Data Portal",
     license="AGPL3",
     author="Bioplatforms Australia",
@@ -26,6 +26,8 @@ setup(
             "assets/scripts/*.js",
             "assets/styles/*.css",
             "assets/styles/*.scss",
+            "assets/bootstraptable/*.js",
+            "assets/bootstraptable/*.css",
             "templates/*.html",
             "templates/*/*.html",
             "templates/*/*/*.html",
@@ -40,8 +42,6 @@ setup(
             "static/fonts/arial/*.ttf",
             "static/*.png",
             "static/*.ico",
-            "static/bootstraptable/*.js",
-            "static/bootstraptable/*.css",
             "static/*.webp",
         ]
     },
