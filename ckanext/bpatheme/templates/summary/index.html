@@ -1,5 +1,15 @@
 {% extends "page.html" %}
 
+{% block styles %}
+    {{ super() }}
+    {% asset 'ckanext-bpatheme/bootstraptable-css' %}
+{% endblock %}
+
+{% block scripts %}
+    {{ super() }}
+    {% asset 'ckanext-bpatheme/bootstraptable-js' %}
+{% endblock %}
+
 {% block subtitle %}{{ _('Summary') }}{% endblock %}
 
 {% block breadcrumb_content %}
