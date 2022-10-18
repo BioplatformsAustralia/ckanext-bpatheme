@@ -17,13 +17,16 @@ bpatheme-css:
   contents:
      - styles/bpatheme.css
 
-boostraptable-js:
+bootstraptable-js:
   filters: rjsmin
+  extra:
+    preload:
+      - base/main
   output: ckanext-bpatheme/%(version)s_bootstraptable.js
   contents:
      - bootstraptable/bootstrap-table.min.js
 
-boostraptable-css:
+bootstraptable-css:
   filter: cssrewrite
   output: ckanext-bpatheme/%(version)s_bootstraptable.css
   contents:

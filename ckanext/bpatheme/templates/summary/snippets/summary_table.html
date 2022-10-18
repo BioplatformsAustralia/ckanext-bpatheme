@@ -50,19 +50,29 @@
     </div>
 </div>
 <script>
-    function cleanData(data) {
-        return data.replace(/&#34;/g, '"').replace(/&lt;/g, "<").replace(/&gt;/g, ">");
-    }
+    document.addEventListener('DOMContentLoaded', function load() {
+        if (!window.jQuery) return setTimeout(load, 50);
+        // wait until jQuery is loaded
 
-    const summary_config = {
-        data: JSON.parse(cleanData('{{ spreadsheet_data }}'))
-    }
-    const $table = $('#summary-table');
-    $(function () {
-        // depends on current-device.js
-        if (device && device.mobile()) {
-            summary_config['cardView'] = true
+        // Summary table functions here
+
+        function cleanData(data) {
+            return data.replace(/&#34;/g, '"').replace(/&lt;/g, "<").replace(/&gt;/g, ">");
         }
-        $table.bootstrapTable(summary_config);
-    })
+
+        const summary_config = {
+            data: JSON.parse(cleanData('{{ spreadsheet_data }}'))
+        }
+        const $table = $('#summary-table');
+        $(function () {
+            // depends on current-device.js
+            if (device && device.mobile()) {
+                summary_config['cardView'] = true
+            }
+            $table.bootstrapTable(summary_config);
+        })
+
+        //
+
+    }, false);
 </script>
