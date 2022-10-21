@@ -1,12 +1,19 @@
 {% set tags = h.get_facet_items_dict('tags', limit=7) %}
 {% set placeholder = _('E.g. environment') %}
-
 <div class="module module-search module-narrow module-shallow box">
-
   <form class="module-content search-form" method="get" action="{% url_for 'dataset.search' %}">
     <h3 class="heading">{{ _("Search all datasets") }}</h3>
     {% snippet 'snippets/search_form_common.html', form_id='homepage-search-form', type='dataset', query='', sorting=sorting, sorting_selected=c.sort_by_selected, facets=facets, placeholder=_('Search datasets...'), show_empty=request.params, fields=c.fields %}
   </form>
+      {% if request.params.q is defined %}
+  <div class="bulk-btn" >
+    {% if bulk_download_type == 'organization' %}
+     {{ h.snippet('ckanext_bulk/snippets/organization_popover.html', id=id, query=request.params.q) }}
+    {% else %}
+    {{ h.snippet('ckanext_bulk/snippets/search_popover.html', query=request.params.q) }}
+    {% endif %}
+  </div>
+      {% endif %}
 </div>
 
 

@@ -789,7 +789,7 @@ body {
 }
 
 .form-select.control-order-by {
-    float: left;
+    float: right;
     flex-direction: row;
     justify-content: flex-end;
     margin-left: 0px;
