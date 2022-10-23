@@ -7,11 +7,12 @@ import re
 import bitmath
 from urllib.parse import urlparse
 
-from ckan.common import c, _, config
+from ckan.common import g, c, _, config
 import ckan.lib.helpers as h
 import ckan.plugins as plugins
 import ckan.plugins.toolkit as toolkit
 from markupsafe import Markup
+from ckan.lib.webassets_tools import render_assets
 
 import ckanext.scheming.helpers as sh
 
@@ -372,3 +373,22 @@ def url_last_segment_matches(url,to_match):
     if segments[-1] == to_match:
         return True
     return False
+
+def external_styles():
+    # This is hacky as CKAN webassets doesn't directly expose the list of 
+    # paths/URLS for CSS or Javascript
+    paths = []
+    base_url = config.get('ckan.site_url', "")
+
+    regex = r"^<link href=\"(.*)\" rel=\"stylesheet\"\/>$"
+
+    assets = render_assets('style')
+
+    matches = re.finditer(regex, assets, re.MULTILINE)
+
+    for matchNum, match in enumerate(matches, start=1):
+        for groupNum in range(0, len(match.groups())):
+            groupNum = groupNum + 1
+            paths.append(match.group(groupNum))
+
+    return ''.join(f"@import url('{base_url}{path}');\n" for path in paths)

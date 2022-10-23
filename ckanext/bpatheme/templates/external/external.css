@@ -1,0 +1,20 @@
+{# Assets have to be included in this file to appear in the output #}
+{# Assets are included in order they will appear in CSS file #}
+
+{# core CKAN #}
+{# strip '/base/' prefix and '.css' suffix #}
+{# asset main_css[6:-4] #}
+      {# TODO: store just name of asset instead of path to it. #}
+      {% set main_css = h.get_rtl_css() if h.is_rtl_language() else g.main_css %}
+      {# strip '/base/' prefix and '.css' suffix #}
+      {% asset main_css[6:-4] %}
+{% asset 'base/main' %}
+{% asset 'base/ckan' %}
+{% asset 'base/tracking' %}
+
+{# extensions #}
+{% asset 'ckanext-scheming/scheming_css' %}
+{% asset 'ckanext-bpatheme/bpatheme-css' %}
+
+{# External styles will produce list of URLs with CSS import statements #}
+{{ h.external_styles()|safe }}

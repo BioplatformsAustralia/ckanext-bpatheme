@@ -1,6 +1,6 @@
 # encoding: utf-8
 
-from flask import Blueprint
+from flask import Blueprint, make_response
 
 import json
 import os
@@ -10,6 +10,7 @@ import hashlib
 from logging import getLogger
 
 from ckan.common import g
+import ckan.lib.base as base
 import ckan.lib.helpers as h
 import ckan.logic as logic
 from ckan.plugins.toolkit import (
@@ -77,6 +78,12 @@ def bioplatforms_webtoken():
 
     return '{}||{}'.format(digest, data_portion)
 
+# BPA Styles for external websites 
+def external_styles_index():
+    '''display external.css'''
+    resp = make_response(base.render('external/external.css'))
+    resp.headers['Content-Type'] = "text/css; charset=utf-8"
+    return resp
 
 bpatheme.add_url_rule("/summary", view_func=summary_index)
 bpatheme.add_url_rule("/contact", view_func=contact_index)
@@ -84,3 +91,4 @@ bpatheme.add_url_rule(
     "/user/private/api/bpa/check_permissions", view_func=bioplatforms_webtoken
 )
 bpatheme.add_url_rule("/after_login", view_func=route_after_login)
+bpatheme.add_url_rule("/external_styles.css", view_func=external_styles_index)

@@ -131,6 +131,7 @@ class CustomTheme(plugins.SingletonPlugin):
             "get_bulk_size_warning_limit": helper.get_bulk_size_warning_limit,
             "get_package_size_for_user": helper.get_package_size_for_user,
             "url_last_segment_matches": helper.url_last_segment_matches,
+            "external_styles": helper.external_styles,
         }
 
     # Ifacets
