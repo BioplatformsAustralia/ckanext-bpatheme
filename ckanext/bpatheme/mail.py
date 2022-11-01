@@ -66,6 +66,6 @@ def mail_welcome_email(user, site_name, site_email, site_url):
     }
 
     try:
-        mail_user(user, subject, message, headers)
+        mail_user(user, subject, message, headers=headers)
     except Exception:
         log.exception("Mail could not be sent")
