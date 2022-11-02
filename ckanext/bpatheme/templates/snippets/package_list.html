@@ -2,8 +2,9 @@
 
 {% block package_list %}
   {% if packages %}
-
-      {{ h.snippet('ckanext_bulk/snippets/search_popover.html', query=q) }}
+      {% if bulk_download_type != 'organization' %}
+          {{ h.snippet('ckanext_bulk/snippets/search_popover.html', query=q) }}
+      {% endif %}
 
     <ul class="{{ list_class or 'dataset-list list-unstyled' }}">
     	{% block package_list_inner %}

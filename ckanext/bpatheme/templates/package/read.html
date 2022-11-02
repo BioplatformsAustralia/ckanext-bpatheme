@@ -45,7 +45,7 @@
         <h4 class="size-found">Dataset size is: {{h.human_readable_size(result_size_bytes)}} </h4>
     </div>
      <div class="bulk-btn">
-        {% snippet 'ckanext_bulk/snippets/package_popover.html', id=pkg.id , query=q %}
+               {{ h.snippet('ckanext_bulk/snippets/package_popover.html', query=q) }}
     </div>
 
 {% endblock %}
