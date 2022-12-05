@@ -51,8 +51,8 @@
 {% endblock %}
 
 {% block package_resources %}
-    {% snippet 'package/snippets/embargo.html' %}
+    {% snippet 'package/snippets/embargo.html', pkg_dict=pkg %}
     {{ super() }}
-    {% snippet 'package/snippets/open_with_attribution.html' %}
-    {% snippet 'package/snippets/related_data.html' %}
+    {% snippet 'package/snippets/open_with_attribution.html', pkg_dict=pkg %}
+    {% snippet 'package/snippets/related_data.html', pkg_dict=pkg  %}
 {% endblock %}
