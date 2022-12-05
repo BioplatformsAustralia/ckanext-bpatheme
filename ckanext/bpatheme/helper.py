@@ -296,6 +296,7 @@ def render_related_data(pkg):
 
     for item in words:
         x = re.search("^(\w+):(.*)$", item)
+        # anything in recognised, plus any doi / http / https link
         if x:
             links.append((item, x.group(0), x.group(1), x.group(2)))
         else:
@@ -305,6 +306,7 @@ def render_related_data(pkg):
     if links:
         response += "<ul>"
         for link in links:
+            response += "<li>"
             key = link[2]
             if key in recognised:
                 key_name = recognised[key]
@@ -314,14 +316,22 @@ def render_related_data(pkg):
                     query = "{}:{}".format(key, make_ands_id(value))
                 else:
                     query = link[1]
-                response += "<li>"
                 response += '<a href="{}">{}</a>'.format(
-                    h.url_for(controller="package", action="search", q=query),
+                    h.url_for("dataset.search", q=query),
                     "{} {}".format(key_name, value),
                 )
-                response += "</li>"
+            elif key in ['doi',]:
+                response += '<a href="{}">{}</a>'.format(
+                    "https://doi.org/{}".format(link[3]),
+                    link[0]
+                )
+            elif key in ['http','https']:
+                response += '<a href="{}">{}</a>'.format(
+                    link[0],link[0]
+                )
             else:
-                response += "<li>{}</li>".format(link[0])
+                response += "{}".format(link[0])
+            response += "</li>"
         response += "</ul>"
 
     return response
