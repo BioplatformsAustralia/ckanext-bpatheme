@@ -231,6 +231,42 @@
             } %}
         {% if projects.append(pp) %} {% endif %}
 
+         {% set fungi = {
+                'logo' : "fungi.webp",
+                'icon' : "fungi.webp",
+                'iconalt' : "fungi.png",
+                'slug' : "fungi",
+                'url' : "https://bioplatforms.com/projects/fungi/",
+                'title' : "Fungi functional 'omics",
+                'description' : "
+                       The fungal kingdom sits taxonomically separated from plants and animals.
+                       They have unique characteristics including structure, metabolites,
+                       nutritional properties and ecological functions.
+
+                       Globally, currently 148,000 species of fungi are recognised, the
+                       majority in the phyla Ascomycota and Basidiomycota. The vast majority
+                       of the total estimated 2.2-3.8 million fungal species, over 90%, are
+                       currently unknown to science. The majority of the knowledge on the
+                       species in Australia stems from alignment of species commonly thought
+                       to have originated, or be analogues to northern hemisphere fungal
+                       species. Australian mycologists have attempted to study native fungi
+                       relying primarily on classical morphology, which has often led to the
+                       incorrect identification of taxa or identification by alignment to
+                       northern hemisphere taxa.
+
+                       The generation of omics data will enable the discovery of native fungal
+                       functions that may provide new avenues for emerging industries, in
+                       particular for native foods or to demonstrate provenance of foods,
+                       biologically active discoveries, biomaterial engineering, land restoration,
+                       waste management and circular economies. Additionally, characterising
+                       organisms, substrates and growth environments could accelerate the
+                       development of fungal based products or processors while, simultaneously,
+                       benefitting basic microbiological science and the engineering of biological
+                       systems.
+                ",
+            } %}
+        {% if projects.append(fungi) %} {% endif %}
+
         <div class="container">
             <h3 class="heading">{{ _("Search within a project") }}</h3>
             {# enable project sorting by rank order, then by order in config #}
@@ -249,7 +285,7 @@
                         <div class="placeholder loading">
                         </div>
                         <div class="project-name">
-                            <h3>{{ p.title }}</h3>
+                            <h3>this isi projectname div in laout.html{{ p.title }}</h3>
                         </div>
                         <p class="project-description truncate-overflow">
                             {{ p.description }}
