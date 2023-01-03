@@ -10,9 +10,9 @@
 
     <p>Select organizations that you wish to request membership of: </p>
 
-    {% set available_orgs = h.get_available_organizations() %}
+    {% set available_orgs = h.find_organizations_for_user() %}
     {% for org in available_orgs %}
-       {{ form.checkbox('org-{}'.format(org.name), label=org.display_name, id='field-{}'.format(org.name), checked=false, value=True) }}
+             {{ form.checkbox('org-{}'.format(org.name), label=org.display_name, id='field-{}'.format(org.name), checked=false, value=True) }}
     {% endfor %}
 
     <p>Please provide a password for your account: </p>

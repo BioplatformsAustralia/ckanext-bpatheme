@@ -6,6 +6,8 @@ import operator
 import re
 import bitmath
 from urllib.parse import urlparse
+from ckan.common import c
+import ckan.authz as authz
 
 from ckan.common import g, c, _, config
 import ckan.lib.helpers as h
@@ -182,6 +184,39 @@ def organization_slugs_by_creation_and_rank():
     return [
         s["slug"] for s in multisort(list(orgs), (("rank", True), ("created", True)))
     ]
+
+
+def find_organizations_for_user():
+    organizations = toolkit.get_action("organization_list")(
+        data_dict={
+            "all_fields": True,
+            "include_extras": True,
+            "include_dataset_count": True,
+            "include_groups": True,
+        }
+    )
+
+    if authz.is_sysadmin(c.user):    # user is a sysadmin, return them all
+        # admin user, return them all
+        return organizations
+    else:
+        allowed_organizations = toolkit.get_action("organization_list_for_user")(
+            data_dict={
+                "all_fields": True,
+                "include_extras": True,
+                "include_dataset_count": True,
+                "include_groups": True,
+            }
+        )
+        for org in organizations:
+            if org not in allowed_organizations:
+                org_allowed = True
+                for extra in org.get("extras"):
+                    if extra.get("key") == "Private" and extra.get("value") == "True":
+                        org_allowed = False
+                if org_allowed:
+                    allowed_organizations.append(org)
+        return allowed_organizations
 
 
 def get_os_env_value(key):
@@ -402,3 +437,12 @@ def external_styles():
             paths.append(match.group(groupNum))
 
     return ''.join(f"@import url('{base_url}{path}');\n" for path in paths)
+
+
+def is_orgname_in_list(name, allowed_orgs):
+    in_list = False
+    for org in allowed_orgs:
+        if org["name"] == name:
+            in_list = True
+
+    return in_list

@@ -132,6 +132,8 @@ class CustomTheme(plugins.SingletonPlugin):
             "get_package_size_for_user": helper.get_package_size_for_user,
             "url_last_segment_matches": helper.url_last_segment_matches,
             "external_styles": helper.external_styles,
+            "find_organizations_for_user": helper.find_organizations_for_user,
+            "is_orgname_in_list": helper.is_orgname_in_list,
         }
 
     # Ifacets

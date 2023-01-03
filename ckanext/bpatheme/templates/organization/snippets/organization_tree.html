@@ -1,0 +1,25 @@
+{% set allowed_orgs = h.find_organizations_for_user() %}
+{% asset 'ckanext-hierarchy/hierarchy_js' %}
+{% asset 'ckanext-hierarchy/hierarchy_css' %}
+
+<ul class="hierarchy-tree-top">
+  {% for node in top_nodes recursive %}
+    {% if h.is_orgname_in_list(node.name, allowed_orgs) %}
+      {% set longname = h.group_tree_get_longname(node.name, type_='organization') %}
+      {% set display_text = node.title %}
+      {% if use_longnames and longname%}
+          {% set display_text = longname + " (" + display_text + ")" %}
+      {% endif %}
+      {% if node.highlighted %}
+          <li class="highlighted" id="node_{{ node.name }}">
+      {% else %}
+          <li id="node_{{ node.name }}">
+      {% endif %}
+      {% link_for display_text, controller='organization', action='read', id=node.name %}
+      {% if node.children %}
+        <ul class="hierarchy-tree"> {{ loop(node.children) }} </ul>
+      {% endif %}
+    </li>
+    {% endif %}
+  {% endfor %}
+</ul>
