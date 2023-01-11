@@ -1,7 +1,4 @@
 {% set allowed_orgs = h.find_organizations_for_user() %}
-{% asset 'ckanext-hierarchy/hierarchy_js' %}
-{% asset 'ckanext-hierarchy/hierarchy_css' %}
-
 <ul class="hierarchy-tree-top">
   {% for node in top_nodes recursive %}
     {% if h.is_orgname_in_list(node.name, allowed_orgs) %}
