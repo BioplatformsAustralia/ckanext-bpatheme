@@ -17,6 +17,18 @@ bpatheme-css:
   contents:
      - styles/bpatheme.css
 
+hierarchy-css:
+  filter: cssrewrite
+  output: ckanext-bpatheme/%(version)s_hierarchy.css
+  contents:
+     - styles/hierarchy_theme.css
+
+hierarchy-js:
+  filters: rjsmin
+  output: ckanext-bpatheme/%(version)s_hierarchy.js
+  contents:
+     - scripts/jquery.hierarchy.js
+
 bootstraptable-js:
   filters: rjsmin
   extra:
