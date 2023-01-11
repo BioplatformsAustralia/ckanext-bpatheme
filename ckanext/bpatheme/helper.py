@@ -191,7 +191,7 @@ def find_organizations_for_user():
         data_dict={
             "all_fields": True,
             "include_extras": True,
-            "include_dataset_count": True,
+            "include_dataset_count": False,
             "include_groups": True,
         }
     )
@@ -204,7 +204,7 @@ def find_organizations_for_user():
             data_dict={
                 "all_fields": True,
                 "include_extras": True,
-                "include_dataset_count": True,
+                "include_dataset_count": False,
                 "include_groups": True,
             }
         )
