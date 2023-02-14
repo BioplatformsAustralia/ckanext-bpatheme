@@ -218,6 +218,26 @@ def find_organizations_for_user():
                     allowed_organizations.append(org)
         return allowed_organizations
 
+def find_autoregister_organizations():
+
+    all_organizations = toolkit.get_action("organization_list")(
+        data_dict={
+            "all_fields": True,
+            "include_extras": False,
+            "include_dataset_count": False,
+            "include_groups": False,
+            }
+        )
+    print("Orgsm are...........", all_organizations)
+    print("auoregisters are.........", config.get('ckanext.ytp_request.autoregister'))
+    allowed_organizations = []
+    for org in all_organizations:
+        print("checking ", org["name"])
+        if org["name"] in config.get('ckanext.ytp_request.autoregister').split():
+            print("adding it")
+            allowed_organizations.append(org)
+
+    return allowed_organizations
 
 def get_os_env_value(key):
     config_key = "ckanext.bpatheme." + key.lower()

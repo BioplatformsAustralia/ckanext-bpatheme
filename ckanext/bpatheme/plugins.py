@@ -134,6 +134,7 @@ class CustomTheme(plugins.SingletonPlugin):
             "external_styles": helper.external_styles,
             "find_organizations_for_user": helper.find_organizations_for_user,
             "is_orgname_in_list": helper.is_orgname_in_list,
+            "find_autoregister_organizations": helper.find_autoregister_organizations,
         }
 
     # Ifacets
