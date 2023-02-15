@@ -228,13 +228,10 @@ def find_autoregister_organizations():
             "include_groups": False,
             }
         )
-    print("Orgsm are...........", all_organizations)
-    print("auoregisters are.........", config.get('ckanext.ytp_request.autoregister'))
+
     allowed_organizations = []
     for org in all_organizations:
-        print("checking ", org["name"])
         if org["name"] in config.get('ckanext.ytp_request.autoregister').split():
-            print("adding it")
             allowed_organizations.append(org)
 
     return allowed_organizations
