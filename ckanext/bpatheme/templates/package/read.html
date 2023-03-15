@@ -9,18 +9,18 @@
   {% endif %}
 
   <div class="clearfix">
-        <span class="label label-inverse" style="float: right;">
-<!--        <img src="/json-icon.png"/>-->
-<!--        <a href="{{ h.url_for('api.action', ver=3, logic_function='package_show', id=pkg.id) }}">JSON</a>-->
-        </span>
+   <!-- <span class="label label-inverse" style="float: right;">
+       <img src="/json-icon.png"/>
+       <a href="{{ h.url_for('api.action', ver=3, logic_function='package_show', id=pkg.id) }}">JSON</a>
+        </span>-->
     <!--<span class="label label-inverse" style="float: right;margin-right: 10px;">
         <img src="/rdf-icon.png"/>
         <a href="{{ h.url_for('dataset.read', id=pkg.id) }}.rdf">RDF</a>
         </span>-->
     <!--span class="label label-inverse" style="float: right; margin-right: 10px;margin-left: 10px;">
         <i class="icon-file-alt"></i>
-        <a style="color: lightgrey;" href="{{ h.url_for('dataset.read', id=pkg.id) }}/gmd">ISO19115/ISO19139 XML</a-->
-    </span>
+        <a style="color: lightgrey;" href="{{ h.url_for('dataset.read', id=pkg.id) }}/gmd">ISO19115/ISO19139 XML</a>
+    </span>-->
     <!-- {{ super() }} -->
     {% if pkg.private %}
       <span class="dataset-private label label-private pull-left">
@@ -45,7 +45,8 @@
         <h4 class="size-found">Dataset size is: {{h.human_readable_size(result_size_bytes)}} </h4>
     </div>
      <div class="bulk-btn">
-               {{ h.snippet('ckanext_bulk/snippets/package_popover.html', query=q) }}
+         package popover {{ pkg.id }}
+               {{ h.snippet('ckanext_bulk/snippets/package_popover.html', id=pkg.id) }}
     </div>
 
 {% endblock %}
