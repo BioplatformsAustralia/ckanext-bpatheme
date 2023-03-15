@@ -61,7 +61,7 @@
        {%- if not query and not c.userobj.sysadmin -%}
        {#  There is no query, but there are facets, so we need the popover bulk download button to think there is. #}
           {% set dud_query = "forced_by_facet" %}
-           {% snippet 'ckanext_bulk/snippets/package_popover.html', q=dud_query %}
+           {% snippet 'ckanext_bulk/snippets/search_popover.html', q=dud_query %}
       {%- endif %}
 {% endif %}
 
