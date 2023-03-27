@@ -40,6 +40,7 @@
 {% block search_title %}
 {% endblock %}
 {% block search_facets %}
+    {% if facets %}
       <p class="filter-list">
         {% for field in facets.fields %}
           {% set search_facets_items = facets.search.get(field)['items'] if facets.search and field in facets.search else [] %}
@@ -63,6 +64,7 @@
           {% set dud_query = "forced_by_facet" %}
            {% snippet 'ckanext_bulk/snippets/search_popover.html', q=dud_query %}
       {%- endif %}
+    {% endif %}
 {% endif %}
 
 
