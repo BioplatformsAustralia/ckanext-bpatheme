@@ -231,7 +231,7 @@
             } %}
         {% if projects.append(pp) %} {% endif %}
 
-         {% set fungi = {
+        {% set fungi = {
                 'logo' : "fungi.webp",
                 'icon' : "fungi.webp",
                 'iconalt' : "fungi.png",
@@ -266,6 +266,31 @@
                 ",
             } %}
         {% if projects.append(fungi) %} {% endif %}
+
+        {% set cipps = {
+                'logo' : "cipps.webp",
+                'icon' : "cipps.webp",
+                'iconalt' : "cipps.png",
+                'slug' : "cipps",
+                'url' : "https://bioplatforms.com/projects/cipps",
+                'title' : "ARC Centre of Excellence for Innovations in Peptide and Protein Science (CIPPS)",
+                'description' : "
+                       The ARC Centre of Excellence for Innovations in Peptide and Protein Science (CIPPS) is a national research centre funded through the Australian Research Council's Centres of Excellence scheme. CIPPS' vision is to discover new proteins and peptides from Australia's diverse flora and fauna, decode their biological functions, and develop new proteins and peptides to address challenges in health, agriculture and industry. Together with industry partners and international collaborators CIPPS are working to unleash the power of peptides and proteins for the benefit of humankind. CIPPS is developing research and outreach programs to promote peptide and protein science, and is deeply committed to nurturing the next generation of researchers.
+<br />
+For more information on the Centre please look at their website https://cipps.org.au/
+
+<br />
+Bioplatforms Australia establishes ongoing partnerships with Australian Research Council Centres of Excellence (ARC CoE).
+
+These large programs generate varied data resources that have potential for reuse by the  research community.
+
+These datasets are under embargo with moderated access to allow for the prioritisation of the activities of the relevant Centres. The length of embargo is defined with the project leads in view of releasing the datasets for public access in due time, fulfilling the remit of Bioplatforms Australia (enabled through NCRIS).
+
+If any of these datasets presents interest to you, please contact us through help@bioplatforms.com and we will assist with communication to the project lead(s) to discuss potential collaboration and data access at their discretion.
+
+                ",
+            } %}
+        {% if projects.append(cipps) %} {% endif %}
 
         <div class="container">
             <h3 class="heading">{{ _("Search within a project") }}</h3>
