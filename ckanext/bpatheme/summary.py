@@ -48,6 +48,8 @@ def replace_yes(text):
 def replace_bioplatforms_http(text):
     text = text.strip()
     separated = [not_empty for not_empty in re.split(r",|\s", text) if not_empty]
+    if len(separated) == 1:
+        return replace_url(text)
     return replace_multi_bioplatform_urls(separated)
 
 
