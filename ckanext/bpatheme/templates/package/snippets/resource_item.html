@@ -15,7 +15,7 @@
       {{ super() }}
     {% endif %}
    {% else %}
-      {% snippet 'ckanext_initiatives/snippets/resource_item/nonauth_title.html', res=res %}
+      {% snippet 'ckanext_initiatives/snippets/resource_item/nonauth_title.html', res=res, url=url %}
   {% endif %}
 {% endblock %}
 
