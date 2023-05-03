@@ -135,6 +135,8 @@ class CustomTheme(plugins.SingletonPlugin):
             "find_organizations_for_user": helper.find_organizations_for_user,
             "is_orgname_in_list": helper.is_orgname_in_list,
             "find_autoregister_organizations": helper.find_autoregister_organizations,
+            "order_schema_fields": helper.order_schema_fields,
+            "show_empty_fields": helper.show_empty_fields,
         }
 
     # Ifacets

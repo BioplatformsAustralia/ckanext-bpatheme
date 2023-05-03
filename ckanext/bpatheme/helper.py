@@ -463,3 +463,17 @@ def is_orgname_in_list(name, allowed_orgs):
             in_list = True
 
     return in_list
+
+
+def order_schema_fields(fields):
+
+    return fields
+
+
+def show_empty_fields():
+
+    return False
+
+
+
+
