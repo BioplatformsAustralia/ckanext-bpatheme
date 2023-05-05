@@ -466,7 +466,17 @@ def is_orgname_in_list(name, allowed_orgs):
 
 
 def order_schema_fields(fields):
-
+    """
+    This method will sort the incoming fields in the following order:
+    If the field name is in a list of the "Show first fields",  these fields should appear first in the returned list,
+    in the order of the "show first list".
+    If the field name is in a list of the "Show last fields", these fields should appear last inn the returned list, in
+    the order of the show last list.
+    If the field name is in neither list, it should appear wih others of its ilk, in alphabetical order.
+    NB: also, a field will not appear on the rendered page if it appears in the "exclude_fields" list in
+     ckanext-scheming/ckanext/scheming/templates/scheming/package/snippets/additional_info.html
+    """
+    #FIXME - this does not do any ordering, it just outputs what is input.
     return fields
 
 

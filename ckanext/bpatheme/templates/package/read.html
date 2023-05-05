@@ -55,4 +55,10 @@
     {{ super() }}
     {% snippet 'package/snippets/open_with_attribution.html', pkg_dict=pkg %}
     {% snippet 'package/snippets/related_data.html', pkg_dict=pkg  %}
+    {% if blanksChecked == 'Show' %}
+        {% set blanksChecked = 'Don''t Show' %}
+    {% else %}
+        {% set blanksChecked = 'Show' %}
+    {% endif %}
+    {% snippet 'package/snippets/blank_field_toggle.html', blanksChecked=blanksChecked %}
 {% endblock %}
