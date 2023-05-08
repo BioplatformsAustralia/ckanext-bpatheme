@@ -476,14 +476,29 @@ def order_schema_fields(fields):
     NB: also, a field will not appear on the rendered page if it appears in the "exclude_fields" list in
      ckanext-scheming/ckanext/scheming/templates/scheming/package/snippets/additional_info.html
     """
-    #FIXME - this does not do any ordering, it just outputs what is input.
-    return fields
+
+    first_list = [
+        "bpa_library_id",
+        "bpa_dataset_id",
+        "bpa_sample_id",
+        "library_id",
+        "dataset_id",
+        "sample_id",
+    ]
+
+    last_list = [
+        "resource_permissions",
+    ]
+
+    first_fields = [x for x in first_list if x in fields]
+    last_fields = [x for x in last_list if x in fields]
+
+    difference = [x for x in fields if x not in (first_fields + last_fields)]
+    ordered_fields = first_fields + difference + last_fields
+
+    return ordered_fields
 
 
 def show_empty_fields():
 
     return False
-
-
-
-
