@@ -505,6 +505,4 @@ def order_schema_fields(fields):
     return ordered_fields
 
 
-def show_empty_fields():
 
-    return False
