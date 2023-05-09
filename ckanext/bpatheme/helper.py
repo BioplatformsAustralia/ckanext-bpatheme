@@ -481,9 +481,15 @@ def order_schema_fields(fields):
         "bpa_library_id",
         "bpa_dataset_id",
         "bpa_sample_id",
+        "bioplatforms_library_id",
+        "bioplatforms_dataset_id",
+        "bioplatforms_sample_id",
         "library_id",
         "dataset_id",
         "sample_id",
+        "common_name",
+        "scientific_name",
+        "data_type",
     ]
 
     last_list = [
