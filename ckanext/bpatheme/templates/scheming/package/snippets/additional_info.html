@@ -4,7 +4,7 @@
   {%- for field in h.order_schema_fields(schema.dataset_fields) -%}
     {%- if field.field_name not in exclude_fields
         and field.display_snippet is not none
-        and (pkg_dict[field.field_name] or blanksChecked == 'Show' ) -%}
+        and (pkg_dict[field.field_name] or session['show_blanks'] == 'True' ) -%}
       <tr>
         <th scope="row" class="dataset-label">{{
           h.scheming_language_text(field.label) }}</th>

@@ -1,10 +1,19 @@
 
 
-<form action="#" method="get">
-    <fieldset>
-        <div class="form-group">
-            <button class="btn btn-default" type="submit">{{ blanksChecked }} blank fields</button>
-        </div>
-    </fieldset>
-</form>
+     {% if request.environ.QUERY_STRING == 'toggle_blanks' %}
+     {%- if 'show_blanks' in session: -%}
+        {% if session['show_blanks'] == "False" %}
+            {% set _ = session.update({"show_blanks": "True"}) %}
+        {% else %}
+            {% set _ = session.update({"show_blanks": "False"}) %}
+        {% endif %}
+    {%- else -%}
+        {% set _ = session.update({"show_blanks": "False"}) %}
+    {%- endif -%}
+    {% endif %}
+    {% set _ = session.save() %}
+
+ <a class="btn btn-default" href="{{ h.url_for('dataset.read', id=pkg.id) }}?toggle_blanks">
+     {% if not session['show_blanks'] == "True" %}Show{% else %}Hide{% endif %} Blank Fields</a>
+
 
