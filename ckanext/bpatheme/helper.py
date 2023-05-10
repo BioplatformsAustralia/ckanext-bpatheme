@@ -478,15 +478,15 @@ def order_schema_fields(fields):
     """
 
     first_list = [
-        "bpa_library_id",
-        "bpa_dataset_id",
-        "bpa_sample_id",
-        "bioplatforms_library_id",
-        "bioplatforms_dataset_id",
-        "bioplatforms_sample_id",
         "library_id",
         "dataset_id",
         "sample_id",
+        "bpa_library_id",
+        "bpa_dataset_id",
+        "bpa_sample_id",
+        "bioplaforms_library_id",
+        "bioplatforms_dataset_id",
+        "bioplatforms_sample_id",
         "common_name",
         "scientific_name",
         "data_type",
@@ -494,10 +494,13 @@ def order_schema_fields(fields):
 
     last_list = [
         "resource_permissions",
+        "access_control_date",
+        "access_control_mode",
     ]
 
-    first_fields = [x for x in first_list if x in fields]
-    last_fields = [x for x in last_list if x in fields]
+    first_fields = [field for field_name in first_list for field in fields if field_name == field["field_name"]]
+
+    last_fields = [field for field_name in last_list for field in fields if field_name == field["field_name"]]
 
     difference = [x for x in fields if x not in (first_fields + last_fields)]
     ordered_fields = first_fields + difference + last_fields
