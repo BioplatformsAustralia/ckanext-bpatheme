@@ -490,6 +490,9 @@ def order_schema_fields(fields):
         "common_name",
         "scientific_name",
         "data_type",
+        "data_context",
+        "data_custodian",
+        "date_of_transfer"
     ]
 
     last_list = [
