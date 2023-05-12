@@ -13,7 +13,7 @@
     {% endif %}
     {% set _ = session.save() %}
 
- <a class="btn btn-default" href="{{ h.url_for('dataset.read', id=pkg.id) }}?toggle_blanks">
+ <a class="btn btn-primary" style="float:right" href="{{ h.url_for('dataset.read', id=pkg.id) }}?toggle_blanks">
      {% if not session['show_blanks'] == "True" %}Show{% else %}Hide{% endif %} Blank Fields</a>
 
 

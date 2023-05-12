@@ -1,4 +1,14 @@
-{% ckan_extends %}
+{% extends "package/snippets/additional_info.html" %}
+
+{%- set exclude_fields = [
+    'id',
+    'title',
+    'name',
+    'notes',
+    'tag_string',
+    'license_id',
+    'owner_org',
+    ] -%}
 
 {% block package_additional_info %}
   {%- for field in h.order_schema_fields(schema.dataset_fields) -%}
