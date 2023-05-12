@@ -8,7 +8,7 @@
             {% set _ = session.update({"show_blanks": "False"}) %}
         {% endif %}
     {%- else -%}
-        {% set _ = session.update({"show_blanks": "False"}) %}
+        {% set _ = session.update({"show_blanks": "True"}) %}
     {%- endif -%}
     {% endif %}
     {% set _ = session.save() %}
