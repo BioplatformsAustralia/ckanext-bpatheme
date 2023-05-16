@@ -39,6 +39,10 @@ def contact_index():
     return render("home/contact.html")
 
 
+# BPA Shopping Cart
+def cart_index():
+    return render("home/cart.html")
+
 # BPA Behaviour after login
 def route_after_login():
      # login redirect to homepage bpa-archive-ops/issues#770
@@ -87,6 +91,7 @@ def external_styles_index():
 
 bpatheme.add_url_rule("/summary", view_func=summary_index)
 bpatheme.add_url_rule("/contact", view_func=contact_index)
+bpatheme.add_url_rule("/cart", view_func=cart_index)
 bpatheme.add_url_rule(
     "/user/private/api/bpa/check_permissions", view_func=bioplatforms_webtoken
 )
