@@ -476,7 +476,11 @@ def order_schema_fields(fields):
     NB: also, a field will not appear on the rendered page if it appears in the "exclude_fields" list in
      ckanext-scheming/ckanext/scheming/templates/scheming/package/snippets/additional_info.html
     """
+    first_list = []
+    last_list = []
 
+    """
+    Remove these list as initially proposed by Sophie, until after revisit of metadata spreadsheet standardization
     first_list = [
         "bioplatforms_project_code",
         "bioplatforms_sample_id",
@@ -531,7 +535,7 @@ def order_schema_fields(fields):
         "base_url",
         "resource_permissions",
     ]
-
+    """
     first_fields = [field for field_name in first_list for field in fields if field_name == field["field_name"]]
 
     last_fields = [field for field_name in last_list for field in fields if field_name == field["field_name"]]
