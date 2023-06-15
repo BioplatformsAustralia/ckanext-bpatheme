@@ -51,6 +51,13 @@
 {% endblock %}
 
 {% block package_resources %}
+    <div class="clearfix">&nbsp;</div>
+    {% asset 'shopping_cart/shopping_cart' %}
+    {% snippet 'shopping_cart/snippets/dock.html', scope='user', username=g.userobj.name, cart='main-cart', heading='shopping_cart_dock_heading.html' %}
+    <div class="clearfix">&nbsp;</div>
+    {% snippet 'shopping_cart/snippets/scripts.html' %}
+    {% snippet 'snippets/shopping_cart_add.html', pkg=pkg, extra_classes="btn-primary pull-right" %}
+    <p>&nbsp;</p>
     {% snippet 'package/snippets/embargo.html', pkg_dict=pkg %}
     {{ super() }}
     {% snippet 'package/snippets/open_with_attribution.html', pkg_dict=pkg %}

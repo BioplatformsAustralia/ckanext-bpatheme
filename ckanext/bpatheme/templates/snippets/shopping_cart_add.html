@@ -1,0 +1,11 @@
+{% if g.userobj %}
+{% set item_name = pkg.name %}
+{% set item_id = pkg.id %}
+{% set title = pkg.title %}
+{% set cart_item = {"short_title":  h.truncate(title, 80), "title": title, "name": item_name, "type": pkg.type, "id": item_id, "organization_id": pkg.organization.id, "notes": pkg.notes } %}
+{% set extra_classes = extra_classes or "" %}
+<button class="btn btn-secondary {{ extra_classes }}" data-module="shopping-cart-order" data-module-scope="user" data-module-username="{{ g.userobj.name }}" data-module-cart="main-cart" data-module-item="{{ cart_item.name }}" data-module-details="{{ h.dump_json(cart_item)}}" id="c_b_{{ cart_item.id }}"><i class="fa fa-solid fa-shopping-cart"></i><span id="c_b_t_{{cart_item.id}}">{{_('Add')}}</span></button>
+<script>
+    shopping_cart_observe_button("c_b_", "c_b_t_", "{{ cart_item.id }}", "shopping-cart-order-outside", " {{ _('Add') }}", "shopping-cart-order-inside", " {{ _('Remove' )}}" );
+</script>
+{% endif %}
