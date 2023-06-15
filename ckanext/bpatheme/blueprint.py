@@ -39,10 +39,6 @@ def contact_index():
     return render("home/contact.html")
 
 
-# BPA Shopping Cart
-def cart_index():
-    return render("home/cart.html")
-
 # BPA Behaviour after login
 def route_after_login():
      # login redirect to homepage bpa-archive-ops/issues#770
@@ -88,12 +84,32 @@ def external_styles_index():
     resp = make_response(base.render('external/external.css'))
     resp.headers['Content-Type'] = "text/css; charset=utf-8"
     return resp
+# Cart
+#  Main page:
+def cart_index(target_user):
+    if g.userobj is None:
+        return h.redirect_to('user.login')
+
+    site_user = logic.get_action("get_site_user")({'ignore_auth': True}, {})["name"]
+    ctx = {"ignore_auth": True, "user": site_user }
+    # Only admins can view another user's cart
+    username = g.userobj.name
+    if g.userobj.name != target_user:
+        if g.userobj.sysadmin is True:
+            username = target_user
+        else:
+            return h.redirect_to(f"/cart/{username}")
+            
+    user_dict = logic.get_action("user_show")(ctx, {"include_num_followers":True, "include_plugin_extras": True, "id": username})
+    return render("shopping_cart/cart.html",extra_vars={ "user_dict": user_dict })
+
 
 bpatheme.add_url_rule("/summary", view_func=summary_index)
 bpatheme.add_url_rule("/contact", view_func=contact_index)
-bpatheme.add_url_rule("/cart", view_func=cart_index)
 bpatheme.add_url_rule(
     "/user/private/api/bpa/check_permissions", view_func=bioplatforms_webtoken
 )
 bpatheme.add_url_rule("/after_login", view_func=route_after_login)
 bpatheme.add_url_rule("/external_styles.css", view_func=external_styles_index)
+# Cart
+bpatheme.add_url_rule("/cart/<target_user>", endpoint="cart", view_func=cart_index)

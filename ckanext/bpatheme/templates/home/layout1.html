@@ -7,7 +7,6 @@
         width: 150px !important;
     }
 </style>
-{% asset 'shopping_cart/shopping_cart' %}
 <div role="main" class="hero landing">
     <div class="search-wrapper">
         <div class="search-background lazyload">
@@ -294,9 +293,6 @@ If any of these datasets presents interest to you, please contact us through hel
         {% if projects.append(cipps) %} {% endif %}
 
         <div class="container">
-            <h3 class="heading">{{ _("This is my shopping cart") }}</h3>
-            {% snippet 'shopping_cart/snippets/dock.html', scope='session', cart='test', heading='shopping_cart_dock_heading.html', footer='shopping_cart_dock_footer.html', item='My item',counter='10' %}
-            <a href="/cart">Go to the Cart</a></a>
             <h3 class="heading">{{ _("Search within a project") }}</h3>
             {# enable project sorting by rank order, then by order in config #}
             {% set ranking = h.organization_slugs_by_creation_and_rank() %}

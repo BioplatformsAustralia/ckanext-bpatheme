@@ -1,0 +1,45 @@
+{#
+    Overrides: 'shopping_cart/snippets/dock.html'
+    Purpose: 
+    - add additional parameter to the module
+    - selectively hide sections of the dock
+
+scope
+cart
+
+heading
+body
+footer
+item
+
+counter
+
+
+
+#}
+
+{% if g.userobj %}
+<div class="shopping-cart-dock" data-module="shopping-cart-dock"
+     data-module-scope="{{ scope }}"
+     data-module-cart="{{ cart }}"
+     data-module-username="{{ username }}"
+     data-module-snippet="{{ snippet }}"
+
+     {% if counter %} data-module-counter="{{ counter }}"{% endif %}
+
+     {% if heading %} data-module-heading="{{ heading }}"{% endif %}
+     {% if empty %} data-module-empty="{{ empty }}"{% endif %}
+     {% if footer %} data-module-footer="{{ footer }}"{% endif %}
+     {% if not_empty %} data-module-not_empty="{{ not_empty }}"{% endif %}
+>
+    {% if heading %}
+        <div class="shopping-cart-dock--heading" style="align: right; text-align: right;"></div>
+    {% endif %}
+    {% if not_empty %}
+        <div class="shopping-cart-dock--body"></div>
+    {% endif %}
+    {% if footer %}
+        <div class="shopping-cart-dock--footer"></div>
+    {% endif %}
+</div>
+{% endif %}

@@ -1,0 +1,28 @@
+<script>
+  function shopping_cart_observe_button(cart_btn_pfx, cart_btn_text_pfx, elemId, addClass, addText, removeClass, removeText) {
+    const targetNode = document.getElementById(`${cart_btn_pfx}${elemId}`);
+    const config = { attributes: true, childList: false, subtree: false };
+    const callback = (mutationList, observer) => {
+      for (const mutation of mutationList) {
+        if (mutation.type === "childList") {
+          // ignore
+        } else if (mutation.type === "attributes") {
+          const classVal = mutation.target.className;
+          const textNode = document.getElementById(`${cart_btn_text_pfx}${elemId}`);
+          let newHtml = textNode.innerHTML;
+          if (classVal.indexOf(addClass) >= 0) {
+            newHtml = addText;
+          }
+          if (classVal.indexOf(removeClass) >= 0) {
+            newHtml = removeText;
+          }
+          textNode.innerHTML = newHtml;
+        }
+      }
+    };
+    // Create an observer instance linked to the callback function
+    const observer = new MutationObserver(callback);
+    // Start observing the target node for configured mutations
+    observer.observe(targetNode, config);
+  }
+</script>
