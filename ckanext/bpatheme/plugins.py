@@ -136,6 +136,7 @@ class CustomTheme(plugins.SingletonPlugin):
             "is_orgname_in_list": helper.is_orgname_in_list,
             "find_autoregister_organizations": helper.find_autoregister_organizations,
             "order_schema_fields": helper.order_schema_fields,
+            "get_projects_in_reverse_ranking_order":helper.get_projects_in_reverse_ranking_order,
         }
 
     # Ifacets

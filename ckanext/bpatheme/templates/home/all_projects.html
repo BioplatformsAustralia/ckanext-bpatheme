@@ -1,0 +1,52 @@
+{% extends "page.html" %}
+{% set homepage_style = ( g.homepage_style or '1' ) %}
+
+{% block subtitle %}{{ _("Welcome") }}{% endblock %}
+
+{% block maintag %}{% endblock %}
+{% block toolbar %}{% endblock %}
+
+{% block content %}
+  <div class="homepage layout-{{ homepage_style }}">
+    <div id="content" class="container">
+      {{ self.flash() }}
+    </div>
+    {% block primary_content %}
+<style>
+    td .fa {
+        font-size: 1.5em;
+    }
+
+    .right {
+        width: 150px !important;
+    }
+</style>
+<div role="main" class="hero landing">
+    <div class="search-wrapper">
+        <div class="search-background lazyload">
+        </div>
+        {% block search %}
+            {% snippet 'home/snippets/search.html' %}
+        {% endblock %}
+    </div>
+    <div class="featured-orgs">
+      <div class="container">
+            <h3 class="heading">{{ _("Search within a project") }}</h3>
+        {% set projects = h.get_projects_in_reverse_ranking_order() %}
+            <div class="row row-eq-height">
+                {% for project in projects %}
+                        {% snippet 'home/snippets/project.html', project=project %}
+                        {% if loop.index is divisibleby 4  %}
+                            {# restart row #}
+                            </div>
+                            <div class="row row-eq-height">
+                        {% endif %}
+                {% endfor %}
+                </div>
+       </div>
+      </div>
+    </div>
+</div>
+    {% endblock %}
+  </div>
+{% endblock %}

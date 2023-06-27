@@ -38,6 +38,10 @@ def summary_index():
 def contact_index():
     return render("home/contact.html")
 
+def all_projects_index():
+    return render("home/all_projects.html")
+
+
 
 # BPA Behaviour after login
 def route_after_login():
@@ -106,6 +110,7 @@ def cart_index(target_user):
 
 bpatheme.add_url_rule("/summary", view_func=summary_index)
 bpatheme.add_url_rule("/contact", view_func=contact_index)
+bpatheme.add_url_rule("/all_projects", view_func=all_projects_index)
 bpatheme.add_url_rule(
     "/user/private/api/bpa/check_permissions", view_func=bioplatforms_webtoken
 )

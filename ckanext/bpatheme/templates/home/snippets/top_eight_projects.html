@@ -1,0 +1,14 @@
+
+            <div class="row row-eq-height">
+                {% for project in projects %}
+                    {% if loop.index < 9 %}
+                        {% snippet 'home/snippets/project.html', project=project %}
+                        {% if loop.index is divisibleby 4  %}
+                            {# restart row #}
+                            </div>
+                            <div class="row row-eq-height">
+                        {% endif %}
+                    {% endif %}
+                {% endfor %}
+                </div>
+       </div>

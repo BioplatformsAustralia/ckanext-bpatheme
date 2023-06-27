@@ -546,4 +546,239 @@ def order_schema_fields(fields):
     return ordered_fields
 
 
+def get_projects_in_reverse_ranking_order():
+    projects = []
+
+    amdb = {'logo' : "new_ausmicro_logo.webp",
+            'has_logo' : "true",
+            'icon' : "icon_amd.webp",
+            'iconalt' : "icon_amd.png",
+            'slug' : "australian-microbiome",
+            'url' : "https://bioplatforms.com/projects/australian-microbiome/",
+            'title' : "Australian Microbiome",
+            'description' : "The Australian Microbiome Database is a collaborative project to create a public " \
+                "resource containing microbial genome and associated site specific metadata information from a "\
+                "range of Australian environments including soils, marine and freshwater.",
+            }
+    projects.append(amdb)
+
+    sepsis = {'logo' : "sepsis.webp",
+              'icon' : "icon_sepsis.webp",
+              'iconalt' : "icon_sepsis.png",
+              'slug' : "bpa-sepsis",
+              'url' : "https://bioplatforms.com/projects/sepsis/",
+              'title' : "Antibiotic Resistant Sepsis Pathogens",
+              'description' : "The Antibiotic Resistant Sepsis Pathogens Framework Initiative aims to develop a "\
+                   "framework dataset that will enable identification of core targets common to "\
+                   "antibiotic-resistant sepsis pathogens.",
+            }
+    projects.append(sepsis)
+
+    omg = {'logo' : "omg-logo.webp",
+           'has_logo' : "true",
+           'special_class' : "no-circular-logo",
+           'icon' : "icon_omg.webp",
+           'iconalt' : "icon_omg.png",
+           'slug' : "bpa-omg",
+           'url' : "https://bioplatforms.com/oz-mammals/",
+           'title' : "Oz Mammals Genomics Initiative",
+           'description' : "The Oz Mammals Genomics Initiative is an Australia-wide collaboration involving "\
+               "researchers from more than 30 institutions, which aims to develop genomic resources for Australia's "\
+               "mammals.",
+           }
+    projects.append(omg)
+
+    gap = {'logo' : "Logo_plants_updown.webp",
+           'has_logo' : "true",
+           'special_class' : "no-circular-logo",
+           'icon' : "icon_gap.webp",
+           'iconalt' : "icon_gap.png",
+           'slug' : "bpa-plants",
+           'url' : "https://bioplatforms.com/projects/genomics-for-australian-plants/",
+           'title' : "Genomics for Australian Plants",
+           'description' : "The Genomics for Australian Plants Initiative is a national collaborative project, which "\
+               "aims to develop genomic resources for the Australian plants community.",
+           }
+    projects.append(gap)
+
+    ausarg = {'logo' : "AusARG-Logo-RGB-150dpi-Transparent.webp",
+              'has_logo' : "true",
+              'icon' : "icon_arg.webp",
+              'iconalt' : "icon_arg.png",
+              'slug' : "ausarg",
+              'url' : "https://bioplatforms.com/projects/reptiles-and-amphibians/",
+              'title' : "Australian Amphibian and Reptile Genomics Initiative",
+              'description' : "The Australian Amphibian and Reptile Genomics Initiative is a national collaborative "\
+                  "project that that will facilitate research using genomics approaches towards a more thorough "\
+                  "understanding of evolution and conservation of Australia’s unique native Amphibians and Reptiles.",
+              }
+    projects.append(ausarg)
+
+    tsi = {'logo' : "Threatened-Species-Initiative-Logo-150dpi-RGB.webp",
+           'has_logo' : "true",
+           'icon' : "icon_tsi.webp",
+           'iconalt' : "icon_tsi.png",
+           'slug' : "threatened-species",
+            'url' : "https://bioplatforms.com/projects/threatened-species/",
+            'title' : "Threatened Species Initiative",
+            'description' : "The Threatened Species Initiative (TSI) will create a national library of genomic data "\
+                 "to support decision-making for biodiversity conservation.",
+            }
+    projects.append(tsi)
+
+    gbr = {'logo' : "coral.webp",
+           'icon' : "icon_gbr.webp",
+           'iconalt' : "icon_gbr.png",
+           'slug' : "bpa-great-barrier-reef",
+           'url' : "https://bioplatforms.com/projects/great-barrier-reef/",
+           'title' : "Great Barrier Reef",
+           'description' : "The Sea-quence Project is generating core genetic data for corals from the Great Barrier "\
+                           "Reef and Red Sea to ultimately help guide reef management practices.",
+           }
+    projects.append(gbr)
+
+    melanoma = {'logo' : "melanoma.webp",
+                'icon' : "icon_melanoma.webp",
+                'iconalt' : "icon_melanoma.png",
+                'slug' : "bpa-melanoma",
+                'url' : "https://bioplatforms.com/melanoma",
+                'title' : "Melanoma",
+                'description' : "The Melanoma Genomics Project aims to whole genome sequence approximately 500 "\
+                "melanoma patients.",
+               }
+    projects.append(melanoma)
+
+    wpt = {'logo' : "fusarium_head_blight_infected_ear.webp",
+           'icon' : "icon_wheat_pathogens_transcript.webp",
+           'iconalt' : "icon_wheat_pathogens_transcript.png",
+           'slug' : "bpa-wheat-pathogens-transcript",
+           'url' : "https://bioplatforms.com/wheat-datasets",
+           'title' : "Wheat Pathogens Transcript",
+           'description' : "This dataset contains transcript sequence data from 8 different fungal pathogen species "\
+                "of wheat.",
+           }
+    projects.append(wpt)
+
+    wpg = {'logo' : "stagonospora_nodorum.webp",
+           'icon' :"icon_wheat_pathogens_genomes.webp",
+           'iconalt' :"icon_wheat_pathogens_genomes.png",
+           'slug' : "bpa-wheat-pathogens-genomes",
+           'url' : "https://bioplatforms.com/wheat-datasets",
+           'title' : "Wheat Pathogens Genomes",
+           'description' : "This dataset contains the genomic sequence from 10 fungal and 2 bacterial pathogen "\
+                "species.Among the pathogens sequenced are the causal agents of stripe rust, stem rust, tan spot, "\
+                "glume blotch, septoria leaf blotch, bare patch and crown rot/head blight.",
+            }
+    projects.append(wpg)
+
+    wc = {'logo' : "wheat.webp",
+          'icon' : "icon_wheat.webp",
+          'iconalt' : "icon_wheat.png",
+          'slug' : "bpa-wheat-cultivars",
+          'url' : "https://bioplatforms.com/wheat-datasets",
+          'title' : "Wheat Cultivars",
+          'description' : "This dataset contains genomic sequence information from 16 wheat varieties of importance "\
+              "to Australia selected and prioritised by the major stakeholders of the Australian grains research "\
+              "community based on availability of mapping populations and genetic diversity.",
+          }
+    projects.append(wc)
+
+    stemcells = {'logo' : "stemcell.webp",
+                 'icon' : "icon_stemcells.webp",
+                 'iconalt' : "icon_stemcells.png",
+                 'slug' : "bpa-stemcells",
+                 'url' : "https://bioplatforms.com/stem-cells",
+                 'title' : "Stem Cells",
+                 'description' : "Stem cells allow us to study fundamental processes in tissue growth, "\
+                      "development, aging and disease.",
+            }
+    projects.append(stemcells)
+
+    grasslands = {'logo' : "Australian-Grasslands.webp",
+                  'icon' : "icon_grasslands.webp",
+                  'iconalt' : "icon_grasslands.png",
+                  'slug' : "australian-grasslands",
+                  'url' : "https://bioplatforms.com/projects/australian-grasslands/",
+                  'title' : "Australian Grasslands",
+                  'description' : "The Australian Grasslands Initiative is a national collaborative project, which "\
+                      "aims to identify mechanisms of adaptation in grasses to Australia's diverse range of soils "\
+                      "and climates.",
+                  }
+    projects.append(grasslands)
+
+    pp = {'logo' : "plant_pathogen.webp",
+          'icon' : "icon_plant_pathogen.webp",
+          'iconalt' : "icon_plant_pathogen.png",
+          'slug' : "plant-pathogen",
+          'url' : "https://bioplatforms.com/projects/plant-pathogen-omics/",
+          'title' : "Plant Pathogen 'Omics",
+          'description' : "The Plant Pathogen ‘Omics Initiative is a national collaborative project, which aims to "\
+              "generate high quality molecular reference data for plant  pathogens in Australia to support "\
+              "fundamental research and development in plant protection and contribute to an effective national "\
+              "biosecurity surveillance system.",
+          }
+    projects.append(pp)
+
+    fungi = {'logo' : "fungi.webp",
+             'icon' : "fungi.webp",
+             'iconalt' : "fungi.png",
+             'slug' : "fungi",
+             'url' : "https://bioplatforms.com/projects/fungi/",
+             'title' : "Fungi Functional 'Omics",
+             'description' : "The fungal kingdom sits taxonomically separated from plants and animals. They have "\
+                 "unique characteristics including structure, metabolites, nutritional properties and ecological "\
+                 "functions.<br\\> Globally, currently 148,000 species of fungi are recognised, the majority in "\
+                 "the phyla Ascomycota and Basidiomycota. The vast majority of the total estimated 2.2-3.8 million "\
+                 "fungal species, over 90%, are currently unknown to science. The majority of the knowledge on the "\
+                 "species in Australia stems from alignment of species commonly thought to have originated, or be "\
+                 "analogues to northern hemisphere fungal species. Australian mycologists have attempted to study "\
+                 "native fungi relying primarily on classical morphology, which has often led to the incorrect "\
+                 "identification of taxa or identification by alignment to northern hemisphere taxa. <br /> <br />"\
+                 "The generation of omics data will enable the discovery of native fungal functions that may provide "\
+                 "new avenues for emerging industries, in particular for native foods or to demonstrate provenance of "\
+                 "foods, biologically active discoveries, biomaterial engineering, land restoration, waste management "\
+                 "and circular economies. Additionally, characterising organisms, substrates and growth environments "\
+                 "could accelerate the development of fungal based products or processors while, simultaneously, "\
+                 "benefitting basic microbiological science and the engineering of biological systems.",
+            }
+    projects.append(fungi)
+
+    cipps = {'logo' : "cipps.webp",
+             'icon' : "cipps.webp",
+             'iconalt' : "cipps.png",
+             'slug' : "cipps",
+             'url' : "https://bioplatforms.com/projects/cipps",
+             'title' : "ARC Centre of Excellence for Innovations in Peptide and Protein Science (CIPPS)",
+             'description' : "The ARC Centre of Excellence for Innovations in Peptide and Protein Science (CIPPS) is "\
+                 "a national research centre funded through the Australian Research Council's Centres of Excellence "\
+                 "scheme. CIPPS' vision is to discover new proteins and peptides from Australia's diverse flora and "\
+                 "fauna, decode their biological functions, and develop new proteins and peptides to address "\
+                 "challenges in health, agriculture and industry. Together with industry partners and international "\
+                 "collaborators CIPPS are working to unleash the power of peptides and proteins for the benefit of "\
+                 "humankind. CIPPS is developing research and outreach programs to promote peptide and protein "\
+                 "science, and is deeply committed to nurturing the next generation of researchers.<br />"\
+                 "For more information on the Centre please look at their website https://cipps.org.au/<br />"\
+                 "Bioplatforms Australia establishes ongoing partnerships with Australian Research Council Centres of "\
+                 "Excellence (ARC CoE). These large programs generate varied data resources that have potential for "\
+                 "reuse by the  research community.<br />"\
+                 "These datasets are under embargo with moderated access to allow for the prioritisation of the "\
+                 "activities of the relevant Centres. The length of embargo is defined with the project leads in view "\
+                 "of releasing the datasets for public access in due time, fulfilling the remit of Bioplatforms "\
+                 "Australia (enabled through NCRIS).<br/>"\
+                 "If any of these datasets presents interest to you, please contact us through help@bioplatforms.com "\
+                 "and we will assist with communication to the project lead(s) to discuss potential collaboration and "\
+                 "data access at their discretion.",
+            }
+    projects.append(cipps)
+
+    ranking = organization_slugs_by_creation_and_rank()
+
+    for p in projects:
+        order = 0
+        if p["slug"] in ranking:
+            order = len(ranking) - ranking.index(p["slug"])
+        p.update({'order': order})
+
+    return sorted(projects, key=lambda x: x.get('order'), reverse=True)
+
 
