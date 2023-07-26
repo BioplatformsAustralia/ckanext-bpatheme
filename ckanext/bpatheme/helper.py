@@ -782,3 +782,12 @@ def get_projects_in_reverse_ranking_order():
     return sorted(projects, key=lambda x: x.get('order'), reverse=True)
 
 
+def check_user_dataset_access():
+    # helper method to determine if the "Datasets" tab should appear for the given user
+    # If the user is an Admin, then, yes, always
+    if authz.is_sysadmin(c.user):
+        return True
+    # If the user has any owned/created datasets, then yes.
+    #todo - how to figure out if we own any datasets...
+    # otherwise no
+    return False

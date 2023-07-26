@@ -137,6 +137,7 @@ class CustomTheme(plugins.SingletonPlugin):
             "find_autoregister_organizations": helper.find_autoregister_organizations,
             "order_schema_fields": helper.order_schema_fields,
             "get_projects_in_reverse_ranking_order":helper.get_projects_in_reverse_ranking_order,
+            "check_user_dataset_access":helper.check_user_dataset_access,
         }
 
     # Ifacets

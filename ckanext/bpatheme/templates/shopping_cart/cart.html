@@ -1,18 +1,7 @@
 {% extends "user/read.html" %}
 
-{% block content_primary_nav %}
-  <li class="active"><a href="/cart/{{user.name}}"><i class="fa fa-shopping-cart"></i>{{ _('Cart') }}</a></li>
-  {{ h.build_nav_icon('user.read', _('Datasets'), id=user.name, icon='sitemap') }}
-  {{ h.build_nav_icon('user.activity', _('Activity Stream'), id=user.name, icon='clock-o') }}
-  {% if h.check_access('api_token_list', {'user': user['name']}) %}
-    {{ h.build_nav_icon('user.api_tokens', _('API Tokens'), id=user.name, icon='key') }}
-  {% endif %}
-{% endblock %}
-
-
 {% block page_primary_action %}
   <h2>{{ _('Shopping Cart') }}</h2>
-
 {% endblock %}
 
 {% block primary_content_inner %}

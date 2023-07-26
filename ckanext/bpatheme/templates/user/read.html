@@ -1,10 +1,38 @@
 {% ckan_extends %}
 
-{% block content_primary_nav %}
-  <li><a href="/cart/{{user.name}}"><i class="fa fa-shopping-cart"></i>{{ _('Cart') }}</a></li>
-  {{ h.build_nav_icon('user.read', _('Datasets'), id=user.name, icon='sitemap') }}
-  {{ h.build_nav_icon('user.activity', _('Activity Stream'), id=user.name, icon='clock-o') }}
-  {% if h.check_access('api_token_list', {'user': user['name']}) %}
-    {{ h.build_nav_icon('user.api_tokens', _('API Tokens'), id=user.name, icon='key') }}
+{% block page_primary_action %}
+  {% if h.check_user_dataset_access() %}
+    {% if h.check_access('package_create') and user.datasets %}
+      {% snippet 'snippets/add_dataset.html' %}
+    {% endif %}
   {% endif %}
 {% endblock %}
+
+{% block primary_content_inner %}
+  {% if h.check_user_dataset_access() %}
+  <h2 class="hide-heading">
+    {% block page_heading %}{{ _('Datasets') }}{% endblock %}
+  </h2>
+  {% block package_list %}
+    {%- if user.datasets -%}
+      {% snippet 'snippets/package_list.html', packages=user.datasets %}
+    {%- else -%}
+      {% if is_myself %}
+      <p class="empty">
+        {{ _('You haven\'t created any datasets.') }}
+          {% if h.check_access('package_create') %}
+            {% link_for _('Create one now?'), named_route='dataset.new' %}
+          {% endif %}
+      </p>
+      {% else %}
+      <p class="empty">
+        {{ _('User hasn\'t created any datasets.') }}
+      </p>
+      {% endif %}
+  {%- endif -%}
+  {% endblock %}
+  {% else %}
+        {{ _('Click link above to view shopping cart, activity or API tokens') }}
+  {% endif %}
+{% endblock %}
+
