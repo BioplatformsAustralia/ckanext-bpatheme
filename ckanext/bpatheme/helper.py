@@ -771,6 +771,45 @@ def get_projects_in_reverse_ranking_order():
             }
     projects.append(cipps)
 
+    ppa = {'logo' : "ppa.webp",
+             'icon' : "ppa.webp",
+             'iconalt' : "ppa.png",
+             'slug' : "ppa",
+             'url' : "https://bioplatforms.com/projects/ppa",
+             'title' : "Plant Protein Atlas",
+             'description' : "The Plant Protein Atlas Initiative will use targeted ‘omics technologies, including "\
+                 "genomics, proteomics, metabolomics and phenomics (with the NCRIS-enabled Australian Plant Phenomics "\
+                 "Facility) to guide and support progress in genetic and agronomy research towards the optimisation "\
+                 "of pulse crops for protein harvest and processing, underpinning an ongoing effort in developing a "\
+                 "quality Australian plant protein production industry.",
+            }
+    projects.append(ppa)
+
+    fish = {'logo' : "fish.webp",
+             'icon' : "fish.webp",
+             'iconalt' : "fish.png",
+             'slug' : "aus-fish",
+             'url' : "https://bioplatforms.com/projects/aus-fish",
+             'title' : "Australian Fish Genomics",
+             'description' : "The Australian Fish Genomics Initiative aims to build a foundation of genomic data, "\
+                 "including phylogenomics, reference genomes, population genetics, to advance our understanding and "\
+                 "conservation of Australia’s unique native fish.",
+            }
+    projects.append(fish)
+
+    avian = {'logo' : "avian.webp",
+             'icon' : "avian.webp",
+             'iconalt' : "avian.png",
+             'slug' : "aus-avian",
+             'url' : "https://bioplatforms.com/projects/aus-avian",
+             'title' : "Australian Avian Genomics",
+             'description' : "The Australian Avian Genomics Initiative aims to build a foundation of genomic data, "\
+                  "including phylogenomics, reference genomes, population genetics, to advance our understanding and "\
+                  "conservation of Australia’s unique native birds.",
+
+            }
+    projects.append(avian)
+
     ranking = organization_slugs_by_creation_and_rank()
 
     for p in projects:
