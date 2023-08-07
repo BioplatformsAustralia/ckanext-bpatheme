@@ -775,7 +775,7 @@ def get_projects_in_reverse_ranking_order():
              'icon' : "ppa.webp",
              'iconalt' : "ppa.png",
              'slug' : "ppa",
-             'url' : "https://bioplatforms.com/projects/ppa",
+             'url' : "https://bioplatforms.com/projects/plant-protein-atlas-initiative/",
              'title' : "Plant Protein Atlas",
              'description' : "The Plant Protein Atlas Initiative will use targeted ‘omics technologies, including "\
                  "genomics, proteomics, metabolomics and phenomics (with the NCRIS-enabled Australian Plant Phenomics "\
@@ -789,7 +789,7 @@ def get_projects_in_reverse_ranking_order():
              'icon' : "fish.webp",
              'iconalt' : "fish.png",
              'slug' : "aus-fish",
-             'url' : "https://bioplatforms.com/projects/aus-fish",
+             'url' : "https://bioplatforms.com/projects/australian-fish-genomics-initiative/",
              'title' : "Australian Fish Genomics",
              'description' : "The Australian Fish Genomics Initiative aims to build a foundation of genomic data, "\
                  "including phylogenomics, reference genomes, population genetics, to advance our understanding and "\
@@ -801,7 +801,7 @@ def get_projects_in_reverse_ranking_order():
              'icon' : "avian.webp",
              'iconalt' : "avian.png",
              'slug' : "aus-avian",
-             'url' : "https://bioplatforms.com/projects/aus-avian",
+             'url' : "https://bioplatforms.com/projects/australian-avian-genomics-initiative/",
              'title' : "Australian Avian Genomics",
              'description' : "The Australian Avian Genomics Initiative aims to build a foundation of genomic data, "\
                   "including phylogenomics, reference genomes, population genetics, to advance our understanding and "\
