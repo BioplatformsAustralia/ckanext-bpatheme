@@ -146,24 +146,25 @@
                         {% if h.get_os_env_value('COMMS_OWNER') %}
                             <h3 class="comms-title">{{ h.get_os_env_value('COMMS_TITLE') }}</h3>
                         {% endif %}
-                        <p class="comms-message">{{ h.get_os_env_value('COMMS_MESSAGE') }}</p>
+                        <p> <span class="comms-message">{{ h.get_os_env_value('COMMS_MESSAGE') }}</span>
                             {% if h.get_os_env_value('COMMS_LINK_HREF') %}
 
-                        <div class="comms-link">
+                        <span> class="comms-link">
                   <a target="_blank" rel="noopener noreferrer"
                      href="{{ h.get_os_env_value('COMMS_LINK_HREF') }}">{{ h.get_os_env_value('COMMS_LINK_TEXT') }}
                              <i class="fa fa-long-arrow-right" aria-hidden="true"></i>
                   </a>
 
-                            </div>
+                            </span>
                             {% endif %}
-
+                        </p>
                         {% if h.get_os_env_value('COMMS_OWNER') %}
                             <p class="comms-owner">{{ h.get_os_env_value('COMMS_OWNER') }}</p>
                         {% endif %}
                     </div>
                 </div>
             {% endif %}
-        </header>
-    </div>
+        </div>
+    </header>
+
 {% endblock %}
