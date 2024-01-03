@@ -697,7 +697,7 @@ def get_projects_in_reverse_ranking_order():
     grasslands = {'logo' : "Australian-Grasslands.webp",
                   'icon' : "icon_grasslands.webp",
                   'iconalt' : "icon_grasslands.png",
-                  'slug' : "australian-grasslands",
+                  'slug' : "grasslands",
                   'url' : "https://bioplatforms.com/projects/australian-grasslands/",
                   'title' : "Australian Grasslands",
                   'description' : "The Australian Grasslands Initiative is a national collaborative project, which "\
