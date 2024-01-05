@@ -26,20 +26,21 @@
           {% set organization = h.get_organization(pkg.organization.name) %}
           {% set key = "policy_url" %}
           {% if 'extras' in organization %}
+            {% set key_checker={'found':'False'} %}      {# use a dict to bypass jinja "for" scoping issue #}
             {% for item in organization['extras'] %}
-              {% if 'key' in item %}
-                 {% if item['key'] == key and item['value']|length %}
+              {% if 'key' in item  and item['key'] == key and item['value']|length %}
+                 {% set test = key_checker.update({'found':'True'}) %}
                    <a href="{{ item['value'] }}">Data Policy</a>
-                 {% else %}
-                   Data Policy
-                 {% endif %}
               {% endif %}
             {% endfor %}
+            {% if key_checker["found"] == 'False' %}
+                     Data Policy
+            {% endif %}
           {% else %}
              Data Policy
           {% endif %}
     {% else %}
-    Data Policy
+        Data Policy
     {% endif %}
     for attribution information.
     </div>
