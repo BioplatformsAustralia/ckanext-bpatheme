@@ -901,23 +901,52 @@ body {
 }
 
 @media screen and (min-width: 1201px) {
+    #summary-table th:nth-child(n+3),
+    #summary-table td:nth-child(n+3) {
+        width: 4em;
+        text-align: center;
+    }
 
-    #summary-table th:nth-child(1),
-    #summary-table td:nth-child(1) {
-        min-width: 16em;
-        width: 16em;
+    #summary-table th:nth-child(5),
+    #summary-table td:nth-child(5) {
+        min-width: 8em;
+        width: 8em;
+        text-align: center;
     }
 
     .fullscreen #summary-table th:nth-child(1),
-    .fullscreen #summary-table td:nth-child(1) {
-        min-width: 16em;
-        width: auto;
+    .fullscreen #summary-table th:nth-child(2),
+    .fullscreen #summary-table th:nth-child(7),
+    .fullscreen #summary-table td:nth-child(1),
+    .fullscreen #summary-table td:nth-child(2),
+    .fullscreen #summary-table td:nth-child(7) {
+        min-width: 12em;
+        width: 12em;
+        text-align: center;
+    }
+
+    .fullscreen #summary-table th:nth-child(5),
+    .fullscreen #summary-table td:nth-child(5) {
+        min-width: 8em;
+        width: 8em;
+        text-align: center;
+    }
+
+    #summary-table th:nth-child(1),
+    #summary-table th:nth-child(2),
+    #summary-table th:nth-child(7),
+    #summary-table td:nth-child(1),
+    #summary-table td:nth-child(2),
+    #summary-table td:nth-child(7) {
+        min-width: 12em;
+        width: 12em;
+        text-align: center;
     }
 
 
-    #summary-table th:nth-child(n+4),
-    #summary-table td:nth-child(n+4) {
-        width: 8em;
+    #summary-table th:nth-child(n+12),
+    #summary-table td:nth-child(n+12) {
+        display: none;
         text-align: center;
     }
 }
@@ -925,8 +954,8 @@ body {
 @media screen and (max-width: 1200px) {
 
 
-    #summary-table th:nth-child(n+4),
-    #summary-table td:nth-child(n+4) {
+    #summary-table th:nth-child(n+3),
+    #summary-table td:nth-child(n+3) {
         min-width: 4em;
         text-align: center;
         with: auto;
