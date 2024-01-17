@@ -901,9 +901,16 @@ body {
 }
 
 @media screen and (min-width: 1201px) {
-    #summary-table th:nth-child(n+3),
-    #summary-table td:nth-child(n+3) {
+    #summary-table th:nth-child(n+4),
+    #summary-table td:nth-child(n+4) {
         width: 4em;
+        text-align: center;
+    }
+
+    #summary-table th:nth-child(3),
+    #summary-table td:nth-child(3) {
+        min-width: 5em;
+        width: 5em;
         text-align: center;
     }
 
@@ -922,6 +929,13 @@ body {
     .fullscreen #summary-table td:nth-child(7) {
         min-width: 12em;
         width: 12em;
+        text-align: center;
+    }
+
+    .fullscreen #summary-table th:nth-child(3),
+    .fullscreen #summary-table td:nth-child(3) {
+        min-width: 5em;
+        width: 5em;
         text-align: center;
     }
 
@@ -954,8 +968,8 @@ body {
 @media screen and (max-width: 1200px) {
 
 
-    #summary-table th:nth-child(n+3),
-    #summary-table td:nth-child(n+3) {
+    #summary-table th:nth-child(n+4),
+    #summary-table td:nth-child(n+4) {
         min-width: 4em;
         text-align: center;
         with: auto;
