@@ -20,6 +20,7 @@ search_patterns = {
     "yes": r"^[\s]*yes.*",
     "bioplatforms_http": r"^[\s]*http[s]?:\/\/data.bioplatforms.com.*$",
     "other_http": r"^[\s]*http[s]?:\/\/(?!data.bioplatforms.com).*$",
+    "mailTo": r"^[\s]*mailTo:.*$",
 }
 
 
@@ -34,8 +35,10 @@ def search_and_replace_once(text):
             "yes": replace_yes,
             "bioplatforms_http": replace_bioplatforms_http,
             "other_http": replace_url,
+            "mailTo": replace_mail_to,
         }.items()
     ):
+
         if re.search(search_patterns[search_keyword], text):
             return replace_fn(text)
     return None
@@ -66,6 +69,12 @@ def replace_url(text):
     url = text.strip()
     return '<a target="_blank" rel="noopener noreferrer" href="{0}">{1}</a>'.format(
         url, link_marker
+    )
+
+
+def replace_mail_to(text):
+    return '<a href="{0}"> {1}</a>'.format(
+        text, link_marker
     )
 
 
