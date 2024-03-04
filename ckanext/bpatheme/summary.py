@@ -21,6 +21,7 @@ search_patterns = {
     "bioplatforms_http": r"^[\s]*http[s]?:\/\/data.bioplatforms.com.*$",
     "other_http": r"^[\s]*http[s]?:\/\/(?!data.bioplatforms.com).*$",
     "mailTo": r"^[\s]*mailTo:.*$",
+    "||": r"[||]{2}|\|",
 }
 
 
@@ -34,11 +35,11 @@ def search_and_replace_once(text):
         {
             "yes": replace_yes,
             "bioplatforms_http": replace_bioplatforms_http,
-            "other_http": replace_url,
+            "other_http": replace_url_with_bullet,
             "mailTo": replace_mail_to,
+            "||": replace_url_with_text,
         }.items()
     ):
-
         if re.search(search_patterns[search_keyword], text):
             return replace_fn(text)
     return None
@@ -52,7 +53,7 @@ def replace_bioplatforms_http(text):
     text = text.strip()
     separated = [not_empty for not_empty in re.split(r",|\s", text) if not_empty]
     if len(separated) == 1:
-        return replace_url(text)
+        return replace_url_with_bullet(text)
     return replace_multi_bioplatform_urls(separated)
 
 
@@ -65,11 +66,24 @@ def replace_multi_bioplatform_urls(urls):
     )
 
 
-def replace_url(text):
+def replace_url(text, display):
     url = text.strip()
     return '<a target="_blank" rel="noopener noreferrer" href="{0}">{1}</a>'.format(
-        url, link_marker
+        url, display
     )
+
+def replace_url_with_bullet(text):
+    return replace_url(text, link_marker)
+
+
+def replace_url_with_text(text):
+    text = text.strip()
+    url_pairs = [not_empty for not_empty in re.split(r",", text) if not_empty]
+    url_string = ""
+    for pair in url_pairs:
+        split_value =pair.split('||')
+        url_string = url_string + replace_url(split_value[1], split_value[0]) + "<br />"
+    return url_string
 
 
 def replace_mail_to(text):
