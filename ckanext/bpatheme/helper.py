@@ -806,9 +806,20 @@ def get_projects_in_reverse_ranking_order():
              'description' : "The Australian Avian Genomics Initiative aims to build a foundation of genomic data, "\
                   "including phylogenomics, reference genomes, population genetics, to advance our understanding and "\
                   "conservation of Australia’s unique native birds.",
-
             }
     projects.append(avian)
+
+    ipm = {'logo' : "ipm.webp",
+             'icon' : "ipm.webp",
+             'iconalt' : "imp.png",
+             'slug' : "bpa-ipm",
+             'url' : "https://bioplatforms.com/projects/integrated-pest-management-omics-initiative/",
+             'title' : "Integrated Pest Management 'Omics Initiative (IPM Omics)",
+             'description' : "The Integrated Pest Management Omics initiative is a national program set to transform "\
+                  "our understanding of Australia’s diverse pest and beneficial insect populations and will play a "\
+                  "pivotal role in supporting data informed integrated pest management (IPM) strategies in Australia.",
+            }
+    projects.append(ipm)
 
     ranking = organization_slugs_by_creation_and_rank()
 
