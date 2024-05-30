@@ -809,9 +809,11 @@ def get_projects_in_reverse_ranking_order():
             }
     projects.append(avian)
 
-    ipm = {'logo' : "ipm.webp",
+    ipm = {'logo' : "Integrated Pest Management Logo.webp",
+           'has_logo': "true",
+           'special_class': "no-circular-logo",
              'icon' : "ipm.webp",
-             'iconalt' : "imp.png",
+             'iconalt' : "ipm.png",
              'slug' : "bpa-ipm",
              'url' : "https://bioplatforms.com/projects/integrated-pest-management-omics-initiative/",
              'title' : "Integrated Pest Management 'Omics Initiative (IPM Omics)",
