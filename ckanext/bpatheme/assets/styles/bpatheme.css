@@ -1090,4 +1090,7 @@ body {
 .main {
     background: #fefefe;
 }
-
+/* shopping cart button content counter*/
+.shopping-cart-dock .shopping-cart-dock--heading .counter:after {
+    content: attr(data-count);
+}
