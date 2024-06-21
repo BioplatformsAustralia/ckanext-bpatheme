@@ -5,7 +5,7 @@
 <ul class="shopping-cart-dock--items dataset-list list-unstyled">
     {% for item in h.shopping_cart_show_cart(cart, scope, username) %}
 
-        {% if 'id' in item %}
+        {% if 'details' in item %}
         <li class="shopping-cart-dock--item dataset-item">
             <div class="dataset-content">
                 <h2 class="dataset-heading">
@@ -28,7 +28,7 @@
        {% else %}
             <li class="shopping-cart-dock--item dataset-item">
                <h2 class="dataset-heading">
-                    {{ _("Had an issues with ") }} {{ item }} {{_(" Please remove and re-add to the cart for successful export ") }}
+                    {{ _("Had an issues with ") }} {{ item }} {{ _(" Please remove and re-add to the cart for successful export ") }}
                 </h2>
                  <button
                     class="btn btn-sm btn-secondary"
