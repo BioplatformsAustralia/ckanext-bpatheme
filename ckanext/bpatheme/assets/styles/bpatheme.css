@@ -1032,6 +1032,11 @@ body {
     font-size: 16px;
 }
 
+.optional-resource {
+    font-size: 12px;
+    font-style: italic;
+}
+
 .resource-actions {
     display: flex;
     flex-direction: column;

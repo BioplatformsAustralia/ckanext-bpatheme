@@ -19,6 +19,17 @@
   {% endif %}
 {% endblock %}
 
+{% block resource_item_description %}
+  <p class="description">
+    {% if res.optional_file %}
+      <span class="optional-resource">Optional</span>
+    {% endif %}
+    {% if res.description %}
+      {{ h.markdown_extract(h.get_translated(res, 'description'), extract_length=80) }}
+    {% endif %}
+  </p>
+{% endblock %}
+
 {% block resource_item_explore %}
   {% if authorized %}
     {% snippet 'package/snippets/resource_item/auth_explore.html', res=res, pkg=pkg %}
