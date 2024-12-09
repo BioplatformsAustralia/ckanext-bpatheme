@@ -27,12 +27,12 @@
         (_('Last Modified'), 'metadata_modified desc'),
         (_('Popular'), 'views_recent desc') if g.tracking_enabled else (false, false) ] 
     %}
-    {% snippet 'snippets/search_form.html', bulk_download_type = 'organization', id=group_dict.id, form_id='organization-datasets-search-form', type='dataset', query=q, sorting=sorting, sorting_selected=sort_by_selected, count=page.item_count, facets=facets, placeholder=_('Search datasets...'), show_empty=request.params, fields=fields %}
+    {% snippet 'snippets/search_form.html', calling_page = 'organization_read', id=group_dict.id, form_id='organization-datasets-search-form', type='dataset', query=q, sorting=sorting, sorting_selected=sort_by_selected, count=page.item_count, facets=facets, placeholder=_('Search datasets...'), show_empty=request.params, fields=fields %}
   {% endblock %}
-      {{ h.snippet('ckanext_bulk/snippets/organization_popover.html', id=group_dict.id, query=q) }}
+      {{ h.snippet('ckanext_bulk/snippets/common_popover.html', calling_page = 'organization_read', id=group_dict.id, query=q) }}
   {% block packages_list %}
     {% if page.items %}
-      {{ h.snippet('snippets/package_list.html', packages=page.items, bulk_download_type='organization') }}
+      {{ h.snippet('snippets/package_list.html', packages=page.items, calling_page = 'organization_read') }}
     {% endif %}
   {% endblock %}
   {% block page_pagination %}

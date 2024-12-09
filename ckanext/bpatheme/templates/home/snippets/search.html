@@ -7,11 +7,11 @@
   </form>
       {% if request.params.q is defined %}
   <div class="bulk-btn" >
-    {% if bulk_download_type == 'organization' %}
-     {{ h.snippet('ckanext_bulk/snippets/organization_popover.html', id=id, query=request.params.q) }}
-    {% else %}
-    {{ h.snippet('ckanext_bulk/snippets/search_popover.html', query=request.params.q) }}
-    {% endif %}
+    {%- if calling_page is defined %}
+     {{ h.snippet('ckanext_bulk/snippets/common_popover.html', calling_page=calling_page, id=id, query=request.params.q) }}
+    {%- else %}
+    {{ h.snippet('ckanext_bulk/snippets/common_popover.html', calling_page = 'generic_search', query=request.params.q) }}
+    {%- endif %}
   </div>
       {% endif %}
 </div>
