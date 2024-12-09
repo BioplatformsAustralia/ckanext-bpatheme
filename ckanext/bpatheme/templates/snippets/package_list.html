@@ -1,9 +1,9 @@
 {% ckan_extends %}
 {% block package_list %}
   {% if packages %}
-      {% if bulk_download_type != 'organization' %}
-          {{ h.snippet('ckanext_bulk/snippets/search_popover.html', query=q) }}
-      {% endif %}
+      {%- if calling_page != "organization_read" %}
+          {{ h.snippet('ckanext_bulk/snippets/common_popover.html', calling_page="package_list", query=q) }}
+      {%- endif %}
       {% asset 'shopping_cart/shopping_cart' %}
       {% snippet 'shopping_cart/snippets/dock.html', scope='user', username=g.userobj.name, cart='main-cart', heading='shopping_cart_dock_heading.html'%}  
       {% snippet 'shopping_cart/snippets/scripts.html' %}
