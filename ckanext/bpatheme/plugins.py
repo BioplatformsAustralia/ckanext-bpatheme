@@ -138,6 +138,8 @@ class CustomTheme(plugins.SingletonPlugin):
             "order_schema_fields": helper.order_schema_fields,
             "get_projects_in_reverse_ranking_order":helper.get_projects_in_reverse_ranking_order,
             "check_user_dataset_access":helper.check_user_dataset_access,
+            "is_bioproject": helper.is_bioproject,
+            "render_ncbi_bioproject_url": helper.render_ncbi_bioproject_url,
         }
 
     # Ifacets

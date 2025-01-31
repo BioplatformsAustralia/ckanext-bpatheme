@@ -843,3 +843,24 @@ def check_user_dataset_access():
     #todo - how to figure out if we own any datasets...
     # otherwise no
     return False
+
+
+def is_bioproject(ncbi_bioproject_accession):
+    "Checks if passed argument looks like a NCBI Bioproject Access identifier"
+    # Example format is PRJNA512907
+
+    bioproject_re = re.compile(r"^PRJNA(\d+)$")
+
+    m = bioproject_re.match(ncbi_bioproject_accession)
+    if m:
+        return True
+
+    return False
+
+def render_ncbi_bioproject_url(ncbi_bioproject_accession):
+    # Example format is https://www.ncbi.nlm.nih.gov/bioproject/PRJNA512907/
+
+    if not is_bioproject(ncbi_bioproject_accession):
+        return ""
+
+    return "https://www.ncbi.nlm.nih.gov/bioproject/%s/" % (ncbi_bioproject_accession,)

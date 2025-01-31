@@ -1,0 +1,64 @@
+{#
+Embeds External Data Linkage info links within the sidebar of a page.
+
+organization    - The organization dict.
+package         - The package dict
+truncate - A max length for the organization description. If not provided the description
+           will be full length.
+has_context_title - Boolean for whether to display a module-heading for when
+                    this snippet appears within a non-organization template
+                    (e.g. dataset page sidebar)
+
+Example:
+
+    {% snippet 'snippets/external_data_linkage.html', organization=c.group_dict, package=pkg %}
+
+#}
+
+
+{% set truncate = truncate or 0 %}
+{% set url = h.url_for(organization.type ~ '.read', id=organization.name, ) %}
+
+{% block external_data_linkage %}
+  {# For the moment only display if either organization or package has a Bioproject identifier #}
+  {% set vars = { 'displayedl': False }  %}
+
+  {# see if ncbi_bioproject_accession is in organization #}
+
+  {% if 'extras' in organization %}
+    {% for item in organization['extras'] %}
+        {% if 'key' in item %}
+         {% if item['key'] == 'ncbi_bioproject_accession' and item['value']|length %}
+           {% if h.is_bioproject(item['value']) %}
+              {% if vars.update({'displayedl': True}) %} {% endif %}
+           {% endif %}
+         {% endif %}
+        {% endif %}
+    {% endfor %}
+  {% endif %}
+
+  {# see if ncbi_bioproject_accession is in package #}
+
+  {% if package is not none %}
+     {% if 'ncbi_bioproject_accession' in package %}
+       {% if vars.update({'displayedl': True}) %} {% endif %}
+     {% endif %}
+  {% endif %}
+
+  {% if vars.displayedl %}
+    <div class="module module-narrow module-shallow context-info">
+    <section class="module module-narrow external_data_linkage">
+    {% block external_data_linkage_title %}
+    {% if has_context_title %}
+      <h2 class="module-heading"><i class="fa fa-info-circle"></i>External Data Linkages</h2>
+    {% endif %}
+    {% endblock %}
+    {% block external_data_linkage_nav %}
+       <ul class="nav nav-simple">
+            {% snippet 'snippets/external_data_linkage_link_bioproject.html', organization=organization, package=package %}
+       </ul>
+    {% endblock %}
+    </section>
+    </div>
+  {% endif %}
+{% endblock %}

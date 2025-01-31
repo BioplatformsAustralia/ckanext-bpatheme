@@ -1,0 +1,39 @@
+{#
+Embeds NCBI Bioproject info links within the sidebar of a page.
+
+organization    - The organization dict.
+package         - The package dict.
+
+Example:
+
+    {% snippet 'snippets/external_data_linkage_link_bioproject.html', organization=organization, package=package %}
+
+#}
+
+{% block external_data_linkage_link_bioproject %}
+
+  {# see if ncbi_bioproject_accession is in organization #}
+
+  {% if 'extras' in organization %}
+    {% for item in organization['extras'] %}
+        {% if 'key' in item %}
+         {% if item['key'] == 'ncbi_bioproject_accession' and item['value']|length %}
+           {% if h.is_bioproject(item['value']) %}
+	      <li class="nav-item"><a href="{{ h.render_ncbi_bioproject_url(item['value']) }}">NCBI Bioproject (Organisation) - {{ item['value'] }}</a></li>
+           {% endif %}
+         {% endif %}
+        {% endif %}
+    {% endfor %}
+  {% endif %}
+
+  {# see if ncbi_bioproject_accession is in package #}
+
+  {% if package is not none %}
+     {% if 'ncbi_bioproject_accession' in package %}
+       {% if h.is_bioproject(package['ncbi_bioproject_accession']) %}
+	   <li class="nav-item"><a href="{{ h.render_ncbi_bioproject_url(package['ncbi_bioproject_accession']) }}">NCBI Bioproject (Dataset) - {{ package['ncbi_bioproject_accession'] }}</a></li>
+       {% endif %}
+     {% endif %}
+  {% endif %}
+
+{% endblock %}
