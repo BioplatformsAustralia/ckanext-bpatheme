@@ -823,6 +823,20 @@ def get_projects_in_reverse_ranking_order():
             }
     projects.append(ipm)
 
+    forest_resilience = {'logo' : "forest_resilience.webp",
+           'has_logo': "true",
+           'special_class': "no-circular-logo",
+             'icon' : "forest_resilience.webp",
+             'iconalt' : "forest_resilience.png",
+             'slug' : "forest-resilience",
+             'url' : "https://bioplatforms.com/projects/forest-resilience-initiative/",
+             'title' : "Genomics for Forest Resilience",
+             'description' : "The Genomics for Forest Resilience Initiative a national collaborative project which "\
+                  "seeks to accelerate the creation of referential and population genomic data for Australia’s forest "\
+                  "species to support effective restoration and management strategies for Australia’s diverse and "\
+                  "distinct forest ecosystems. ",
+         }
+    projects.append(forest_resilience)
     ranking = organization_slugs_by_creation_and_rank()
 
     for p in projects:
