@@ -747,7 +747,7 @@ def get_projects_in_reverse_ranking_order():
              'icon' : "cipps.webp",
              'iconalt' : "cipps.png",
              'slug' : "cipps",
-             'url' : "https://bioplatforms.com/projects/cipps",
+             'url' : "https://cipps.org.au/",
              'title' : "ARC Centre of Excellence for Innovations in Peptide and Protein Science (CIPPS)",
              'description' : "The ARC Centre of Excellence for Innovations in Peptide and Protein Science (CIPPS) is "\
                  "a national research centre funded through the Australian Research Council's Centres of Excellence "\
@@ -829,7 +829,7 @@ def get_projects_in_reverse_ranking_order():
              'icon' : "forest_resilience.webp",
              'iconalt' : "forest_resilience.png",
              'slug' : "forest-resilience",
-             'url' : "https://bioplatforms.com/projects/forest-resilience-initiative/",
+             'url' : "https://bioplatforms.com/projects/forest-resilience/",
              'title' : "Genomics for Forest Resilience",
              'description' : "The Genomics for Forest Resilience Initiative a national collaborative project which "\
                   "seeks to accelerate the creation of referential and population genomic data for Australia’s forest "\
