@@ -38,7 +38,12 @@ class CustomTheme(plugins.SingletonPlugin):
         return {"user_create": action.custom_user_create}
 
     # IPackageController
+    # CKAN < 2.10
     def before_search(self, search_params):
+        return self.before_dataset_search(search_params)
+
+    # CKAN >= 2.10
+    def before_dataset_search(self, search_params):
         def make_insensitive(query):
             twiddled = []
 
