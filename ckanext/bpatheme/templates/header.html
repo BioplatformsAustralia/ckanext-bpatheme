@@ -57,7 +57,7 @@
                             <ul class="unstyled">
                                 {% block header_account_notlogged %}
                                     <li class="login">
-                                        <a href="{{ h.url_for('oidc_pkce.login', next=h.current_url()) }}"
+                                        <a href="{{ h.url_for('user.login', came_from=h.current_url()) }}">
                                            title="{{ _('Log in') }}">
                                             <i class="fa fa-sign-in" aria-hidden="true"></i>
                                             <span class="text login">{{ _('Log In') }}</span>
@@ -65,7 +65,7 @@
                                     </li>
                                     {% if h.check_access('user_create') %}
                                         <li class="register">
-                                            <a href="{{ h.url_for('user.register', class_='sub') }}"
+                                            <a href="https://aaiportal.test.biocommons.org.au/bpa/register"
                                                title="{{ _('Register') }}">
                                                 <i class="fa fa-edit" aria-hidden="true"></i>
                                                 <span class="text register">{{ _('Register') }}</span>
