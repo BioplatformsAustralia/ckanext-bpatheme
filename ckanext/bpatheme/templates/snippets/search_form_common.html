@@ -1,7 +1,7 @@
     <div class="input-group search-input-group">
 	{% import 'macros/form.html' as form %}
-	{% if request.params is defined %}
-		{% set search_by = request.params.get('ext_search_by', '')|e %}
+	{% if request.args is defined %}
+		{% set search_by = request.args.get('ext_search_by', '')|e %}
 	{% else %}
 		{% set search_by = '' %}
 	{% endif %}
