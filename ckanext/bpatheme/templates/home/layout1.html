@@ -17,7 +17,7 @@
     </div>
     <div class="featured-orgs">
       <div class="container">
-            <p class="control-label"> Frequently accessed active initiatives are shown. For a complete list of our available projects please see <a href="{{ h.url('bpatheme.all_projects_index') }}">here</a> to show all Projects</p>
+            <p class="control-label"> Frequently accessed active initiatives are shown. For a complete list of our available projects please see <a href="{{ h.url_for('bpatheme.all_projects_index') }}">here</a> to show all Projects</p>
         {% set projects = h.get_projects_in_reverse_ranking_order() %}
         {% snippet 'home/snippets/top_eight_projects.html', projects=projects %}
       </div>

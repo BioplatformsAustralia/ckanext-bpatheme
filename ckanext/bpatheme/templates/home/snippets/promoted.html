@@ -14,7 +14,7 @@
      {% set api_doc_link = h.link_to(_('CKAN API Docs'), 'http://docs.ckan.org/en/{0}/api/'.format(g.ckan_doc_version)) %}
     <p>
       This portal provides access to both metadata and data for Bioplatforms projects. Please see the 
-      <a href="{{ h.url('group_index') }}">project index</a>. All information can also be accessed
+      <a href="{{ h.url_for('group_index') }}">project index</a>. All information can also be accessed
       programmatically, via the {{ api_link }} ({{ api_doc_link}}).
     </p>
 
