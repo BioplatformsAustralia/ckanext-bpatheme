@@ -1,10 +1,12 @@
-{% set tags = h.get_facet_items_dict('tags', limit=7) %}
+{% set tags = h.get_facet_items_dict('tags', search_facets, limit=7) %}
 {% set placeholder = _('E.g. environment') %}
-<div class="module module-search module-narrow module-shallow box">
-  <form class="module-content search-form" method="get" action="{% url_for 'dataset.search' %}">
+{% set dataset_type = h.default_package_type() %}
+
+<div class="module-search card box">
+  <form class="module-content search-form" method="get" action="{% url_for dataset_type ~ '.search' %}">
     {{ h.csrf_input() if 'csrf_input' in h }}
     <h3 class="heading">{{ _("Search all datasets") }}</h3>
-    {% snippet 'snippets/search_form_common.html', form_id='homepage-search-form', type='dataset', query='', sorting=sorting, sorting_selected=c.sort_by_selected, facets=facets, placeholder=_('Search datasets...'), show_empty=request.args, fields=c.fields %}
+    {% snippet 'snippets/search_form_common.html', form_id='homepage-search-form', type='dataset', query='', sorting=sorting, sorting_selected=sorting_selected, facets=facets, placeholder=_('Search datasets...'), show_empty=request.args, fields=fields %}
   </form>
       {% if request.args.q is defined %}
   <div class="bulk-btn" >

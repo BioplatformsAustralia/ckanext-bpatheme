@@ -1,35 +1,53 @@
 {% import "macros/form.html" as form %}
 
-<form id="user-register-form" action="" method="post" enctype="multipart/form-data">
-    {{ h.csrf_input() if 'csrf_input' in h }}
+{% block form %}
+  <form id="user-register-form" action="" method="post" enctype="multipart/form-data">
+    {{ h.csrf_input() }}
     {{ form.errors(error_summary) }}
-    {{ form.input("name", id="field-username", label=_("Username"), placeholder=_("username"), value=data.name, error=errors.name, classes=["control-medium"], is_required=True) }}
-    {{ form.input("fullname", id="field-fullname", label=_("Full Name"), placeholder=_("Joe Bloggs"), value=data.fullname, error=errors.fullname, classes=["control-medium"], is_required=True) }}
-    {{ form.input("email", id="field-email", label=_("Email"), type="email", placeholder=_("joe@example.com"), value=data.email, error=errors.email, classes=["control-medium"], is_required=True) }}
 
-    {{ form.textarea("request_reason", id="field-request_reason", label=_("Reason for Request"), placeholder="Please provide a brief outline of your interest in the project data.", value=data.request_reason, error=errors.request_reason, classes=["control-medium"], is_required=True) }}
+    {% block core_fields %}
+      {% block required_core_fields %}
+        # Override for BPA Theme
+        {{ form.input("name", id="field-username", label=_("Username"), placeholder=_("username"), value=data.name, error=errors.name, classes=["control-medium"], is_required=True) }}
+        {{ form.input("fullname", id="field-fullname", label=_("Full Name"), placeholder=_("Joe Bloggs"), value=data.fullname, error=errors.fullname, classes=["control-medium"], is_required=True) }}
+        {{ form.input("email", id="field-email", label=_("Email"), type="email", placeholder=_("joe@example.com"), value=data.email, error=errors.email, classes=["control-medium"], is_required=True) }}
 
-    <p>Select organizations that you wish to request membership of: </p>
+       <p>Please provide a password for your account: </p>
 
-    {% set available_orgs = h.find_autoregister_organizations() %}
-    {% for org in available_orgs %}
-             {{ form.checkbox('org-{}'.format(org.name), label=org.display_name, id='field-{}'.format(org.name), checked=false, value=True) }}
-    {% endfor %}
+       {{ form.input("password1", id="field-password", label=_("Password"), type="password", placeholder="••••••••", value=data.password1, error=errors.password1, classes=["control-medium"], is_required=True) }}
+       {{ form.input("password2", id="field-confirm-password", label=_("Confirm"), type="password", placeholder="••••••••", value=data.password2, error=errors.password1, classes=["control-medium"], is_required=True) }}
 
-    <p>Please provide a password for your account: </p>
+      {% endblock %}
 
-    {{ form.input("password1", id="field-password", label=_("Password"), type="password", placeholder="••••••••", value=data.password1, error=errors.password1, classes=["control-medium"], is_required=True) }}
-    {{ form.input("password2", id="field-confirm-password", label=_("Confirm"), type="password", placeholder="••••••••", value=data.password2, error=errors.password1, classes=["control-medium"], is_required=True) }}
+      {% block optional_core_fields %}
+      # Override for BPA Theme
+      {% endblock %}
+    {% endblock %}
 
-    {% if g.recaptcha_publickey %}
-    {% snippet "user/snippets/recaptcha.html", public_key=g.recaptcha_publickey %}
-    {% endif %}
+    {% block extra_fields %}
+      # Override for BPA Theme
+      {{ form.textarea("request_reason", id="field-request_reason", label=_("Reason for Request"), placeholder="Please provide a brief outline of your interest in the project data.", value=data.request_reason, error=errors.request_reason, classes=["control-medium"], is_required=True) }}
+
+      <p>Select organizations that you wish to request membership of: </p>
+
+      {% set available_orgs = h.find_autoregister_organizations() %}
+      {% for org in available_orgs %}
+        {{ form.checkbox('org-{}'.format(org.name), label=org.display_name, id='field-{}'.format(org.name), checked=false, value=True) }}
+      {% endfor %}
+    {% endblock %}
+
+    {% block captcha %}
+      {% if g.recaptcha_publickey %}
+        {% snippet "user/snippets/recaptcha.html", public_key=g.recaptcha_publickey %}
+      {% endif %}
+    {% endblock %}
 
     {{ form.required_message() }}
 
     <div class="form-actions">
-        {% block form_actions %}
-        <button class="btn btn-primary" type="submit" name="save">{{ _("Create Account") }}</button>
-        {% endblock %}
+      {% block form_actions %}
+      <button class="btn btn-primary" type="submit" name="save">{{ _("Create Account") }}</button>
+      {% endblock %}
     </div>
-</form>
+  </form>
+{% endblock %}

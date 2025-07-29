@@ -12,7 +12,7 @@
         <div class="search-background lazyload">
         </div>
         {% block search %}
-            {% snippet 'home/snippets/search.html' %}
+            {% snippet 'home/snippets/search.html', search_facets=search_facets %}
         {% endblock %}
     </div>
     <div class="featured-orgs">

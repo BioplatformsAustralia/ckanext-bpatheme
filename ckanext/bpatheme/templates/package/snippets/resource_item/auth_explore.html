@@ -8,44 +8,46 @@
     </span>
     <span>
         <div class="dropdown btn-group">
-                    <a href="#" class="btn btn-primary dropdown-toggle" data-toggle="dropdown">
+                    <a href="#" class="btn btn-primary dropdown-toggle" type="button" id="dropdownExplorer" data-bs-toggle="dropdown" aria-expanded="false">
                         <i class="fa    fa-share"></i>
                         {{ _('Access') }}
                         <span class="caret"></span>
                     </a>
-                    <ul class="dropdown-menu">
+                    <ul class="dropdown-menu" aria-labelledby="dropdownExplorer">
                 {% block resource_item_explore_links %}
-                        <li>
-                            <a href="{{ url }}">
-                                {% if res.has_views %}
-                                <i class="fa fa-bar-chart-o"></i>
-                                {{ _('Preview') }}
-                                {% else %}
-                                <i class="fa fa-info-circle"></i>
-                                {{ _('More information') }}
-                                {% endif %}
-                            </a>
-                        </li>
-                        {% if res.url and h.is_url(res.url) %}
-                        <li>
-                            <a href="{{ res.url }}" class="resource-url-analytics" target="_blank">
-                                {% if res.has_views or res.url_type == 'upload' %}
-                                <i class="fa fa-arrow-circle-o-down"></i>
-                                {{ _('Download to desktop') }}
-                                {% else %}
-                                <i class="fa fa-external-link"></i>
-                                {{ _('Go to resource') }}
-                                {% endif %}
-                            </a>
-                        </li>
+                  {% block explore_view %}
+                    <li>
+                      <a class="dropdown-item" href="{{ url }}">
+                        {% if res.has_views %}
+                          <i class="fa fa-chart-bar"></i>
+                          {{ _('Preview') }}
+                        {% else %}
+                          <i class="fa fa-info-circle"></i>
+                          {{ _('More information') }}
+                        {% endif %}
+                      </a>
+                    </li>
+                  {% endblock explore_view %}
+
+                  {% if res.url and h.is_url(res.url) %}
+                  <a class="dropdown-item resource-url-analytics" href="{{ res.url }}" target="_blank" rel="noreferrer">
+                    {% if res.has_views or res.url_type == 'upload' %}
+                      <i class="fa fa-arrow-circle-down"></i>
+                      {{ _('Download to desktop') }}
+                    {% else %}
+                      <i class="fa fa-external-link"></i>
+                      {{ _('Go to resource') }}
+                    {% endif %}
+                  </a>
+                </li>
                         <li>
                             {% snippet 'ckanext_s3filestore/snippets/download_window_link.html', id=pkg.name, resource_id=res.id %}
                         </li>
-                        {% endif %}
-                        {% if can_edit %}
-                        <li>
-                            <a href="{{ h.url_for(pkg.type ~ '_resource.edit', id=pkg.name, resource_id=res.id) }}">
-                                <i class="fa fa-pencil-square-o"></i>
+                {% endif %}
+                {% if can_edit %}
+                <li>
+                  <a class="dropdown-item" href="{{ h.url_for(pkg.type ~ '_resource.edit', id=pkg.name, resource_id=res.id) }}">
+                  <i class="fa fa-pencil-square"></i>
                                 {{ _('Edit') }}
                             </a>
                         </li>

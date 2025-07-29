@@ -9,12 +9,10 @@
 	{{ form.select('ext_search_by', label=_('Search By'), selected=search_by, options=search_by_options) }}
     </div>
     <div class="input-group search-input-group">
-      <input aria-label="{% block header_site_search_label %}{{ placeholder }}{% endblock %}" id="field-giant-search" type="text" class="form-control input-lg" name="q" value="{{ query }}" autocomplete="off" placeholder="{{ placeholder }}">
+      <input aria-label="{% block header_site_search_label %}{{ h.humanize_entity_type('package', type, 'search placeholder') or _('Search datasets') }}{% endblock %}" id="field-giant-search" type="text" class="form-control input-lg" name="q" value="{{ query }}" autocomplete="off" placeholder="{% block search_placeholder %}{{ placeholder }}{% endblock %}" />
       {% block search_input_button %}
-      <span class="input-group-btn">
-        <button class="btn btn-default btn-lg" type="submit" value="search">
-          <i class="fa fa-search"></i>
-        </button>
-      </span>
+      <button class="btn btn-default btn-lg" type="submit" value="search" aria-labelledby="search-label">
+        <i class="fa fa-search"></i>
+      </button>
       {% endblock %}
     </div>
