@@ -814,6 +814,13 @@ body {
     padding-bottom: 0px;
 }
 
+.homepage .module-search .module-content {
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
 .search-form {
     padding-bottom: 0px;
 }
