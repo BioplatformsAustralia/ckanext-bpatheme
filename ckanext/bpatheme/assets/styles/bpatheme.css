@@ -323,6 +323,17 @@ img {
     height: 0px;
 }
 
+/* The background of the homepage hero pane */
+.homepage .hero {
+    background: #ffffff;
+}
+
+@media (min-width: 576px) {
+  .hero {
+    background: #ffffff;
+  }
+}
+
 /* The background outside of the hero pane */
 .hero,
 [role="main"] {
