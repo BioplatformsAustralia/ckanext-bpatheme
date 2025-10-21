@@ -64,8 +64,9 @@
                                         </a>
                                     </li>
                                     {% if h.check_access('user_create') %}
+                                        {% set register_url = config.get('ckanext.oidc_pkce_bpa.register_redirect_url', h.url_for('user.register')) %}
                                         <li class="register">
-                                            <a href="https://aaiportal.test.biocommons.org.au/bpa/register"
+                                            <a href="{{ register_url }}"
                                                title="{{ _('Register') }}">
                                                 <i class="fa fa-edit" aria-hidden="true"></i>
                                                 <span class="text register">{{ _('Register') }}</span>
