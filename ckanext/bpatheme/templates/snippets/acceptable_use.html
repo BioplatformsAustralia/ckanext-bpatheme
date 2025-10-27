@@ -1,0 +1,64 @@
+{#
+Embeds the Acceptable Use Policy into a page.
+
+
+    {% snippet 'snippets/acceptable_use.html' %}
+
+#}
+
+{% block acceptable_use_policy %}
+  <div name="aup">
+  <p>
+  Hello and welcome to the Bioplatforms Australia Data Portal
+  </p>
+
+  <p>
+  By accessing and using the Data Portal, you need agree and acknowledge the terms and conditions below.
+  </p>
+  </div>
+
+  {# example accordion #}
+  {% set aup_groups = [] %}
+  {% set aup_use = {
+      'id' : "AUPUse",
+      'heading': "Acceptable Use",
+      'short': "Descriptions of what uses of our website are acceptable",
+      'snippet': "snippets/aup_acceptable_use.html",
+        } %}
+  {% if aup_groups.append(aup_use) %} {% endif %}
+
+  {% set aup_terms = {
+      'id' : "AUPTerms",
+      'heading': "Terms and Conditions",
+      'short': "The terms we provide this website and data under",
+      'snippet': "snippets/aup_terms_of_service.html",
+        } %}
+  {% if aup_groups.append(aup_terms) %} {% endif %}
+
+  {% set aup_sla = {
+      'id' : "AUPSLA",
+      'heading': "Service Commitments",
+      'short': "Our commitments on the performance and availability of this website",
+      'snippet': "snippets/aup_service_levels.html",
+        } %}
+  {% if aup_groups.append(aup_sla) %} {% endif %}
+
+  {% set aup_privacy = {
+      'id' : "AUPPrivacy",
+      'heading': "Privacy and Data Collection",
+      'short': "How we collect, use and manipulate any date you provide",
+      'snippet': "snippets/aup_data_privacy.html",
+        } %}
+  {% if aup_groups.append(aup_privacy) %} {% endif %}
+
+   <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+     {% for aup_group in aup_groups %}
+         {% snippet 'ckanext_aup/aup_accordion.html', aup_group=aup_group %}
+     {% endfor %}
+   </div>
+
+   <p>
+   Please note the above and accept the terms and conditions to proceed.
+   </p>
+
+{% endblock %}
