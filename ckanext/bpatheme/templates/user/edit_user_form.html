@@ -30,11 +30,8 @@
         <a class="btn btn-warning" href="{% url_for 'user.generate_apikey', id=data.id %}" data-module="confirm-action" data-module-content="{{ _('Are you sure you want to regenerate the API key?') }}">{% block generate_button_text %}{{ _('Regenerate API Key') }}{% endblock %}</a>
       {% endif %}
     {% endblock %}
-    {% set profile_update_url = config.get('ckanext.oidc_pkce_bpa.login_redirect_url') %}
-    {% if profile_update_url %}
-    <a class="btn btn-primary" href="{{ profile_update_url }}" rel="noopener noreferrer">
+    <a class="btn btn-primary" href="{{ h.url_for('oidc_pkce_bpa_public.redirect_profile_update') }}" rel="noopener noreferrer">
       {{ _('Update Profile Details') }} <i class="fa fa-external-link" aria-hidden="true"></i>
     </a>
-    {% endif %}
   </div>
 </form>
