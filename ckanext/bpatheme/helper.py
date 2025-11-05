@@ -192,7 +192,9 @@ def find_organizations_for_user():
             "all_fields": True,
             "include_extras": True,
             "include_dataset_count": False,
-            "include_groups": True,
+            "include_groups": False,
+            "include_datasets": False,
+            "include_users":False
         }
     )
 
@@ -205,7 +207,9 @@ def find_organizations_for_user():
                 "all_fields": True,
                 "include_extras": True,
                 "include_dataset_count": False,
-                "include_groups": True,
+                "include_groups": False,
+                "include_datasets": False,
+                "include_users": False
             }
         )
         for org in organizations:
