@@ -841,6 +841,22 @@ def get_projects_in_reverse_ranking_order():
                   "distinct forest ecosystems. ",
          }
     projects.append(forest_resilience)
+
+    animal_disease = {'logo': "Animal-Disease-Genomics-initiative-RFP.webp",
+                      'has_logo': "false",
+                      'special_class': "no-circular-logo",
+                      'icon': "Animal-Disease-Genomics-initiative-RFP.webp",
+                      'iconalt': "Animal-Disease-Genomics-initiative-RFP.png",
+                      'slug': "animal-disease",
+                      'url': "https://bioplatforms.com/project/australian-animal-disease-genomics-initiative/",
+                      'title': "Australian Animal Disease Genomics",
+                      'description': "The Australian Animal Disease Genomics Initiative is a national collaborative "\
+                          "project, which aims to develop foundational genomic data for priority animal pathogens and "\
+                          "parasites, supporting national efforts in disease understanding, detection, surveillance "\
+                          "and control. ",
+                     }
+    projects.append(animal_disease)
+
     ranking = organization_slugs_by_creation_and_rank()
 
     for p in projects:
