@@ -857,6 +857,22 @@ def get_projects_in_reverse_ranking_order():
                      }
     projects.append(animal_disease)
 
+    aus_venom = {'logo': "AVID-Logo.webp",
+                      'has_logo': "true",
+                      'special_class': "no-circular-logo",
+                      'icon': "AVID_Initiative_feature_image.webp",
+                      'iconalt': "AVID_Initiative_feature_image.png",
+                      'slug': "aus-venom",
+                      'url': "https://bioplatforms.com/project/australian-venom-innovation-and-discovery-initiative/",
+                      'title': "Australian Venom Innovation and Discovery",
+                      'description': "The Australian Venom Innovation and Discovery (AVID) Initiative is a national "\
+                           "collaborative effort to generate high-quality genomic, transcriptomic, and  proteomic "\
+                           "data for Australia’s venomous species. By integrating expertise across ecology, "\
+                           "toxinology, genomics, and translational science, AVID advances understanding of venom "\
+                           "systems while enabling innovation in conservation, biosecurity, health, and agriculture.",
+                     }
+    projects.append(aus_venom)
+
     ranking = organization_slugs_by_creation_and_rank()
 
     for p in projects:
