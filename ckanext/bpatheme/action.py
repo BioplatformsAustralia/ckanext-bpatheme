@@ -2,6 +2,8 @@ from ckan import model
 from ckan.common import config, c, _
 import ckan.logic
 import ckan.plugins.toolkit as toolkit
+import datetime
+from ckan.plugins.toolkit import chained_action
 from ckan.logic.action.create import user_create
 from ckan.lib.helpers import flash_success, flash_notice
 
@@ -11,6 +13,9 @@ import os
 import logging
 
 log = logging.getLogger(__name__)
+
+_check_access = ckan.logic.check_access
+_get_or_bust = ckan.logic.get_or_bust
 
 
 class EmailUser:
@@ -86,3 +91,55 @@ def custom_user_create(context, data_dict=None):
     flash_success(_("Membership created.  You have been logged in."))
 
     return newuser
+
+
+def _timestamp():
+    return datetime.datetime.now().strftime("%Y%m%d%H%M")
+
+
+@chained_action
+def user_delete(original_action, context, data_dict=None):
+    # CKAN only does a soft delete when users are deleted.
+    #
+    # For the AAI integration and to avoid future clashes in usernames/email addresses need to alter these on deletion.
+    #
+    # :param id: the id or usernamename of the user to delete
+    # :type id: string
+    _check_access("user_delete", context, data_dict)
+
+    timestamp = _timestamp()
+
+    model = context["model"]
+    user_id = _get_or_bust(data_dict, "id")
+    user = model.User.get(user_id)
+
+    if user is None:
+        raise NotFound('User "{id}" was not found.'.format(id=user_id))
+
+    patch_context = {
+        "user": ckan.logic.get_action("get_site_user")({"ignore_auth": True}, {})[
+            "name"
+        ]
+    }
+
+    # Prefix the date/time of delete in ISO format to the email.   testme@example.com becomes deleted202402041212-testme@example.com
+    #
+    perturbed_email = f"deleted{timestamp}-{user.email}"
+
+    ckan.logic.get_action("user_patch")(
+        patch_context, {"id": user_id, "email": perturbed_email}
+    )
+
+    # Prefix the date/time of delete in ISO format to the username.   testme becomes 202402041212-testme
+    # (AAI usernames can’t start with a digit)
+    #
+
+    perturbed_username = f"{timestamp}-{user.name[:244]}"
+
+    ckan.logic.get_action("user_patch")(
+        patch_context, {"id": user_id, "name": perturbed_username}
+    )
+
+    data_dict_with_id = {"id": user_id}
+
+    return original_action(context, data_dict_with_id)
