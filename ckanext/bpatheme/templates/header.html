@@ -57,15 +57,16 @@
                             <ul class="unstyled">
                                 {% block header_account_notlogged %}
                                     <li class="login">
-                                        <a href="{{ h.url_for('user.login') }}"
+                                        <a href="{{ h.url_for('oidc_pkce.login', next=h.current_url()) }}"
                                            title="{{ _('Log in') }}">
                                             <i class="fa fa-sign-in" aria-hidden="true"></i>
                                             <span class="text login">{{ _('Log In') }}</span>
                                         </a>
                                     </li>
                                     {% if h.check_access('user_create') %}
+                                        {% set register_url = config.get('ckanext.oidc_pkce_bpa.register_redirect_url', h.url_for('user.register')) %}
                                         <li class="register">
-                                            <a href="{{ h.url_for('user.register', class_='sub') }}"
+                                            <a href="{{ register_url }}"
                                                title="{{ _('Register') }}">
                                                 <i class="fa fa-edit" aria-hidden="true"></i>
                                                 <span class="text register">{{ _('Register') }}</span>

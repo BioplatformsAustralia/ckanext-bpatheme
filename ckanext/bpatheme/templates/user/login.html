@@ -1,0 +1,64 @@
+{% extends "page.html" %}
+
+{% set admin_login = request.params.get('admin_token') %}
+
+{% block subtitle %}
+  {% if admin_login %}
+    {{ _('CKAN Admin Login') }}
+  {% else %}
+    {{ _('Login') }}
+  {% endif %}
+{% endblock %}
+
+{% block breadcrumb_content %}
+  {% if admin_login %}
+    <li class="active">{{ h.nav_link(_('CKAN Admin Login'), named_route='oidc_pkce_bpa.admin_login') }}</li>
+  {% else %}
+    <li class="active">{{ h.nav_link(_('Login'), named_route='user.login') }}</li>
+  {% endif %}
+{% endblock %}
+
+{% block primary_content %}
+  <section class="module">
+    <div class="module-content">
+      <h1 class="page-heading">
+        {% if admin_login %}
+          {{ _('CKAN Admin Login') }}
+        {% else %}
+          {{ _('Login') }}
+        {% endif %}
+      </h1>
+      {% block form %}
+        {% snippet "user/snippets/login_form.html", action=g.login_handler, error_summary=error_summary %}
+      {% endblock %}
+      {% if admin_login %}
+        <p class="text-muted">{{ _('Only existing CKAN sysadmins should use this login form.') }}</p>
+      {% endif %}
+    </div>
+  </section>
+{% endblock %}
+
+{% block secondary_content %}
+  {% if not admin_login %}
+    {% if h.check_access('user_create') %}
+      <section class="module module-narrow module-shallow">
+        <h2 class="module-heading">{{ _('Need an Account?') }}</h2>
+        <div class="module-content">
+          <p>{% trans %}Then sign right up, it only takes a minute.{% endtrans %}</p>
+          <p class="action">
+            <a class="btn btn-default" href="{{ h.url_for('user.register') }}">{{ _('Create an Account') }}</a>
+          </p>
+        </div>
+      </section>
+    {% endif %}
+    <section class="module module-narrow module-shallow">
+      <h2 class="module-heading">{{ _('Forgotten your password?') }}</h2>
+      <div class="module-content">
+        <p>{% trans %}No problem, use our password recovery form to reset it.{% endtrans %}</p>
+        <p class="action">
+          <a class="btn btn-default" href="{{ h.url_for('user.request_reset') }}">{{ _('Forgot your password?') }}</a>
+        </p>
+      </div>
+    </section>
+  {% endif %}
+{% endblock %}
