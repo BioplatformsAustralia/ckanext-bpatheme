@@ -3,7 +3,7 @@
 {% set admin_login = request.params.get('admin_token') %}
 
 {% block subtitle %}
-  {% if admin_login %}
+  {% if 'oidc_pkce_bpa' in g.plugins and admin_login %}
     {{ _('CKAN Admin Login') }}
   {% else %}
     {{ _('Login') }}
@@ -11,7 +11,7 @@
 {% endblock %}
 
 {% block breadcrumb_content %}
-  {% if admin_login %}
+  {% if 'oidc_pkce_bpa' in g.plugins and admin_login %}
     <li class="active">{{ h.nav_link(_('CKAN Admin Login'), named_route='oidc_pkce_bpa.admin_login') }}</li>
   {% else %}
     <li class="active">{{ h.nav_link(_('Login'), named_route='user.login') }}</li>
@@ -22,7 +22,7 @@
   <section class="module">
     <div class="module-content">
       <h1 class="page-heading">
-        {% if admin_login %}
+        {% if 'oidc_pkce_bpa' in g.plugins and admin_login %}
           {{ _('CKAN Admin Login') }}
         {% else %}
           {{ _('Login') }}
@@ -31,7 +31,7 @@
       {% block form %}
         {% snippet "user/snippets/login_form.html", action=g.login_handler, error_summary=error_summary %}
       {% endblock %}
-      {% if admin_login %}
+      {% if 'oidc_pkce_bpa' in g.plugins and admin_login %}
         <p class="text-muted">{{ _('Only existing CKAN sysadmins should use this login form.') }}</p>
       {% endif %}
     </div>
@@ -40,25 +40,38 @@
 
 {% block secondary_content %}
   {% if not admin_login %}
-    {% if h.check_access('user_create') %}
-      <section class="module module-narrow module-shallow">
-        <h2 class="module-heading">{{ _('Need an Account?') }}</h2>
-        <div class="module-content">
-          <p>{% trans %}Then sign right up, it only takes a minute.{% endtrans %}</p>
-          <p class="action">
-            <a class="btn btn-default" href="{{ h.url_for('user.register') }}">{{ _('Create an Account') }}</a>
-          </p>
-        </div>
-      </section>
-    {% endif %}
-    <section class="module module-narrow module-shallow">
-      <h2 class="module-heading">{{ _('Forgotten your password?') }}</h2>
+  {% if h.check_access('user_create') %}
+  {% block help_register %}
+  <section class="module module-narrow module-shallow">
+    {% block help_register_inner %}
+      <h2 class="module-heading">{{ _('Need an Account?') }}</h2>
       <div class="module-content">
-        <p>{% trans %}No problem, use our password recovery form to reset it.{% endtrans %}</p>
+        <p>{% trans %}Then sign right up, it only takes a minute.{% endtrans %}</p>
         <p class="action">
-          <a class="btn btn-default" href="{{ h.url_for('user.request_reset') }}">{{ _('Forgot your password?') }}</a>
+        {% block help_register_button %}
+          <a class="btn btn-default" href="{{ h.url_for('user.register') }}">{{ _('Create an Account') }}</a>
+        {% endblock %}
         </p>
       </div>
-    </section>
+    {% endblock %}
+  </section>
+  {% endblock %}
+  {% endif %}
+
+  {% block help_forgotten %}
+  <section class="module module-narrow module-shallow">
+    {% block help_forgotten_inner %}
+    <h2 class="module-heading">{{ _('Forgotten your password?') }}</h2>
+    <div class="module-content">
+      <p>{% trans %}No problem, use our password recovery form to reset it.{% endtrans %}</p>
+      <p class="action">
+        {% block help_forgotten_button %}
+        <a class="btn btn-default" href="{{ h.url_for('user.request_reset') }}">{{ _('Forgot your password?') }}</a>
+        {% endblock %}
+      </p>
+    </div>
+    {% endblock %}
+  </section>
+  {% endblock %}
   {% endif %}
 {% endblock %}
