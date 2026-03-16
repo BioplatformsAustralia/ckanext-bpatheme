@@ -94,7 +94,7 @@ def custom_user_create(context, data_dict=None):
 
 
 def _timestamp():
-    return datetime.datetime.now().strftime("%Y%m%d%H%M")
+    return datetime.datetime.now().strftime("%Y%m%d%H%M%S")
 
 
 @chained_action
