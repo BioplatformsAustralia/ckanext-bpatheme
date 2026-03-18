@@ -42,6 +42,7 @@
                                         </li>
                                     {% endblock %}
                                     {% block header_account_log_out_link %}
+                                        {% set logout_url = h.url_for('/user/_logout') %}
                                         <li>
                                             <a href="{{ h.url_for('/user/_logout') }}" title="{{ _('Log out') }}">
                                                 <i class="fa fa-sign-out" aria-hidden="true"></i>
@@ -57,7 +58,7 @@
                             <ul class="unstyled">
                                 {% block header_account_notlogged %}
                                     <li class="login">
-                                        <a href="{{ h.url_for('oidc_pkce.login', next=h.current_url()) }}"
+                                        <a href="{{ h.url_for('user.login', next=h.current_url()) }}"
                                            title="{{ _('Log in') }}">
                                             <i class="fa fa-sign-in" aria-hidden="true"></i>
                                             <span class="text login">{{ _('Log In') }}</span>
