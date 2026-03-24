@@ -34,7 +34,7 @@ a conversation.
 Use of the Bioplatforms Australia Data Portal is subject to Terms and
 Conditions.  These, along with a Privacy statement on data collection, can be
 found at:
-    https://bioplatforms.com/terms-and-conditions/
+    %(siteurl)s/about/acceptable_use
 
 Feel free to contact us if you have any questions, and feedback is always
 welcome.

@@ -35,7 +35,10 @@ class CustomTheme(plugins.SingletonPlugin):
 
     # IActions
     def get_actions(self):
-        return {"user_create": action.custom_user_create}
+        return {
+            "user_create": action.custom_user_create,
+            "user_delete": action.user_delete,
+        }
 
     # IPackageController
     def before_search(self, search_params):

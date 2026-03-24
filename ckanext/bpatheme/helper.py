@@ -192,7 +192,9 @@ def find_organizations_for_user():
             "all_fields": True,
             "include_extras": True,
             "include_dataset_count": False,
-            "include_groups": True,
+            "include_groups": False,
+            "include_datasets": False,
+            "include_users":False
         }
     )
 
@@ -205,7 +207,9 @@ def find_organizations_for_user():
                 "all_fields": True,
                 "include_extras": True,
                 "include_dataset_count": False,
-                "include_groups": True,
+                "include_groups": False,
+                "include_datasets": False,
+                "include_users": False
             }
         )
         for org in organizations:
@@ -837,6 +841,38 @@ def get_projects_in_reverse_ranking_order():
                   "distinct forest ecosystems. ",
          }
     projects.append(forest_resilience)
+
+    animal_disease = {'logo': "Animal-Disease-Genomics-initiative-RFP.webp",
+                      'has_logo': "false",
+                      'special_class': "no-circular-logo",
+                      'icon': "Animal-Disease-Genomics-initiative-RFP.webp",
+                      'iconalt': "Animal-Disease-Genomics-initiative-RFP.png",
+                      'slug': "animal-disease",
+                      'url': "https://bioplatforms.com/project/australian-animal-disease-genomics-initiative/",
+                      'title': "Australian Animal Disease Genomics",
+                      'description': "The Australian Animal Disease Genomics Initiative is a national collaborative "\
+                          "project, which aims to develop foundational genomic data for priority animal pathogens and "\
+                          "parasites, supporting national efforts in disease understanding, detection, surveillance "\
+                          "and control. ",
+                     }
+    projects.append(animal_disease)
+
+    aus_venom = {'logo': "AVID-Logo.webp",
+                      'has_logo': "true",
+                      'special_class': "no-circular-logo",
+                      'icon': "AVID_Initiative_feature_image.webp",
+                      'iconalt': "AVID_Initiative_feature_image.png",
+                      'slug': "aus-venom",
+                      'url': "https://bioplatforms.com/project/australian-venom-innovation-and-discovery-initiative/",
+                      'title': "Australian Venom Innovation and Discovery",
+                      'description': "The Australian Venom Innovation and Discovery (AVID) Initiative is a national "\
+                           "collaborative effort to generate high-quality genomic, transcriptomic, and  proteomic "\
+                           "data for Australia’s venomous species. By integrating expertise across ecology, "\
+                           "toxinology, genomics, and translational science, AVID advances understanding of venom "\
+                           "systems while enabling innovation in conservation, biosecurity, health, and agriculture.",
+                     }
+    projects.append(aus_venom)
+
     ranking = organization_slugs_by_creation_and_rank()
 
     for p in projects:

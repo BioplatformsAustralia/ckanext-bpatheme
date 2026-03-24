@@ -1,0 +1,24 @@
+{#
+Embeds instructions for when Acceptable Use Policy has been
+rejected into a page.
+
+
+    {% snippet 'snippets/acceptable_use_rejected.html' %}
+
+#}
+
+{% block acceptable_use_policy_rejected %}
+  <div name="aup_rejected">
+  <p>
+  Regretfully, you have chosen not to accept our Acceptable Use Policy 
+  and/or Terms and Conditions.  As such, we can not provide you with further
+  access to the Bioplatforms Australia Data Portal.
+  </p>
+
+  <p>
+  Please contact <a href="mailto:help@bioplatforms.com">help@bioplatforms.com</a>
+  if you wish to discuss your concerns further.
+  </p>
+
+  </div>
+{% endblock %}
