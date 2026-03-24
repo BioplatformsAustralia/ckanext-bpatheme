@@ -80,7 +80,11 @@
     {% endblock %}
     {% if 'oidc_pkce_bpa' in g.plugins %}
     <a class="btn btn-primary" href="{{ h.url_for('oidc_pkce_bpa_public.redirect_profile_update') }}" rel="noopener noreferrer">
+      {% if 'oidc_pkce_bpa' in g.plugins %}
+      {{ _('Update profile details at BioCommons Access') }} <i class="fa fa-external-link" aria-hidden="true"></i>
+      {% else %}
       {{ _('Update Profile Details') }} <i class="fa fa-external-link" aria-hidden="true"></i>
+      {% endif %}
     </a>
     {% else %}
     {{ form.required_message() }}
