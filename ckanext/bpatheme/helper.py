@@ -27,6 +27,11 @@ def get_current_year():
     return datetime.datetime.today().year
 
 
+def get_drs_uri(id):
+    hostname = urlparse(config.get("ckan.site_url", "")).hostname or ""
+    return f"drs://{hostname}/{id}"
+
+
 def wa_license_icon(id):
     icons = {
         "cc-by": ["cc", "cc-by"],

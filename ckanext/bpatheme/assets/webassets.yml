@@ -43,3 +43,12 @@ bootstraptable-css:
   output: ckanext-bpatheme/%(version)s_bootstraptable.css
   contents:
      - bootstraptable/bootstrap-table.min.css
+
+drs-copy-js:
+  filters: rjsmin
+  extra:
+    preload:
+      - base/main
+  output: ckanext-bpatheme/%(version)s_drs_copy.js
+  contents:
+    - scripts/drs_copy_uri.js

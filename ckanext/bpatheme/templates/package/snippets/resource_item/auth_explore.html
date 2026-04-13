@@ -41,6 +41,18 @@
                         <li>
                             {% snippet 'ckanext_s3filestore/snippets/download_window_link.html', id=pkg.name, resource_id=res.id %}
                         </li>
+                        <li>
+                            <div>
+                                {% asset 'ckanext-bpatheme/drs-copy-js' %}
+                                <a href="#"
+                                   class="resource-url-analytics drs_copy_uri"
+                                   data-module="drs_copy_uri"
+                                   data-module-uri="{{ h.get_drs_uri(res.id) }}">
+                                    <i class="fa fa-copy download-window-links"></i>
+                                    {{ _('Copy DRS URI') }}
+                                </a>
+                            </div>
+                        </li>
                         {% endif %}
                         {% if can_edit %}
                         <li>
