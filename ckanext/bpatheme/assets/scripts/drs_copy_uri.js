@@ -15,7 +15,7 @@ ckan.module('drs_copy_uri', function ($) {
             }
             var self = this;
             navigator.clipboard.writeText(uri).then(
-                function () { self._toggleFeedback(uri); },
+                function () { self._toggleFeedback('DRS URI copied to clipboard'); },
                 function (err) { self._toggleFeedback('ERROR: ' + err); }
             );
         },
