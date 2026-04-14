@@ -23,17 +23,6 @@
                 >
                         {{ _("Remove") }}
                 </button>
-                {% if item.details.id %}
-                <div style="display:inline-block;">
-                    {% asset 'ckanext-bpatheme/drs-copy-js' %}
-                    <a href="#"
-                       class="btn btn-sm btn-default drs_copy_uri"
-                       data-module="drs_copy_uri"
-                       data-module-uri="{{ h.get_drs_uri(item.details.id) }}">
-                        <i class="fa fa-copy"></i> {{ _('Copy DRS Bundle URI') }}
-                    </a>
-                </div>
-                {% endif %}
             </div>
         </li>
        {% else %}
