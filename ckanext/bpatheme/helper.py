@@ -28,8 +28,8 @@ def get_current_year():
 
 
 def get_drs_uri(id):
-    site_url = config.get("ckan.site_url", "").rstrip("/")
-    return f"{site_url}/ga4gh/drs/v1/objects/{id}"
+    hostname = urlparse(config.get("ckan.site_url", "")).hostname or ""
+    return f"drs://{hostname}/{id}"
 
 
 def wa_license_icon(id):
