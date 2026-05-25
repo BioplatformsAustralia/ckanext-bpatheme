@@ -873,6 +873,18 @@ def get_projects_in_reverse_ranking_order():
                      }
     projects.append(aus_venom)
 
+    environmental_dna = {'logo': "edna.webp",
+                      'has_logo': "true",
+                      'special_class': "no-circular-logo",
+                      'icon': "edna.webp",
+                      'iconalt': "edna.png",
+                      'slug': "environmental-dna",
+                      'url': "https://imos.org.au/facility/biomolecular-observing/environmental-dna",
+                      'title': "Environmental DNA",
+                      'description': "",
+                     }
+    projects.append(environmental_dna)
+
     ranking = organization_slugs_by_creation_and_rank()
 
     for p in projects:
