@@ -143,6 +143,8 @@ class CustomTheme(plugins.SingletonPlugin):
             "check_user_dataset_access":helper.check_user_dataset_access,
             "is_bioproject": helper.is_bioproject,
             "render_ncbi_bioproject_url": helper.render_ncbi_bioproject_url,
+            "get_drs_uri": helper.get_drs_uri,
+            "get_galaxy_url": helper.get_galaxy_url,
         }
 
     # Ifacets
