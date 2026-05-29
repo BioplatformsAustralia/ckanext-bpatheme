@@ -914,3 +914,21 @@ def render_ncbi_bioproject_url(ncbi_bioproject_accession):
         return ""
 
     return "https://www.ncbi.nlm.nih.gov/bioproject/%s/" % (ncbi_bioproject_accession,)
+
+
+def get_drs_uri(object_id):
+    """Return a DRS URI for a resource or package bundle.
+
+    Resources:  drs://<host>/<resource_id>
+    Packages:   drs://<host>/~<package_id>  (caller must pass id prefixed with ~)
+    """
+    hostname = urlparse(config.get("ckan.site_url", "")).hostname or ""
+    return "drs://{}/{}".format(hostname, object_id)
+
+
+def get_galaxy_url():
+    """Return the Galaxy Australia instance URL, configurable via ckan.ini or env var."""
+    return (
+        config.get("ckanext.bpatheme.galaxy_url")
+        or os.environ.get("GALAXY_AU_URL", "https://usegalaxy.org.au")
+    ).rstrip("/")

@@ -44,6 +44,15 @@ bootstraptable-css:
   contents:
      - bootstraptable/bootstrap-table.min.css
 
+drs-copy-js:
+  filters: rjsmin
+  output: ckanext-bpatheme/%(version)s_drs_copy.js
+  contents:
+     - scripts/drs_copy_uri.js
+  extra:
+    preload:
+      - base/main
+
 galaxy-send-js:
   filters: rjsmin
   output: ckanext-bpatheme/%(version)s_galaxy_send.js
