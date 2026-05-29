@@ -3,11 +3,8 @@
 /*
  * galaxy_send CKAN module
  *
- * Two-step modal:
- *   1. If no Galaxy API key is stored in the CKAN session, show a "Connect"
- *      step where the user pastes their key (User → Preferences → API Key in Galaxy).
- *   2. Once connected, show the user's histories and let them pick one.
- *      CKAN proxies all Galaxy API calls server-side using the stored key.
+ * Authenticates to Galaxy Australia using the Auth0 Bearer token from the
+ * user's existing CKAN OIDC session — no separate Galaxy API key needed.
  *
  * Required data attributes on the trigger element:
  *   data-module-resource-id   – CKAN resource UUID
@@ -22,7 +19,6 @@ ckan.module('galaxy_send', function ($) {
 
     function _buildModal(galaxyUrl) {
         var safeUrl = _escAttr(galaxyUrl);
-        var apiKeyHelpUrl = safeUrl + '/user/api_key';
         var html = [
             '<div class="modal fade" id="' + MODAL_ID + '" tabindex="-1" role="dialog"',
             '     aria-labelledby="galaxy-modal-label">',
@@ -41,27 +37,6 @@ ckan.module('galaxy_send', function ($) {
             '      <div class="modal-body">',
             '        <p id="galaxy-modal-resource-name" class="text-muted small" style="margin-bottom:12px"></p>',
 
-            /* ── API key step ── */
-            '        <div id="galaxy-modal-key-step" style="display:none">',
-            '          <p>',
-            '            Enter your <strong>Galaxy Australia API key</strong> to connect.',
-            '            <a href="' + apiKeyHelpUrl + '" target="_blank">',
-            '              Find it under User &rarr; Preferences &rarr; Manage API Key',
-            '              <i class="fa fa-external-link"></i>',
-            '            </a>.',
-            '          </p>',
-            '          <div class="input-group">',
-            '            <input type="password" id="galaxy-api-key-input" class="form-control"',
-            '                   placeholder="Paste your Galaxy API key here" autocomplete="off">',
-            '            <span class="input-group-btn">',
-            '              <button class="btn btn-primary" id="galaxy-connect-btn">',
-            '                <i class="fa fa-plug"></i> Connect',
-            '              </button>',
-            '            </span>',
-            '          </div>',
-            '          <div id="galaxy-key-error" class="text-danger small" style="margin-top:6px;display:none"></div>',
-            '        </div>',
-
             /* ── loading spinner ── */
             '        <div id="galaxy-modal-loading" class="text-center" style="padding:24px 0;display:none">',
             '          <i class="fa fa-spinner fa-spin fa-2x"></i>',
@@ -77,11 +52,6 @@ ckan.module('galaxy_send', function ($) {
             '          <div id="galaxy-history-list" class="list-group"',
             '               style="max-height:320px;overflow-y:auto;border:1px solid #ddd;border-radius:4px">',
             '          </div>',
-            '          <p class="text-right" style="margin-top:6px;margin-bottom:0">',
-            '            <a href="#" id="galaxy-change-key-link" class="small text-muted">',
-            '              <i class="fa fa-key"></i> Change API key',
-            '            </a>',
-            '          </p>',
             '        </div>',
 
             /* ── success ── */
@@ -103,7 +73,7 @@ ckan.module('galaxy_send', function ($) {
             '        <button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>',
             '        <button type="button" class="btn btn-primary" id="galaxy-modal-send-btn"',
             '                style="display:none" disabled>',
-            '          <i class="fa fa-rocket"></i> Send to Galaxy',
+            '          <i class="fa fa-rocket"></i> Bulk send to Galaxy',
             '        </button>',
             '      </div>',
 
@@ -142,9 +112,6 @@ ckan.module('galaxy_send', function ($) {
             modal.find('#galaxy-modal-resource-name').text(
                 this.options.resourceName ? 'File: ' + this.options.resourceName : ''
             );
-            // Wire up persistent buttons (they survive modal reuse)
-            modal.find('#galaxy-connect-btn').off('click').on('click', this._onConnectClick);
-            modal.find('#galaxy-change-key-link').off('click').on('click', this._onChangeKeyClick);
             modal.find('#galaxy-modal-send-btn')
                 .off('click').on('click', this._onSendClick)
                 .prop('disabled', true).show()
@@ -156,25 +123,12 @@ ckan.module('galaxy_send', function ($) {
         },
 
         _resetModal: function (modal) {
-            modal.find('#galaxy-modal-key-step').hide();
             modal.find('#galaxy-modal-loading').hide();
             modal.find('#galaxy-modal-error').hide().text('');
             modal.find('#galaxy-modal-histories').hide();
             modal.find('#galaxy-modal-success').hide();
             modal.find('#galaxy-modal-send-btn').hide();
-            modal.find('#galaxy-api-key-input').val('');
-            modal.find('#galaxy-key-error').hide().text('');
             modal.find('#galaxy-history-list').empty();
-        },
-
-        _showKeyStep: function (modal, errorMsg) {
-            modal.find('#galaxy-modal-loading').hide();
-            modal.find('#galaxy-modal-histories').hide();
-            modal.find('#galaxy-modal-send-btn').hide();
-            modal.find('#galaxy-modal-key-step').show();
-            if (errorMsg) {
-                modal.find('#galaxy-key-error').text(errorMsg).show();
-            }
         },
 
         _loadHistories: function (modal) {
@@ -198,7 +152,6 @@ ckan.module('galaxy_send', function ($) {
                     'Please <a href="' + _escHtml(this.options.galaxyUrl) + '" target="_blank">open Galaxy Australia</a> ' +
                     'and create a history first.'
                 ).show();
-                modal.find('#galaxy-modal-histories').hide();
                 modal.find('#galaxy-modal-send-btn').hide();
                 return;
             }
@@ -231,68 +184,18 @@ ckan.module('galaxy_send', function ($) {
 
         _onHistoriesFailed: function (modal, xhr) {
             modal.find('#galaxy-modal-loading').hide();
-            // 401 with error=no_api_key means we need the user to enter their key
-            if (xhr.status === 401) {
-                try {
-                    var body = JSON.parse(xhr.responseText);
-                    if (body.error === 'no_api_key') {
-                        this._showKeyStep(modal);
-                        return;
-                    }
-                } catch (ignored) {}
-            }
-            // 401 with a different message means the stored key was rejected by Galaxy
-            if (xhr.status === 401 || xhr.status === 403) {
-                this._showKeyStep(modal, 'Your Galaxy API key was rejected. Please enter a valid key.');
-                return;
-            }
             var msg = 'Could not load Galaxy Australia histories.';
             try {
                 var b = JSON.parse(xhr.responseText);
                 if (b && b.error) { msg = b.error; }
             } catch (ignored) {}
+            if (xhr.status === 401 || xhr.status === 403) {
+                msg = 'Authentication failed. Please ensure you are logged in via your institutional account, which must be linked to Galaxy Australia.';
+            }
             modal.find('#galaxy-modal-error').html(
                 '<i class="fa fa-exclamation-triangle"></i> ' + _escHtml(msg)
             ).show();
-        },
-
-        _onConnectClick: function () {
-            var modal = this._getModal();
-            var apiKey = modal.find('#galaxy-api-key-input').val().trim();
-            if (!apiKey) {
-                modal.find('#galaxy-key-error').text('Please enter an API key.').show();
-                return;
-            }
-            var connectBtn = modal.find('#galaxy-connect-btn');
-            connectBtn.prop('disabled', true).html('<i class="fa fa-spinner fa-spin"></i>');
-            modal.find('#galaxy-key-error').hide();
-            var self = this;
-
-            $.ajax({
-                url: '/galaxy/set-api-key',
-                method: 'POST',
-                contentType: 'application/json',
-                data: JSON.stringify({ api_key: apiKey }),
-                success: function () {
-                    connectBtn.prop('disabled', false).html('<i class="fa fa-plug"></i> Connect');
-                    modal.find('#galaxy-modal-key-step').hide();
-                    self._loadHistories(modal);
-                },
-                error: function () {
-                    connectBtn.prop('disabled', false).html('<i class="fa fa-plug"></i> Connect');
-                    modal.find('#galaxy-key-error').text('Could not save API key. Please try again.').show();
-                },
-            });
-        },
-
-        _onChangeKeyClick: function (e) {
-            e.preventDefault();
-            var modal = this._getModal();
-            modal.find('#galaxy-modal-histories').hide();
             modal.find('#galaxy-modal-send-btn').hide();
-            modal.find('#galaxy-api-key-input').val('');
-            modal.find('#galaxy-key-error').hide().text('');
-            modal.find('#galaxy-modal-key-step').show();
         },
 
         _onSendClick: function () {
@@ -302,15 +205,19 @@ ckan.module('galaxy_send', function ($) {
             sendBtn.prop('disabled', true).html('<i class="fa fa-spinner fa-spin"></i> Sending&hellip;');
             var self = this;
 
+            // Bundle mode: no resourceId → send entire package via DRS bundle URI
+            var isBundleMode = !self.options.resourceId;
+            var url = isBundleMode ? '/galaxy/send-bundle' : '/galaxy/send';
+            var payload = isBundleMode
+                ? { history_id: self._selectedHistoryId, package_id: self.options.packageId }
+                : { history_id: self._selectedHistoryId, package_id: self.options.packageId,
+                    resource_id: self.options.resourceId, resource_name: self.options.resourceName };
+
             $.ajax({
-                url: '/galaxy/send',
+                url: url,
                 method: 'POST',
                 contentType: 'application/json',
-                data: JSON.stringify({
-                    history_id: self._selectedHistoryId,
-                    package_id: self.options.packageId,
-                    resource_id: self.options.resourceId,
-                }),
+                data: JSON.stringify(payload),
                 success: function (data) {
                     if (data && data.err_msg) {
                         sendBtn.prop('disabled', false).html('<i class="fa fa-rocket"></i> Send to Galaxy');
