@@ -49,15 +49,18 @@ ckan.module('galaxy_send', function ($) {
             /* ── history list ── */
             '        <div id="galaxy-modal-histories" style="display:none">',
             '          <p style="margin-bottom:6px"><strong>Select a history to send this file to:</strong></p>',
+            '          <input type="text" id="galaxy-history-search" class="form-control"',
+            '                 placeholder="Search histories…" style="margin-bottom:8px">',
             '          <div id="galaxy-history-list" class="list-group"',
-            '               style="max-height:320px;overflow-y:auto;border:1px solid #ddd;border-radius:4px">',
+            '               style="max-height:280px;overflow-y:auto;border:1px solid #ddd;border-radius:4px">',
             '          </div>',
+            '          <p id="galaxy-history-no-results" class="text-muted small" style="display:none;margin-top:6px">No histories match your search.</p>',
             '        </div>',
 
             /* ── success ── */
             '        <div id="galaxy-modal-success" class="alert alert-success" style="display:none">',
             '          <i class="fa fa-check"></i>',
-            '          Your file has been queued for upload in Galaxy Australia.',
+            '          Your file has been queued for upload in history <strong class="galaxy-history-name"></strong> in Galaxy Australia.',
             '          <br><a href="' + safeUrl + '" target="_blank" class="alert-link">',
             '            Open Galaxy Australia <i class="fa fa-external-link"></i>',
             '          </a>',
@@ -129,6 +132,8 @@ ckan.module('galaxy_send', function ($) {
             modal.find('#galaxy-modal-success').hide();
             modal.find('#galaxy-modal-send-btn').hide();
             modal.find('#galaxy-history-list').empty();
+            modal.find('#galaxy-history-search').val('');
+            modal.find('#galaxy-history-no-results').hide();
         },
 
         _loadHistories: function (modal) {
@@ -173,6 +178,7 @@ ckan.module('galaxy_send', function ($) {
                     modal.find('#galaxy-history-list .list-group-item').removeClass('active');
                     $(this).addClass('active');
                     self._selectedHistoryId = history.id;
+                    self._selectedHistoryName = history.name;
                     modal.find('#galaxy-modal-send-btn').prop('disabled', false);
                 });
                 listEl.append(item);
@@ -180,6 +186,22 @@ ckan.module('galaxy_send', function ($) {
 
             modal.find('#galaxy-modal-histories').show();
             modal.find('#galaxy-modal-send-btn').show().prop('disabled', true);
+
+            modal.find('#galaxy-history-search').off('input').on('input', function () {
+                var q = $(this).val().toLowerCase();
+                var items = modal.find('#galaxy-history-list .list-group-item');
+                var visible = 0;
+                items.each(function () {
+                    var match = !q || $(this).text().toLowerCase().indexOf(q) !== -1;
+                    $(this).toggle(match);
+                    if (match) { visible++; }
+                });
+                modal.find('#galaxy-history-no-results').toggle(visible === 0);
+                if (!modal.find('#galaxy-history-list .list-group-item.active:visible').length) {
+                    self._selectedHistoryId = null;
+                    modal.find('#galaxy-modal-send-btn').prop('disabled', true);
+                }
+            });
         },
 
         _onHistoriesFailed: function (modal, xhr) {
@@ -229,6 +251,9 @@ ckan.module('galaxy_send', function ($) {
                     modal.find('#galaxy-modal-histories').hide();
                     modal.find('#galaxy-modal-error').hide();
                     modal.find('#galaxy-modal-send-btn').hide();
+                    modal.find('#galaxy-modal-success')
+                        .find('.galaxy-history-name')
+                        .text(self._selectedHistoryName || '');
                     modal.find('#galaxy-modal-success').show();
                 },
                 error: function (xhr) {

@@ -21,6 +21,10 @@ from ckan.plugins.toolkit import (
 
 # Stored by ckanext-oidc-pkce-bpa after Auth0 login
 SESSION_GALAXY_ACCESS_TOKEN = "ckanext:bpa:galaxy_access_token"
+SESSION_GALAXY_REFRESH_TOKEN = "ckanext:bpa:galaxy_refresh_token"
+
+# Refresh the access token if it expires within this many seconds (5 minutes)
+_TOKEN_REFRESH_WINDOW_SECONDS = 5 * 60
 
 
 def _galaxy_url():
@@ -28,12 +32,75 @@ def _galaxy_url():
             os.environ.get("GALAXY_AU_URL", "https://usegalaxy.org.au")).rstrip("/")
 
 
-def _galaxy_auth_headers():
-    """Return Bearer auth headers using the Auth0 access token from the OIDC session.
+def _token_exp(token):
+    """Decode the JWT payload (no signature check) and return the exp claim, or None."""
+    try:
+        import base64 as _b64, json as _json
+        payload = token.split(".")[1]
+        payload += "=" * (4 - len(payload) % 4)
+        return _json.loads(_b64.urlsafe_b64decode(payload)).get("exp")
+    except Exception:
+        return None
 
-    Returns ({}, "none") if no token is present — callers must return a 401 in that case.
+
+def _refresh_access_token_if_needed():
+    """If the stored access token is near expiry, use the refresh token to renew it.
+
+    Updates the session in-place. Returns the (possibly refreshed) access token,
+    or None if no token is available.
     """
+    import time
     token = session.get(SESSION_GALAXY_ACCESS_TOKEN)
+    if not token:
+        return None
+
+    exp = _token_exp(token)
+    if exp and (exp - time.time()) > _TOKEN_REFRESH_WINDOW_SECONDS:
+        return token  # still fresh enough
+
+    refresh_token = session.get(SESSION_GALAXY_REFRESH_TOKEN)
+    if not refresh_token:
+        log.debug("Access token near expiry but no refresh token stored — using as-is")
+        return token
+
+    base_url = config.get("ckanext.oidc_pkce.base_url", "").rstrip("/")
+    token_path = config.get("ckanext.oidc_pkce.token_path", "/oauth/token")
+    client_id = config.get("ckanext.oidc_pkce.client_id", "")
+    client_secret = config.get("ckanext.oidc_pkce.client_secret", "")
+
+    try:
+        resp = http_requests.post(
+            f"{base_url}{token_path}",
+            data={
+                "grant_type": "refresh_token",
+                "client_id": client_id,
+                "client_secret": client_secret,
+                "refresh_token": refresh_token,
+            },
+            timeout=10,
+        )
+        if resp.status_code == 200:
+            data = resp.json()
+            new_token = data.get("access_token")
+            if new_token:
+                session[SESSION_GALAXY_ACCESS_TOKEN] = new_token
+                if data.get("refresh_token"):
+                    session[SESSION_GALAXY_REFRESH_TOKEN] = data["refresh_token"]
+                log.info("galaxy: access token refreshed successfully")
+                return new_token
+        log.warning("galaxy: token refresh failed (%d): %s", resp.status_code, resp.text[:200])
+    except http_requests.RequestException as e:
+        log.warning("galaxy: token refresh request failed: %s", e)
+
+    return token  # return old token; Galaxy will 401 if truly expired
+
+
+def _galaxy_auth_headers():
+    """Return Bearer auth headers, refreshing the access token first if near expiry.
+
+    Returns ({}, "none") if no token is available.
+    """
+    token = _refresh_access_token_if_needed()
     if token:
         return {"Authorization": f"Bearer {token}"}, "bearer"
     return {}, "none"
