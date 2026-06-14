@@ -1,0 +1,16 @@
+{% ckan_extends %}
+
+{% block bulk_download_popover_additions %}
+      {% asset 'ckanext-bpatheme/galaxy-send-js' %}
+      {% if h.galaxy_enabled() %}
+        {% if package_id and g.user %}
+        <a href="#"
+           class="btn btn-default"
+           data-module="galaxy_send"
+           data-module-package-id="{{ package_id }}"
+           data-module-galaxy-url="{{ h.get_galaxy_url() }}">
+            <i class="fa fa-rocket"></i>{{ _(' Send to Galaxy Australia') }}
+        </a>
+        {% endif %}
+      {% endif %}
+{% endblock %}
