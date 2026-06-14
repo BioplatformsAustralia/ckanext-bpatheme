@@ -932,3 +932,32 @@ def get_galaxy_url():
         config.get("ckanext.bpatheme.galaxy_url")
         or os.environ.get("GALAXY_AU_URL", "https://usegalaxy.org.au")
     ).rstrip("/")
+
+
+def galaxy_enabled():
+    """Feature flag to enable/disable Galaxy transfer features"""
+
+    galaxy_enabled = config.get("ckanext.bpatheme.enable_galaxy", False)
+
+    # Convert the value from a string to a boolean.
+    galaxy_enabled = toolkit.asbool(galaxy_enabled)
+
+    # if we've got a list of organisations defined in ckanext.bpatheme.galaxy_enabled_orgs, honour that
+    enabled_orgs = config.get("ckanext.bpatheme.galaxy_enabled_orgs").split()
+
+    # list not empty
+    if enabled_orgs:
+        all_organizations = toolkit.get_action("organization_list")(
+            data_dict={
+                "all_fields": True,
+                "include_extras": False,
+                "include_dataset_count": False,
+                "include_groups": False,
+                }
+            )
+
+        for org in all_organizations:
+            if org["name"] in enabled_orgs:
+                galaxy_enabled = True
+
+    return galaxy_enabled
