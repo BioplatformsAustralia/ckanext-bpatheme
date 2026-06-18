@@ -36,6 +36,22 @@
                             resource_id=res.id
                             %}
                         </li>
+                        {% if h.galaxy_enabled() %}
+                          {% asset 'ckanext-bpatheme/galaxy-send-js' %}
+                          {% if g.user %}
+                          <li>
+                              <a href="#"
+                                 data-module="galaxy_send"
+                                 data-module-resource-id="{{ res.id }}"
+                                 data-module-package-id="{{ pkg.name }}"
+                                 data-module-resource-name="{{ h.resource_display_name(res) | e }}"
+                                 data-module-galaxy-url="{{ h.get_galaxy_url() }}">
+                                  <i class="fa fa-rocket"></i>
+                                  {{ _('Send to Galaxy Australia') }}
+                              </a>
+                          </li>
+                          {% endif %}
+                        {% endif %}
                         {% endif %}
             {% if res.url and h.is_url(res.url) %}
               <li>
