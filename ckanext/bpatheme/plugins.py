@@ -145,6 +145,7 @@ class CustomTheme(plugins.SingletonPlugin):
             "render_ncbi_bioproject_url": helper.render_ncbi_bioproject_url,
             "get_drs_uri": helper.get_drs_uri,
             "get_galaxy_url": helper.get_galaxy_url,
+            "galaxy_enabled": helper.galaxy_enabled,
         }
 
     # Ifacets
