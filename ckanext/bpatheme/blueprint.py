@@ -315,12 +315,15 @@ def galaxy_send_bundle():
             json={
                 "history_id": history_id,
                 "targets": [{
-                    "destination": {"type": "hdas"},
-                    "elements": [{
-                        "src": "url",
-                        "url": drs_bundle_uri,
-                        "name": package_id,
-                    }]
+                    "destination": {"type": "hdca"},
+                    "collection_type": "list",
+                    "name": package_id,
+                    "src": "url",
+                    "url": drs_bundle_uri,
+                    "elements_from": "drs_bundle",
+                    "ext": "auto",
+                    "dbkey": "?",
+                    "deferred": False,
                 }]
             },
             timeout=30,
