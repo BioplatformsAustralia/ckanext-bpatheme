@@ -304,8 +304,29 @@ def galaxy_send_bundle():
 
     from urllib.parse import urlparse as _urlparse
     hostname = _urlparse(config.get("ckan.site_url", "")).hostname or ""
-    drs_bundle_uri = f"drs://{hostname}/~{package_id}"
-    log.info("galaxy_send_bundle: DRS bundle URI=%s", drs_bundle_uri)
+
+    try:
+        pkg = logic.get_action("package_show")({"ignore_auth": False, "user": g.user}, {"id": package_id})
+    except logic.NotFound:
+        return make_response(json.dumps({"error": f"Package '{package_id}' not found."}), 404, {"Content-Type": "application/json"})
+    except logic.NotAuthorized:
+        return make_response(json.dumps({"error": "You do not have permission to access this package."}), 403, {"Content-Type": "application/json"})
+
+    resources = pkg.get("resources") or []
+    if not resources:
+        return make_response(json.dumps({"error": "Package has no resources to transfer."}), 400, {"Content-Type": "application/json"})
+
+    elements = [
+        {
+            "src": "url",
+            "url": f"drs://{hostname}/{r['id']}",
+            "name": r.get("name") or r["id"],
+        }
+        for r in resources
+        if r.get("id")
+    ]
+    collection_name = pkg.get("title") or package_id
+    log.info("galaxy_send_bundle: sending %d elements for package %s", len(elements), package_id)
 
     galaxy_url = _galaxy_url()
     try:
@@ -317,13 +338,8 @@ def galaxy_send_bundle():
                 "targets": [{
                     "destination": {"type": "hdca"},
                     "collection_type": "list",
-                    "name": package_id,
-                    "src": "url",
-                    "url": drs_bundle_uri,
-                    "elements_from": "drs_bundle",
-                    "ext": "auto",
-                    "dbkey": "?",
-                    "deferred": False,
+                    "name": collection_name,
+                    "elements": elements,
                 }]
             },
             timeout=30,
