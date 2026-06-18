@@ -961,17 +961,13 @@ def galaxy_enabled():
     if enabled_orgs:
         # set false unless we find a enabled organisation
         galaxy_enabled = False
-        
-        all_organizations = toolkit.get_action("organization_list")(
-            data_dict={
-                "all_fields": True,
-                "include_extras": False,
-                "include_dataset_count": False,
-                "include_groups": False,
-                }
-            )
+    
+        context = {"user": c.user}
+        data_dict = {"permission": "read"}
 
-        for org in all_organizations:
+        user_organizations = toolkit.get_action("organization_list_for_user")(context, data_dict)
+
+        for org in user_organizations:
             if org["name"] in enabled_orgs:
                 galaxy_enabled = True
 
