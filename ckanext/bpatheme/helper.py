@@ -947,6 +947,9 @@ def galaxy_enabled():
 
     # list not empty
     if enabled_orgs:
+        # set false unless we find a enabled organisation
+        galaxy_enabled = False
+        
         all_organizations = toolkit.get_action("organization_list")(
             data_dict={
                 "all_fields": True,
