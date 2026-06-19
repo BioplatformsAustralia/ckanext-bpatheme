@@ -336,9 +336,7 @@ def galaxy_send_bundle():
             json={
                 "history_id": history_id,
                 "targets": [{
-                    "destination": {"type": "hdca"},
-                    "collection_type": "list",
-                    "name": collection_name,
+                    "destination": {"type": "hdas"},
                     "elements": elements,
                 }]
             },
