@@ -260,15 +260,9 @@ ckan.module('galaxy_send', function ($) {
                     sendBtn.prop('disabled', false).html('<i class="fa fa-rocket"></i> Send to Galaxy');
                     var msg = 'Failed to send to Galaxy Australia.';
                     try { var b = JSON.parse(xhr.responseText); if (b && b.error) { msg = b.error; } } catch (ignored) {}
-                    if (xhr.status === 401 || xhr.status === 403) {
-                        msg = 'To proceed with the data transfer, please log into Galaxy Australia, then return here and try again.';
-                    }
-                    var hint = '';
-                    if (msg.indexOf('expired') !== -1) {
-                        hint = ' If this error appears again, please retry the data transfer — Galaxy Australia will refresh your session automatically.';
-                    }
+
                     modal.find('#galaxy-modal-error').html(
-                        '<i class="fa fa-exclamation-triangle"></i> ' + _escHtml(msg) + _escHtml(hint)
+                        '<i class="fa fa-exclamation-triangle"></i> ' + _escHtml(msg)
                     ).show();
                 },
             });
