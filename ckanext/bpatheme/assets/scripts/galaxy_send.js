@@ -265,7 +265,7 @@ ckan.module('galaxy_send', function ($) {
                     }
                     var hint = '';
                     if (msg.indexOf('expired') !== -1) {
-                        hint = ' If this error appears again, please retry — Galaxy will refresh your session automatically.';
+                        hint = ' If this error appears again, please retry the data transfer — Galaxy Australia will refresh your session automatically.';
                     }
                     modal.find('#galaxy-modal-error').html(
                         '<i class="fa fa-exclamation-triangle"></i> ' + _escHtml(msg) + _escHtml(hint)
