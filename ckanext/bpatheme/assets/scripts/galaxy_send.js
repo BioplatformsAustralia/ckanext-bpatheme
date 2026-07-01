@@ -212,7 +212,7 @@ ckan.module('galaxy_send', function ($) {
                 if (b && b.error) { msg = b.error; }
             } catch (ignored) {}
             if (xhr.status === 401 || xhr.status === 403) {
-                msg = 'To proceed with the data transfer, please log into Galaxy Australia once using the BioCommons login button to link your account, then return here and try again.';
+                msg = 'To proceed with the data transfer, please log into Galaxy Australia once to link your account, then return here and try again.';
             }
             modal.find('#galaxy-modal-error').html(
                 '<i class="fa fa-exclamation-triangle"></i> ' + _escHtml(msg)
@@ -261,7 +261,7 @@ ckan.module('galaxy_send', function ($) {
                     var msg = 'Failed to send to Galaxy Australia.';
                     try { var b = JSON.parse(xhr.responseText); if (b && b.error) { msg = b.error; } } catch (ignored) {}
                     if (xhr.status === 401 || xhr.status === 403) {
-                        msg = 'To proceed with the data transfer, please log into Galaxy Australia once using the BioCommons login button to link your account, then return here and try again.';
+                        msg = 'To proceed with the data transfer, please log into Galaxy Australia once to link your account, then return here and try again.';
                     }
                     var hint = '';
                     if (msg.indexOf('expired') !== -1) {
