@@ -221,7 +221,7 @@ def galaxy_histories():
         return make_response(json.dumps({"error": "Could not reach Galaxy Australia."}), 502, {"Content-Type": "application/json"})
     # Translate Galaxy 4xx to 502 — returning 401/403 triggers repoze.who login redirect
     if resp.status_code in (401, 403):
-        msg = "To proceed with the data transfer, please log into Galaxy Australia once to link your account, then return here and try again."
+        msg = "To proceed with the data transfer, please log into Galaxy Australia, then return here and try again."
         try:
             body = resp.json()
             if body.get("err_msg"):
@@ -282,7 +282,7 @@ def galaxy_send():
         log.error("galaxy_send: request to Galaxy failed: %s", e)
         return make_response(json.dumps({"error": "Could not reach Galaxy Australia."}), 502, {"Content-Type": "application/json"})
     if resp.status_code in (401, 403):
-        return make_response(json.dumps({"error": "To proceed with the data transfer, please log into Galaxy Australia once to link your account, then return here and try again."}), 502, {"Content-Type": "application/json"})
+        return make_response(json.dumps({"error": "To proceed with the data transfer, please log into Galaxy Australia, then return here and try again."}), 502, {"Content-Type": "application/json"})
     return make_response(resp.text, resp.status_code, {"Content-Type": "application/json"})
 
 
@@ -347,7 +347,7 @@ def galaxy_send_bundle():
         log.error("galaxy_send_bundle: request to Galaxy failed: %s", e)
         return make_response(json.dumps({"error": "Could not reach Galaxy Australia."}), 502, {"Content-Type": "application/json"})
     if resp.status_code in (401, 403):
-        return make_response(json.dumps({"error": "To proceed with the data transfer, please log into Galaxy Australia once to link your account, then return here and try again."}), 502, {"Content-Type": "application/json"})
+        return make_response(json.dumps({"error": "To proceed with the data transfer, please log into Galaxy Australia, then return here and try again."}), 502, {"Content-Type": "application/json"})
     return make_response(resp.text, resp.status_code, {"Content-Type": "application/json"})
 
 
