@@ -122,6 +122,7 @@ class CustomTheme(plugins.SingletonPlugin):
             "organization_slugs_by_creation_and_rank": helper.organization_slugs_by_creation_and_rank,
             "get_os_env_value": helper.get_os_env_value,
             "has_embargo": helper.has_embargo,
+            "check_package_resource_access": helper.check_package_resource_access,
             "has_timed_embargo": helper.has_timed_embargo,
             "has_embargo_reason": helper.has_embargo_reason,
             "get_embargo_reason": helper.get_embargo_reason,
