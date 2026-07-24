@@ -931,6 +931,19 @@ def get_projects_in_reverse_ranking_order():
     return sorted(projects, key=lambda x: x.get("order"), reverse=True)
 
 
+def check_package_resource_access(pkg):
+    # Helper method to determine if a user can access all resources that form a package
+    # Return True if access permitted, False otherwise
+    resources = pkg.get("resources", None)
+    if resources is not None:
+        for resource in resources:
+            if not h.check_access("resource_show", {"id": resource.id}):
+                return False
+
+    # Fall through
+    return True
+
+
 def check_user_dataset_access():
     # helper method to determine if the "Datasets" tab should appear for the given user
     # If the user is an Admin, then, yes, always
