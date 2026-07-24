@@ -72,6 +72,7 @@ def replace_url(text, display):
         url, display
     )
 
+
 def replace_url_with_bullet(text):
     return replace_url(text, link_marker)
 
@@ -81,15 +82,13 @@ def replace_url_with_text(text):
     url_pairs = [not_empty for not_empty in re.split(r",", text) if not_empty]
     url_string = ""
     for pair in url_pairs:
-        split_value =pair.split('||')
+        split_value = pair.split("||")
         url_string = url_string + replace_url(split_value[1], split_value[0]) + "<br />"
     return url_string
 
 
 def replace_mail_to(text):
-    return '<a href="{0}"> {1}</a>'.format(
-        text, link_marker
-    )
+    return '<a href="{0}"> {1}</a>'.format(text, link_marker)
 
 
 def create_query_parameter(query_format, url):

@@ -54,7 +54,7 @@ class CustomTheme(plugins.SingletonPlugin):
                 else:
                     twiddled.append(c)
 
-            output = u""
+            output = ""
 
             return output.join(twiddled)
 
@@ -139,8 +139,8 @@ class CustomTheme(plugins.SingletonPlugin):
             "is_orgname_in_list": helper.is_orgname_in_list,
             "find_autoregister_organizations": helper.find_autoregister_organizations,
             "order_schema_fields": helper.order_schema_fields,
-            "get_projects_in_reverse_ranking_order":helper.get_projects_in_reverse_ranking_order,
-            "check_user_dataset_access":helper.check_user_dataset_access,
+            "get_projects_in_reverse_ranking_order": helper.get_projects_in_reverse_ranking_order,
+            "check_user_dataset_access": helper.check_user_dataset_access,
             "is_bioproject": helper.is_bioproject,
             "render_ncbi_bioproject_url": helper.render_ncbi_bioproject_url,
             "get_drs_uri": helper.get_drs_uri,

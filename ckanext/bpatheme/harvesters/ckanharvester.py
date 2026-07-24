@@ -1,4 +1,3 @@
-
 # Python 2 to 3
 from six.moves import urllib
 
@@ -485,7 +484,6 @@ class CKANHarvester(HarvesterBase):
             result = self._create_or_update_package(package_dict, harvest_object)
 
             if result and self.config.get("read_only", False) == True:
-
                 package = model.Package.get(package_dict["id"])
 
                 # Clear default permissions
