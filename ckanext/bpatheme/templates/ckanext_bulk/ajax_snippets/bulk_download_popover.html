@@ -4,7 +4,7 @@
       {% asset 'ckanext-bpatheme/galaxy-send-js' %}
       {% if h.galaxy_enabled() %}
         {% if package_id and g.user %}
-          {% if h.check_package_resource_access(pkg) %}
+          {% if pkg and h.check_package_resource_access(pkg) %}
              <a href="#"
                 class="btn btn-default"
                 data-module="galaxy_send"
