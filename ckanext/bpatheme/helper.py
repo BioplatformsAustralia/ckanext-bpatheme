@@ -937,7 +937,7 @@ def check_package_resource_access(pkg):
     resources = pkg.get("resources", None)
     if resources is not None:
         for resource in resources:
-            if not h.check_access("resource_show", {"id": resource.get("id",None}):
+            if not h.check_access("resource_show", {"id": resource.get("id",None)}):
                 return False
 
     # Fall through
