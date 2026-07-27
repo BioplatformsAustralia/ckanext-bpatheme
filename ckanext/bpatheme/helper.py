@@ -935,6 +935,9 @@ def check_package_resource_access(pkg):
     # Helper method to determine if a user can access all resources that form a package
     # Return True if access permitted, False otherwise
     resources = pkg.get("resources", None)
+    log.warn("check_package_resource_access")
+    log.warn(pkg)
+    log.warn(resources)
     if resources is not None:
         for resource in resources:
             if not h.check_access("resource_show", {"id": resource.id}):
