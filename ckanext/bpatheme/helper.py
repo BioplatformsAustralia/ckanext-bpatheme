@@ -907,18 +907,34 @@ def get_projects_in_reverse_ranking_order():
     }
     projects.append(aus_venom)
 
-    environmental_dna = {
+    environmental_dna_csiro = {
         "logo": "edna.webp",
         "has_logo": "true",
         "special_class": "no-circular-logo",
         "icon": "edna.webp",
         "iconalt": "edna.png",
-        "slug": "environmental-dna",
+        "slug": "edna-csiro",
         "url": "https://imos.org.au/facility/biomolecular-observing/environmental-dna",
-        "title": "Environmental DNA",
+        "title": "Environmental DNA - CSIRO",
         "description": "",
     }
-    projects.append(environmental_dna)
+    projects.append(environmental_dna_csiro)
+
+    dinoflagellates = {
+        "logo": "dinoflagellates.webp",
+        "has_logo": "true",
+        "special_class": "no-circular-logo",
+        "icon": "dinoflagellates.webp",
+        "iconalt": "dinoflagellates.png",
+        "slug": "dinoflagellates",
+        "url": "https://bioplatforms.com/projects/",
+        "title": "Dinoflagellate Genomics and Toxin Discovery",
+        "description": "The Dinoflagellate Genomics and Toxin Discovery Project is a national collaborative "
+        "initiative that generates genomic resources, analytical capability and foundational datasets to advance "
+        "harmful algal bloom and marine biotoxin research, while supporting environmental monitoring, biosecurity, "
+        "biodefence and coordinated national research capability.",
+    }
+    projects.append(dinoflagellates)
 
     ranking = organization_slugs_by_creation_and_rank()
 
