@@ -936,6 +936,23 @@ def get_projects_in_reverse_ranking_order():
     }
     projects.append(dinoflagellates)
 
+    sentinel_species = {
+        "logo": "Sentinel-Species-Logo.webp",
+        "has_logo": "true",
+        "special_class": "no-circular-logo",
+        "icon": "Sentinel-Species.webp",
+        "iconalt": "Sentinel-Species.png",
+        "slug": "sentinel-species",
+        "url": "https://bioplatforms.com/project/sentinel-species-genomics-initiative/",
+        "title": "Sentinel Species Genomics Initiative",
+        "description": "The Australian Sentinel Species Genomics Initiative generates reference genomes "
+        "and population-scale genomic datasets for sentinel species across Australia's marine, freshwater "
+        "and terrestrial environments to strengthen environmental monitoring and support conservation, "
+        "restoration and climate adaptation.",
+    }
+    projects.append(sentinel_species)
+
+
     ranking = organization_slugs_by_creation_and_rank()
 
     for p in projects:
