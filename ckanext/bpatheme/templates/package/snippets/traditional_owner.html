@@ -1,0 +1,42 @@
+{% set pkg = pkg_dict %}
+
+{% block package_traditional_owner %}
+{% if pkg %}
+    <div class="clearfix"></div>
+    <div class="alert alert-info" role="alert">
+      <p>
+          <b>Respectful and Responsible Data Reuse:</b>
+          Before using these data, please review the project team’s expectations described
+          in the Reuse_preferences field. This may outline Traditional Owner community
+          expectations and applicable permissions or agreements for data reuse. Where
+          reuse preferences are not described, we encourage researchers to contact the
+          relevant Traditional Owners identified in the Indigenous_location field or search
+          for relevant Nation contacts through Native Land Digital resource
+          (<a href="https://native-land.ca/maps/native-land">Native-Land.ca | Our home on native land</a>)
+      </p>
+      <ul>
+        {% if pkg.reuse_preferences %}
+            <li>Reuse Preference:{{ pkg.reuse_preferences }}</li>
+        {% endif %}
+        {% if pkg.indigenous_location %}
+            <li>Indigenous Location: {{ pkg.indigenous_location }}</li>
+        {% endif %}
+      </ul>
+
+      {% if pkg.organization %}
+          {% set organization = h.get_translated(pkg.organization, 'title') or pkg.organization.name %}
+          {% if 'extras' in organization %}
+              {% for item in organization['extras'] %}
+                  {% if 'key' in item %}
+                      {% if item['key'] == 'info_url' and item['value']|length %}
+        <p>Please see the initiative Data Policy in the Key information section at the end of the initiative webpage
+            <a href="{{ item['value'] }}">here</a> for details on data use and acknowledgements.</p>
+                      {% endif %}
+                  {% endif %}
+              {% endfor %}
+          {% endif %}
+    {%  endif %}
+
+    </div>
+{% endif %}
+{% endblock %}

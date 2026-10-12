@@ -59,6 +59,7 @@
     {% snippet 'snippets/shopping_cart_add.html', pkg=pkg, extra_classes="btn-primary pull-right" %}
     <p>&nbsp;</p>
     {% snippet 'package/snippets/embargo.html', pkg_dict=pkg %}
+    {% snippet 'package/snippets/traditional_owner.html', pkg_dict=pkg %}
     {{ super() }}
     {% snippet 'package/snippets/open_with_attribution.html', pkg_dict=pkg %}
     {% snippet 'package/snippets/related_data.html', pkg_dict=pkg %}
