@@ -24,11 +24,12 @@
       </ul>
 
       {% if pkg.organization %}
-          {% set organization = h.get_translated(pkg.organization, 'title') or pkg.organization.name %}
+          pkg.org = {{  pkg.organization }}
+          {% set organization = h.get_organization(pkg.organization.id) %}
           {% if 'extras' in organization %}
               {% for item in organization['extras'] %}
                   {% if 'key' in item %}
-                      {% if item['key'] == 'info_url' and item['value']|length %}
+                      {% if item['key'] == 'info_url' and item['value'] %}
         <p>Please see the initiative Data Policy in the Key information section at the end of the initiative webpage
             <a href="{{ item['value'] }}">here</a> for details on data use and acknowledgements.</p>
                       {% endif %}
