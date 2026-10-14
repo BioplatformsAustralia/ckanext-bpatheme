@@ -952,6 +952,22 @@ def get_projects_in_reverse_ranking_order():
     }
     projects.append(sentinel_species)
 
+    invasive_species = {
+        "logo": "Invasive-Logo.webp",
+        "has_logo": "true",
+        "special_class": "no-circular-logo",
+        "icon": "Invasive-Species.webp",
+        "iconalt": "Invasive-Species.png",
+        "slug": "invasive-species",
+        "url": "https://bioplatforms.com/project/invasive-plants-and-animals-initiative/",
+        "title": "Invasive Plants and Animals Initiative",
+        "description": "The Invasive Plants and Animals Initiative will accelerate the coordinated"
+        "development of reference genomes and population-scale genomic datasets for Australia’s "
+        "priority invasive plant and animal species.",
+    }
+    projects.append(invasive_species)
+
+
 
     ranking = organization_slugs_by_creation_and_rank()
 
